@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: goldenprice-backend
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: PORT
+        value: "3000"
+      - key: API_NINJAS_KEY
+        sync: false
+      - key: TWELVEDATA_KEY
+        sync: false
+      - key: ALPHAVANTAGE_KEY
+        sync: false
+      - key: MARKETSTACK_KEY
+        sync: false
+      - key: GOLDAPI_KEY
+        sync: false
+      - key: GOLDPRICEZ_KEY
+        sync: false

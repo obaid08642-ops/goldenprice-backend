@@ -1,0 +1,5 @@
+اختبارات سريعة (استبدل DOMAIN بالرابط بعد النشر على Render):
+https://DOMAIN/api/health
+https://DOMAIN/api/metals?list=gold,silver,platinum,palladium,copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium
+https://DOMAIN/api/crypto?list=BTC,ETH,SOL
+https://DOMAIN/api/fx?from=USD&to=EGP
