@@ -1,11 +1,12 @@
 {
-  "name": "goldenprice-backend-hybrid",
+  "name": "goldenprice-backend-final",
   "version": "1.0.0",
-  "description": "Hybrid backend for metals, crypto, and currencies aggregation",
-  "main": "server.js",
+  "description": "Production-grade hybrid backend for metals, FX, and crypto with multi-source rotation, caching, and fallbacks.",
+  "main": "src/server.js",
   "type": "module",
+  "engines": { "node": ">=20.0.0" },
   "scripts": {
-    "start": "node server.js"
+    "start": "node src/server.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
