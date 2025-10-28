@@ -1,0 +1,17 @@
+{
+  "name": "goldenprice-backend-final",
+  "version": "1.0.0",
+  "description": "Production-grade hybrid backend for metals, FX, and crypto with multi-source rotation, caching, and fallbacks.",
+  "main": "src/server.js",
+  "type": "module",
+  "engines": { "node": ">=20.0.0" },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "ws": "^8.18.0"
+  }
+}
