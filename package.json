@@ -1,0 +1,16 @@
+{
+  "name": "GoldenPriceBackend-Final",
+  "version": "1.0.0",
+  "description": "Hybrid backend for metals/FX/crypto with multi-source fallback, caching, and periodic refresh.",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "express": "^4.19.2",
+    "node-fetch": "^3.3.2",
+    "ws": "^8.17.0"
+  }
+}
