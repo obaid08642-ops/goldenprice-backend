@@ -1,169 +1,73 @@
 [
-  { "name": "Yahoo Spot Gold",        "kind": "gold",   "strategy": "yahoo",     "ticker": "XAUUSD=X" },
-  { "name": "Yahoo COMEX Gold Fut",   "kind": "gold",   "strategy": "yahoo",     "ticker": "GC=F" },
-  { "name": "Yahoo Mini Gold Fut",    "kind": "gold",   "strategy": "yahoo",     "ticker": "MGC=F" },
-  { "name": "Yahoo Gold (EUR)",       "kind": "gold",   "strategy": "yahoo",     "ticker": "XAUEUR=X" },
-  { "name": "Yahoo Gold (GBP)",       "kind": "gold",   "strategy": "yahoo",     "ticker": "XAUGBP=X" },
-  { "name": "Yahoo Gold (JPY)",       "kind": "gold",   "strategy": "yahoo",     "ticker": "XAUJPY=X" },
+  { "name":"GoldPrice.org (Gold)",  "type":"gold",  "url":"https://goldprice.org/gold-price.html",   "selector":".gold-price-value" },
+  { "name":"GoldPrice.org (Silver)","type":"silver","url":"https://goldprice.org/silver-price.html", "selector":".silver-price-value" },
 
-  { "name": "Yahoo Spot Silver",      "kind": "silver", "strategy": "yahoo",     "ticker": "XAGUSD=X" },
-  { "name": "Yahoo COMEX Silver Fut", "kind": "silver", "strategy": "yahoo",     "ticker": "SI=F" },
-  { "name": "Yahoo Silver (EUR)",     "kind": "silver", "strategy": "yahoo",     "ticker": "XAGEUR=X" },
-  { "name": "Yahoo Silver (GBP)",     "kind": "silver", "strategy": "yahoo",     "ticker": "XAGGBP=X" },
-  { "name": "Yahoo Silver (JPY)",     "kind": "silver", "strategy": "yahoo",     "ticker": "XAGJPY=X" },
+  { "name":"GoldBroker (Gold)",  "type":"gold",  "url":"https://www.goldbroker.com/price/gold",   "selector":".price_value" },
+  { "name":"GoldBroker (Silver)","type":"silver","url":"https://www.goldbroker.com/price/silver", "selector":".price_value" },
 
-  { "name": "Stooq Gold d",           "kind": "gold",   "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xauusd&i=d" },
-  { "name": "Stooq Gold h",           "kind": "gold",   "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xauusd&i=h" },
-  { "name": "Stooq Gold 5m",          "kind": "gold",   "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xauusd&i=5" },
-  { "name": "Stooq Silver d",         "kind": "silver", "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xagusd&i=d" },
-  { "name": "Stooq Silver h",         "kind": "silver", "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xagusd&i=h" },
-  { "name": "Stooq Silver 5m",        "kind": "silver", "strategy": "stooq_csv", "url": "https://stooq.com/q/l/?s=xagusd&i=5" },
+  { "name":"BullionVault (Gold)",  "type":"gold",  "url":"https://www.bullionvault.com/gold-price-chart.do",   "selector":"#spotPrice" },
+  { "name":"BullionVault (Silver)","type":"silver","url":"https://www.bullionvault.com/silver-price-chart.do", "selector":"#spotPrice" },
 
-  { "name": "X-Rates Gold HTML",      "kind": "gold",   "strategy": "html",      "url": "https://www.x-rates.com/commodity/gold",   "selector": ".ccOutputRslt" },
-  { "name": "X-Rates Silver HTML",    "kind": "silver", "strategy": "html",      "url": "https://www.x-rates.com/commodity/silver", "selector": ".ccOutputRslt" },
+  { "name":"Kitco (Gold)",  "type":"gold",  "url":"https://www.kitco.com/gold-price-today-usa/",  "selector":".table-price .bid" },
+  { "name":"Kitco (Silver)","type":"silver","url":"https://www.kitco.com/silver-price-today-usa/","selector":".table-price .bid" },
 
-  { "name": "Gold.org Data (USD)",    "kind": "gold",   "strategy": "html",      "url": "https://www.gold.org/goldhub/data/gold-prices", "selector": "table tbody tr:first-child td:last-child" },
-  { "name": "Silverprice.org USD",    "kind": "silver", "strategy": "html",      "url": "https://www.silverprice.org/", "selector": ".current-price" },
+  { "name":"GoldCore (Gold)","type":"gold","url":"https://www.goldcore.com/gold-price", "selector":".live-price .price" },
+  { "name":"GoldCore (Silver)","type":"silver","url":"https://www.goldcore.com/silver-price", "selector":".live-price .price" },
 
-  { "name": "TradingView Gold Fut",   "kind": "gold",   "strategy": "yahoo",     "ticker": "GC=F" },
-  { "name": "TradingView Silver Fut", "kind": "silver", "strategy": "yahoo",     "ticker": "SI=F" },
+  { "name":"GoldPriceZ (Gold)","type":"gold","url":"https://www.goldpricez.com/gold", "selector":".gold_price_oz" },
+  { "name":"GoldPriceZ (Silver)","type":"silver","url":"https://www.goldpricez.com/silver","selector":".silver_price_oz" },
 
-  { "name": "Investing Gold Fut",     "kind": "gold",   "strategy": "html",      "url": "https://www.investing.com/commodities/gold",   "selector": "span[data-test='instrument-price-last']" },
-  { "name": "Investing Silver Fut",   "kind": "silver", "strategy": "html",      "url": "https://www.investing.com/commodities/silver", "selector": "span[data-test='instrument-price-last']" },
+  { "name":"APMEX (Gold)","type":"gold","url":"https://www.apmex.com/spot-prices/gold-price", "selector":".SpotPriceCard-price" },
+  { "name":"APMEX (Silver)","type":"silver","url":"https://www.apmex.com/spot-prices/silver-price","selector":".SpotPriceCard-price" },
 
-  { "name": "CNBC Gold",              "kind": "gold",   "strategy": "html",      "url": "https://www.cnbc.com/quotes/GC%3D", "selector": ".QuoteStrip-lastPrice" },
-  { "name": "CNBC Silver",            "kind": "silver", "strategy": "html",      "url": "https://www.cnbc.com/quotes/SI%3D", "selector": ".QuoteStrip-lastPrice" },
+  { "name":"JM Bullion (Gold)","type":"gold","url":"https://www.jmbullion.com/charts/gold-price/", "selector":".price" },
+  { "name":"JM Bullion (Silver)","type":"silver","url":"https://www.jmbullion.com/charts/silver-price/","selector":".price" },
 
-  { "name": "Nasdaq Gold Fut",        "kind": "gold",   "strategy": "html",      "url": "https://www.nasdaq.com/market-activity/commodities/gc%3anmx", "selector": "div.quote-info__last-price" },
-  { "name": "Nasdaq Silver Fut",      "kind": "silver", "strategy": "html",      "url": "https://www.nasdaq.com/market-activity/commodities/si%3anmx", "selector": "div.quote-info__last-price" },
+  { "name":"MoneyMetals (Gold)","type":"gold","url":"https://www.moneymetals.com/precious-metals-charts/gold-price","selector":".live-price .price" },
+  { "name":"MoneyMetals (Silver)","type":"silver","url":"https://www.moneymetals.com/precious-metals-charts/silver-price","selector":".live-price .price" },
 
-  { "name": "Barchart Gold",          "kind": "gold",   "strategy": "html",      "url": "https://www.barchart.com/futures/quotes/GC*0/futures-prices", "selector": ".last-change span.last" },
-  { "name": "Barchart Silver",        "kind": "silver", "strategy": "html",      "url": "https://www.barchart.com/futures/quotes/SI*0/futures-prices", "selector": ".last-change span.last" },
+  { "name":"SD Bullion (Gold)","type":"gold","url":"https://sdbullion.com/gold-silver-ratio", "selector":".live-gold-price .price" },
+  { "name":"SD Bullion (Silver)","type":"silver","url":"https://sdbullion.com/silver-price",  "selector":".live-silver-price .price" },
 
-  { "name": "MarketWatch Gold",       "kind": "gold",   "strategy": "html",      "url": "https://www.marketwatch.com/investing/future/gold", "selector": "bg-quote.value" },
-  { "name": "MarketWatch Silver",     "kind": "silver", "strategy": "html",      "url": "https://www.marketwatch.com/investing/future/silver", "selector": "bg-quote.value" },
+  { "name":"GoldPriceLive (Gold)","type":"gold","url":"https://goldpricelive.com/", "selector":".price-large" },
+  { "name":"GoldPriceLive (Silver)","type":"silver","url":"https://goldpricelive.com/silver-price","selector":".price-large" },
 
-  { "name": "Bloomberg Gold",         "kind": "gold",   "strategy": "html",      "url": "https://www.bloomberg.com/quote/GC1:COM", "selector": "div.price" },
-  { "name": "Bloomberg Silver",       "kind": "silver", "strategy": "html",      "url": "https://www.bloomberg.com/quote/SI1:COM", "selector": "div.price" },
+  { "name":"BullionByPost (Gold)","type":"gold","url":"https://www.bullionbypost.co.uk/gold-price/", "selector":".live-price" },
+  { "name":"BullionByPost (Silver)","type":"silver","url":"https://www.bullionbypost.co.uk/silver-price/","selector":".live-price" },
 
-  { "name": "FT Gold",                "kind": "gold",   "strategy": "html",      "url": "https://markets.ft.com/data/commodities/tearsheet/summary?c=Gold",   "selector": ".mod-tearsheet-overview__quote .mod-ui-data-list__value" },
-  { "name": "FT Silver",              "kind": "silver", "strategy": "html",      "url": "https://markets.ft.com/data/commodities/tearsheet/summary?c=Silver", "selector": ".mod-tearsheet-overview__quote .mod-ui-data-list__value" },
+  { "name":"LivePriceOfGold (Gold)","type":"gold","url":"https://www.livepriceofgold.com/", "selector":"#mainprice" },
+  { "name":"LivePriceOfGold (Silver)","type":"silver","url":"https://www.livepriceofgold.com/silver-price/","selector":"#mainprice" },
 
-  { "name": "GoldPrice.org USD",      "kind": "gold",   "strategy": "html",      "url": "https://goldprice.org/gold-price.html",   "selector": ".gold-price-live .value" },
-  { "name": "GoldPrice.org Silver",   "kind": "silver", "strategy": "html",      "url": "https://goldprice.org/silver-price.html", "selector": ".silver-price-live .value" },
+  { "name":"Gold.co.uk (Gold)","type":"gold","url":"https://www.gold.co.uk/gold-price/", "selector":".price" },
+  { "name":"Gold.co.uk (Silver)","type":"silver","url":"https://www.gold.co.uk/silver-price/","selector":".price" },
 
-  { "name": "LiveCharts Gold",        "kind": "gold",   "strategy": "html",      "url": "https://www.livecharts.co.uk/MarketCharts/gold.php",   "selector": ".pricebox .bprice" },
-  { "name": "LiveCharts Silver",      "kind": "silver", "strategy": "html",      "url": "https://www.livecharts.co.uk/MarketCharts/silver.php", "selector": ".pricebox .bprice" },
+  { "name":"TheRoyalMint (Gold)","type":"gold","url":"https://www.royalmint.com/invest/bullion/live-prices/", "selector":".live-price-value" },
+  { "name":"TheRoyalMint (Silver)","type":"silver","url":"https://www.royalmint.com/invest/bullion/live-prices/","selector":".live-price-value" },
 
-  { "name": "GoldBroker USD",         "kind": "gold",   "strategy": "html",      "url": "https://www.goldbroker.com/price/gold/usd",   "selector": ".price strong" },
-  { "name": "GoldBroker Silver USD",  "kind": "silver", "strategy": "html",      "url": "https://www.goldbroker.com/price/silver/usd", "selector": ".price strong" },
+  { "name":"GoldPrice.org AU (Gold)","type":"gold","url":"https://goldprice.org/spot-gold.html", "selector":".gold-price-value" },
+  { "name":"GoldPrice.org AU (Silver)","type":"silver","url":"https://goldprice.org/silver-price.html","selector":".silver-price-value" },
 
-  { "name": "BullionVault Gold",      "kind": "gold",   "strategy": "html",      "url": "https://www.bullionvault.com/gold-price-chart.do", "selector": ".bvPrice" },
-  { "name": "BullionVault Silver",    "kind": "silver", "strategy": "html",      "url": "https://www.bullionvault.com/silver-price-chart.do", "selector": ".bvPrice" },
+  { "name":"Investing.com (Gold)","type":"gold","url":"https://www.investing.com/commodities/gold", "selector":".text-2xl" },
+  { "name":"Investing.com (Silver)","type":"silver","url":"https://www.investing.com/commodities/silver","selector":".text-2xl" },
 
-  { "name": "Monex Gold",             "kind": "gold",   "strategy": "html",      "url": "https://www.monex.com/gold-prices/",   "selector": ".price-box .price" },
-  { "name": "Monex Silver",           "kind": "silver", "strategy": "html",      "url": "https://www.monex.com/silver-prices/", "selector": ".price-box .price" },
+  { "name":"GoldSeek (Gold)","type":"gold","url":"https://goldseek.com/charts/gold", "selector":".price" },
+  { "name":"SilverSeek (Silver)","type":"silver","url":"https://silverseek.com/charts/silver","selector":".price" },
 
-  { "name": "GoldSilver Gold",        "kind": "gold",   "strategy": "html",      "url": "https://goldsilver.com/price/gold/",   "selector": ".current-price" },
-  { "name": "GoldSilver Silver",      "kind": "silver", "strategy": "html",      "url": "https://goldsilver.com/price/silver/", "selector": ".current-price" },
+  { "name":"XE (Gold)","type":"gold","url":"https://www.xe.com/currencycharts/?from=XAU&to=USD", "selector":"[data-test='instrument-price-last']" },
+  { "name":"XE (Silver)","type":"silver","url":"https://www.xe.com/currencycharts/?from=XAG&to=USD","selector":"[data-test='instrument-price-last']" },
 
-  { "name": "APMEX Gold",             "kind": "gold",   "strategy": "html",      "url": "https://www.apmex.com/gold-price",     "selector": ".price-current" },
-  { "name": "APMEX Silver",           "kind": "silver", "strategy": "html",      "url": "https://www.apmex.com/silver-price",   "selector": ".price-current" },
+  { "name":"GoldRate24 (Gold)","type":"gold","url":"https://www.goldrate24.com/gold-prices/usa/", "selector":".gold_ounce" },
+  { "name":"GoldRate24 (Silver)","type":"silver","url":"https://www.goldrate24.com/silver-prices/usa/","selector":".silver_ounce" },
 
-  { "name": "JM Bullion Gold",        "kind": "gold",   "strategy": "html",      "url": "https://www.jmbullion.com/charts/gold-price/",   "selector": ".spot-price .price" },
-  { "name": "JM Bullion Silver",      "kind": "silver", "strategy": "html",      "url": "https://www.jmbullion.com/charts/silver-price/", "selector": ".spot-price .price" },
+  { "name":"GoldPricesToday (Gold)","type":"gold","url":"https://www.goldpricestoday.com/", "selector":".gold_price_ounce" },
+  { "name":"GoldPricesToday (Silver)","type":"silver","url":"https://www.goldpricestoday.com/silver-price/","selector":".silver_price_ounce" },
 
-  { "name": "Kitco Gold",             "kind": "gold",   "strategy": "html",      "url": "https://www.kitco.com/gold-price-today-usa/",   "selector": ".table-price .text-right" },
-  { "name": "Kitco Silver",           "kind": "silver", "strategy": "html",      "url": "https://www.kitco.com/silver-price-today-usa/", "selector": ".table-price .text-right" },
+  { "name":"Gold-Eagle (Gold)","type":"gold","url":"https://www.gold-eagle.com/gold-price", "selector":".price" },
+  { "name":"GoldSilver.com (Silver)","type":"silver","url":"https://goldsilver.com/price-charts/silver-price/","selector":".live-spot__price" },
 
-  { "name": "London Metal Exch. Gold","kind": "gold",   "strategy": "html",      "url": "https://www.lme.com/en/metals/precious-metals/gold",   "selector": ".price" },
-  { "name": "London Metal Exch. Silver","kind":"silver","strategy":"html",       "url": "https://www.lme.com/en/metals/precious-metals/silver","selector": ".price" },
+  { "name":"U.S. Money Reserve (Gold)","type":"gold","url":"https://www.usmoneyreserve.com/spot-prices/gold/", "selector":".spot-prices__value" },
+  { "name":"U.S. Money Reserve (Silver)","type":"silver","url":"https://www.usmoneyreserve.com/spot-prices/silver/","selector":".spot-prices__value" },
 
-  { "name": "USAGold",                "kind": "gold",   "strategy": "html",      "url": "https://www.usagold.com/reference/prices/gold/",   "selector": ".spot td:last-child" },
-  { "name": "USAGold Silver",         "kind": "silver", "strategy": "html",      "url": "https://www.usagold.com/reference/prices/silver/", "selector": ".spot td:last-child" },
-
-  { "name": "GoldRate24 USD",         "kind": "gold",   "strategy": "html",      "url": "https://www.goldrate24.com/gold-prices/usa/",   "selector": ".gold_price .big" },
-  { "name": "GoldRate24 Silver USD",  "kind": "silver", "strategy": "html",      "url": "https://www.goldrate24.com/silver-prices/usa/", "selector": ".silver_price .big" },
-
-  { "name": "GoldPriceZ Gold",        "kind": "gold",   "strategy": "html",      "url": "https://www.goldpricez.com/price/gold/usa",   "selector": ".price-big" },
-  { "name": "GoldPriceZ Silver",      "kind": "silver", "strategy": "html",      "url": "https://www.goldpricez.com/price/silver/usa", "selector": ".price-big" },
-
-  { "name": "GoldPriceIndia Gold",    "kind": "gold",   "strategy": "html",      "url": "https://www.goldpriceindia.com/",   "selector": ".today_price strong" },
-  { "name": "GoldPriceIndia Silver",  "kind": "silver", "strategy": "html",      "url": "https://www.goldpriceindia.com/silver-price", "selector": ".today_price strong" }
-]
-  ,
-  { "name": "BullionByPost Gold",     "kind": "gold",   "strategy": "html", "url": "https://www.bullionbypost.co.uk/gold-price/",   "selector": ".live-price strong" },
-  { "name": "BullionByPost Silver",   "kind": "silver", "strategy": "html", "url": "https://www.bullionbypost.co.uk/silver-price/", "selector": ".live-price strong" },
-
-  { "name": "BullionStar Gold",       "kind": "gold",   "strategy": "html", "url": "https://www.bullionstar.com/metal-prices/gold-price-usd/",   "selector": ".price-text" },
-  { "name": "BullionStar Silver",     "kind": "silver", "strategy": "html", "url": "https://www.bullionstar.com/metal-prices/silver-price-usd/", "selector": ".price-text" },
-
-  { "name": "Moneymetals Gold",       "kind": "gold",   "strategy": "html", "url": "https://www.moneymetals.com/precious-metals-charts/gold-price",   "selector": "#GoldPrice" },
-  { "name": "Moneymetals Silver",     "kind": "silver", "strategy": "html", "url": "https://www.moneymetals.com/precious-metals-charts/silver-price", "selector": "#SilverPrice" },
-
-  { "name": "GoldPriceEurope Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceeurope.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceEurope Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpriceeurope.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceAustralia Gold", "kind": "gold",  "strategy": "html", "url": "https://www.goldpriceaustralia.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceAustralia Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpriceaustralia.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldRateToday Gold",     "kind": "gold",   "strategy": "html", "url": "https://www.goldratetoday.com/",   "selector": ".gold_rate strong" },
-  { "name": "GoldRateToday Silver",   "kind": "silver", "strategy": "html", "url": "https://www.goldratetoday.com/silver-rate", "selector": ".silver_rate strong" },
-
-  { "name": "LivePriceofGold Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.livepriceofgold.com/",   "selector": ".price" },
-  { "name": "LivePriceofGold Silver", "kind": "silver", "strategy": "html", "url": "https://www.livepriceofsilver.com/", "selector": ".price" },
-
-  { "name": "GoldPriceAsia Gold",     "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceasia.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceAsia Silver",   "kind": "silver", "strategy": "html", "url": "https://www.goldpriceasia.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceArabia Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpricearabia.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceArabia Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricearabia.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceCanada Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpricecanada.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceCanada Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricecanada.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceUSA Gold",      "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceusa.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceUSA Silver",    "kind": "silver", "strategy": "html", "url": "https://www.goldpriceusa.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceChina Gold",    "kind": "gold",   "strategy": "html", "url": "https://www.goldpricechina.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceChina Silver",  "kind": "silver", "strategy": "html", "url": "https://www.goldpricechina.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceTurkey Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceturkey.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceTurkey Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpriceturkey.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceGCC Gold",      "kind": "gold",   "strategy": "html", "url": "https://www.goldpricegcc.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceGCC Silver",    "kind": "silver", "strategy": "html", "url": "https://www.goldpricegcc.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPricePakistan Gold", "kind": "gold",   "strategy": "html", "url": "https://www.goldpricepakistan.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPricePakistan Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricepakistan.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceSingapore Gold", "kind": "gold",  "strategy": "html", "url": "https://www.goldpricesingapore.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceSingapore Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricesingapore.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceHongKong Gold", "kind": "gold",   "strategy": "html", "url": "https://www.goldpricehongkong.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceHongKong Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricehongkong.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceKuwait Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpricekuwait.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceKuwait Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpricekuwait.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceOman Gold",     "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceoman.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceOman Silver",   "kind": "silver", "strategy": "html", "url": "https://www.goldpriceoman.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceUAE Gold",      "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceuae.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceUAE Silver",    "kind": "silver", "strategy": "html", "url": "https://www.goldpriceuae.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceSaudi Gold",    "kind": "gold",   "strategy": "html", "url": "https://www.goldpricesaudiarabia.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceSaudi Silver",  "kind": "silver", "strategy": "html", "url": "https://www.goldpricesaudiarabia.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceQatar Gold",    "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceqatar.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceQatar Silver",  "kind": "silver", "strategy": "html", "url": "https://www.goldpriceqatar.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceEgypt Gold",    "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceegypt.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceEgypt Silver",  "kind": "silver", "strategy": "html", "url": "https://www.goldpriceegypt.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceAfrica Gold",   "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceafrica.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceAfrica Silver", "kind": "silver", "strategy": "html", "url": "https://www.goldpriceafrica.com/silver-prices/", "selector": ".silver_price strong" },
-
-  { "name": "GoldPriceUK Gold",       "kind": "gold",   "strategy": "html", "url": "https://www.goldpriceuk.com/", "selector": ".gold_price strong" },
-  { "name": "GoldPriceUK Silver",     "kind": "silver", "strategy": "html", "url": "https://www.goldpriceuk.com/silver-prices/", "selector": ".silver_price strong" }
+  { "name":"MetalsDaily (Gold)","type":"gold","url":"https://www.metalsdaily.com/precious-metals-prices/gold", "selector":".price" },
+  { "name":"MetalsDaily (Silver)","type":"silver","url":"https://www.metalsdaily.com/precious-metals-prices/silver","selector":".price" }
 ]
