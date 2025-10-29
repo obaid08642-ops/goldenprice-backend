@@ -316,3 +316,27 @@ app.get("/api/gas", async (req,res)=>{
 });
 
 app.listen(PORT, ()=> console.log("Hybrid backend running on port "+PORT));
+// ===== DEBUG ENV VARIABLES =====
+console.log("🔍 Checking Environment Variables on Render...");
+
+const keysToCheck = [
+  "TWELVEDATA_KEY",
+  "ALPHAVANTAGE_KEY",
+  "GOLDPRICEZ_KEY",
+  "GOLDAPI_KEY",
+  "MARKET_KEY",
+  "METALS_KEY",
+  "API_NINJA_KEY",
+  "FMP_KEY",
+  "PORT"
+];
+
+keysToCheck.forEach(k => {
+  if (process.env[k]) {
+    console.log(`✅ ${k} is set:`, process.env[k].substring(0, 8) + "********");
+  } else {
+    console.log(`❌ ${k} is NOT set or empty.`);
+  }
+});
+
+console.log("=====================================");
