@@ -1,28 +1,16 @@
 {
   "name": "goldenprice-backend",
   "version": "1.0.0",
-  "description": "Backend server for gold, silver, metals, forex, oil and crypto price updates",
-  "main": "server.js",
   "type": "module",
+  "engines": { "node": ">=18.x" },
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
   "dependencies": {
-    "axios": "^1.7.2",
-    "cheerio": "^1.0.0-rc.12",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "node-cron": "^3.0.3",
-    "node-fetch": "^3.3.2",
-    "ws": "^8.18.0"
-  },
-  "devDependencies": {
-    "nodemon": "^3.0.3"
-  },
-  "engines": {
-    "node": ">=18.x"
-  },
-  "author": "Ahmed Obaid",
-  "license": "MIT"
+    "cheerio": "^1.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "morgan": "^1.10.0",
+    "node-fetch": "^3.3.2"
+  }
 }
