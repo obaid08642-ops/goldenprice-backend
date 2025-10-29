@@ -1,16 +1,16 @@
 {
-  "name": "goldenprice-backend",
+  "name": "goldenprice-backend-hybrid",
   "version": "1.0.0",
   "type": "module",
+  "main": "server.js",
   "engines": { "node": ">=18.x" },
   "scripts": {
     "start": "node server.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0",
-    "cors": "^2.8.5",
+    "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
-    "morgan": "^1.10.0",
-    "node-fetch": "^3.3.2"
+    "node-fetch": "^2.6.9",
+    "ws": "^8.18.0"
   }
 }
