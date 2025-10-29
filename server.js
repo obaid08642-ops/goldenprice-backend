@@ -1,288 +1,226 @@
 import express from "express";
 import fetch from "node-fetch";
-import * as cheerio from "cheerio";
-import WebSocket from "ws";
+import cheerio from "cheerio";
+import { WebSocket } from "ws";
+import fs from "fs";
 
-/* ---------------------- ENV KEYS ---------------------- */
-const API_NINJAS_KEY   = process.env.API_NINJAS_KEY   || "";
-const TWELVEDATA_KEY   = process.env.TWELVEDATA_KEY   || "";
+// -------- ENV --------
+const PORT = process.env.PORT || 3000;
+const TWELVEDATA_KEY   = process.env.TWELVEDATA_KEY || "";
 const ALPHAVANTAGE_KEY = process.env.ALPHAVANTAGE_KEY || "";
-const MARKETSTACK_KEY  = process.env.MARKETSTACK_KEY  || "";
-const GOLDAPI_KEY      = process.env.GOLDAPI_KEY      || "";
-const GOLDPRICEZ_KEY   = process.env.GOLDPRICEZ_KEY   || "";
-const FMP_KEY          = process.env.FMP_KEY          || "";
+const GOLDPRICEZ_KEY   = process.env.GOLDPRICEZ_KEY || "";
 
-const PORT = process.env.PORT || 10000;
-
-/* ---------------------- HELPERS ---------------------- */
-const sleep = (ms)=> new Promise(r=>setTimeout(r, ms));
+// -------- UTIL --------
+const sleep = (ms) => new Promise(r=>setTimeout(r,ms));
 const now = ()=> Date.now();
+const wday = ()=> (new Date()).getUTCDay(); // 0=Sun ... 6=Sat
 
-const cache = new Map(); // key -> {t, ttl, data}
-function getCache(key){
-  const v = cache.get(key);
-  if(!v) return null;
-  if (now() - v.t < v.ttl) return v.data;
-  return null;
-}
-function setCache(key, data, ttl){
-  cache.set(key, {t: now(), ttl, data});
-}
+// cache: key -> {t, ttl, data}
+const cache = new Map();
+function getCache(k){ const v = cache.get(k); return v && (now()-v.t < v.ttl) ? v.data : null; }
+function setCache(k,d,ttl){ cache.set(k,{t:now(), ttl, data:d}); }
 
-// per-source backoff window
-const backoffUntil = new Map(); // name -> ts
+// backoff
+const backoffUntil = new Map(); // name->ts
 const sourceOK = (name)=> (backoffUntil.get(name)||0) < now();
 const punish = (name, ms=180000)=> backoffUntil.set(name, now()+ms);
 
-async function tryJson(url, opts={}, retries=1){
-  let lastErr;
+// safe fetch json/text
+async function jget(url, opts={}, retries=1){
+  let err;
   for(let i=0;i<=retries;i++){
     try{
       const r = await fetch(url, opts);
       if(!r.ok) throw new Error("HTTP "+r.status);
       return await r.json();
-    }catch(e){
-      lastErr = e;
-      if (i===retries) throw e;
-      await sleep(300 + i*500);
-    }
+    }catch(e){ err=e; if(i===retries) throw e; await sleep(300+i*500); }
   }
-  throw lastErr;
+  throw err;
 }
-
-async function tryText(url, opts={}, retries=1){
-  let lastErr;
+async function tget(url, opts={}, retries=1){
+  let err;
   for(let i=0;i<=retries;i++){
     try{
       const r = await fetch(url, opts);
       if(!r.ok) throw new Error("HTTP "+r.status);
       return await r.text();
-    }catch(e){
-      lastErr = e;
-      if (i===retries) throw e;
-      await sleep(300 + i*500);
-    }
+    }catch(e){ err=e; if(i===retries) throw e; await sleep(300+i*500); }
   }
-  throw lastErr;
+  throw err;
 }
 
-/* ---------------------- METALS MAP ---------------------- */
-// unit: oz (troy ounce), lb (pound), t (metric ton)
-const METALS = {
-  gold:      { unit:"oz", td:"XAU/USD", ninjas:"xau", y:"XAUUSD=X", c:"XAU", fmp:"GCUSD" },
-  silver:    { unit:"oz", td:"XAG/USD", ninjas:"xag", y:"XAGUSD=X", c:"XAG", fmp:"SIUSD" },
-  platinum:  { unit:"oz", td:"XPT/USD", ninjas:"xpt", y:"XPTUSD=X", c:"XPT", fmp:"PLUSD" },
-  palladium: { unit:"oz", td:"XPD/USD", ninjas:"xpd", y:"XPDUSD=X", c:"XPD", fmp:"PAUSD" },
+// -------- SITES --------
+const SITES = JSON.parse(fs.readFileSync("./sites.json","utf8"));
 
-  copper:    { unit:"lb", td:null, ninjas:"copper",   y:"HG=F",  c:"HG",  fmp:"HGUSD" },
-  aluminum:  { unit:"t",  td:null, ninjas:"aluminum", y:"ALI=F", c:"AL" },
-  nickel:    { unit:"t",  td:null, ninjas:"nickel",   y:"NID=F", c:"NI" },
-  zinc:      { unit:"t",  td:null, ninjas:"zinc",     y:"MZN=F", c:"ZN" },
-  lead:      { unit:"t",  td:null, ninjas:"lead",     y:"LD=F",  c:"PB" },
-  tin:       { unit:"t",  td:null, ninjas:"tin",      y:"TIN=F", c:"SN" },
-
-  iron:      { unit:"t",  td:null, ninjas:"iron",     y:null,    c:null },
-  steel:     { unit:"t",  td:null, ninjas:"steel",    y:null,    c:null },
-  cobalt:    { unit:"t",  td:null, ninjas:"cobalt",   y:null,    c:null },
-  lithium:   { unit:"t",  td:null, ninjas:"lithium",  y:null,    c:null },
-  uranium:   { unit:"lb", td:null, ninjas:"uranium",  y:null,    c:null }
-};
-
-const TTL = { metals: 90_000, fx: 60_000, crypto: 10_000 };
-
-/* ---------------------- PRIMARY SOURCES ---------------------- */
-async function srcTwelve(symbol, tag){
-  if(!TWELVEDATA_KEY) throw new Error("no TD key");
-  if(!sourceOK(tag)) throw new Error("TD backoff");
-  const url = `https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbol)}&apikey=${TWELVEDATA_KEY}`;
-  const j = await tryJson(url, {}, 1);
-  const v = Number(j?.price);
-  if(!v){ punish(tag); throw new Error("TD no price"); }
-  return v;
-}
-
-async function srcNinjas(code, tag){
-  if(!API_NINJAS_KEY) throw new Error("no Ninjas key");
-  if(!sourceOK(tag)) throw new Error("Ninjas backoff");
-  const url = `https://api.api-ninjas.com/v1/commodityprice?name=${encodeURIComponent(code)}`;
-  const r = await fetch(url, { headers: {"X-Api-Key": API_NINJAS_KEY } });
-  if(!r.ok){ punish(tag); throw new Error("Ninjas "+r.status); }
-  const arr = await r.json();
-  const v = Array.isArray(arr) && Number(arr[0]?.price);
-  if(!v){ punish(tag); throw new Error("Ninjas no price"); }
-  return v;
-}
-
-// FMP — السعر من endpoint الثابت
-async function srcFMP(symbol, tag){
-  if(!FMP_KEY) throw new Error("no FMP key");
-  if(!sourceOK(tag)) throw new Error("FMP backoff");
-  const url = `https://financialmodelingprep.com/stable/quote?symbol=${encodeURIComponent(symbol)}&apikey=${FMP_KEY}`;
-  const j = await tryJson(url, {}, 1);
-  const v = Number(Array.isArray(j) ? j[0]?.price : j?.price);
-  if(!v){ punish(tag); throw new Error("FMP no price"); }
-  return v;
-}
-
-async function srcAlphaFX(from="USD", to="EGP", tag="alpha"){
-  if(!ALPHAVANTAGE_KEY) throw new Error("no AV key");
-  if(!sourceOK(tag)) throw new Error("AV backoff");
-  const url = `https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${from}&to_currency=${to}&apikey=${ALPHAVANTAGE_KEY}`;
-  const j = await tryJson(url, {}, 1);
-  const v = Number(j?.["Realtime Currency Exchange Rate"]?.["5. Exchange Rate"]);
-  if(!v){ punish(tag, 3600_000); throw new Error("AV no fx"); }
-  return v;
-}
-
-async function srcMarketStack(symbol, tag){
-  if(!MARKETSTACK_KEY) throw new Error("no MarketStack key");
-  if(!sourceOK(tag)) throw new Error("MS backoff");
-  const url = `http://api.marketstack.com/v1/eod?access_key=${MARKETSTACK_KEY}&symbols=${encodeURIComponent(symbol)}`;
-  const j = await tryJson(url, {}, 1);
-  const v = Number(j?.data?.[0]?.close);
-  if(!v){ punish(tag, 3600_000); throw new Error("MS no close"); }
-  return v;
-}
-
-// Optional: GoldAPI / GoldPriceZ (للثمين فقط)
-async function srcGoldAPI(metal="XAU", currency="USD", tag="goldapi"){
-  if(!GOLDAPI_KEY) throw new Error("no GOLDAPI key");
-  if(!sourceOK(tag)) throw new Error("GOLDAPI backoff");
-  const url = `https://www.goldapi.io/api/${metal}/${currency}`;
-  const r = await fetch(url, { headers: { "x-access-token": GOLDAPI_KEY } });
-  if(!r.ok){ punish(tag); throw new Error("GoldAPI "+r.status); }
-  const j = await r.json();
-  const v = Number(j?.price);
-  if(!v){ punish(tag); throw new Error("GoldAPI no price"); }
-  return v;
-}
-
-async function srcGoldPriceZ(metal="XAU", currency="USD", tag="goldpricez"){
-  if(!GOLDPRICEZ_KEY) throw new Error("no GOLDPRICEZ key");
-  if(!sourceOK(tag)) throw new Error("GPZ backoff");
-  const url = `https://www.goldpricez.com/api/rates/${metal}/${currency}/gram?api_key=${GOLDPRICEZ_KEY}`;
-  const j = await tryJson(url, {}, 1);
-  const v = Number(j?.["price_gram_24k"]);
-  if(!v){ punish(tag); throw new Error("GPZ no price"); }
-  return v * 31.1034768; // gram -> troy ounce
-}
-
-/* ---------------------- SCRAPERS ---------------------- */
-async function scrapeYahooQuote(ticker, tag){
-  if(!sourceOK(tag)) throw new Error("Yahoo backoff");
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?region=US&lang=en-US`;
-  const j = await tryJson(url, {}, 1);
-  const v = j?.chart?.result?.[0]?.meta?.regularMarketPrice;
-  if(!v){ punish(tag); throw new Error("Yahoo no price"); }
+// -------- ADAPTERS --------
+async function fromYahooChart(url, tag){
+  if(!sourceOK(tag)) throw new Error("backoff");
+  const j = await jget(url);
+  const res = j?.chart?.result?.[0];
+  const v = res?.meta?.regularMarketPrice ?? res?.indicators?.quote?.[0]?.close?.slice(-1)[0];
+  if(!v) { punish(tag); throw new Error("yahoo no price"); }
   return Number(v);
 }
-
-async function scrapeXRatesGoldUSD(tag){
-  if(!sourceOK(tag)) throw new Error("XR backoff");
-  const html = await tryText("https://www.x-rates.com/commodity/gold", {}, 1);
+async function fromYahooClose(url, tag){
+  if(!sourceOK(tag)) throw new Error("backoff");
+  const j = await jget(url);
+  const res = j?.chart?.result?.[0];
+  const v = res?.indicators?.quote?.[0]?.close?.slice(-1)[0] ?? res?.meta?.regularMarketPrice;
+  if(!v) { punish(tag); throw new Error("yahoo no close"); }
+  return Number(v);
+}
+async function fromCheerio(url, selector, tag){
+  if(!sourceOK(tag)) throw new Error("backoff");
+  const html = await tget(url);
   const $ = cheerio.load(html);
-  let txt = $(".ccOutputRslt").first().text() || $("td:contains('Gold')").next().text();
-  txt = (txt||"").replace(/[^\d.]/g,"");
+  let txt = $(selector).first().text().trim().replace(/[, ]/g,"").replace(/[^\d.]/g,"");
   const v = Number(txt);
-  if(!v){ punish(tag); throw new Error("X-Rates gold not found"); }
+  if(!v) { punish(tag); throw new Error("css no value"); }
+  return v;
+}
+async function fromCoinGecko(id, vs="usd", tag="cg"){
+  if(!sourceOK(tag)) throw new Error("backoff");
+  const j = await jget(`https://api.coingecko.com/api/v3/simple/price?ids=${encodeURIComponent(id)}&vs_currencies=${vs}`);
+  const v = Number(j?.[id]?.[vs]);
+  if(!v){ punish(tag); throw new Error("cg no price"); }
   return v;
 }
 
-/* ---------------------- METAL RESOLVER ---------------------- */
-async function getMetalUSD(metal){
-  const m = METALS[metal.toLowerCase()];
-  if(!m) throw new Error("unknown metal: "+metal);
-  const key = `metal:${metal}`;
-  const cached = getCache(key);
-  if (cached) return cached;
-
-  // A) Primary round (TwelveData → Ninjas → GoldPriceZ → FMP)
-  const A = [];
-  if (m.td && TWELVEDATA_KEY) A.push(()=>srcTwelve(m.td, "td:"+m.td));
-  if (m.ninjas && API_NINJAS_KEY) A.push(()=>srcNinjas(m.ninjas, "ninjas:"+m.ninjas));
-  if (["XAU","XAG","XPT","XPD"].includes(m.c) && GOLDPRICEZ_KEY) A.push(()=>srcGoldPriceZ(m.c,"USD","gpz"));
-  if (m.fmp && FMP_KEY) A.push(()=>srcFMP(m.fmp, "fmp:"+m.fmp));
-  for (const fn of A){
-    try {
-      const v = await fn();
-      if (v){ const out={price:v, unit:m.unit, source:"A"}; setCache(key,out, TTL.metals); return out; }
-    } catch {}
-  }
-
-  // B) Scraping
-  const B = [];
-  if (m.y) B.push(()=>scrapeYahooQuote(m.y, "yahoo:"+m.y));
-  if (metal.toLowerCase()==="gold") B.push(()=>scrapeXRatesGoldUSD("xrates:gold"));
-  for (const fn of B){
-    try {
-      const v = await fn();
-      if (v){ const out={price:v, unit:m.unit, source:"B"}; setCache(key,out, TTL.metals); return out; }
-    } catch {}
-  }
-
-  // C) Backup (MarketStack, GoldAPI)
-  const C = [];
-  if (m.c && MARKETSTACK_KEY) C.push(()=>srcMarketStack(m.c, "ms:"+m.c));
-  if (GOLDAPI_KEY && m.c) C.push(()=>srcGoldAPI(m.c, "USD", "goldapi"));
-  for (const fn of C){
-    try {
-      const v = await fn();
-      if (v){ const out={price:v, unit:m.unit, source:"C"}; setCache(key,out, TTL.metals); return out; }
-    } catch {}
-  }
-
-  // last resort: stale
-  const stale = cache.get(key)?.data;
-  if (stale) return stale;
-  throw new Error("all sources failed for "+metal);
+// Primary APIs
+async function fromTwelve(symbol, tag){
+  if(!TWELVEDATA_KEY) throw new Error("no TD key");
+  if(!sourceOK(tag)) throw new Error("td backoff");
+  const j = await jget(`https://api.twelvedata.com/price?symbol=${encodeURIComponent(symbol)}&apikey=${TWELVEDATA_KEY}`);
+  const v = Number(j?.price);
+  if(!v){ punish(tag); throw new Error("td no price"); }
+  return v;
+}
+async function fromAlphaFX(from="USD", to="EGP", tag="av"){
+  if(!ALPHAVANTAGE_KEY) throw new Error("no AV key");
+  if(!sourceOK(tag)) throw new Error("av backoff");
+  const j = await jget(`https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=${from}&to_currency=${to}&apikey=${ALPHAVANTAGE_KEY}`);
+  const v = Number(j?.["Realtime Currency Exchange Rate"]?.["5. Exchange Rate"]);
+  if(!v){ punish(tag, 3600_000); throw new Error("av no fx"); }
+  return v;
+}
+async function fromGoldPriceZ(metal="XAU", currency="USD", tag="gpz"){
+  if(!GOLDPRICEZ_KEY) throw new Error("no GPZ key");
+  if(!sourceOK(tag)) throw new Error("gpz backoff");
+  const j = await jget(`https://www.goldpricez.com/api/rates/${metal}/${currency}/gram?api_key=${GOLDPRICEZ_KEY}`);
+  const g = Number(j?.price_gram_24k);
+  if(!g){ punish(tag); throw new Error("gpz no gram"); }
+  return g * 31.1034768; // gram -> troy oz
 }
 
-/* ---------------------- FX ---------------------- */
+// -------- SYMBOL MAPS --------
+const METAL_UNITS = {
+  gold: "oz", silver: "oz", platinum: "oz", palladium:"oz",
+  copper:"lb", aluminum:"t", nickel:"t", zinc:"t", lead:"t", tin:"t",
+  iron:"t", steel:"t", cobalt:"t", lithium:"t", uranium:"lb"
+};
+
+// TwelveData symbols (where available)
+const TD_SYMBOLS = {
+  gold:"XAU/USD", silver:"XAG/USD", platinum:"XPT/USD", palladium:"XPD/USD"
+};
+
+// Yahoo fallback tickers
+const Y_TICK = {
+  gold:"XAUUSD=X", silver:"XAGUSD=X", platinum:"XPTUSD=X", palladium:"XPDUSD=X",
+  copper:"HG=F", aluminum:"ALI=F", nickel:"NID=F", zinc:"MZN=F", lead:"LD=F", tin:"TIN=F",
+  iron:"IRN=F", steel:"HRC=F"
+};
+
+// -------- SCHEDULER LADDERS --------
+const TTL = {
+  goldsilver: 5*60*1000,     // 5m cache
+  crypto:     10*1000,       // 10s cache
+  forex:      60*60*1000,    // 1h
+  oilgas:     12*60*60*1000, // 12h
+  metals:     24*60*60*1000  // 24h
+};
+
+// “shouldPauseGoldHours”: عطلة نهاية الأسبوع (السبت=6 والأحد=0) نوقف الذهب/الفضة
+const shouldPauseGoldHours = ()=> (wday()===6 || wday()===0);
+
+// Resolver by site entry
+async function resolveSite(entry){
+  const tag = (entry.name||entry.type||"src")+":"+ (entry.url||entry.id||"");
+  switch(entry.type){
+    case "yahooChart": return await fromYahooChart(entry.url, tag);
+    case "yahooClose": return await fromYahooClose(entry.url, tag);
+    case "cheerioText": return await fromCheerio(entry.url, entry.selector, tag);
+    case "coingecko": return await fromCoinGecko(entry.id, "usd", tag);
+    default: throw new Error("unknown site type: "+entry.type);
+  }
+}
+
+// Meta resolvers
+async function getGoldUSD(){
+  const key = "metal:gold";
+  const c = getCache(key); if(c) return c;
+  // Primary A: TwelveData -> GoldPriceZ
+  try{ if(TWELVEDATA_KEY) { const v = await fromTwelve(TD_SYMBOLS.gold,"td:xau"); setCache(key,{price:v,unit:"oz",src:"TD"}, TTL.goldsilver); return getCache(key); } }catch{}
+  try{ if(GOLDPRICEZ_KEY){ const v = await fromGoldPriceZ("XAU","USD","gpz:xau"); setCache(key,{price:v,unit:"oz",src:"GPZ"}, TTL.goldsilver); return getCache(key);} }catch{}
+  // B: sites
+  for(const e of SITES.gold){ try{ const v = await resolveSite(e); setCache(key,{price:v,unit:"oz",src:e.name}, TTL.goldsilver); return getCache(key);}catch{} }
+  throw new Error("gold failed");
+}
+async function getSilverUSD(){
+  const key = "metal:silver";
+  const c = getCache(key); if(c) return c;
+  try{ if(TWELVEDATA_KEY) { const v = await fromTwelve(TD_SYMBOLS.silver,"td:xag"); setCache(key,{price:v,unit:"oz",src:"TD"}, TTL.goldsilver); return getCache(key); } }catch{}
+  try{ if(GOLDPRICEZ_KEY){ const v = await fromGoldPriceZ("XAG","USD","gpz:xag"); setCache(key,{price:v,unit:"oz",src:"GPZ"}, TTL.goldsilver); return getCache(key);} }catch{}
+  for(const e of SITES.silver){ try{ const v = await resolveSite(e); setCache(key,{price:v,unit:"oz",src:e.name}, TTL.goldsilver); return getCache(key);}catch{} }
+  throw new Error("silver failed");
+}
+async function getIndustrialMetalUSD(name){
+  const key = "metal:"+name;
+  const c = getCache(key); if(c) return c;
+  // A) TwelveData (لو متاح)
+  if(TD_SYMBOLS[name]){
+    try{ const v = await fromTwelve(TD_SYMBOLS[name], "td:"+name); setCache(key,{price:v,unit:METAL_UNITS[name]||"t",src:"TD"}, TTL.metals); return getCache(key);}catch{}
+  }
+  // B) Yahoo tickers
+  if(Y_TICK[name]){
+    try{ const v = await fromYahooChart(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(Y_TICK[name])}`, "y:"+name); setCache(key,{price:v,unit:METAL_UNITS[name]||"t",src:"Yahoo"}, TTL.metals); return getCache(key);}catch{}
+  }
+  // C) Sites.json specific list
+  const arr = (SITES.metals && SITES.metals[name]) || [];
+  for(const e of arr){ try{ const v = await resolveSite(e); setCache(key,{price:v,unit:METAL_UNITS[name]||"t",src:e.name}, TTL.metals); return getCache(key);}catch{} }
+  throw new Error(name+" failed");
+}
+
+// FX
 async function getFX(from="USD", to="EGP"){
   const key = `fx:${from}:${to}`;
-  const cached = getCache(key);
-  if (cached) return cached;
-
-  try{
-    if (TWELVEDATA_KEY){
-      const j = await tryJson(`https://api.twelvedata.com/price?symbol=${from}/${to}&apikey=${TWELVEDATA_KEY}`);
-      const v = Number(j?.price);
-      if (v){ const out={rate:v, source:"TD"}; setCache(key,out, TTL.fx); return out; }
-    }
-  }catch{}
-
-  try{
-    if (API_NINJAS_KEY){
-      const r = await fetch(`https://api.api-ninjas.com/v1/exchangerate?pair=${from}${to}`, { headers: {"X-Api-Key": API_NINJAS_KEY }});
-      if (r.ok){
-        const j = await r.json();
-        const v = Number(j?.exchange_rate);
-        if (v){ const out={rate:v, source:"Ninjas"}; setCache(key,out, TTL.fx); return out; }
-      }
-    }
-  }catch{}
-
-  try{
-    const v = await srcAlphaFX(from,to,"alpha");
-    if (v){ const out={rate:v, source:"AV"}; setCache(key,out, TTL.fx); return out; }
-  }catch{}
-
-  const stale = cache.get(key)?.data;
-  if (stale) return stale;
-  throw new Error("FX failed");
+  const c = getCache(key); if(c) return c;
+  try{ const v = await fromAlphaFX(from,to,"av"); setCache(key,{rate:v,src:"AlphaVantage"}, TTL.forex); return getCache(key);}catch{}
+  // Yahoo fallback
+  try{ const v = await fromYahooChart(`https://query1.finance.yahoo.com/v8/finance/chart/${from}${to}=X`, "y:fx"); setCache(key,{rate:v,src:"Yahoo"}, TTL.forex); return getCache(key);}catch{}
+  throw new Error("fx failed");
 }
 
-/* ---------------------- CRYPTO ---------------------- */
-const wsPrices = new Map(); // "BTCUSDT" -> price
+// Oil & Gas
+async function getOilUSD(){
+  const key="oil:wti"; const c=getCache(key); if(c) return c;
+  for(const e of SITES.oil){ try{ const v=await resolveSite(e); setCache(key,{price:v,src:e.name}, TTL.oilgas); return getCache(key);}catch{} }
+  throw new Error("oil failed");
+}
+async function getGasUSD(){
+  const key="gas:natgas"; const c=getCache(key); if(c) return c;
+  for(const e of SITES.gas){ try{ const v=await resolveSite(e); setCache(key,{price:v,src:e.name}, TTL.oilgas); return getCache(key);}catch{} }
+  throw new Error("gas failed");
+}
+
+// Crypto (Binance WS + fallbacks)
+const wsPrices = new Map();
 function startBinanceWS(pairs=["btcusdt","ethusdt","solusdt","xrpusdt"]){
   try{
     const streams = pairs.map(p=>`${p}@ticker`).join('/');
     const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams}`);
     ws.on("message",(buf)=>{
-      try{
-        const j = JSON.parse(buf.toString());
-        const d = j?.data; if (d?.s && d?.c) wsPrices.set(d.s, Number(d.c));
-      }catch{}
+      try{ const j=JSON.parse(buf.toString()); const d=j?.data; if(d?.s && d?.c) wsPrices.set(d.s, Number(d.c)); }catch{}
     });
     ws.on("close", ()=> setTimeout(()=>startBinanceWS(pairs), 3000));
     ws.on("error", ()=> ws.close());
@@ -292,52 +230,69 @@ startBinanceWS();
 
 async function getCryptoUSDT(sym="BTC"){
   const key = `crypto:${sym}`;
-  const cached = getCache(key);
-  if (cached) return cached;
+  const c = getCache(key); if(c) return c;
 
-  const ws = wsPrices.get(`${sym.toUpperCase()}USDT`);
-  if (ws){ const out={price:ws, source:"BinanceWS"}; setCache(key,out, TTL.crypto); return out; }
+  const wsv = wsPrices.get(`${sym.toUpperCase()}USDT`);
+  if(wsv){ setCache(key,{price:wsv,src:"BinanceWS"}, TTL.crypto); return getCache(key); }
 
-  try{
-    const j = await tryJson(`https://api.coingecko.com/api/v3/simple/price?ids=${sym.toLowerCase()}&vs_currencies=usd`);
-    const v = Number(j?.[sym.toLowerCase()]?.usd);
-    if (v){ const out={price:v, source:"CoinGecko"}; setCache(key,out, TTL.crypto); return out; }
-  }catch{}
-
-  try{
-    const map={BTC:"XBTUSD", ETH:"ETHUSD"};
-    const kr = map[sym.toUpperCase()] || `${sym.toUpperCase()}USD`;
-    const j = await tryJson(`https://api.kraken.com/0/public/Ticker?pair=${kr}`);
-    const obj = j?.result && Object.values(j.result)[0];
-    const v = Number(obj?.c?.[0]);
-    if (v){ const out={price:v, source:"Kraken"}; setCache(key,out, TTL.crypto); return out; }
-  }catch{}
-
-  const stale = cache.get(key)?.data;
-  if (stale) return stale;
+  // CoinGecko
+  try{ const v = await fromCoinGecko(sym.toLowerCase(),"usd","cg"); setCache(key,{price:v,src:"CoinGecko"}, TTL.crypto); return getCache(key);}catch{}
+  // Yahoo as extra fallback
+  try{ const v = await fromYahooChart(`https://query1.finance.yahoo.com/v8/finance/chart/${sym.toUpperCase()}-USD`, "y:crypto"); setCache(key,{price:v,src:"Yahoo"}, TTL.crypto); return getCache(key);}catch{}
   throw new Error("crypto failed");
 }
 
-/* ---------------------- EXPRESS APP ---------------------- */
+// -------- SCHEDULERS --------
+// Gold/Silver every 3.5 minutes (pause on weekend)
+setInterval(async ()=>{
+  if(shouldPauseGoldHours()) return;
+  try{ await getGoldUSD(); }catch{}
+  try{ await getSilverUSD(); }catch{}
+}, 210000); // 3m30s
+
+// Crypto every 2s (WS already pushes; this ensures cache kept warm)
+setInterval(async ()=>{
+  try{ await getCryptoUSDT("BTC"); await getCryptoUSDT("ETH"); }catch{}
+}, 2000);
+
+// Forex every hour (example USD->EGP)
+setInterval(async ()=>{
+  try{ await getFX("USD","EGP"); }catch{}
+}, 60*60*1000);
+
+// Oil/Gas every 12h
+setInterval(async ()=>{ try{ await getOilUSD(); }catch{} }, 12*60*60*1000);
+setInterval(async ()=>{ try{ await getGasUSD(); }catch{} }, 12*60*60*1000);
+
+// Industrial metals every 24h
+const INDUSTRIAL = ["platinum","palladium","copper","aluminum","nickel","zinc","lead","tin","iron","steel","cobalt","lithium","uranium"];
+setInterval(async ()=>{
+  for(const m of INDUSTRIAL){ try{ await getIndustrialMetalUSD(m); }catch{} await sleep(400); }
+}, 24*60*60*1000);
+
+// -------- HTTP --------
 const app = express();
 
 app.get("/api/health", (req,res)=> res.json({ ok:true, ts: Date.now() }));
-app.get("/api/status", (req,res)=>{
-  res.json({
-    uptime: process.uptime(),
-    cacheKeys: [...cache.keys()],
-    backoff: Object.fromEntries(backoffUntil)
-  });
-});
 
 app.get("/api/metals", async (req,res)=>{
   try{
-    const list = (req.query.list || "gold,silver,platinum,palladium,copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium")
-                  .split(",").map(s=>s.trim()).filter(Boolean);
+    const listRaw = (req.query.list || "gold,silver").split(",").map(s=>s.trim()).filter(Boolean);
     const out = {};
-    for (const m of list){
-      out[m] = await getMetalUSD(m);
+    for(const m of listRaw){
+      if(m==="gold") out.gold = await getGoldUSD();
+      else if(m==="silver") out.silver = await getSilverUSD();
+      else if(INDUSTRIAL.includes(m)) out[m] = await getIndustrialMetalUSD(m);
     }
+    res.json(out);
+  }catch(e){ res.status(500).json({ error: String(e.message||e) }); }
+});
+
+app.get("/api/crypto", async (req,res)=>{
+  try{
+    const list=(req.query.list||"BTC,ETH").split(",").map(s=>s.trim()).filter(Boolean);
+    const out={};
+    for(const s of list){ out[s]=await getCryptoUSDT(s); }
     res.json(out);
   }catch(e){ res.status(500).json({ error: String(e.message||e) }); }
 });
@@ -351,36 +306,13 @@ app.get("/api/fx", async (req,res)=>{
   }catch(e){ res.status(500).json({ error: String(e.message||e) }); }
 });
 
-app.get("/api/crypto", async (req,res)=>{
-  try{
-    const list=(req.query.list||"BTC,ETH").split(",").map(s=>s.trim()).filter(Boolean);
-    const out={};
-    for(const s of list) out[s]=await getCryptoUSDT(s);
-    res.json(out);
-  }catch(e){ res.status(500).json({ error: String(e.message||e) }); }
+app.get("/api/oil", async (req,res)=>{
+  try{ res.json(await getOilUSD()); }
+  catch(e){ res.status(500).json({ error: String(e.message||e) }); }
 });
-
-/* --------- PERIODIC FMP REFRESH (كل 6 دقايق احتياطيًا حتى لو كله شغال) --------- */
-const FMP_REFRESH_MS = 6 * 60 * 1000;
-const FMP_METALS = Object.entries(METALS)
-  .filter(([,m]) => !!m.fmp)
-  .map(([name,m]) => ({ name, fmp: m.fmp, unit: m.unit }));
-
-async function periodicFMP(){
-  if (!FMP_KEY) return;
-  for (const item of FMP_METALS){
-    try{
-      const v = await srcFMP(item.fmp, "fmp:"+item.fmp);
-      if (v){
-        setCache(`metal:${item.name}`, { price:v, unit:item.unit, source:"FMP-periodic" }, TTL.metals);
-        await sleep(250);
-      }
-    }catch{
-      // تجاهل أي خطأ أثناء التحديث الدوري
-    }
-  }
-}
-setInterval(periodicFMP, FMP_REFRESH_MS);
-periodicFMP(); // أول تشغيل
+app.get("/api/gas", async (req,res)=>{
+  try{ res.json(await getGasUSD()); }
+  catch(e){ res.status(500).json({ error: String(e.message||e) }); }
+});
 
 app.listen(PORT, ()=> console.log("Hybrid backend running on port "+PORT));
