@@ -1,7 +1,7 @@
 {
-  "name": "goldenprice-backend-final",
+  "name": "goldenprice-backend",
   "version": "1.0.0",
-  "description": "Backend for live metals and crypto prices",
+  "description": "Live metals, crypto, and commodities price tracker",
   "main": "server.js",
   "type": "commonjs",
   "engines": {
@@ -11,9 +11,9 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0-rc.12",
     "express": "^4.19.2",
     "node-fetch": "^2.6.9",
+    "cheerio": "^1.0.0-rc.12",
     "ws": "^8.18.0"
   }
 }
