@@ -1,9 +1,12 @@
 {
-  "name": "goldenprice-backend-hybrid",
+  "name": "goldenprice-backend-final",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Backend for live metals and crypto prices",
   "main": "server.js",
-  "engines": { "node": ">=18.x" },
+  "type": "commonjs",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "start": "node server.js"
   },
