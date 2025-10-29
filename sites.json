@@ -1,0 +1,95 @@
+{
+  "gold": [
+    { "name": "Yahoo XAUUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/XAUUSD=X" },
+    { "name": "X-Rates Gold", "type": "cheerioText", "url": "https://www.x-rates.com/commodity/gold", "selector": ".ccOutputRslt" },
+    { "name": "Yahoo GC=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/GC=F" },
+    { "name": "Yahoo MGC=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/MGC=F" },
+    { "name": "Yahoo XAU=X", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/XAU=X" },
+    { "name": "Yahoo IAU", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/IAU" },
+    { "name": "Yahoo GLD", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLD" },
+    { "name": "CNBC Gold", "type": "cheerioText", "url": "https://www.cnbc.com/quotes/GC%3A*?view=futures", "selector": "[data-test='QuoteLast']" },
+    { "name": "MarketWatch GC00", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/gold", "selector": ".value" },
+    { "name": "Gold.org Data (landing)", "type": "cheerioText", "url": "https://www.gold.org/goldhub/data/gold-prices", "selector": "h1" },
+    { "name": "Kitco Gold (landing)", "type": "cheerioText", "url": "https://www.kitco.com/gold-price-today-usa/", "selector": "#AU-bid" },
+    { "name": "BullionVault Gold", "type": "cheerioText", "url": "https://www.bullionvault.com/gold-price-chart.do", "selector": "#live-price" },
+    { "name": "Yahoo GLDM", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/GLDM" },
+    { "name": "Yahoo BAR", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/BAR" },
+    { "name": "Yahoo PHYS", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/PHYS" }
+  ],
+  "silver": [
+    { "name": "Yahoo XAGUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/XAGUSD=X" },
+    { "name": "Yahoo SI=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/SI=F" },
+    { "name": "X-Rates Silver", "type": "cheerioText", "url": "https://www.x-rates.com/commodity/silver", "selector": ".ccOutputRslt" },
+    { "name": "Kitco Silver (landing)", "type": "cheerioText", "url": "https://www.kitco.com/silver-price-today-usa/", "selector": "#AG-bid" },
+    { "name": "Yahoo SLV", "type": "yahooClose", "url": "https://query1.finance.yahoo.com/v8/finance/chart/SLV" },
+    { "name": "MarketWatch SI00", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/silver", "selector": ".value" },
+    { "name": "BullionVault Silver", "type": "cheerioText", "url": "https://www.bullionvault.com/silver-price-chart.do", "selector": "#live-price" }
+  ],
+  "metals": {
+    "platinum": [
+      { "name": "Yahoo XPTUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/XPTUSD=X" },
+      { "name": "Yahoo PL=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/PL=F" },
+      { "name": "MarketWatch PL", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/platinum", "selector": ".value" }
+    ],
+    "palladium": [
+      { "name": "Yahoo XPDUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/XPDUSD=X" },
+      { "name": "Yahoo PA=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/PA=F" },
+      { "name": "MarketWatch PA", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/palladium", "selector": ".value" }
+    ],
+    "copper": [
+      { "name": "Yahoo HG=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/HG=F" },
+      { "name": "MarketWatch HG", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/copper", "selector": ".value" }
+    ],
+    "aluminum": [
+      { "name": "Yahoo ALI=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/ALI=F" }
+    ],
+    "nickel": [
+      { "name": "Yahoo NID=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/NID=F" }
+    ],
+    "zinc": [
+      { "name": "Yahoo MZN=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/MZN=F" }
+    ],
+    "lead": [
+      { "name": "Yahoo LD=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/LD=F" }
+    ],
+    "tin": [
+      { "name": "Yahoo TIN=F", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/TIN=F" }
+    ],
+    "iron": [
+      { "name": "Yahoo IRN=F (proxy)", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/IRN=F" }
+    ],
+    "steel": [
+      { "name": "Yahoo HRC=F (US Midwest HRC)", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/HRC=F" }
+    ],
+    "cobalt": [
+      { "name": "TradingEconomics Cobalt (landing)", "type": "cheerioText", "url": "https://tradingeconomics.com/commodity/cobalt", "selector": ".value" }
+    ],
+    "lithium": [
+      { "name": "TradingEconomics Lithium (landing)", "type": "cheerioText", "url": "https://tradingeconomics.com/commodity/lithium", "selector": ".value" }
+    ],
+    "uranium": [
+      { "name": "TradingEconomics Uranium (landing)", "type": "cheerioText", "url": "https://tradingeconomics.com/commodity/uranium", "selector": ".value" }
+    ]
+  },
+  "oil": [
+    { "name": "Yahoo CL=F (WTI)", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/CL=F" },
+    { "name": "Yahoo BZ=F (Brent)", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/BZ=F" },
+    { "name": "MarketWatch WTI", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/crude%20oil%20-%20electronic", "selector": ".value" }
+  ],
+  "gas": [
+    { "name": "Yahoo NG=F (NatGas)", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/NG=F" },
+    { "name": "MarketWatch NG", "type": "cheerioText", "url": "https://www.marketwatch.com/investing/future/natural%20gas", "selector": ".value" }
+  ],
+  "forex": [
+    { "name": "Yahoo EURUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/EURUSD=X" },
+    { "name": "Yahoo USDJPY", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/JPY=X" },
+    { "name": "Yahoo GBPUSD", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/GBPUSD=X" },
+    { "name": "Yahoo USDEGP", "type": "yahooChart", "url": "https://query1.finance.yahoo.com/v8/finance/chart/USDEGP=X" }
+  ],
+  "crypto": [
+    { "name": "CoinGecko BTC", "type": "coingecko", "id": "bitcoin" },
+    { "name": "CoinGecko ETH", "type": "coingecko", "id": "ethereum" },
+    { "name": "CoinGecko SOL", "type": "coingecko", "id": "solana" },
+    { "name": "CoinGecko XRP", "type": "coingecko", "id": "ripple" }
+  ]
+}
