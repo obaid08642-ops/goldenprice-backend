@@ -2,11 +2,24 @@ services:
   - type: web
     name: goldenprice-backend
     env: node
-    plan: free
-    buildCommand: "npm install"
-    startCommand: "node server.js"
+    buildCommand: "npm i"
+    startCommand: "npm start"
     envVars:
-      - key: NODE_VERSION
-        value: 20
-      - key: PORT
-        value: 10000
+      - key: TWELVEDATA_KEY
+        sync: false
+      - key: METALPRICE_KEY
+        sync: false
+      - key: ALPHAVANTAGE_KEY
+        sync: false
+      - key: EXR_HOST
+        value: "https://api.exchangerate.host"
+      - key: SCRAPE_URL
+        sync: false
+      - key: SCRAPE_SEL_GOLD
+        sync: false
+      - key: SCRAPE_SEL_SILV
+        sync: false
+      - key: METALS_MARKET_PAUSE
+        value: "1"
+      - key: ADMIN_TOKEN
+        sync: false
