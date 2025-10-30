@@ -1,17 +1,12 @@
 services:
   - type: web
-    name: goldenprice-backend-hybrid
+    name: goldenprice-backend
     env: node
+    plan: free
     buildCommand: "npm install"
     startCommand: "node server.js"
-    plan: free
-    autoDeploy: true
     envVars:
       - key: NODE_VERSION
-        value: 18
-      - key: TWELVEDATA_KEY
-        sync: false
-      - key: ALPHAVANTAGE_KEY
-        sync: false
-      - key: GOLDPRICEZ_KEY
-        sync: false
+        value: 20
+      - key: PORT
+        value: 10000
