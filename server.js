@@ -1,200 +1,105 @@
-// server.js – GoldenPrice (ملف واحد)
-// Node >=18 (fetch داخلي)
-// لا يحتاج Cheerio (تجنُّب مشاكل ESM); سكراب بسيط لـ TheStreetGold عبر regex آمن.
+import express from "express";
+import axios from "axios";
+import NodeCache from "node-cache";
+import cron from "node-cron";
+import cors from "cors";
+import fs from "fs";
 
-const express = require('express');
 const app = express();
+app.use(cors());
+const cache = new NodeCache({ stdTTL: 1800 }); // الكاش يعيش نص ساعة
 
-// ====== إعدادات عامة ======
-const PORT = process.env.PORT || 10000;
+// تحميل مصادر المواقع (TheStreetGold وغيره)
+const sources = JSON.parse(fs.readFileSync("./site.json", "utf8"));
 
-// مفاتيح الـ API من الإنفايرونمنت
-const TWELVE_KEY = process.env.TWELVEDATA_KEY || '';        //  TwelveData
-const ALPHA_KEY   = process.env.ALPHA_VANTAGE_KEY || '';    //  AlphaVantage
+const PORT = process.env.PORT || 3000;
+const GOLDEN_API_KEY = "38e67a5256f04dee810b7b9928a4a8f2"; // Twelve Data
+const ALPHA_KEY = "72DETEUG9X0NTCW4";
+const METAL_KEY = "0dbe2529cb182e7178c611119c9d110d";
+const EXCHANGE_KEY = "bfb7221c4d791da843ecef7c84076f85";
 
-// فواصل زمنية (دقائق) – يمكنك تغييرها من الإنفايرونمنت عند الحاجة
-const INTERVAL_GOLD_MIN   = Number(process.env.INTERVAL_GOLD_MIN)   || 5;   // تناوب كل 5 دقايق
-const INTERVAL_SILVER_MIN = Number(process.env.INTERVAL_SILVER_MIN) || 5;
-const INTERVAL_CRYPTO_MIN = Number(process.env.INTERVAL_CRYPTO_MIN) || 2;
-const INTERVAL_FX_MIN     = Number(process.env.INTERVAL_FX_MIN)     || 10;
-// Alpha Vantage: نوفر الطلبات — كل 6 ساعات (يمكن تزودها لـ 10 ساعات)
-const INTERVAL_ALPHA_HRS  = Number(process.env.INTERVAL_ALPHA_HRS)  || 6;
+async function fetchData() {
+  console.log("⏳ بدء تحديث البيانات...");
 
-// ========== أدوات مساعدة ==========
-const nowTs = () => Date.now();
-const isWeekend = () => {
-  const d = new Date();
-  const day = d.getUTCDay(); // 0=Sun,6=Sat
-  return day === 0 || day === 6;
-};
+  try {
+    const [gold, silver] = await Promise.all([
+      axios.get(
+        `https://api.twelvedata.com/price?symbol=XAU/USD&apikey=${GOLDEN_API_KEY}`
+      ),
+      axios.get(
+        `https://api.twelvedata.com/price?symbol=XAG/USD&apikey=${GOLDEN_API_KEY}`
+      ),
+    ]);
 
-// تحويل نص يحتوي رقماً لسعر (regex يتحمل الفواصل وعلامة الدولار)
-function pickNumberLikePrice(text) {
-  if (!text) return null;
-  // أمثلة: 2,345.67 أو 2345.67 أو $2,345.67
-  const m = text.replace(/\s+/g,' ').match(/(?:\$?\s*)?(\d{1,3}(?:,\d{3})*(?:\.\d+)?|\d+(?:\.\d+)?)/);
-  if (!m) return null;
-  const raw = m[1].replace(/,/g,'');
-  const v = Number(raw);
-  return Number.isFinite(v) ? v : null;
-}
+    const metals = await axios.get(
+      `https://api.metalpriceapi.com/v1/latest?api_key=${METAL_KEY}&base=USD&currencies=XAU,XAG,XPT,XPD,CU,AL,ZN,NI,PB,SN,FE,STEEL,PS`
+    );
 
-// ========== الكاش ==========
-const CACHE = {
-  gold:    { usd: null, source: null, t: null },
-  silver:  { usd: null, source: null, t: null },
-  crypto:  { /* BTC:{usd,source,t}, ETH:{...} */ },
-  fx:      { /* base->symbols map later */ },
-  metals:  { value: {}, lastUpdated: null },  // Alpha Vantage: WTI/Brent/NATGAS/COPPER/ALUMINUM
-  oilgas:  { value: {}, lastUpdated: null },  // alias على نفس البيانات
-  last:    {}
-};
+    const forex = await axios.get(
+      `https://api.exchangerate.host/live?access_key=${EXCHANGE_KEY}`
+    );
 
-// ========== مصادر الدهب/الفضة بالتناوب ==========
-let goldIndex = 0;
-let silverIndex = 0;
+    const crypto = await axios.get(
+      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,silverx&vs_currencies=usd"
+    );
 
-// gold sources rotation
-const GOLD_SOURCES = [
-  'twelvedata',   // يتطلب key – قد يرفض XAU على بعض الخطط، بنجرب أولاً
-  'thestreet',    // سكراب خفيف (بدون Cheerio)
-  'yahoo'         // GC=F (فيوتشر) – تقدير قريب للسعر الفوري
-];
+    cache.set("gold", gold.data.price);
+    cache.set("silver", silver.data.price);
+    cache.set("metals", metals.data.rates);
+    cache.set("forex", forex.data.quotes);
+    cache.set("crypto", crypto.data);
 
-// silver sources rotation
-const SILVER_SOURCES = [
-  'twelvedata',
-  'thestreet',   // نحاول صفحة الفضة
-  'yahoo'        // SI=F (فيوتشر)
-];
-
-// ========== طلبات HTTP ==========
-async function httpGetJson(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': 'goldenprice/1.0' }});
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.json();
-}
-async function httpGetText(url) {
-  const res = await fetch(url, { headers: { 'User-Agent': 'goldenprice/1.0' }});
-  if (!res.ok) throw new Error(`HTTP ${res.status} for ${url}`);
-  return res.text();
-}
-
-// ========== الدهب ==========
-async function fetchGold_Twelve() {
-  if (!TWELVE_KEY) throw new Error('TWELVE_KEY missing');
-  // TwelveData قد يرفض الرمز XAU/USD على الخطة المجانية لبعض الحسابات
-  const url = `https://api.twelvedata.com/price?symbol=XAU/USD&apikey=${TWELVE_KEY}`;
-  const j = await httpGetJson(url);
-  if (j && j.price) {
-    const v = Number(j.price);
-    if (Number.isFinite(v)) return { usd: v, source: 'twelvedata' };
+    console.log("✅ تم التحديث بنجاح!");
+  } catch (error) {
+    console.error("❌ خطأ أثناء تحديث البيانات:", error.message);
   }
-  // أحياناً يرجّع {code:404,...} — نرمي خطأ لنجرب المصدر التالي
-  throw new Error(j && j.message ? j.message : 'No price');
 }
 
-async function fetchGold_TheStreet() {
-  // صفحة عامة فيها السعر – قد تتغير، لذا نخليها غير قاتلة
-  const url = 'https://www.thestreet.com/markets/commodities/gold-price';
-  const html = await httpGetText(url);
-  // ابحث عن block فيه "Gold Price" ثم رقم بالدولار
-  const m = html.match(/Gold Price[^$]*\$\s*([\d,]+(?:\.\d+)?)/i) ||
-            html.match(/gold[^<>{}]*price[^$]*\$\s*([\d,]+(?:\.\d+)?)/i);
-  const v = m ? Number(m[1].replace(/,/g,'')) : pickNumberLikePrice(html);
-  if (!v) throw new Error('No gold price on TheStreet');
-  return { usd: v, source: 'thestreet' };
-}
-
-async function fetchGold_Yahoo() {
-  // GC=F – Gold Futures (قد يختلف قليلاً عن السبوت لكنه بديل جيد)
-  const url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=GC=F';
-  const j = await httpGetJson(url);
-  const q = j?.quoteResponse?.result?.[0];
-  const v = q?.regularMarketPrice || q?.postMarketPrice || q?.ask || q?.bid;
-  if (!Number.isFinite(v)) throw new Error('No GC=F price');
-  return { usd: Number(v), source: 'yahoo' };
-}
-
-async function rotateGold() {
-  if (isWeekend()) return; // لا نحدث في الويك إند (السعر سيبقى من الكاش)
-  const order = GOLD_SOURCES;
-  for (let i = 0; i < order.length; i++) {
-    const src = order[(goldIndex + i) % order.length];
-    try {
-      let data;
-      if (src === 'twelvedata') data = await fetchGold_Twelve();
-      else if (src === 'thestreet') data = await fetchGold_TheStreet();
-      else data = await fetchGold_Yahoo();
-
-      CACHE.gold = { ...data, t: nowTs() };
-      goldIndex = (goldIndex + i + 1) % order.length; // ابدأ من التالي في الدورة القادمة
-      return;
-    } catch (e) {
-      // جرّب اللي بعده
+// TheStreetGold Scraping (كمصدر احتياطي)
+async function fetchStreetGold() {
+  try {
+    const site = sources.find((s) => s.name === "thestreetgold");
+    const res = await axios.get(site.url);
+    const match = res.data.match(/Gold\s*Price\s*\$?([\d,.]+)/i);
+    if (match) {
+      const price = parseFloat(match[1].replace(/,/g, ""));
+      cache.set("gold", price);
+      console.log("🟡 TheStreetGold تحديث سعر الذهب:", price);
     }
-  }
-  // لو فشلوا كلهم، لا نغيّر الكاش
-}
-
-// ========== الفضة ==========
-async function fetchSilver_Twelve() {
-  if (!TWELVE_KEY) throw new Error('TWELVE_KEY missing');
-  const url = `https://api.twelvedata.com/price?symbol=XAG/USD&apikey=${TWELVE_KEY}`;
-  const j = await httpGetJson(url);
-  if (j && j.price) {
-    const v = Number(j.price);
-    if (Number.isFinite(v)) return { usd: v, source: 'twelvedata' };
-  }
-  throw new Error(j && j.message ? j.message : 'No price');
-}
-async function fetchSilver_TheStreet() {
-  const url = 'https://www.thestreet.com/markets/commodities/silver-price';
-  const html = await httpGetText(url);
-  const m = html.match(/Silver Price[^$]*\$\s*([\d,]+(?:\.\d+)?)/i) ||
-            html.match(/silver[^<>{}]*price[^$]*\$\s*([\d,]+(?:\.\d+)?)/i);
-  const v = m ? Number(m[1].replace(/,/g,'')) : pickNumberLikePrice(html);
-  if (!v) throw new Error('No silver price on TheStreet');
-  return { usd: v, source: 'thestreet' };
-}
-async function fetchSilver_Yahoo() {
-  // SI=F – Silver Futures
-  const url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=SI=F';
-  const j = await httpGetJson(url);
-  const q = j?.quoteResponse?.result?.[0];
-  const v = q?.regularMarketPrice || q?.postMarketPrice || q?.ask || q?.bid;
-  if (!Number.isFinite(v)) throw new Error('No SI=F price');
-  return { usd: Number(v), source: 'yahoo' };
-}
-async function rotateSilver() {
-  if (isWeekend()) return;
-  const order = SILVER_SOURCES;
-  for (let i = 0; i < order.length; i++) {
-    const src = order[(silverIndex + i) % order.length];
-    try {
-      let data;
-      if (src === 'twelvedata') data = await fetchSilver_Twelve();
-      else if (src === 'thestreet') data = await fetchSilver_TheStreet();
-      else data = await fetchSilver_Yahoo();
-
-      CACHE.silver = { ...data, t: nowTs() };
-      silverIndex = (silverIndex + i + 1) % order.length;
-      return;
-    } catch (e) {
-      // جرّب اللي بعده
-    }
+  } catch (e) {
+    console.error("⚠️ TheStreetGold فشل في الجلب:", e.message);
   }
 }
 
-// ========== كريبتو (CoinGecko) ==========
-async function fetchCrypto(symbol = 'bitcoin') {
-  // CoinGecko مجاني ومباشر
-  const url = `https://api.coingecko.com/api/v3/simple/price?ids=${encodeURIComponent(symbol)}&vs_currencies=usd`;
-  const j = await httpGetJson(url);
-  const v = j?.[symbol]?.usd;
-  if (!Number.isFinite(v)) throw new Error(`No price for ${symbol}`);
-  CACHE.crypto[symbol.toUpperCase()] = { usd: Number(v), source: 'coingecko', t: nowTs() };
-  return CACHE.crypto[symbol.toUpperCase()];
-}
+// تحديثات دورية (CRON Jobs)
+cron.schedule("*/3 * * * *", fetchData); // كل 3 دق ونص تقريبًا
+cron.schedule("*/5 * * * *", fetchStreetGold); // كل 5 دقايق
+cron.schedule("0 */5 * * *", fetchData); // كل 5 ساعات للـ Alpha
 
-// ========== فوركس (
+// Endpoint عام للـ Front-End
+app.get("/api/prices", (req, res) => {
+  const data = {
+    gold: cache.get("gold") || "N/A",
+    silver: cache.get("silver") || "N/A",
+    metals: cache.get("metals") || {},
+    forex: cache.get("forex") || {},
+    crypto: cache.get("crypto") || {},
+  };
+  res.json(data);
+});
+
+// تعديل يدوي (تحكم الأدمن)
+app.use(express.json());
+app.post("/api/admin/update", (req, res) => {
+  const { key, value } = req.body;
+  if (!key || value === undefined)
+    return res.status(400).json({ message: "❌ Missing key/value" });
+
+  cache.set(key, value);
+  console.log(`🛠️ تحديث يدوي من الأدمن: ${key} = ${value}`);
+  res.json({ success: true, key, value });
+});
+
+app.listen(PORT, () => {
+  console.log(`🚀 GoldenPrice API Server running on port ${PORT}`);
+});
