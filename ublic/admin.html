@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GoldenPrice Admin</title>
+<style>
+  :root{--bg:#ffffff;--fg:#111;--muted:#666;--card:#f6f6f6;--accent:#0b5fff}
+  body{background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;margin:0;padding:24px}
+  h1{margin:0 0 12px}
+  .row{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:12px}
+  .card{background:var(--card);border-radius:12px;padding:16px;border:1px solid #eaeaea}
+  label{display:block;font-size:12px;color:var(--muted);margin-top:8px}
+  input,select{width:100%;padding:10px;border-radius:10px;border:1px solid #ddd}
+  button{background:var(--accent);color:#fff;border:0;border-radius:10px;padding:10px 14px;cursor:pointer}
+  .muted{color:var(--muted);font-size:12px}
+  .grid-2{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:end}
+  .ok{color:green}.err{color:#b00020}
+  .top{display:flex;gap:12px;align-items:center;justify-content:space-between}
+  code{background:#efefef;padding:2px 6px;border-radius:6px}
+</style>
+</head>
+<body>
+  <div class="top">
+    <h1>GoldenPrice Admin (Light)</h1>
+    <button id="btnRefreshAll">🔄 Update All Now</button>
+  </div>
+  <div class="muted">Use your admin token in the field below for manual overrides.</div>
+
+  <div class="row">
+    <div class="card">
+      <b>Status</b>
+      <div id="status" class="muted">Loading…</div>
+    </div>
+
+    <div class="card">
+      <b>Admin token</b>
+      <input id="token" placeholder="Bearer token"/>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <b>Manual set — Gold</b>
+      <div class="grid-2">
+        <input id="goldVal" placeholder="USD e.g. 3990.21"/>
+        <button onclick="setVal('gold')">Save</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <b>Manual set — Silver</b>
+      <div class="grid-2">
+        <input id="silverVal" placeholder="USD e.g. 46.2"/>
+        <button onclick="setVal('silver')">Save</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <b>Manual set — Crypto</b>
+      <label>Symbol (e.g. BTC, ETH)</label>
+      <input id="cKey" placeholder="BTC"/>
+      <div class="grid-2">
+        <input id="cVal" placeholder="USD"/>
+        <button onclick="setVal('crypto')">Save</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <b>Manual set — Metals</b>
+      <label>Code (XAU, XAG, XPT, ...)</label>
+      <input id="mKey" placeholder="XPT"/>
+      <div class="grid-2">
+        <input id="mVal" placeholder="USD"/>
+        <button onclick="setVal('metals')">Save</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <b>Manual set — Oil & Gas</b>
+      <label>Key (WTI, BRENT, NG)</label>
+      <input id="oKey" placeholder="WTI"/>
+      <div class="grid-2">
+        <input id="oVal" placeholder="USD"/>
+        <button onclick="setVal('oilgas')">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="card">
+      <b>Quick test links</b>
+      <div class="muted">
+        <div><a href="/api/gold" target="_blank">/api/gold</a></div>
+        <div><a href="/api/silver" target="_blank">/api/silver</a></div>
+        <div><a href="/api/crypto/bitcoin" target="_blank">/api/crypto/bitcoin</a></div>
+        <div><a href="/api/oilgas" target="_blank">/api/oilgas</a></div>
+        <div><a href="/api/metals" target="_blank">/api/metals</a></div>
+        <div><a href="/api/silverx" target="_blank">/api/silverx</a></div>
+        <div><a href="/api/status" target="_blank">/api/status</a></div>
+      </div>
+    </div>
+  </div>
+
+<script>
+async function loadStatus(){
+  const r = await fetch("/api/status");
+  const j = await r.json();
+  const s = document.getElementById("status");
+  s.innerHTML = `<div>Last: <code>${JSON.stringify(j.last||{})}</code></div>
+  <div>Keys: <code>${JSON.stringify(j.keys||{})}</code></div>`;
+}
+loadStatus();
+
+async function setVal(category){
+  const token = document.getElementById("token").value.trim();
+  const hdrs = token ? { "Authorization": "Bearer " + token, "Content-Type":"application/json" }
+                     : { "Content-Type":"application/json" };
+  let body = { category, source:"manual" };
+  if(category==="gold") body.value = Number(document.getElementById("goldVal").value);
+  if(category==="silver") body.value = Number(document.getElementById("silverVal").value);
+  if(category==="crypto"){
+    body.key = document.getElementById("cKey").value;
+    body.value = Number(document.getElementById("cVal").value);
+  }
+  if(category==="metals"){
+    body.key = document.getElementById("mKey").value;
+    body.value = Number(document.getElementById("mVal").value);
+  }
+  if(category==="oilgas"){
+    body.key = document.getElementById("oKey").value;
+    body.value = Number(document.getElementById("oVal").value);
+  }
+
+  const r = await fetch("/api/admin/set", { method:"POST", headers: hdrs, body: JSON.stringify(body) });
+  const j = await r.json();
+  alert(JSON.stringify(j));
+}
+
+document.getElementById("btnRefreshAll").onclick = async ()=>{
+  const token = document.getElementById("token").value.trim();
+  const hdrs = token ? { "Authorization": "Bearer " + token } : {};
+  const r = await fetch("/api/admin/refresh", { method:"POST", headers: hdrs });
+  const j = await r.json();
+  alert("Refreshed:\n"+JSON.stringify(j));
+  loadStatus();
+};
+</script>
+</body>
+</html>
