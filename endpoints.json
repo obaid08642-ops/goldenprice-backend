@@ -1,0 +1,10 @@
+{
+  "gold": "https://goldenprice-backend.onrender.com/api/gold",
+  "silver": "https://goldenprice-backend.onrender.com/api/silver",
+  "crypto": "https://goldenprice-backend.onrender.com/api/crypto",
+  "oil": "https://goldenprice-backend.onrender.com/api/oil",
+  "gas": "https://goldenprice-backend.onrender.com/api/gas",
+  "metals": "https://goldenprice-backend.onrender.com/api/metals",
+  "forex": "https://goldenprice-backend.onrender.com/api/forex",
+  "cache": "https://goldenprice-backend.onrender.com/api/cache"
+}
