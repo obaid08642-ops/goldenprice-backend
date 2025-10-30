@@ -1,34 +1,83 @@
 {
-  "precious_metals": {
-    "apis": [
-      "https://api.twelvedata.com/price?symbol=XAU/USD&apikey=YOUR_TWELVEDATA_KEY",
-      "https://api.twelvedata.com/price?symbol=XAG/USD&apikey=YOUR_TWELVEDATA_KEY",
-      "https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=XAU&to_currency=USD&apikey=YOUR_ALPHAVANTAGE_KEY"
-    ],
-    "fallback_html": "https://www.thestreet.com/investing/gold-price"
-  },
-  "crypto": {
-    "apis": [
-      "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin,ethereum,silverx&vs_currencies=usd",
-      "https://api.coincap.io/v2/assets/"
-    ]
-  },
-  "forex": {
-    "apis": [
-      "https://api.frankfurter.dev/latest?from=USD",
-      "https://api.exchangerate.host/live?access_key=YOUR_EXCHANGE_KEY"
-    ]
-  },
-  "oil_gas": {
-    "apis": [
-      "https://www.alphavantage.co/query?function=WTI&interval=daily&apikey=YOUR_ALPHAVANTAGE_KEY",
-      "https://www.alphavantage.co/query?function=BRENT&interval=daily&apikey=YOUR_ALPHAVANTAGE_KEY",
-      "https://www.alphavantage.co/query?function=NATURAL_GAS&interval=daily&apikey=YOUR_ALPHAVANTAGE_KEY"
-    ]
-  },
-  "industrial_metals": {
-    "apis": [
-      "https://financialmodelingprep.com/stable/quote?symbol=HG=F&apikey=YOUR_FMP_KEY"
-    ]
-  }
+  "gold": [
+    {"type":"api","name":"TwelveData","url":"https://api.twelvedata.com/price?symbol=XAU/USD&apikey=${TWELVEDATA_KEY}"},
+    {"type":"api","name":"GoldPriceZ","url":"https://www.goldpricez.com/api/rates/XAU/USD/gram?api_key=${GOLDPRICEZ_KEY}"},
+    {"type":"json","name":"Yahoo Finance","url":"https://query1.finance.yahoo.com/v8/finance/chart/GC=F?region=US&lang=en-US"},
+    {"type":"html","name":"TheStreetGold","url":"https://www.thestreet.com/quote/GCZ24","selector":""},
+
+    {"type":"html","name":"Kitco","url":"https://www.kitco.com/gold-price-today-usa/","selector":""},
+    {"type":"html","name":"Gold.org","url":"https://www.gold.org/goldhub/data/gold-prices","selector":""},
+    {"type":"html","name":"Investing Gold","url":"https://www.investing.com/commodities/gold","selector":""},
+    {"type":"html","name":"TradingEconomics Gold","url":"https://tradingeconomics.com/commodity/gold","selector":""},
+    {"type":"html","name":"MarketWatch Gold","url":"https://www.marketwatch.com/investing/future/gold","selector":""},
+    {"type":"html","name":"CNBC Gold","url":"https://www.cnbc.com/quotes/GC%3A*","selector":""},
+    {"type":"html","name":"Bloomberg Gold","url":"https://www.bloomberg.com/quote/GC1:COM","selector":""},
+    {"type":"html","name":"FXStreet Gold","url":"https://www.fxstreet.com/commodities/gold","selector":""},
+    {"type":"html","name":"Nasdaq Gold","url":"https://www.nasdaq.com/market-activity/commodities/gc:cmx","selector":""},
+    {"type":"html","name":"SeekingAlpha Gold","url":"https://seekingalpha.com/symbol/GC:CMX","selector":""},
+    {"type":"html","name":"Barchart Gold","url":"https://www.barchart.com/futures/quotes/GC*0/futures-prices","selector":""},
+    {"type":"html","name":"IG Gold","url":"https://www.ig.com/en/commodities/commodities-news/gold","selector":""},
+    {"type":"html","name":"DailyFX Gold","url":"https://www.dailyfx.com/gold-price","selector":""},
+    {"type":"html","name":"Yahoo Metals","url":"https://finance.yahoo.com/quote/GC=F/","selector":""},
+    {"type":"html","name":"MoneyMetals","url":"https://www.moneymetals.com/","selector":""},
+    {"type":"html","name":"ApMex Gold","url":"https://www.apmex.com/gold-price","selector":""},
+    {"type":"html","name":"JM Bullion","url":"https://www.jmbullion.com/charts/gold-price/","selector":""},
+    {"type":"html","name":"BullionVault","url":"https://www.bullionvault.com/gold-price-chart.do","selector":""},
+    {"type":"html","name":"GoldSilver","url":"https://goldsilver.com/price/gold/","selector":""},
+    {"type":"html","name":"MetalsDaily","url":"https://www.metalsdaily.com/gold-price","selector":""},
+    {"type":"html","name":"The Royal Mint","url":"https://www.royalmint.com/invest/bullion/live-prices/","selector":""},
+    {"type":"html","name":"Sharps Pixley","url":"https://www.sharpspixley.com/live-gold-prices.aspx","selector":""},
+    {"type":"html","name":"BullionByPost","url":"https://www.bullionbypost.co.uk/gold-price/","selector":""},
+    {"type":"html","name":"GoldBroker","url":"https://www.goldbroker.com/charts/gold-price","selector":""},
+    {"type":"html","name":"GoldPrice.org","url":"https://goldprice.org/gold-price.html","selector":""},
+    {"type":"html","name":"X-Rates Gold","url":"https://www.x-rates.com/commodity/gold","selector":""},
+    {"type":"html","name":"LiveCharts Gold","url":"https://www.livecharts.co.uk/MarketCharts/gold.php","selector":""},
+    {"type":"html","name":"UKGoldPrice","url":"https://www.ukgoldprice.com/","selector":""},
+    {"type":"html","name":"USAGold","url":"https://www.usagold.com/live-gold-price/","selector":""},
+    {"type":"html","name":"Gold-Eagle","url":"https://www.gold-eagle.com/","selector":""},
+    {"type":"html","name":"The Gold Forecast","url":"https://thegoldforecast.com/","selector":""},
+    {"type":"html","name":"LBMA (info)","url":"https://www.lbma.org.uk/prices-and-data/precious-metal-prices","selector":""},
+    {"type":"html","name":"WorldGoldCouncil Chart","url":"https://www.gold.org/goldhub/gold-prices","selector":""},
+    {"type":"html","name":"Reuters Gold","url":"https://www.reuters.com/markets/commodities/gold/","selector":""},
+    {"type":"html","name":"TradingView Gold","url":"https://www.tradingview.com/symbols/COMEX-GC1!/","selector":""},
+    {"type":"html","name":"Investopedia Gold","url":"https://www.investopedia.com/markets/price-of-gold/","selector":""},
+    {"type":"html","name":"MetalsMine","url":"https://www.metalsmine.com/","selector":""},
+    {"type":"html","name":"Gold Avenue","url":"https://www.goldavenue.com/en/price/gold","selector":""},
+    {"type":"html","name":"BullionStar","url":"https://www.bullionstar.com/gold-price","selector":""}
+  ],
+  "silver": [
+    {"type":"api","name":"TwelveData","url":"https://api.twelvedata.com/price?symbol=XAG/USD&apikey=${TWELVEDATA_KEY}"},
+    {"type":"api","name":"GoldPriceZ","url":"https://www.goldpricez.com/api/rates/XAG/USD/gram?api_key=${GOLDPRICEZ_KEY}"},
+    {"type":"json","name":"Yahoo Finance","url":"https://query1.finance.yahoo.com/v8/finance/chart/SI=F?region=US&lang=en-US"},
+    {"type":"html","name":"Investing Silver","url":"https://www.investing.com/commodities/silver","selector":""},
+    {"type":"html","name":"TradingEconomics Silver","url":"https://tradingeconomics.com/commodity/silver","selector":""},
+    {"type":"html","name":"MarketWatch Silver","url":"https://www.marketwatch.com/investing/future/silver","selector":""},
+    {"type":"html","name":"CNBC Silver","url":"https://www.cnbc.com/quotes/SI%3A*","selector":""},
+    {"type":"html","name":"Barchart Silver","url":"https://www.barchart.com/futures/quotes/SI*0/futures-prices","selector":""},
+    {"type":"html","name":"MoneyMetals Silver","url":"https://www.moneymetals.com/","selector":""},
+    {"type":"html","name":"BullionVault Silver","url":"https://www.bullionvault.com/silver-price-chart.do","selector":""},
+    {"type":"html","name":"GoldSilver Silver","url":"https://goldsilver.com/price/silver/","selector":""},
+    {"type":"html","name":"LBMA Silver","url":"https://www.lbma.org.uk/prices-and-data/precious-metal-prices","selector":""},
+    {"type":"html","name":"GoldPrice.org Silver","url":"https://goldprice.org/silver-price.html","selector":""},
+    {"type":"html","name":"Reuters Silver","url":"https://www.reuters.com/markets/commodities/silver/","selector":""}
+  ],
+  "fx": [
+    {"type":"api","name":"Frankfurter","url":"https://api.frankfurter.app/latest?from=USD&to=EGP"},
+    {"type":"api","name":"AlphaVantage","url":"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=EGP&apikey=${ALPHAVANTAGE_KEY}"}
+  ],
+  "crypto": [
+    {"type":"api","name":"CoinGecko BTC","url":"https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd"},
+    {"type":"api","name":"CoinGecko ETH","url":"https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd"},
+    {"type":"api","name":"CoinCap BTC","url":"https://api.coincap.io/v2/assets/bitcoin"},
+    {"type":"api","name":"CoinCap ETH","url":"https://api.coincap.io/v2/assets/ethereum"},
+    {"type":"api","name":"Kraken BTC","url":"https://api.kraken.com/0/public/Ticker?pair=XBTUSD"},
+    {"type":"api","name":"Kraken ETH","url":"https://api.kraken.com/0/public/Ticker?pair=ETHUSD"},
+    {"type":"api","name":"DexScreener SLX","url":"https://api.dexscreener.com/latest/dex/tokens/0x34317C020E78D30feBD2Eb9f5fa8721aA575044d"}
+  ],
+  "oilgas": [
+    {"type":"api","name":"AlphaVantage WTI","url":"https://www.alphavantage.co/query?function=WTI&interval=daily&apikey=${ALPHAVANTAGE_KEY}"},
+    {"type":"api","name":"AlphaVantage Brent","url":"https://www.alphavantage.co/query?function=BRENT&interval=daily&apikey=${ALPHAVANTAGE_KEY}"},
+    {"type":"api","name":"AlphaVantage NaturalGas","url":"https://www.alphavantage.co/query?function=NATURAL_GAS&interval=daily&apikey=${ALPHAVANTAGE_KEY}"}
+  ],
+  "industrial_metals_note": "المعادن الصناعية تُسحب عبر TwelveData/Yahoo/MetalPriceAPI من داخل الكود مباشرةً."
 }
