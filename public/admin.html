@@ -2,201 +2,163 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>Admin Control • GoldenPrice</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Admin · GoldenPrice</title>
 <style>
- body{font-family:system-ui,Arial,sans-serif;margin:0;background:#fff;color:#111}
- header{position:sticky;top:0;background:#f7f7f7;border-bottom:1px solid #e5e5e5;padding:10px 16px;z-index:10}
- .wrap{max-width:1100px;margin:0 auto;padding:16px}
- .row{display:flex;flex-wrap:wrap;gap:12px}
- .card{border:1px solid #e5e5e5;border-radius:10px;padding:14px;flex:1;min-width:240px;background:#fff}
- h1{margin:4px 0;font-size:20px}
- h2{margin:0 0 12px 0;font-size:16px}
- table{width:100%;border-collapse:collapse}
- th,td{padding:8px;border-bottom:1px solid #eee;font-size:14px}
- th{text-align:left;background:#fafafa}
- .ok{color:#0a7d00;font-weight:600}
- .err{color:#b00020;font-weight:600}
- .btn{cursor:pointer;border:1px solid #ccc;background:#fafafa;border-radius:6px;padding:6px 10px}
- .btn:hover{background:#f0f0f0}
- input,select{padding:6px 8px;border:1px solid #ccc;border-radius:6px;width:100%}
- .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
- @media(max-width:900px){.grid{grid-template-columns:1fr}}
- .muted{color:#777;font-size:12px}
- .pill{font-size:12px;border:1px solid #ddd;border-radius:999px;padding:2px 8px}
- .footer{color:#777;padding:12px;text-align:center;font-size:12px}
+  body{font-family:system-ui,Arial,sans-serif;margin:16px;background:#fff;color:#111;}
+  h1{margin:0 0 12px}
+  .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+  .card{border:1px solid #ddd;border-radius:8px;padding:12px;margin:10px 0}
+  label{min-width:120px;font-weight:600}
+  input,select,button{padding:8px;border:1px solid #ccc;border-radius:6px}
+  button{cursor:pointer}
+  .pill{display:inline-block;padding:2px 8px;border-radius:999px;font-size:12px;margin-left:6px}
+  .ok{background:#e6ffe6;border:1px solid #9cd39c}
+  .err{background:#ffecec;border:1px solid #e0a1a1}
+  .muted{color:#666}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  @media(max-width:800px){.grid{grid-template-columns:1fr}}
+  pre{background:#f7f7f7;border:1px solid #eee;padding:10px;border-radius:6px;max-height:240px;overflow:auto}
 </style>
 </head>
 <body>
-<header>
-  <div class="wrap">
-    <div class="row" style="align-items:center;justify-content:space-between">
-      <h1>Admin Control</h1>
-      <div>
-        <button id="btnRefresh" class="btn">Refresh Status</button>
-        <button id="btnClear" class="btn">Clear Cache</button>
-      </div>
-    </div>
-  </div>
-</header>
+<h1>Admin Panel</h1>
+<div class="row">
+  <label>Admin Token</label>
+  <input id="tok" value="YOUR_ADMIN_TOKEN_HERE" style="min-width:260px"/>
+  <button onclick="refreshAll()">Ping</button>
+</div>
 
-<div class="wrap">
-  <div class="row">
-    <div class="card">
-      <h2>Snapshot</h2>
-      <div id="dash" class="grid"></div>
-      <div class="muted" id="lastUpdated"></div>
-    </div>
-    <div class="card">
-      <h2>Manual Update</h2>
-      <div class="row" style="gap:8px">
-        <select id="typeSel" style="max-width:150px">
-          <option value="gold">gold</option>
-          <option value="silver">silver</option>
-          <option value="metal">metal</option>
-          <option value="energy">energy</option>
-          <option value="fx">fx</option>
-          <option value="crypto">crypto</option>
-        </select>
-        <select id="symbolSel" style="max-width:220px"></select>
-        <input id="valueInp" type="number" step="0.0001" placeholder="USD value"/>
-      </div>
-      <div class="row" style="margin-top:8px">
-        <input id="tokenInp" type="text" placeholder="Admin Token (default ADMIN_12345)" />
-        <button id="btnSet" class="btn">Set Manual</button>
-      </div>
-      <div class="muted">Manual values are cached for 24h (source=MANUAL).</div>
-    </div>
+<div class="grid">
+  <div class="card">
+    <h3>Quick View</h3>
+    <div id="quick"></div>
   </div>
 
-  <div class="card" style="margin-top:12px">
-    <h2>All Items</h2>
-    <table>
-      <thead>
-        <tr><th>Type</th><th>Symbol</th><th>Current</th><th>Source</th><th>Updated</th><th>New Value</th><th>Action</th></tr>
-      </thead>
-      <tbody id="tbl"></tbody>
-    </table>
+  <div class="card">
+    <h3>Manual Update</h3>
+    <div class="row">
+      <label>Category</label>
+      <select id="cat">
+        <option value="fast">Gold/Silver</option>
+        <option value="crypto">Crypto</option>
+        <option value="energy">Oil & Gas</option>
+        <option value="metals">Industrial Metals</option>
+        <option value="fx">Forex</option>
+      </select>
+    </div>
+    <div class="row">
+      <label>Symbol</label>
+      <select id="sym"></select>
+    </div>
+    <div class="row">
+      <label>Price (USD / Rate)</label>
+      <input id="price" placeholder="e.g. 2375.50" />
+      <button onclick="doSet()">Set Manual</button>
+      <button onclick="doClear()">Clear Manual</button>
+    </div>
+    <div class="muted">For FX, symbol is like <b>FX:USD:EGP</b> (select from dropdown once queried).</div>
   </div>
+</div>
 
-  <div class="footer">© GoldenPrice Admin</div>
+<div class="card">
+  <h3>Log Viewer</h3>
+  <pre id="logs">Loading...</pre>
 </div>
 
 <script>
-const $ = (s)=>document.querySelector(s);
-const $$ = (s)=>document.querySelectorAll(s);
-
-const symbols = {
-  gold:["USD"],
-  silver:["USD"],
-  metal:["gold","silver","platinum","palladium","copper","aluminum","nickel","zinc","lead","tin","iron","steel","cobalt","lithium","uranium"],
-  energy:["wti","brent","gas"],
-  fx:["USD:EGP","USD:EUR","EUR:USD","USD:SAR","USD:TRY"],
-  crypto:["BTC","ETH","SOL","XRP","BNB","SLX"]
+const SYMS = {
+  fast:  ["GOLD","SILVER"],
+  crypto:["CRYPTO:BTC","CRYPTO:ETH","CRYPTO:SLX"],
+  energy:["ENERGY:WTI","ENERGY:BRENT","ENERGY:GAS"],
+  metals:[
+    "METAL:COPPER","METAL:ALUMINUM","METAL:NICKEL","METAL:ZINC",
+    "METAL:LEAD","METAL:TIN","METAL:PLATINUM","METAL:PALLADIUM",
+    "METAL:IRON","METAL:STEEL","METAL:COBALT","METAL:LITHIUM","METAL:URANIUM"
+  ],
+  fx:[] // تُملأ تلقائيًا بعد أول استعلام FX من الواجهة الأمامية
 };
 
-function fillSymbolSel(){
-  const type = $("#typeSel").value;
-  const sel = $("#symbolSel");
-  sel.innerHTML="";
-  symbols[type].forEach(s=>{
-    const opt=document.createElement("option");
-    opt.value=s; opt.textContent=s;
-    sel.appendChild(opt);
+const $ = (id)=>document.getElementById(id);
+
+function fillSym(){
+  const cat = $("cat").value;
+  const sel = $("sym");
+  sel.innerHTML = "";
+  (SYMS[cat]||[]).forEach(s=>{
+    const o=document.createElement("option");
+    o.value=s; o.textContent=s;
+    sel.appendChild(o);
   });
 }
 
-$("#typeSel").addEventListener("change", fillSymbolSel);
-fillSymbolSel();
+$("cat").addEventListener("change", fillSym);
+fillSym();
 
-async function loadStatus(){
-  $("#dash").innerHTML = "";
-  $("#tbl").innerHTML = "";
-  const r = await fetch("/api/status");
-  const j = await r.json();
+async function refreshAll(){
+  try{
+    const tok = $("tok").value.trim();
+    const state = await (await fetch(`/api/admin/state?token=${encodeURIComponent(tok)}`)).json();
+    if(!state || !state.ok){ $("quick").innerHTML = `<span class=pill err>Auth error</span>`; return; }
+    renderQuick(state.cache);
 
-  const keys = Object.keys(j).sort();
-  const dashItems = [
-    {k:"gold:USD", label:"Gold"},
-    {k:"silver:USD", label:"Silver"},
-    {k:"crypto:BTC", label:"BTC"},
-    {k:"crypto:ETH", label:"ETH"},
-    {k:"fx:USD:EGP", label:"USD/EGP"},
-    {k:"energy:wti", label:"WTI"},
-  ];
-  dashItems.forEach(d=>{
-    const v = j[d.k];
-    const div = document.createElement("div");
-    div.className="card";
-    if(!v) { div.innerHTML = `<div class="muted">${d.label}: n/a</div>`; }
-    else{
-      const val = v.value?Number(v.value).toFixed(4):"n/a";
-      const cls = v.value?"ok":"err";
-      div.innerHTML = `<div><b>${d.label}</b></div>
-        <div class="${cls}" style="font-size:18px;margin:4px 0">${val}</div>
-        <div class="muted">${v.src||""}</div>`;
-    }
-    $("#dash").appendChild(div);
-  });
-
-  // table
-  for(const k of keys){
-    const tr = document.createElement("tr");
-    const v = j[k];
-    const [type, ...rest] = k.split(":");
-    const symbol = rest.join(":");
-    const val = v?.value?Number(v.value).toFixed(6):"—";
-    const src = v?.src || "—";
-    const ts  = v?.ts ? new Date(v.ts).toLocaleString() : "—";
-    tr.innerHTML = `
-      <td>${type}</td>
-      <td>${symbol}</td>
-      <td>${val}</td>
-      <td><span class="pill">${src}</span></td>
-      <td class="muted">${ts}</td>
-      <td><input type="number" step="0.0001" style="width:130px"/></td>
-      <td><button class="btn">Set</button></td>
-    `;
-    const btn = tr.querySelector("button");
-    btn.onclick = async ()=>{
-      const nv = Number(tr.querySelector("input").value);
-      if(!nv) return alert("put a number");
-      const token = $("#tokenInp").value || "ADMIN_12345";
-      const body = { type, symbol, value: nv, token };
-      const rr = await fetch(`/api/admin/manual?token=${encodeURIComponent(token)}`,{
-        method:"POST", headers:{'content-type':'application/json'}, body: JSON.stringify(body)
-      });
-      const jj = await rr.json();
-      if(jj.ok) { alert("Saved."); loadStatus(); } else alert(jj.error||"error");
-    };
-    $("#tbl").appendChild(tr);
+    const logj = await (await fetch(`/api/admin/logs?token=${encodeURIComponent(tok)}`)).json();
+    $("logs").textContent = (logj.logs||[]).join("\n");
+  }catch(e){
+    $("quick").innerHTML = `<span class=pill err>${e.message||e}</span>`;
   }
-
-  $("#lastUpdated").textContent = "Updated: "+ new Date().toLocaleTimeString();
 }
 
-$("#btnRefresh").onclick = loadStatus;
-$("#btnClear").onclick = async ()=>{
-  const token = $("#tokenInp").value || "ADMIN_12345";
-  const r = await fetch(`/api/admin/clear-cache?token=${encodeURIComponent(token)}`, {method:"POST"});
-  const j = await r.json();
-  if(j.ok) { alert("Cache cleared."); loadStatus(); } else alert(j.error||"error");
-};
-$("#btnSet").onclick = async ()=>{
-  const type = $("#typeSel").value;
-  const symbol = $("#symbolSel").value;
-  const value = Number($("#valueInp").value);
-  const token = $("#tokenInp").value || "ADMIN_12345";
-  if(!value) return alert("put a number");
-  const r = await fetch(`/api/admin/manual?token=${encodeURIComponent(token)}`,{
-    method:"POST", headers:{'content-type':'application/json'},
-    body: JSON.stringify({type, symbol, value, token})
+function renderQuick(cache){
+  const keys = Object.keys(cache).sort();
+  const html = keys.map(k=>{
+    const v = cache[k];
+    const pill = v.manual ? `<span class="pill ok">manual</span>` : "";
+    return `<div class="row">
+      <b style="min-width:160px">${k}</b>
+      <span>${v.price} ${v.unit||"USD"}</span>
+      <span class="muted">via ${v.source}</span>
+      <span class="muted">at ${new Date(v.ts).toLocaleString()}</span>
+      ${pill}
+    </div>`;
+  }).join("") || "<div class=muted>No data yet…</div>";
+  $("quick").innerHTML = html;
+}
+
+async function doSet(){
+  const tok = $("tok").value.trim();
+  const symbol = $("sym").value.trim();
+  const price = $("price").value.trim();
+  if(!symbol || !price) { alert("Symbol & Price required"); return; }
+  const r = await fetch("/api/admin/set",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({token:tok, symbol, price})
   });
   const j = await r.json();
-  if(j.ok){ alert("Saved."); loadStatus(); } else alert(j.error||"error");
-};
+  if(!j.ok){ alert("Error: "+(j.error||"unknown")); return; }
+  alert("Saved ✓");
+  refreshAll();
+}
 
-loadStatus();
+async function doClear(){
+  const tok = $("tok").value.trim();
+  const symbol = $("sym").value.trim();
+  if(!symbol) { alert("Symbol required"); return; }
+  const r = await fetch("/api/admin/clear",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body: JSON.stringify({token:tok, symbol})
+  });
+  const j = await r.json();
+  if(!j.ok){ alert("Error: "+(j.error||"unknown")); return; }
+  alert("Manual cleared ✓");
+  refreshAll();
+}
+
+// تحديث تلقائي للـ Logs و Quick
+refreshAll();
+setInterval(refreshAll, 8000);
 </script>
 </body>
 </html>
