@@ -1,16 +1,19 @@
 {
   "name": "goldenprice-backend",
   "version": "1.0.0",
-  "type": "module",
+  "description": "GoldenPrice Backend Server - Final Edition with Auto+Manual Price Updates",
   "main": "server.js",
+  "type": "module",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "dependencies": {
-    "cheerio": "^1.0.0",
+    "axios": "^1.6.8",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "node-fetch": "^3.3.2",
-    "ws": "^8.18.0"
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }
