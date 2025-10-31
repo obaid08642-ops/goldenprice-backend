@@ -168,20 +168,24 @@ async function fromTheStreetGold(){
 
 // Crypto:
 const wsPrices = new Map(); // e.g. BTCUSDT -> price
-function startBinanceWS(symbols=["btcusdt","ethusdt"]){
-  try{
-    const streams = symbols.map(s=>`${s}@ticker`).join('/');
-    const ws = new (await import('ws')).WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams}`);
-    ws.on("message",buf=>{
-      try{
+import WebSocket from "ws"; // لو لسه ما ضفتوش فوق مع باقي imports، ضيفه أول الملف
+
+function startBinanceWS(symbols = ["btcusdt", "ethusdt"]) {
+  try {
+    const streams = symbols.map(s => `${s}@ticker`).join("/");
+    const ws = new WebSocket(`wss://stream.binance.com:9443/stream?streams=${streams}`);
+    ws.on("message", buf => {
+      try {
         const j = JSON.parse(buf.toString());
         const d = j?.data;
-        if(d?.s && d?.c) wsPrices.set(d.s, Number(d.c));
-      }catch{}
+        if (d?.s && d?.c) wsPrices.set(d.s, Number(d.c));
+      } catch {}
     });
-    ws.on("close",()=> setTimeout(()=>startBinanceWS(symbols), 3000));
-    ws.on("error",()=> ws.close());
-  }catch{}
+    ws.on("close", () => setTimeout(() => startBinanceWS(symbols), 3000));
+    ws.on("error", () => ws.close());
+  } catch (err) {
+    console.error("WS error:", err.message);
+  }
 }
 startBinanceWS();
 
