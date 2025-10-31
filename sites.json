@@ -1,34 +1,178 @@
 {
-  "gold": {
-    "symbol": "XAU",
-    "sources": ["Yahoo Finance", "Investing.com"],
-    "interval": "3m",
-    "market_closed_days": ["Saturday", "Sunday"]
-  },
-  "silver": {
-    "symbol": "XAG",
-    "sources": ["Yahoo Finance", "Investing.com"],
-    "interval": "3m",
-    "market_closed_days": ["Saturday", "Sunday"]
-  },
   "crypto": {
-    "symbols": ["BTC", "ETH", "SLX"],
-    "sources": ["CoinGecko", "Binance", "PancakeSwap"],
-    "interval": "3m"
+    "BTC": [
+      { "type": "api", "name": "CoinGecko", "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd",
+        "parser": "j=>j.bitcoin.usd" },
+      { "type": "api", "name": "CoinCap", "url": "https://api.coincap.io/v2/assets/bitcoin",
+        "parser": "j=>j && j.data ? Number(j.data.priceUsd) : null" }
+    ],
+    "ETH": [
+      { "type": "api", "name": "CoinGecko", "url": "https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd",
+        "parser": "j=>j.ethereum.usd" },
+      { "type": "api", "name": "CoinCap", "url": "https://api.coincap.io/v2/assets/ethereum",
+        "parser": "j=>j && j.data ? Number(j.data.priceUsd) : null" }
+    ],
+    "SLX": [
+      { "type": "api", "name": "DexScreener",
+        "url": "https://api.dexscreener.com/latest/dex/search?q=silverx",
+        "parser": "j=>{const p=(j.pairs||[]).find(x=>/pancake/i.test(x.dexId)); return p?Number(p.priceUsd):null; }" },
+      { "type": "scrape", "name": "PancakeSwap-Trade",
+        "url": "https://pancakeswap.finance/swap?outputCurrency=", 
+        "selector": "$=>{const t=$('body').text(); const m=t.match(/\\$\\s*([0-9]+(?:\\.[0-9]+)?)/); return m?Number(m[1]):null; }" }
+    ]
   },
+
   "metals": {
-    "symbols": ["copper", "platinum"],
-    "sources": ["Yahoo Finance", "Investing.com", "MarketWatch"],
-    "interval": "2h"
+    "gold": [
+      { "type": "api", "name": "TwelveData",
+        "url": "https://api.twelvedata.com/price?symbol=GC=F&apikey={TWELVEDATA_KEY}",
+        "parser": "j=>Number(j.price)" },
+      { "type": "scrape", "name": "Yahoo-GC=F",
+        "url": "https://finance.yahoo.com/quote/GC=F",
+        "selector": "$=>{const v=$('fin-streamer[data-field=regularMarketPrice]').first().text()||$('fin-streamer[data-symbol=\"GC=F\"]').first().text(); return parseFloat(v.replace(/,/g,''));}" }
+    ],
+    "silver": [
+      { "type": "api", "name": "TwelveData",
+        "url": "https://api.twelvedata.com/price?symbol=SI=F&apikey={TWELVEDATA_KEY}",
+        "parser": "j=>Number(j.price)" },
+      { "type": "scrape", "name": "Yahoo-SI=F",
+        "url": "https://finance.yahoo.com/quote/SI=F",
+        "selector": "$=>{const v=$('fin-streamer[data-field=regularMarketPrice]').first().text(); return parseFloat(v.replace(/,/g,''));}" }
+    ],
+
+    "platinum": [
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=XPT",
+        "parser": "j=>j && j.rates ? 1/Number(j.rates.XPT) : null" },
+      { "type": "scrape", "name": "Yahoo-PL=F",
+        "url": "https://finance.yahoo.com/quote/PL=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" }
+    ],
+    "palladium": [
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=XPD",
+        "parser": "j=>j && j.rates ? 1/Number(j.rates.XPD) : null" },
+      { "type": "scrape", "name": "Yahoo-PA=F",
+        "url": "https://finance.yahoo.com/quote/PA=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" }
+    ],
+    "copper": [
+      { "type": "scrape", "name": "Yahoo-HG=F",
+        "url": "https://finance.yahoo.com/quote/HG=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "AlphaVantage",
+        "url": "https://www.alphavantage.co/query?function=COMMODITY_EXCHANGE_RATE&from_symbol=HG&to_symbol=USD&apikey={ALPHAVANTAGE_KEY}",
+        "parser": "j=>{const k=Object.keys(j||{}).find(x=>/Exchange Rate/i.test(x)); return k?Number(j[k]['5. Exchange Rate']):null;}" }
+    ],
+    "aluminum": [
+      { "type": "scrape", "name": "Yahoo-ALI=F",
+        "url": "https://finance.yahoo.com/quote/ALI=F",
+        "selector": "$=>{const v=$('fin-streamer[data-field=regularMarketPrice]').first().text(); const n=parseFloat(v.replace(/,/g,'')); return isNaN(n)?null:n;}" },
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=ALUMINUM",
+        "parser": "j=>{const r=j&&j.rates && (j.rates.ALUMINUM); return r?1/Number(r):null;}" }
+    ],
+    "nickel": [
+      { "type": "scrape", "name": "Yahoo-NI=F",
+        "url": "https://finance.yahoo.com/quote/NI=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=NICKEL",
+        "parser": "j=>{const r=j&&j.rates && (j.rates.NICKEL); return r?1/Number(r):null;}" }
+    ],
+    "zinc": [
+      { "type": "scrape", "name": "Yahoo-ZN=F",
+        "url": "https://finance.yahoo.com/quote/ZN=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=ZINC",
+        "parser": "j=>{const r=j&&j.rates && (j.rates.ZINC); return r?1/Number(r):null;}" }
+    ],
+    "tin": [
+      { "type": "scrape", "name": "Yahoo-TIN=F",
+        "url": "https://finance.yahoo.com/quote/TIN=F",
+        "selector": "$=>{const v=$('fin-streamer[data-field=regularMarketPrice]').first().text(); const n=parseFloat(v.replace(/,/g,'')); return isNaN(n)?null:n;}" },
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=TIN",
+        "parser": "j=>{const r=j&&j.rates && (j.rates.TIN); return r?1/Number(r):null;}" }
+    ],
+    "lead": [
+      { "type": "scrape", "name": "Yahoo-LEAD",
+        "url": "https://finance.yahoo.com/quote/LEAD",
+        "selector": "$=>{const v=$('fin-streamer[data-field=regularMarketPrice]').first().text(); const n=parseFloat(v.replace(/,/g,'')); return isNaN(n)?null:n;}" },
+      { "type": "api", "name": "MetalPriceAPI",
+        "url": "https://api.metalpriceapi.com/v1/latest?api_key={METALPRICE_KEY}&base=USD&symbols=LEAD",
+        "parser": "j=>{const r=j&&j.rates && (j.rates.LEAD); return r?1/Number(r):null;}" }
+    ],
+    "iron": [
+      { "type": "scrape", "name": "TradingEconomics-Iron",
+        "url": "https://tradingeconomics.com/commodity/iron-ore",
+        "selector": "$=>{const t=$('body').text(); const m=t.match(/Price\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" },
+      { "type": "scrape", "name": "MarketIndex-Iron",
+        "url": "https://www.marketindex.com.au/iron-ore",
+        "selector": "$=>{const m=$('body').text().match(/Iron Ore.*?\\$\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" }
+    ],
+    "lithium": [
+      { "type": "scrape", "name": "TradingEconomics-Lithium",
+        "url": "https://tradingeconomics.com/commodity/lithium",
+        "selector": "$=>{const t=$('body').text(); const m=t.match(/Price\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" },
+      { "type": "scrape", "name": "BenchmarkMinerals",
+        "url": "https://www.benchmarkminerals.com/price-assessments/lithium/",
+        "selector": "$=>{const m=$('body').text().match(/US\\$\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" }
+    ],
+    "uranium": [
+      { "type": "scrape", "name": "TradingEconomics-Uranium",
+        "url": "https://tradingeconomics.com/commodity/uranium",
+        "selector": "$=>{const t=$('body').text(); const m=t.match(/Price\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" },
+      { "type": "scrape", "name": "UxC-Uranium",
+        "url": "https://www.uxc.com/p/prices/UxCPrices.aspx",
+        "selector": "$=>{const m=$('body').text().match(/\\$\\s*([0-9]+(?:\\.[0-9]+)?)/); return m?Number(m[1]):null;}" }
+    ],
+    "steel": [
+      { "type": "scrape", "name": "TradingEconomics-Steel",
+        "url": "https://tradingeconomics.com/commodity/steel",
+        "selector": "$=>{const m=$('body').text().match(/Price\\s*([0-9]+(?:\\.[0-9]+)?)/i); return m?Number(m[1]):null;}" },
+      { "type": "scrape", "name": "MEPS-Global",
+        "url": "https://mepsinternational.com/en/",
+        "selector": "$=>{const m=$('body').text().match(/\\$\\s*([0-9]+(?:\\.[0-9]+)?)/); return m?Number(m[1]):null;}" }
+    ]
   },
-  "energy": {
-    "symbols": ["WTI", "GAS"],
-    "sources": ["Yahoo Finance", "Investing.com", "MarketWatch"],
-    "interval": "2h"
+
+  "oilgas": {
+    "WTI": [
+      { "type": "scrape", "name": "Yahoo-CL=F",
+        "url": "https://finance.yahoo.com/quote/CL=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "AlphaVantage",
+        "url": "https://www.alphavantage.co/query?function=WTI&interval=monthly&apikey={ALPHAVANTAGE_KEY}",
+        "parser": "j=>{const s=j && j.data && j.data[0] && j.data[0].value; return s?Number(s):null;}" }
+    ],
+    "BRENT": [
+      { "type": "scrape", "name": "Yahoo-BZ=F",
+        "url": "https://finance.yahoo.com/quote/BZ=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "AlphaVantage",
+        "url": "https://www.alphavantage.co/query?function=BRENT&interval=monthly&apikey={ALPHAVANTAGE_KEY}",
+        "parser": "j=>{const s=j && j.data && j.data[0] && j.data[0].value; return s?Number(s):null;}" }
+    ],
+    "GAS": [
+      { "type": "scrape", "name": "Yahoo-NG=F",
+        "url": "https://finance.yahoo.com/quote/NG=F",
+        "selector": "$=>parseFloat($('fin-streamer[data-field=regularMarketPrice]').first().text().replace(/,/g,''))" },
+      { "type": "api", "name": "AlphaVantage-NG",
+        "url": "https://www.alphavantage.co/query?function=NATURAL_GAS&interval=monthly&apikey={ALPHAVANTAGE_KEY}",
+        "parser": "j=>{const s=j && j.data && j.data[0] && j.data[0].value; return s?Number(s):null;}" }
+    ]
   },
-  "forex": {
-    "symbols": ["USD_EGP"],
-    "sources": ["ExchangeRate.host", "Yahoo Finance"],
-    "interval": "2h"
+
+  "fx": {
+    "USD:EGP": [
+      { "type": "scrape", "name": "XE-USD-EGP",
+        "url": "https://www.xe.com/currencyconverter/convert/?Amount=1&From=USD&To=EGP",
+        "selector": "$=>{const t=$('body').text(); const m=t.match(/1\\s*USD\\s*=\\s*([0-9]+(?:\\.[0-9]+)?)\\s*EGP/i); return m?Number(m[1]):null;}" },
+      { "type": "scrape", "name": "Investing-USD-EGP",
+        "url": "https://www.investing.com/currencies/usd-egp",
+        "selector": "$=>{const m=$('body').text().match(/([0-9]+(?:\\.[0-9]+)?)/); return m?Number(m[1]):null;}" }
+    ]
   }
 }
