@@ -1,181 +1,195 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Admin Panel</title>
-<style>
-  body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:16px;line-height:1.4}
-  .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-  input,select,button{padding:10px;border:1px solid #bbb;border-radius:8px;font-size:16px}
-  button{background:#1863ff;color:#fff;border:none}
-  .card{border:1px solid #ddd;border-radius:12px;padding:14px;margin:10px 0}
-  .k{font-weight:700}
-  .ok{color:#0a7}
-  .err{color:#c22}
-  pre{background:#0b1020;color:#d7e0ff;border-radius:10px;padding:10px;overflow:auto;max-height:240px}
-</style>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>GoldenPrice — Admin</title>
+  <style>
+    body{font-family:-apple-system,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:16px;color:#111}
+    .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+    .card{border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin:10px 0}
+    input,select,button{font-size:16px;padding:10px;border-radius:10px;border:1px solid #d1d5db}
+    button{background:#1e40af;color:#fff;border:none}
+    button.secondary{background:#374151}
+    .pill{display:inline-block;padding:3px 8px;border-radius:999px;font-size:12px;background:#f3f4f6;margin-left:6px}
+    .ok{background:#dcfce7} .err{background:#fee2e2}
+    .muted{color:#6b7280;font-size:12px}
+    .kv{display:flex;justify-content:space-between;margin:3px 0}
+    .mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;white-space:pre-wrap}
+  </style>
 </head>
 <body>
-<h2>Admin Panel</h2>
+  <h1>Admin Panel</h1>
 
-<div class="card">
-  <div class="row">
-    <input id="base" style="flex:1" placeholder="https://goldenprice-backend.onrender.com"/>
-    <button onclick="ping()">Ping</button>
+  <div class="card">
+    <div class="row">
+      <input id="base" style="flex:1" value="" placeholder="https://<your>.onrender.com"/>
+      <button id="ping">Ping</button>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <input id="tok" style="flex:1" placeholder="Admin token (for manual set/clear)"/>
+      <button id="update-all" class="">Update All Now</button>
+    </div>
   </div>
-  <div class="row" style="margin-top:8px">
-    <input id="token" placeholder="ADMIN token" value="ADMIN_12345" />
-    <button onclick="refreshAll()">Update All Now</button>
+
+  <div class="card" id="quick"></div>
+
+  <div class="card">
+    <h3>Manual Update</h3>
+    <div class="row">
+      <select id="cat">
+        <option value="gold">Gold</option>
+        <option value="silver">Silver</option>
+        <option value="crypto">Crypto</option>
+        <option value="metal">Metals</option>
+        <option value="energy">Energy</option>
+        <option value="fx">FX</option>
+      </select>
+      <select id="key"></select>
+    </div>
+    <div class="row" style="margin-top:8px">
+      <input id="price" style="flex:1" placeholder="USD / rate e.g. 2375.50"/>
+      <button id="set">Set Manual</button>
+      <button id="clear" class="secondary">Clear Manual</button>
+    </div>
+    <div class="muted" style="margin-top:6px">For FX use key like <b>USD:EGP</b>.</div>
   </div>
-</div>
 
-<div class="card" id="quick"></div>
-
-<div class="card">
-  <h3>Manual Update</h3>
-  <div class="row">
-    <select id="cat">
-      <option>Gold/Silver</option>
-      <option>Crypto</option>
-      <option>Metals</option>
-      <option>Oil/Gas</option>
-      <option>FX</option>
-    </select>
-    <select id="sym"></select>
+  <div class="card">
+    <h3>Quick test links</h3>
+    <div class="mono" id="links"></div>
   </div>
-  <div class="row" style="margin-top:8px">
-    <input id="price" placeholder="USD / Rate e.g. 2375.50" style="flex:1"/>
-    <button onclick="setManual()">Set Manual</button>
-    <button onclick="clearManual()">Clear Manual</button>
+
+  <div class="card">
+    <h3>Log viewer</h3>
+    <div class="mono" id="log">(live)</div>
   </div>
-  <small>For FX: key will be like <b>FX:USD:EGP</b> (choose from dropdown once queried).</small>
-</div>
-
-<div class="card">
-  <h3>Log Viewer</h3>
-  <pre id="logs"></pre>
-</div>
-
-<div class="card">
-  <h3>Quick test links</h3>
-  <div id="links"></div>
-</div>
 
 <script>
-const $ = id => document.getElementById(id);
-const qs = s => document.querySelector(s);
+const $ = (id)=>document.getElementById(id);
+const LS = (k,v)=>v===undefined?localStorage.getItem(k):localStorage.setItem(k,v);
 
-const state = {
-  base: localStorage.getItem('base') || location.origin,
-  last: null,
-  symbols: {
-    "Gold/Silver": ["GOLD","SILVER"],
-    "Crypto": ["CRYPTO:BTC","CRYPTO:ETH","CRYPTO:SLX"],
-    "Metals": ["METAL:COPPER","METAL:PLATINUM","METAL:PALLADIUM"],
-    "Oil/Gas": ["ENERGY:WTI","ENERGY:GAS"],
-    "FX": ["FX:USD:EGP"]
-  }
+function base(){return $("base").value.trim().replace(/\/$/,"")}
+function hdr(){const t=$("tok").value.trim(); return t?{Authorization:"Bearer "+t}:{}} 
+
+function fmtUSD(v){ return (v==null)?"—":`${Number(v).toLocaleString(undefined,{maximumFractionDigits:6})} USD` }
+function fmtTs(ts){ if(!ts) return ""; const d=new Date(ts); return d.toLocaleString() }
+
+const KEYS = {
+  gold:["GOLD"],
+  silver:["SILVER"],
+  crypto:["BTC"],
+  metal:["COPPER","PLATINUM","PALLADIUM"],
+  energy:["WTI","GAS"],
+  fx:["USD:EGP"]
 };
 
-function setup() {
-  $('base').value = state.base;
-  fillSym();
-  renderLinks();
-  loadQuick();
+function fillKeys(){
+  const c = $("cat").value;
+  const el = $("key");
+  el.innerHTML="";
+  (KEYS[c]||[]).forEach(k=>{
+    const o=document.createElement("option");
+    o.value=k; o.textContent=k; el.appendChild(o);
+  });
 }
-function saveBase(){
-  const v = $('base').value.trim();
-  try { new URL(v); state.base = v; localStorage.setItem('base', v); }
-  catch { alert("Base URL invalid"); }
-}
-function ping(){
-  saveBase();
-  fetch(state.base + '/api/status')
-    .then(r=>r.json()).then(j=>{
-      $('logs').textContent = JSON.stringify(j,null,2);
-      loadQuick();
-    }).catch(()=> alert('Ping failed'));
-}
-function renderLinks(){
-  $('links').innerHTML = `
-   <a href="${state.base}/api/gold">/api/gold</a><br/>
-   <a href="${state.base}/api/silver">/api/silver</a><br/>
-   <a href="${state.base}/api/crypto/bitcoin">/api/crypto/bitcoin</a><br/>
-   <a href="${state.base}/api/oilgas">/api/oilgas</a><br/>
-   <a href="${state.base}/api/metals?list=copper,platinum">/api/metals</a><br/>
-   <a href="${state.base}/api/fx?from=USD&to=EGP">/api/fx?from=USD&to=EGP</a><br/>
-   <a href="${state.base}/api/status">/api/status</a>
-  `;
-}
+$("cat").addEventListener("change", fillKeys);
+fillKeys();
+
 async function loadQuick(){
-  const get = k => fetch(`${state.base}${k}`).then(r=>r.json()).catch(_=>({}));
-  const [g,s,b,og,m,fx] = await Promise.all([
-    get('/api/gold'), get('/api/silver'), get('/api/crypto/bitcoin'),
-    get('/api/oilgas'), get('/api/metals?list=copper,platinum'),
-    get('/api/fx?from=USD&to=EGP')
-  ]);
-  function line(lbl, obj){
-    const ok = obj && obj.usd>0;
-    const src = obj?.source || '';
-    const at  = obj?.at || '';
-    return `<div><span class="k">${lbl}</span> — ${ok?obj.usd+' USD':'—'} <span class="${ok?'ok':'err'}">${ok?'OK':'ERR'}</span> <small>via ${src} ${at?('at '+new Date(at).toLocaleString()):''}</small></div>`;
+  try{
+    const st = await fetch(base()+"/api/status").then(r=>r.json());
+    const G = await fetch(base()+"/api/gold").then(r=>r.json());
+    const S = await fetch(base()+"/api/silver").then(r=>r.json());
+    const C = await fetch(base()+"/api/crypto/btc").then(r=>r.json());
+    const E = await fetch(base()+"/api/oilgas").then(r=>r.json());
+    const M = await fetch(base()+"/api/metals?list=copper,platinum,palladium").then(r=>r.json());
+    let html="";
+    html += rowKV("CRYPTO:BTC", C.usd, C.src, C.ts);
+    html += rowKV("ENERGY:GAS", E?.GAS?.usd, E?.GAS?.src, E?.GAS?.ts);
+    html += rowKV("ENERGY:WTI", E?.WTI?.usd, E?.WTI?.src, E?.WTI?.ts);
+    html += rowKV("METAL:COPPER", M?.COPPER?.usd, M?.COPPER?.src, M?.COPPER?.ts);
+    html += rowKV("METAL:GOLD", G.usd, G.src, G.ts);
+    html += rowKV("METAL:PLATINUM", M?.PLATINUM?.usd, M?.PLATINUM?.src, M?.PLATINUM?.ts);
+    html += rowKV("SILVER", S.usd, S.src, S.ts);
+    $("quick").innerHTML = html;
+    $("links").innerHTML =
+      `/api/gold\n/api/silver\n/api/crypto/bitcoin\n/api/oilgas\n/api/metals?list=copper,platinum\n/api/fx?from=USD&to=EGP\n`.replaceAll("\n","<br>");
+  }catch(e){
+    $("quick").innerHTML = `<div class="mono">Load failed: ${e}</div>`;
   }
-  $('quick').innerHTML = `
-    <h3>Quick View</h3>
-    ${ line('CRYPTO:BTC', b) }
-    ${ line('ENERGY:GAS', og.GAS||{}) }
-    ${ line('ENERGY:WTI', og.WTI||{}) }
-    ${ line('METAL:COPPER', m.COPPER||{}) }
-    ${ line('METAL:GOLD', g) }
-    ${ line('METAL:PLATINUM', m.PLATINUM||{}) }
-    ${ line('SILVER', s) }
-  `;
 }
-function fillSym(){
-  const cat = $('cat').value;
-  const arr = state.symbols[cat] || [];
-  const s = $('sym');
-  s.innerHTML = '';
-  arr.forEach(x=>{
-    const o = document.createElement('option'); o.textContent = x; o.value = x; s.appendChild(o);
-  });
-}
-$('cat').addEventListener('change', fillSym);
-
-async function refreshAll(){
-  await fetch(state.base + '/admin/refresh', { method:'POST' })
-    .then(r=>r.json()).then(()=>loadQuick()).catch(()=>alert('Refresh failed'));
+function rowKV(label, v, src, ts){
+  const ok = (v!=null)&&isFinite(v);
+  const pill = ok? `<span class="pill ok">OK</span>` : `<span class="pill err">ERR</span>`;
+  const line = `
+    <div class="kv">
+      <div><b>${label}</b> — ${ok?fmtUSD(v):"ERR"} ${pill}<div class="muted">via ${src||"—"} at ${fmtTs(ts)||"—"}</div></div>
+    </div>`;
+  return line;
 }
 
-async function setManual(){
-  const key = $('sym').value;
-  const usd = parseFloat($('price').value);
-  if (!key || isNaN(usd)) return alert('Enter key & price');
-  const tok = $('token').value.trim();
-  const res = await fetch(state.base + '/admin/manual', {
-    method:'POST',
-    headers:{'Content-Type':'application/json','Authorization':'Bearer '+tok},
-    body: JSON.stringify({ key, usd })
-  });
-  const j = await res.json();
-  if (!res.ok) return alert('ERR: ' + (j.error||res.status));
-  $('price').value='';
+$("update-all").onclick = async ()=>{
+  try{
+    await fetch(base()+"/api/update-all",{method:"POST"});
+    await loadQuick();
+    log(`Update All fired`);
+  }catch(e){ alert(e); }
+};
+
+$("set").onclick = async ()=>{
+  const cat = $("cat").value;
+  const key = $("key").value;
+  const value = $("price").value.trim();
+  if(!value) return alert("Enter price/rate first");
+  try{
+    const r = await fetch(base()+"/api/admin/set",{
+      method:"POST",
+      headers:{"Content-Type":"application/json",...hdr()},
+      body: JSON.stringify({category:cat,key,value})
+    }).then(r=>r.json());
+    if(r.error) throw r.error;
+    $("price").value="";
+    await loadQuick();
+    log(`SET ${cat}:${key} = ${value} (manual)`);
+  }catch(e){ alert(e); }
+};
+
+$("clear").onclick = async ()=>{
+  const key = $("key").value;
+  try{
+    const r = await fetch(base()+"/api/admin/clear",{
+      method:"POST",
+      headers:{"Content-Type":"application/json",...hdr()},
+      body: JSON.stringify({key})
+    }).then(r=>r.json());
+    if(r.error) throw r.error;
+    await loadQuick();
+    log(`CLEAR manual ${key}`);
+  }catch(e){ alert(e); }
+};
+
+$("ping").onclick = async ()=>{ await loadQuick(); };
+
+function log(line){
+  const el = $("log");
+  const now = new Date().toISOString().replace("T"," ").replace("Z","");
+  el.textContent = `[${now}] ${line}\n` + el.textContent;
+}
+
+// boot
+(function init(){
+  const savedBase = LS("gp_base");
+  const savedTok  = LS("gp_tok");
+  if(savedBase) $("base").value = savedBase;
+  else $("base").value = location.origin;
+  if(savedTok) $("tok").value = savedTok;
+
+  $("base").addEventListener("change",()=>LS("gp_base",$("base").value.trim()));
+  $("tok").addEventListener("change",()=>LS("gp_tok",$("tok").value.trim()));
+
   loadQuick();
-}
-async function clearManual(){
-  const key = $('sym').value;
-  const tok = $('token').value.trim();
-  const res = await fetch(state.base + '/admin/manual/' + encodeURIComponent(key), {
-    method:'DELETE',
-    headers:{'Authorization':'Bearer '+tok}
-  });
-  const j = await res.json();
-  if (!res.ok) return alert('ERR: ' + (j.error||res.status));
-  loadQuick();
-}
-
-setup();
+})();
 </script>
 </body>
 </html>
