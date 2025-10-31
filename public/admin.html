@@ -1,353 +1,397 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>GoldenPrice — Admin (Light)</title>
-<style>
-  :root{
-    --bg:#ffffff;--card:#f6f8fb;--text:#0f172a;--muted:#6b7280;
-    --border:#e5e7eb;--primary:#1d4ed8;--primary-ink:#ffffff;
-    --ok:#16a34a;--warn:#eab308;--err:#dc2626;
-  }
-  *{box-sizing:border-box}
-  body{margin:0;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial; background:var(--bg); color:var(--text)}
-  header{padding:28px 18px 10px}
-  h1{margin:0 0 6px;font-size:28px}
-  .sub{color:var(--muted);font-size:14px}
-  .wrap{max-width:840px;margin:0 auto 80px;padding:0 18px}
-  .grid{display:grid;grid-template-columns:1fr;gap:16px}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
-  .row{display:flex;gap:10px;align-items:center}
-  .grow{flex:1}
-  label{display:block;font-weight:600;margin:0 0 8px}
-  input,textarea,select{
-    width:100%;padding:12px 14px;border:1px solid var(--border);border-radius:10px;background:#fff;
-    font-size:15px;color:var(--text);outline:none
-  }
-  textarea{min-height:78px;resize:vertical}
-  .hint{font-size:12px;color:var(--muted);margin-top:6px}
-  .btn{
-    border:0;border-radius:10px;background:var(--primary);color:var(--primary-ink);
-    padding:11px 16px;font-weight:600;cursor:pointer
-  }
-  .btn.secondary{background:#0ea5e9}
-  .btn.ghost{background:#eef2ff;color:#1e40af}
-  .pill{font-size:12px;border-radius:999px;padding:4px 8px;border:1px solid var(--border);background:#fff}
-  .kv{font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size:13px;background:#fff;border:1px solid var(--border);border-radius:10px;padding:10px}
-  .ok{color:var(--ok)} .warn{color:var(--warn)} .err{color:var(--err)}
-  .line{height:1px;background:var(--border);margin:12px 0}
-  #logbox{background:#0b1020;color:#c7d2fe;border-radius:10px;border:1px solid #1e293b;padding:12px;height:240px;overflow:auto;font:12px/1.45 ui-monospace,Consolas}
-  a{color:#0ea5e9;text-decoration:none} a:hover{text-decoration:underline}
-  .small{font-size:12px;color:var(--muted)}
-  .stat-grid{display:grid;grid-template-columns:1fr;gap:8px}
-  .pair{display:flex;gap:10px;align-items:center}
-  .val{font-weight:700}
-  .right{margin-left:auto}
-  @media(min-width:760px){ .grid{grid-template-columns:1fr 1fr} .stat-grid{grid-template-columns:1fr 1fr}}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GoldenPrice Admin (Light)</title>
+  <style>
+    :root{
+      --bg:#ffffff; --fg:#111; --muted:#6b7280; --card:#f9fafb; --line:#e5e7eb;
+      --primary:#1d4ed8; --primary-cta:#2563eb; --warn:#b45309; --ok:#059669; --err:#dc2626;
+      --mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --radius:12px;
+    }
+    *{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.45 system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .wrap{max-width:960px;margin:32px auto;padding:0 16px}
+    h1{margin:0 0 8px 0;font-size:28px}
+    .hint{color:var(--muted);font-size:14px;margin-bottom:18px}
+    .row{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+    .btn{background:var(--primary-cta);color:#fff;border:0;border-radius:10px;padding:10px 14px;font-weight:600;cursor:pointer}
+    .btn:disabled{opacity:.5;cursor:not-allowed}
+    .btn.sec{background:#111;color:#fff}
+    .btn.ghost{background:#eef2ff;color:#1e3a8a}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+    .stack{display:grid;gap:12px}
+    .grid{display:grid;gap:14px}
+    @media(min-width:680px){.grid.cols-2{grid-template-columns:1fr 1fr}}
+    label{display:block;font-size:14px;color:#374151;margin:6px 0}
+    input,select,textarea{
+      width:100%;padding:12px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;outline:none
+    }
+    .kpi{font:14px var(--mono);white-space:pre-wrap;background:#fff;border:1px dashed var(--line);border-radius:8px;padding:12px}
+    .side{display:flex;align-items:center;gap:10px}
+    .pill{font:12px;padding:4px 8px;border-radius:999px;border:1px solid var(--line);background:#fff}
+    .pill.ok{color:var(--ok);border-color:var(--ok)}
+    .pill.err{color:var(--err);border-color:var(--err)}
+    .muted{color:var(--muted)}
+    .current{font:13px;color:#111;background:#fff;border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+    .log{height:220px;overflow:auto;background:#0b1220;color:#dbeafe;border-radius:10px;padding:12px;border:1px solid #0e1726;font-family:var(--mono);font-size:13px}
+    .log .ok{color:#86efac} .log .err{color:#fca5a5} .log .info{color:#93c5fd}
+    .footer{margin:28px 0;color:var(--muted);font-size:13px}
+    .links a{display:block;color:#1e3a8a;text-decoration:none;margin:2px 0}
+    .flag{font-size:12px;margin-left:8px}
+  </style>
 </head>
 <body>
-<header class="wrap">
-  <h1>GoldenPrice Admin <span class="pill">Light</span></h1>
-  <div class="sub">Use your admin token for manual overrides. Autoupdate rotates data sources in the backend.</div>
-</header>
+  <div class="wrap">
+    <h1>GoldenPrice Admin <span class="pill">Light</span></h1>
+    <div class="hint">Use your admin token for manual overrides. Autoupdate rotates data sources in the backend.</div>
 
-<main class="wrap">
-
-  <!-- STATUS -->
-  <section class="card">
-    <div class="row">
-      <h3 class="grow" style="margin:0">Status</h3>
+    <div class="row" style="margin-bottom:16px">
       <button id="btnUpdateAll" class="btn">🔄 Update All Now</button>
+      <button id="btnRetry" class="btn ghost">♻️ Retry Failed</button>
+      <button id="btnPing" class="btn sec">📡 Ping status</button>
+      <button id="btnClear" class="btn ghost">🧹 Clear logs</button>
+      <div id="badgeLive" class="pill ok">Live</div>
     </div>
-    <div class="line"></div>
-    <div class="stat-grid">
-      <div><label>Last updates</label><pre id="lastBox" class="kv">{}</pre></div>
-      <div><label>API keys availability</label><pre id="keysBox" class="kv">{}</pre></div>
-    </div>
-    <div class="hint">Status auto-refreshes every 3 minutes. See real-time logs below.</div>
-  </section>
 
-  <!-- TOKEN -->
-  <section class="card">
-    <label>Admin token</label>
-    <input id="token" placeholder="Bearer token" />
-    <div class="hint">Saved to your browser only. Required for the manual Save buttons below.</div>
-  </section>
-
-  <!-- GOLD -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — Gold</label>
-      <span id="goldNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <input id="goldUsd" class="grow" placeholder="USD e.g. 3990.21" inputmode="decimal" />
-      <button id="saveGold" class="btn">Save</button>
-    </div>
-  </section>
-
-  <!-- SILVER -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — Silver</label>
-      <span id="silverNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <input id="silverUsd" class="grow" placeholder="USD e.g. 46.2" inputmode="decimal" />
-      <button id="saveSilver" class="btn">Save</button>
-    </div>
-  </section>
-
-  <!-- SILVERX -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — SilverX</label>
-      <span id="silverxNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <input id="silverxUsd" class="grow" placeholder="USD e.g. 0.01234" inputmode="decimal" />
-      <button id="saveSilverX" class="btn">Save</button>
-    </div>
-    <div class="hint">SilverX pulls live from DexScreener/Pancake (pair/contract is configured on the server). Manual save overrides cache.</div>
-  </section>
-
-  <!-- CRYPTO -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — Crypto</label>
-      <span id="cryptoNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <input id="cryptoSym" style="max-width:160px" placeholder="Symbol (BTC, ETH…)" />
-      <input id="cryptoUsd" class="grow" placeholder="USD" inputmode="decimal" />
-      <button id="saveCrypto" class="btn">Save</button>
-    </div>
-    <div class="hint">Auto updates from CoinGecko/CoinCap. Manual set needs <b>symbol</b> + <b>USD</b>.</div>
-  </section>
-
-  <!-- METALS -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — Metals</label>
-      <span id="metalsNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <input id="metalCode" style="max-width:180px" placeholder="Code (XAU, XAG, XPT…)" />
-      <input id="metalUsd" class="grow" placeholder="USD" inputmode="decimal" />
-      <button id="saveMetal" class="btn">Save</button>
-    </div>
-    <div class="hint">Codes: XAU, XAG, XPT, XPD, CU, AL, NI, ZN, PB, SN …</div>
-  </section>
-
-  <!-- OIL & GAS -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Manual set — Oil & Gas</label>
-      <span id="oilNow" class="small">…</span>
-    </div>
-    <div class="row">
-      <select id="oilKey" style="max-width:180px">
-        <option value="WTI">WTI</option>
-        <option value="BRENT">BRENT</option>
-        <option value="NG">NG</option>
-      </select>
-      <input id="oilUsd" class="grow" placeholder="USD" inputmode="decimal" />
-      <button id="saveOil" class="btn">Save</button>
-    </div>
-    <div class="hint">Auto updates via AlphaVantage/MetalPriceAPI according to rotation. Choose the leg you want to override.</div>
-  </section>
-
-  <!-- QUICK LINKS -->
-  <section class="card">
-    <label>Quick test links</label>
-    <div class="grid">
-      <div class="kv">
-        <a href="/api/gold" target="_blank">/api/gold</a><br>
-        <a href="/api/silver" target="_blank">/api/silver</a><br>
-        <a href="/api/silverx" target="_blank">/api/silverx</a><br>
-        <a href="/api/crypto/bitcoin" target="_blank">/api/crypto/bitcoin</a><br>
-        <a href="/api/oilgas" target="_blank">/api/oilgas</a><br>
-        <a href="/api/metals" target="_blank">/api/metals</a><br>
-        <a href="/api/status" target="_blank">/api/status</a><br>
-      </div>
-      <div>
-        <div class="hint">
-          • <b>Update All Now</b> = تحديث تلقائي لكل المصادر (لا يحتاج توكن).<br>
-          • <b>Save</b> = تعديل يدوي للقيمة الحالية (يحتاج Bearer token).<br>
-          • القيم اليدوية تُخزَّن في الكاش وتُرجع للفرونت إند فورًا حتى يعود أي API للتعافي.
+    <!-- STATUS -->
+    <div class="grid cols-2">
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Status</h3>
+          <span id="autoRefreshNote" class="flag muted">(auto refreshes every 3 min)</span>
+        </div>
+        <div>
+          <label>Last updates</label>
+          <pre id="lastBox" class="kpi">{}</pre>
         </div>
       </div>
+      <div class="card stack">
+        <h3 style="margin:0">API keys availability</h3>
+        <pre id="keysBox" class="kpi">{}</pre>
+      </div>
     </div>
-  </section>
 
-  <!-- LOG VIEWER -->
-  <section class="card">
-    <div class="row">
-      <label class="grow">Live Logs</label>
-      <button id="btnPing" class="btn ghost">Ping status</button>
-      <button id="btnClearLog" class="btn ghost">Clear</button>
+    <!-- TOKEN -->
+    <div class="card" style="margin-top:16px">
+      <label>Admin token</label>
+      <input id="token" placeholder="Bearer token" />
+      <div class="muted" style="margin-top:6px">Saved locally in your browser only. Required for the manual <b>Save</b> buttons below.</div>
     </div>
-    <div id="logbox"></div>
-  </section>
 
-  <div class="small">© GoldenPrice — Admin Light Panel</div>
+    <!-- MANUAL SETS -->
+    <div class="grid cols-2" style="margin-top:16px">
+      <!-- GOLD -->
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Manual set — Gold</h3>
+          <div id="goldCur" class="current">Current: —</div>
+        </div>
+        <input id="goldUsd" placeholder="USD e.g. 3990.21" inputmode="decimal" />
+        <button id="saveGold" class="btn">Save</button>
+      </div>
 
-</main>
+      <!-- SILVER -->
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Manual set — Silver</h3>
+          <div id="silverCur" class="current">Current: —</div>
+        </div>
+        <input id="silverUsd" placeholder="USD e.g. 46.2" inputmode="decimal" />
+        <button id="saveSilver" class="btn">Save</button>
+      </div>
 
-<script>
-/* ========= helpers ========= */
-const $ = sel => document.querySelector(sel);
-const logbox = $('#logbox');
-const log = (m, cls='')=>{
-  const t = new Date().toLocaleTimeString();
-  const line = document.createElement('div');
-  line.innerHTML = `[${t}] ${m}`;
-  if(cls) line.className = cls;
-  logbox.prepend(line);
-};
-const jget = async (url)=>{
-  const r = await fetch(url);
-  let j={};
-  try{ j = await r.json(); }catch(e){}
-  if(!r.ok) throw new Error((j && (j.error||j.message)) || 'HTTP '+r.status);
-  return j;
-};
-const jpost = async (url, body, token)=>{
-  const r = await fetch(url,{
-    method:'POST',
-    headers:{'Content-Type':'application/json', ...(token?{'Authorization':'Bearer '+token}:{})},
-    body: JSON.stringify(body||{})
-  });
-  let j={};
-  try{ j = await r.json(); }catch(e){}
-  if(!r.ok) throw new Error((j && (j.error||j.message)) || 'HTTP '+r.status);
-  return j;
-};
-const fmt = (v)=> (v==null?'—':(typeof v==='number'? new Intl.NumberFormat('en-US',{maximumFractionDigits:6}).format(v) : v));
+      <!-- SILVERX -->
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Manual set — SilverX</h3>
+          <div id="silverxCur" class="current">Current: —</div>
+        </div>
+        <input id="silverxUsd" placeholder="USD e.g. 0.01234" inputmode="decimal" />
+        <div class="muted">SilverX pulls from DexScreener/Pancake (pair/contract configured on the server). Manual save overrides cache.</div>
+        <button id="saveSilverX" class="btn">Save</button>
+      </div>
 
-/* ========= state ========= */
-const els = {
-  token: $('#token'),
-  lastBox: $('#lastBox'),
-  keysBox: $('#keysBox'),
-  goldNow: $('#goldNow'),
-  silverNow: $('#silverNow'),
-  silverxNow: $('#silverxNow'),
-  cryptoNow: $('#cryptoNow'),
-  metalsNow: $('#metalsNow'),
-  oilNow: $('#oilNow'),
-  goldUsd: $('#goldUsd'),
-  silverUsd: $('#silverUsd'),
-  silverxUsd: $('#silverxUsd'),
-  cryptoSym: $('#cryptoSym'),
-  cryptoUsd: $('#cryptoUsd'),
-  metalCode: $('#metalCode'),
-  metalUsd: $('#metalUsd'),
-  oilKey: $('#oilKey'),
-  oilUsd: $('#oilUsd'),
-};
+      <!-- CRYPTO -->
+      <div class="card stack">
+        <div class="side" style="gap:10px;flex-wrap:wrap">
+          <h3 style="margin:0">Manual set — Crypto</h3>
+          <div id="cryptoCur" class="current">Current: —</div>
+        </div>
+        <div class="row" style="gap:10px">
+          <select id="cryptoSymbol" style="flex:1 1 180px">
+            <option>BTC</option><option>ETH</option><option>BNB</option><option>SOL</option>
+            <option>XRP</option><option>DOGE</option><option>ADA</option><option>TRX</option>
+            <option>LTC</option><option>SLX</option>
+          </select>
+          <input id="cryptoUsd" style="flex:1 1 220px" placeholder="USD" inputmode="decimal"/>
+        </div>
+        <div class="muted">Auto updates from CoinGecko/CoinCap. Manual set needs <b>symbol + USD</b>.</div>
+        <button id="saveCrypto" class="btn">Save</button>
+      </div>
 
-/* ========= init token ========= */
-els.token.value = localStorage.getItem('gp_admin_token') || '';
-els.token.addEventListener('change', ()=>localStorage.setItem('gp_admin_token', els.token.value.trim()));
+      <!-- METALS -->
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Manual set — Metals</h3>
+          <div id="metalsCur" class="current">Current: —</div>
+        </div>
+        <div class="row" style="gap:10px">
+          <select id="metalCode" style="flex:1 1 180px">
+            <!-- Precious -->
+            <option value="XAU">Gold (XAU)</option>
+            <option value="XAG">Silver (XAG)</option>
+            <option value="XPT">Platinum (XPT)</option>
+            <option value="XPD">Palladium (XPD)</option>
+            <!-- Base / Industrial -->
+            <option value="CU">Copper (CU)</option>
+            <option value="AL">Aluminium (AL)</option>
+            <option value="NI">Nickel (NI)</option>
+            <option value="ZN">Zinc (ZN)</option>
+            <option value="PB">Lead (PB)</option>
+            <option value="SN">Tin (SN)</option>
+            <option value="FE">Iron (FE)</option>
+            <option value="CO">Cobalt (CO)</option>
+            <option value="LI">Lithium (LI)</option>
+            <option value="TI">Titanium (TI)</option>
+            <option value="MO">Molybdenum (MO)</option>
+            <option value="UR">Uranium (UR)</option>
+          </select>
+          <input id="metalUsd" style="flex:1 1 220px" placeholder="USD" inputmode="decimal"/>
+        </div>
+        <div class="muted">Codes: XAU, XAG, XPT, XPD, CU, AL, NI, ZN, PB, SN, FE, LI, CO, TI, MO, UR</div>
+        <button id="saveMetal" class="btn">Save</button>
+      </div>
 
-/* ========= status & current values ========= */
-async function refreshStatus(){
-  try{
-    const s = await jget('/api/status');
-    els.lastBox.textContent = JSON.stringify(s.last||{}, null, 2);
-    els.keysBox.textContent = JSON.stringify(s.keys||{}, null, 2);
-    log('📊 Status OK');
-  }catch(e){
-    log('Status error: '+e.message, 'err');
-  }
-}
-async function refreshCurrent(){
-  // gold
-  try{
-    const j = await jget('/api/gold');
-    const usd = j && (j.usd || j.value || j.price || j.data?.usd);
-    els.goldNow.textContent = usd? `Current: $${fmt(usd)}` : '⚠️ No data';
-  }catch(e){ els.goldNow.textContent = '⚠️ No data'; log('gold: '+e.message, 'warn'); }
+      <!-- OIL & GAS -->
+      <div class="card stack">
+        <div class="side">
+          <h3 style="margin:0">Manual set — Oil &amp; Gas</h3>
+          <div id="oilgasCur" class="current">Current: —</div>
+        </div>
+        <div class="row" style="gap:10px">
+          <select id="oilKey" style="flex:1 1 180px">
+            <option value="WTI">WTI</option>
+            <option value="BRENT">BRENT</option>
+            <option value="NG">NG</option>
+          </select>
+          <input id="oilUsd" style="flex:1 1 220px" placeholder="USD" inputmode="decimal"/>
+        </div>
+        <div class="muted">Auto updates via AlphaVantage/MetalPriceAPI rotation. Choose the leg you want to override.</div>
+        <button id="saveOil" class="btn">Save</button>
+      </div>
+    </div>
 
-  // silver
-  try{
-    const j = await jget('/api/silver');
-    const usd = j && (j.usd || j.value || j.price);
-    els.silverNow.textContent = usd? `Current: $${fmt(usd)}` : '⚠️ No data';
-  }catch(e){ els.silverNow.textContent = '⚠️ No data'; log('silver: '+e.message, 'warn'); }
+    <!-- QUICK LINKS -->
+    <div class="card" style="margin-top:16px">
+      <h3 style="margin:0 0 8px 0">Quick test links</h3>
+      <div class="links">
+        <a href="/api/gold" target="_blank">/api/gold</a>
+        <a href="/api/silver" target="_blank">/api/silver</a>
+        <a href="/api/silverx" target="_blank">/api/silverx</a>
+        <a href="/api/crypto/bitcoin" target="_blank">/api/crypto/bitcoin</a>
+        <a href="/api/oilgas" target="_blank">/api/oilgas</a>
+        <a href="/api/metals" target="_blank">/api/metals</a>
+        <a href="/api/status" target="_blank">/api/status</a>
+      </div>
+      <ul class="muted" style="margin:10px 0 0 18px">
+        <li><b>Update All Now</b> = trigger full rotation (no token needed).</li>
+        <li><b>Save</b> = manual override to cache (needs Bearer token).</li>
+        <li>Manual values are cached and immediately served to frontend until any API recovers.</li>
+      </ul>
+    </div>
 
-  // silverx
-  try{
-    const j = await jget('/api/silverx');
-    const usd = j && (j.usd || j.value || j.price);
-    els.silverxNow.textContent = usd? `Current: $${fmt(usd)}` : '⚠️ No data';
-  }catch(e){ els.silverxNow.textContent = '⚠️ No data'; log('silverx: '+e.message, 'warn'); }
+    <!-- LOGS -->
+    <div class="card" style="margin-top:16px">
+      <div class="row" style="justify-content:space-between">
+        <h3 style="margin:0">Live Logs</h3>
+        <div class="row">
+          <button id="btnPing2" class="btn sec">Ping status</button>
+          <button id="btnClear2" class="btn ghost">Clear</button>
+        </div>
+      </div>
+      <div id="log" class="log"></div>
+    </div>
 
-  // crypto (default BTC for display)
-  try{
-    const j = await jget('/api/crypto/bitcoin');
-    const usd = j && (j.usd || j.value || j.price);
-    els.cryptoNow.textContent = usd? `BTC: $${fmt(usd)}` : '⚠️ No data';
-  }catch(e){ els.cryptoNow.textContent = '⚠️ No data'; log('crypto: '+e.message, 'warn'); }
+    <div class="footer">© GoldenPrice — Admin Light Panel</div>
+  </div>
 
-  // metals (summary)
-  try{
-    const j = await jget('/api/metals');
-    const cnt = j && j.value ? Object.keys(j.value).length : 0;
-    els.metalsNow.textContent = cnt? `Symbols cached: ${cnt}` : '⚠️ No data';
-  }catch(e){ els.metalsNow.textContent = '⚠️ No data'; log('metals: '+e.message, 'warn'); }
+  <script>
+    // ---------- helpers ----------
+    const $ = s => document.querySelector(s);
+    const logBox = $('#log');
+    const tokenEl = $('#token');
+    const toUSD = v => (v==null||isNaN(+v)) ? '—' : '$' + (+v).toLocaleString(undefined,{maximumFractionDigits:6});
+    const tz = ()=> new Date().toLocaleTimeString();
+    const log = (msg, cls='info')=>{
+      const line = `[${tz()}] ${msg}\n`;
+      const span = document.createElement('div');
+      span.innerText = line; span.className = cls;
+      logBox.appendChild(span);
+      logBox.scrollTop = logBox.scrollHeight;
+    };
+    const baseFetch = async (url, opt={})=>{
+      try{
+        const res = await fetch(url, opt);
+        if(!res.ok){ throw new Error('HTTP '+res.status); }
+        const ct = res.headers.get('content-type')||'';
+        return ct.includes('application/json') ? await res.json() : await res.text();
+      }catch(e){ throw e; }
+    };
+    const getToken = ()=> (tokenEl.value||'').trim();
+    const authHeaders = ()=> ({ 'Authorization': 'Bearer ' + getToken(), 'Content-Type':'application/json' });
 
-  // oilgas (summary)
-  try{
-    const j = await jget('/api/oilgas');
-    const keys = j && j.value ? Object.keys(j.value) : [];
-    const show = keys.map(k=>`${k}: $${fmt(j.value[k])}`).join(' • ');
-    els.oilNow.textContent = keys.length? show : '⚠️ No data';
-  }catch(e){ els.oilNow.textContent = '⚠️ No data'; log('oilgas: '+e.message, 'warn'); }
-}
+    // ---------- status ----------
+    async function refreshStatus(silent=false){
+      try{
+        const data = await baseFetch('/api/status');
+        $('#lastBox').textContent = JSON.stringify(data.last||{}, null, 2);
+        $('#keysBox').textContent = JSON.stringify(data.keys||{}, null, 2);
+        if(!silent) log('Status OK','ok');
+      }catch(e){
+        if(!silent) log('Status error: '+e.message,'err');
+      }
+    }
 
-/* ========= actions ========= */
-$('#btnUpdateAll').addEventListener('click', async ()=>{
-  try{
-    log('🔄 Update-all requested...');
-    const j = await jpost('/api/updateall', {});
-    log('✅ updateall: '+JSON.stringify(j));
-    await refreshStatus();
-    await refreshCurrent();
-  }catch(e){ log('updateall error: '+e.message, 'err'); }
-});
-$('#btnPing').addEventListener('click', ()=>{ refreshStatus(); refreshCurrent(); });
-$('#btnClearLog').addEventListener('click', ()=>{ logbox.innerHTML=''; });
+    // ---------- currents ----------
+    async function refreshCurrents(){
+      await Promise.allSettled([
+        (async()=>{ try{
+          const d = await baseFetch('/api/gold'); $('#goldCur').textContent='Current: '+toUSD(d.usd);
+        }catch(e){ $('#goldCur').textContent='Current: —'; log('gold: '+e.message,'err'); } })(),
+        (async()=>{ try{
+          const d = await baseFetch('/api/silver'); $('#silverCur').textContent='Current: '+toUSD(d.usd);
+        }catch(e){ $('#silverCur').textContent='Current: —'; log('silver: '+e.message,'err'); } })(),
+        (async()=>{ try{
+          const d = await baseFetch('/api/silverx'); $('#silverxCur').textContent='Current: '+toUSD(d.usd);
+        }catch(e){ $('#silverxCur').textContent='Current: —'; log('silverx: '+e.message,'err'); } })(),
+        (async()=>{ try{
+          const d = await baseFetch('/api/crypto/bitcoin'); $('#cryptoCur').textContent='Current: '+toUSD(d.usd);
+        }catch(e){ $('#cryptoCur').textContent='Current: —'; log('crypto: '+e.message,'err'); } })(),
+        (async()=>{ try{
+          const d = await baseFetch('/api/metals'); $('#metalsCur').textContent='Current: '+(d && d.value ? 'loaded' : '—');
+        }catch(e){ $('#metalsCur').textContent='Current: —'; log('metals: '+e.message,'err'); } })(),
+        (async()=>{ try{
+          const d = await baseFetch('/api/oilgas'); $('#oilgasCur').textContent='Current: '+(d && d.value ? 'loaded' : '—');
+        }catch(e){ $('#oilgasCur').textContent='Current: —'; log('oilgas: '+e.message,'err'); } })(),
+      ]);
+    }
 
-async function saveWith(url, body){
-  const token = els.token.value.trim();
-  if(!token){ alert('Enter admin token first'); return; }
-  try{
-    log('POST '+url+' '+JSON.stringify(body));
-    const j = await jpost(url, body, token);
-    log('✅ saved: '+JSON.stringify(j), 'ok');
-    await refreshCurrent();
-  }catch(e){ log('❌ save error: '+e.message, 'err'); alert(e.message); }
-}
+    // ---------- update all / retry ----------
+    async function updateAll(){
+      $('#btnUpdateAll').disabled = true;
+      log('Triggering full rotation ...');
+      try{
+        await baseFetch('/admin/update/all'); // (لا يحتاج توكن)
+        log('rotation: requested','ok');
+        // انتظر ثانية بسيطة ثم حدّث الحالة والقيم
+        setTimeout(async()=>{ await refreshStatus(); await refreshCurrents(); $('#btnUpdateAll').disabled=false; }, 1000);
+      }catch(e){
+        log('rotation failed: '+e.message,'err');
+        $('#btnUpdateAll').disabled = false;
+      }
+    }
 
-/* bind save buttons */
-$('#saveGold').addEventListener('click', ()=> saveWith('/admin/set/gold',   {usd: parseFloat(els.goldUsd.value)}));
-$('#saveSilver').addEventListener('click', ()=> saveWith('/admin/set/silver', {usd: parseFloat(els.silverUsd.value)}));
-$('#saveSilverX').addEventListener('click', ()=> saveWith('/admin/set/silverx',{usd: parseFloat(els.silverxUsd.value)}));
-$('#saveCrypto').addEventListener('click', ()=> saveWith('/admin/set/crypto',{symbol: els.cryptoSym.value.trim().toUpperCase(), usd: parseFloat(els.cryptoUsd.value)}));
-$('#saveMetal').addEventListener('click', ()=> saveWith('/admin/set/metals',{code: els.metalCode.value.trim().toUpperCase(), usd: parseFloat(els.metalUsd.value)}));
-$('#saveOil').addEventListener('click', ()=> saveWith('/admin/set/oilgas',{key: els.oilKey.value.trim().toUpperCase(), usd: parseFloat(els.oilUsd.value)}));
+    async function retryFailed(){
+      log('Retrying failed buckets ...');
+      // منطق بسيط: نحاول طلب /admin/update/all مرة أخرى ولكن بعد تجميع ما فشل من currents لحظياً
+      try{
+        await baseFetch('/admin/update/all');
+        log('retry requested','ok');
+        setTimeout(async()=>{ await refreshStatus(); await refreshCurrents(); }, 1200);
+      }catch(e){
+        log('retry failed: '+e.message,'err');
+      }
+    }
 
-/* boot */
-(async function boot(){
-  log('Admin panel loaded.');
-  await refreshStatus();
-  await refreshCurrent();
-  setInterval(refreshStatus, 180000); // كل 3 دقائق
-})();
-</script>
+    // ---------- manual saves ----------
+    async function saveGold(){
+      const usd = +($('#goldUsd').value||'');
+      if(!usd){ alert('Enter USD'); return; }
+      try{
+        await baseFetch('/admin/set/gold',{method:'POST',headers:authHeaders(),body:JSON.stringify({usd})});
+        log('gold saved','ok'); $('#goldUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('gold save: '+e.message,'err'); }
+    }
+    async function saveSilver(){
+      const usd = +($('#silverUsd').value||'');
+      if(!usd){ alert('Enter USD'); return; }
+      try{
+        await baseFetch('/admin/set/silver',{method:'POST',headers:authHeaders(),body:JSON.stringify({usd})});
+        log('silver saved','ok'); $('#silverUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('silver save: '+e.message,'err'); }
+    }
+    async function saveSilverX(){
+      const usd = +($('#silverxUsd').value||'');
+      if(!usd){ alert('Enter USD'); return; }
+      try{
+        await baseFetch('/admin/set/silverx',{method:'POST',headers:authHeaders(),body:JSON.stringify({usd})});
+        log('silverx saved','ok'); $('#silverxUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('silverx save: '+e.message,'err'); }
+    }
+    async function saveCrypto(){
+      const symbol = ($('#cryptoSymbol').value||'').trim().toUpperCase();
+      const usd = +($('#cryptoUsd').value||'');
+      if(!symbol || !usd){ alert('Enter symbol + USD'); return; }
+      try{
+        await baseFetch('/admin/set/crypto',{method:'POST',headers:authHeaders(),body:JSON.stringify({symbol,usd})});
+        log(`crypto ${symbol} saved`,'ok'); $('#cryptoUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('crypto save: '+e.message,'err'); }
+    }
+    async function saveMetal(){
+      const code = ($('#metalCode').value||'').trim().toUpperCase();
+      const usd = +($('#metalUsd').value||'');
+      if(!code || !usd){ alert('Choose code + USD'); return; }
+      try{
+        await baseFetch('/admin/set/metals',{method:'POST',headers:authHeaders(),body:JSON.stringify({code,usd})});
+        log(`metal ${code} saved`,'ok'); $('#metalUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('metals save: '+e.message,'err'); }
+    }
+    async function saveOil(){
+      const key = ($('#oilKey').value||'WTI').toUpperCase();
+      const usd = +($('#oilUsd').value||'');
+      if(!usd){ alert('Enter USD'); return; }
+      try{
+        await baseFetch('/admin/set/oilgas',{method:'POST',headers:authHeaders(),body:JSON.stringify({key,usd})});
+        log(`oilgas ${key} saved`,'ok'); $('#oilUsd').value='';
+        await refreshCurrents();
+      }catch(e){ log('oilgas save: '+e.message,'err'); }
+    }
+
+    // ---------- events ----------
+    $('#btnUpdateAll').addEventListener('click', updateAll);
+    $('#btnRetry').addEventListener('click', retryFailed);
+    $('#btnPing').addEventListener('click', ()=>{ refreshStatus(); });
+    $('#btnPing2').addEventListener('click', ()=>{ refreshStatus(); });
+    $('#btnClear').addEventListener('click', ()=>{ logBox.innerHTML=''; });
+    $('#btnClear2').addEventListener('click', ()=>{ logBox.innerHTML=''; });
+
+    $('#saveGold').addEventListener('click', saveGold);
+    $('#saveSilver').addEventListener('click', saveSilver);
+    $('#saveSilverX').addEventListener('click', saveSilverX);
+    $('#saveCrypto').addEventListener('click', saveCrypto);
+    $('#saveMetal').addEventListener('click', saveMetal);
+    $('#saveOil').addEventListener('click', saveOil);
+
+    // ---------- init ----------
+    (function init(){
+      // load stored token
+      const saved = localStorage.getItem('gp_admin_token')||'';
+      tokenEl.value = saved;
+      tokenEl.addEventListener('input', ()=> localStorage.setItem('gp_admin_token', tokenEl.value.trim()));
+
+      refreshStatus(true);
+      refreshCurrents();
+
+      // Auto refresh status every 3 minutes
+      setInterval(()=>{ refreshStatus(true); }, 180000);
+    })();
+  </script>
 </body>
 </html>
