@@ -1,473 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Admin • GoldenPrice Backend</title>
+<title>GoldenPrice Admin</title>
 <style>
-  :root{
-    --bg:#ffffff; --fg:#111; --muted:#666; --card:#f7f7f8; --line:#e7e7ea; --ok:#0a7; --warn:#d80; --err:#c00; --btn:#111;
+  :root { --bg:#ffffff; --fg:#0b1320; --muted:#6b7280; --card:#f5f7fb; --ok:#16a34a; --bad:#dc2626; --btn:#111827; --btnfg:#fff; --link:#2563eb; }
+  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg); }
+  header { padding:16px 20px; border-bottom:1px solid #e5e7eb; display:flex; align-items:center; gap:12px; }
+  header h1 { margin:0; font-size:18px; font-weight:700; letter-spacing:.2px; }
+  header .badge { font-size:12px; padding:4px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; }
+  main { padding:18px; max-width:1100px; margin:0 auto; display:grid; gap:16px; }
+  .row { display:grid; gap:16px; grid-template-columns: repeat(12,1fr); }
+  .card { grid-column: span 12; background:var(--card); border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
+  @media(min-width:900px){
+    .card.half { grid-column: span 6; }
+    .card.third{ grid-column: span 4; }
   }
-  html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-  .wrap{max-width:1100px;margin:24px auto;padding:0 16px}
-  h1{font-size:22px;margin:0 0 12px}
-  h2{font-size:18px;margin:24px 0 8px}
-  .grid{display:grid;gap:12px}
-  .two{grid-template-columns:1fr 1fr}
-  .three{grid-template-columns:repeat(3,1fr)}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px}
-  .row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
-  label{font-size:12px;color:var(--muted)}
-  select,input[type="text"],input[type="number"]{padding:9px 10px;border:1px solid var(--line);border-radius:8px;background:#fff;min-width:160px}
-  button{padding:9px 12px;border:1px solid var(--line);border-radius:8px;background:var(--btn);color:#fff;cursor:pointer}
-  button.ghost{background:#fff;color:var(--fg)}
-  .pill{display:inline-block;font-size:12px;padding:3px 8px;border-radius:999px;border:1px solid var(--line);background:#fff}
-  .stat{font:600 16px/1.2 system-ui}
-  .muted{color:var(--muted)}
-  .ok{color:var(--ok)} .warn{color:var(--warn)} .err{color:var(--err)}
-  .log{font:12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
-       background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px;height:220px;overflow:auto;white-space:pre-wrap}
-  .split{display:grid;grid-template-columns: 1.3fr .7fr; gap:12px}
-  .hl{background:#fff;border:1px dashed var(--line);border-radius:8px;padding:10px}
-  .help{font-size:12px;color:var(--muted)}
-  .tag{font-size:11px;background:#eef;border:1px solid #dde;border-radius:6px;padding:2px 6px;margin-left:6px}
+  h2 { margin:0 0 8px; font-size:16px; }
+  .muted { color:var(--muted); font-size:12px; }
+  .kv { display:grid; grid-template-columns: 170px 1fr auto; gap:8px; align-items:center; margin:8px 0; }
+  select, input[type="text"], input[type="number"] { padding:8px 10px; border:1px solid #d1d5db; border-radius:8px; width:100%; background:#fff; }
+  .btn { padding:8px 12px; border:0; border-radius:8px; background:var(--btn); color:var(--btnfg); cursor:pointer; font-weight:600; }
+  .btn.ghost { background:#fff; color:#111827; border:1px solid #d1d5db; }
+  .btn.warn { background:#b91c1c; }
+  .grid { display:grid; gap:8px; }
+  .list { display:grid; gap:6px; }
+  .item { display:flex; gap:8px; align-items:center; justify-content:space-between; padding:8px 10px; background:#fff; border:1px solid #e5e7eb; border-radius:8px; }
+  .pill { font-size:12px; padding:2px 8px; border-radius:999px; }
+  .pill.ok { background:#ecfdf5; color:#065f46; }
+  .pill.bad{ background:#fef2f2; color:#991b1b; }
+  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+  a { color:var(--link); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  .links { display:flex; gap:10px; flex-wrap:wrap; }
+  footer { padding:16px 20px; color:var(--muted); font-size:12px; }
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>GoldenPrice • Admin</h1>
-  <div class="row" style="gap:14px; margin-bottom:14px;">
-    <div class="pill">Backend: <span id="backendSpan" class="muted"></span></div>
-    <div class="pill">Auto refresh: <span id="autoSpan" class="ok">ON</span></div>
-    <button id="toggleAuto" class="ghost">Pause</button>
-    <button id="btnRetryAll" title="Force refresh all now">Refresh all now</button>
-    <span class="help">All prices in <b>USD</b>.</span>
-  </div>
+<header>
+  <h1>GoldenPrice Admin</h1>
+  <span class="badge">Light mode</span>
+</header>
 
-  <!-- GOLD & SILVER & SILVERX -->
+<main>
+
+  <!-- CONFIG -->
   <div class="card">
-    <h2>Gold & Silver & SilverX <span class="tag">primary: TwelveData → MetalPrice → AlphaVantage → TheStreetGold</span></h2>
-    <div class="grid three">
-      <div class="hl">
-        <div class="row"><b>Gold (XAU)</b><span id="goldSrc" class="muted"></span></div>
-        <div class="row"><span class="stat" id="goldVal">—</span><span class="muted">per oz</span></div>
-        <div class="row">
-          <button id="btnGold">Refresh</button>
-          <button class="ghost" data-manual="gold">Manual set</button>
-        </div>
-        <div class="help">/api/metals?list=gold</div>
+    <h2>Config</h2>
+    <div class="grid" style="max-width:900px">
+      <div class="kv">
+        <div>Backend Base URL</div>
+        <input id="baseUrl" type="text" value="https://goldenprice-backend.onrender.com" />
+        <button class="btn ghost" onclick="ping()">Ping</button>
       </div>
-      <div class="hl">
-        <div class="row"><b>Silver (XAG)</b><span id="silverSrc" class="muted"></span></div>
-        <div class="row"><span class="stat" id="silverVal">—</span><span class="muted">per oz</span></div>
-        <div class="row">
-          <button id="btnSilver">Refresh</button>
-          <button class="ghost" data-manual="silver">Manual set</button>
-        </div>
-        <div class="help">/api/metals?list=silver</div>
-      </div>
-      <div class="hl">
-        <div class="row"><b>SilverX (SLX)</b><span id="slxSrc" class="muted"></span></div>
-        <div class="row"><span class="stat" id="slxVal">—</span><span class="muted">per token</span></div>
-        <div class="row">
-          <button id="btnSLX">Refresh</button>
-          <button class="ghost" data-manual="SLX">Manual set</button>
-        </div>
-        <div class="help">/api/crypto?list=SLX (BinanceWS/Gecko/Kraken fallback; SLX usually manual)</div>
+      <div class="kv">
+        <div>Admin Token</div>
+        <input id="adminToken" type="text" value="ADMIN_12345" />
+        <button class="btn ghost" onclick="loadAll()">Refresh All</button>
       </div>
     </div>
+    <div class="muted">تأكد أن هذا هو نفس التوكن المضبوط في السيرفر.</div>
   </div>
 
-  <!-- CRYPTO -->
-  <div class="card">
-    <h2>Crypto</h2>
-    <div class="row">
-      <label>Symbol</label>
-      <select id="cryptoSel">
-        <option>BTC</option><option>ETH</option><option>SOL</option><option>XRP</option>
-        <option>BNB</option><option>DOGE</option><option>ADA</option><option>TRX</option>
-        <option>TON</option><option>SLX</option>
-      </select>
-      <button id="btnCryptoGet">Get</button>
-      <button class="ghost" id="btnCryptoManual">Manual set</button>
-      <span class="stat" id="cryptoOut">—</span><span id="cryptoSrc" class="muted"></span>
+  <!-- QUICK STATUS -->
+  <div class="row">
+    <div class="card half">
+      <h2>Live Status</h2>
+      <div id="statusBox" class="list"></div>
+      <div class="links" style="margin-top:8px">
+        <a href="#" onclick="openTest('gold')">Test Gold API</a>
+        <a href="#" onclick="openTest('silver')">Test Silver API</a>
+        <a href="#" onclick="openTest('crypto')">Test Crypto API</a>
+        <a href="#" onclick="openTest('fx')">Test FX API</a>
+      </div>
     </div>
-    <div class="help">/api/crypto?list=BTC,ETH…</div>
-  </div>
-
-  <!-- METALS (17) -->
-  <div class="card">
-    <h2>Industrial & Precious Metals (17)</h2>
-    <div class="row">
-      <label>Metal</label>
-      <select id="metalSel"></select>
-      <button id="btnMetalGet">Get</button>
-      <button class="ghost" id="btnMetalManual">Manual set</button>
-      <span class="stat" id="metalOut">—</span><span id="metalSrc" class="muted"></span>
-    </div>
-    <div class="help">/api/metals?list=copper,aluminum,…</div>
-  </div>
-
-  <!-- OIL & GAS -->
-  <div class="card">
-    <h2>Oil & Gas</h2>
-    <div class="row">
-      <label>Asset</label>
-      <select id="ogSel">
-        <option>WTI</option><option>Brent</option><option>NG</option>
-      </select>
-      <button id="btnOGGet">Get</button>
-      <button class="ghost" id="btnOGManual">Manual set</button>
-      <span class="stat" id="ogOut">—</span><span id="ogSrc" class="muted"></span>
-    </div>
-    <div class="help">/api/oil?asset=WTI | /api/gas?asset=NG (if available) — otherwise manual works.</div>
-  </div>
-
-  <!-- FOREX -->
-  <div class="card">
-    <h2>Forex</h2>
-    <div class="row">
-      <label>From</label>
-      <select id="fxFrom"></select>
-      <label>To</label>
-      <select id="fxTo"></select>
-      <button id="btnFXGet">Get</button>
-      <button class="ghost" id="btnFXManual">Manual set</button>
-      <span class="stat" id="fxOut">—</span><span id="fxSrc" class="muted"></span>
-    </div>
-    <div class="help">/api/fx?from=USD&to=EGP</div>
-  </div>
-
-  <!-- BULK MANUAL -->
-  <div class="card">
-    <h2>Manual override (any key) </h2>
-    <div class="row">
-      <input id="manKey" type="text" placeholder="key e.g. gold, silver, BTC, USD_EGP, WTI …" />
-      <input id="manVal" type="number" step="0.00000001" placeholder="value (USD)" />
-      <button id="btnManualSet">Save</button>
-    </div>
-    <div class="help">Uses /api/admin/set with Admin-Token header. Instant cache update.</div>
-  </div>
-
-  <!-- LOGS -->
-  <div class="split">
-    <div class="card">
+    <div class="card half">
       <h2>Logs</h2>
-      <div id="log" class="log"></div>
+      <div class="muted">آخر 50 سطر</div>
+      <pre id="logs" class="mono" style="background:#111827;color:#e5e7eb;padding:10px;border-radius:8px; height:180px; overflow:auto;">(loading...)</pre>
     </div>
-    <div class="card">
-      <h2>Status</h2>
-      <div class="grid">
-        <div>Gold cache: <span id="stGold" class="muted">—</span></div>
-        <div>Silver cache: <span id="stSilver" class="muted">—</span></div>
-        <div>Crypto cache: <span id="stCrypto" class="muted">—</span></div>
-        <div>Metals cache: <span id="stMetals" class="muted">—</span></div>
-        <div>Oil/Gas cache: <span id="stOG" class="muted">—</span></div>
-        <div>FX cache: <span id="stFX" class="muted">—</span></div>
+  </div>
+
+  <!-- MANUAL UPDATE -->
+  <div class="card">
+    <h2>Manual Set / Clear</h2>
+    <div class="grid" style="max-width:1000px">
+      <div class="kv">
+        <div>Category</div>
+        <select id="cat" onchange="onCatChange()">
+          <option value="metals">Metals</option>
+          <option value="crypto">Crypto</option>
+          <option value="fx">Forex</option>
+        </select>
+        <span></span>
       </div>
-      <div style="margin-top:10px" class="row">
-        <button id="btnPing" class="ghost">Ping /health</button>
-        <button id="btnWarmup">Warm-up all</button>
+
+      <div class="kv">
+        <div>Symbol / Key</div>
+        <select id="sym"></select>
+        <button class="btn ghost" onclick="showCurrent()">Show Current</button>
+      </div>
+
+      <div id="fxRow" class="kv" style="display:none">
+        <div>FX Pair</div>
+        <div style="display:flex; gap:8px">
+          <select id="fxFrom"></select>
+          <select id="fxTo"></select>
+        </div>
+        <span></span>
+      </div>
+
+      <div class="kv">
+        <div>Manual Price (USD)</div>
+        <input id="price" type="number" step="0.0001" placeholder="e.g. 2350.75" />
+        <div style="display:flex; gap:8px">
+          <button class="btn" onclick="setManual()">Set</button>
+          <button class="btn warn" onclick="clearManual()">Clear</button>
+        </div>
+      </div>
+
+      <div class="kv">
+        <div>Result</div>
+        <input id="result" type="text" readonly />
+        <span></span>
       </div>
     </div>
   </div>
 
-</div>
+  <!-- QUICK TEST LINKS -->
+  <div class="card">
+    <h2>Quick Test Links</h2>
+    <div class="links">
+      <a id="lnkGold"   target="_blank">/api/metals?list=gold</a>
+      <a id="lnkSilver" target="_blank">/api/metals?list=silver</a>
+      <a id="lnkMetals" target="_blank">/api/metals?list=copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium,platinum,palladium</a>
+      <a id="lnkCrypto" target="_blank">/api/crypto?list=BTC,ETH,SLX</a>
+      <a id="lnkFX"     target="_blank">/api/fx?from=USD&to=EGP</a>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  GoldenPrice Admin • Prices in USD • Auto + Manual controls
+</footer>
 
 <script>
-/* ========= CONFIG ========= */
-const BACKEND_BASE = "https://goldenprice-backend.onrender.com"; // ← غيّرها لو لزم
-const ADMIN_TOKEN  = "PASTE_YOUR_ADMIN_TOKEN_HERE";              // ← ضَع التوكن هنا
+const $ = (id)=>document.getElementById(id);
 
-// فواصل التحديث الآلي (بالثواني)
-const AUTO_INTERVALS = {
-  gold_silver: 210,     // 3.5 دقيقة
-  crypto: 2,            // كل ثانيتين (WS/Gecko/Kraken)
-  metals17: 86400,      // كل 24 ساعة
-  oil_gas: 18000,       // كل 5 ساعات
-  fx: 3600              // كل ساعة
-};
+// ---- CONFIG ----
+function base(){ return $("baseUrl").value.replace(/\/+$/,''); }
+function token(){ return $("adminToken").value.trim(); }
 
-// قوائم جاهزة
+// ---- CATALOGS ----
 const METALS = [
   "gold","silver","platinum","palladium",
-  "copper","aluminum","zinc","nickel","lead","tin",
-  "iron","steel","cobalt","lithium","uranium","platinum_silver","chromium"
+  "copper","aluminum","nickel","zinc","lead","tin",
+  "iron","steel","cobalt","lithium","uranium"
 ];
-const FX_CCY = ["USD","EUR","GBP","SAR","AED","EGP","TRY","JPY","CNY","INR","PKR","KWD","QAR","BHD","OMR","MAD","TND","ZAR"];
-const CRYPTO = ["BTC","ETH","SOL","XRP","BNB","DOGE","ADA","TRX","TON","SLX"];
 
-/* ========= UTIL ========= */
-const $ = sel => document.querySelector(sel);
-const logBox = $("#log");
-function log(msg, cls=""){
-  const t = new Date().toLocaleTimeString();
-  const line = document.createElement("div");
-  line.innerHTML = `<span class="muted">${t}</span> — <span class="${cls}">${msg}</span>`;
-  logBox.prepend(line);
-}
-function jurl(path){ return `${BACKEND_BASE}${path}`; }
-async function jget(path){
-  try{
-    const r = await fetch(jurl(path));
-    if(!r.ok) throw new Error("HTTP "+r.status);
-    return await r.json();
-  }catch(e){ throw e; }
-}
-async function adminSet(key, value){
-  const r = await fetch(jurl(`/api/admin/set`), {
-    method: "POST",
-    headers: { "Content-Type":"application/json", "Admin-Token": ADMIN_TOKEN },
-    body: JSON.stringify({ key, value })
+const CRYPTOS = [
+  "BTC","ETH","SLX" // SLX = SilverX
+];
+
+// Common top FX (add more if you like)
+const FX_CURRS = ["USD","EUR","GBP","JPY","CHF","CAD","AUD","NZD","CNY","SAR","AED","EGP","TRY"];
+
+// ---- UI INIT ----
+function fillSelect(sel, arr){
+  sel.innerHTML = "";
+  arr.forEach(x=>{
+    const o=document.createElement("option");
+    o.value=x; o.textContent=x;
+    sel.appendChild(o);
   });
-  if(!r.ok) throw new Error("HTTP "+r.status);
-  return await r.json();
 }
 
-/* ========= INIT DROPDOWNS ========= */
-(function initDD(){
-  $("#backendSpan").textContent = BACKEND_BASE;
+function onCatChange(){
+  const cat = $("cat").value;
+  $("fxRow").style.display = cat==="fx" ? "" : "none";
+  if (cat==="metals") fillSelect($("sym"), METALS);
+  if (cat==="crypto") fillSelect($("sym"), CRYPTOS);
+  if (cat==="fx") {
+    fillSelect($("fxFrom"), FX_CURRS);
+    fillSelect($("fxTo"), FX_CURRS);
+    $("fxFrom").value="USD";
+    $("fxTo").value="EGP";
+    $("sym").innerHTML = "";
+    const o=document.createElement("option");
+    o.value="FX_PAIR"; o.textContent="(via pair below)";
+    $("sym").appendChild(o);
+  }
+}
 
-  const msel = $("#metalSel");
-  METALS.forEach(x=>{
-    const o=document.createElement("option");o.textContent=x;o.value=x;msel.appendChild(o);
-  });
-
-  const fxF = $("#fxFrom"), fxT=$("#fxTo");
-  FX_CCY.forEach(c=>{
-    const a=document.createElement("option"); a.value=a.textContent=c; fxF.appendChild(a.cloneNode(true));
-    fxT.appendChild(a.cloneNode(true));
-  });
-  fxF.value="USD"; fxT.value="EGP";
-})();
-
-/* ========= BUTTON HOOKS ========= */
-// Gold / Silver
-$("#btnGold").onclick   = async()=> refreshMetals(["gold"]);
-$("#btnSilver").onclick = async()=> refreshMetals(["silver"]);
-$("#btnSLX").onclick    = async()=> getCrypto("SLX");
-
-// Crypto
-$("#btnCryptoGet").onclick  = async()=> getCrypto($("#cryptoSel").value);
-$("#btnCryptoManual").onclick = async()=>{
-  const sym = $("#cryptoSel").value;
-  const val = prompt(`Manual price for ${sym} in USD:`);
-  if(!val) return;
-  await adminSet(sym, Number(val));
-  log(`Manual set ${sym}=${val}`, "ok");
-};
-
-// Metals17
-$("#btnMetalGet").onclick = async()=> refreshMetals([$("#metalSel").value]);
-$("#btnMetalManual").onclick = async()=>{
-  const m = $("#metalSel").value;
-  const val = prompt(`Manual price for ${m} in USD (per unit):`);
-  if(!val) return;
-  await adminSet(m, Number(val));
-  log(`Manual set ${m}=${val}`, "ok");
-};
-
-// Oil & Gas
-$("#btnOGGet").onclick = async()=> getOilGas($("#ogSel").value);
-$("#btnOGManual").onclick = async()=>{
-  const a = $("#ogSel").value;
-  const val = prompt(`Manual price for ${a} in USD:`);
-  if(!val) return;
-  await adminSet(a, Number(val));
-  log(`Manual set ${a}=${val}`, "ok");
-};
-
-// FX
-$("#btnFXGet").onclick = async()=> getFX($("#fxFrom").value, $("#fxTo").value);
-$("#btnFXManual").onclick = async()=>{
-  const from=$("#fxFrom").value, to=$("#fxTo").value;
-  const key = `${from}_${to}`;
-  const val = prompt(`Manual FX for ${from}/${to}:`);
-  if(!val) return;
-  await adminSet(key, Number(val));
-  log(`Manual set ${key}=${val}`, "ok");
-};
-
-// Generic manual
-document.querySelectorAll('button[data-manual]').forEach(b=>{
-  b.onclick = async()=>{
-    const key = b.getAttribute("data-manual");
-    const val = prompt(`Manual value for ${key} (USD):`);
-    if(!val) return;
-    await adminSet(key, Number(val));
-    log(`Manual set ${key}=${val}`, "ok");
-  };
-});
-
-// Manual any key
-$("#btnManualSet").onclick = async()=>{
-  const k=$("#manKey").value.trim(), v=Number($("#manVal").value);
-  if(!k || !isFinite(v)) return alert("Enter key and numeric value");
-  await adminSet(k, v);
-  log(`Manual set ${k}=${v}`, "ok");
-};
-
-// Status / Warmup / Toggle auto
-$("#btnPing").onclick = async()=>{
+async function ping(){
   try{
-    const j = await jget("/api/health");
-    log(`health ok ts=${j.ts}`, "ok");
-  }catch(e){ log(`health failed ${e}`, "err"); }
-};
-$("#btnWarmup").onclick = async()=>{
-  await Promise.allSettled([
-    refreshMetals(["gold","silver"]),
-    getCrypto("BTC"),
-    getFX("USD","EGP")
-  ]);
-  log("Warm-up triggered", "ok");
-};
-let autoOn = true;
-$("#toggleAuto").onclick = ()=>{
-  autoOn = !autoOn;
-  $("#autoSpan").textContent = autoOn ? "ON":"OFF";
-  $("#autoSpan").className = autoOn ? "ok":"warn";
-  $("#toggleAuto").textContent = autoOn ? "Pause":"Resume";
-  log(`Auto mode ${autoOn?"enabled":"paused"}`, autoOn?"ok":"warn");
-};
-$("#btnRetryAll").onclick = async()=>{
-  await doAutoTick(true);
-};
+    const r = await fetch(base()+"/api/health");
+    $("result").value = r.ok? "OK /api/health" : ("HTTP "+r.status);
+  }catch(e){ $("result").value = "Ping failed"; }
+}
 
-/* ========= FETCHERS ========= */
-async function refreshMetals(list){
+function openTest(which){
+  let url = "";
+  if (which==="gold")   url = base()+"/api/metals?list=gold";
+  if (which==="silver") url = base()+"/api/metals?list=silver";
+  if (which==="crypto") url = base()+"/api/crypto?list=BTC,ETH,SLX";
+  if (which==="fx")     url = base()+"/api/fx?from=USD&to=EGP";
+  if (url) window.open(url, "_blank");
+}
+
+async function loadStatus(){
+  const box = $("statusBox");
+  box.innerHTML = "(loading...)";
   try{
-    const q = encodeURIComponent(list.join(","));
-    const j = await jget(`/api/metals?list=${q}`);
-    for(const k of Object.keys(j)){
-      const v = j[k];
-      const price = v?.price ?? v?.value ?? v;
-      if(k==="gold"){
-        $("#goldVal").textContent = fmt(price);
-        $("#goldSrc").textContent = v?.source ? ` • ${v.source}` : "";
-        $("#stMetals").textContent = "updated";
-      } else if(k==="silver"){
-        $("#silverVal").textContent = fmt(price);
-        $("#silverSrc").textContent = v?.source ? ` • ${v.source}` : "";
-        $("#stMetals").textContent = "updated";
-      } else {
-        $("#metalOut").textContent = fmt(price);
-        $("#metalSrc").textContent = v?.source ? ` • ${v.source}` : "";
-      }
-      log(`metals ${k} = ${price} ${v?.source?"("+v.source+")":""}`, "ok");
+    // quick parallel probes
+    const [m1,m2,c1,fx] = await Promise.allSettled([
+      fetch(base()+"/api/metals?list=gold").then(r=>r.json()),
+      fetch(base()+"/api/metals?list=silver").then(r=>r.json()),
+      fetch(base()+"/api/crypto?list=BTC,ETH").then(r=>r.json()),
+      fetch(base()+"/api/fx?from=USD&to=EGP").then(r=>r.json())
+    ]);
+    const items = [];
+    items.push(renderStatus("Gold",   m1));
+    items.push(renderStatus("Silver", m2));
+    items.push(renderStatus("Crypto", c1));
+    items.push(renderStatus("FX USD→EGP", fx));
+    box.innerHTML = "";
+    items.forEach(el=> box.appendChild(el));
+  }catch(e){
+    box.innerHTML = "<div class='muted'>Status check failed.</div>";
+  }
+}
+
+function renderStatus(title, settled){
+  const div = document.createElement("div");
+  div.className = "item";
+  const left = document.createElement("div");
+  left.innerHTML = `<strong>${title}</strong>`;
+  const right = document.createElement("div");
+  const ok = (settled.status==="fulfilled" && !settled.value.error);
+  const pill = document.createElement("span");
+  pill.className = "pill " + (ok? "ok":"bad");
+  pill.textContent = ok? "OK":"ERR";
+  right.appendChild(pill);
+  if (ok) {
+    const small = document.createElement("span");
+    small.className="muted";
+    small.style.marginLeft="8px";
+    small.textContent = shortValue(settled.value);
+    right.appendChild(small);
+  } else {
+    const small = document.createElement("span");
+    small.className="muted";
+    small.style.marginLeft="8px";
+    small.textContent = settled?.value?.error ? String(settled.value.error).slice(0,80) : "(failed)";
+    right.appendChild(small);
+  }
+  div.appendChild(left); div.appendChild(right);
+  return div;
+}
+
+function shortValue(v){
+  try{
+    // try gold or silver first
+    if (v.gold?.price)   return `XAU ${Number(v.gold.price).toFixed(2)} USD`;
+    if (v.silver?.price) return `XAG ${Number(v.silver.price).toFixed(2)} USD`;
+    // crypto
+    const k = Object.keys(v||{})[0];
+    if (k && v[k]?.price) return `${k} ${Number(v[k].price).toFixed(2)} USD`;
+    // fx
+    if (v.rate) return `rate ${Number(v.rate).toFixed(4)}`;
+  }catch{}
+  return "";
+}
+
+async function loadLogs(){
+  try{
+    const u = base()+"/api/admin/logs?limit=50&token="+encodeURIComponent(token());
+    const r = await fetch(u);
+    if (!r.ok) throw new Error("HTTP "+r.status);
+    const t = await r.text();
+    $("logs").textContent = t || "(empty)";
+  }catch(e){
+    $("logs").textContent = "(failed to load logs)";
+  }
+}
+
+function refreshLinks(){
+  $("lnkGold").href   = base()+"/api/metals?list=gold";
+  $("lnkSilver").href = base()+"/api/metals?list=silver";
+  $("lnkMetals").href = base()+"/api/metals?list=copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium,platinum,palladium";
+  $("lnkCrypto").href = base()+"/api/crypto?list=BTC,ETH,SLX";
+  $("lnkFX").href     = base()+"/api/fx?from=USD&to=EGP";
+}
+
+async function loadAll(){
+  refreshLinks();
+  onCatChange();
+  await Promise.all([loadStatus(), loadLogs()]);
+}
+
+// ---- SHOW CURRENT ----
+async function showCurrent(){
+  const cat = $("cat").value;
+  try{
+    if (cat==="metals"){
+      const s = $("sym").value;
+      const r = await fetch(base()+"/api/metals?list="+encodeURIComponent(s));
+      const j = await r.json();
+      if (j[s]?.price) $("result").value = `${s}: ${j[s].price} USD (src ${j[s].source||"?"})`;
+      else $("result").value = j.error ? "ERR: "+j.error : "No price";
+    } else if (cat==="crypto"){
+      const s = $("sym").value;
+      const r = await fetch(base()+"/api/crypto?list="+encodeURIComponent(s));
+      const j = await r.json();
+      if (j[s]?.price) $("result").value = `${s}: ${j[s].price} USD (src ${j[s].source||"?"})`;
+      else $("result").value = j.error ? "ERR: "+j.error : "No price";
+    } else if (cat==="fx"){
+      const from=$("fxFrom").value, to=$("fxTo").value;
+      const r = await fetch(base()+`/api/fx?from=${from}&to=${to}`);
+      const j = await r.json();
+      if (j.rate) $("result").value = `${from}->${to}: ${j.rate} (${j.source||"?"})`;
+      else $("result").value = j.error ? "ERR: "+j.error : "No rate";
     }
   }catch(e){
-    log(`metals ${list.join(",")} failed ${e}`, "err");
+    $("result").value = "Failed to fetch";
   }
 }
 
-async function getCrypto(sym){
+// ---- MANUAL SET/CLEAR ----
+async function setManual(){
+  const cat = $("cat").value;
+  let key = "";
+  if (cat==="metals") key = $("sym").value;             // e.g. gold
+  if (cat==="crypto") key = "CRYPTO:"+$("sym").value;   // e.g. CRYPTO:BTC
+  if (cat==="fx")     key = "FX:"+$("fxFrom").value+"-"+$("fxTo").value; // FX:USD-EGP
+
+  const price = Number($("price").value);
+  if (!key) return $("result").value = "No key";
+  if (!Number.isFinite(price) || price<=0) return $("result").value="Invalid price";
+
   try{
-    const j = await jget(`/api/crypto?list=${encodeURIComponent(sym)}`);
-    const o = j[sym];
-    const price = o?.price ?? o?.value ?? o;
-    if(sym==="SLX"){
-      $("#slxVal").textContent = o?.price ? fmt(price) : "—";
-      $("#slxSrc").textContent = o?.source ? ` • ${o.source}` : " • manual recommended";
-    }else{
-      $("#cryptoOut").textContent = fmt(price);
-      $("#cryptoSrc").textContent  = o?.source ? ` • ${o.source}` : "";
-    }
-    $("#stCrypto").textContent = "updated";
-    log(`crypto ${sym} = ${price} ${o?.source?"("+o.source+")":""}`, "ok");
+    const r = await fetch(base()+"/api/admin/manual", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ token: token(), key, price })
+    });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok) $("result").value = "Set OK: "+key+" = "+price;
+    else $("result").value = "ERR "+r.status+": "+(j.error||"");
   }catch(e){
-    if(sym==="SLX"){
-      $("#slxVal").textContent = "—";
-      $("#slxSrc").textContent  = " • not available (use manual)";
-    }
-    log(`crypto ${sym} failed ${e}`, "err");
+    $("result").value = "Set failed";
   }
 }
 
-async function getFX(from,to){
+async function clearManual(){
+  const cat = $("cat").value;
+  let key = "";
+  if (cat==="metals") key = $("sym").value;
+  if (cat==="crypto") key = "CRYPTO:"+$("sym").value;
+  if (cat==="fx")     key = "FX:"+$("fxFrom").value+"-"+$("fxTo").value;
+
+  if (!key) return $("result").value = "No key";
   try{
-    const j = await jget(`/api/fx?from=${from}&to=${to}`);
-    const rate = j?.rate ?? j?.value ?? j;
-    $("#fxOut").textContent = fmt(rate);
-    $("#fxSrc").textContent = j?.source ? ` • ${j.source}` : "";
-    $("#stFX").textContent = "updated";
-    log(`fx ${from}/${to} = ${rate} ${j?.source?"("+j.source+")":""}`, "ok");
+    const r = await fetch(base()+"/api/admin/clear", {
+      method:"POST",
+      headers:{"Content-Type":"application/json"},
+      body: JSON.stringify({ token: token(), key })
+    });
+    const j = await r.json().catch(()=>({}));
+    if (r.ok) $("result").value = "Cleared: "+key;
+    else $("result").value = "ERR "+r.status+": "+(j.error||"");
   }catch(e){
-    log(`fx ${from}/${to} failed ${e}`, "err");
+    $("result").value = "Clear failed";
   }
 }
 
-async function getOilGas(asset){
-  // هنحاول /api/oil ثم /api/gas حسب الأصل، ولو مش موجودة هتفضل المانيوال.
-  const map = { WTI:"oil", Brent:"oil", NG:"gas" };
-  const ep = map[asset] || "oil";
-  try{
-    const j = await jget(`/api/${ep}?asset=${asset}`);
-    const price = j?.price ?? j?.value ?? j;
-    $("#ogOut").textContent = fmt(price);
-    $("#ogSrc").textContent = j?.source ? ` • ${j.source}` : "";
-    $("#stOG").textContent  = "updated";
-    log(`${ep} ${asset} = ${price} ${j?.source?"("+j.source+")":""}`, "ok");
-  }catch(e){
-    log(`${ep} ${asset} failed ${e}`, "err");
-  }
-}
-
-/* ========= AUTO LOOP ========= */
-function fmt(x){
-  if(x==null || !isFinite(Number(x))) return "—";
-  const n=Number(x);
-  if(n>=1000) return n.toLocaleString(undefined,{maximumFractionDigits:2});
-  if(n>=1) return n.toLocaleString(undefined,{maximumFractionDigits:3});
-  return n.toLocaleString(undefined,{maximumFractionDigits:6});
-}
-
-let tGold, tCrypto, tMetals, tOG, tFX;
-function startAuto(){
-  clearAuto();
-
-  // gold + silver loop
-  tGold = setInterval(()=> autoOn && refreshMetals(["gold","silver"]), AUTO_INTERVALS.gold_silver*1000);
-  refreshMetals(["gold","silver"]);
-
-  // crypto loop (BTC & ETH كشاهد – و SLX يدوي/ع الطلب)
-  tCrypto = setInterval(async()=>{
-    if(!autoOn) return;
-    await Promise.allSettled([ getCrypto("BTC"), getCrypto("ETH") ]);
-  }, AUTO_INTERVALS.crypto*1000);
-  getCrypto("BTC");
-
-  // metals17 loop (تقيل – مرة يوميًا)
-  tMetals = setInterval(()=> autoOn && refreshMetals(METALS.filter(m=>m!=="gold" && m!=="silver")), AUTO_INTERVALS.metals17*1000);
-
-  // oil/gas loop (لو الاندبوينت موجود)
-  tOG = setInterval(async()=>{
-    if(!autoOn) return;
-    await Promise.allSettled([ getOilGas("WTI"), getOilGas("Brent") ]);
-  }, AUTO_INTERVALS.oil_gas*1000);
-
-  // fx loop (مثال USD/EGP)
-  tFX = setInterval(()=> autoOn && getFX("USD","EGP"), AUTO_INTERVALS.fx*1000);
-}
-
-function clearAuto(){
-  [tGold,tCrypto,tMetals,tOG,tFX].forEach(t=> t && clearInterval(t));
-}
-
-async function doAutoTick(force=false){
-  if(!autoOn && !force) return;
-  await Promise.allSettled([
-    refreshMetals(["gold","silver"]),
-    getCrypto("BTC"),
-    getFX("USD","EGP")
-  ]);
-}
-
-/* ========= BOOT ========= */
-window.addEventListener("DOMContentLoaded", ()=>{
-  startAuto();
-  log("Admin loaded", "ok");
-});
+// ---- BOOT ----
+onCatChange();
+loadAll();
 </script>
 </body>
 </html>
