@@ -1,385 +1,202 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>GoldenPrice Admin</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Admin Control • GoldenPrice</title>
 <style>
-  :root { --bg:#ffffff; --fg:#0b1320; --muted:#6b7280; --card:#f5f7fb; --ok:#16a34a; --bad:#dc2626; --btn:#111827; --btnfg:#fff; --link:#2563eb; }
-  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background:var(--bg); color:var(--fg); }
-  header { padding:16px 20px; border-bottom:1px solid #e5e7eb; display:flex; align-items:center; gap:12px; }
-  header h1 { margin:0; font-size:18px; font-weight:700; letter-spacing:.2px; }
-  header .badge { font-size:12px; padding:4px 8px; border-radius:999px; background:#eef2ff; color:#3730a3; }
-  main { padding:18px; max-width:1100px; margin:0 auto; display:grid; gap:16px; }
-  .row { display:grid; gap:16px; grid-template-columns: repeat(12,1fr); }
-  .card { grid-column: span 12; background:var(--card); border:1px solid #e5e7eb; border-radius:12px; padding:14px; }
-  @media(min-width:900px){
-    .card.half { grid-column: span 6; }
-    .card.third{ grid-column: span 4; }
-  }
-  h2 { margin:0 0 8px; font-size:16px; }
-  .muted { color:var(--muted); font-size:12px; }
-  .kv { display:grid; grid-template-columns: 170px 1fr auto; gap:8px; align-items:center; margin:8px 0; }
-  select, input[type="text"], input[type="number"] { padding:8px 10px; border:1px solid #d1d5db; border-radius:8px; width:100%; background:#fff; }
-  .btn { padding:8px 12px; border:0; border-radius:8px; background:var(--btn); color:var(--btnfg); cursor:pointer; font-weight:600; }
-  .btn.ghost { background:#fff; color:#111827; border:1px solid #d1d5db; }
-  .btn.warn { background:#b91c1c; }
-  .grid { display:grid; gap:8px; }
-  .list { display:grid; gap:6px; }
-  .item { display:flex; gap:8px; align-items:center; justify-content:space-between; padding:8px 10px; background:#fff; border:1px solid #e5e7eb; border-radius:8px; }
-  .pill { font-size:12px; padding:2px 8px; border-radius:999px; }
-  .pill.ok { background:#ecfdf5; color:#065f46; }
-  .pill.bad{ background:#fef2f2; color:#991b1b; }
-  .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
-  a { color:var(--link); text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .links { display:flex; gap:10px; flex-wrap:wrap; }
-  footer { padding:16px 20px; color:var(--muted); font-size:12px; }
+ body{font-family:system-ui,Arial,sans-serif;margin:0;background:#fff;color:#111}
+ header{position:sticky;top:0;background:#f7f7f7;border-bottom:1px solid #e5e5e5;padding:10px 16px;z-index:10}
+ .wrap{max-width:1100px;margin:0 auto;padding:16px}
+ .row{display:flex;flex-wrap:wrap;gap:12px}
+ .card{border:1px solid #e5e5e5;border-radius:10px;padding:14px;flex:1;min-width:240px;background:#fff}
+ h1{margin:4px 0;font-size:20px}
+ h2{margin:0 0 12px 0;font-size:16px}
+ table{width:100%;border-collapse:collapse}
+ th,td{padding:8px;border-bottom:1px solid #eee;font-size:14px}
+ th{text-align:left;background:#fafafa}
+ .ok{color:#0a7d00;font-weight:600}
+ .err{color:#b00020;font-weight:600}
+ .btn{cursor:pointer;border:1px solid #ccc;background:#fafafa;border-radius:6px;padding:6px 10px}
+ .btn:hover{background:#f0f0f0}
+ input,select{padding:6px 8px;border:1px solid #ccc;border-radius:6px;width:100%}
+ .grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}
+ @media(max-width:900px){.grid{grid-template-columns:1fr}}
+ .muted{color:#777;font-size:12px}
+ .pill{font-size:12px;border:1px solid #ddd;border-radius:999px;padding:2px 8px}
+ .footer{color:#777;padding:12px;text-align:center;font-size:12px}
 </style>
 </head>
 <body>
 <header>
-  <h1>GoldenPrice Admin</h1>
-  <span class="badge">Light mode</span>
+  <div class="wrap">
+    <div class="row" style="align-items:center;justify-content:space-between">
+      <h1>Admin Control</h1>
+      <div>
+        <button id="btnRefresh" class="btn">Refresh Status</button>
+        <button id="btnClear" class="btn">Clear Cache</button>
+      </div>
+    </div>
+  </div>
 </header>
 
-<main>
-
-  <!-- CONFIG -->
-  <div class="card">
-    <h2>Config</h2>
-    <div class="grid" style="max-width:900px">
-      <div class="kv">
-        <div>Backend Base URL</div>
-        <input id="baseUrl" type="text" value="https://goldenprice-backend.onrender.com" />
-        <button class="btn ghost" onclick="ping()">Ping</button>
-      </div>
-      <div class="kv">
-        <div>Admin Token</div>
-        <input id="adminToken" type="text" value="ADMIN_12345" />
-        <button class="btn ghost" onclick="loadAll()">Refresh All</button>
-      </div>
-    </div>
-    <div class="muted">تأكد أن هذا هو نفس التوكن المضبوط في السيرفر.</div>
-  </div>
-
-  <!-- QUICK STATUS -->
+<div class="wrap">
   <div class="row">
-    <div class="card half">
-      <h2>Live Status</h2>
-      <div id="statusBox" class="list"></div>
-      <div class="links" style="margin-top:8px">
-        <a href="#" onclick="openTest('gold')">Test Gold API</a>
-        <a href="#" onclick="openTest('silver')">Test Silver API</a>
-        <a href="#" onclick="openTest('crypto')">Test Crypto API</a>
-        <a href="#" onclick="openTest('fx')">Test FX API</a>
-      </div>
+    <div class="card">
+      <h2>Snapshot</h2>
+      <div id="dash" class="grid"></div>
+      <div class="muted" id="lastUpdated"></div>
     </div>
-    <div class="card half">
-      <h2>Logs</h2>
-      <div class="muted">آخر 50 سطر</div>
-      <pre id="logs" class="mono" style="background:#111827;color:#e5e7eb;padding:10px;border-radius:8px; height:180px; overflow:auto;">(loading...)</pre>
-    </div>
-  </div>
-
-  <!-- MANUAL UPDATE -->
-  <div class="card">
-    <h2>Manual Set / Clear</h2>
-    <div class="grid" style="max-width:1000px">
-      <div class="kv">
-        <div>Category</div>
-        <select id="cat" onchange="onCatChange()">
-          <option value="metals">Metals</option>
-          <option value="crypto">Crypto</option>
-          <option value="fx">Forex</option>
+    <div class="card">
+      <h2>Manual Update</h2>
+      <div class="row" style="gap:8px">
+        <select id="typeSel" style="max-width:150px">
+          <option value="gold">gold</option>
+          <option value="silver">silver</option>
+          <option value="metal">metal</option>
+          <option value="energy">energy</option>
+          <option value="fx">fx</option>
+          <option value="crypto">crypto</option>
         </select>
-        <span></span>
+        <select id="symbolSel" style="max-width:220px"></select>
+        <input id="valueInp" type="number" step="0.0001" placeholder="USD value"/>
       </div>
-
-      <div class="kv">
-        <div>Symbol / Key</div>
-        <select id="sym"></select>
-        <button class="btn ghost" onclick="showCurrent()">Show Current</button>
+      <div class="row" style="margin-top:8px">
+        <input id="tokenInp" type="text" placeholder="Admin Token (default ADMIN_12345)" />
+        <button id="btnSet" class="btn">Set Manual</button>
       </div>
-
-      <div id="fxRow" class="kv" style="display:none">
-        <div>FX Pair</div>
-        <div style="display:flex; gap:8px">
-          <select id="fxFrom"></select>
-          <select id="fxTo"></select>
-        </div>
-        <span></span>
-      </div>
-
-      <div class="kv">
-        <div>Manual Price (USD)</div>
-        <input id="price" type="number" step="0.0001" placeholder="e.g. 2350.75" />
-        <div style="display:flex; gap:8px">
-          <button class="btn" onclick="setManual()">Set</button>
-          <button class="btn warn" onclick="clearManual()">Clear</button>
-        </div>
-      </div>
-
-      <div class="kv">
-        <div>Result</div>
-        <input id="result" type="text" readonly />
-        <span></span>
-      </div>
+      <div class="muted">Manual values are cached for 24h (source=MANUAL).</div>
     </div>
   </div>
 
-  <!-- QUICK TEST LINKS -->
-  <div class="card">
-    <h2>Quick Test Links</h2>
-    <div class="links">
-      <a id="lnkGold"   target="_blank">/api/metals?list=gold</a>
-      <a id="lnkSilver" target="_blank">/api/metals?list=silver</a>
-      <a id="lnkMetals" target="_blank">/api/metals?list=copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium,platinum,palladium</a>
-      <a id="lnkCrypto" target="_blank">/api/crypto?list=BTC,ETH,SLX</a>
-      <a id="lnkFX"     target="_blank">/api/fx?from=USD&to=EGP</a>
-    </div>
+  <div class="card" style="margin-top:12px">
+    <h2>All Items</h2>
+    <table>
+      <thead>
+        <tr><th>Type</th><th>Symbol</th><th>Current</th><th>Source</th><th>Updated</th><th>New Value</th><th>Action</th></tr>
+      </thead>
+      <tbody id="tbl"></tbody>
+    </table>
   </div>
 
-</main>
-
-<footer>
-  GoldenPrice Admin • Prices in USD • Auto + Manual controls
-</footer>
+  <div class="footer">© GoldenPrice Admin</div>
+</div>
 
 <script>
-const $ = (id)=>document.getElementById(id);
+const $ = (s)=>document.querySelector(s);
+const $$ = (s)=>document.querySelectorAll(s);
 
-// ---- CONFIG ----
-function base(){ return $("baseUrl").value.replace(/\/+$/,''); }
-function token(){ return $("adminToken").value.trim(); }
+const symbols = {
+  gold:["USD"],
+  silver:["USD"],
+  metal:["gold","silver","platinum","palladium","copper","aluminum","nickel","zinc","lead","tin","iron","steel","cobalt","lithium","uranium"],
+  energy:["wti","brent","gas"],
+  fx:["USD:EGP","USD:EUR","EUR:USD","USD:SAR","USD:TRY"],
+  crypto:["BTC","ETH","SOL","XRP","BNB","SLX"]
+};
 
-// ---- CATALOGS ----
-const METALS = [
-  "gold","silver","platinum","palladium",
-  "copper","aluminum","nickel","zinc","lead","tin",
-  "iron","steel","cobalt","lithium","uranium"
-];
-
-const CRYPTOS = [
-  "BTC","ETH","SLX" // SLX = SilverX
-];
-
-// Common top FX (add more if you like)
-const FX_CURRS = ["USD","EUR","GBP","JPY","CHF","CAD","AUD","NZD","CNY","SAR","AED","EGP","TRY"];
-
-// ---- UI INIT ----
-function fillSelect(sel, arr){
-  sel.innerHTML = "";
-  arr.forEach(x=>{
-    const o=document.createElement("option");
-    o.value=x; o.textContent=x;
-    sel.appendChild(o);
+function fillSymbolSel(){
+  const type = $("#typeSel").value;
+  const sel = $("#symbolSel");
+  sel.innerHTML="";
+  symbols[type].forEach(s=>{
+    const opt=document.createElement("option");
+    opt.value=s; opt.textContent=s;
+    sel.appendChild(opt);
   });
 }
 
-function onCatChange(){
-  const cat = $("cat").value;
-  $("fxRow").style.display = cat==="fx" ? "" : "none";
-  if (cat==="metals") fillSelect($("sym"), METALS);
-  if (cat==="crypto") fillSelect($("sym"), CRYPTOS);
-  if (cat==="fx") {
-    fillSelect($("fxFrom"), FX_CURRS);
-    fillSelect($("fxTo"), FX_CURRS);
-    $("fxFrom").value="USD";
-    $("fxTo").value="EGP";
-    $("sym").innerHTML = "";
-    const o=document.createElement("option");
-    o.value="FX_PAIR"; o.textContent="(via pair below)";
-    $("sym").appendChild(o);
-  }
-}
-
-async function ping(){
-  try{
-    const r = await fetch(base()+"/api/health");
-    $("result").value = r.ok? "OK /api/health" : ("HTTP "+r.status);
-  }catch(e){ $("result").value = "Ping failed"; }
-}
-
-function openTest(which){
-  let url = "";
-  if (which==="gold")   url = base()+"/api/metals?list=gold";
-  if (which==="silver") url = base()+"/api/metals?list=silver";
-  if (which==="crypto") url = base()+"/api/crypto?list=BTC,ETH,SLX";
-  if (which==="fx")     url = base()+"/api/fx?from=USD&to=EGP";
-  if (url) window.open(url, "_blank");
-}
+$("#typeSel").addEventListener("change", fillSymbolSel);
+fillSymbolSel();
 
 async function loadStatus(){
-  const box = $("statusBox");
-  box.innerHTML = "(loading...)";
-  try{
-    // quick parallel probes
-    const [m1,m2,c1,fx] = await Promise.allSettled([
-      fetch(base()+"/api/metals?list=gold").then(r=>r.json()),
-      fetch(base()+"/api/metals?list=silver").then(r=>r.json()),
-      fetch(base()+"/api/crypto?list=BTC,ETH").then(r=>r.json()),
-      fetch(base()+"/api/fx?from=USD&to=EGP").then(r=>r.json())
-    ]);
-    const items = [];
-    items.push(renderStatus("Gold",   m1));
-    items.push(renderStatus("Silver", m2));
-    items.push(renderStatus("Crypto", c1));
-    items.push(renderStatus("FX USD→EGP", fx));
-    box.innerHTML = "";
-    items.forEach(el=> box.appendChild(el));
-  }catch(e){
-    box.innerHTML = "<div class='muted'>Status check failed.</div>";
-  }
-}
+  $("#dash").innerHTML = "";
+  $("#tbl").innerHTML = "";
+  const r = await fetch("/api/status");
+  const j = await r.json();
 
-function renderStatus(title, settled){
-  const div = document.createElement("div");
-  div.className = "item";
-  const left = document.createElement("div");
-  left.innerHTML = `<strong>${title}</strong>`;
-  const right = document.createElement("div");
-  const ok = (settled.status==="fulfilled" && !settled.value.error);
-  const pill = document.createElement("span");
-  pill.className = "pill " + (ok? "ok":"bad");
-  pill.textContent = ok? "OK":"ERR";
-  right.appendChild(pill);
-  if (ok) {
-    const small = document.createElement("span");
-    small.className="muted";
-    small.style.marginLeft="8px";
-    small.textContent = shortValue(settled.value);
-    right.appendChild(small);
-  } else {
-    const small = document.createElement("span");
-    small.className="muted";
-    small.style.marginLeft="8px";
-    small.textContent = settled?.value?.error ? String(settled.value.error).slice(0,80) : "(failed)";
-    right.appendChild(small);
-  }
-  div.appendChild(left); div.appendChild(right);
-  return div;
-}
-
-function shortValue(v){
-  try{
-    // try gold or silver first
-    if (v.gold?.price)   return `XAU ${Number(v.gold.price).toFixed(2)} USD`;
-    if (v.silver?.price) return `XAG ${Number(v.silver.price).toFixed(2)} USD`;
-    // crypto
-    const k = Object.keys(v||{})[0];
-    if (k && v[k]?.price) return `${k} ${Number(v[k].price).toFixed(2)} USD`;
-    // fx
-    if (v.rate) return `rate ${Number(v.rate).toFixed(4)}`;
-  }catch{}
-  return "";
-}
-
-async function loadLogs(){
-  try{
-    const u = base()+"/api/admin/logs?limit=50&token="+encodeURIComponent(token());
-    const r = await fetch(u);
-    if (!r.ok) throw new Error("HTTP "+r.status);
-    const t = await r.text();
-    $("logs").textContent = t || "(empty)";
-  }catch(e){
-    $("logs").textContent = "(failed to load logs)";
-  }
-}
-
-function refreshLinks(){
-  $("lnkGold").href   = base()+"/api/metals?list=gold";
-  $("lnkSilver").href = base()+"/api/metals?list=silver";
-  $("lnkMetals").href = base()+"/api/metals?list=copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium,platinum,palladium";
-  $("lnkCrypto").href = base()+"/api/crypto?list=BTC,ETH,SLX";
-  $("lnkFX").href     = base()+"/api/fx?from=USD&to=EGP";
-}
-
-async function loadAll(){
-  refreshLinks();
-  onCatChange();
-  await Promise.all([loadStatus(), loadLogs()]);
-}
-
-// ---- SHOW CURRENT ----
-async function showCurrent(){
-  const cat = $("cat").value;
-  try{
-    if (cat==="metals"){
-      const s = $("sym").value;
-      const r = await fetch(base()+"/api/metals?list="+encodeURIComponent(s));
-      const j = await r.json();
-      if (j[s]?.price) $("result").value = `${s}: ${j[s].price} USD (src ${j[s].source||"?"})`;
-      else $("result").value = j.error ? "ERR: "+j.error : "No price";
-    } else if (cat==="crypto"){
-      const s = $("sym").value;
-      const r = await fetch(base()+"/api/crypto?list="+encodeURIComponent(s));
-      const j = await r.json();
-      if (j[s]?.price) $("result").value = `${s}: ${j[s].price} USD (src ${j[s].source||"?"})`;
-      else $("result").value = j.error ? "ERR: "+j.error : "No price";
-    } else if (cat==="fx"){
-      const from=$("fxFrom").value, to=$("fxTo").value;
-      const r = await fetch(base()+`/api/fx?from=${from}&to=${to}`);
-      const j = await r.json();
-      if (j.rate) $("result").value = `${from}->${to}: ${j.rate} (${j.source||"?"})`;
-      else $("result").value = j.error ? "ERR: "+j.error : "No rate";
+  const keys = Object.keys(j).sort();
+  const dashItems = [
+    {k:"gold:USD", label:"Gold"},
+    {k:"silver:USD", label:"Silver"},
+    {k:"crypto:BTC", label:"BTC"},
+    {k:"crypto:ETH", label:"ETH"},
+    {k:"fx:USD:EGP", label:"USD/EGP"},
+    {k:"energy:wti", label:"WTI"},
+  ];
+  dashItems.forEach(d=>{
+    const v = j[d.k];
+    const div = document.createElement("div");
+    div.className="card";
+    if(!v) { div.innerHTML = `<div class="muted">${d.label}: n/a</div>`; }
+    else{
+      const val = v.value?Number(v.value).toFixed(4):"n/a";
+      const cls = v.value?"ok":"err";
+      div.innerHTML = `<div><b>${d.label}</b></div>
+        <div class="${cls}" style="font-size:18px;margin:4px 0">${val}</div>
+        <div class="muted">${v.src||""}</div>`;
     }
-  }catch(e){
-    $("result").value = "Failed to fetch";
+    $("#dash").appendChild(div);
+  });
+
+  // table
+  for(const k of keys){
+    const tr = document.createElement("tr");
+    const v = j[k];
+    const [type, ...rest] = k.split(":");
+    const symbol = rest.join(":");
+    const val = v?.value?Number(v.value).toFixed(6):"—";
+    const src = v?.src || "—";
+    const ts  = v?.ts ? new Date(v.ts).toLocaleString() : "—";
+    tr.innerHTML = `
+      <td>${type}</td>
+      <td>${symbol}</td>
+      <td>${val}</td>
+      <td><span class="pill">${src}</span></td>
+      <td class="muted">${ts}</td>
+      <td><input type="number" step="0.0001" style="width:130px"/></td>
+      <td><button class="btn">Set</button></td>
+    `;
+    const btn = tr.querySelector("button");
+    btn.onclick = async ()=>{
+      const nv = Number(tr.querySelector("input").value);
+      if(!nv) return alert("put a number");
+      const token = $("#tokenInp").value || "ADMIN_12345";
+      const body = { type, symbol, value: nv, token };
+      const rr = await fetch(`/api/admin/manual?token=${encodeURIComponent(token)}`,{
+        method:"POST", headers:{'content-type':'application/json'}, body: JSON.stringify(body)
+      });
+      const jj = await rr.json();
+      if(jj.ok) { alert("Saved."); loadStatus(); } else alert(jj.error||"error");
+    };
+    $("#tbl").appendChild(tr);
   }
+
+  $("#lastUpdated").textContent = "Updated: "+ new Date().toLocaleTimeString();
 }
 
-// ---- MANUAL SET/CLEAR ----
-async function setManual(){
-  const cat = $("cat").value;
-  let key = "";
-  if (cat==="metals") key = $("sym").value;             // e.g. gold
-  if (cat==="crypto") key = "CRYPTO:"+$("sym").value;   // e.g. CRYPTO:BTC
-  if (cat==="fx")     key = "FX:"+$("fxFrom").value+"-"+$("fxTo").value; // FX:USD-EGP
+$("#btnRefresh").onclick = loadStatus;
+$("#btnClear").onclick = async ()=>{
+  const token = $("#tokenInp").value || "ADMIN_12345";
+  const r = await fetch(`/api/admin/clear-cache?token=${encodeURIComponent(token)}`, {method:"POST"});
+  const j = await r.json();
+  if(j.ok) { alert("Cache cleared."); loadStatus(); } else alert(j.error||"error");
+};
+$("#btnSet").onclick = async ()=>{
+  const type = $("#typeSel").value;
+  const symbol = $("#symbolSel").value;
+  const value = Number($("#valueInp").value);
+  const token = $("#tokenInp").value || "ADMIN_12345";
+  if(!value) return alert("put a number");
+  const r = await fetch(`/api/admin/manual?token=${encodeURIComponent(token)}`,{
+    method:"POST", headers:{'content-type':'application/json'},
+    body: JSON.stringify({type, symbol, value, token})
+  });
+  const j = await r.json();
+  if(j.ok){ alert("Saved."); loadStatus(); } else alert(j.error||"error");
+};
 
-  const price = Number($("price").value);
-  if (!key) return $("result").value = "No key";
-  if (!Number.isFinite(price) || price<=0) return $("result").value="Invalid price";
-
-  try{
-    const r = await fetch(base()+"/api/admin/manual", {
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({ token: token(), key, price })
-    });
-    const j = await r.json().catch(()=>({}));
-    if (r.ok) $("result").value = "Set OK: "+key+" = "+price;
-    else $("result").value = "ERR "+r.status+": "+(j.error||"");
-  }catch(e){
-    $("result").value = "Set failed";
-  }
-}
-
-async function clearManual(){
-  const cat = $("cat").value;
-  let key = "";
-  if (cat==="metals") key = $("sym").value;
-  if (cat==="crypto") key = "CRYPTO:"+$("sym").value;
-  if (cat==="fx")     key = "FX:"+$("fxFrom").value+"-"+$("fxTo").value;
-
-  if (!key) return $("result").value = "No key";
-  try{
-    const r = await fetch(base()+"/api/admin/clear", {
-      method:"POST",
-      headers:{"Content-Type":"application/json"},
-      body: JSON.stringify({ token: token(), key })
-    });
-    const j = await r.json().catch(()=>({}));
-    if (r.ok) $("result").value = "Cleared: "+key;
-    else $("result").value = "ERR "+r.status+": "+(j.error||"");
-  }catch(e){
-    $("result").value = "Clear failed";
-  }
-}
-
-// ---- BOOT ----
-onCatChange();
-loadAll();
+loadStatus();
 </script>
 </body>
 </html>
