@@ -1,159 +1,230 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>GoldenPrice Admin Panel</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>GoldenPrice — Admin</title>
 <style>
-  body {
-    font-family: Arial, sans-serif;
-    background: #f5f7fa;
-    color: #333;
-    margin: 0;
-    padding: 20px;
-  }
-  h1 {
-    text-align: center;
-    color: #0056b3;
-  }
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    background: white;
-  }
-  th, td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-  }
-  th {
-    background: #e6f0ff;
-  }
-  tr.ok { background: #eaffea; }
-  tr.err { background: #ffeaea; }
-  tr.manual { background: #fff7e6; }
-  button {
-    padding: 6px 12px;
-    margin: 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-  }
-  button.update { background: #007bff; color: white; }
-  button.restart { background: #dc3545; color: white; }
-  button:hover { opacity: 0.8; }
-  #log {
-    background: #000;
-    color: #0f0;
-    padding: 10px;
-    height: 150px;
-    overflow-y: scroll;
-    font-size: 12px;
-  }
+  :root { --bg:#fff; --fg:#111; --muted:#888; --ok:#1a7f37; --err:#b91c1c; --card:#f6f7f8; --btn:#2563eb; }
+  *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--fg)}
+  header{padding:16px 20px;border-bottom:1px solid #eee;position:sticky;top:0;background:#fff;z-index:2}
+  .wrap{max-width:900px;margin:0 auto;padding:16px}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .card{background:var(--card);border-radius:10px;padding:14px}
+  input,select,button{font-size:16px;padding:10px;border-radius:8px;border:1px solid #ddd}
+  button{cursor:pointer;background:var(--btn);color:#fff;border:none}
+  .grid{display:grid;grid-template-columns:1fr auto;gap:8px;align-items:center}
+  .pill{padding:2px 8px;border-radius:999px;font-size:12px}
+  .ok{background:#e6f4ea;color:var(--ok)}
+  .err{background:#fde8e8;color:var(--err)}
+  .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;white-space:pre; overflow:auto; max-height:340px}
+  .small{color:var(--muted);font-size:12px}
+  .section{margin:18px 0}
 </style>
 </head>
 <body>
+<header>
+  <div class="row" style="justify-content:space-between;align-items:center">
+    <div><strong>Admin Panel</strong></div>
+    <div class="row">
+      <input id="base" style="width:260px" placeholder="https://your-backend.onrender.com"/>
+      <button id="pingBtn">Ping</button>
+    </div>
+  </div>
+</header>
 
-<h1>GoldenPrice Admin Panel</h1>
-<p style="text-align:center;">Manage & monitor all price sources (Auto + Manual)</p>
+<div class="wrap">
+  <div class="row">
+    <div class="card" style="flex:1;min-width:260px">
+      <div class="section">
+        <div class="small">Admin Token</div>
+        <input id="token" placeholder="ADMIN_12345"/>
+      </div>
 
-<table id="dataTable">
-  <thead>
-    <tr>
-      <th>Category</th>
-      <th>Symbol</th>
-      <th>Price (USD)</th>
-      <th>Source</th>
-      <th>Status</th>
-      <th>Last Update</th>
-      <th>Set Manual</th>
-      <th>Restart Cache</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+      <div class="section">
+        <div class="small">Live Status</div>
+        <div id="live" class="grid"></div>
+      </div>
 
-<h3>Log Viewer</h3>
-<div id="log">Console Log Output...</div>
+      <div class="section">
+        <div class="grid">
+          <a id="tGold"   href="#" target="_blank">Test Gold API</a> <span></span>
+          <a id="tSilver" href="#" target="_blank">Test Silver API</a> <span></span>
+          <a id="tBTC"    href="#" target="_blank">Test Crypto API</a> <span></span>
+          <a id="tFX"     href="#" target="_blank">Test FX API</a> <span></span>
+          <a id="tMetals" href="#" target="_blank">Test Metals API</a> <span></span>
+          <a id="tOil"    href="#" target="_blank">Test Oil/Gas API</a> <span></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" style="flex:1;min-width:260px">
+      <div class="section"><div class="small">Quick View</div><div id="quick"></div></div>
+      <div class="section">
+        <button id="refreshAll">Update All Now</button>
+        <span class="small">— rotates all sources (no token needed).</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card section">
+    <div class="small" style="margin-bottom:8px">Manual Update</div>
+    <div class="row">
+      <select id="cat">
+        <option>Gold</option><option>Silver</option>
+        <option>Crypto</option>
+        <option>Metals</option>
+        <option>OilGas</option>
+        <option>FX</option>
+      </select>
+      <select id="sym" style="min-width:160px"></select>
+      <input id="price" placeholder="USD / Rate e.g. 2375.50"/>
+      <button id="setBtn">Set Manual</button>
+      <button id="clrBtn" style="background:#6b7280">Clear Manual</button>
+    </div>
+    <div class="small">For FX, symbol key format is <b>USD:EGP</b>. (Choose from dropdown once loaded.)</div>
+  </div>
+
+  <div class="card section">
+    <div class="small">Log Viewer (last 200)</div>
+    <div id="log" class="mono"></div>
+  </div>
+
+  <div class="card section">
+    <div class="small">Quick test links</div>
+    <div id="links" class="grid"></div>
+  </div>
+</div>
 
 <script>
-const API = "https://goldenprice-backend.onrender.com";
-const TOKEN = "ADMIN_12345";
+const $ = sel => document.querySelector(sel);
+const api = (p, opt={}) => fetch(base()+p, opt).then(r=>r.json());
+const base = () => ($('#base').value || location.origin).replace(/\/$/,'');
+const tok = () => $('#token').value.trim();
 
-const categories = {
-  gold: ["XAU"],
-  silver: ["XAG"],
-  crypto: ["BTC", "ETH", "SLX"],
-  metals: ["copper", "platinum"],
-  energy: ["WTI", "GAS"],
-  forex: ["USD_EGP"]
-};
+function pill(ok){ const s=document.createElement('span'); s.className='pill '+(ok?'ok':'err'); s.textContent=ok?'OK':'ERR'; return s; }
+function line(k,v,ok){ const d=document.createElement('div'); d.textContent=k; const s=pill(ok); const w=document.createElement('div'); w.appendChild(s); return [d,w]; }
 
-async function fetchData() {
-  const tbody = document.querySelector("#dataTable tbody");
-  tbody.innerHTML = "";
-  for (let cat in categories) {
-    for (let sym of categories[cat]) {
-      try {
-        const res = await fetch(`${API}/api/${cat}/${sym}`);
-        const data = await res.json();
-        const tr = document.createElement("tr");
-        if (data.price) tr.className = "ok";
-        else tr.className = "err";
-        tr.innerHTML = `
-          <td>${cat}</td>
-          <td>${sym}</td>
-          <td>${data.price || "—"}</td>
-          <td>${data.source || "—"}</td>
-          <td>${data.price ? "✅ OK" : "❌ Error"}</td>
-          <td>${data.updated || "—"}</td>
-          <td><button class="update" onclick="setManual('${cat}','${sym}')">Set Manual</button></td>
-          <td><button class="restart" onclick="restartCache('${cat}','${sym}')">Restart</button></td>
-        `;
-        tbody.appendChild(tr);
-      } catch (e) {
-        logLine(`Error fetching ${cat}/${sym}`);
-      }
+function setSymOptions(data) {
+  const sel = $('#sym'); sel.innerHTML='';
+  const cat = $('#cat').value.toLowerCase();
+  let arr=[];
+  if (cat==='gold'){arr=['GOLD']}
+  else if (cat==='silver'){arr=['SILVER']}
+  else if (cat==='crypto'){arr=Object.keys(data.crypto||{});}
+  else if (cat==='metals'){arr=Object.keys(data.metals||{});}
+  else if (cat==='oilgas'){arr=Object.keys(data.oilgas||{});}
+  else if (cat==='fx'){arr=Object.keys(data.fx||{});} 
+  arr.forEach(k=>{ const o=document.createElement('option'); o.textContent=k; sel.appendChild(o); });
+}
+
+async function load() {
+  try {
+    const st = await api('/api/status');
+    const quick = [];
+    const loadBuckets = await Promise.all([
+      api('/api/gold'), api('/api/silver'), api('/api/oilgas'), api('/api/metals'), api('/api/crypto/BTC'), api('/api/fx?from=USD&to=EGP')
+    ]).catch(()=>[{}, {}, {}, {}, {}, {}]);
+
+    $('#live').innerHTML='';
+    [['Gold',loadBuckets[0]],['Silver',loadBuckets[1]]].forEach(([k,v])=>{
+      $('#live').append(...line(k, v.usd, !!v.usd));
+    });
+
+    const oil = await api('/api/oilgas').catch(()=>({}));
+    const mets= await api('/api/metals').catch(()=>({}));
+    const btc = await api('/api/crypto/BTC').catch(()=>({}));
+    const fx  = await api('/api/fx?from=USD&to=EGP').catch(()=>({}));
+
+    const qwrap = $('#quick');
+    qwrap.innerHTML='';
+    function row(lbl, item){ 
+      const div=document.createElement('div');
+      div.style.margin='6px 0';
+      const usd=item && item.usd ? Number(item.usd).toLocaleString('en-US') : '—';
+      const src=item && item.source ? item.source : '';
+      const ts = item && item.t ? new Date(item.t).toLocaleString() : '';
+      div.innerHTML = `<strong>${lbl}</strong> ${usd} USD <span class="small">via ${src} ${ts?(' at '+ts):''}</span>`;
+      qwrap.appendChild(div);
     }
+    row('CRYPTO:BTC', btc);
+    row('ENERGY:GAS', oil.GAS);
+    row('ENERGY:WTI', oil.WTI);
+    row('METAL:COPPER', mets.COPPER);
+    row('METAL:GOLD', mets.GOLD);
+    row('METAL:PLATINUM', mets.PLATINUM);
+    row('SILVER', mets.SILVER);
+
+    // links
+    $('#links').innerHTML='';
+    const L = ['/api/gold','/api/silver','/api/crypto/bitcoin','/api/oilgas','/api/metals','/api/status','/api/fx?from=USD&to=EGP'];
+    L.forEach(u=>{
+      const a=document.createElement('a'); a.href=base()+u; a.textContent=u; a.target='_blank';
+      $('#links').appendChild(a); $('#links').appendChild(document.createElement('span'));
+    });
+
+    // logs
+    const lg = await api('/api/logs');
+    $('#log').textContent = (lg.lines||[]).join('\n');
+
+    // symbols for manual
+    const bulk = {crypto: await api('/api/crypto/BTC').then(()=>({})).catch(()=>({})),
+                  metals: await api('/api/metals').catch(()=>({})),
+                  oilgas: await api('/api/oilgas').catch(()=>({})),
+                  fx: await api('/api/status').then(()=>({})).catch(()=>({})) };
+    setSymOptions({crypto: {BTC:1, ETH:1, SLX:1}, metals: await api('/api/metals'), oilgas: oil, fx: {'USD:EGP':1}});
+  } catch(e) {
+    alert('Load failed: '+e.message);
   }
 }
 
-async function setManual(category, symbol) {
-  const newPrice = prompt(`Enter new price for ${symbol}:`);
-  if (!newPrice) return;
-  const res = await fetch(`${API}/api/manual`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ token: TOKEN, category, symbol, price: newPrice })
+$('#cat').addEventListener('change', load);
+
+$('#setBtn').addEventListener('click', async ()=>{
+  const category = $('#cat').value.toLowerCase();
+  const key = $('#sym').value;
+  const usd = $('#price').value;
+  const r = await fetch(base()+'/api/admin/set', {
+    method:'POST',
+    headers:{'Content-Type':'application/json','Authorization':'Bearer '+tok()},
+    body: JSON.stringify({ category, key, usd })
   });
-  const data = await res.json();
-  if (data.success) {
-    logLine(`✅ Manual update: ${category}/${symbol} = ${newPrice}`);
-    fetchData();
-  } else logLine(`❌ Manual update failed for ${category}/${symbol}`);
-}
+  const j = await r.json();
+  if (!r.ok || j.error) alert('ERR: '+(j.error||r.status));
+  await load();
+});
 
-async function restartCache(category, symbol) {
-  const res = await fetch(`${API}/api/restart`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ token: TOKEN, category, symbol })
+$('#clrBtn').addEventListener('click', async ()=>{
+  const category = $('#cat').value.toLowerCase();
+  const key = $('#sym').value;
+  const r = await fetch(base()+'/api/admin/clear', {
+    method:'POST',
+    headers:{'Content-Type':'application/json','Authorization':'Bearer '+tok()},
+    body: JSON.stringify({ category, key })
   });
-  const data = await res.json();
-  logLine(`🔁 Cache cleared for ${category}/${symbol}`);
-  fetchData();
-}
+  await r.json(); await load();
+});
 
-function logLine(msg) {
-  const log = document.querySelector("#log");
-  log.innerHTML += `[${new Date().toLocaleTimeString()}] ${msg}<br>`;
-  log.scrollTop = log.scrollHeight;
-}
+$('#refreshAll').addEventListener('click', async ()=>{
+  await fetch(base()+'/api/updateAll', {method:'POST'}).then(r=>r.json());
+  await load();
+});
 
-fetchData();
-setInterval(fetchData, 60000);
+$('#pingBtn').addEventListener('click', load);
+
+// defaults
+document.addEventListener('DOMContentLoaded', ()=>{
+  $('#base').value = location.origin;
+  $('#token').value = 'ADMIN_12345';
+  // test anchors
+  $('#tGold').href = base()+'/api/gold';
+  $('#tSilver').href = base()+'/api/silver';
+  $('#tBTC').href = base()+'/api/crypto/bitcoin';
+  $('#tFX').href = base()+'/api/fx?from=USD&to=EGP';
+  $('#tMetals').href = base()+'/api/metals';
+  $('#tOil').href = base()+'/api/oilgas';
+  load();
+});
 </script>
-
 </body>
 </html>
