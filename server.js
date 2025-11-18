@@ -24,17 +24,15 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// ----------- CORS FIX -----------
 import cors from "cors";
 
 app.use(cors({
-  origin: "*",                                     // اسمح لكل المواقع
-  methods: ["GET", "POST", "OPTIONS"],             // اسمح بكل الميثودز
-  allowedHeaders: ["Content-Type", "x-admin-token"] // الهيدرز المسموحة
+  origin: "*",
+  methods: ["GET", "POST", "OPTIONS"],
+  allowedHeaders: ["Content-Type", "x-admin-token"]
 }));
 
-app.options("*", cors()); // دعم preflight requests
-// ----------- END CORS -----------
+app.options("*", cors());
 
 // serve admin.html + any static files in root
 app.use(express.static(__dirname));
