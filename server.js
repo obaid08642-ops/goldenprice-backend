@@ -617,28 +617,43 @@ async function updateSilver() {
 }
 
 async function updateCrypto() {
-  let src = SITES && Array.isArray(SITES.crypto) ? SITES.crypto[cache.rotate.crypto % SITES.crypto.length] : null;
+  let src = pickRotate("crypto");
   if (!src) return;
+
   try {
     if (src.startsWith("binancews:")) {
       const btc = wsPrices.get("BTCUSDT");
       const eth = wsPrices.get("ETHUSDT");
       if (btc) put("BTC", btc, "usd", "binancews");
       if (eth) put("ETH", eth, "usd", "binancews");
+
     } else if (src.startsWith("coingecko:")) {
-      const ids = src.split(":")[1];
+      const ids = "bitcoin,ethereum,ripple,cardano,solana";
       const j = await fromCoinGecko(ids);
       if (j.BITCOIN) put("BTC", j.BITCOIN, "usd", "coingecko");
       if (j.ETHEREUM) put("ETH", j.ETHEREUM, "usd", "coingecko");
+      if (j.RIPPLE) put("XRP", j.RIPPLE, "usd", "coingecko");
+      if (j.CARDANO) put("ADA", j.CARDANO, "usd", "coingecko");
+      if (j.SOLANA) put("SOL", j.SOLANA, "usd", "coingecko");
+
     } else if (src.startsWith("coincap:")) {
-      const v1 = await fromCoinCap("bitcoin");
-      put("BTC", v1, "usd", "coincap");
-      const v2 = await fromCoinCap("ethereum");
-      put("ETH", v2, "usd", "coincap");
+      const BTC = await fromCoinCap("bitcoin");
+      const ETH = await fromCoinCap("ethereum");
+      const XRP = await fromCoinCap("ripple");
+      const ADA = await fromCoinCap("cardano");
+      const SOL = await fromCoinCap("solana");
+
+      if (BTC) put("BTC", BTC, "usd", "coincap");
+      if (ETH) put("ETH", ETH, "usd", "coincap");
+      if (XRP) put("XRP", XRP, "usd", "coincap");
+      if (ADA) put("ADA", ADA, "usd", "coincap");
+      if (SOL) put("SOL", SOL, "usd", "coincap");
+
     } else if (src.startsWith("dexscreener:")) {
       const v = await fromDexScreenerByToken(SLX_BSC_TOKEN);
-      put("SLX", v, "usd", "dexscreener");
+      if (v) put("SLX", v, "usd", "dexscreener");
     }
+
     cache.lastUpdate.crypto = now();
     saveCache();
   } catch {}
