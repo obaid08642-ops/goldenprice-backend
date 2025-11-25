@@ -616,6 +616,17 @@ async function updateSilver() {
   } catch {}
 }
 
+// ---------- rotation helpers ----------
+function pickRotate(group) {
+  const list = Array.isArray(SITES[group]) ? SITES[group] : null;
+  if (!list) return null;
+  const idx = (cache.rotate[group] || 0) % list.length;
+  const src = list[idx];
+  cache.rotate[group] = (idx + 1) % list.length;
+  saveCache();
+  return src;
+}
+
 async function updateCrypto() {
   let src = pickRotate("crypto");
   if (!src) return;
