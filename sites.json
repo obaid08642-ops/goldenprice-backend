@@ -22,20 +22,79 @@
     "alphavantage:USD,EGP"
   ],
   "metals": {
-    "platinum":  ["yahoo:XPTUSD=X", "twelvedata:XPT/USD"],
-    "palladium": ["yahoo:XPDUSD=X", "twelvedata:XPD/USD"],
-    "copper":    ["yahoo:HG=F"],
-    "aluminum":  ["yahoo:ALI=F"],
-    "nickel":    ["yahoo:NID=F"],
-    "zinc":      ["yahoo:MZN=F"],
-    "lead":      ["yahoo:LD=F"],
-    "tin":       ["yahoo:TIN=F"],
-    "iron":      ["yahoo:TIO=F"],
-    "steel":     ["yahoo:STL=F"],
-    "cobalt":    ["yahoo:CO=F"],
-    "lithium":   ["yahoo:LIT=F"],
-    "uranium":   ["yahoo:UX=F"]
-  },
+  "zinc": [
+    "scrape:tradingview:zinc",
+    "scrape:investing:zinc",
+    "scrape:tradingeconomics:zinc",
+    "scrape:fxnewstoday:zinc",
+    "scrape:dailyforex:zinc",
+    "scrape:arincen:zinc",
+    "scrape:bloomberg:zinc",
+    "scrape:marketwatch:zinc",
+    "scrape:goldmaker:zinc",
+    "scrape:kitco:zinc"
+  ],
+  "lead": [
+    "scrape:tradingview:lead",
+    "scrape:investing:lead",
+    "scrape:tradingeconomics:lead",
+    "scrape:fxnewstoday:lead",
+    "scrape:dailyforex:lead",
+    "scrape:arincen:lead",
+    "scrape:bloomberg:lead",
+    "scrape:marketwatch:lead",
+    "scrape:goldmaker:lead",
+    "scrape:kitco:lead"
+  ],
+  "platinum": [
+    "scrape:tradingview:platinum",
+    "scrape:investing:platinum",
+    "scrape:tradingeconomics:platinum",
+    "scrape:fxnewstoday:platinum",
+    "scrape:dailyforex:platinum",
+    "scrape:arincen:platinum",
+    "scrape:bloomberg:platinum",
+    "scrape:marketwatch:platinum",
+    "scrape:goldmaker:platinum",
+    "scrape:kitco:platinum"
+  ],
+  "palladium": [
+    "scrape:tradingview:palladium",
+    "scrape:investing:palladium",
+    "scrape:tradingeconomics:palladium",
+    "scrape:fxnewstoday:palladium",
+    "scrape:dailyforex:palladium",
+    "scrape:arincen:palladium",
+    "scrape:bloomberg:palladium",
+    "scrape:marketwatch:palladium",
+    "scrape:goldmaker:palladium",
+    "scrape:kitco:palladium"
+  ],
+  "cobalt": [
+    "scrape:tradingview:cobalt",
+    "scrape:investing:cobalt",
+    "scrape:tradingeconomics:cobalt",
+    "scrape:fxnewstoday:cobalt",
+    "scrape:dailyforex:cobalt",
+    "scrape:arincen:cobalt",
+    "scrape:bloomberg:cobalt",
+    "scrape:marketwatch:cobalt",
+    "scrape:goldmaker:cobalt",
+    "scrape:kitco:cobalt"
+  ],
+  "nickel": [
+    "scrape:tradingview:nickel",
+    "scrape:investing:nickel",
+    "scrape:tradingeconomics:nickel",
+    "scrape:fxnewstoday:nickel",
+    "scrape:dailyforex:nickel",
+    "scrape:arincen:nickel",
+    "scrape:bloomberg:nickel",
+    "scrape:marketwatch:nickel",
+    "scrape:goldmaker:nickel",
+    "scrape:kitco:nickel"
+  ]
+}
   "energy": {
     "wti":   ["alphavantage:WTI", "yahoo:CL=F"],
     "brent": ["alphavantage:BRENT", "yahoo:BRN=F"],
