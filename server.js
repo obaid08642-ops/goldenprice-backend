@@ -643,7 +643,6 @@ updateGold();
 updateSilver();
 updateCrypto();
 updateFX("USD", "EGP");
-updateMetals();
 updateEnergy();
 
 // ---------- history / chart / change endpoints ----------
