@@ -631,7 +631,6 @@ setInterval(() => {
 }, 210 * 1000); // 3.5 minutes
 
 setInterval(() => updateFX("USD", "EGP"), 2 * 60 * 60 * 1000); // 2 hours
-setInterval(() => updateMetals(), 3 * 60 * 60 * 1000); // 3 hours (original generic metals)
 setInterval(() => updateEnergy(), 5 * 60 * 60 * 1000); // 5 hours
 
 // start new loops
