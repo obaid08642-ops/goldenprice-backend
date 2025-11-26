@@ -94,7 +94,7 @@
     "scrape:goldmaker:nickel",
     "scrape:kitco:nickel"
   ]
-}
+},
   "energy": {
     "wti":   ["alphavantage:WTI", "yahoo:CL=F"],
     "brent": ["alphavantage:BRENT", "yahoo:BRN=F"],
