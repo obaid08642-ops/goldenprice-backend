@@ -32,7 +32,8 @@
       "scrape:bloomberg:zinc",
       "scrape:marketwatch:zinc",
       "scrape:goldmaker:zinc",
-      "scrape:kitco:zinc"
+      "scrape:kitco:zinc",
+      "scrape:yahoo:zinc"
     ],
     "lead": [
       "scrape:tradingview:lead",
@@ -44,7 +45,8 @@
       "scrape:bloomberg:lead",
       "scrape:marketwatch:lead",
       "scrape:goldmaker:lead",
-      "scrape:kitco:lead"
+      "scrape:kitco:lead",
+      "scrape:yahoo:lead"
     ],
     "platinum": [
       "scrape:tradingview:platinum",
@@ -56,7 +58,8 @@
       "scrape:bloomberg:platinum",
       "scrape:marketwatch:platinum",
       "scrape:goldmaker:platinum",
-      "scrape:kitco:platinum"
+      "scrape:kitco:platinum",
+      "scrape:yahoo:platinum"
     ],
     "palladium": [
       "scrape:tradingview:palladium",
@@ -68,7 +71,8 @@
       "scrape:bloomberg:palladium",
       "scrape:marketwatch:palladium",
       "scrape:goldmaker:palladium",
-      "scrape:kitco:palladium"
+      "scrape:kitco:palladium",
+      "scrape:yahoo:palladium"
     ],
     "cobalt": [
       "scrape:tradingview:cobalt",
@@ -80,7 +84,8 @@
       "scrape:bloomberg:cobalt",
       "scrape:marketwatch:cobalt",
       "scrape:goldmaker:cobalt",
-      "scrape:kitco:cobalt"
+      "scrape:kitco:cobalt",
+      "scrape:yahoo:cobalt"
     ],
     "nickel": [
       "scrape:tradingview:nickel",
@@ -92,7 +97,8 @@
       "scrape:bloomberg:nickel",
       "scrape:marketwatch:nickel",
       "scrape:goldmaker:nickel",
-      "scrape:kitco:nickel"
+      "scrape:kitco:nickel",
+      "scrape:yahoo:nickel"
     ],
     "copper": [
       "scrape:tradingview:copper",
@@ -104,7 +110,8 @@
       "scrape:bloomberg:copper",
       "scrape:marketwatch:copper",
       "scrape:goldmaker:copper",
-      "scrape:kitco:copper"
+      "scrape:kitco:copper",
+      "scrape:yahoo:copper"
     ],
     "aluminum": [
       "scrape:tradingview:aluminum",
@@ -116,55 +123,8 @@
       "scrape:bloomberg:aluminum",
       "scrape:marketwatch:aluminum",
       "scrape:goldmaker:aluminum",
-      "scrape:kitco:aluminum"
-    ],
-    "tin": [
-      "scrape:tradingview:tin",
-      "scrape:investing:tin",
-      "scrape:tradingeconomics:tin",
-      "scrape:fxnewstoday:tin",
-      "scrape:dailyforex:tin",
-      "scrape:arincen:tin",
-      "scrape:bloomberg:tin",
-      "scrape:marketwatch:tin",
-      "scrape:goldmaker:tin",
-      "scrape:kitco:tin"
-    ],
-    "iron": [
-      "scrape:tradingview:iron",
-      "scrape:investing:iron",
-      "scrape:tradingeconomics:iron",
-      "scrape:fxnewstoday:iron",
-      "scrape:dailyforex:iron",
-      "scrape:arincen:iron",
-      "scrape:bloomberg:iron",
-      "scrape:marketwatch:iron",
-      "scrape:goldmaker:iron",
-      "scrape:kitco:iron"
-    ],
-    "steel": [
-      "scrape:tradingview:steel",
-      "scrape:investing:steel",
-      "scrape:tradingeconomics:steel",
-      "scrape:fxnewstoday:steel",
-      "scrape:dailyforex:steel",
-      "scrape:arincen:steel",
-      "scrape:bloomberg:steel",
-      "scrape:marketwatch:steel",
-      "scrape:goldmaker:steel",
-      "scrape:kitco:steel"
-    ],
-    "lithium": [
-      "scrape:tradingview:lithium",
-      "scrape:investing:lithium",
-      "scrape:tradingeconomics:lithium",
-      "scrape:fxnewstoday:lithium",
-      "scrape:dailyforex:lithium",
-      "scrape:arincen:lithium",
-      "scrape:bloomberg:lithium",
-      "scrape:marketwatch:lithium",
-      "scrape:goldmaker:lithium",
-      "scrape:kitco:lithium"
+      "scrape:kitco:aluminum",
+      "scrape:yahoo:aluminum"
     ],
     "uranium": [
       "scrape:tradingview:uranium",
@@ -176,7 +136,8 @@
       "scrape:bloomberg:uranium",
       "scrape:marketwatch:uranium",
       "scrape:goldmaker:uranium",
-      "scrape:kitco:uranium"
+      "scrape:kitco:uranium",
+      "scrape:yahoo:uranium"
     ]
   },
   "energy": {
