@@ -1,5 +1,4 @@
-// server.js - merged & fixed (SLX loop, silver loop, metals scraping loops, 30-day history + chart/change endpoints)
-// Dependencies: express, node-fetch, cheerio, ws, cors, fs, path
+// server.js - consolidated fixed version
 import express from "express";
 import fetch from "node-fetch";
 import fs from "fs";
@@ -29,31 +28,18 @@ const SLX_PAIR_ADDRESS = process.env.SLX_PAIR_ADDRESS || "0x7c755e961a8d415c4074
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "x-admin-token"],
-  })
-);
+app.use(cors({ origin: "*", methods: ["GET", "POST", "OPTIONS"], allowedHeaders: ["Content-Type", "x-admin-token"] }));
 app.options("*", cors());
 app.use(express.static(__dirname));
 
 // ---------- persisted cache (prices + history) ----------
+const MAX_HISTORY_DAYS = 30;
+
 let cache = {
-  prices: {}, // symbol -> {price, unit, src, t}
-  lastUpdate: {}, // group/symbol -> timestamp
-  rotate: {
-    gold: 0,
-    silver: 0,
-    crypto: 0,
-    fx: 0,
-    slxLoop: 0,
-    silverLoop: 0,
-    metalsLoop: {}, // per-metal index
-  },
-  history: {}, // symbol -> [{date, value}] (daily snapshots up to N days)
+  prices: {},
+  lastUpdate: {},
+  rotate: { gold: 0, silver: 0, crypto: 0, fx: 0, slxLoop: 0, silverLoop: 0, metalsLoop: {} },
+  history: {}
 };
 
 function loadCache() {
@@ -66,49 +52,34 @@ function loadCache() {
       cache.history = cache.history || {};
     }
   } catch (e) {
-    console.error("loadCache error", e.message || e);
+    console.error("loadCache error", e.message);
   }
 }
 function saveCache() {
   try {
     fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2));
   } catch (e) {
-    console.error("saveCache error", e.message || e);
+    console.error("saveCache error", e.message);
   }
 }
 loadCache();
 
-// ---------- sites (rotation plan) ----------
+// ---------- sites (load sites.json if present) ----------
 let SITES = {
-  gold: [
-    "twelvedata:XAU/USD",
-    "yahoo:XAUUSD=X",
-    "kitco:gold",
-    "thestreetgold:gold",
-  ],
+  gold: ["twelvedata:XAU/USD", "yahoo:XAUUSD=X", "kitco:gold", "thestreetgold:gold"],
   silver: ["twelvedata:XAG/USD", "yahoo:XAGUSD=X", "kitco:silver"],
-  crypto: [
-    "binancews:BTCUSDT,ETHUSDT",
-    "coingecko:bitcoin,ethereum",
-    "coincap:bitcoin,ethereum",
-    "dexscreener:SLX",
-  ],
+  crypto: ["binancews:BTCUSDT,ETHUSDT", "coingecko:bitcoin,ethereum", "coincap:bitcoin,ethereum", "dexscreener:SLX"],
   fx: ["exchangeratehost:USD,EGP", "frankfurter:USD,EGP", "alphavantage:USD,EGP"],
-  metals: {}, // override by sites.json (you edited)
-  energy: {
-    wti: ["alphavantage:WTI", "yahoo:CL=F"],
-    brent: ["alphavantage:BRENT", "yahoo:BRN=F"],
-    natgas: ["alphavantage:NATGAS", "yahoo:NG=F"],
-  },
+  metals: {},
+  energy: { wti: ["alphavantage:WTI", "yahoo:CL=F"], brent: ["alphavantage:BRENT", "yahoo:BRN=F"], natgas: ["alphavantage:NATGAS", "yahoo:NG=F"] }
 };
-
 try {
   if (fs.existsSync(SITES_FILE)) {
-    const jtxt = fs.readFileSync(SITES_FILE, "utf-8");
-    SITES = { ...SITES, ...JSON.parse(jtxt) };
+    const j = JSON.parse(fs.readFileSync(SITES_FILE, "utf-8"));
+    SITES = { ...SITES, ...j };
   }
 } catch (e) {
-  console.error("load sites.json error", e.message || e);
+  console.error("load sites.json error", e.message);
 }
 
 // ---------- helpers ----------
@@ -127,42 +98,33 @@ function isValidNumber(n) {
   if (num > 1e12) return false;
   return true;
 }
-function todayISO() {
-  const d = new Date();
-  return d.toISOString().slice(0, 10);
-}
+function todayISO() { return new Date().toISOString().slice(0, 10); }
 
-// put: updates cache.prices and appends daily history (maxDays configurable)
+// put: set price + daily history entry (one per day)
 function put(symbol, price, unit = "usd", src = "unknown") {
   try {
     if (!isValidNumber(price)) return;
     const num = Number(price);
     cache.prices[symbol] = { price: num, unit, src, t: now() };
-    // history: append one entry per day (if latest entry date !== today)
     cache.history = cache.history || {};
     const hist = cache.history[symbol] || [];
     const today = todayISO();
     if (!hist.length || hist[hist.length - 1].date !== today) {
       hist.push({ date: today, value: num });
-      // keep only last MAX_DAYS days (default 30)
-      const MAX_DAYS = Number(process.env.HISTORY_DAYS || 30);
-      if (hist.length > MAX_DAYS) hist.splice(0, hist.length - MAX_DAYS);
+      if (hist.length > MAX_HISTORY_DAYS) hist.splice(0, hist.length - MAX_HISTORY_DAYS);
       cache.history[symbol] = hist;
     } else {
-      // replace today's value (one snapshot per day)
       hist[hist.length - 1].value = num;
       cache.history[symbol] = hist;
     }
     saveCache();
   } catch (e) {
-    console.error("put error", e.message || e);
+    console.error("put error", e.message);
   }
 }
-function get(symbol) {
-  return cache.prices[symbol] || null;
-}
+function get(symbol) { return cache.prices[symbol] || null; }
 
-// ---------- fetch helpers ----------
+// fetch helpers
 async function getJSON(url, opts = {}, retries = 1) {
   let lastErr;
   for (let i = 0; i <= retries; i++) {
@@ -192,21 +154,166 @@ async function getText(url, opts = {}, retries = 1) {
   throw lastErr;
 }
 
-// parse numeric candidates from arbitrary page text; returns first plausible number
-function parsePriceCandidates(text, { min = 0.01, max = 1e9 } = {}) {
+// helper: try multiple selectors and heuristics (prefer text with $ or USD)
+function extractNumberFromTextCandidates(text) {
   if (!text || typeof text !== "string") return null;
-  const matches = text.match(/(\d{1,3}(?:[,\d]{0,})?(?:\.\d+)?|\d+\.\d+)/g);
+  // prefer numbers near $ or USD
+  const usdMatch = text.match(/([$]\s?\d{1,3}(?:[,\d]{0,})?(?:\.\d+)?|\d{1,3}(?:[,\d]{0,})?(?:\.\d+)?\s?USD)/i);
+  if (usdMatch) {
+    const cleaned = usdMatch[0].replace(/[^\d.]/g, "");
+    const v = Number(cleaned);
+    if (isValidNumber(v)) return v;
+  }
+  // otherwise find longest decimal-like numbers and pick plausible one
+  const matches = text.match(/(\d{1,3}(?:[,\d]{0,})?(?:\.\d+)?)/g);
   if (!matches) return null;
+  // pick the largest numeric length candidate (heuristic)
+  let best = null;
   for (const m of matches) {
     const cleaned = m.replace(/,/g, "");
     const num = Number(cleaned);
-    if (Number.isFinite(num) && num >= min && num <= max) return num;
+    if (!Number.isFinite(num)) continue;
+    if (!isValidNumber(num)) continue;
+    if (best === null || cleaned.length > String(best).length) best = num;
   }
-  return null;
+  return best;
 }
 
-// ---------- source resolvers ----------
-// TwelveData
+// selector-based scraper: tries an array of selectors, returns number if found
+async function scrapeSelectors(url, selectors = []) {
+  const html = await getText(url, {}, 1);
+  const $ = cheerio.load(html);
+  // try selectors first
+  for (const sel of selectors) {
+    try {
+      const el = $(sel);
+      if (!el || !el.length) continue;
+      const txt = el.first().text();
+      const v = extractNumberFromTextCandidates(txt);
+      if (v) return v;
+    } catch {}
+  }
+  // fallback: try specific attributes like data-field, value, content
+  const metaCandidates = $("meta, span, div").map((i, el) => {
+    const $el = $(el);
+    return ($el.attr("content") || $el.attr("data-value") || $el.text() || "").trim();
+  }).get();
+  for (const t of metaCandidates) {
+    const v = extractNumberFromTextCandidates(t);
+    if (v) return v;
+  }
+  // last resort: search entire body but with stricter filtering
+  const bodyText = $("body").text();
+  const v = extractNumberFromTextCandidates(bodyText);
+  if (v) return v;
+  throw new Error("no price found");
+}
+
+// ---------- specific site scrapers with selectors (improved) ----------
+// selectors were chosen heuristically — you can extend per-site if needed.
+async function fromInvestingSearch(metal) {
+  // investing.com often requires region headers; but try the commodity page if we can derive slug
+  // e.g. https://www.investing.com/commodities/{metal}
+  const slugMap = {
+    silver: "silver",
+    platinum: "platinum",
+    palladium: "palladium",
+    copper: "copper",
+    zinc: "zinc",
+    nickel: "nickel",
+    lead: "lead",
+    cobalt: "cobalt",
+    aluminum: "aluminium" // sometimes spelled
+  };
+  const slug = slugMap[metal.toLowerCase()] || metal.toLowerCase();
+  const url = `https://www.investing.com/commodities/${slug}`;
+  // common investing selectors:
+  const selectors = [
+    'div[data-test="instrument-price-last"]',
+    '.instrument-price_last__KQzyA',
+    '.lastValue',
+    '.top bold, .top .price'
+  ];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromMarketWatchCommodity(metal) {
+  const slug = metal.toLowerCase();
+  const url = `https://www.marketwatch.com/investing/future/${slug}`;
+  const selectors = ['bg-quote.value', '.intraday__price .value', '.region--intraday .value'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromTradingEconomicsCommodity(metal) {
+  const url = `https://tradingeconomics.com/commodity/${encodeURIComponent(metal)}`;
+  const selectors = ['#details .value', '.first .big', '.tbl tr td'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromFxNewsToday(metal) {
+  const url = `https://fxnewstoday.com/?s=${encodeURIComponent(metal)}`;
+  // generic selectors
+  const selectors = ['.entry-content .price', '.price', '.wp-block-table td'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromDailyForex(metal) {
+  const url = `https://www.dailyforex.com/search?search=${encodeURIComponent(metal)}`;
+  const selectors = ['.price', '.quote-price', '.instrument-price'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromArincen(metal) {
+  const url = `https://www.arincen.com/?s=${encodeURIComponent(metal)}`;
+  const selectors = ['.price', '.td-post-content p', '.entry-content'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromBloombergSearch(metal) {
+  const url = `https://www.bloomberg.com/search?query=${encodeURIComponent(metal)}`;
+  const selectors = ['.search-result__headline', '.search-result__summary', '.price'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromGoldMaker(metal) {
+  const url = `https://goldmaker.fr/?s=${encodeURIComponent(metal)}`;
+  const selectors = ['.entry-content .price', '.price'];
+  return await scrapeSelectors(url, selectors);
+}
+
+async function fromKitcoGeneric(metal) {
+  // kitco pages exist for gold/silver; for others kitco may not have direct page.
+  const map = { silver: 'silver-price-today-usa', gold: 'gold-price-today-usa' };
+  const slug = map[metal.toLowerCase()] || '';
+  const url = slug ? `https://www.kitco.com/${slug}.html` : `https://www.kitco.com/`;
+  const selectors = ['#spPrice', '.price', '.last'];
+  return await scrapeSelectors(url, selectors);
+}
+
+// wrapper: pick per-site function
+async function fromScrapeSite(site, metal) {
+  site = site.toLowerCase();
+  metal = (metal || "").toLowerCase();
+  if (site === "investing") return await fromInvestingSearch(metal);
+  if (site === "marketwatch") return await fromMarketWatchCommodity(metal);
+  if (site === "tradingeconomics") return await fromTradingEconomicsCommodity(metal);
+  if (site === "fxnewstoday") return await fromFxNewsToday(metal);
+  if (site === "dailyforex") return await fromDailyForex(metal);
+  if (site === "arincen") return await fromArincen(metal);
+  if (site === "bloomberg") return await fromBloombergSearch(metal);
+  if (site === "goldmaker") return await fromGoldMaker(metal);
+  if (site === "kitco") return await fromKitcoGeneric(metal);
+  if (site === "tradingview") {
+    // tradingview often uses dynamic rendering; try symbol page and generic selectors
+    const url = `https://www.tradingview.com/symbols/${metal.toUpperCase()}/`;
+    return await scrapeSelectors(url, ['.tv-symbol-price-quote__value', '.price', '.tv-symbol-price-quote__close']);
+  }
+  // unknown site: try a basic search query URL (fallback to generic)
+  const genericUrl = `https://${site}.com/search?q=${encodeURIComponent(metal)}`;
+  return await scrapeSelectors(genericUrl, ['.price', '.value', '.last']);
+}
+
+// ---------- stable resolvers for APIs / exchanges ----------
 async function fromTwelveData(pair) {
   if (!TWELVEDATA_KEY) throw new Error("no TWELVEDATA_KEY");
   const url = `https://api.twelvedata.com/price?symbol=${encodeURIComponent(pair)}&apikey=${TWELVEDATA_KEY}`;
@@ -215,7 +322,6 @@ async function fromTwelveData(pair) {
   if (!v) throw new Error("TD no price");
   return v;
 }
-// Yahoo
 async function fromYahoo(ticker) {
   const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?region=US&lang=en-US`;
   const j = await getJSON(url);
@@ -223,24 +329,8 @@ async function fromYahoo(ticker) {
   if (!v) throw new Error("Yahoo no price");
   return Number(v);
 }
-// Kitco
-async function fromKitco(metal) {
-  const map = { gold: "gold-price-today-usa", silver: "silver-price-today-usa" };
-  const slug = map[metal] || `${metal}-price`;
-  const html = await getText(`https://www.kitco.com/${slug}.html`);
-  const $ = cheerio.load(html);
-  // try a few selectors
-  let txt = (
-    $("span:contains(USD)").first().text() ||
-    $("td:contains(USD)").first().text() ||
-    $("div.price").first().text() ||
-    ""
-  ).replace(/[^\d.]/g, "");
-  const v = Number(txt);
-  if (!v) throw new Error("Kitco parse fail");
-  return v;
-}
-// CoinGecko
+async function fromKitco(metal) { return await fromKitcoGeneric(metal); }
+
 async function fromCoinGecko(ids) {
   const url = `https://api.coingecko.com/api/v3/simple/price?ids=${ids}&vs_currencies=usd`;
   const j = await getJSON(url);
@@ -252,14 +342,12 @@ async function fromCoinGecko(ids) {
   if (!Object.keys(out).length) throw new Error("CG no prices");
   return out;
 }
-// CoinCap
 async function fromCoinCap(id) {
   const j = await getJSON(`https://api.coincap.io/v2/assets/${id}`);
   const v = Number(j?.data?.priceUsd);
   if (!v) throw new Error("CoinCap no price");
   return v;
 }
-// DexScreener token
 async function fromDexScreenerByToken(token) {
   const j = await getJSON(`https://api.dexscreener.com/latest/dex/search?q=${token}`);
   const pair = j?.pairs?.[0];
@@ -267,7 +355,6 @@ async function fromDexScreenerByToken(token) {
   if (!v) throw new Error("DexScreener no price");
   return v;
 }
-// DexScreener pair
 async function fromDexScreenerByPair(pairAddress) {
   const url = `https://api.dexscreener.com/latest/dex/pairs/bsc/${pairAddress.toLowerCase()}`;
   const j = await getJSON(url);
@@ -276,7 +363,6 @@ async function fromDexScreenerByPair(pairAddress) {
   if (!v) throw new Error("DexScreener pair no price");
   return v;
 }
-// Geckoterminal
 async function fromGeckoTerminal(tokenAddress) {
   const url = `https://api.geckoterminal.com/api/v2/networks/bsc/tokens/${tokenAddress.toLowerCase()}`;
   const j = await getJSON(url, {}, 1);
@@ -284,7 +370,6 @@ async function fromGeckoTerminal(tokenAddress) {
   if (!v) throw new Error("GeckoTerminal no price");
   return v;
 }
-// Metals.dev
 async function fromMetalsDev(metal) {
   if (!METALS_DEV_API_KEY) throw new Error("no METALS_DEV_API_KEY");
   const url = `https://api.metals.dev/v1/metal/spot?api_key=${encodeURIComponent(METALS_DEV_API_KEY)}&metal=${encodeURIComponent(metal)}&currency=USD`;
@@ -294,53 +379,7 @@ async function fromMetalsDev(metal) {
   return price;
 }
 
-// ---------- scrapers ----------
-// generic page scrape (fallback generic text search)
-async function genericScrape(url) {
-  const html = await getText(url, {}, 1);
-  const $ = cheerio.load(html);
-  const text = $("body").text();
-  const v = parsePriceCandidates(text, { min: 0.01, max: 1e9 });
-  if (!v) throw new Error("generic scrape fail");
-  return v;
-}
-
-// specific targeted scrapers (we provide wrappers; you can replace with CSS selectors per-site later)
-async function fromSaudiGoldSilver() {
-  return await genericScrape("https://saudigoldprice.com/silverprice/");
-}
-async function fromInvestingSilver() {
-  return await genericScrape("https://www.investing.com/commodities/silver");
-}
-async function fromMarketWatchSilver() {
-  return await genericScrape("https://www.marketwatch.com/investing/future/silver");
-}
-async function fromTradingEconomicsSilver() {
-  return await genericScrape("https://tradingeconomics.com/commodity/silver");
-}
-
-// universal site->url builder + scrape
-async function fromScrapeSite(site, metal) {
-  const map = {
-    tradingview: (m) => `https://www.tradingview.com/symbols/${m.toUpperCase()}/`,
-    investing: (m) => `https://www.investing.com/search/?q=${encodeURIComponent(m)}`,
-    tradingeconomics: (m) => `https://tradingeconomics.com/commodity/${encodeURIComponent(m)}`,
-    fxnewstoday: (m) => `https://fxnewstoday.com/?s=${encodeURIComponent(m)}`,
-    dailyforex: (m) => `https://www.dailyforex.com/search?search=${encodeURIComponent(m)}`,
-    arincen: (m) => `https://www.arincen.com/?s=${encodeURIComponent(m)}`,
-    bloomberg: (m) => `https://www.bloomberg.com/search?query=${encodeURIComponent(m)}`,
-    marketwatch: (m) => `https://www.marketwatch.com/search?q=${encodeURIComponent(m)}`,
-    goldmaker: (m) => `https://goldmaker.fr/?s=${encodeURIComponent(m)}`,
-    kitco: (m) => `https://www.kitco.com/${m === "silver" ? "silver-price-today-usa" : ""}`,
-    yahoo: (m) => `https://finance.yahoo.com/quote/${encodeURIComponent(m)}`,
-  };
-  const builder = map[site];
-  if (!builder) throw new Error("unknown scrape site");
-  const url = builder(metal);
-  return await genericScrape(url);
-}
-
-// ---------- crypto WS ----------
+// ---------- crypto websocket ----------
 const wsPrices = new Map();
 function startBinanceWS(symbols = ["btcusdt", "ethusdt"]) {
   try {
@@ -356,7 +395,7 @@ function startBinanceWS(symbols = ["btcusdt", "ethusdt"]) {
     ws.on("close", () => setTimeout(() => startBinanceWS(symbols), 3000));
     ws.on("error", () => ws.close());
   } catch (err) {
-    console.error("WS error:", err.message || err);
+    console.error("WS error:", err.message);
   }
 }
 startBinanceWS();
@@ -372,47 +411,36 @@ function pickRotate(group) {
   return src;
 }
 
-// ---------- update routines (original kept) ----------
+// ---------- update routines (kept + fixed) ----------
 async function updateGold() {
   if (weekend()) return;
-  let src = pickRotate("gold");
+  const src = pickRotate("gold");
   if (!src) return;
-  let price = null,
-    unit = "oz";
   try {
+    let price = null;
     if (src.startsWith("twelvedata:")) price = await fromTwelveData(src.split(":")[1]);
     else if (src.startsWith("yahoo:")) price = await fromYahoo(src.split(":")[1]);
     else if (src.startsWith("kitco:")) price = await fromKitco("gold");
-    else price = await genericScrape("https://www.thestreet.com/quote/gold-price");
-    if (price) {
-      put("GOLD", price, unit, src);
-      cache.lastUpdate.gold = now();
-      saveCache();
-    }
+    else price = await scrapeSelectors("https://www.kitco.com/gold-price-today-usa.html", ['#spPrice', '.price']);
+    if (price) { put("GOLD", price, "oz", src); cache.lastUpdate.gold = now(); saveCache(); }
   } catch (e) {}
 }
 async function updateSilver() {
   if (weekend()) return;
-  let src = pickRotate("silver");
+  const src = pickRotate("silver");
   if (!src) return;
-  let price = null,
-    unit = "oz";
   try {
+    let price = null;
     if (src.startsWith("twelvedata:")) price = await fromTwelveData(src.split(":")[1]);
     else if (src.startsWith("yahoo:")) price = await fromYahoo(src.split(":")[1]);
     else if (src.startsWith("kitco:")) price = await fromKitco("silver");
-    else price = await fromInvestingSilver();
-    if (price) {
-      put("SILVER", price, unit, src);
-      cache.lastUpdate.silver = now();
-      saveCache();
-    }
+    if (price) { put("SILVER", price, "oz", src); cache.lastUpdate.silver = now(); saveCache(); }
   } catch (e) {}
 }
 
-// crypto update
+// expanded crypto update
 async function updateCrypto() {
-  let src = pickRotate("crypto");
+  const src = pickRotate("crypto");
   if (!src) return;
   try {
     if (src.startsWith("binancews:")) {
@@ -437,14 +465,12 @@ async function updateCrypto() {
       const v = await fromDexScreenerByToken(SLX_BSC_TOKEN);
       if (v) put("SLX", v, "usd", "dexscreener");
     }
-    cache.lastUpdate.crypto = now();
-    saveCache();
+    cache.lastUpdate.crypto = now(); saveCache();
   } catch (e) {}
 }
 
-// FX update
 async function updateFX(base = "USD", quote = "EGP") {
-  let src = pickRotate("fx");
+  const src = pickRotate("fx");
   if (!src) return;
   try {
     if (src.startsWith("exchangeratehost:")) {
@@ -461,35 +487,47 @@ async function updateFX(base = "USD", quote = "EGP") {
       const val = Number(j?.["Realtime Currency Exchange Rate"]?.["5. Exchange Rate"]);
       if (val) put(`FX_${base}_${quote}`, val, "rate", "AlphaVantage");
     }
-    cache.lastUpdate.fx = now();
-    saveCache();
+    cache.lastUpdate.fx = now(); saveCache();
   } catch (e) {}
 }
 
-// Energy update
-async function updateEnergy() {
-  const e = SITES.energy || {};
-  for (const [name, sources] of Object.entries(e)) {
+// keep original updateMetals generic but we won't call it in duplicated ways.
+// if you still want to keep it for legacy, it's here (not used for the new loop)
+async function updateMetals() {
+  const m = SITES.metals || {};
+  for (const [name, sources] of Object.entries(m)) {
+    let got = false;
     for (const src of sources) {
       try {
         let v = null;
-        if (src.startsWith("alphavantage:")) {
-          if (!ALPHAVANTAGE_KEY) continue;
-          v = await fromTwelveData(src.split(":")[1]); // safe attempt
-        } else if (src.startsWith("yahoo:")) {
-          v = await fromYahoo(src.split(":")[1]);
-        }
+        if (typeof src === "string" && src.startsWith("yahoo:")) v = await fromYahoo(src.split(":")[1]);
+        else if (typeof src === "string" && src.startsWith("twelvedata:")) v = await fromTwelveData(src.split(":")[1]);
         if (v) {
-          put(name.toUpperCase(), v, "usd", src);
-          cache.lastUpdate[name] = now();
-          break;
+          put(name.toUpperCase(), v, "oz", src);
+          got = true; break;
         }
-      } catch (e) {
-        // try next source
-      }
+      } catch (e) {}
     }
   }
-  saveCache();
+  cache.lastUpdate.metals = now(); saveCache();
+}
+
+async function updateEnergy() {
+  const e = SITES.energy || {};
+  for (const [name, sources] of Object.entries(e)) {
+    for (const s of sources) {
+      try {
+        let v = null;
+        if (s.startsWith("alphavantage:")) {
+          if (!ALPHAVANTAGE_KEY) continue;
+          // simplified mapping; you can implement exact functions if needed
+          v = await fromTwelveData(s.split(":")[1]);
+        } else if (s.startsWith("yahoo:")) v = await fromYahoo(s.split(":")[1]);
+        if (v) { put(name.toUpperCase(), v, "usd", s); break; }
+      } catch (e) {}
+    }
+  }
+  cache.lastUpdate.energy = now(); saveCache();
 }
 
 // ---------- SLX loop ----------
@@ -497,7 +535,7 @@ const SLX_SOURCES = [
   { type: "geckoterminal", fn: async () => await fromGeckoTerminal(SLX_BSC_TOKEN) },
   { type: "dex_pair", fn: async () => await fromDexScreenerByPair(SLX_PAIR_ADDRESS) },
   { type: "dex_token", fn: async () => await fromDexScreenerByToken(SLX_BSC_TOKEN) },
-  { type: "coincap", fn: async () => await fromCoinCap("silverx") },
+  { type: "coincap", fn: async () => await fromCoinCap("silverx") }
 ];
 async function updateSLXOnce() {
   const startIdx = cache.rotate.slxLoop || 0;
@@ -513,9 +551,7 @@ async function updateSLXOnce() {
         saveCache();
         return;
       }
-    } catch (e) {
-      // continue
-    }
+    } catch (e) {}
   }
 }
 function startSLXLoop() {
@@ -525,11 +561,11 @@ function startSLXLoop() {
 
 // ---------- Silver loop ----------
 const SILVER_SCRAPE_SOURCES = [
-  { name: "saudigold", fn: fromSaudiGoldSilver },
-  { name: "investing", fn: fromInvestingSilver },
-  { name: "marketwatch", fn: fromMarketWatchSilver },
-  { name: "tradingeconomics", fn: fromTradingEconomicsSilver },
-  { name: "kitco", fn: async () => await fromKitco("silver") },
+  { name: "saudigold", fn: async () => await fromScrapeSite("saudigoldprice", "silver").catch(() => {throw new Error("no");}) },
+  { name: "investing", fn: async () => await fromScrapeSite("investing", "silver") },
+  { name: "marketwatch", fn: async () => await fromScrapeSite("marketwatch", "silver") },
+  { name: "tradingeconomics", fn: async () => await fromScrapeSite("tradingeconomics", "silver") },
+  { name: "kitco", fn: async () => await fromKitco("silver") }
 ];
 async function updateSilverScrapeOnce() {
   const list = SILVER_SCRAPE_SOURCES;
@@ -541,60 +577,54 @@ async function updateSilverScrapeOnce() {
     try {
       const price = await src.fn();
       if (isValidNumber(price)) {
-        put("SILVER", price, "usd", `scrape:${src.name}`);
+        put("SILVER", price, "oz", `scrape:${src.name}`);
         cache.lastUpdate.silver = now();
         cache.rotate.silverLoop = (pick + 1) % list.length;
         saveCache();
         return;
       }
-    } catch (e) {
-      // continue
-    }
+    } catch (e) {}
   }
 }
 async function updateSilverFromMetalsDev() {
   try {
     const price = await fromMetalsDev("silver");
-    if (isValidNumber(price)) {
-      put("SILVER", price, "usd", "metals.dev");
-      cache.lastUpdate.silver = now();
-      saveCache();
-    }
+    if (isValidNumber(price)) { put("SILVER", price, "oz", "metals.dev"); cache.lastUpdate.silver = now(); saveCache(); }
   } catch (e) {}
 }
 function startSilverLoop() {
   updateSilverScrapeOnce().catch(() => {});
-  setInterval(() => updateSilverScrapeOnce().catch(() => {}), 40 * 60 * 1000);
+  setInterval(() => updateSilverScrapeOnce().catch(() => {}), 40 * 60 * 1000); // 40m
   if (METALS_DEV_API_KEY) {
     updateSilverFromMetalsDev().catch(() => {});
-    setInterval(() => updateSilverFromMetalsDev().catch(() => {}), 6 * 60 * 60 * 1000);
+    setInterval(() => updateSilverFromMetalsDev().catch(() => {}), 6 * 60 * 60 * 1000); // 6h
   }
 }
 
-// ---------- metals loops ----------
-const METALS_TO_LOOP = Object.keys(SITES.metals && SITES.metals.length ? SITES.metals : {
-  zinc:[], lead:[], platinum:[], palladium:[], cobalt:[], nickel:[], copper:[]
-}).map(k => k.toUpperCase());
-
-// build sources for a given metalKey using sites.json; strictly iterate through the configured list (no fallback)
+// ---------- metals loops (per-site scraping lists from sites.json) ----------
+const METALS_TO_LOOP = ["ZINC", "LEAD", "PLATINUM", "PALLADIUM", "COBALT", "NICKEL", "COPPER", "ALUMINUM", "URANIUM", "LITHIUM", "IRON", "STEEL", "TIN"];
 function buildMetalSourcesFromSites(metalKey) {
   const keyLower = metalKey.toLowerCase();
-  const configured = (SITES.metals && SITES.metals[keyLower]) || [];
+  const configured = (SITES.metals && SITES.metals[keyLower]) || null;
   const out = [];
-  for (const s of configured) {
-    if (typeof s !== "string") continue;
-    if (s.startsWith("scrape:")) {
-      const parts = s.split(":");
-      const site = parts[1];
-      const metal = parts[2] || keyLower;
-      out.push({ name: `scrape:${site}`, fn: async () => await fromScrapeSite(site, metal) });
-    } else if (s.startsWith("yahoo:")) {
-      out.push({ name: "yahoo", fn: async () => await fromYahoo(s.split(":")[1]) });
-    } else if (s.startsWith("twelvedata:")) {
-      out.push({ name: "twelvedata", fn: async () => await fromTwelveData(s.split(":")[1]) });
-    } else if (s === "metalsdev") {
-      out.push({ name: "metalsdev", fn: async () => await fromMetalsDev(keyLower) });
+  if (configured && Array.isArray(configured)) {
+    for (const s of configured) {
+      if (typeof s !== "string") continue;
+      if (s.startsWith("scrape:")) {
+        const parts = s.split(":");
+        const site = parts[1];
+        const metal = parts[2] || keyLower;
+        out.push({ name: `scrape:${site}`, fn: async () => await fromScrapeSite(site, metal) });
+      } else if (s.startsWith("yahoo:")) out.push({ name: "yahoo", fn: async () => await fromYahoo(s.split(":")[1]) });
+      else if (s.startsWith("twelvedata:")) out.push({ name: "twelvedata", fn: async () => await fromTwelveData(s.split(":")[1]) });
+      else if (s === "metalsdev") out.push({ name: "metalsdev", fn: async () => await fromMetalsDev(keyLower) });
     }
+  }
+  // defaults if nothing configured
+  if (!out.length) {
+    if (METALS_DEV_API_KEY) out.push({ name: "metalsdev", fn: async () => await fromMetalsDev(keyLower) });
+    out.push({ name: "yahoo", fn: async () => await fromYahoo(keyLower === "platinum" ? "XPTUSD=X" : keyLower === "palladium" ? "XPDUSD=X" : `${keyLower}=F`) });
+    out.push({ name: "kitco", fn: async () => await fromKitco(keyLower) });
   }
   return out;
 }
@@ -610,47 +640,39 @@ async function updateMetalOnce(metalKey) {
     try {
       const price = await src.fn();
       if (isValidNumber(price)) {
-        put(metalKey, price, "usd", `loop:${src.name}`);
+        put(metalKey, price, "oz", `loop:${src.name}`);
         cache.lastUpdate[metalKey] = now();
         cache.rotate.metalsLoop[metalKey] = (pick + 1) % list.length;
         saveCache();
         return;
       }
-    } catch (e) {
-      // next source (NO fallback to other fallback functions)
-    }
+    } catch (e) {}
   }
-  // none succeeded: keep cached
+  // none succeeded -> do nothing (no fallback)
 }
 
 function startMetalsLoops() {
-  const metals = Object.keys(SITES.metals || {}).length ? Object.keys(SITES.metals).map(k=>k.toUpperCase()) : ["ZINC","LEAD","PLATINUM","PALLADIUM","COBALT","NICKEL","COPPER"];
-  metals.forEach((metal) => {
+  for (const metal of METALS_TO_LOOP) {
     updateMetalOnce(metal).catch(() => {});
-    setInterval(() => updateMetalOnce(metal).catch(() => {}), 60 * 60 * 1000); // each metal cycles every hour
-  });
+    setInterval(() => updateMetalOnce(metal).catch(() => {}), 60 * 60 * 1000); // every 1h
+  }
 }
 
-// ---------- schedules ----------
-setInterval(() => {
-  updateGold();
-  updateSilver();
-  updateCrypto();
-}, 210 * 1000); // 3.5 min
+// ---------- schedules (single, no duplicates) ----------
+setInterval(() => { updateGold(); updateSilver(); updateCrypto(); }, 210 * 1000); // 3.5m
+setInterval(() => updateFX("USD", "EGP"), 2 * 60 * 60 * 1000); // 2h
+setInterval(() => updateEnergy(), 5 * 60 * 60 * 1000); // 5h
 
-setInterval(() => updateFX("USD", "EGP"), 2 * 60 * 60 * 1000); // 2 hours
-setInterval(() => updateEnergy(), 5 * 60 * 60 * 1000); // 5 hours
-
-// start loops
+// start new loops
 startSLXLoop();
 startSilverLoop();
 startMetalsLoops();
 
-// boot initial run
+// kick-off originals once
 updateGold();
 updateSilver();
 updateCrypto();
-updateFX("USD","EGP");
+updateFX("USD", "EGP");
 updateEnergy();
 
 // ---------- history / chart / change endpoints ----------
@@ -662,10 +684,9 @@ app.get("/api/history/:symbol", (req, res) => {
 
 app.get("/api/chart/:symbol", (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
-  const days = Math.min(90, Number(req.query.days || 30));
+  const days = Math.min(90, Number(req.query.days || MAX_HISTORY_DAYS));
   const hist = (cache.history && cache.history[symbol]) || [];
-  const out = hist.slice(-days);
-  res.json({ symbol, data: out });
+  res.json({ symbol, data: hist.slice(-days) });
 });
 
 app.get("/api/change/:symbol", (req, res) => {
@@ -701,16 +722,16 @@ app.get("/api/change/:symbol", (req, res) => {
   }
 });
 
-// ---------- existing APIs ----------
+// ---------- existing APIs (keep intact) ----------
 app.get("/api/health", (req, res) => res.json({ ok: true, ts: Date.now(), lastUpdate: cache.lastUpdate }));
 app.get("/api/status", (req, res) => res.json({ ok: true, ts: Date.now(), lastUpdate: cache.lastUpdate }));
 
 app.get("/api/gold", (req, res) => { const v = get("GOLD"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
 app.get("/api/silver", (req, res) => { const v = get("SILVER"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
 app.get("/api/crypto", (req, res) => {
-  const list = (req.query.list || "BTC,ETH,SLX").split(",").map((s) => s.trim().toUpperCase());
+  const list = (req.query.list || "BTC,ETH,SLX").split(",").map(s => s.trim().toUpperCase());
   const out = {};
-  for (const s of list) out[s] = get(s) || { error: "Not found" };
+  for (const s of list) { const v = get(s); out[s] = v || { error: "Not found" }; }
   res.json(out);
 });
 app.get("/api/crypto/bitcoin", (req, res) => { const v = get("BTC"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
@@ -726,7 +747,7 @@ app.get("/api/fx", (req, res) => {
 });
 
 app.get("/api/metals", (req, res) => {
-  const list = (req.query.list || Object.keys(SITES.metals || {}).join(",")).split(",").map((s) => s.trim().toUpperCase());
+  const list = (req.query.list || "platinum,palladium,copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium").split(",").map(s => s.trim().toUpperCase());
   const out = {};
   for (const m of list) out[m] = get(m) || { error: "Not found" };
   res.json(out);
@@ -739,13 +760,16 @@ app.get("/api/metals/:metal", (req, res) => {
 });
 
 app.get("/api/energy", (req, res) => {
-  const list = (req.query.list || "wti,brent,natgas").split(",").map((s) => s.trim().toUpperCase());
+  const list = (req.query.list || "wti,brent,natgas").split(",").map(s => s.trim().toUpperCase());
   const out = {};
   for (const n of list) out[n] = get(n) || { error: "Not found" };
   res.json(out);
 });
+app.get("/api/oilgas/wti", (req, res) => { const v = get("WTI"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
+app.get("/api/oilgas/brent", (req, res) => { const v = get("BRENT"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
+app.get("/api/oilgas/gas", (req, res) => { const v = get("NATGAS"); if (!v) return res.status(404).json({ error: "Not found" }); res.json(v); });
 
-// ---------- Admin ----------
+// ---------- Admin endpoints ----------
 function okAdmin(req) {
   const t = req.headers["x-admin-token"] || req.query.token || req.body?.token;
   return String(t) === String(ADMIN_TOKEN);
@@ -769,18 +793,13 @@ app.post("/api/admin/refresh", (req, res) => {
   if (what === "all" || what === "silver") tasks.push(updateSilver());
   if (what === "all" || what === "crypto") tasks.push(updateCrypto());
   if (what === "all" || what === "fx") tasks.push(updateFX("USD", "EGP"));
-  if (what === "all" || what === "metals") {
-    // refresh all metals via single calls
-    for (const m of Object.keys(SITES.metals || {})) tasks.push(updateMetalOnce(m.toUpperCase()));
-  }
+  if (what === "all" || what === "metals") tasks.push(Promise.all(METALS_TO_LOOP.map(m => updateMetalOnce(m))));
   if (what === "all" || what === "energy") tasks.push(updateEnergy());
   Promise.allSettled(tasks).then(() => res.json({ ok: true, lastUpdate: cache.lastUpdate }));
 });
 app.post("/api/admin/cache/clear", (req, res) => {
   if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
-  cache.prices = {};
-  saveCache();
-  res.json({ ok: true });
+  cache.prices = {}; saveCache(); res.json({ ok: true });
 });
 
 // ---------- start ----------
