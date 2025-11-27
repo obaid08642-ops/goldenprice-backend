@@ -23,7 +23,7 @@
   ],
   "metals": {
   "zinc": [
-    "scrape:tradingview:zinc",
+    
     "scrape:investing:zinc",
     "scrape:tradingeconomics:zinc",
     "scrape:fxnewstoday:zinc",
