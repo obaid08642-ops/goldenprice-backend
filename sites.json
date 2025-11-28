@@ -6,14 +6,13 @@
     "thestreetgold:gold"
   ],
   "silver": [
-    "twelvedata:XAG/USD",
-    "yahoo:XAGUSD=X",
-    "kitco:silver"
+    "scrape:saudigold:silver",
+    "metalsdev"    
   ],
   "crypto": [
     "binancews:BTCUSDT,ETHUSDT",
-    "coingecko:bitcoin,ethereum",
-    "coincap:bitcoin,ethereum",
+    "coingecko:bitcoin,ethereum,cardano,solana,binancecoin,ripple,tron,dogecoin,polkadot,chainlink",
+    "coincap:bitcoin,ethereum,cardano,solana,binancecoin,ripple,tron,dogecoin,polkadot,chainlink",
     "dexscreener:SLX"
   ],
   "fx": [
@@ -22,110 +21,19 @@
     "alphavantage:USD,EGP"
   ],
   "metals": {
-    "lead":
-      "scrape:tradingview:lead",
-      "scrape:investing:lead",
-      "scrape:tradingeconomics:lead",
-      "scrape:fxnewstoday:lead",
-      "scrape:dailyforex:lead",
-      "scrape:arincen:lead",
-      "scrape:bloomberg:lead",
-      "scrape:marketwatch:lead",
-      "scrape:goldmaker:lead",
-      "scrape:kitco:lead",
-      "scrape:yahoo:lead"
-    ],
-    "platinum": [
-      "scrape:tradingview:platinum",
-      "scrape:investing:platinum",
-      "scrape:tradingeconomics:platinum",
-      "scrape:fxnewstoday:platinum",
-      "scrape:dailyforex:platinum",
-      "scrape:arincen:platinum",
-      "scrape:bloomberg:platinum",
-      "scrape:marketwatch:platinum",
-      "scrape:goldmaker:platinum",
-      "scrape:kitco:platinum",
-      "scrape:yahoo:platinum"
-    ],
-    "palladium": [
-      "scrape:tradingview:palladium",
-      "scrape:investing:palladium",
-      "scrape:tradingeconomics:palladium",
-      "scrape:fxnewstoday:palladium",
-      "scrape:dailyforex:palladium",
-      "scrape:arincen:palladium",
-      "scrape:bloomberg:palladium",
-      "scrape:marketwatch:palladium",
-      "scrape:goldmaker:palladium",
-      "scrape:kitco:palladium",
-      "scrape:yahoo:palladium"
-    ],
-    "cobalt": [
-      "scrape:tradingview:cobalt",
-      "scrape:investing:cobalt",
-      "scrape:tradingeconomics:cobalt",
-      "scrape:fxnewstoday:cobalt",
-      "scrape:dailyforex:cobalt",
-      "scrape:arincen:cobalt",
-      "scrape:bloomberg:cobalt",
-      "scrape:marketwatch:cobalt",
-      "scrape:goldmaker:cobalt",
-      "scrape:kitco:cobalt",
-      "scrape:yahoo:cobalt"
-    ],
-    "nickel": [
-      "scrape:tradingview:nickel",
-      "scrape:investing:nickel",
-      "scrape:tradingeconomics:nickel",
-      "scrape:fxnewstoday:nickel",
-      "scrape:dailyforex:nickel",
-      "scrape:arincen:nickel",
-      "scrape:bloomberg:nickel",
-      "scrape:marketwatch:nickel",
-      "scrape:goldmaker:nickel",
-      "scrape:kitco:nickel",
-      "scrape:yahoo:nickel"
-    ],
-    "copper": [
-      "scrape:tradingview:copper",
-      "scrape:investing:copper",
-      "scrape:tradingeconomics:copper",
-      "scrape:fxnewstoday:copper",
-      "scrape:dailyforex:copper",
-      "scrape:arincen:copper",
-      "scrape:bloomberg:copper",
-      "scrape:marketwatch:copper",
-      "scrape:goldmaker:copper",
-      "scrape:kitco:copper",
-      "scrape:yahoo:copper"
-    ],
-    "aluminum": [
-      "scrape:tradingview:aluminum",
-      "scrape:investing:aluminum",
-      "scrape:tradingeconomics:aluminum",
-      "scrape:fxnewstoday:aluminum",
-      "scrape:dailyforex:aluminum",
-      "scrape:arincen:aluminum",
-      "scrape:bloomberg:aluminum",
-      "scrape:marketwatch:aluminum",
-      "scrape:goldmaker:aluminum",
-      "scrape:kitco:aluminum",
-      "scrape:yahoo:aluminum"
-    ],
-    "uranium": [
-      "scrape:tradingview:uranium",
-      "scrape:investing:uranium",
-      "scrape:tradingeconomics:uranium",
-      "scrape:fxnewstoday:uranium",
-      "scrape:dailyforex:uranium",
-      "scrape:arincen:uranium",
-      "scrape:bloomberg:uranium",
-      "scrape:marketwatch:uranium",
-      "scrape:goldmaker:uranium",
-      "scrape:kitco:uranium",
-      "scrape:yahoo:uranium"
-    ]
+    "zinc": ["metalsdev"],
+    "aluminum": ["metalsdev"],
+    "copper": ["metalsdev"],
+    "lead": ["metalsdev"],
+    "nickel": ["metalsdev"],
+    "platinum": ["metalsdev"],
+    "palladium": ["metalsdev"],
+    "cobalt": ["metalsdev"],
+    "lithium": ["metalsdev"],
+    "tin": ["metalsdev"],
+    "iron": ["metalsdev"],
+    "steel": ["metalsdev"],
+    "uranium": ["metalsdev"]
   },
   "energy": {
     "wti": ["alphavantage:WTI", "yahoo:CL=F"],
