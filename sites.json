@@ -22,20 +22,7 @@
     "alphavantage:USD,EGP"
   ],
   "metals": {
-    "zinc": [
-      "scrape:tradingview:zinc",
-      "scrape:investing:zinc",
-      "scrape:tradingeconomics:zinc",
-      "scrape:fxnewstoday:zinc",
-      "scrape:dailyforex:zinc",
-      "scrape:arincen:zinc",
-      "scrape:bloomberg:zinc",
-      "scrape:marketwatch:zinc",
-      "scrape:goldmaker:zinc",
-      "scrape:kitco:zinc",
-      "scrape:yahoo:zinc"
-    ],
-    "lead": [
+    "lead":
       "scrape:tradingview:lead",
       "scrape:investing:lead",
       "scrape:tradingeconomics:lead",
