@@ -74,21 +74,6 @@ let SITES = {
   silver: ["twelvedata:XAG/USD","yahoo:XAGUSD=X","kitco:silver"],
   crypto: ["binancews:BTCUSDT,ETHUSDT","coingecko:bitcoin,ethereum","coincap:bitcoin,ethereum","dexscreener:SLX"],
   fx: ["exchangeratehost:USD,EGP","frankfurter:USD,EGP","alphavantage:USD,EGP"],
-  metals: {
-    zinc: ["metalsdev","yahoo:MZN=F","scrape:investing:zinc","scrape:tradingeconomics:zinc"],
-    aluminum: ["metalsdev","yahoo:ALI=F","scrape:investing:aluminum","scrape:tradingeconomics:aluminum"],
-    copper: ["metalsdev","yahoo:HG=F","scrape:investing:copper","scrape:tradingeconomics:copper"],
-    lead: ["metalsdev","yahoo:LD=F","scrape:investing:lead","scrape:tradingeconomics:lead"],
-    nickel: ["metalsdev","yahoo:NID=F","scrape:investing:nickel","scrape:tradingeconomics:nickel"],
-    platinum: ["metalsdev","yahoo:XPTUSD=X","scrape:investing:platinum"],
-    palladium: ["metalsdev","yahoo:XPDUSD=X","scrape:investing:palladium"],
-    cobalt: ["scrape:investing:cobalt","scrape:tradingeconomics:cobalt","yahoo:CO=F"],
-    lithium: ["scrape:investing:lithium","yahoo:LIT=F"],
-    uranium: ["scrape:investing:uranium","yahoo:UX=F"],
-    tin: ["scrape:investing:tin","yahoo:TIN=F"],
-    iron: ["scrape:investing:iron"],
-    steel: ["scrape:investing:steel"]
-  },
   energy: { wti: ["alphavantage:WTI","yahoo:CL=F"], brent: ["alphavantage:BRENT","yahoo:BRN=F"], natgas: ["alphavantage:NATGAS","yahoo:NG=F"] }
 };
 
