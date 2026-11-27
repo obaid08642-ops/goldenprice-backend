@@ -248,5 +248,144 @@
       "diesel": 200.0,
       "lpg": null
     }
+  },
+  "ID": {
+    "fuel": {
+      "cur": "IDR",
+      "date": "2026-11-01",
+      "src": "Pertamina price list via ANTARA state wire (Pertamax RON 92 main grade; Pertamax Green 95 is 19,150; diesel = subsidised Biosolar)",
+      "url": "https://jawawa.id/newsitem/pertamina-keeps-non-subsidised-fuel-prices-unchanged-on-1-november-1793501457",
+      "petrol95": 15950,
+      "diesel": 6800,
+      "lpg": null
+    }
+  },
+  "MY": {
+    "fuel": {
+      "cur": "MYR",
+      "date": "2026-11-26",
+      "src": "Ministry of Finance weekly release 26 Nov-2 Dec 2026 (RON95 BUDI95 subsidised price paid at pump; unsubsidised retail 3.47; diesel BUDI subsidised, unsubsidised 4.47)",
+      "url": "https://www.mof.gov.my/portal/ms/berita/siaran-media/harga-petrol-dan-diesel-tanpa-subsidi-turun-25-sen-seliter-kerajaan-madani-terus-komited-lindungi-rakyat",
+      "petrol95": 1.99,
+      "diesel": 2.1,
+      "lpg": null
+    }
+  },
+  "SG": {
+    "electricity": {
+      "cur": "SGD",
+      "kwh": 0.2859,
+      "period": "2026-10",
+      "src": "SP Group regulated household tariff Q4 2026 (Oct-Dec), before GST (0.3116 incl. 9% GST), media release 30 Sep 2026",
+      "url": "https://www.spgroup.com.sg"
+    }
+  },
+  "TH": {
+    "fuel": {
+      "cur": "THB",
+      "date": "2026-11-26",
+      "src": "EPPO / Oil Fuel Fund Committee announcement 197/2569 (Gasohol 95 E10 and Diesel B7, Bangkok, from 26 Nov 2026)",
+      "url": "https://www.eppo.go.th",
+      "petrol95": 37.44,
+      "diesel": 39.34,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "THB",
+      "kwh": 2.3488,
+      "period": "2026-09",
+      "src": "MEA residential type 1.1 first block (1-15 units), excl. Ft and VAT, from Sep 2026 billing",
+      "url": "https://www.mea.or.th/our-services/service-rates/other/D5xEaEwgU"
+    }
+  },
+  "VN": {
+    "fuel": {
+      "cur": "VND",
+      "date": "2026-08-27",
+      "src": "Petrolimex retail price table (E10 RON 95-III Zone 1; DO 0.05S-II Zone 1), latest table opened on the official Petrolimex site",
+      "url": "https://pcc1.petrolimex.com.vn/kinh-danh-xang-dau.html",
+      "petrol95": 22600,
+      "diesel": 28080,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "VND",
+      "kwh": 1901,
+      "period": "2026-11",
+      "src": "MOIT Decision 2892/QD-BCT / EVN residential tier 1 (first 100 kWh), excl. VAT, from 1 Nov 2026",
+      "url": "https://baochinhphu.vn/bieu-gia-dien-moi-ho-su-dung-duoi-900-kwh-thang-duoc-giam-tien-dien-102261104123406615.htm"
+    }
+  },
+  "PH": {
+    "fuel": {
+      "cur": "PHP",
+      "date": "2026-08-04",
+      "src": "DOE price monitoring, NCR prevailing retail prices week of 4-10 Aug 2026 (RON 95 and diesel common price; pumps are deregulated, DOE monitors)",
+      "url": "https://prod-cms.doe.gov.ph/documents/d/guest/ncr-price-monitoring-08042026-pdf",
+      "petrol95": 78.8,
+      "diesel": 88.8,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "PHP",
+      "kwh": 15.551,
+      "period": "2026-11",
+      "src": "Meralco overall rate for a typical household, November 2026",
+      "url": "https://www.meralco.com.ph/media/advisories/higher-residential-rates-this-november-2026"
+    }
+  },
+  "CN": {
+    "fuel": {
+      "cur": "CNY",
+      "date": "2026-11-12",
+      "src": "Beijing DRC notice under NDRC adjustment (Beijing maximum retail prices: 95# gasoline, 0# diesel; a further NDRC cut took effect 26 Nov 2026, Beijing table not yet opened)",
+      "url": "https://fgw.beijing.gov.cn/fgwzwgk/2024zcwj/bwqtwj/202611/t20261112_4943633.htm",
+      "petrol95": 8.91,
+      "diesel": 8.11,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "CNY",
+      "kwh": 0.4883,
+      "period": "2026-11",
+      "src": "Beijing residential tier-1 tariff (1-240 kWh/month), State Grid Beijing",
+      "url": "https://fgw.beijing.gov.cn/bmcx/djcx/jzldj/202110/t20211025_2520169.htm"
+    }
+  },
+  "HK": {
+    "fuel": {
+      "cur": "HKD",
+      "date": "2026-11-25",
+      "src": "EMSD auto-LPG ceiling prices at dedicated stations for Dec 2026 (lowest station Kwai Chung; range 4.39-5.33 by station; petrol/diesel have no official set price)",
+      "url": "https://www.info.gov.hk/gia/general/202611/25/P2026112500278.htm",
+      "petrol95": null,
+      "diesel": null,
+      "lpg": 4.39
+    },
+    "electricity": {
+      "cur": "HKD",
+      "kwh": 1.339,
+      "period": "2026-01",
+      "src": "CLP residential first block (energy 94.5c + fuel cost adjustment 39.4c per unit), from 1 Jan 2026",
+      "url": "https://e.clp.com.hk/3Xy1AfB"
+    }
+  },
+  "TW": {
+    "fuel": {
+      "cur": "TWD",
+      "date": "2026-11-23",
+      "src": "CPC Corporation official price list (95 unleaded; Super diesel), from 23 Nov 2026",
+      "url": "https://www.cpc.com.tw/en/HistoryPrice.aspx?n=3058",
+      "petrol95": 32.7,
+      "diesel": 29.9,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "TWD",
+      "kwh": 1.78,
+      "period": "2026-11",
+      "src": "Taipower residential first tier (first 120 kWh/month, same summer and non-summer), schedules from 1 Oct 2025",
+      "url": "https://hc1.taipower.com.tw/media/vqplk13w/20251124_TAIWAN POWER COMPANY RATE SCHEDULES.pdf?mediaDL=true"
+    }
   }
 }
