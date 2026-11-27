@@ -1,0 +1,43 @@
+{
+ "country": "QA",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 22,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Only reference per-gram price pages could be opened; no tax, making charge, bar premium or buyback data was sourced. Treat as placeholder.",
+ "sources": [
+  {
+   "name": "Gold Price Z Qatar",
+   "url": "https://goldpricez.com/qa/24k/gram",
+   "what": "27 Nov 2026 24K QAR per gram (about 417-427) vs spot reference"
+  },
+  {
+   "name": "BankBazaar Qatar",
+   "url": "https://www.bankbazaar.com/gold-rate/gold-price-qatar.html",
+   "what": "27 Nov 2026 Qatar 22K/24K rates"
+  },
+  {
+   "name": "Live Price of Gold Qatar",
+   "url": "https://livepriceofgold.com/Qatar-gold-price.html",
+   "what": "Live Qatar gold price reference"
+  }
+ ]
+}

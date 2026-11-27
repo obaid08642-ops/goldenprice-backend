@@ -1,0 +1,125 @@
+{
+  "IN": [
+    {"url": "https://www.flipkart.com/mmtc-pamp-india-pvt-ltd-peacock-24-9999-k-10-g-yellow-gold-bar/p/itmc33c3477587df", "kind": "dealer", "why": "MMTC-PAMP 10g bar retail listing with buyback guarantee note"},
+    {"url": "https://gstcouncil.gov.in/sites/default/files/2024-02/sectoral-fq-gems-jewellery.pdf", "kind": "tax", "why": "GST Council FAQ on gems and jewellery (official)"},
+    {"url": "https://www.angelone.in/knowledge-center/income-tax/gst-on-gold", "kind": "tax", "why": "GST rates on gold bars, coins and jewellery"},
+    {"url": "https://www.bajajfinserv.in/10-gram-gold-price-today-and-market-insights", "kind": "news", "why": "10g gold price guide with buyback advice"},
+    {"url": "https://www.5paisa.com/blog/gold-rate-today-28-oct-2026", "kind": "news", "why": "Daily city-wise 24K/22K rates per 10g"}
+  ],
+  "PK": [
+    {"url": "https://pakobserver.net/gold-prices-in-pakistan-today-per-tola-10-gram-rates-12-june-2026/", "kind": "news", "why": "Per tola and per 10g gold rates"},
+    {"url": "https://en.dailypakistan.com.pk/?p=292469", "kind": "news", "why": "Daily gold price per tola, 22K and 24K"},
+    {"url": "https://taxationpk.com/gold-precious-metals-taxation-pakistan/", "kind": "tax", "why": "Overview of sales tax and advance tax on gold and jewellery"},
+    {"url": "https://fbr.gov.pk/pr", "kind": "tax", "why": "FBR official press releases on gold customs and sales tax"},
+    {"url": "https://www.dawn.com/news/1846958/fbrs-wrong-decision-halts-gold-imports", "kind": "news", "why": "Reporting on FBR changes to gold import sales tax exemption"}
+  ],
+  "ID": [
+    {"url": "https://www.metrotvnews.com/read/kM6CgEwO-harga-emas-antam-hari-ini-dijual-rp2-540-juta-buyback-rp2-335-juta-gram", "kind": "news", "why": "Antam sell and buyback price per gram"},
+    {"url": "https://market.bisnis.com/read/20260424/235/1969024/tabel-harga-buyback-emas-antam-hari-ini-jumat-24-april-2026-nilai-pajaknya", "kind": "news", "why": "Antam buyback table with PPh 22 tax values"},
+    {"url": "https://pajak.go.id/id/artikel/pmk-512025-dan-pmk-522025-atur-ulang-pajak-emas-masyarakat-tak-perlu-cemas", "kind": "tax", "why": "DJP explainer on PMK 51/2025 and 52/2025 gold tax rules"},
+    {"url": "https://www.pajak.go.id/sites/default/files/2026-07/Aspek%20Perpajakan%20Pedagang%20Emas.pdf", "kind": "tax", "why": "DJP document on tax aspects for gold traders"},
+    {"url": "https://news.ddtc.co.id/berita/nasional/1810112/beli-emas-batangan-konsumen-akhir-tak-kena-pph-pasal-22-dan-ppn", "kind": "tax", "why": "Tax guide: end consumers buying bullion exempt from PPh 22 and VAT"}
+  ],
+  "MY": [
+    {"url": "https://www.livepriceofgold.com/public-gold-malaysia-gold-price.html", "kind": "dealer", "why": "Public Gold buy and sell prices per gram"},
+    {"url": "https://www.bnm.gov.my/en/kijang-emas-prices", "kind": "dealer", "why": "Bank Negara official Kijang Emas bar price list"},
+    {"url": "https://www.thestar.com.my/news/nation/2026/10/04/gold-bars-get-a-tax-break", "kind": "tax", "why": "Report on 2026 customs duty cut on minted gold bars"},
+    {"url": "https://www.ctim.org.my/file/news/517/03780_GST%20Industry%20Guide%20-%20Investment%20Precious%20Metals%20(IPM)%20(as%20at%2019%20May%202016).pdf", "kind": "tax", "why": "GST industry guide on investment precious metals (dated 2016)"},
+    {"url": "https://sbma.org.sg/news/malaysias-gold-market/", "kind": "association", "why": "Singapore Bullion Market Association overview of Malaysia gold market"}
+  ],
+  "SG": [
+    {"url": "https://silverbullion.com.sg/Shop/Buy/Gold_Bars", "kind": "dealer", "why": "Dealer gold bar catalogue with per-size prices"},
+    {"url": "https://www.goldsilvercentral.com.sg/product-category/buy-gold", "kind": "dealer", "why": "Dealer listing of 10g gold bars with buyback prices"},
+    {"url": "https://www.customs.gov.sg/individuals/GST-exemption-for-investment-precious-metals", "kind": "tax", "why": "Customs page on GST exemption for investment precious metals"},
+    {"url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etaxguides_gst_gold-jewellery-industry.pdf", "kind": "tax", "why": "IRAS e-Tax guide for GST in gold jewellery industry"},
+    {"url": "https://www.mof.gov.sg/news-resources/newsroom/sale-of-gold-bars-exemption-from-gst-and-online-sales-/", "kind": "tax", "why": "MOF statement on GST exemption for gold bars"},
+    {"url": "https://sbma.org.sg/?p=1569", "kind": "association", "why": "SBMA overview of gold market and tax treatment"}
+  ],
+  "CN": [
+    {"url": "https://www.caixinglobal.com/2025-10-21/chow-tai-fook-to-hike-gold-product-prices-by-up-to-18-102374122.html", "kind": "news", "why": "Chow Tai Fook retail gold price increase reporting"},
+    {"url": "https://www.gold.org/goldhub/gold-focus/2025/11/you-asked-we-answered-what-are-implications-vat-reform-china", "kind": "association", "why": "World Gold Council explainer on China gold VAT reform"},
+    {"url": "https://www.vatupdate.com/2025/11/03/china-ends-vat-exemption-on-investment-gold-sales-raising-costs-for-retail-buyers/", "kind": "tax", "why": "Summary of Nov 2025 VAT change on investment gold"},
+    {"url": "https://bullionstar.com/blogs/koos-jansen/the-value-added-tax-system-in-chinas-domestic-gold-market", "kind": "tax", "why": "Explainer of VAT system in China domestic gold market"},
+    {"url": "https://www.chinadaily.com.cn/a/202511/07/WS690d2bf7a310bfcd27fc54bf.html", "kind": "news", "why": "China Daily report on gold VAT trade reform"},
+    {"url": "https://news.metal.com/newscontent/103356905/Domestic-gold-jewelry-price-per-gram-returns-to-1000-yuan", "kind": "news", "why": "Domestic gold jewellery price per gram in yuan"}
+  ],
+  "HK": [
+    {"url": "https://goldbar.chowsangsang.com/en/productDetail/999.9", "kind": "dealer", "why": "Chow Sang Sang 999.9 gold bar sell prices per tael"},
+    {"url": "https://www.cmbwinglungbank.com/wlb_corporate/en/personal/investments/gold-bar-and-gold-coin.html", "kind": "dealer", "why": "Bank physical gold bar and buyback service"},
+    {"url": "https://www.hangseng.com/en-hk/rates/gold-prices/", "kind": "spot", "why": "Bank published gold prices"},
+    {"url": "https://www.hsbc.com.hk/investments/market-information/hk/gold-services/", "kind": "dealer", "why": "HSBC Hong Kong gold services"},
+    {"url": "https://www.bullionstar.com/gold-university/gold-tax-asia", "kind": "tax", "why": "Overview of gold tax treatment across Asia including Hong Kong"},
+    {"url": "https://www.hkex.com.hk/-/media/HKEX-Market/Products/Listed-Derivatives/Commodities/Gold-Futures/HKE_Infosheet_The-Rise-of-Gold-Investments_EN_260821.pdf", "kind": "tax", "why": "HKEX infosheet on gold investment and tax position"}
+  ],
+  "JP": [
+    {"url": "https://www.nippon.com/en/news/yjj2026012900747", "kind": "news", "why": "Tanaka tax-inclusive retail gold price above 30,000 yen per gram"},
+    {"url": "https://www.nippon.com/en/news/yjj2026020400823", "kind": "news", "why": "Volatility in Japanese retail gold prices"},
+    {"url": "https://www.customs.go.jp/kaigairyoko/taxrefund_e.html", "kind": "tax", "why": "Japan Customs on tax refund and gold declaration"},
+    {"url": "https://www.Customs.go.jp/english/c-answer_e/pdf/FAX5004e.pdf", "kind": "tax", "why": "Japan Customs FAQ on consumption tax exemption for exports"},
+    {"url": "https://www.nta.go.jp/publication/pamph/shohi/menzei/202506/pdf/0025006-106.pdf", "kind": "tax", "why": "National Tax Agency consumption tax pamphlet"},
+    {"url": "https://www.bullionstar.com/buy/product/gold-tanaka-100g", "kind": "dealer", "why": "Tanaka 100g bar dealer listing"}
+  ],
+  "AU": [
+    {"url": "https://ainsliebullion.com.au/buy/type/gold/id/23", "kind": "dealer", "why": "Ainslie Bullion Perth Mint bar retail prices"},
+    {"url": "https://jaggards.com.au/product/1oz-perth-mint-gold-minted-bar", "kind": "dealer", "why": "Jaggards 1oz Perth Mint bar listing, no GST"},
+    {"url": "https://bullionstar.com/buy/product/gold-perth-new-1-oz", "kind": "dealer", "why": "Bullionstar 1oz Perth Mint bar listing with GST note"},
+    {"url": "https://ainsliebullion.com.au/root/HistoricPricesheets/PricesheetEOFY2025.pdf", "kind": "dealer", "why": "Ainslie end-of-financial-year 2025 price sheet with buyback prices"},
+    {"url": "https://www.perthmint.com/gold-silver-prices/", "kind": "spot", "why": "Perth Mint live gold and silver prices"},
+    {"url": "https://www.ato.gov.au/businesses-and-organisations/gst-excise-and-indirect-taxes/gst/in-detail/rules-for-specific-transactions/reverse-charge-for-valuable-metals", "kind": "tax", "why": "ATO guidance on GST reverse charge for valuable metals"}
+  ],
+  "BD": [
+    {"url": "https://www.jagonews24.com/en/biz-econ/news/97521", "kind": "news", "why": "BAJUS revised gold rates per bhori including VAT"},
+    {"url": "https://www.thedailystar.net/business/news/govt-fixes-flat-vat-gold-diamonds-silver-4212521", "kind": "tax", "why": "Fixed VAT per bhori on gold and silver jewellery"},
+    {"url": "https://www.tbsnews.net/bangladesh/gold-price-crosses-tk-286000-bhori-bangladesh-hits-fresh-record-1346976", "kind": "news", "why": "Gold price per bhori record report"}
+  ],
+  "LK": [
+    {"url": "https://www.goodreturns.in/gold-rates/sri-lanka.html", "kind": "spot", "why": "Sri Lanka gold rate table by karat"},
+    {"url": "https://www.dailymirror.lk/business/Sri-Lanka-explores-local-gold-refinery-as-IMF-regulations-delay-import-tax-relief-for-jewellers/215-345876", "kind": "tax", "why": "Import taxes on gold and VAT on jewellery"},
+    {"url": "https://www.customs.gov.lk/wp-content/uploads/current_Tariff/Tariff%202022%20Chapter%20-%2071%20Final.pdf", "kind": "tax", "why": "Customs tariff chapter 71 with duty and VAT by HS code"}
+  ],
+  "NP": [
+    {"url": "https://kathmandupost.com/money/2026/11/19/gold-cheaper-by-rs78-400-a-tola-in-10-months", "kind": "news", "why": "Recent tola price movement and market drivers"},
+    {"url": "https://ekantipur.com/business/2026/08/06/en/gold-price-increases-by-8000-per-tola-14-55.html", "kind": "news", "why": "Hallmark gold per tola price changes"},
+    {"url": "https://farsightnepal.com/news/nepals-gold-sector-squeezed-by-quotas-taxes-and-smuggling/", "kind": "tax", "why": "Overview of duties, quotas and taxes on gold in Nepal"}
+  ],
+  "TH": [
+    {"url": "https://www.lbma.org.uk/publications/spotlight-on-thailand/chapter-2-introduction-and-regulations", "kind": "association", "why": "LBMA overview of Thai gold regulations and VAT"},
+    {"url": "https://www.rd.go.th/fileadmin/user_upload/kormor/7_Jewel_Business.pdf", "kind": "tax", "why": "Revenue Department guide for jewellery businesses"},
+    {"url": "https://www.bangkokbiznews.com/business/economic/1146453", "kind": "news", "why": "Daily Thai gold bar buy and sell prices"}
+  ],
+  "VN": [
+    {"url": "https://webgia.com/gia-vang/sjc/2001-09-28.html", "kind": "dealer", "why": "SJC buy and sell gold prices in Ho Chi Minh City"},
+    {"url": "https://vietnamnet.vn/en/ministry-of-finance-clarifies-new-gold-bar-tax-amid-market-concerns-2490002.html", "kind": "tax", "why": "Ministry of Finance on gold bar tax"},
+    {"url": "https://www.lbma.org.uk/publications/spotlight-on-vietnam/chapter-2-regulations-and-tax-regime", "kind": "association", "why": "LBMA overview of Vietnam gold regulations and VAT"}
+  ],
+  "PH": [
+    {"url": "https://www.fxstreet.com/news/philippines-gold-price-today-gold-rises-according-to-fxstreet-data-202601280500", "kind": "spot", "why": "Gold price per gram and tola in PHP"},
+    {"url": "https://business.inquirer.net/290917/rules-issued-to-exempt-from-tax-sale-of-gold-by-small-scale-miners-traders-to-bsp", "kind": "tax", "why": "Tax rules on gold sales to BSP"},
+    {"url": "https://www.pwc.com/ph/en/publications/pdf/pwcph-tax-code-2019.pdf", "kind": "tax", "why": "PwC Philippines tax code guide (VAT rates)"}
+  ],
+  "TW": [
+    {"url": "https://rate.bot.com.tw/gold/chart/2026-06-29/TWD/", "kind": "dealer", "why": "Bank of Taiwan gold passbook buy and sell prices per gram"},
+    {"url": "https://www.vatupdate.com/2025/11/13/taiwan-clarifies-uniform-invoice-rules-for-gold-sales-and-labor-fees-details-tax-exemptions", "kind": "tax", "why": "Business tax exemption for gold and taxable labour fees"},
+    {"url": "https://law-out.mof.gov.tw/EngLawContent.aspx?id=329&lan=E", "kind": "tax", "why": "MOF English law text on business tax exemption for pure gold"}
+  ],
+  "KR": [
+    {"url": "https://goldpricez.com/kr/gram", "kind": "spot", "why": "Gold price per gram in KRW"},
+    {"url": "https://global.krx.co.kr/contents/GLB/02/0201/0201050201/GLB0201050201.jsp", "kind": "association", "why": "KRX gold market VAT and tax treatment"},
+    {"url": "https://www.asiae.co.kr/en/article/2024030420491785930", "kind": "news", "why": "Korean gold market price news"}
+  ],
+  "NZ": [
+    {"url": "https://newzealandmint.com/collections/gold-bullion", "kind": "dealer", "why": "NZ Mint gold bullion listings and buyback process"},
+    {"url": "https://www.mygold.co.nz/buy/gold/perth-mint/minted-bars/", "kind": "dealer", "why": "MyGold Perth Mint minted bar prices"},
+    {"url": "https://www.mygold.co.nz/faqs/", "kind": "tax", "why": "Dealer FAQ on GST for bullion"}
+  ],
+  "KZ": [
+    {"url": "https://bcc.kz/en/personal/savings/gold-operations/", "kind": "dealer", "why": "CenterCredit gold bar buy and sell operations"},
+    {"url": "https://halykbank.kz/en/other/zoloto", "kind": "dealer", "why": "Halyk Bank gold bar buy and sell prices and VAT notes"},
+    {"url": "https://nationalbank.kz/en/news/informacionnye-soobshcheniya/18639", "kind": "association", "why": "National Bank of Kazakhstan gold bar market information"}
+  ],
+  "_global": [
+    {"url": "https://www.gold.org/goldhub/gold-focus?category=725&page=5", "kind": "spot", "why": "World Gold Council gold market data and commentary"},
+    {"url": "https://metalcharts.org/gold-price-in-jpy", "kind": "spot", "why": "Gold price history in JPY for FX conversion"},
+    {"url": "https://www.perthmint.com/gold-silver-prices/", "kind": "spot", "why": "Perth Mint live gold and silver prices"}
+  ]
+}

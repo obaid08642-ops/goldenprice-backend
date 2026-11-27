@@ -1,0 +1,53 @@
+{
+  "country": "CN",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Gold sold to consumers carries 13% VAT; since 1 Nov 2025 (to end-2027) jewellery makers withdrawing from the SGE deduct only 6%, pushing jewellery prices up, while bank investment bars keep favourable treatment. Brand jewellery is priced per gram above SGE spot with labour fee; no same-day local prices could be opened, so premiums and buyback are null.",
+  "sources": [
+    {
+      "name": "World Gold Council: China gold VAT reform",
+      "url": "https://www.gold.org/goldhub/gold-focus/2025/11/you-asked-we-answered-what-are-implications-vat-reform-china",
+      "what": "13% VAT; Nov 2025 reform: 6% deduction for non-investment gold; buy-back price excludes VAT (7 Nov 2025)"
+    },
+    {
+      "name": "China Daily: gold VAT trade reform",
+      "url": "https://www.chinadaily.com.cn/a/202511/07/WS690d2bf7a310bfcd27fc54bf.html",
+      "what": "Investment gold keeps exemption, consumption gold 6% deductible rate; Au99.99 at 914.6 yuan/g (Nov 2025)"
+    },
+    {
+      "name": "BullionStar: Gold Tax and VAT Across Asia",
+      "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",
+      "what": "China 13% VAT on gold to consumers; only licensed banks may import gold"
+    },
+    {
+      "name": "Caixin: Chow Tai Fook price hike",
+      "url": "https://www.caixinglobal.com/2025-10-21/chow-tai-fook-to-hike-gold-product-prices-by-up-to-18-102374122.html",
+      "what": "Chow Tai Fook fixed-price gold product hikes of 12-18% (Oct 2025); retail structure context"
+    },
+    {
+      "name": "LivePriceofGold China",
+      "url": "https://www.livepriceofgold.com/china-gold-price.html",
+      "what": "Spot 24K 782.00 CNY/g, USD/CNY 6.6563 at 27 Nov 2026 (reference only)"
+    }
+  ]
+}

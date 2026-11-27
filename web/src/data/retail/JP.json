@@ -1,0 +1,48 @@
+{
+  "country": "JP",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "10% consumption tax on gold purchases incl. bars; refunded to sellers when selling to a dealer; no import duty on gold (10% tax at import). Spot 27 Nov 2026 about 18,680 JPY/g (USD/JPY 159.3). Tanaka and other dealer retail prices could not be opened (hosts refused or out of stock), so premiums, buyback and making are null.",
+  "sources": [
+    {
+      "name": "BullionStar: Gold Tax and VAT Across Asia",
+      "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",
+      "what": "Country comparison of VAT/GST and import duty on gold (2026 edition)"
+    },
+    {
+      "name": "MetalCharts gold price in JPY",
+      "url": "https://metalcharts.org/gold-price-in-jpy",
+      "what": "27 Nov 2026 spot 18,679 JPY/g = USD 3,648/oz at 159.26 yen per dollar (ECB ref.)"
+    },
+    {
+      "name": "LivePriceofGold Japan",
+      "url": "https://www.livepriceofgold.com/japan-gold-price.html",
+      "what": "Spot 24K 18,712.69 JPY/g and USD/JPY 159.28 at 27 Nov 2026 05:30 UTC (cross-check)"
+    },
+    {
+      "name": "BullionStar Tanaka 100g listing",
+      "url": "https://www.bullionstar.com/buy/product/gold-tanaka-100g",
+      "what": "Tanaka 100g cast bar spec: 99.99%, out of stock, no price shown"
+    }
+  ]
+}

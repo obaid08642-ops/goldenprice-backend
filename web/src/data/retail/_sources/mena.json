@@ -1,0 +1,116 @@
+{
+  "EG": [
+    {"url": "https://www.bankygate.com/en/gold", "kind": "spot", "why": "Daily Egyptian gold board with jeweller buy/sell per karat"},
+    {"url": "https://goldpricez.com/eg", "kind": "spot", "why": "EGP gold rates by karat and gram with buy/sell columns"},
+    {"url": "https://www.zawya.com/en/business/commodities/gold-prices-in-egypt-rise-in-mid-tuesday-trading-404098", "kind": "news", "why": "Reports on Egyptian local gold price moves during trading"},
+    {"url": "https://www.vatupdate.com/2022/04/11/gold-vat-issue-resolved-by-egypts-tax-authority", "kind": "news", "why": "Coverage of the 14% VAT collection rules on gold and jewellery"},
+    {"url": "https://eta.gov.eg/sites/default/files/2024-02/VAT-Executive-Regulations-English.pdf", "kind": "tax", "why": "Official ETA VAT executive regulations (English)"},
+    {"url": "https://www.egyptindependent.com/egyptian-tax-authority-increases-average-making-charges-for-gold-and-silver-by-10-starting-july/", "kind": "news", "why": "Tax Authority average making-charge update for gold and silver"}
+  ],
+  "SA": [
+    {"url": "https://www.zahabprice.com/en-sa/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in SAR with buy/sell notes"},
+    {"url": "https://ruby.sa/en/rg-골드바-24k-골드-10g/p2065252578", "kind": "dealer", "why": "Saudi precious-metals dealer listing for a 10g 24K bar"},
+    {"url": "https://ruby.sa/en/24캐럿-금괴,-10그램,-디완-알-다합/p229308983", "kind": "dealer", "why": "Saudi dealer listing for a 10g Diwan Al-Dhahab 24K bar"},
+    {"url": "https://zatca.gov.sa/en/HelpCenter/guidelines/Documents/Guideline-For-the-Investment-Metals-Sector-under-VAT-Provisions.pdf", "kind": "tax", "why": "ZATCA guideline on VAT for the investment metals sector"},
+    {"url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/News-099.aspx", "kind": "tax", "why": "ZATCA notice on VAT applying to gold below 99% purity"},
+    {"url": "https://saudigazette.com.sa/article/623255/SAUDI-ARABIA/ZATCA-VAT-applicable-to-gold-if-its-purity-level-is-below-99", "kind": "news", "why": "Press report of the ZATCA 99% purity VAT rule"}
+  ],
+  "AE": [
+    {"url": "https://www.zahabprice.com/en-ae/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in AED with buy/sell notes"},
+    {"url": "https://www.dubai-online.com/essential/gold-rate/", "kind": "spot", "why": "Dubai per-gram gold rates by karat"},
+    {"url": "https://www.bullionstar.com/buy/product/gold-emirates-100g", "kind": "dealer", "why": "Dealer listing for Emirates Gold bars, with buy-back terms"},
+    {"url": "https://www.khaleejtimes.com/business/vat-in-uae/fta-clarifies-vat-on-gold-diamond-deals-in-uae", "kind": "tax", "why": "FTA clarification on VAT for gold and diamond deals"},
+    {"url": "https://www.pwc.com/m1/en/services/tax/me-tax-legal-news/2025/uae-new-cabinet-decision.html", "kind": "tax", "why": "2025 Cabinet Decision on reverse charge for precious metals"},
+    {"url": "https://www.meydanfz.ae/blog/vat-gold-jewellery-uae", "kind": "news", "why": "Guide to VAT on gold jewellery and making charges"}
+  ],
+  "KW": [
+    {"url": "https://www.zahabprice.com/en-kw/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in KWD with buy/sell notes"},
+    {"url": "https://goldpricez.com/kw/kg", "kind": "spot", "why": "Kuwait gold spot with buy and sell columns"},
+    {"url": "https://goldpricez.com/kw/24k/gram", "kind": "spot", "why": "Kuwait 24K per-gram rates with buy and sell"},
+    {"url": "https://www.kfh.com/en/home/Personal/news/2018/news-2018-01-58.html", "kind": "dealer", "why": "Kuwait Finance House bullion offering from 10 grams"},
+    {"url": "https://www.arabtimesonline.com/news/kuwaits-24k-gold-hits-kd3332", "kind": "news", "why": "Local press on 24K gold price levels in Kuwait"},
+    {"url": "https://www.goodreturns.in/gold-rates/kuwait.html", "kind": "spot", "why": "Kuwait 24K gold per-gram reference rates"}
+  ],
+  "QA": [
+    {"url": "https://goldmajlis-public.pages.dev/qa/bullion", "kind": "news", "why": "Third-party guide on Qatar bullion premiums and licensed dealers (unverified site)"},
+    {"url": "https://www.zahabprice.com/en-qa/bullion", "kind": "spot", "why": "Qatar bullion price table from 1g to 1kg"},
+    {"url": "https://goldpricez.com/qa/24k/gram", "kind": "spot", "why": "Qatar 24K per-gram and 10g rates with buy/sell"},
+    {"url": "https://www.goldrate24.com/gold-prices/middle-east/qatar/gram/24K/", "kind": "spot", "why": "Qatar 24K per-gram reference rate"},
+    {"url": "https://www.bankbazaar.com/gold-rate/gold-price-qatar.html", "kind": "spot", "why": "Qatar gold price reference page"},
+    {"url": "https://livepriceofgold.com/Qatar-gold-price.html", "kind": "spot", "why": "Live Qatar gold price page"}
+  ],
+  "TR": [
+    {"url": "https://halktv.com.tr/altin", "kind": "spot", "why": "Gram gold buy/sell in TRY, daily table"},
+    {"url": "https://bigpara.hurriyet.com.tr/altin/kapali-carsi-altin-fiyatlari/", "kind": "dealer", "why": "Kapalicarsi dealer buy/sell quotes for bullion and quarter gold"},
+    {"url": "https://www.gzt.com/ekonomi/altin-fiyatlari-bugun-ne-kadar-15-agustos-2026-kuyumcu-altin-fiyatlari-canli-kapali-carsi-gram-ve-ceyrek-altin-fiyati-4251460", "kind": "news", "why": "Daily report of jeweller and Kapalicarsi gram and quarter prices"},
+    {"url": "https://vergidegundem.com/documents/10156/5022893/22.08.2023.pdf/f3dfc437-42f7-4d77-b2fc-bd349ee38283", "kind": "tax", "why": "VAT exemption for bullion delivery under KDV Law 17/4-g"},
+    {"url": "https://gib.gov.tr/sites/default/files/fileadmin/Vergi_Harcamalari_Raporu/Vergi_Harcamalari_Raporu_2023.pdf", "kind": "tax", "why": "Official Revenue Administration tax expenditure report"},
+    {"url": "https://www.alomaliye.com/2020/09/14/altin-ve-altina-endeksli-islemlerin-vergisel-boyutu/", "kind": "tax", "why": "Tax treatment of gold and gold-indexed transactions (2020)"}
+  ],
+  "BH": [
+    {"url": "https://mssbars.com/blog/bahrain-gold-buying-guide-2025", "kind": "dealer", "why": "Bahrain Gold Souq dealer guide with 10g bar pricing and buyback notes"},
+    {"url": "https://kpmg.com/us/en/home/insights/2023/06/tnf-bahrain-vat-guides-treatment-supply-investment-grade-gold.html", "kind": "tax", "why": "NBR updated VAT guides on investment-grade gold"},
+    {"url": "https://www.kreston.com/vat-guide/bahrain/", "kind": "tax", "why": "Bahrain VAT guide with standard and zero rates"}
+  ],
+  "OM": [
+    {"url": "https://www.zahabprice.com/en-om/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in OMR with buy/sell notes"},
+    {"url": "https://goldpricez.com/om/24k/gram", "kind": "spot", "why": "Oman 24K per-gram rates with buy and sell"},
+    {"url": "https://taxsummaries.pwc.com/oman/corporate/other-taxes", "kind": "tax", "why": "PwC summary of Oman VAT rates and zero-rated supplies"}
+  ],
+  "JO": [
+    {"url": "https://www.zahabprice.com/en-jo/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in JOD"},
+    {"url": "https://www.petra.gov.jo/en/news/gold-prices-21-karat-sells-at-jd8320", "kind": "association", "why": "Petra report on Jewelers Syndicate local gold prices"},
+    {"url": "https://jordantimes.com/news/local/gold-prices-spike-new-tax-comes-into-force", "kind": "news", "why": "Coverage of new gold-sector tax and its price effect"}
+  ],
+  "MA": [
+    {"url": "https://www.goldpricedata.com/gold-rates/morocco/", "kind": "spot", "why": "Morocco gold rates reference"},
+    {"url": "https://taxsummaries.pwc.com/morocco/corporate/other-taxes", "kind": "tax", "why": "PwC summary of Moroccan VAT (TVA) rates"},
+    {"url": "https://www.casainvest.ma/sites/default/files/Guide%20Taxes%20MDM.pdf", "kind": "tax", "why": "Moroccan tax guide from Casablanca investment body"}
+  ],
+  "DZ": [
+    {"url": "https://www.zahabprice.com/en-dz/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in DZD"},
+    {"url": "https://taxsummaries.pwc.com/algeria/corporate/other-taxes", "kind": "tax", "why": "PwC summary of Algerian VAT and customs rates"},
+    {"url": "https://www.trade.gov/country-commercial-guides/algeria-customs-regulations", "kind": "tax", "why": "US commercial guide on Algerian customs duties (CIF basis)"}
+  ],
+  "TN": [
+    {"url": "https://www.zahabprice.com/en-tn/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in TND"},
+    {"url": "https://www.tunisienumerique.com/or-en-tunisie-le-gramme-reprend-10-dinars-mais-reste-loin-de-son-pic-proche-de-450-dinars/", "kind": "news", "why": "Tunisian press on gram gold and jewellery price moves"},
+    {"url": "https://taxsummaries.pwc.com/Tunisia/Corporate/Other-taxes", "kind": "tax", "why": "PwC summary of Tunisian VAT and customs"}
+  ],
+  "LB": [
+    {"url": "https://www.livepriceofgold.com/lebanon-gold-price-per-gram.html", "kind": "spot", "why": "Live Lebanon gold price per gram in LBP"},
+    {"url": "https://goldpricez.com/lb/gram", "kind": "spot", "why": "Lebanon gram gold rates with buy and sell"},
+    {"url": "https://www.goldrate24.com/gold-prices/middle-east/lebanon/", "kind": "spot", "why": "Lebanon gold price reference page"}
+  ],
+  "IQ": [
+    {"url": "https://www.zahabprice.com/en-iq/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in IQD"},
+    {"url": "https://goldpricez.com/iq/24k/gram", "kind": "spot", "why": "Iraq 24K per-gram rates with buy and sell"},
+    {"url": "https://goldpricedata.com/en/gold-prices-in-iraq.php", "kind": "spot", "why": "Iraq gold price reference in IQD"}
+  ],
+  "LY": [
+    {"url": "https://www.zahabprice.com/en-ly/bullion/10-gram", "kind": "spot", "why": "24K 10g bar price in LYD"},
+    {"url": "https://goldpricez.com/ly/24k/gram", "kind": "spot", "why": "Libya 24K per-gram rates with buy and sell"},
+    {"url": "https://www.livepriceofgold.com/libya-gold-price-per-gram.html", "kind": "spot", "why": "Live Libya gold price per gram"}
+  ],
+  "SD": [
+    {"url": "https://www.zahabprice.com/en-sd/bullion", "kind": "spot", "why": "Sudan bullion price table in SDG"},
+    {"url": "https://sudantribune.com/?p=317200", "kind": "news", "why": "Sudan Tribune on local gold prices and refinery buying price"},
+    {"url": "https://goldpricez.com/sd/24k/gram", "kind": "spot", "why": "Sudan 24K per-gram rates"}
+  ],
+  "YE": [
+    {"url": "https://goldpricez.com/ye/24k/gram", "kind": "spot", "why": "Yemen 24K per-gram rates with buy and sell"},
+    {"url": "https://www.zahabprice.com/en-ye/bullion", "kind": "spot", "why": "Yemen bullion price table"},
+    {"url": "https://www.policybazaar.com/gold-rate/yemen/", "kind": "spot", "why": "Yemen gold rate reference"}
+  ],
+  "IR": [
+    {"url": "https://goldpricez.com/ir/24k/gram", "kind": "spot", "why": "Iran 24K per-gram rates in IRR"},
+    {"url": "https://www.goldpricedata.com/en/gold-rates/iran/", "kind": "spot", "why": "Iran gold price reference in IRR"},
+    {"url": "https://www.livepriceofgold.com/iran-gold-price-per-gram.html", "kind": "spot", "why": "Live Iran gold price per gram"}
+  ],
+  "_global": [
+    {"url": "https://sdbullion.com/gold-price", "kind": "spot", "why": "Live spot gold price per ounce with 24-hour chart"},
+    {"url": "https://macrotrends.net/1333/historical-gold-prices-100-year-chart", "kind": "spot", "why": "Long-run gold price history for premium baselines"},
+    {"url": "https://tradingeconomics.com/united-arab-emirates/currency", "kind": "spot", "why": "USD/AED FX rate series"},
+    {"url": "https://wise.com/us/currency-converter/aed-to-usd-rate/history", "kind": "spot", "why": "AED/USD historical exchange rates"}
+  ]
+}

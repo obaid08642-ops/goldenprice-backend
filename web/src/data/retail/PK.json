@@ -1,0 +1,43 @@
+{
+  "country": "PK",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 3,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Prices quoted per tola (11.664 g) and per 10 g; 22K and 21K jewelry are common. Local jewelry supplies carry 3% sales tax (no input adjustment); monetary (unworked) gold is exempt; a separate 1% adjustable advance tax applies on sale of gold/silver. Large unofficial/smuggling channel exists. No sourced premium, making or buyback figures.",
+  "sources": [
+    {
+      "name": "TaxationPk - Gold and precious metals taxation in Pakistan",
+      "url": "https://taxationpk.com/gold-precious-metals-taxation-pakistan/",
+      "what": "3% sales tax on local jewelry supplies; monetary gold exempt from sales tax; 1% tax on sale of gold and silver"
+    },
+    {
+      "name": "Pakistan Observer - Gold prices in Pakistan 12 June 2026",
+      "url": "https://pakobserver.net/gold-prices-in-pakistan-today-per-tola-10-gram-rates-12-june-2026/",
+      "what": "Per tola and per 10 g rates by karat (22K, 21K, 18K) and silver; used for units and karat context only"
+    },
+    {
+      "name": "Daily Pakistan - Gold price per tola",
+      "url": "https://en.dailypakistan.com.pk/?p=292469",
+      "what": "Per tola and per 10 g rates, uniform across major cities; used for units context only"
+    }
+  ]
+}

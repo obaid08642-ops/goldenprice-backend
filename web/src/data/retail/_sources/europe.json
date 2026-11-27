@@ -1,0 +1,112 @@
+{
+  "GB": [
+    {"url": "https://www.bullionbypost.co.uk/gold-bars/10-gram-gold-bar/", "kind": "dealer", "why": "10g bar buy prices and buy-back terms from a large UK dealer"},
+    {"url": "https://www.thegoldbullion.co.uk/buy-gold-bars/10g-gold-bar/", "kind": "dealer", "why": "10g gold bar ask prices from a UK bullion dealer"},
+    {"url": "https://www.gold.co.uk/gold-bars/10-gram-gold-bars/", "kind": "dealer", "why": "10g bar listings with premiums over spot"},
+    {"url": "https://www.gold.co.uk/sell/", "kind": "dealer", "why": "UK bar and coin buy-back terms (percentage of spot)"},
+    {"url": "https://www.gov.uk/guidance/gold-acquisitions-imports-investments-and-vat-notice-70121", "kind": "tax", "why": "HMRC VAT Notice 701/21 on investment gold and jewellery"},
+    {"url": "https://www.lbma.org.uk/memorandum-of-understanding-mou-between-hmrc-lbma-and-lppm-2013", "kind": "association", "why": "LBMA/HMRC memorandum on bullion trade treatment"}
+  ],
+  "DE": [
+    {"url": "https://www.gold.de/kaufen/goldbarren/10-gramm/", "kind": "dealer", "why": "10g gold bar sale prices and premium notes"},
+    {"url": "https://www.goldsilbershop.de/goldbarren/10-g-goldbarren.html", "kind": "dealer", "why": "10g bar sale price list from a large German dealer"},
+    {"url": "https://www.goldsilbershop.de/ankauf/10-g-goldbarren-verkaufen.html", "kind": "dealer", "why": "buy-back terms for 10g bars, pricing tied to daily gold rate"},
+    {"url": "https://philoro.de/preisliste/goldbarren", "kind": "dealer", "why": "bar price list with buy and sell columns"},
+    {"url": "https://usth.bundesfinanzministerium.de/usth/2021/A-Umsatzsteuergesetz/VI-Sonderregelungen/Paragraf-25c/inhalt.html", "kind": "tax", "why": "BMF VAT handbook on section 25c investment gold exemption (2021 edition)"},
+    {"url": "https://www.verbraucherzentrale.de/wissen/geld-versicherungen/sparen-und-anlegen/gold-verkaufen-so-erzielen-sie-den-besten-preis-fuer-ihr-altgold-51721", "kind": "news", "why": "consumer advice on used-gold buyback and price comparison"}
+  ],
+  "CH": [
+    {"url": "https://www.goldsilbershop.de/goldbarren-aus-schweiz.html", "kind": "dealer", "why": "Swiss-made bar listings (German dealer, prices in EUR)"},
+    {"url": "https://www.goldavenue.com/de/kaufen/gold/10-g-goldbarren", "kind": "dealer", "why": "10g gold bar sale listings in German"},
+    {"url": "https://www.goldundco.at/shop/goldbarren-valcambi-suisse-10-gramm/", "kind": "dealer", "why": "Valcambi (Swiss refiner) 10g bar pricing"},
+    {"url": "https://www.estv.admin.ch/de/mehrwertsteuer", "kind": "tax", "why": "Swiss federal tax administration VAT (MWST) overview"},
+    {"url": "https://www.bazg.admin.ch/de/tipps-verkauf-von-altgold", "kind": "news", "why": "federal customs authority guidance on selling old gold"},
+    {"url": "https://www.srf.ch/sendungen/kassensturz-espresso/espresso/begehrtes-edelmetall-altgold-die-kette-der-grossmutter-nicht-unter-wert-verkaufen", "kind": "news", "why": "Swiss broadcaster report on old-gold buyback values"}
+  ],
+  "AT": [
+    {"url": "https://www.goldundco.at/shop/goldbarren-muenze-oesterreich-10-gramm/", "kind": "dealer", "why": "10g Austrian Mint bar sale prices"},
+    {"url": "https://philoro.at/preisliste/goldbarren", "kind": "dealer", "why": "Austrian bar price list with buy and sell columns"},
+    {"url": "https://www.bmf.gv.at/dam/jcr:df797299-ebab-49a2-a806-5de30683a5c5/Text_Goldm%C3%BCnzenV_2026.docx.pdf", "kind": "tax", "why": "BMF gold coin regulation (2026) listing investment gold coins"}
+  ],
+  "FR": [
+    {"url": "https://www.achat-or-et-argent.fr/or/lingots-et-lingotins/3551/lingot-10g-or", "kind": "dealer", "why": "10g bar buy and sell prices from a French dealer"},
+    {"url": "https://www.bdor.fr/achat-or-en-ligne/lingotin-or-10-grammes", "kind": "dealer", "why": "10g lingotin tiered sale prices"},
+    {"url": "https://bofip.impots.gouv.fr/bofip/2061-PGP.html", "kind": "tax", "why": "BOFIP official doctrine on VAT exemption for investment gold"}
+  ],
+  "BE": [
+    {"url": "https://www.achat-or-et-argent.fr/or/lingots-et-lingotins/3551/lingot-10g-or", "kind": "dealer", "why": "French dealer page with buy and sell prices (no Belgian 10g dealer found)"},
+    {"url": "https://www.bdor.fr/achat-or-en-ligne/lingotin-or-10-grammes", "kind": "dealer", "why": "French dealer 10g tiered pricing; mentions Belgian premium variation"},
+    {"url": "https://www.minfin.fgov.be/myminfin-rest/finform/public/pdf/3704", "kind": "tax", "why": "SPF Finances (Belgian federal finance) document; content not verified"}
+  ],
+  "ES": [
+    {"url": "https://www.inversoro.es/lingotes-de-oro/lingote-de-oro-10-gramos/", "kind": "dealer", "why": "Spanish dealer 10g bar prices and premium explanation"},
+    {"url": "https://www3.agenciatributaria.gob.es/static_files/Sede/Tema/IVA/Reg_tributacion/Oro/RE_oro_inversion/anexo_noveno.pdf", "kind": "tax", "why": "Agencia Tributaria annex on investment gold weight and purity"},
+    {"url": "https://taxdown.es/blog/oro-fiscalidad-hacienda", "kind": "news", "why": "tax guide on VAT exemption and capital gains for gold in Spain"}
+  ],
+  "IT": [
+    {"url": "https://stonexbullion.com/it/lingotti-oro/10g/", "kind": "dealer", "why": "Italian listings of 10g bars with VAT-inclusive prices and premiums"},
+    {"url": "https://www.goldavenue.com/it/comprare/oro/lingotti-d-oro-da-10-grammi", "kind": "dealer", "why": "10g gold bar listings and resale terms"},
+    {"url": "https://www.agenziaentrate.gov.it/portale/documents/20143/0/Consulenza+giuridica+n.+16+del+24+dicembre+2020.pdf/65d63bd2-ccbe-1a0b-4d51-fea31b533afd", "kind": "tax", "why": "Agenzia delle Entrate ruling on VAT exemption for investment gold"}
+  ],
+  "PT": [
+    {"url": "https://www.cgd.pt/Particulares/montra-caixa/Pages/Barra-em-ouro-10g.aspx", "kind": "dealer", "why": "Caixa Geral de Depositos 10g bar sale price (bank)"},
+    {"url": "https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/diplomas_legislativos/Documents/decreto-lei_362-99_de_16_de_setembro_i_serie.pdf", "kind": "tax", "why": "Decreto-Lei 362/99 investment gold VAT regime text"},
+    {"url": "https://www.deco.proteste.pt/investe/investimentos/outros-produtos/dossie/tudo-sobre-o-ouro/comprar-ouro-como-investimento-guia-pratico", "kind": "news", "why": "DECO consumer guide on buying and selling gold, buy-sell spread"}
+  ],
+  "NL": [
+    {"url": "https://www.hollandgold.nl/en/umicore-10-gram-goudbaar.html", "kind": "dealer", "why": "Dutch dealer 10g Umicore bar pricing"},
+    {"url": "https://thesilvermountain.nl/en/10-grams-goldbar-umicore", "kind": "dealer", "why": "Dutch dealer 10g bar sale price and buyback terms"},
+    {"url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/vrijstellingen", "kind": "tax", "why": "Belastingdienst page on VAT exemption for investment gold"}
+  ],
+  "PL": [
+    {"url": "https://stonexbullion.com/pl/sztabki-zlota/waga-10g/10g-zlota-sztabka-valcambi-green-gold/", "kind": "dealer", "why": "Polish-language 10g bar sale listing with premium"},
+    {"url": "https://en.mennicaskarbowa.pl/zlote-sztabki/612-10-g-sztabka-zlota.html", "kind": "dealer", "why": "Polish state mint 10g bar price (undated)"},
+    {"url": "https://ksiegowosc.infor.pl/podatki/vat/zwolnienia/310010,VAT-od-zlota-inwestycyjnego.html", "kind": "news", "why": "guide on VAT exemption for investment gold in Poland"}
+  ],
+  "RO": [
+    {"url": "https://tavex.ro/faq/aur-de-investitii", "kind": "dealer", "why": "Romanian exchange FAQ on investment gold buy and buyback"},
+    {"url": "https://cdn0.erstegroup.com/content/dam/ro/bcr/www_bcr_ro/Aur/Cotatii_Aur.pdf", "kind": "dealer", "why": "BCR bank indicative gold price sheet (dated 2025)"},
+    {"url": "https://static.anaf.ro/static/10/Anaf/AsistentaContribuabili_r/Titlul_6_TVA.htm", "kind": "tax", "why": "ANAF taxpayer guide, Title 6 VAT"}
+  ],
+  "GR": [
+    {"url": "https://suissegold.com/gr/product/argor-heraeus-10-gram-multigram-gold-bar", "kind": "dealer", "why": "Greek-language dealer listing for Argor-Heraeus 10g bar"},
+    {"url": "https://www.zahabprice.com/en-gr/bullion/10-gram", "kind": "spot", "why": "10g gold bar price page for Greece"},
+    {"url": "https://www.aade.gr/sites/default/files/2023-03/e_2012ada.pdf", "kind": "tax", "why": "AADE circular on list of investment gold coins for VAT exemption"}
+  ],
+  "UA": [
+    {"url": "https://privatbank.ua/banking-metals", "kind": "dealer", "why": "PrivatBank buy and sell prices for bank bars and coins"},
+    {"url": "https://finance.ua/ua/saving/prodazh-bankivskykh-metaliv-shcho-proponuiut-banky", "kind": "news", "why": "comparison of bank bullion buyback offers in Ukraine"},
+    {"url": "https://ch.tax.gov.ua/data/material/000/532/644131/32.pdf", "kind": "tax", "why": "State Tax Service document on VAT and taxes for bank metals (content not verified)"}
+  ],
+  "RU": [
+    {"url": "https://www.vbr.ru/investicii/zoloto/10-gramm/", "kind": "dealer", "why": "Russian bank 10g bar prices including Sberbank"},
+    {"url": "https://bankiros.ru/metall/zoloto/10gramm", "kind": "dealer", "why": "bank bar price comparison for 10g gold"},
+    {"url": "https://www.consultant.ru/law/podborki/dragocennye_metally_nds/", "kind": "tax", "why": "legal reference on VAT for precious metals (Russia)"}
+  ],
+  "SE": [
+    {"url": "https://www.libertysilver.se/kopa/produkt/greek100eur", "kind": "dealer", "why": "Swedish dealer listing with per-gram price and premium"},
+    {"url": "https://hurbra.se/salja-guld-2026/", "kind": "news", "why": "comparison of Swedish gold buyers and buyback rates"},
+    {"url": "https://www.skatteverket.se/download/18.84f6651040cdcb1b480002471", "kind": "tax", "why": "Skatteverket VAT handbook section on investment gold (older edition)"}
+  ],
+  "CZ": [
+    {"url": "https://ceskamincovna.cz/en/investment-gold-bar-10g-900-3017-d", "kind": "dealer", "why": "Czech Mint 10g Argor-Heraeus bar buyback and sale prices"},
+    {"url": "https://www.bessergold.cz/en/zlaty-slitek-10-g-argor-heraeus-svycarsko.html", "kind": "dealer", "why": "Czech dealer 10g bar pricing"},
+    {"url": "https://portal.pohoda.cz/dane-ucetnictvi-mzdy/dph/zvlastni-rezim-pro-investicni-zlato", "kind": "tax", "why": "accountant guide on the Czech special VAT regime for investment gold"}
+  ],
+  "HU": [
+    {"url": "https://www.aranypiac.hu/arlista", "kind": "dealer", "why": "Hungarian dealer price list with buy and sell columns (last updated 2025)"},
+    {"url": "https://aranypiac.hu/szakerto-tippek/adozasi-tudnivalok-befektetesi-arany", "kind": "news", "why": "dealer guide on tax treatment of investment gold"},
+    {"url": "https://njt.jog.gov.hu/jogszabaly/2026-2-20-8K", "kind": "tax", "why": "Hungarian legal database entry (content not verified)"}
+  ],
+  "IE": [
+    {"url": "https://assay.ie/buy-gold/", "kind": "dealer", "why": "Irish dealer buy-gold page with 10g bar pricing (undated)"},
+    {"url": "https://www.bullionbypost.ie/info/how-to-buy-gold/vat-on-silver-gold/", "kind": "dealer", "why": "dealer guide on VAT treatment of gold bullion in Ireland"},
+    {"url": "https://www.revenue.ie/en/vat/vat-rates/search-vat-rates/I/investment-gold-coin-bar-or-wafer-supply-of-investment-gold-.aspx", "kind": "tax", "why": "Revenue Ireland VAT rates entry: investment gold supply exempt"}
+  ],
+  "_global": [
+    {"url": "https://metalcharts.org/xauusd-historical-data", "kind": "spot", "why": "daily XAU/USD spot history with CSV download"},
+    {"url": "https://www.macrotrends.net/2627/gold-price-last-ten-years", "kind": "spot", "why": "10-year daily gold price in USD"},
+    {"url": "https://ycharts.com/indicators/gold_price", "kind": "spot", "why": "London PM fix gold price series in USD"},
+    {"url": "https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/eurofxref-graph-usd.en.html", "kind": "spot", "why": "ECB EUR/USD reference rate history for FX conversion"}
+  ]
+}

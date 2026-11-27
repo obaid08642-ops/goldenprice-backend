@@ -1,0 +1,43 @@
+{
+ "country": "AE",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 22,
+ "gold": {
+  "vatJewelryPct": 5,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Retail gold and jewelry sales carry 5% VAT; B2B trade between registered dealers uses reverse charge and investment-grade metals are zero-rated per FTA. Dubai retail board is government-promoted; only the making charge is negotiable. Dubai 24K board 437.50 AED/g on 27 Nov 2026. Bar premiums not computable from opened pages.",
+ "sources": [
+  {
+   "name": "Khaleej Times (FTA clarification)",
+   "url": "https://www.khaleejtimes.com/business/vat-in-uae/fta-clarifies-vat-on-gold-diamond-deals-in-uae",
+   "what": "Retail gold and jewelry fully subject to 5% VAT; reverse charge only B2B; investment-grade metals zero-rated"
+  },
+  {
+   "name": "Dubai Online gold rate",
+   "url": "https://www.dubai-online.com/essential/gold-rate/",
+   "what": "27 Nov 2026 retail per-gram rates (24K 437.50, 22K 405.25 AED); making charge is the negotiable part, low vs other markets"
+  },
+  {
+   "name": "Khaleej Times gold prices",
+   "url": "https://www.khaleejtimes.com/markets/dubai-gold-prices-oct-16",
+   "what": "Dubai per-gram rates by karat with spot context (16 Oct 2025 article)"
+  }
+ ]
+}

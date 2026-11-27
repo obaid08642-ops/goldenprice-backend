@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
-import { LANGS, dirOf, type Lang } from "../data/languages";
+import "../i18n/load";
+import { LANGS, dirOf, bcpOf, type Lang } from "../data/languages";
 import { COUNTRIES, langsFor, type Country } from "../data/countries";
 import { ASSETS } from "../data/assets";
 import { t } from "../i18n/ui";
 import { countryName } from "../lib/format";
-import { url, SITE_NAME } from "../lib/paths";
+import { url, SITE_NAME, pageExists } from "../lib/paths";
 import { assetName } from "../lib/render";
 
 interface Props {
@@ -17,13 +18,14 @@ const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
 const path = url(lang, country.code, slug);
 const canonical = site + path;
 const bySlug = (s: string) => ASSETS.find((a) => a.slug === s)!;
-const nav = [["gold", ""], ["silver", "silver"], ["copper", "copper"], ["bitcoin", "bitcoin"], ["brent-oil", "brent-oil"]] as const;
+const nav = [["gold", ""], ["silver", "silver"], ["bitcoin", "bitcoin"]] as const;
+const allSlugs = ASSETS.map((a) => a.slug);
 // country switch keeps the current page; language falls back to the country's first language (or English)
-const countryOpts = COUNTRIES.map((c) => ({ code: c.code, cur: c.cur, name: countryName(lang, c.code), href: url(langsFor(c).includes(lang) ? lang : langsFor(c)[0], c.code, slug) })).sort((a, b) => a.name.localeCompare(b.name, lang));
+const countryOpts = COUNTRIES.map((c) => ({ code: c.code, cur: c.cur, name: countryName(lang, c.code), href: url(langsFor(c).includes(lang) ? lang : langsFor(c)[0], c.code, pageExists(langsFor(c).includes(lang) ? lang : langsFor(c)[0], c, slug, allSlugs) ? slug : "") })).sort((a, b) => a.name.localeCompare(b.name, lang));
 const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap";
 ---
 <!doctype html>
-<html lang={lang} dir={dirOf(lang)}>
+<html lang={bcpOf(lang)} dir={dirOf(lang)}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -47,12 +49,14 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
     <nav class="nav" aria-label="Main">
       {nav.map(([a, s]) => <a href={url(lang, country.code, s)} class:list={{ on: s === slug }}>{assetName(lang, bySlug(a))}</a>)}
       <a href={url(lang, country.code, "markets")} class:list={{ on: slug === "markets" }}>{t(lang, "nav_all")}</a>
+      <a href={url(lang, country.code, "rates")} class:list={{ on: slug === "rates" }}>{t(lang, "nav_rates")}</a>
+      <a href={url(lang, country.code, "calculators")} class:list={{ on: slug === "calculators" }}>{t(lang, "nav_calc")}</a>
     </nav>
     <select class="sel" id="sel-country" aria-label={t(lang, "country")}>
       {countryOpts.map((o) => <option value={o.href} selected={o.code === country.code}>{o.name} · {o.cur}</option>)}
     </select>
     <select class="sel" id="sel-lang" aria-label={t(lang, "language")}>
-      {LANGS.map((l) => <option value={url(l.code, country.code, slug)} selected={l.code === lang}>{l.native}</option>)}
+      {LANGS.map((l) => <option value={url(l.code, country.code, pageExists(l.code, country, slug, allSlugs) ? slug : "")} selected={l.code === lang}>{l.native}</option>)}
     </select>
     <button class="ic" id="theme-btn" type="button" aria-label={t(lang, "theme")}>◐</button>
   </div></header>

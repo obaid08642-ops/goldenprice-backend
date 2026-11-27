@@ -1,0 +1,79 @@
+{
+  "US": [
+    {"url": "https://www.pacificpreciousmetals.com/product/1137-10g-sunshine-minting-gold-bar", "kind": "dealer", "why": "Dealer listing for 10g gold bar with buyback price shown"},
+    {"url": "https://sdbullion.com/gold/gold-bars/10-gram-gold-bars", "kind": "dealer", "why": "Dealer category page for 10g gold bars"},
+    {"url": "https://www.boldpreciousmetals.com/product/10-gram-gold-bars", "kind": "dealer", "why": "Dealer listing for 10g gold bars from refiners"},
+    {"url": "https://taxfoundation.org/blog/state-sales-tax-gold-bullion/", "kind": "tax", "why": "Neutral tax-policy summary of state sales tax on gold bullion"},
+    {"url": "https://cdtfa.ca.gov/formspubs/pub64/taxability-of-sales-and-labor-charges.htm", "kind": "tax", "why": "California tax authority guide on taxability of jewelry sales and labor charges"},
+    {"url": "https://www.cbsnews.com/news/states-with-no-sales-tax-on-silver-and-gold", "kind": "news", "why": "News overview of states exempting gold and silver from sales tax"}
+  ],
+  "ZA": [
+    {"url": "https://wealth.metcon.co.za/?p=1482", "kind": "dealer", "why": "South African dealer page for 10g fine gold bar with buyback discount"},
+    {"url": "https://wealth.metcon.co.za/product/10g-fine-gold-minted-bar-mc-squared/", "kind": "dealer", "why": "South African dealer listing for 10g fine gold minted bar"},
+    {"url": "https://www.sars.gov.za/media-release/sars-commissioner-welcomes-constitutional-court-judgement-on-zero-rating-of-gold/", "kind": "tax", "why": "SARS release on VAT zero-rating of gold after 2026 Constitutional Court ruling"},
+    {"url": "https://www.sars.gov.za/lapd-vat-g18-faqs-on-domestic-reverse-charge-regulations", "kind": "tax", "why": "SARS FAQ on domestic reverse charge for valuable metal (gold, jewellery)"},
+    {"url": "https://globaltaxnews.ey.com/news/2026-1477", "kind": "news", "why": "EY tax news on the 2026 gold VAT zero-rating judgment"},
+    {"url": "https://goldpricez.com/za/gram", "kind": "spot", "why": "Local rand gold price per gram aggregator"}
+  ],
+  "CA": [
+    {"url": "https://www.pacificpreciousmetals.com/product/532524-10g-rcm-gold-bar", "kind": "dealer", "why": "Dealer listing for 10g Royal Canadian Mint gold bar with buyback price"},
+    {"url": "https://www.apmex.com/product/320165/10-gram-gold-bar-royal-canadian-mint-in-assay", "kind": "dealer", "why": "Dealer listing for 10g Royal Canadian Mint gold bar"},
+    {"url": "https://lawyerinfo.ca/guides/money-taxes-ip/cra-tax-disputes/cra-audits-on-gst-hst-exemptions-for-bullion-and-precious-metals-in-canada/", "kind": "news", "why": "Practitioner guide on GST/HST exemption for bullion and jewellery (not CRA primary source)"}
+  ],
+  "MX": [
+    {"url": "https://goldpricez.com/lang-es/mx", "kind": "spot", "why": "Mexican peso gold price aggregator with buy and sell per gram"},
+    {"url": "https://www.goldpricedata.com/es/gold-rates/mexico", "kind": "spot", "why": "Mexican peso gold price tracker with bar estimate and tax note"},
+    {"url": "https://www.sat.gob.mx/minisitio/NormatividadRMFyRGCE/documentos2025/rgce/anexos/Anexo27delasRGCEpara2025.pdf", "kind": "tax", "why": "SAT official annex from search on IVA and gold; relevance to retail VAT unverified"}
+  ],
+  "BR": [
+    {"url": "https://goldpricez.com/lang-pt/br", "kind": "spot", "why": "Brazilian real gold price aggregator with buy and sell per gram"},
+    {"url": "https://www.gov.br/receitafederal/pt-br/portais/nf-e-ouro", "kind": "tax", "why": "Receita Federal portal on NF-e Ouro and gold trade rules"},
+    {"url": "https://www.infomoney.com.br/onde-investir/ouro-tambem-paga-imposto-entenda-regras-e-quando-o-investidor-deve-declarar-ao-fisco/", "kind": "news", "why": "Financial news explainer on taxation of gold (ICMS, IOF, income tax)"}
+  ],
+  "AR": [
+    {"url": "https://goldpricez.com/lang-es/ar", "kind": "spot", "why": "Argentine peso gold price aggregator with buy and sell per gram"},
+    {"url": "https://www.argentina.gob.ar/sites/default/files/tributos_vigentes_-_periodo_al_30.06.2025.pdf", "kind": "tax", "why": "Government list of current tributes, useful for IVA and gold context"},
+    {"url": "https://www.cronista.com/finanzas-mercados/una-oportunidad-de-oro-cuanto-cuesta-el-gramo-hoy-en-argentina-y-como-comprarlo", "kind": "news", "why": "Financial news on local gold bar pricing and buy/sell spread"}
+  ],
+  "CO": [
+    {"url": "https://www.banrep.gov.co/en/node/65186", "kind": "spot", "why": "Banco de la Republica buy and sell reference for precious metals"},
+    {"url": "https://normograma.dian.gov.co/dian/compilacion/docs/oficio_dian_17977_2025.htm", "kind": "tax", "why": "DIAN ruling on withholding for gold, scrap and used jewellery purchases"},
+    {"url": "https://goldpricez.com/lang-es/co", "kind": "spot", "why": "Colombian peso gold price aggregator with per gram figure"}
+  ],
+  "CL": [
+    {"url": "https://tienda.casamoneda.cl/wp-content/uploads/2025/11/terminos-condiciones-compraventa-oro-1763126212957978117194.pdf", "kind": "dealer", "why": "Casa de Moneda de Chile gold buy/sell terms and conditions"},
+    {"url": "https://www.sii.cl/destacados/iva_bienes/", "kind": "tax", "why": "SII official page on VAT for goods"},
+    {"url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/10/12/el-creciente-negocio-de-venta-de-lingotes-de-oro-no-pagan-iva-en-chile.shtml", "kind": "news", "why": "News on VAT-free status of 24K gold bars in Chile"}
+  ],
+  "PE": [
+    {"url": "https://tucambista.pe/cotizacion-del-oro-en-peru-hoy", "kind": "dealer", "why": "Peruvian currency exchange site with gold buy and sell quotes"},
+    {"url": "https://orientacion.sunat.gob.pe/node/1098", "kind": "tax", "why": "SUNAT guidance on IGV for sales of goods"},
+    {"url": "https://www.goldrate24.com/es/precios-del-oro/america-del-sur/peru/gram/", "kind": "spot", "why": "Peruvian sol gold price per gram aggregator"}
+  ],
+  "NG": [
+    {"url": "https://goldpricez.com/ng/gram", "kind": "spot", "why": "Naira gold price per gram aggregator"},
+    {"url": "https://kpmg.com/ng/en/insights/2026/10/nigerias-vat-reset.html", "kind": "news", "why": "KPMG analysis of Nigeria VAT reset (2026)"},
+    {"url": "https://www.livepriceofgold.com/nigeria-gold-price-per-gram.html", "kind": "spot", "why": "Naira live gold price per gram with bid and ask"}
+  ],
+  "KE": [
+    {"url": "https://www.goldrate24.com/gold-prices/africa/kenya/", "kind": "spot", "why": "Kenyan shilling gold price aggregator"},
+    {"url": "https://www.kra.go.ke/images/publications/List-of-Goods-and-Services-Listed-in-First-and-Second-Schedule-of-the-VAT-Act-TIMS---July-2026.pdf", "kind": "tax", "why": "KRA list of VAT-exempt and zero-rated goods (July 2026)"},
+    {"url": "https://www.kenyans.co.ke/news/125329-kra-releases-updated-list-vat-exempt-zero-rated-goods", "kind": "news", "why": "News coverage of KRA updated VAT-exempt and zero-rated list"}
+  ],
+  "GH": [
+    {"url": "https://goldpricez.com/gh/24k/gram", "kind": "spot", "why": "Cedi gold price per gram aggregator for 24K"},
+    {"url": "https://www.vatupdate.com/2026/09/04/ghana-exempts-mandatory-gold-sales-to-the-state-from-vat/", "kind": "news", "why": "VAT update on exemption for mandatory gold sales to the state (2026)"},
+    {"url": "https://gra.gov.gh/domestic-tax/tax-types/vat-exemptions/", "kind": "tax", "why": "Ghana Revenue Authority VAT exemptions page"}
+  ],
+  "ET": [
+    {"url": "https://www.livepriceofgold.com/ethiopia-gold-price-per-gram.html", "kind": "spot", "why": "Birr gold price per gram with live bid and ask"},
+    {"url": "https://globaltaxnews.ey.com/news/2024-1317-ethiopia-issues-directive-to-review-list-of-goods-exempt-from-vat", "kind": "news", "why": "EY news on Ethiopian directive reviewing VAT-exempt goods list"},
+    {"url": "https://www.mofed.gov.et/media/filer_public/a7/ff/a7ff1a1d-c013-444d-8315-7803422b9782/vat_proclamation_latest_draft-_english_-2023_1.pdf", "kind": "tax", "why": "Ministry of Finance VAT proclamation draft (2023); verify against final text"}
+  ],
+  "_global": [
+    {"url": "https://www.apmex.com/spotprices/gold-price", "kind": "spot", "why": "Live USD spot gold price"},
+    {"url": "https://www.usagold.com/reference/prices/goldhistory.php", "kind": "spot", "why": "Daily USD gold price history"},
+    {"url": "https://gold.org/data/gold-price", "kind": "spot", "why": "World Gold Council gold price data across timeframes"},
+    {"url": "https://metalcharts.org/xauusd-historical-data", "kind": "spot", "why": "XAU/USD daily historical data with CSV download"}
+  ]
+}
