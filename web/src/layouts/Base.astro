@@ -47,7 +47,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
 </head>
 <body>
   <header class="hd"><div class="hd-in">
-    <a class="lg" href={url(lang, country.code)}><i>G</i>{SITE_NAME}</a>
+    <a class="lg" href={url(lang, country.code)}><i>P</i>{SITE_NAME}</a>
     <nav class="nav" aria-label="Main">
       {nav.map(([a, s]) => <a href={url(lang, country.code, s)} class:list={{ on: s === slug }}>{assetName(lang, bySlug(a))}</a>)}
       <a href={url(lang, country.code, "markets")} class:list={{ on: slug === "markets" }}>{t(lang, "nav_all")}</a>

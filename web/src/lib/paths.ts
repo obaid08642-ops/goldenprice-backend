@@ -3,7 +3,7 @@ import { LANG_CODES, type Lang } from "../data/languages";
 import { ASSETS } from "../data/assets";
 import { hasCosts } from "../data/costs";
 import { hasCoins } from "../data/coins";
-export const SITE_NAME = "Golden Price"; // brand placeholder until the domain/name is final
+export const SITE_NAME = "Price Radar"; // brand name; change here only
 /** home (gold) = "", markets = "markets", rates = "rates", calculators = "calculators", other assets = slug */
 export const url = (lang: Lang, cc: string, slug = "") => `/${lang}/${cc.toLowerCase()}/${slug && slug !== "gold" ? slug + "/" : ""}`;
 // Primary = the country's own languages + English: fully built (every page) and indexed.

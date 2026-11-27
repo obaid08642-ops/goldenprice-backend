@@ -47,7 +47,15 @@ export function mountClients({ app, okAdmin, limited, clientIp, EMAIL_RE, clean,
     const st = clean(req.query.status, 20);
     const rows = st && st !== "all" ? await sql`SELECT id, email, purpose, requested_plan, requested_scopes, status, plan, scopes, created_at, approved_at, expires_at, provider, note, (api_key IS NOT NULL) AS has_key FROM api_clients WHERE status = ${st} ORDER BY id DESC LIMIT 200`
       : await sql`SELECT id, email, purpose, requested_plan, requested_scopes, status, plan, scopes, created_at, approved_at, expires_at, provider, note, (api_key IS NOT NULL) AS has_key FROM api_clients ORDER BY id DESC LIMIT 200`;
-    res.json({ clients: rows, plans: PLANS });
+    // overview for the admin: what is active, what is about to expire, expected monthly income (list prices of active paid plans)
+    const act = await sql`SELECT plan, expires_at FROM api_clients WHERE status = 'approved' AND (expires_at IS NULL OR expires_at > now())`;
+    const soon = Date.now() + 7 * 864e5;
+    const summary = { activeFree: act.filter((a) => a.plan === "free").length, activePaid: act.filter((a) => a.plan !== "free").length,
+      expiringSoon: act.filter((a) => a.plan !== "free" && a.expires_at && new Date(a.expires_at).getTime() < soon).length,
+      expired: (await sql`SELECT count(*)::int AS n FROM api_clients WHERE status = 'expired' OR (status = 'approved' AND expires_at <= now())`)[0].n,
+      pending: (await sql`SELECT count(*)::int AS n FROM api_clients WHERE status = 'pending'`)[0].n,
+      monthlyListPriceUsd: act.reduce((t, a) => t + (PLANS[a.plan]?.price || 0), 0) };
+    res.json({ clients: rows, plans: PLANS, summary });
   }));
   app.post("/api/admin/clients/:id/approve", adm(async (req, res) => {
     const id = Number(req.params.id), plan = PLANS[req.body?.plan] ? req.body.plan : "free";
@@ -172,5 +180,5 @@ export function mountClients({ app, okAdmin, limited, clientIp, EMAIL_RE, clean,
   app.get("/v1/rates", requireKey, (req, res) => { const r = getRates(); r.updated ? res.json(r) : res.status(503).json({ error: "rates not ready" }); });
   app.get("/v1/symbols", requireKey, (req, res) => res.json({ symbols: CATALOG.map((c) => ({ symbol: c.sym, name: c.name, kind: c.kind, inScope: inScope(req.apiClient.scopes, c) })) }));
   app.get("/v1/usage", requireKey, (req, res) => res.json({ plan: req.apiClient.plan, scopes: req.apiClient.scopes, usedToday: req.apiClient.used, dailyLimit: req.apiClient.p.daily, perMinute: req.apiClient.p.perMin, expiresAt: req.apiClient.expires_at }));
-  app.get("/v1/plans", (req, res) => res.json({ plans: PLANS, categories: KINDS }));
+  app.get("/v1/plans", (req, res) => res.json({ plans: PLANS, categories: KINDS, providers: { card: !!(env.LS_API_KEY && env.LS_STORE_ID), crypto: !!(env.NOWPAYMENTS_API_KEY && env.NOWPAYMENTS_IPN_SECRET) } }));
 }

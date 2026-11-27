@@ -1,4 +1,4 @@
-# GoldenPrice website (Astro, static)
+# Price Radar website (Astro, static)
 
 Static site: one page per language x country x asset, generated at build time from the backend API (first paint and SEO), then refreshed live in the browser.
 

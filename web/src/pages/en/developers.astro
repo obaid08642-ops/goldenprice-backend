@@ -75,6 +75,8 @@ curl -H "x-api-key: YOUR_KEY" ${api}/v1/rates`}</pre>
     const plan = $("plan") as HTMLSelectElement;
     const sync = () => { const free = plan.value === "free"; $("pay-row").hidden = free; $("all-row").hidden = !(plan.value === "pro" || plan.value === "business"); $("req-btn").textContent = free ? "Request free key" : "Continue to payment"; };
     plan.addEventListener("change", sync); sync();
+    // only offer payment methods the server has switched on
+    fetch(`${boot.api}/v1/plans`).then((r) => r.json()).then((j) => { const sel = document.querySelector('select[name="provider"]') as HTMLSelectElement; for (const o of [...sel.options]) if (j.providers && !j.providers[o.value]) o.remove(); if (j.providers && !sel.options.length) { for (const o of [...plan.options]) if (o.value !== "free") o.remove(); } }).catch(() => {});
     const showStatus = (j: any, id: number, token: string) => {
       $("status-box").hidden = false;
       const t = $("status-text"); t.className = "msg" + (j.status === "approved" ? " ok" : "");

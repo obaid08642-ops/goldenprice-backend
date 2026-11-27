@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
 <meta name="robots" content="noindex,nofollow"/>
-<title>Admin • GoldenPrice</title>
+<title>Admin • Price Radar</title>
 <style>
   :root{--bg:#fff;--fg:#111;--mut:#666;--line:#e4e4e4;--card:#fafafa;--ok:#0a7;--warn:#b60;--bad:#c00}
   @media (prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#eee;--mut:#9aa;--line:#2b2f38;--card:#1d2027}}
@@ -25,7 +25,7 @@
 </style>
 </head>
 <body>
-<h1>Admin • GoldenPrice</h1>
+<h1>Admin • Price Radar</h1>
 
 <div class="bar">
   <label for="tok">Admin token</label>
@@ -39,7 +39,8 @@
 <div class="grid" id="cards"></div>
 
 <h3>API clients</h3>
-<div class="bar"><select id="cl-st" class="sel"><option value="pending">pending</option><option value="approved">approved</option><option value="awaiting_payment">awaiting payment</option><option value="rejected">rejected</option><option value="disabled">disabled</option><option value="all">all</option></select><button onclick="loadClients()">Load</button></div>
+<div class="bar"><select id="cl-st" class="sel"><option value="pending">pending</option><option value="approved">approved</option><option value="expired">expired</option><option value="awaiting_payment">awaiting payment</option><option value="rejected">rejected</option><option value="disabled">disabled</option><option value="all">all</option></select><button onclick="loadClients()">Load</button></div>
+<div id="cl-sum" class="muted"></div>
 <div id="clients" class="grid"></div>
 
 <h3>Danger zone</h3>
@@ -103,6 +104,7 @@ async function setManual(symbol, raw, force = false) {
 
 async function loadClients() {
   let j; try { j = await api("/api/admin/clients?status=" + $("#cl-st").value); } catch (e) { log("clients error: " + e.message); return; }
+  const m = j.summary || {}; $("#cl-sum").textContent = `active free: ${m.activeFree} · active paid: ${m.activePaid} · expiring in 7 days: ${m.expiringSoon} · expired: ${m.expired} · pending approval: ${m.pending} · monthly income at list prices: $${m.monthlyListPriceUsd}`;
   const c = $("#clients"); c.innerHTML = "";
   for (const k of j.clients) {
     const d = document.createElement("div"); d.className = "card";
