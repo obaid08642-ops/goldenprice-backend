@@ -1,0 +1,38 @@
+{
+ "country": "OM",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": 5,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "VAT 5% (since Apr 2021); 24K bullion treated as VAT-exempt/zero-rated per a price-calculator site, not confirmed from the tax authority. Calculator site quotes jewelry making charges of roughly OMR 4-10/g; dealer bar premiums not found.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Oman",
+   "url": "https://taxsummaries.pwc.com/oman/corporate/other-taxes",
+   "what": "Standard VAT 5% from 16 Apr 2021 (reviewed 7 Jul 2026)."
+  },
+  {
+   "name": "ZahabPrice Oman",
+   "url": "https://www.zahabprice.com/en-om/bullion/10-gram",
+   "what": "Page states 24K bullion VAT-exempt and 5% VAT on lower karats; modelled (not dealer) prices, 27 Nov 2026; not used for premiums."
+  }
+ ]
+}

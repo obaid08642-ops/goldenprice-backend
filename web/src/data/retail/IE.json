@@ -1,0 +1,55 @@
+{
+ "country": "IE",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 23,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 29.5,
+   "2.5g": 15.8,
+   "5g": 11.7,
+   "10g": 8.7,
+   "20g": 4.3,
+   "31.1g": 4.3,
+   "50g": 4.1,
+   "100g": 4.6,
+   "250g": 4.0,
+   "500g": 3.1,
+   "1000g": 2.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Premiums use the dealer's lowest 'from' price per size, so they can be slightly non-monotonic. Dealer was not buying back bullion bars per a search snippet (unverified). Investment gold exempt; jewelry at 23% standard VAT.",
+ "sources": [
+  {
+   "name": "BullionByPost Ireland gold bars",
+   "url": "https://www.bullionbypost.ie/gold-bars/",
+   "what": "Lowest 'from' prices per bar size vs displayed spot 3320.60 EUR/oz (about 106.76 EUR/g), fetched 2026-11-27"
+  },
+  {
+   "name": "Revenue Ireland VAT rates",
+   "url": "https://www.revenue.ie/en/vat/vat-rates/search-vat-rates/I/investment-gold-coin-bar-or-wafer-supply-of-investment-gold-.aspx",
+   "what": "Supply of investment gold coins, bars, wafers is VAT exempt"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate IE 23% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

@@ -1,0 +1,51 @@
+{
+ "country": "NL",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 21,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 8.2,
+   "100g": 2.1
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "10 g premium is the average of two dealers (7.7% and 8.7%). Both dealers advertise a buyback guarantee but no percentage was captured. Investment gold is VAT exempt.",
+ "sources": [
+  {
+   "name": "Holland Gold 10g Umicore",
+   "url": "https://www.hollandgold.nl/en/umicore-10-gram-goudbaar.html",
+   "what": "10g ask 1159.78 EUR vs spot 106.689 EUR/g (8.7%); C. Hafner 100g 10892.94 EUR (2.1%), 2026-11-27"
+  },
+  {
+   "name": "The Silver Mountain 10g Umicore",
+   "url": "https://thesilvermountain.nl/en/10-grams-goldbar-umicore",
+   "what": "10g ask 1149.00 EUR vs metal value 1067.10 EUR (7.7%), 2026-11-27"
+  },
+  {
+   "name": "Belastingdienst VAT exemptions",
+   "url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/belastingdienst/zakelijk/btw/tarieven_en_vrijstellingen/vrijstellingen",
+   "what": "Beleggingsgoud listed among VAT exempt supplies"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate NL 21% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

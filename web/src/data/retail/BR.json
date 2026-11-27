@@ -1,0 +1,33 @@
+{
+ "country": "BR",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "InfoMoney: gold held as a financial asset pays 1% IOF on the first purchase plus 15% income tax on gains; as a commodity ICMS applies and varies by state. No VAT-style retail rate or same-day dealer ask prices found, so all fields are null.",
+ "sources": [
+  {
+   "name": "InfoMoney: ouro e impostos",
+   "url": "https://www.infomoney.com.br/onde-investir/ouro-tambem-paga-imposto-entenda-regras-e-quando-o-investidor-deve-declarar-ao-fisco/",
+   "what": "IOF 1%, income tax 15%, ICMS varies by state"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "country": "JO",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "21K is the main grade. Jewelers Syndicate prices published daily via Petra: on 22 Jul 2026 21K sold at JD84.50/g vs shop buying price JD80.20 (about 5% spread). Gold is listed as exempt from general sales tax (16%); jewelry-specific levies not verified.",
+ "sources": [
+  {
+   "name": "Petra (Jordan News Agency)",
+   "url": "https://petra.gov.jo/Eventum/htdocs/index.php/en/news/21-karat-gold-priced-at-jd845-per-gram-in-local-market",
+   "what": "22 Jul 2026 Jewelers Syndicate prices: 21K JD84.50 sell / JD80.20 buy; 24K JD97.10. No same-day spot taken, so no premium computed."
+  },
+  {
+   "name": "PwC Worldwide Tax Summaries - Jordan",
+   "url": "https://taxsummaries.pwc.com/jordan/corporate/other-taxes",
+   "what": "General sales tax 16%; gold listed among exempt goods (reviewed 5 Jul 2026)."
+  }
+ ]
+}

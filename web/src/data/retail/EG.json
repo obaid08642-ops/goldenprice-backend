@@ -1,17 +1,34 @@
 {
- "country": "EG",
- "tier": 1,
- "verifiedAt": "2026-11-27",
- "confidence": "low",
+ "confidence": "medium",
  "defaultKarat": 21,
  "gold": {
   "vatJewelryPct": 14,
   "vatBullionPct": null,
   "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
+  "makingPct": {
+   "typical": 4.5,
+   "min": 3,
+   "max": 12
+  },
+  "barPremiumPct": {
+   "1g": 2.6,
+   "2.5g": 1.4,
+   "5g": 1.0,
+   "10g": 1.0,
+   "20g": 1.0,
+   "31.1g": 0.9,
+   "50g": 0.9,
+   "100g": 0.9,
+   "250g": 0.2,
+   "500g": 0.2,
+   "1000g": 0.2
+  },
+  "barBuybackDiscountPct": {
+   "typical": 1.5
+  },
+  "usedGoldDiscountPct": {
+   "typical": 3.1
+  }
  },
  "silver": {
   "vatJewelryPct": null,
@@ -22,7 +39,7 @@
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
- "notes": "Gold is quoted per gram by karat (21K most popular); the 8 g 21K gold pound is a common coin. Jewelry VAT (14%) is charged on the workmanship value, not the metal. Banky board on 26 Nov 2026: 24K sell 6,450 EGP/g vs about 6,300 at spot and CBE USD rate (~2% over); 21K buy-sell spread about 0.9%. Bar premiums, making and used-gold discounts not sourced.",
+ "notes": "Gold quoted per gram by karat (21K most popular); the 8 g 21K gold pound is a common coin. Jewelry VAT 14% falls on the making charge, not the metal. Bar premiums are BTC bars at Goldady vs spot at the official CBE rate (about 54.8 EGP/USD). Making charges fell 20-30% as demand moved to bullion (about 70% of sales). Used-gold figure is dealer spread only; making is lost.",
  "sources": [
   {
    "name": "Egypt Tax Authority VAT Executive Regulations",
@@ -30,14 +47,37 @@
    "what": "Standard VAT 14%; for gold/silver jewelry the taxable manufacturing value is the invoice value minus the announced per-gram metal price"
   },
   {
-   "name": "Banky gold prices",
-   "url": "https://www.bankygate.com/en/gold",
-   "what": "26 Nov 2026 jeweller board: 24K 6,450 / 21K 5,645 EGP per gram, buy-sell spread, ounce 200,660 EGP = $3,569.01, CBE USD 54.91"
+   "name": "Goldady BTC 24K gold bars",
+   "url": "https://goldady.com/en/shop/buy-gold-bars/gold-bar-10-gram-btc-24k",
+   "what": "27 Nov 2026 ask prices 1 g to 1 kg (10 g: EGP 64,872 incl. EGP 840 making); premium vs spot $3,644.22/oz x USD/EGP 54.82 (open.er-api.com) = 6,423 EGP/g"
   },
   {
-   "name": "Gold Price Z Egypt",
-   "url": "https://goldpricez.com/eg",
-   "what": "27 Nov 2026 spot reference (gold $3,650/oz) and EGP rates by karat"
+   "name": "Goldady fees",
+   "url": "https://goldady.com/en/how-it-works/fees",
+   "what": "Buy/sell commission 1% falling to 0.4% by tier, used for bar buyback estimate"
+  },
+  {
+   "name": "Egypt Gold Price guide: bars, coins, jewelry",
+   "url": "https://egyptgoldprice.com/blog/gold-bars-coins-jewelry-egypt-buyers-guide/",
+   "what": "28 May 2026 guide: making charge averages 4.45% on 21K jewelry, dealer resale spread about 3.11%, bar buyback about spot minus 1-2%"
+  },
+  {
+   "name": "Al Manassa (Nxpl)",
+   "url": "https://manassa.news/en/news/30162",
+   "what": "5 Feb 2026: jewelers cut making charges 20-30% to EGP 190-250/g for 21K; bullion about 70% of gold sales (Federation of Chambers of Commerce gold division)"
+  },
+  {
+   "name": "Banky gold prices",
+   "url": "https://www.bankygate.com/en/gold",
+   "what": "26 Nov 2026 jeweller board: 24K 6,450 / 21K 5,645 EGP per gram, buy-sell spread, CBE USD 54.91"
+  },
+  {
+   "name": "Gold Price Z",
+   "url": "https://www.goldpricez.com/",
+   "what": "27 Nov 2026 spot reference: gold $3,644.22/oz"
   }
- ]
+ ],
+ "country": "EG",
+ "tier": 1,
+ "verifiedAt": "2026-11-27"
 }

@@ -2,7 +2,7 @@
   "country": "SG",
   "tier": 1,
   "verifiedAt": "2026-11-27",
-  "confidence": "low",
+  "confidence": "medium",
   "defaultKarat": 22,
   "gold": {
     "vatJewelryPct": 9,
@@ -10,9 +10,14 @@
     "importDutyPct": 0,
     "makingPct": null,
     "barPremiumPct": {
-      "100g": 7.1
+      "50g": 2.3,
+      "100g": 2.0,
+      "31.1g": 3.2,
+      "1000g": 1.1
     },
-    "barBuybackDiscountPct": null,
+    "barBuybackDiscountPct": {
+      "typical": 1.4
+    },
     "usedGoldDiscountPct": null
   },
   "silver": {
@@ -26,8 +31,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Mustafa 100g bar S$16,202 vs spot S$151.26/g (USD/SGD 1.2888) = +7.1%; 916 jewellery S$147.20/g vs 916 spot-equivalent S$138.56 (+6.2%, includes margin/making); silver 1kg bar S$2,247 = +23.4%. GST 9% on jewellery incl. workmanship; investment-grade gold/silver (99.5%/99.9%) GST-exempt. Making and buyback not sourced.",
+  "notes": "Online dealer Silver Bullion (27 Nov 2026) shows premium over spot: 1oz +3.2%, 50g +2.3%, 100g +2.0%, 1kg +1.1%; buyback -1.4%. Retail shop Mustafa is pricier (100g S$16,175-16,202, about +7% vs spot). 916 jewellery incl. margin/making about +6%. GST 9% on jewellery incl. workmanship; IPM gold/silver exempt. Making % and used-jewellery discounts not sourced.",
   "sources": [
+    {
+      "name": "Silver Bullion Singapore gold bars",
+      "url": "https://silverbullion.com.sg/Shop/Buy/Gold_Bars",
+      "what": "Fetched 27 Nov 2026 ~06:00 UTC: buy price % over spot shown by dealer for Metalor/Heraeus 1kg 1.1%, 100g 2.0%, 50g 2.3%, 1oz 3.2%; buyback 1.4% under spot (1kg 148,861 SGD)"
+    },
     {
       "name": "Mustafa Singapore via LivePriceofGold",
       "url": "https://www.livepriceofgold.com/singapore-gold-price.html",

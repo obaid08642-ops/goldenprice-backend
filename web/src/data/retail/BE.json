@@ -1,0 +1,47 @@
+{
+ "country": "BE",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 21,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "5g": 7.0,
+   "10g": 7.2,
+   "20g": 3.0,
+   "50g": 2.0,
+   "100g": 1.4,
+   "250g": 0.8,
+   "500g": 0.75,
+   "1000g": 0.7
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Argentor Essayeurs (Antwerp) publishes premiums per bar size; 10 g value is the Metalor bar, others Emeko. Gold bars are VAT free. Buyback rates are live on its site but no percentage was captured.",
+ "sources": [
+  {
+   "name": "Argentor Essayeurs (argentorshop.be)",
+   "url": "https://www.argentorshop.be/en/gold-bar-10-grams-emeko",
+   "what": "Selling prices and stated premiums for Emeko/Metalor bars 5g-1kg, checked vs spot ~106.75 EUR/g on 2026-11-27; page says no VAT on gold bars (monetary gold)"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate BE 21% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

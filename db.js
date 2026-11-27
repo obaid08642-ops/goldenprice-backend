@@ -70,3 +70,21 @@ export async function bulkDaily(symbol, rows, src = "backfill") {
     ON CONFLICT (symbol, day) DO NOTHING RETURNING 1`;
   return res.length;
 }
+
+// One round of queries for the whole catalog: last 12 closes, 52-week range, all-time range and reference closes for performance figures.
+export async function overviewStats() {
+  if (!sql) return null;
+  const [hist, agg, ...refs] = await Promise.all([
+    sql`SELECT symbol, to_char(day,'YYYY-MM-DD') AS date, close AS value, src FROM price_daily WHERE day >= (now() AT TIME ZONE 'UTC')::date - 12 ORDER BY symbol, day`,
+    sql`SELECT symbol,
+        max(close) FILTER (WHERE day >= (now() AT TIME ZONE 'UTC')::date - 365) AS hi52, min(close) FILTER (WHERE day >= (now() AT TIME ZONE 'UTC')::date - 365) AS lo52,
+        max(close) AS ath, min(close) AS atl, to_char(min(day),'YYYY-MM-DD') AS since,
+        (array_agg(to_char(day,'YYYY-MM-DD') ORDER BY close DESC))[1] AS ath_day, (array_agg(to_char(day,'YYYY-MM-DD') ORDER BY close ASC))[1] AS atl_day
+      FROM price_daily GROUP BY symbol`,
+    ...[7, 30, 90, 365, 1825].map((n) => sql`SELECT DISTINCT ON (symbol) symbol, close FROM price_daily WHERE day <= (now() AT TIME ZONE 'UTC')::date - ${n}::int ORDER BY symbol, day DESC`),
+    sql`SELECT DISTINCT ON (symbol) symbol, close FROM price_daily WHERE day < date_trunc('year', now() AT TIME ZONE 'UTC')::date ORDER BY symbol, day DESC`,
+  ]);
+  const by = (rows) => Object.fromEntries(rows.map((r) => [r.symbol, r]));
+  const names = ["d7", "d30", "d90", "y1", "y5", "ytd"];
+  return { hist, agg: by(agg), refs: Object.fromEntries(names.map((n, i) => [n, by(refs[i])])) };
+}

@@ -1,0 +1,45 @@
+{
+ "country": "PT",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 23,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 23.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Bar premium is a bank retail price (supplied by a third-party dealer) and is far above online dealers elsewhere in Europe; treat as a high-end retail case. Bullion VAT not verified here.",
+ "sources": [
+  {
+   "name": "Caixa Geral de Depositos 10g bar",
+   "url": "https://www.cgd.pt/Particulares/montra-caixa/Pages/Barra-em-ouro-10g.aspx",
+   "what": "10g bar retail price 1318.30 EUR on 2026-11-27 vs spot ~106.75 EUR/g (premium 23.5%)"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate PT 23% (applied to jewelry; read 2026-11-27)"
+  },
+  {
+   "name": "DECO gold buying guide",
+   "url": "https://www.deco.proteste.pt/investe/investimentos/outros-produtos/dossie/tudo-sobre-o-ouro/comprar-ouro-como-investimento-guia-pratico",
+   "what": "Consumer guide: buy/sell spread can be large, especially on jewelry"
+  }
+ ]
+}

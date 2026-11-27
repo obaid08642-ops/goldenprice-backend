@@ -25,7 +25,8 @@ import * as cheerio from "cheerio";
 import cors from "cors";
 import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
-import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily } from "./db.js";
+import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -740,16 +741,30 @@ async function updateCatalogLive() {
     }));
   }
 }
+const jumpRejects = {};
 function putCatalog(c, price, src) {
   const v = Number(price);
   if (!isValidNumber(v)) return false;
   if (c.min != null && (v < c.min || v > c.max)) { console.warn(`${c.sym} rejected (out of range): ${v} from ${src}`); return false; }
   const prev = cache.prices[c.sym];
-  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > 0.3) { console.warn(`${c.sym} rejected (jump >30%): ${prev.price} -> ${v} from ${src}`); return false; }
-  put(c.sym, v, c.index ? "points" : "usd", src);
+  // a >30% jump is usually a bad tick; accept it if the feed keeps reporting it (real crashes/gaps)
+  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > 0.3) {
+    const n = (jumpRejects[c.sym] = (jumpRejects[c.sym] || 0) + 1);
+    if (n < 3) { console.warn(`${c.sym} rejected (jump >30%): ${prev.price} -> ${v} from ${src}`); return false; }
+  }
+  jumpRejects[c.sym] = 0;
+  put(c.sym, v, c.kind === "forex" ? "rate" : c.index ? "points" : c.nativeCur ? c.nativeCur.toLowerCase() : "usd", src);
   return true;
 }
 async function updateMetalsLive() { return updateCatalogLive(); }
+// LME base metals, battery metals, uranium, iron ore, steel from public pages (see sources.js). Every few hours, validated by bounds and a cross-check.
+async function updateIndustrial() {
+  if (process.env.INDUSTRIAL_SCRAPE === "0" || !RATES.rates.CNY) return;
+  try {
+    const got = await fetchIndustrial(RATES.rates);
+    for (const [sym, v] of Object.entries(got)) { const c = BY_SYM[sym]; if (c) putCatalog(c, v.price, v.src); }
+  } catch (e) { console.warn("industrial update failed:", e.message || e); }
+}
 
 // update energy (kept)// update energy (kept)
 const ENERGY_RULES = { WTI: { min: 20, max: 250 }, BRENT: { min: 20, max: 250 }, NATGAS: { min: 0.5, max: 30 } };
@@ -1026,8 +1041,9 @@ async function updateRates() {
     } catch (e) { console.warn(`rates from ${name} failed: ${e.message || e}`); }
   }
 }
-updateRates();
+updateRates().then(() => updateIndustrial());
 setInterval(() => updateRates(), 60 * 60 * 1000);
+setInterval(() => updateIndustrial(), 3 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
   res.set("Cache-Control", "public, max-age=300");
   if (!RATES.updated) return res.status(503).json({ error: "rates not ready" });
@@ -1056,8 +1072,15 @@ app.post("/api/admin/backfill", async (req, res) => {
   if (!dbEnabled) return res.status(400).json({ error: "database is not configured" });
   const range = ["1y", "2y", "5y", "10y", "max"].includes(req.body?.range) ? req.body.range : "5y";
   const out = {};
+  const only = Array.isArray(req.body?.only) ? req.body.only : null;
   for (const [sym, tk] of Object.entries(BACKFILL)) {
+    if (only && !only.includes(sym)) continue;
     try { out[sym] = await backfillSymbol(sym, tk, range); } catch (e) { out[sym] = "error: " + (e.message || e); }
+  }
+  // metals without a futures feed: monthly IMF series (FRED) so their charts have 5 years of context
+  for (const [sym, id] of Object.entries(FRED)) {
+    if (only && !only.includes(sym)) continue;
+    try { out[sym] = await bulkDaily(sym, await fetchFred(id), "backfill:fred-monthly"); } catch (e) { out[sym] = "error: " + (e.message || e); }
   }
   res.json({ ok: true, range, inserted: out });
 });
@@ -1068,23 +1091,31 @@ let overviewCache = { t: 0, body: null };
 app.get("/api/overview", async (req, res) => {
   res.set("Cache-Control", "public, max-age=60");
   if (overviewCache.body && Date.now() - overviewCache.t < 60000) return res.json(overviewCache.body);
+  let st = null;
+  try { st = await overviewStats(); } catch (e) { console.error("overview stats error", e.message || e); }
+  const today = new Date().toISOString().slice(0, 10);
+  const histBy = {};
+  for (const h of st?.hist || []) (histBy[h.symbol] ||= []).push(h);
   const items = {};
-  await Promise.all(OVERVIEW.map(async (sym) => {
+  for (const sym of OVERVIEW) {
     const cur = cache.prices[sym];
-    let hist = [];
-    try { hist = (await dailyHistory(sym, 12)) || []; } catch {}
+    const hist = histBy[sym] || [];
     const closes = hist.map((h) => h.value);
-    const today = new Date().toISOString().slice(0, 10);
+    const price = cur ? cur.price : closes[closes.length - 1] ?? null;
     // Gold/silver are fed from spot sources while history is futures, so skip the change until a live-recorded previous close exists.
     const prevRow = [...hist].reverse().find((h) => h.date < today);
-    const price = cur ? cur.price : closes[closes.length - 1] ?? null;
+    const comparable = prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym));
+    const pc = (ref) => (price && ref ? Number((((price - ref) / ref) * 100).toFixed(2)) : null);
+    const ag = st?.agg[sym];
+    const perf = st ? { d7: pc(st.refs.d7[sym]?.close), d30: pc(st.refs.d30[sym]?.close), d90: pc(st.refs.d90[sym]?.close), ytd: pc(st.refs.ytd[sym]?.close), y1: pc(st.refs.y1[sym]?.close), y5: pc(st.refs.y5[sym]?.close) } : null;
     items[sym] = {
       price, unit: cur?.unit || (BY_SYM[sym]?.index ? "points" : "usd"), src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
       stale: cur ? Date.now() - cur.t > 3 * 24 * 3600 * 1000 : true,
-      changePct: price && prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym)) ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
+      changePct: comparable ? pc(prevRow.value) : null,
       spark: closes.slice(-8),
+      perf, hi52: ag?.hi52 ?? null, lo52: ag?.lo52 ?? null, ath: ag?.ath ?? null, athDay: ag?.ath_day ?? null, atl: ag?.atl ?? null, atlDay: ag?.atl_day ?? null, since: ag?.since ?? null,
     };
-  }));
+  }
   const body = { updated: Date.now(), items };
   overviewCache = { t: Date.now(), body };
   res.json(body);

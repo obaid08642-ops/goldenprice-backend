@@ -1,0 +1,33 @@
+{
+ "country": "CL",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "24K gold bars are IVA-free in Chile per BioBioChile (Oct 2026, citing Aurus Joyeria); other gold formats are taxed (jewellery rate not recorded). Casa de Moneda de Chile sells small bars with purchase limits. No same-day dealer ask prices found, so premiums are null.",
+ "sources": [
+  {
+   "name": "BioBioChile gold bars and IVA",
+   "url": "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/10/12/el-creciente-negocio-de-venta-de-lingotes-de-oro-no-pagan-iva-en-chile.shtml",
+   "what": "24K bars sold IVA-free; other formats taxed; context on demand, article dated 2026-10-12"
+  }
+ ]
+}

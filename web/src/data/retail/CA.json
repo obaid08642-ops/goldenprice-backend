@@ -1,0 +1,48 @@
+{
+ "country": "CA",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 14,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 22.2,
+   "5g": 7.4,
+   "10g": 2.9,
+   "31.1g": 3.0
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Premiums: CanAm Bullion lowest listed 'as low as' CAD asks (Valcambi 1/5/10 g, RCM 1 oz) vs spot USD 3644.22/oz x 1.4241 CAD on 2026-11-27. Gold >=99.5% and silver >=99.9% bullion are GST/HST exempt; jewellery taxable (GST/HST rate varies by province, not recorded).",
+ "sources": [
+  {
+   "name": "CanAm Bullion gold bars",
+   "url": "https://canambullion.ca/product-category/gold/gold-bars/",
+   "what": "CAD ask for 1 g, 5 g, 10 g Valcambi and 1 oz RCM bars, 2026-11-27 (JS-rendered page)"
+  },
+  {
+   "name": "CanAm Bullion GST/HST FAQ",
+   "url": "https://canambullion.ca/faq/sales-tax-on-precious-metals-canada",
+   "what": "Bullion exempt from GST/HST at gold/platinum 99.5% and silver 99.9% purity; jewellery may be taxed"
+  },
+  {
+   "name": "goldpricez spot",
+   "url": "https://www.goldpricez.com/",
+   "what": "Spot gold USD 3644.22/oz, 2026-11-27; USD/CAD from open.er-api.com"
+  }
+ ]
+}

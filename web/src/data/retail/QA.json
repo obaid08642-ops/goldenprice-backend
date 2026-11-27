@@ -1,17 +1,27 @@
 {
- "country": "QA",
- "tier": 1,
- "verifiedAt": "2026-11-27",
- "confidence": "low",
+ "confidence": "medium",
  "defaultKarat": 22,
  "gold": {
-  "vatJewelryPct": null,
-  "vatBullionPct": null,
+  "vatJewelryPct": 0,
+  "vatBullionPct": 0,
   "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
+  "makingPct": {
+   "typical": 10,
+   "min": 5,
+   "max": 20
+  },
+  "barPremiumPct": {
+   "2.5g": 11.0,
+   "5g": 8.8
+  },
+  "barBuybackDiscountPct": {
+   "typical": 2
+  },
+  "usedGoldDiscountPct": {
+   "typical": 8,
+   "min": 5,
+   "max": 15
+  }
  },
  "silver": {
   "vatJewelryPct": null,
@@ -22,22 +32,40 @@
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
- "notes": "Only reference per-gram price pages could be opened; no tax, making charge, bar premium or buyback data was sourced. Treat as placeholder.",
+ "notes": "Qatar has no VAT in force (5% GCC VAT anticipated). Making: simple chains 5-10%, 21K/22K sets 10-20%, souq about 30-50% cheaper than malls. Bar premiums are Al Sulaiman Jewellers (Pamp) small-bar asks only; larger sizes not found. Buyback/used ranges come from a Doha guide: bars spot minus 1-3%, 22K jewelry 5-12%, scrap 10-15%.",
  "sources": [
   {
-   "name": "Gold Price Z Qatar",
-   "url": "https://goldpricez.com/qa/24k/gram",
-   "what": "27 Nov 2026 24K QAR per gram (about 417-427) vs spot reference"
+   "name": "PwC Tax Summaries Qatar",
+   "url": "https://taxsummaries.pwc.com/qatar/corporate/other-taxes",
+   "what": "Reviewed 17 Sep 2026: no VAT or sales tax currently; 5% VAT anticipated; customs 5% on non-GCC goods"
   },
   {
-   "name": "BankBazaar Qatar",
-   "url": "https://www.bankbazaar.com/gold-rate/gold-price-qatar.html",
-   "what": "27 Nov 2026 Qatar 22K/24K rates"
+   "name": "Al Sulaiman Jewellers gold bars",
+   "url": "https://alsulaimanjewellers.com/product-category/gold/gold-bars/",
+   "what": "27 Nov 2026 Pamp bar asks: 2.5 g QAR 1,184, 5 g 2,321; site board 24K 434 QAR/g; spot $3,644.22/oz x 3.64 = 426.5 QAR/g"
   },
   {
-   "name": "Live Price of Gold Qatar",
-   "url": "https://livepriceofgold.com/Qatar-gold-price.html",
-   "what": "Live Qatar gold price reference"
+   "name": "QatarGoldLive making charges",
+   "url": "https://qatargoldlive.com/gold-making-charges-qatar/",
+   "what": "Making ranges: plain 5-10%, 21K/22K 8-20% of gold value, souq cheaper than malls"
+  },
+  {
+   "name": "QatarGoldLive how to sell gold",
+   "url": "https://qatargoldlive.com/how-to-sell-gold-qatar/",
+   "what": "Typical buyback: bars spot minus 1-3%, 22K jewelry minus 5-12%, 18K 5-10%, scrap 10-15%"
+  },
+  {
+   "name": "QatarGoldLive gold tax in Qatar",
+   "url": "https://qatargoldlive.com/gold-tax-qatar/",
+   "what": "27 Nov 2026: no VAT on gold jewelry or bullion in Qatar"
+  },
+  {
+   "name": "ZahabPrice Qatar",
+   "url": "https://www.zahabprice.com/en-qa/bullion",
+   "what": "27 Nov 2026 spot reference ($3,642.15/oz) and QAR rate by karat"
   }
- ]
+ ],
+ "country": "QA",
+ "tier": 1,
+ "verifiedAt": "2026-11-27"
 }

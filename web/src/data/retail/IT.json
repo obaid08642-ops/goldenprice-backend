@@ -1,0 +1,40 @@
+{
+ "country": "IT",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 22,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 3.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "10 g premium is the cheapest listed bar; other listed 10 g bars carry 5% to 23%. Investment gold is VAT exempt per dealer listing; jewelry at the 22% standard VAT.",
+ "sources": [
+  {
+   "name": "StoneX Bullion Italy 10g bars",
+   "url": "https://stonexbullion.com/it/lingotti-oro/10g/",
+   "what": "Lowest listed 10g bar 1105.55 EUR, premium 37.14 EUR (about 3.5%), 'Esente IVA', 2026-11-27; listings range up to ~23%"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate IT 22% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

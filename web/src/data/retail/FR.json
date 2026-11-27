@@ -1,0 +1,45 @@
+{
+ "country": "FR",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 20,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 6.9
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Only a 10 g bar premium was computed. A second French dealer lists the 10 g at 1150 EUR (similar premium). Investment gold is VAT exempt but sales of bars face a separate flat tax regime (not verified here).",
+ "sources": [
+  {
+   "name": "Achat-or-et-argent 10g lingot",
+   "url": "https://www.achat-or-et-argent.fr/or/lingots-et-lingotins/3551/lingot-10g-or",
+   "what": "10g bar price 1140.00 EUR vs displayed intrinsic value 1066.16 EUR, 2026-11-27 (premium 6.9%)"
+  },
+  {
+   "name": "BOFIP VAT doctrine investment gold",
+   "url": "https://bofip.impots.gouv.fr/bofip/2061-PGP.html",
+   "what": "Deliveries of investment gold exempt from VAT"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate FR 20% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

@@ -1,0 +1,45 @@
+{
+ "country": "MX",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 16,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "31.1g": 2.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "1 oz premium: Costco Mexico PAMP 1 oz bar MXN 73,599 vs spot USD 3644.22 x 19.696 MXN on 2026-11-27 (Costco prices float with spot intraday). LIVA art. 9: retail sales of gold ingots >=99% and onza troy pieces are IVA-exempt; jewellery taxed at 16% general rate (rate not on page opened).",
+ "sources": [
+  {
+   "name": "Costco Mexico PAMP 1 oz bar",
+   "url": "https://www.costco.com.mx/Joyeria-y-Relojes/Oro/Lingotes-de-Oro/Lingote-de-Oro-1-oz-PAMP-Diwali/p/2053302",
+   "what": "Ask MXN 73,599 for 1 oz bar, 2026-11-27"
+  },
+  {
+   "name": "Ley del IVA art. 9",
+   "url": "https://mley.mx/LIVA/articulo/9o/",
+   "what": "Fraccion VIII exempts gold ingots >=99% in retail sales; fraccion VI exempts onza troy pieces"
+  },
+  {
+   "name": "goldpricez spot",
+   "url": "https://www.goldpricez.com/",
+   "what": "Spot gold USD 3644.22/oz, 2026-11-27; USD/MXN from open.er-api.com"
+  }
+ ]
+}

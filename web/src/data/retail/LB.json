@@ -1,0 +1,33 @@
+{
+ "country": "LB",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": 11,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Standard VAT 11%. Gold market is effectively dollarized; LBP official rate (89,500) is a pegged rate while shops quote in USD. Dealer bar premiums, making charges and buyback data not found.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Lebanon",
+   "url": "https://taxsummaries.pwc.com/lebanon/corporate/other-taxes",
+   "what": "Standard VAT rate 11% (reviewed 1 Jul 2026); no gold-specific treatment found."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "country": "IR",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Tehran free-market IRR rate (~2.9M/USD implied) is far from the official rate, so official-rate premiums would be meaningless and are left null. AlanChand on 27 Nov 2026 showed raw 24K (mesghal) about 2.8% and Emami coin about 7.9% above intrinsic value at the free-market rate.",
+ "sources": [
+  {
+   "name": "AlanChand",
+   "url": "https://www.alanchand.com/en/gold-price",
+   "what": "27 Nov 2026 09:20 Tehran: 18K gram 259.0M IRR, mesghal 1.122bn, Emami coin 2.65bn IRR with bubble vs intrinsic value (global ounce 3,556 USD, free-market USD)."
+  }
+ ]
+}
