@@ -1,7 +1,7 @@
 {
   "country": "TR",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 22,
   "gold": {
@@ -22,27 +22,17 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Bullion (kulce) gold/silver delivery is VAT-exempt (KDV 17/4-g). Jewelry uses a special base: the bullion value is deducted and 20% VAT applies only to the remainder (making charge/margin). Quarter/half/Republic coins and 22K bracelets are popular; shops deduct making charges when buying back. No sourced premium, making or buyback percentages.",
+  "notes": "Bullion gold and bullion silver deliveries are VAT-exempt under VAT Law No. 3065, Art. 17/4-g, both domestically and on import. Jewellery and coin gold/silver are taxed at the general rate of 20%, but only on the amount remaining after deducting the bullion value (at the Borsa Istanbul closing price) from the sale price (Art. 23/e), so the metal value itself is untaxed.",
   "sources": [
     {
-      "name": "Alomaliye - Kuyumculuk sektorunde KDV uygulamasi (2025)",
-      "url": "https://www.alomaliye.com/2025/07/02/kuyumculuk-sektorunde-kdv-uygulamasi/",
-      "what": "20% KDV on jewelry after deducting bullion value (special base); bullion gold/silver exempt under 17/4-g"
+      "name": "PwC Tax Summaries - Turkey, Corporate: Other taxes",
+      "url": "https://taxsummaries.pwc.com/turkey/corporate/other-taxes",
+      "what": "The general VAT rate is 20% (rates range from 1% to 20%); gold and silver jewellery are not in the 1% List I or 10% List II reduced-rate categories, so they take the 20% general rate."
     },
     {
-      "name": "Alomaliye - Altin ve altina endeksli islemlerin vergisel boyutu (2020)",
-      "url": "https://www.alomaliye.com/2020/09/14/altin-ve-altina-endeksli-islemlerin-vergisel-boyutu/",
-      "what": "Bullion gold and silver KDV exemption, special base for coins and jewelry, workmanship subject to KDV"
-    },
-    {
-      "name": "GZT - Kuyumcuda altin bozdururken zarar etmemenin puf noktalari",
-      "url": "https://www.gzt.com/ekonomi/kuyumcuda-altin-bozdururken-zarar-etmemenin-puf-noktalari-4004439",
-      "what": "Qualitative: jewelers pay below screen price, deduct making charge and wider spread on coins; no percentages given"
-    },
-    {
-      "name": "GZT - Altin fiyatlari 15 Agustos 2026",
-      "url": "https://www.gzt.com/ekonomi/altin-fiyatlari-bugun-ne-kadar-15-agustos-2026-kuyumcu-altin-fiyatlari-canli-kapali-carsi-gram-ve-ceyrek-altin-fiyati-4251460",
-      "what": "Gram gold about 6,737 TRY and ounce 4,376 USD on 15 Aug 2026; gram quote roughly equals spot-derived value, so no premium taken"
+      "name": "Vergi Usul Kanunu Genel Tebligi (Sira No: 379) - mevzuat.gov.tr, Ministry of Treasury and Finance legislation portal",
+      "url": "https://www.mevzuat.gov.tr/anasayfa/MevzuatFihristDetayIframe?MevzuatTur=9&MevzuatNo=11877&MevzuatTertip=5",
+      "what": "Official communique stating that under VAT Law Art. 17/4-g, deliveries of bullion gold and bullion silver are exempt from VAT domestically and on import; jewellery and coin gold/silver are subject to VAT at the general rate, with the tax base under Art. 23 being the price after deducting the bullion gold/silver value."
     }
   ]
 }

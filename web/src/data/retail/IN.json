@@ -1,7 +1,7 @@
 {
   "country": "IN",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 22,
   "gold": {
@@ -14,35 +14,25 @@
     "usedGoldDiscountPct": null
   },
   "silver": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
-    "importDutyPct": null,
+    "vatJewelryPct": 3,
+    "vatBullionPct": 3,
+    "importDutyPct": 15,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "GST is 3% on jewelry (CBIC FAQ: on total value incl. making charge) and on bars/coins. Import duty reported raised to 15% (BCD 10% + AIDC 5%) by a May 2026 notification (Angel One). IBJA benchmark (24K 10 g) excludes GST and making charges. Making charges vary by design and brand; banks usually give no bar buyback. No sourced premium values.",
+  "notes": "GST is 3% on gold and silver jewellery on the total transaction value (making charges included) and 3% IGST on imports of precious metals (GST Council FAQ). Import duty rose to 15% on 13 May 2026 - 10% basic customs duty plus 5% AIDC, SWS exempt (Customs Notifications 15/2026 and 16/2026) - with 3% IGST charged on the duty-paid value on top.",
   "sources": [
     {
-      "name": "GST Council/CBIC FAQ on gems and jewellery",
+      "name": "GST Council / CBEC - Sectoral FAQ: Gems & Jewellery",
       "url": "https://gstcouncil.gov.in/sites/default/files/2024-02/sectoral-fq-gems-jewellery.pdf",
-      "what": "Official FAQ: 3% GST on total transaction value of jewellery, 3% IGST on imports of precious metals"
+      "what": "Q7: GST is payable at 3% of the total transaction value of gold, diamond or silver jewellery, whether the making charge is shown separately or not. Q2 and Q4: 3% IGST is payable on all imports of precious metals and GST is payable at 3% - so gold and silver, bullion and jewellery, all take 3%."
     },
     {
-      "name": "Angel One - GST on gold",
-      "url": "https://www.angelone.in/knowledge-center/income-tax/gst-on-gold",
-      "what": "3% GST on bars and coins; import duty 15% after May 2026 notification (older text says about 6.5%)"
-    },
-    {
-      "name": "5paisa - Gold rate 28 Oct 2026",
-      "url": "https://www.5paisa.com/blog/gold-rate-today-28-oct-2026",
-      "what": "IBJA 999 gold 142,300 INR per 10 g on 28 Oct 2026; benchmark excludes 3% GST and making charges"
-    },
-    {
-      "name": "Bajaj Finserv - 10 gram gold price guide",
-      "url": "https://www.bajajfinserv.in/10-gram-gold-price-today-and-market-insights",
-      "what": "Import duty plus 3% GST added to base price; most banks offer no buyback on bars"
+      "name": "Ministry of Finance, Notification No. 15/2026-Customs, G.S.R. 358(E), 12 May 2026 (notification text as published)",
+      "url": "https://taxguru.in/custom-duty/customs-duty-gold-silver-increased-10-percent.html",
+      "what": "Amends Notification No. 45/2025-Customs Table I, substituting 10% for 5% against S. Nos. 192-197, 202 and 203 (gold dore, silver dore, gold and silver bars, coins and ornaments), in force 13 May 2026 - basic customs duty on gold and silver is 10%. With the 5% AIDC set by Notification No. 16/2026-Customs (amending Notification No. 11/2021-Customs; SWS exempt), the total import duty coded is 15% (10% BCD + 5% AIDC)."
     }
   ]
 }
