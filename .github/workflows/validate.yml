@@ -1,0 +1,22 @@
+name: Validate data and translations
+on:
+  pull_request:
+  workflow_dispatch: {}
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Translations
+        run: cd web && node scripts/check-i18n.mjs $(ls src/i18n/lang | sed 's/.json//' | grep -v '^en$')
+      - name: Retail data
+        run: cd web && node scripts/check-retail.mjs $(ls src/data/retail | grep -v '^_' | grep '\.json$' | sed 's/.json//')
+      - name: Fuel and electricity data
+        run: cd web && node scripts/check-costs.mjs
+      - name: Page budget (Cloudflare Pages limit is 20,000 files)
+        run: |
+          cd web && npm install --no-audit --no-fund >/dev/null 2>&1
+          SITE=https://example.com npx astro build >/tmp/build.log 2>&1 || { tail -20 /tmp/build.log; exit 1; }
+          n=$(find dist -type f | wc -l); echo "files: $n"; [ "$n" -lt 19000 ] || { echo "too many files"; exit 1; }
