@@ -38,8 +38,8 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
   {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={site + a.href} />)}
   <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:url" content={canonical} /><meta property="og:site_name" content={SITE_NAME} />
   <meta property="og:image" content={site + "/og.png"} /><meta property="og:image:width" content="1200" /><meta property="og:image:height" content="630" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content={site + "/og.png"} />
-  <meta name="theme-color" content="#a97c0b" />
-  <link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#2e2a4a" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" /><link rel="icon" href="/favicon.ico" sizes="any" /><link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" /><link rel="apple-touch-icon" href="/apple-touch-icon.png" /><link rel="manifest" href="/manifest.webmanifest" />
   <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href={fonts} />
   <script is:inline>try{var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s)}catch(e){}</script>
@@ -48,7 +48,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
 </head>
 <body>
   <header class="hd"><div class="hd-in">
-    <a class="lg" href={url(lang, country.code)}><img class="lg-img" src="/logo.png" width="30" height="30" alt="" />{SITE_NAME}</a>
+    <a class="lg" href={url(lang, country.code)}><img class="lg-img" src="/logo.svg" width="30" height="30" alt="" />{SITE_NAME}</a>
     <nav class="nav" aria-label="Main">
       {nav.map(([a, s]) => <a href={url(lang, country.code, s)} class:list={{ on: s === slug }}>{assetName(lang, bySlug(a))}</a>)}
       <a href={url(lang, country.code, "markets")} class:list={{ on: slug === "markets" }}>{t(lang, "nav_all")}</a>
@@ -63,7 +63,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
       {countryOpts.map((o) => <option value={o.href} selected={o.code === country.code}>{o.name} · {o.cur}</option>)}
     </select>
     <select class="sel" id="sel-lang" aria-label={t(lang, "language")}>
-      {LANGS.map((l) => <option value={tail ? `/${l.code}/p/${tailSlug}/` : url(l.code, country.code, pageExists(l.code, country, slug, allSlugs) ? slug : "")} selected={l.code === lang}>{l.native}</option>)}
+      {LANGS.filter((l) => tail || langsFor(country).includes(l.code)).map((l) => <option value={tail ? `/${l.code}/p/${tailSlug}/` : url(l.code, country.code, pageExists(l.code, country, slug, allSlugs) ? slug : "")} selected={l.code === lang}>{l.native}</option>)}
     </select>
     <button class="ic" id="theme-btn" type="button" aria-label={t(lang, "theme")}>◐</button>
   </div></header>
@@ -81,6 +81,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
       root.setAttribute("data-theme", next);
       try { localStorage.setItem("theme", next); } catch {}
     });
+    if ("serviceWorker" in navigator && location.protocol === "https:") navigator.serviceWorker.register("/sw.js").catch(() => {});
     for (const id of ["sel-country", "sel-lang"]) {
       document.getElementById(id)?.addEventListener("change", (e) => {
         const v = (e.target as HTMLSelectElement).value;
