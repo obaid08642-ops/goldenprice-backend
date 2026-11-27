@@ -1,0 +1,63 @@
+{
+  "country": "CZ",
+  "tier": 1,
+  "verifiedAt": "2026-11-28",
+  "confidence": "medium",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1g": 13.1,
+      "5g": 6.6,
+      "10g": 5.5,
+      "20g": 4.7,
+      "100g": 4.0
+    },
+    "barBuybackDiscountPct": {
+      "typical": 5.7
+    },
+    "usedGoldDiscountPct": {
+      "typical": 5.7
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Investment gold exempt under VAT Act s.92 special scheme; jewellery and silver take standard 21%. Bars duty 0%. Premiums calculated from Golden House Prague list 27 Nov 2026 (spot 2,625.09 CZK/g). Buyback/used typical 5.7% is Bessergold's per-gram payout vs same-hour spot (pawnshops pay about 15% below melt). Making % not found, null.",
+  "sources": [
+    {
+      "name": "Czech Mint - VAT Act amendment (investment gold)",
+      "url": "https://ceskamincovna.sk/en/vat-law-amendment-1582/",
+      "what": "Read 2026-11-28: supply, EU acquisition and import of investment gold exempt from VAT in Czechia"
+    },
+    {
+      "name": "Dostupny advokat - Investing in gold",
+      "url": "https://dostupnyadvokat.cz/en/blog/investice-zlato",
+      "what": "Read 2026-11-28: investment gold VAT-exempt; silver carries 21% VAT on purchase"
+    },
+    {
+      "name": "Golden House - Gold price / bar list",
+      "url": "https://goldenhouse.cz/en/gold-price",
+      "what": "Read 2026-11-28: table updated 27 Nov 2026, spot 2,625.09 CZK/g; Argor-Heraeus bar prices by size, premiums calculated"
+    },
+    {
+      "name": "Bessergold - Buyback calculator",
+      "url": "https://vykup.bessergold.cz/",
+      "what": "Read 2026-11-28: pays 2,476.08 CZK/g for 999.9 (5.7% below same-hour spot, calculated)"
+    },
+    {
+      "name": "Customs Tariff heading 7108 (celna24)",
+      "url": "https://celna24.pl/en/customs-tariff/7108",
+      "what": "Read 2026-11-28: EU import of gold under HS 7108 duty-free 0%"
+    }
+  ]
+}
