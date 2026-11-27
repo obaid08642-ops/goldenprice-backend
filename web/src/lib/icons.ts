@@ -1,5 +1,10 @@
-// Category icons: Microsoft Fluent Emoji 3D (MIT licence), stored in /public/emoji.
-const BY_SLUG: Record<string, string> = { gold: "coin", silver: "money_bag", platinum: "gem_stone", palladium: "gem_stone", gasoline: "fuel_pump", "natural-gas": "electric_plug", "heating-oil": "fuel_pump", "brent-oil": "oil_drum", "wti-oil": "oil_drum", bitcoin: "coin", ethereum: "gem_stone", steel: "hammer_and_wrench", "steel-hrc": "hammer_and_wrench", lumber: "package", plywood: "package", sawnwood: "package" };
-const BY_KIND: Record<string, string> = { precious: "coin", industrial: "gear", energy: "oil_drum", agri: "sheaf_of_rice", crypto: "rocket", index: "bar_chart", stock: "chart_increasing", forex: "dollar_banknote", construction: "hammer_and_wrench" };
-export const iconFor = (a: { slug: string; kind: string }) => `/emoji/${BY_SLUG[a.slug] ?? BY_KIND[a.kind] ?? "package"}.png`;
+// Icon resolution: a custom 3D illustration in /public/icons3d/<slug>.(webp|png) wins, then one per kind, then the built-in vector set in /public/icons-vec.
+const found = Object.keys(import.meta.glob("../../public/icons3d/*.{png,webp}")).map((f) => f.split("/").pop()!);
+const have = new Map(found.map((f) => [f.replace(/\.(png|webp)$/, ""), f]));
+const VEC_BY_SLUG: Record<string, string> = { silver: "silver", platinum: "jewelry", palladium: "jewelry" };
+const VEC_BY_KIND: Record<string, string> = { precious: "precious", industrial: "industrial", energy: "energy", agri: "agri", crypto: "crypto", index: "index", stock: "stock", forex: "forex", construction: "construction" };
+export const iconFor = (a: { slug: string; kind: string }) => {
+  const own = have.get(a.slug) ?? have.get(a.kind);
+  return own ? `/icons3d/${own}` : `/icons-vec/${VEC_BY_SLUG[a.slug] ?? VEC_BY_KIND[a.kind] ?? "industrial"}.svg`;
+};
 export const iconHtml = (a: { slug: string; kind: string }) => `<i class="ic3" data-k="${a.kind}"><img src="${iconFor(a)}" alt="" width="28" height="28" loading="lazy" decoding="async"></i>`;
