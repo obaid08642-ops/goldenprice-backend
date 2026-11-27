@@ -1049,6 +1049,33 @@ app.post("/api/admin/backfill", async (req, res) => {
   res.json({ ok: true, range, inserted: out });
 });
 
+// ---------- one-call overview for the website (prices + 24h change + 7-day sparkline) ----------
+const OVERVIEW = ["GOLD", "SILVER", "PLATINUM", "PALLADIUM", "COPPER", "ALUMINUM", "WTI", "BRENT", "NATGAS", "BTC", "ETH"];
+let overviewCache = { t: 0, body: null };
+app.get("/api/overview", async (req, res) => {
+  res.set("Cache-Control", "public, max-age=60");
+  if (overviewCache.body && Date.now() - overviewCache.t < 60000) return res.json(overviewCache.body);
+  const items = {};
+  await Promise.all(OVERVIEW.map(async (sym) => {
+    const cur = cache.prices[sym];
+    let hist = [];
+    try { hist = (await dailyHistory(sym, 12)) || []; } catch {}
+    const closes = hist.map((h) => h.value);
+    const today = new Date().toISOString().slice(0, 10);
+    const prevRow = [...hist].reverse().find((h) => h.date < today);
+    const price = cur ? cur.price : closes[closes.length - 1] ?? null;
+    items[sym] = {
+      price, unit: cur?.unit || "usd", src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
+      stale: cur ? Date.now() - cur.t > 3 * 24 * 3600 * 1000 : true,
+      changePct: price && prevRow ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
+      spark: closes.slice(-8),
+    };
+  }));
+  const body = { updated: Date.now(), items };
+  overviewCache = { t: Date.now(), body };
+  res.json(body);
+});
+
 app.get("/api/metals", (req, res) => {
   const list = (req.query.list || "platinum,palladium,copper,aluminum,nickel,zinc,lead,tin,iron,steel,cobalt,lithium,uranium")
     .split(",")
