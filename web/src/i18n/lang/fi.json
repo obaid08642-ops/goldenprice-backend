@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "tänään",
+  "updated": "Päivitetty {t}",
+  "delayed": "Viivästetty",
+  "per": "per {u}",
+  "u_gram": "gramma",
+  "u_ounce": "unssi",
+  "u_kilo": "kilo",
+  "u_tola": "tola",
+  "u_ton": "metrinen tonni",
+  "u_barrel": "tynnyri",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "gallona",
+  "u_bushel": "bushel",
+  "u_lb": "naula",
+  "u_cwt": "sentnerikko",
+  "u_coin": "kolikko",
+  "u_point": "pistettä",
+  "global_vs_local": "Maailmanmarkkinahinta vs. paikallinen hinta",
+  "global_price": "Maailmanmarkkinahinta",
+  "local_estimate": "Paikallinen arvio",
+  "est_retail": "Arvioitu vähittäishinta, sis. valmistuspalkkion",
+  "est_note": "Pelkkä arvio. Liikkeiden verot, valmistuspalkkiot ja katteet vaihtelevat.",
+  "karat_title": "{a} karaateittain",
+  "karat": "Karaatti",
+  "purity": "Puhtaus",
+  "price": "Hinta",
+  "currencies_title": "{a}-hinta muissa valuutoissa",
+  "col_ounce": "Unssilta",
+  "col_gram": "Grammalta",
+  "col_24h": "24 h",
+  "col_7d": "7 päivää",
+  "markets_title": "Metallit, energia, maatalous ja kryptovaluutat",
+  "markets_sub": "Reaaliaikaiset hinnat valuutassa {cur}",
+  "list_title": "Metallien, energian, hyödykkeiden ja kryptovaluuttojen hinnat maassa {country}",
+  "list_desc": "Reaaliaikaiset hinnat kullalle, hopealle, platinalle, kuparille, öljylle, kaasulle, vehnälle, kahvelle, osakeindekseille, bitcoinille ja muille valuutassa {cur}.",
+  "alerts_title": "Hintahälytykset",
+  "alerts_desc": "Saat ilmoituksen, kun hinta saavuttaa tavoitteesi, puhelimeesi tai sähköpostiisi.",
+  "alerts_cta": "Luo hälytys",
+  "search_ph": "Hae esim. {a}-hinta maassa {country}…",
+  "search_btn": "Hae",
+  "r1d": "1 pv",
+  "r1w": "1 vk",
+  "r1m": "1 kk",
+  "r1y": "1 v",
+  "r5y": "5 v",
+  "rall": "Kaikki",
+  "geo_ask": "Näytetäänkö hinnat maalle {country} valuutassa {cur}?",
+  "geo_yes": "Kyllä, vaihda",
+  "geo_no": "Ei kiitos",
+  "footer_note": "Hinnat ovat suuntaa antavia ja voivat viivästyä. Ei sijoitusneuvontaa.",
+  "about": "Tietoa",
+  "privacy": "Tietosuojakäytäntö",
+  "contact": "Yhteystiedot",
+  "theme": "Teema",
+  "language": "Kieli",
+  "country": "Maa",
+  "faq_title": "Usein kysytyt kysymykset",
+  "q1": "Mikä on {a}-hinta maassa {country} tänään?",
+  "a1": "{a}-hinta maassa {country} on tänään {p} {cur} per {u}. Se on maailmanmarkkinan spot-hinta muunnettuna uusimmalla valuuttakurssilla ja päivitettynä muutaman minuutin välein.",
+  "q2": "Miksi paikallinen hinta poikkeaa maailmanmarkkinahinnasta?",
+  "a2": "Liikkeet lisäävät spot-hintaan valmistuspalkkiot, verot, tuontitullit ja jälleenmyyjän katteen, joten vähittäishinta maassa {country} on yleensä korkeampi.",
+  "q3": "Kuinka usein hinta päivitetään?",
+  "a3": "Reaaliaikaiset markkinahinnat päivitetään muutaman minuutin välein. Hinnat, joilla ei ole reaaliaikaista syötettä, päivitetään käsin ja niissä näkyy viimeisin päivitysaika.",
+  "title": "{a}-hinta maassa {country} tänään | per {u} valuutassa {cur}",
+  "desc": "Reaaliaikainen {a}-hinta maassa {country} valuutassa {cur}: per gramma, unssi ja kilo, hintakaavio sekä maailmanmarkkinahinta vs. paikallinen hinta. Päivitetään muutaman minuutin välein.",
+  "title_idx": "{a}-indeksi tänään | reaaliaikainen arvo ja kaavio",
+  "desc_idx": "{a}-indeksin reaaliaikainen arvo, päivämuutos ja hintakaavio. Päivitetään muutaman minuutin välein.",
+  "history_note": "Historia perustuu päivittäisiin päätöskursseihin.",
+  "unit_label": "Yksikkö",
+  "sample_note": "Esimerkkidata",
+  "nav_all": "Markkinat",
+  "nav_rates": "Valuutat",
+  "nav_calc": "Laskurit",
+  "cat_precious": "Jalometallit",
+  "cat_industrial": "Teollisuusmetallit",
+  "cat_energy": "Energia",
+  "cat_agri": "Maatalous",
+  "cat_index": "Osakeindeksit",
+  "cat_crypto": "Kryptovaluutat",
+  "bars_title": "{a}-kangit ja -kolikot: osto- ja myyntihinta valuutassa {cur}",
+  "bar_size": "Koko",
+  "bar_buy": "Osto jälleenmyyjältä",
+  "bar_sell": "Myynti takaisin",
+  "bar_prem": "Lisähinta spot-hintaan",
+  "bars_note": "Tyypilliset jälleenmyyjien hinnat perustuvat maailmanmarkkinahintaan ja tavanomaiseen lisähintaan. Todelliset hinnat vaihtelevat liikkeen ja päivän mukaan.",
+  "used_title": "Käytetty ja romu {a}: takaisinostohinta grammalta valuutassa {cur}",
+  "used_note": "Käytettyjä koruja ostetaan yleensä takaisin uutta hintaa alemmalla hinnalla. Nämä ovat tyypillisiä arvioita.",
+  "used_col": "Takaisinosto grammalta",
+  "rates_title": "Valuuttakurssit suhteessa valuuttaan {cur}",
+  "rates_sub": "Keskikurssit, päivittyvät tunnin välein",
+  "rates_desc": "Maailman tärkeimpien valuuttojen reaaliaikaiset kurssit suhteessa valuuttaan {cur} sekä valuuttamuuntaja.",
+  "rates_page_title": "Valuuttakurssit ja muunnin maassa {country}",
+  "conv_title": "Valuuttamuuntaja",
+  "conv_amount": "Summa",
+  "conv_from": "Mistä",
+  "conv_to": "Mihin",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Kultalaskuri ja zakat-laskuri maassa {country}",
+  "calc_page_desc": "Laske kultasi arvo painon ja karaattien mukaan valuutassa {cur} ja tarkista kullan ja hopean zakat tämän päivän hinnoilla.",
+  "calc_title": "Kullan arvolaskuri",
+  "calc_weight": "Paino",
+  "calc_unit": "Yksikkö",
+  "calc_karat": "Karaatti",
+  "calc_value": "Arvioitu arvo",
+  "calc_note": "Perustuu maailmanmarkkinahintaan. Liikkeet maksavat käytetystä kullasta tätä vähemmän.",
+  "zakat_title": "Zakat kullasta ja hopeasta",
+  "zakat_nisab_gold": "Kullan nisab (85 grammaa)",
+  "zakat_nisab_silver": "Hopean nisab (595 grammaa)",
+  "zakat_gold_g": "Kultasi grammoina (24K vastaava)",
+  "zakat_silver_g": "Hopeasi grammoina",
+  "zakat_due": "Maksettava zakat (2,5 %)",
+  "zakat_note": "Zakat maksetaan omaisuudesta, joka on ollut nisabin ylittävää yhden kuukausivuoden ajan. Tämä on ohje, kysy oppineelta omasta tapauksestasi.",
+  "zakat_below": "Nisabin alapuolella: tästä summasta ei makseta zakatia.",
+  "related_title": "Suositut haut",
+  "retail_basis": "Perustuu {n} paikalliseen lähteeseen, tarkistettu {d}.",
+  "u_share": "osake",
+  "u_rate": "kurssi",
+  "u_mbf": "1 000 board feet",
+  "cat_stock": "Osakkeet",
+  "cat_forex": "Valuuttaparit",
+  "cat_construction": "Rakennusmateriaalit",
+  "perf_title": "Kehitys",
+  "p_7d": "1 viikko",
+  "p_30d": "1 kuukausi",
+  "p_90d": "3 kuukautta",
+  "p_ytd": "Vuoden alusta",
+  "p_1y": "1 vuosi",
+  "p_5y": "5 vuotta",
+  "range52": "52 viikon vaihteluväli",
+  "ath": "Korkein arvo aineistossamme",
+  "atl": "Alin arvo aineistossamme",
+  "since": "Historia alkaen {d}",
+  "about_title": "Tietoa: {a}",
+  "drivers_title": "Mikä hintaan vaikuttaa",
+  "uses_title": "Käyttökohteet",
+  "source_note": "Lähde: {s}. Hinnat ovat suuntaa antavia ja voivat viivästyä.",
+  "about_stock": "Yhtiön {a} osakkeet hinnoitellaan valuutassa {c}. Sivulla näkyy viimeisin viivästetty hinta, muutos tänään ja pidemmillä jaksoilla sekä sama hinta muissa valuutoissa.",
+  "about_forex": "{a} näyttää, kuinka paljon toisen valuutan yksikköä yksi ensimmäisen valuutan yksikkö ostaa. Kurssit liikkuvat korkojen, inflaation, kaupan ja molempien maiden talousuutisten mukaan.",
+  "about_crypto": "{a} on kryptovaluutta. Sen hinnan muodostaa kaupankäynti pörsseissä ympäri vuorokauden, ja hinta voi muuttua nopeasti. Sivulla näkyvät reaaliaikainen hinta, muutos eri jaksoilla ja hinta muissa valuutoissa.",
+  "about_commodity": "{a} on kaupankäynnin kohteena oleva hyödyke. Sen hinta seuraa tarjontaa, kysyntää, säätä, valuuttoja ja uutisia. Sivulla näkyvät viimeisin hinta, muutos eri jaksoilla ja hinta muissa valuutoissa.",
+  "about_index": "{a} mittaa, miten osakekori kehittyy. Arvo ilmoitetaan indeksipisteinä ja liikkuu sen yhtiöiden osakekurssien mukaan.",
+  "tail_list_title": "Osakkeet, kryptovaluutat, valuuttaparit ja lisää hyödykkeitä",
+  "tail_list_desc": "Maailman osakkeiden, lisää kryptovaluuttoja, valuuttaparien ja muiden hyödykkeiden reaaliaikaiset hinnat kaavioineen ja kehityksineen.",
+  "tail_title": "{a}-hinta tänään | reaaliaikainen arvo ja kaavio",
+  "tail_desc": "{a}-hinta reaaliaikaisesti kaavioineen ja kehityksineen 1 viikon, 1 kuukauden, 1 vuoden ja pidemmiltä jaksoilta. Päivitetään muutaman minuutin välein.",
+  "nav_dev": "Kehittäjille",
+  "nav_compare": "Vertaa",
+  "terms": "Käyttöehdot",
+  "disclaimer": "Vastuuvapauslauseke",
+  "cookies": "Evästekäytäntö",
+  "developers": "API kehittäjille",
+  "alert_title": "Tilaa hintahälytys",
+  "alert_email": "Sähköpostiosoitteesi",
+  "alert_target": "Tavoitehinta ({cur})",
+  "alert_above": "Nousee yli",
+  "alert_below": "Laskee alle",
+  "alert_submit": "Luo hälytys",
+  "alert_ok": "Hälytys tallennettu. Lähetämme sähköpostia kerran, kun hinta ylittää tavoitteesi.",
+  "alert_err": "Hälytystä ei voitu tallentaa. Tarkista sähköpostiosoite ja hinta ja yritä uudelleen.",
+  "alert_privacy": "Käytämme sähköpostiosoitettasi vain tämän hälytyksen lähettämiseen.",
+  "contact_title": "Lähetä meille viesti",
+  "contact_name": "Nimesi",
+  "contact_email": "Sähköpostiosoitteesi",
+  "contact_msg": "Viesti",
+  "contact_send": "Lähetä",
+  "contact_ok": "Kiitos. Viestisi on lähetetty.",
+  "contact_err": "Viestiä ei voitu lähettää. Yritä myöhemmin uudelleen.",
+  "dev_title": "Ilmainen hinta-API",
+  "dev_desc": "Käytä hintojamme omassa sovelluksessasi tai verkkosivustollasi. Ilmaiset avaimet on rajoitettu 1 000 pyyntöön päivässä. Mainitse sivusto lähteenä.",
+  "dev_endpoints": "Päätepisteet",
+  "dev_request": "Hae ilmainen API-avain",
+  "dev_email": "Sähköpostiosoitteesi",
+  "dev_purpose": "Mitä aiot rakentaa?",
+  "dev_get": "Hae avain",
+  "dev_key": "API-avaimesi (tallenna se nyt, se näytetään vain kerran)",
+  "dev_err": "Avainta ei voitu luoda. Tarkista sähköpostiosoite ja yritä uudelleen.",
+  "dev_usage": "Lähetä avain x-api-key-otsikossa.",
+  "cmp_title": "Vertaa kahta kohdetta",
+  "cmp_a": "Ensimmäinen kohde",
+  "cmp_b": "Toinen kohde",
+  "cmp_ratio": "Suhde (ensimmäinen jaettuna toisella)",
+  "cmp_now": "Nyt",
+  "cmp_desc": "Vertaa mitä tahansa kahta kohdetta: niiden suhdetta ajan yli, esimerkiksi kullan ja hopean suhdetta.",
+  "cmp_page_title": "Vertaa hintoja ja suhteita maassa {country}",
+  "roi_title": "Tuottolaskuri",
+  "roi_buy": "Ostohinta",
+  "roi_amount": "Määrä",
+  "roi_now": "Nykyhinta",
+  "roi_profit": "Voitto tai tappio",
+  "roi_pct": "Tuotto",
+  "units_title": "Yksikkömuunnin",
+  "units_value": "Arvo",
+  "units_from": "Mistä",
+  "units_to": "Mihin",
+  "calc_tools_desc": "Laskurit kullan arvolle, zakatille, voitolle ja yksiköille.",
+  "nav_costs": "Kustannukset",
+  "costs_title": "Elinkustannukset maassa {country}: polttoaine, sähkö ja Big Mac -hinnat",
+  "costs_desc": "Uusimmat pumppuhinnat, kotitalouksien sähkötaksa ja Big Mac -hinta maassa {country} valuutassa {cur} lähteineen.",
+  "fuel_h": "Polttoainehinnat",
+  "petrol95": "Bensiini (95 okt.)",
+  "diesel": "Diesel",
+  "lpg": "LPG (autogas)",
+  "per_litre": "litralta",
+  "elec_h": "Kotitalouksien sähkö",
+  "elec_note": "Keskimääräinen kotitalouden hinta per kWh, sis. kaikki verot",
+  "per_kwh": "per kWh",
+  "bigmac_h": "Big Mac -hinta",
+  "bigmac_note": "Yksi Big Mac maassa {country}, helppo tapa vertailla elinkustannuksia",
+  "costs_asof": "Tiedot {date} tilanteen mukaan",
+  "costs_source": "Lähde: {src}",
+  "costs_note": "Nämä luvut muuttuvat hitaasti, päivitetään muutaman kuukauden välein, ja niitä näytetään vain siellä, missä julkaistu lähde on olemassa.",
+  "u_sheet": "levy",
+  "u_m3": "kuutiometri",
+  "nav_coins": "Kolikot ja yksiköt",
+  "coins_title": "Kultakolikot ja -yksiköt maassa {country}: kullan sisältämä arvo",
+  "coins_desc": "Suosittujen kolikoiden ja paikallisten kultayksiköiden kullan sisältämä arvo maassa {country} valuutassa {cur} reaaliaikaisen kultahinnan perusteella.",
+  "coin_weight": "Paino",
+  "coin_fine": "Hienous",
+  "coin_pure": "Puhdas kulta",
+  "coin_value": "Kullan arvo",
+  "coins_note": "Pelkkä kullan sisältö reaaliaikaisella spot-hinnalla. Jälleenmyyjien hinnat sisältävät lisähintoja, valmistuspalkkioita ja veroja, joten ne ovat korkeampia."
+ },
+ "assets": {
+  "gold": "Kulta",
+  "silver": "Hopea",
+  "platinum": "Platina",
+  "palladium": "Palladium",
+  "copper": "Kupari",
+  "aluminum": "Alumiini",
+  "nickel": "Nikkeli",
+  "zinc": "Sinkki",
+  "lead": "Lyijy",
+  "tin": "Tina",
+  "cobalt": "Koboltti",
+  "lithium": "Litium",
+  "uranium": "Uraani",
+  "iron-ore": "Rautamalmi",
+  "steel": "Teräs",
+  "wti-oil": "WTI-raakaöljy",
+  "brent-oil": "Brent-raakaöljy",
+  "natural-gas": "Maakaasu",
+  "gasoline": "Bensiini",
+  "heating-oil": "Lämmitysöljy",
+  "wheat": "Vehnä",
+  "corn": "Maissi",
+  "soybeans": "Soijapavut",
+  "rice": "Riisi",
+  "sugar": "Sokeri",
+  "coffee": "Kahvi",
+  "cocoa": "Kaakao",
+  "cotton": "Puuvilla",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Soijaöljy",
+  "soybean-meal": "Soijarouhe",
+  "oats": "Kaura",
+  "orange-juice": "Appelsiinimehu",
+  "live-cattle": "Elävä nauta",
+  "feeder-cattle": "Lihanautaa",
+  "lean-hogs": "Lihasika",
+  "milk": "Maito (luokka III)",
+  "lumber": "Puutavara",
+  "coal": "Hiili (Newcastle)",
+  "tea": "Tee",
+  "palm-oil": "Palmuöljy",
+  "coconut-oil": "Kookosöljy",
+  "sunflower-oil": "Auringonkukkaöljy",
+  "rapeseed-oil": "Rapsiöljy",
+  "rubber": "Luonnonkumi",
+  "urea": "Urealannoite",
+  "dap": "DAP-lannoite",
+  "potash": "Kalium (kaliumkloridi)",
+  "phosphate-rock": "Fosfaattikivi",
+  "beef": "Naudanliha",
+  "chicken": "Kana",
+  "banana": "Banaanit",
+  "orange": "Appelsiinit",
+  "fish-meal": "Kalajauho",
+  "plywood": "Vaneri",
+  "sawnwood": "Sahatavara (Malesia)"
+ },
+ "kw": {
+  "price": "hinta",
+  "today": "tänään",
+  "live": "reaaliaikainen",
+  "rate": "kurssi",
+  "per_gram": "grammalta",
+  "ounce": "unssi",
+  "bar": "kangas",
+  "used": "käytetty",
+  "karat": "karaatti",
+  "chart": "kaavio",
+  "convert": "muunnin",
+  "calculator": "laskuri",
+  "zakat": "zakat"
+ },
+ "legal": {
+  "about": [
+   "{site} näyttää reaaliaikaiset hinnat kullalle, hopealle, muille metalleille, energialle, viljelykasveille, osakkeille, indekseille, kryptovaluutoille ja valuutoille omassa valuutassasi, monille maille ja kielille.",
+   "Hinnat tulevat julkisista markkinatietolähteistä ja päivittyvät muutaman minuutin välein. Osa hinnoista päivitetään julkisilta sivuilta tai käsin, ja niissä näkyy lähde.",
+   "Paikalliset vähittäisarviot lisäävät maailmanmarkkinahintaan tavanomaiset verot, valmistuspalkkiot ja jälleenmyyjien lisähinnat, ja lähde ja päivämäärä näkyvät. Ne ovat arvioita, eivät tarjouksia.",
+   "Tarjoamme myös laskureita kullan arvolle, zakatille, voitolle ja yksiköille, valuuttamuuntajan ja hintahälytyksiä."
+  ],
+  "privacy": [
+   "Emme pyydä tilejä tai henkilötietoja. Tallennamme selaimeesi vain kieli-, maa- ja teemavalintasi.",
+   "Mainokset, kun ne ovat käytössä, toimittaa Google AdSense, joka voi käyttää evästeitä relevanttien mainosten näyttämiseen. Voit hallita tätä Googlen mainosasetuksissa.",
+   "Sivuston parantamiseksi voidaan kerätä anonyymiä, yhdistettyä käyntitilastoa."
+  ],
+  "contact": [
+   "Kysymykset, korjaukset tai yhteistyöpyynnöt: käytä tällä sivulla julkaistavaa yhteystietoa, kun sivusto on käynnissä.",
+   "Jos näet virheellisen hinnan, kerro kohde, maa ja mistä näit oikean arvon."
+  ],
+  "terms": [
+   "Käyttämällä {site}-palvelua hyväksyt nämä ehdot. Sivusto tarjotaan yleiseksi tiedoksi.",
+   "Hinnat, kaaviot ja arviot ovat suuntaa antavia, ne voivat viivästyä tai olla virheellisiä, eikä niitä saa käyttää ainoana perusteena kaupalle tai ostolle.",
+   "Datan kopiointi suuressa mittakaavassa tai sen jälleenmyynti on kielletty. Automaattista käyttöä varten käytä ilmaista API-rajapintaamme ja mainitse sivusto lähteenä.",
+   "Voimme muuttaa tai lopettaa palvelun osia milloin tahansa, emmekä vastaa käytöstä aiheutuvista tappioista."
+  ],
+  "disclaimer": [
+   "{site} ei ole välittäjä, pankki eikä taloudellinen neuvonantaja, eikä se anna sijoitusneuvoja.",
+   "Paikalliset vähittäisarviot, kangaslisät ja takaisinostoluvut ovat julkisiin lähteisiin perustuvia arvioita. Liikkeet eroavat toisistaan, vahvista hinta aina myyjältä.",
+   "Menneisyyden tuotto ei ennusta tulevaa. Metallien, osakkeiden ja kryptovaluuttojen sijoittamiseen liittyy riski, mukaan lukien sijoitetun rahan menetys."
+  ],
+  "cookies": [
+   "Käytämme vain selaimen tallennustilaa, joka tarvitaan kieli-, maa- ja teemavalintasi muistamiseen.",
+   "Mainokset, kun ne ovat käytössä, toimittaa Google AdSense, joka voi asettaa evästeitä relevanttien mainosten näyttämiseen. Voit hallita tätä Googlen mainosasetuksissa.",
+   "Alueilla, joilla vaaditaan suostumus, kävijältä kysytään ennen mainosevästeiden käyttöä."
+  ],
+  "developers": [
+   "Hinta-API on ilmainen pienille projekteille. Luo avain alla ja lähetä se x-api-key-otsikossa.",
+   "Päätepisteet: /v1/overview kaikille hinnoille ja kehitykselle, /v1/chart/SYMBOL?days=365 historialle, /v1/rates valuuttakursseille.",
+   "Ilmaiset avaimet sallivat 1 000 pyyntöä päivässä. Vastaukset tallennetaan välimuistiin minuutiksi, joten älä kutsu useammin.",
+   "Mainitse sivusto lähteenä, kun näytät hintojamme."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Kulta on eniten omistettu jalometalli ja perinteinen arvon säilyttäjä. Sen hinta ilmoitetaan maailmanlaajuisesti troy-unssilta ja monilla paikallisilla markkinoilla grammalta tai tolalta, ja korut myydään karaateittain 10K:sta 24K:hon.",
+   "drivers": [
+    "Korot ja Yhdysvaltain dollari",
+    "Inflaatio ja taloudellinen tai poliittinen epävarmuus",
+    "Keskuspankkien ostot ja sijoituskysyntä"
+   ],
+   "uses": [
+    "Korut ja lahjat",
+    "Sijoituskangit ja -kolikot",
+    "Elektroniikka ja hammaslääketiede"
+   ]
+  },
+  "silver": {
+   "about": "Hopea on sekä jalometalli että teollisuusmetalli. Sitä hinnoitellaan troy-unssilta, ja sitä myydään kankaina, kolikoina ja koruina puhtauksissa, kuten 999, 925 ja 800.",
+   "drivers": [
+    "Teollisuuden kysyntä aurinkopaneeleista ja elektroniikasta",
+    "Kullan hinta ja Yhdysvaltain dollari",
+    "Sijoituskysyntä kankaille ja kolikoille"
+   ],
+   "uses": [
+    "Korut ja hopeaesineet",
+    "Aurinkopaneelit ja elektroniikka",
+    "Sijoituskangit ja -kolikot"
+   ]
+  },
+  "platinum": {
+   "about": "Platina on harvinainen, tiheä jalometalli, joka on monina aikoina painoltaan arvokkaampi kuin kulta. Sitä hinnoitellaan troy-unssilta.",
+   "drivers": [
+    "Kysyntä autojen katalysaattoreista",
+    "Kaivosten tuotanto, pääosin Etelä-Afrikasta ja Venäjältä",
+    "Sijoituskysyntä ja kullan hinta"
+   ],
+   "uses": [
+    "Katalysaattorit",
+    "Korut",
+    "Kemian teollisuus ja vetyteknologia"
+   ]
+  },
+  "palladium": {
+   "about": "Palladium on harvinainen jalometalli, jota käytetään pääosin bensiinimoottorien autojen katalysaattoreissa. Sitä hinnoitellaan troy-unssilta.",
+   "drivers": [
+    "Autotuotanto ja päästösäännöt",
+    "Kaivosten tuotanto Venäjältä ja Etelä-Afrikasta",
+    "Korvautuminen platinalla"
+   ],
+   "uses": [
+    "Katalysaattorit",
+    "Elektroniikka",
+    "Hammaslääketiede ja korut"
+   ]
+  },
+  "copper": {
+   "about": "Kupari on teollisuusmetallien vertailukohta. Sen hinta ilmoitetaan metriseltä tonnilta, ja sitä seurataan maailmantalouden kunnon merkkinä.",
+   "drivers": [
+    "Rakennus- ja valmistuskysyntä, erityisesti Kiinassa",
+    "Kaivosten tuotanto ja varastot",
+    "Yhdysvaltain dollari ja kauppapolitiikka"
+   ],
+   "uses": [
+    "Sähköjohdot ja sähköverkot",
+    "Rakentaminen ja putkityöt",
+    "Sähköautot ja uusiutuva energia"
+   ]
+  },
+  "aluminum": {
+   "about": "Alumiini on kevyt ja laajalti käytetty metalli, joka valmistetaan bauksiitista suurella sähkömäärällä. Sen hinta ilmoitetaan metriseltä tonnilta.",
+   "drivers": [
+    "Sulatuksen energiakustannukset",
+    "Kysyntä autoista, pakkauksista ja rakentamisesta",
+    "Tuotanto Kiinassa ja kauppatullit"
+   ],
+   "uses": [
+    "Pakkaukset ja tölkit",
+    "Autot ja lentokoneet",
+    "Rakentaminen"
+   ]
+  },
+  "nickel": {
+   "about": "Nikkeli on metalli, jota käytetään ruostumattoman teräksen ja akkujen valmistukseen. Sen hinta ilmoitetaan metriseltä tonnilta London Metal Exchangessa.",
+   "drivers": [
+    "Ruostumattoman teräksen kysyntä",
+    "Sähköautojen akkujen kysyntä",
+    "Tarjonta Indonesiasta ja Filippiineiltä"
+   ],
+   "uses": [
+    "Ruostumaton teräs",
+    "Akut",
+    "Seokset"
+   ]
+  },
+  "zinc": {
+   "about": "Sinkkiä käytetään pääosin teräksen galvanointiin ruostetta vastaan. Sen hinta ilmoitetaan metriseltä tonnilta.",
+   "drivers": [
+    "Teräksen ja rakentamisen kysyntä",
+    "Kaivosten tuotanto ja sulattojen tuotos",
+    "Energiahinnat Euroopassa ja Kiinassa"
+   ],
+   "uses": [
+    "Teräksen galvanointi",
+    "Messinki ja seokset",
+    "Akut"
+   ]
+  },
+  "lead": {
+   "about": "Lyijy on tiheä metalli, jota käytetään pääosin ajoneuvojen akuissa. Sen hinta ilmoitetaan metriseltä tonnilta.",
+   "drivers": [
+    "Auto- ja akkukysyntä",
+    "Kierrätystarjonta",
+    "Kaivostuotanto ja ympäristösäännöt"
+   ],
+   "uses": [
+    "Ajoneuvojen akut",
+    "Säteilysuojaus",
+    "Kaapelit ja seokset"
+   ]
+  },
+  "tin": {
+   "about": "Tina on harvinainen metalli, jota käytetään pääosin elektroniikan juotteena. Sen hinta ilmoitetaan metriseltä tonnilta.",
+   "drivers": [
+    "Elektroniikan ja piirien kysyntä",
+    "Kaivostuotanto Indonesiasta, Myanmarista ja Perusta",
+    "Varastot ja kauppasäännöt"
+   ],
+   "uses": [
+    "Elektroniikan juote",
+    "Elintarvikepurkit",
+    "Kemikaalit"
+   ]
+  },
+  "cobalt": {
+   "about": "Koboltti on akkumetalli, jota louhitaan pääosin Kongon demokraattisessa tasavallassa. Sen hinta ilmoitetaan metriseltä tonnilta.",
+   "drivers": [
+    "Sähköautojen ja akkujen kysyntä",
+    "Kongon kaivostarjonta ja vientisäännöt",
+    "Akkukemian muutokset"
+   ],
+   "uses": [
+    "Akut",
+    "Superseokset",
+    "Magneetit"
+   ]
+  },
+  "lithium": {
+   "about": "Litiumkarbonaatti on uudelleenladattavien akkujen pääraaka-aine. Hinta koskee akkulaatuista karbonaattia Kiinassa, muunnettuna Yhdysvaltain dollareiksi metriseltä tonnilta.",
+   "drivers": [
+    "Sähköautojen myynti",
+    "Uusien kaivosten ja jalostamojen tarjonta",
+    "Hallituksen akkupolitiikka"
+   ],
+   "uses": [
+    "Sähköautojen akut",
+    "Puhelimet ja kannettavat tietokoneet",
+    "Energian varastointi"
+   ]
+  },
+  "uranium": {
+   "about": "Uraani on ydinvoimalaitosten polttoaine. Sen hinta ilmoitetaan Yhdysvaltain dollareina naulalta U3O8:aa.",
+   "drivers": [
+    "Ydinvoimaloiden uudelleenkäynnistykset ja uudet reaktorit",
+    "Kaivostuotanto, pääosin Kazakstanista ja Kanadasta",
+    "Valtion varastointi ja pakotteet"
+   ],
+   "uses": [
+    "Ydinvoima",
+    "Lääketieteen isotoopit"
+   ]
+  },
+  "iron-ore": {
+   "about": "Rautamalmi on teräksen pääraaka-aine. Hinta koskee 62 prosentin rautapitoisuutta Kiinaan toimitettuna metriseltä tonnilta.",
+   "drivers": [
+    "Kiinan teräksentuotanto",
+    "Tarjonta Australiasta ja Brasilialta",
+    "Kiinteistö- ja infrastruktuurimenot"
+   ],
+   "uses": [
+    "Teräksen valmistus"
+   ]
+  },
+  "steel": {
+   "about": "Teräs on raudan seos, jota käytetään lähes kaikilla teollisuudenaloilla. Hinta koskee teräsrakennusterästä Kiinassa, muunnettuna Yhdysvaltain dollareiksi metriseltä tonnilta.",
+   "drivers": [
+    "Rakentamisen kysyntä",
+    "Rautamalmin ja koksihiilen kustannukset",
+    "Hallituksen tuotantorajoitukset"
+   ],
+   "uses": [
+    "Rakennukset ja sillat",
+    "Autot ja koneet"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Kuumavalssattu teräskela on litteä terästuote, jota käytetään valmistuksessa. Hinta koskee toimitusta Yhdysvaltain Keskilännelle metriseltä tonnilta.",
+   "drivers": [
+    "Yhdysvaltain kysyntä autoista ja rakentamisesta",
+    "Tuontitullit ja kilpailu",
+    "Raaka-aine- ja energiakustannukset"
+   ],
+   "uses": [
+    "Autot ja kodinkoneet",
+    "Putket ja rakentaminen"
+   ]
+  },
+  "lumber": {
+   "about": "Puutavarafutuurit seuraavat talojen rakentamiseen käytetyn havupuun hintaa, ilmoitettuna 1 000 board feetiltä.",
+   "drivers": [
+    "Asuntoaloitukset ja asuntolainojen korot",
+    "Sahojen tuotanto ja metsäpalot",
+    "Yhdysvaltain ja Kanadan väliset kauppatullit"
+   ],
+   "uses": [
+    "Talojen runkorakenteet",
+    "Huonekalut ja pakkaukset"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI on Yhdysvaltain raakaöljyn vertailukohta. Sitä ilmoitetaan tynnyriltä, ja se toimitetaan Cushingissa, Oklahomassa.",
+   "drivers": [
+    "OPEC:n ja Yhdysvaltain tuotantopäätökset",
+    "Maailmantalouden kasvu",
+    "Varastot, geopolitiikka ja Yhdysvaltain dollari"
+   ],
+   "uses": [
+    "Bensiini, diesel ja lentopolttoaine",
+    "Muovit ja kemikaalit"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent on raakaöljyn maailmanlaajuinen vertailukohta. Sitä ilmoitetaan tynnyriltä, ja se hinnoittelee suurimman osan Yhdysvaltain ulkopuolella käydystä öljykaupasta.",
+   "drivers": [
+    "OPEC+:n tuotantopäätökset",
+    "Maailmanlaajuinen kysyntä, erityisesti Kiinasta ja Intiasta",
+    "Konfliktit ja pakotteet tuottavilla alueilla"
+   ],
+   "uses": [
+    "Bensiini, diesel ja lentopolttoaine",
+    "Muovit ja kemikaalit"
+   ]
+  },
+  "natural-gas": {
+   "about": "Maakaasu ilmoitetaan täällä Yhdysvaltain Henry Hub -hintana MMBtu:lta. Sitä käytetään lämmitykseen, sähköntuotantoon ja teollisuuteen.",
+   "drivers": [
+    "Sää ja lämmityksen kysyntä",
+    "Varastotasot ja tuotanto",
+    "Nesteytetyn maakaasun vienti"
+   ],
+   "uses": [
+    "Sähköntuotanto",
+    "Kotien lämmitys ja keittäminen",
+    "Lannoitteet ja kemikaalit"
+   ]
+  },
+  "gasoline": {
+   "about": "Bensiinifutuurit seuraavat tukkumyyntihintoja bensiinille, ilmoitettuna Yhdysvaltain dollareina gallonalta.",
+   "drivers": [
+    "Raakaöljyn hinta",
+    "Jalostamojen tuotanto ja ajokausi",
+    "Varastot ja säännökset"
+   ],
+   "uses": [
+    "Autojen polttoaine"
+   ]
+  },
+  "heating-oil": {
+   "about": "Lämmitysöljyfutuurit seuraavat tukkumyyntihintoja dieselille ja lämmitysöljylle, ilmoitettuna Yhdysvaltain dollareina gallonalta.",
+   "drivers": [
+    "Raakaöljyn hinta",
+    "Talvisää",
+    "Kuorma-autojen ja teollisuuden dieselkysyntä"
+   ],
+   "uses": [
+    "Kotien lämmitys",
+    "Dieselpolttoaine"
+   ]
+  },
+  "wheat": {
+   "about": "Vehnä on yksi maailman pääasiallisista viljalajeista. Hinta ilmoitetaan bushelilta Chicagon pörssissä.",
+   "drivers": [
+    "Sää tärkeimmillä viljelyalueilla",
+    "Viennit Venäjältä, Ukrainasta, Yhdysvalloista ja EU:sta",
+    "Varastot, energiahinnat ja Yhdysvaltain dollari"
+   ],
+   "uses": [
+    "Leipä, pasta ja jauhot",
+    "Eläinten rehu"
+   ]
+  },
+  "corn": {
+   "about": "Maissi on tärkeä ruoka- ja rehuvilja sekä etanolin lähde. Hinta ilmoitetaan bushelilta Chicagon pörssissä.",
+   "drivers": [
+    "Yhdysvaltain ja Brasilian sadot",
+    "Etanolin ja eläinrehun kysyntä",
+    "Sää ja viennit"
+   ],
+   "uses": [
+    "Eläinten rehu",
+    "Etanolipolttoaine",
+    "Ruoka ja siirapit"
+   ]
+  },
+  "soybeans": {
+   "about": "Soijapavut jalostetaan öljyksi ja jauhoksi. Hinta ilmoitetaan bushelilta Chicagon pörssissä.",
+   "drivers": [
+    "Yhdysvaltain, Brasilian ja Argentiinan sadot",
+    "Kiinan tuontikysyntä",
+    "Biopolttoainepolitiikka"
+   ],
+   "uses": [
+    "Ruokaöljy",
+    "Eläinten rehu",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Riisi on miljardien ihmisten perusruoka. Hinta ilmoitetaan sentneriltä Chicagon pörssissä.",
+   "drivers": [
+    "Monsuuni ja sato-olosuhteet Aasiassa",
+    "Intian, Thaimaan ja Vietnamin vientisäännöt",
+    "Varastot ja elintarvikehinnat"
+   ],
+   "uses": [
+    "Ruoka"
+   ]
+  },
+  "sugar": {
+   "about": "Raakasokerifutuurit seuraavat maailman sokerihintaa, ilmoitettuna Yhdysvaltain dollareina naulalta.",
+   "drivers": [
+    "Brasilian ja Intian sokeriruokosadot",
+    "Etanolin kysyntä Brasiliassa",
+    "Sää ja valuutat"
+   ],
+   "uses": [
+    "Ruoka ja juomat",
+    "Etanoli"
+   ]
+  },
+  "coffee": {
+   "about": "Arabica-kahvifutuurit seuraavat kahvipapujen maailmanhintaa, ilmoitettuna Yhdysvaltain dollareina naulalta.",
+   "drivers": [
+    "Sää Brasiliassa ja Kolumbiassa",
+    "Varastot ja viennit",
+    "Valuutat ja kysyntä"
+   ],
+   "uses": [
+    "Kahvijuomat"
+   ]
+  },
+  "cocoa": {
+   "about": "Kaakaofutuurit seuraavat kaakaopapujen hintaa, ilmoitettuna Yhdysvaltain dollareina metriseltä tonnilta.",
+   "drivers": [
+    "Sadot Norsunluurannikolla ja Ghanassa",
+    "Taudit ja sää",
+    "Suklaan kysyntä"
+   ],
+   "uses": [
+    "Suklaa ja makeiset",
+    "Kosmetiikka"
+   ]
+  },
+  "cotton": {
+   "about": "Puuvillafutuurit seuraavat raakapuuvillan maailmanhintaa, ilmoitettuna Yhdysvaltain dollareina naulalta.",
+   "drivers": [
+    "Sää Yhdysvalloissa, Intiassa ja Kiinassa",
+    "Tekstiilien kysyntä",
+    "Öljyn hinta ja valuutat"
+   ],
+   "uses": [
+    "Vaatteet ja tekstiilit"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin on ensimmäinen ja suurin kryptovaluutta. Sitä käydään kaupoin pörsseissä ympäri vuorokauden, ja sen tarjonta on rajoitettu 21 miljoonaan kolikkoon.",
+   "drivers": [
+    "Sijoittajakysyntä ja ETF-virrat",
+    "Korot ja riskinottohalukkuus",
+    "Sääntely ja uutiset"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum on lohkoketju älykkäille sopimuksille ja sovelluksille, ja sen kolikko, ether, on toiseksi suurin kryptovaluutta.",
+   "drivers": [
+    "Ethereum-sovellusten käyttö",
+    "Verkkopäivitykset ja maksut",
+    "Markkinatunnelma"
+   ]
+  },
+  "bnb": {
+   "about": "BNB on BNB Chainin ja Binance-pörssin ekosysteemin kolikko.",
+   "drivers": [
+    "Pörssin aktiivisuus ja maksut",
+    "Tokenien polttaminen",
+    "Sääntely"
+   ]
+  },
+  "xrp": {
+   "about": "XRP on kryptovaluutta, jota käytetään nopeisiin kansainvälisiin maksuihin XRP Ledgerillä.",
+   "drivers": [
+    "Oikeus- ja sääntelyuutiset",
+    "Pankki- ja maksukumppanuudet",
+    "Markkinatunnelma"
+   ]
+  },
+  "solana": {
+   "about": "Solana on nopea lohkoketju sovelluksille ja maksuille, ja SOL on sen kolikko.",
+   "drivers": [
+    "Sovellusten ja tokenien aktiivisuus",
+    "Verkon luotettavuus",
+    "Markkinatunnelma"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano on panosta hyödyntävä lohkoketju, ja ADA on sen kolikko.",
+   "drivers": [
+    "Kehityksen edistyminen",
+    "Panostaminen",
+    "Markkinatunnelma"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin alkoi vitsikolikkona ja kasvoi yhdeksi eniten käydyistä kryptovaluutoista.",
+   "drivers": [
+    "Huomio sosiaalisessa mediassa",
+    "Markkinatunnelma",
+    "Maksukäytön yleistyminen"
+   ]
+  },
+  "tron": {
+   "about": "TRON on lohkoketju, jota käytetään laajasti vakaakolikkojen siirtoihin, ja TRX on sen kolikko.",
+   "drivers": [
+    "Vakaakolikkojen siirtojen aktiivisuus",
+    "Verkkomaksut",
+    "Markkinatunnelma"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot yhdistää useita lohkoketjuja, ja DOT on sen kolikko.",
+   "drivers": [
+    "Verkon kehitys",
+    "Panostaminen",
+    "Markkinatunnelma"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink tuo reaalimaailman dataa lohkoketjuihin, ja LINK on sen kolikko.",
+   "drivers": [
+    "Muiden sovellusten käyttö",
+    "Kumppanuudet",
+    "Markkinatunnelma"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin on yksi vanhimmista kryptovaluutoista, ja se luotiin nopeampiin maksuihin kuin Bitcoin.",
+   "drivers": [
+    "Bitcoinin hinta",
+    "Maksukäytön yleistyminen",
+    "Markkinatunnelma"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche on nopea lohkoketjualusta, ja AVAX on sen kolikko.",
+   "drivers": [
+    "Sovellusten aktiivisuus",
+    "Verkkopäivitykset",
+    "Markkinatunnelma"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 seuraa 500:aa Yhdysvaltain suurimman yhtiön kehitystä ja on Yhdysvaltain osakemarkkinoiden pääasiallinen mittari.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite seuraa tuhansia Nasdaqissa listattuja osakkeita, joissa teknologiayhtiöillä on suuri paino.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average seuraa 30:tä suurta Yhdysvaltain yhtiötä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 seuraa Lontoossa listattujen 100 suurimman yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "dax": {
+   "about": "DAX seuraa Frankfurtissa listattujen 40 suuren saksalaisen yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 seuraa Pariisissa listattujen 40 suuren yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 seuraa Tokiossa listattujen 225 suuren yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng -indeksi seuraa Hongkongissa listattujen suurimpien yhtiöiden kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite seuraa kaikkia Shanghain pörssissä listattuja osakkeita.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 seuraa 50 suuren yhtiön kehitystä Intian kansallisessa pörssissä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex seuraa 30 suuren yhtiön kehitystä Bombayn pörssissä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 seuraa Egyptin pörssin 30 aktiivisimman yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Index seuraa kaikkia Saudi-Arabian pörssissä listattuja yhtiöitä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 seuraa Borsa Istanbulin 100 suurimman yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa seuraa Brasilian B3-pörssin pääyhtiöiden kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 seuraa Australian pörssin 200 suurimman yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite seuraa Torontossa listattujen pääyhtiöiden kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI seuraa kaikkia Korean pörssin tavallisia osakkeita.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 seuraa 50 suuren euroalueen yhtiön kehitystä.",
+   "drivers": [
+    "Yhtiöiden tulokset",
+    "Korot ja inflaatio",
+    "Talous- ja poliittiset uutiset"
+   ]
+  }
+ }
+}

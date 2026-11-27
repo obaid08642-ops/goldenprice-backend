@@ -10,7 +10,8 @@ export const url = (lang: Lang, cc: string, slug = "") => `/${lang}/${cc.toLower
 export const isPrimary = (lang: Lang, c: Country) => langsFor(c).includes(lang);
 // Other languages work in every country, but only for the lightweight pages (home + markets) and are noindex.
 // Lite countries (global price in local currency, no local retail data) only get their own languages + English, and only the precious-metal pages.
-export const combos = () => COUNTRIES.flatMap((c) => LANG_CODES.filter((l) => !c.lite || isPrimary(l, c)).map((l) => ({ lang: l, country: c, primary: isPrimary(l, c) })));
+// Every country is built only in its own languages + English (keeps the site under the 20,000-file hosting limit and avoids thin duplicate pages).
+export const combos = () => COUNTRIES.flatMap((c) => LANG_CODES.filter((l) => isPrimary(l, c)).map((l) => ({ lang: l, country: c, primary: isPrimary(l, c) })));
 export const litePage = (slug: string) => slug === "" || ["markets", "rates", "calculators", "silver", "platinum", "palladium"].includes(slug);
 export const LIGHT_PAGES = ["", "markets"];
 export const pageExists = (lang: Lang, c: Country, slug: string, assetSlugs: string[]) => slug === "costs" ? isPrimary(lang, c) && hasCosts(c.code) : slug === "coins" ? isPrimary(lang, c) && hasCoins(c.code) : c.lite && !litePage(slug) ? false : isPrimary(lang, c) ? (slug === "" || ["markets", "rates", "calculators", "compare"].includes(slug) || assetSlugs.includes(slug)) : LIGHT_PAGES.includes(slug);

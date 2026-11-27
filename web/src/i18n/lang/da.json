@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "i dag",
+  "updated": "Opdateret {t}",
+  "delayed": "Forsinket",
+  "per": "pr. {u}",
+  "u_gram": "gram",
+  "u_ounce": "unse",
+  "u_kilo": "kilo",
+  "u_tola": "tola",
+  "u_ton": "metrisk ton",
+  "u_barrel": "tønde",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "gallon",
+  "u_bushel": "bushel",
+  "u_lb": "pund",
+  "u_cwt": "hundredvægt",
+  "u_coin": "mønt",
+  "u_point": "point",
+  "global_vs_local": "Verdenspris vs. lokalpris",
+  "global_price": "Verdenspris",
+  "local_estimate": "Lokalt skøn",
+  "est_retail": "Estimeret detailpris inkl. fremstillingsgebyr",
+  "est_note": "Kun et skøn. Butikker adskiller sig i skatter, fremstillingsgebyrer og avancer.",
+  "karat_title": "{a} efter karat",
+  "karat": "Karat",
+  "purity": "Renhed",
+  "price": "Pris",
+  "currencies_title": "{a}-pris i andre valutaer",
+  "col_ounce": "Pr. unse",
+  "col_gram": "Pr. gram",
+  "col_24h": "24 t",
+  "col_7d": "7 dage",
+  "markets_title": "Metaller, energi, landbrug og krypto",
+  "markets_sub": "Realtidspriser i {cur}",
+  "list_title": "Priser på metaller, energi, råvarer og krypto i {country}",
+  "list_desc": "Realtidspriser på guld, sølv, platin, kobber, olie, gas, hvede, kaffe, aktieindeks, Bitcoin og meget mere i {cur}.",
+  "alerts_title": "Prisalarmer",
+  "alerts_desc": "Få besked, når prisen rammer dit mål, på din telefon eller via e-mail.",
+  "alerts_cta": "Opret alarm",
+  "search_ph": "Søg fx {a}-pris i {country}…",
+  "search_btn": "Søg",
+  "r1d": "1D",
+  "r1w": "1U",
+  "r1m": "1M",
+  "r1y": "1Å",
+  "r5y": "5Å",
+  "rall": "Alle",
+  "geo_ask": "Vil du se priserne for {country} i {cur}?",
+  "geo_yes": "Ja, skift",
+  "geo_no": "Nej tak",
+  "footer_note": "Priserne er vejledende og kan være forsinkede. Ikke investeringsrådgivning.",
+  "about": "Om",
+  "privacy": "Privatlivspolitik",
+  "contact": "Kontakt",
+  "theme": "Tema",
+  "language": "Sprog",
+  "country": "Land",
+  "faq_title": "Ofte stillede spørgsmål",
+  "q1": "Hvad er prisen på {a} i {country} i dag?",
+  "a1": "Prisen på {a} i {country} er i dag {p} {cur} pr. {u}. Det er verdensmarkedets spotpris omregnet til den seneste valutakurs, og den opdateres hvert par minutter.",
+  "q2": "Hvorfor er lokalprisen forskellig fra verdensprisen?",
+  "a2": "Butikker lægger fremstillingsgebyrer, skatter, importafgifter og en forhandlermargin oven på spotprisen, så detailprisen i {country} er typisk højere.",
+  "q3": "Hvor ofte opdateres prisen?",
+  "a3": "Markedspriser i realtid opdateres hvert par minutter. Priser uden livefeed opdateres manuelt og viser tidspunktet for sidste opdatering.",
+  "title": "{a}-pris i {country} i dag | pr. {u} i {cur}",
+  "desc": "Realtidspris på {a} i {country} i {cur}: pr. gram, unse og kilo, prisgraf samt verdenspris vs. lokalpris. Opdateres hvert par minutter.",
+  "title_idx": "{a}-indeks i dag | værdi i realtid og graf",
+  "desc_idx": "Realtidsværdi for {a}-indekset, dagens ændring og prisgraf. Opdateres hvert par minutter.",
+  "history_note": "Historikken er baseret på dagens lukkekurser.",
+  "unit_label": "Enhed",
+  "sample_note": "Eksempeldata",
+  "nav_all": "Markeder",
+  "nav_rates": "Valutaer",
+  "nav_calc": "Beregnere",
+  "cat_precious": "Ædelmetaller",
+  "cat_industrial": "Industrimetaller",
+  "cat_energy": "Energi",
+  "cat_agri": "Landbrug",
+  "cat_index": "Aktieindeks",
+  "cat_crypto": "Krypto",
+  "bars_title": "{a}-stænger og mønter: køb- og salgspris i {cur}",
+  "bar_size": "Størrelse",
+  "bar_buy": "Køb hos forhandler",
+  "bar_sell": "Sælg tilbage",
+  "bar_prem": "Præmie over spotpris",
+  "bars_note": "Typiske forhandlerpriser baseret på verdensprisen plus den sædvanlige præmie. De faktiske priser varierer efter butik og dag.",
+  "used_title": "Brugt og skrot {a}: tilbagekøbspris pr. gram i {cur}",
+  "used_note": "Brugte smykker købes typisk tilbage under nyprisen. Dette er typiske skøn.",
+  "used_col": "Tilbagekøb pr. gram",
+  "rates_title": "Valutakurser over for {cur}",
+  "rates_sub": "Midtkurser, opdateres hver time",
+  "rates_desc": "Realtidskurser for verdens største valutaer over for {cur}, plus en valutaomregner.",
+  "rates_page_title": "Valutakurser og valutaomregner i {country}",
+  "conv_title": "Valutaomregner",
+  "conv_amount": "Beløb",
+  "conv_from": "Fra",
+  "conv_to": "Til",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Guldberegner og zakat-beregner i {country}",
+  "calc_page_desc": "Beregn værdien af dit guld efter vægt og karat i {cur}, og tjek zakat på guld og sølv med dagens priser.",
+  "calc_title": "Beregner for guldværdi",
+  "calc_weight": "Vægt",
+  "calc_unit": "Enhed",
+  "calc_karat": "Karat",
+  "calc_value": "Estimeret værdi",
+  "calc_note": "Baseret på verdensprisen. Butikker betaler mindre end dette for brugt guld.",
+  "zakat_title": "Zakat på guld og sølv",
+  "zakat_nisab_gold": "Nisab for guld (85 gram)",
+  "zakat_nisab_silver": "Nisab for sølv (595 gram)",
+  "zakat_gold_g": "Dit guld i gram (24K-ækvivalent)",
+  "zakat_silver_g": "Dit sølv i gram",
+  "zakat_due": "Skyldig zakat (2,5 %)",
+  "zakat_note": "Zakat skyldes af formue, der har været over nisab i et måneår. Dette er en vejledning, spørg en lærd om din egen situation.",
+  "zakat_below": "Under nisab: der skyldes ingen zakat af dette beløb.",
+  "related_title": "Populære søgninger",
+  "retail_basis": "Baseret på {n} lokale kilder, kontrolleret {d}.",
+  "u_share": "aktie",
+  "u_rate": "kurs",
+  "u_mbf": "1.000 board feet",
+  "cat_stock": "Aktier",
+  "cat_forex": "Valutapar",
+  "cat_construction": "Byggematerialer",
+  "perf_title": "Udvikling",
+  "p_7d": "1 uge",
+  "p_30d": "1 måned",
+  "p_90d": "3 måneder",
+  "p_ytd": "År til dato",
+  "p_1y": "1 år",
+  "p_5y": "5 år",
+  "range52": "52-ugers interval",
+  "ath": "Højeste i vores data",
+  "atl": "Laveste i vores data",
+  "since": "Historik fra {d}",
+  "about_title": "Om {a}",
+  "drivers_title": "Hvad driver prisen",
+  "uses_title": "Hvad det bruges til",
+  "source_note": "Kilde: {s}. Priserne er vejledende og kan være forsinkede.",
+  "about_stock": "Aktier i {a} handles i {c}. Siden viser den seneste forsinkede kurs, ændringen i dag og over længere perioder samt den samme kurs omregnet til andre valutaer.",
+  "about_forex": "{a} viser, hvor mange enheder af den anden valuta én enhed af den første valuta køber. Kurserne bevæger sig med renter, inflation, handel og de økonomiske nyheder i begge lande.",
+  "about_crypto": "{a} er en kryptovaluta. Prisen fastsættes af handel på børser døgnet rundt og kan ændre sig hurtigt. Siden viser realtidsprisen, ændringen over forskellige perioder og prisen i andre valutaer.",
+  "about_commodity": "{a} er en handlet råvare. Prisen følger udbud, efterspørgsel, vejret, valutaer og nyheder. Siden viser den seneste pris, ændringen over forskellige perioder og prisen i andre valutaer.",
+  "about_index": "{a} måler, hvordan en kurv af aktier klarer sig. Værdien angives i indekspoint og bevæger sig med aktiekurserne for de virksomheder, det består af.",
+  "tail_list_title": "Aktier, krypto, valutapar og flere råvarer",
+  "tail_list_desc": "Realtidspriser på globale aktier, flere kryptovalutaer, valutapar og ekstra råvarer, med grafer og udvikling.",
+  "tail_title": "{a}-pris i dag | værdi i realtid og graf",
+  "tail_desc": "Realtidspris på {a} med graf og udvikling over 1 uge, 1 måned, 1 år og mere. Opdateres hvert par minutter.",
+  "nav_dev": "Udviklere",
+  "nav_compare": "Sammenlign",
+  "terms": "Brugsvilkår",
+  "disclaimer": "Ansvarsfraskrivelse",
+  "cookies": "Cookiepolitik",
+  "developers": "API til udviklere",
+  "alert_title": "Opret en prisalarm",
+  "alert_email": "Din e-mail",
+  "alert_target": "Målpris ({cur})",
+  "alert_above": "Stiger over",
+  "alert_below": "Falder under",
+  "alert_submit": "Opret alarm",
+  "alert_ok": "Alarmen er gemt. Vi sender dig én e-mail, når prisen krydser dit mål.",
+  "alert_err": "Alarmen kunne ikke gemmes. Tjek e-mailen og prisen, og prøv igen.",
+  "alert_privacy": "Vi bruger kun din e-mail til at sende denne alarm.",
+  "contact_title": "Send os en besked",
+  "contact_name": "Dit navn",
+  "contact_email": "Din e-mail",
+  "contact_msg": "Besked",
+  "contact_send": "Send",
+  "contact_ok": "Tak. Din besked er sendt.",
+  "contact_err": "Beskeden kunne ikke sendes. Prøv igen senere.",
+  "dev_title": "Gratis pris-API",
+  "dev_desc": "Brug vores priser i din egen app eller på din hjemmeside. Gratis nøgler er begrænset til 1.000 forespørgsler pr. dag. Angiv venligst kilden til siden.",
+  "dev_endpoints": "Endpoints",
+  "dev_request": "Få en gratis API-nøgle",
+  "dev_email": "Din e-mail",
+  "dev_purpose": "Hvad vil du bygge?",
+  "dev_get": "Hent nøgle",
+  "dev_key": "Din API-nøgle (gem den nu, den vises kun én gang)",
+  "dev_err": "Nøglen kunne ikke oprettes. Tjek e-mailen og prøv igen.",
+  "dev_usage": "Send nøglen i headeren x-api-key.",
+  "cmp_title": "Sammenlign to aktiver",
+  "cmp_a": "Første aktiv",
+  "cmp_b": "Andet aktiv",
+  "cmp_ratio": "Forhold (første divideret med andet)",
+  "cmp_now": "Nu",
+  "cmp_desc": "Sammenlign to vilkårlige aktiver: forholdet mellem dem over tid, fx forholdet mellem guld og sølv.",
+  "cmp_page_title": "Sammenlign priser og forhold i {country}",
+  "roi_title": "Gevinstberegner",
+  "roi_buy": "Købspris",
+  "roi_amount": "Mængde",
+  "roi_now": "Aktuel pris",
+  "roi_profit": "Gevinst eller tab",
+  "roi_pct": "Afkast",
+  "units_title": "Enhedsomregner",
+  "units_value": "Værdi",
+  "units_from": "Fra",
+  "units_to": "Til",
+  "calc_tools_desc": "Beregnere for guldværdi, zakat, gevinst og enheder.",
+  "nav_costs": "Omkostninger",
+  "costs_title": "Leveomkostninger i {country}: brændstof, elektricitet og Big Mac-priser",
+  "costs_desc": "Seneste pumpepriser, husholdningstarif for elektricitet og Big Mac-pris i {country}, i {cur}, med kilder.",
+  "fuel_h": "Brændstofpriser",
+  "petrol95": "Benzin (95 oktan)",
+  "diesel": "Diesel",
+  "lpg": "LPG (autogas)",
+  "per_litre": "pr. liter",
+  "elec_h": "Husholdningselektricitet",
+  "elec_note": "Gennemsnitlig husholdningspris pr. kWh inkl. alle afgifter",
+  "per_kwh": "pr. kWh",
+  "bigmac_h": "Big Mac-pris",
+  "bigmac_note": "Én Big Mac i {country}, en simpel måde at sammenligne leveomkostninger på",
+  "costs_asof": "Data pr. {date}",
+  "costs_source": "Kilde: {src}",
+  "costs_note": "Disse tal ændrer sig langsomt, opdateres hver få måneder og vises kun, hvor der findes en offentliggjort kilde.",
+  "u_sheet": "ark",
+  "u_m3": "kubikmeter",
+  "nav_coins": "Mønter og enheder",
+  "coins_title": "Guldmønter og enheder i {country}: værdi af guldindhold",
+  "coins_desc": "Værdi af guldindholdet i populære mønter og lokale guldenheder i {country}, i {cur}, baseret på realtidsprisen på guld.",
+  "coin_weight": "Vægt",
+  "coin_fine": "Finhed",
+  "coin_pure": "Rent guld",
+  "coin_value": "Guldværdi",
+  "coins_note": "Kun guldindhold til realtids spotpris. Forhandlere lægger præmier, fremstillingsgebyrer og skatter oveni, så deres priser er højere."
+ },
+ "assets": {
+  "gold": "Guld",
+  "silver": "Sølv",
+  "platinum": "Platin",
+  "palladium": "Palladium",
+  "copper": "Kobber",
+  "aluminum": "Aluminium",
+  "nickel": "Nikkel",
+  "zinc": "Zink",
+  "lead": "Bly",
+  "tin": "Tin",
+  "cobalt": "Kobolt",
+  "lithium": "Lithium",
+  "uranium": "Uran",
+  "iron-ore": "Jernmalm",
+  "steel": "Stål",
+  "wti-oil": "WTI råolie",
+  "brent-oil": "Brent råolie",
+  "natural-gas": "Naturgas",
+  "gasoline": "Benzin",
+  "heating-oil": "Fyringsolie",
+  "wheat": "Hvede",
+  "corn": "Majs",
+  "soybeans": "Sojabønner",
+  "rice": "Ris",
+  "sugar": "Sukker",
+  "coffee": "Kaffe",
+  "cocoa": "Kakao",
+  "cotton": "Bomuld",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Sojaolie",
+  "soybean-meal": "Sojaskrå",
+  "oats": "Havre",
+  "orange-juice": "Appelsinjuice",
+  "live-cattle": "Levende kvæg",
+  "feeder-cattle": "Slagtekalve",
+  "lean-hogs": "Slagtesvin",
+  "milk": "Mælk (klasse III)",
+  "lumber": "Træ",
+  "coal": "Kul (Newcastle)",
+  "tea": "Te",
+  "palm-oil": "Palmeolie",
+  "coconut-oil": "Kokosolie",
+  "sunflower-oil": "Solsikkeolie",
+  "rapeseed-oil": "Rapsolie",
+  "rubber": "Naturgummi",
+  "urea": "Urea (gødning)",
+  "dap": "DAP (gødning)",
+  "potash": "Kali (kaliumklorid)",
+  "phosphate-rock": "Fosfatsten",
+  "beef": "Oksekød",
+  "chicken": "Kylling",
+  "banana": "Bananer",
+  "orange": "Appelsiner",
+  "fish-meal": "Fiskemel",
+  "plywood": "Krydsfiner",
+  "sawnwood": "Savet træ (Malaysia)"
+ },
+ "kw": {
+  "price": "pris",
+  "today": "i dag",
+  "live": "live",
+  "rate": "kurs",
+  "per_gram": "pr. gram",
+  "ounce": "unse",
+  "bar": "stang",
+  "used": "brugt",
+  "karat": "karat",
+  "chart": "graf",
+  "convert": "omregner",
+  "calculator": "beregner",
+  "zakat": "zakat"
+ },
+ "legal": {
+  "about": [
+   "{site} viser realtidspriser på guld, sølv, andre metaller, energi, afgrøder, aktier, indeks, kryptovalutaer og valutaer i din egen valuta, for mange lande og sprog.",
+   "Priserne stammer fra offentligt tilgængelige markedsdatafeeds og opdateres hvert par minutter. Nogle priser opdateres fra offentlige sider eller manuelt og viser deres kilde.",
+   "Lokale detailskøn lægger typiske skatter, fremstillingsgebyrer og forhandlerpræmier oven på verdensprisen, med kilder og dato angivet. Det er skøn, ikke tilbud.",
+   "Vi tilbyder også beregnere for guldværdi, zakat, gevinst og enheder, en valutaomregner og prisalarmer."
+  ],
+  "privacy": [
+   "Vi beder ikke om konti eller personlige data. Vi gemmer kun dit valg af sprog, land og tema i din browser.",
+   "Annoncer, når de er aktiveret, leveres af Google AdSense, som kan bruge cookies til at vise relevante annoncer. Du kan styre dette i dine Google-annonceindstillinger.",
+   "Anonyme, samlede besøgsstatistikker kan indsamles for at forbedre siden."
+  ],
+  "contact": [
+   "Spørgsmål, rettelser eller henvendelser om samarbejde: brug kontaktadressen, der offentliggøres på denne side, når siden er live.",
+   "Hvis du ser en forkert pris, så fortæl os aktivet, landet og hvor du så den korrekte værdi."
+  ],
+  "terms": [
+   "Ved at bruge {site} accepterer du disse vilkår. Siden stilles til rådighed som generel information.",
+   "Priser, grafer og skøn er vejledende, kan være forsinkede eller forkerte og må ikke bruges som eneste grundlag for en handel eller et køb.",
+   "Du må ikke kopiere data i stort omfang eller videresælge dem. Til automatiseret adgang bruger du vores gratis API og angiver kilden til siden.",
+   "Vi kan til enhver tid ændre eller stoppe enhver del af tjenesten, og vi er ikke ansvarlige for tab som følge af brugen."
+  ],
+  "disclaimer": [
+   "{site} er ikke en mægler, bank eller finansiel rådgiver og giver ingen investeringsrådgivning.",
+   "Lokale detailskøn, præmier på stænger og tilbagekøbstal er skøn baseret på offentlige kilder. Butikker er forskellige, bekræft altid prisen med sælgeren.",
+   "Tidligere afkast forudsiger ikke fremtidige resultater. Investering i metaller, aktier og kryptovalutaer er forbundet med risiko, herunder tab af det investerede beløb."
+  ],
+  "cookies": [
+   "Vi bruger kun den browserlagring, der er nødvendig for at huske dit sprog, land og tema.",
+   "Annoncer, når de er aktiveret, leveres af Google AdSense, som kan sætte cookies for at vise relevante annoncer. Du kan styre dette i dine Google-annonceindstillinger.",
+   "Besøgende i regioner, der kræver samtykke, bliver spurgt, før annoncecookies tages i brug."
+  ],
+  "developers": [
+   "Vores pris-API er gratis til mindre projekter. Opret en nøgle nedenfor og send den i headeren x-api-key.",
+   "Endpoints: /v1/overview for alle priser og udvikling, /v1/chart/SYMBOL?days=365 for historik, /v1/rates for valutakurser.",
+   "Gratis nøgler giver 1.000 forespørgsler pr. dag. Svar caches i et minut, så kald venligst ikke hyppigere end det.",
+   "Angiv venligst kilden til siden, når du viser vores priser."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Guld er det mest udbredte ædelmetal og et traditionelt værdilager. Prisen noteres pr. troy-unse globalt og pr. gram eller tola på mange lokale markeder, mens smykker sælges efter karat fra 10K til 24K.",
+   "drivers": [
+    "Renter og den amerikanske dollar",
+    "Inflation og økonomisk eller politisk usikkerhed",
+    "Centralbankers køb og investeringsefterspørgsel"
+   ],
+   "uses": [
+    "Smykker og gaver",
+    "Investeringsstænger og mønter",
+    "Elektronik og tandpleje"
+   ]
+  },
+  "silver": {
+   "about": "Sølv er både et ædelmetal og et industrimetal. Det prissættes pr. troy-unse og sælges som stænger, mønter og smykker i renheder som 999, 925 og 800.",
+   "drivers": [
+    "Industriel efterspørgsel fra solcellepaneler og elektronik",
+    "Guldprisen og den amerikanske dollar",
+    "Investeringsefterspørgsel efter stænger og mønter"
+   ],
+   "uses": [
+    "Smykker og sølvtøj",
+    "Solcellepaneler og elektronik",
+    "Investeringsstænger og mønter"
+   ]
+  },
+  "platinum": {
+   "about": "Platin er et sjældent, tungt ædelmetal, der i mange perioder er mere værd pr. vægtenhed end guld. Det prissættes pr. troy-unse.",
+   "drivers": [
+    "Efterspørgsel fra katalysatorer i biler",
+    "Minedrift, hovedsagelig fra Sydafrika og Rusland",
+    "Investeringsefterspørgsel og guldprisen"
+   ],
+   "uses": [
+    "Katalysatorer",
+    "Smykker",
+    "Kemisk industri og brintteknologi"
+   ]
+  },
+  "palladium": {
+   "about": "Palladium er et sjældent ædelmetal, der primært bruges i katalysatorer til benzinbiler. Det prissættes pr. troy-unse.",
+   "drivers": [
+    "Bilproduktion og udledningsregler",
+    "Minedrift fra Rusland og Sydafrika",
+    "Substitution med platin"
+   ],
+   "uses": [
+    "Katalysatorer",
+    "Elektronik",
+    "Tandpleje og smykker"
+   ]
+  },
+  "copper": {
+   "about": "Kobber er det centrale industrimetal. Prisen noteres pr. metrisk ton og følges som et tegn på den globale økonomiske sundhed.",
+   "drivers": [
+    "Efterspørgsel fra byggeri og produktion, især i Kina",
+    "Minedrift og lagerbeholdninger",
+    "Den amerikanske dollar og handelspolitik"
+   ],
+   "uses": [
+    "Elektriske ledninger og elnet",
+    "Byggeri og VVS",
+    "Elbiler og vedvarende energi"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminium er et let og meget udbredt metal, der fremstilles af bauxit med store mængder elektricitet. Prisen noteres pr. metrisk ton.",
+   "drivers": [
+    "Energiomkostninger til smeltning",
+    "Efterspørgsel fra biler, emballage og byggeri",
+    "Produktion i Kina og handelstold"
+   ],
+   "uses": [
+    "Emballage og dåser",
+    "Biler og fly",
+    "Byggeri"
+   ]
+  },
+  "nickel": {
+   "about": "Nikkel er et metal, der bruges til at fremstille rustfrit stål og batterier. Prisen noteres pr. metrisk ton på London Metal Exchange.",
+   "drivers": [
+    "Efterspørgsel efter rustfrit stål",
+    "Efterspørgsel efter batterier til elbiler",
+    "Udbud fra Indonesien og Filippinerne"
+   ],
+   "uses": [
+    "Rustfrit stål",
+    "Batterier",
+    "Legeringer"
+   ]
+  },
+  "zinc": {
+   "about": "Zink bruges primært til at galvanisere stål mod rust. Prisen noteres pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel fra stål og byggeri",
+    "Minedrift og smelteværkernes produktion",
+    "Energipriser i Europa og Kina"
+   ],
+   "uses": [
+    "Galvanisering af stål",
+    "Messing og legeringer",
+    "Batterier"
+   ]
+  },
+  "lead": {
+   "about": "Bly er et tungt metal, der hovedsagelig bruges i køretøjsbatterier. Prisen noteres pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel fra biler og batterier",
+    "Udbud fra genbrug",
+    "Minedrift og miljøregler"
+   ],
+   "uses": [
+    "Batterier til køretøjer",
+    "Strålingsafskærmning",
+    "Kabler og legeringer"
+   ]
+  },
+  "tin": {
+   "about": "Tin er et sjældent metal, der hovedsagelig bruges som loddemetal i elektronik. Prisen noteres pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel fra elektronik og chips",
+    "Minedrift fra Indonesien, Myanmar og Peru",
+    "Lagerbeholdninger og handelsregler"
+   ],
+   "uses": [
+    "Loddemetal til elektronik",
+    "Konservesdåser",
+    "Kemikalier"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobolt er et batterimetal, der hovedsagelig udvindes i Den Demokratiske Republik Congo. Prisen noteres pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel fra elbiler og batterier",
+    "Udbud fra miner i Congo og eksportregler",
+    "Ændringer i batterikemien"
+   ],
+   "uses": [
+    "Batterier",
+    "Superlegeringer",
+    "Magneter"
+   ]
+  },
+  "lithium": {
+   "about": "Lithiumkarbonat er det vigtigste råstof til genopladelige batterier. Den viste pris gælder karbonat af batterikvalitet i Kina, omregnet til amerikanske dollar pr. metrisk ton.",
+   "drivers": [
+    "Salg af elbiler",
+    "Udbud fra nye miner og raffinaderier",
+    "Statens politik for batterier"
+   ],
+   "uses": [
+    "Batterier til elbiler",
+    "Telefoner og bærbare computere",
+    "Energilagring"
+   ]
+  },
+  "uranium": {
+   "about": "Uran er brændslet i atomkraftværker. Prisen noteres i amerikanske dollar pr. pund U3O8.",
+   "drivers": [
+    "Genstart af atomkraftværker og nye reaktorer",
+    "Minedrift, hovedsagelig fra Kasakhstan og Canada",
+    "Statslig oplagring og sanktioner"
+   ],
+   "uses": [
+    "Atomkraft",
+    "Medicinske isotoper"
+   ]
+  },
+  "iron-ore": {
+   "about": "Jernmalm er det vigtigste råstof til stål. Den viste pris gælder 62 % jernindhold leveret til Kina, pr. metrisk ton.",
+   "drivers": [
+    "Kinesisk stålproduktion",
+    "Udbud fra Australien og Brasilien",
+    "Udgifter til boliger og infrastruktur"
+   ],
+   "uses": [
+    "Stålproduktion"
+   ]
+  },
+  "steel": {
+   "about": "Stål er en jernlegering, der bruges i næsten alle industrier. Den viste pris gælder armeringsstål i Kina, omregnet til amerikanske dollar pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel fra byggeri",
+    "Omkostninger til jernmalm og koks",
+    "Statslige produktionsgrænser"
+   ],
+   "uses": [
+    "Bygninger og broer",
+    "Biler og maskiner"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Varmvalset stålcoil er et fladt stålprodukt, der bruges i produktionen. Den viste pris gælder levering til det amerikanske Midtvesten pr. metrisk ton.",
+   "drivers": [
+    "Efterspørgsel i USA fra biler og byggeri",
+    "Importtold og konkurrence",
+    "Omkostninger til råvarer og energi"
+   ],
+   "uses": [
+    "Biler og husholdningsapparater",
+    "Rør og byggeri"
+   ]
+  },
+  "lumber": {
+   "about": "Træfutures følger prisen på nåletræ, der bruges til husbyggeri, noteret pr. 1.000 board feet.",
+   "drivers": [
+    "Antal nye boligpåbegyndelser og realkreditrenter",
+    "Savværkernes produktion og skovbrande",
+    "Told i handlen mellem USA og Canada"
+   ],
+   "uses": [
+    "Husets tømmerkonstruktion",
+    "Møbler og emballage"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI er den amerikanske referencepris for råolie, noteret pr. tønde og leveret i Cushing, Oklahoma.",
+   "drivers": [
+    "OPEC- og amerikanske produktionsbeslutninger",
+    "Global økonomisk vækst",
+    "Lagre, geopolitik og den amerikanske dollar"
+   ],
+   "uses": [
+    "Benzin, diesel og flybrændstof",
+    "Plast og kemikalier"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent er den globale referencepris for råolie, noteret pr. tønde, og den prissætter størstedelen af den olie, der handles uden for USA.",
+   "drivers": [
+    "OPEC+-beslutninger om produktion",
+    "Global efterspørgsel, især fra Kina og Indien",
+    "Konflikter og sanktioner i producerende regioner"
+   ],
+   "uses": [
+    "Benzin, diesel og flybrændstof",
+    "Plast og kemikalier"
+   ]
+  },
+  "natural-gas": {
+   "about": "Naturgas noteres her som den amerikanske Henry Hub-pris pr. MMBtu. Det bruges til opvarmning, elproduktion og industri.",
+   "drivers": [
+    "Vejr og efterspørgsel efter opvarmning",
+    "Lagerniveauer og produktion",
+    "Eksport af flydende naturgas"
+   ],
+   "uses": [
+    "Elproduktion",
+    "Opvarmning og madlavning i hjemmet",
+    "Gødning og kemikalier"
+   ]
+  },
+  "gasoline": {
+   "about": "Benzinfutures følger engrospriserne på benzin i amerikanske dollar pr. gallon.",
+   "drivers": [
+    "Råoliepris",
+    "Raffinaderiernes produktion og kørselssæsonen",
+    "Lagre og regler"
+   ],
+   "uses": [
+    "Brændstof til biler"
+   ]
+  },
+  "heating-oil": {
+   "about": "Fyringsolie-futures følger engrospriserne på diesel og fyringsolie i amerikanske dollar pr. gallon.",
+   "drivers": [
+    "Råoliepris",
+    "Vintervejr",
+    "Efterspørgsel efter diesel fra lastbiler og industri"
+   ],
+   "uses": [
+    "Opvarmning af boliger",
+    "Dieselbrændstof"
+   ]
+  },
+  "wheat": {
+   "about": "Hvede er en af verdens vigtigste kornsorter til fødevarer. Prisen noteres pr. bushel på Chicago-børsen.",
+   "drivers": [
+    "Vejret i de vigtigste dyrkningsområder",
+    "Eksport fra Rusland, Ukraine, USA og EU",
+    "Lagre, energipriser og den amerikanske dollar"
+   ],
+   "uses": [
+    "Brød, pasta og mel",
+    "Foder til dyr"
+   ]
+  },
+  "corn": {
+   "about": "Majs er en vigtig korn- og foderafgrøde og en kilde til ethanol. Prisen noteres pr. bushel på Chicago-børsen.",
+   "drivers": [
+    "Høsten i USA og Brasilien",
+    "Efterspørgsel efter ethanol og foder",
+    "Vejr og eksport"
+   ],
+   "uses": [
+    "Foder til dyr",
+    "Ethanolbrændstof",
+    "Mad og sirupper"
+   ]
+  },
+  "soybeans": {
+   "about": "Sojabønner forarbejdes til olie og skrå. Prisen noteres pr. bushel på Chicago-børsen.",
+   "drivers": [
+    "Høsterne i USA, Brasilien og Argentina",
+    "Kinesisk importefterspørgsel",
+    "Biobrændstofpolitik"
+   ],
+   "uses": [
+    "Madolie",
+    "Foder til dyr",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Rå ris er en basisfødevare for milliarder af mennesker. Prisen noteres pr. hundredvægt på Chicago-børsen.",
+   "drivers": [
+    "Monsun- og høstforhold i Asien",
+    "Eksportregler i Indien, Thailand og Vietnam",
+    "Lagre og fødevarepriser"
+   ],
+   "uses": [
+    "Mad"
+   ]
+  },
+  "sugar": {
+   "about": "Råsukker-futures følger verdensprisen på sukker, noteret i amerikanske dollar pr. pund.",
+   "drivers": [
+    "Sukkerrørshøsten i Brasilien og Indien",
+    "Efterspørgsel efter ethanol i Brasilien",
+    "Vejr og valutaer"
+   ],
+   "uses": [
+    "Mad og drikkevarer",
+    "Ethanol"
+   ]
+  },
+  "coffee": {
+   "about": "Arabica-kaffe-futures følger verdensprisen på kaffebønner, noteret i amerikanske dollar pr. pund.",
+   "drivers": [
+    "Vejret i Brasilien og Colombia",
+    "Lagre og eksport",
+    "Valutaer og efterspørgsel"
+   ],
+   "uses": [
+    "Kaffedrikke"
+   ]
+  },
+  "cocoa": {
+   "about": "Kakao-futures følger prisen på kakaobønner, noteret i amerikanske dollar pr. metrisk ton.",
+   "drivers": [
+    "Høsterne i Elfenbenskysten og Ghana",
+    "Sygdomme og vejr",
+    "Efterspørgsel efter chokolade"
+   ],
+   "uses": [
+    "Chokolade og slik",
+    "Kosmetik"
+   ]
+  },
+  "cotton": {
+   "about": "Bomuld-futures følger verdensprisen på råbomuld, noteret i amerikanske dollar pr. pund.",
+   "drivers": [
+    "Vejret i USA, Indien og Kina",
+    "Efterspørgsel fra tekstilindustrien",
+    "Olierpriser og valutaer"
+   ],
+   "uses": [
+    "Tøj og tekstiler"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin er den første og største kryptovaluta. Den handles døgnet rundt på børser, og udbuddet er begrænset til 21 millioner mønter.",
+   "drivers": [
+    "Investorefterspørgsel og ETF-flows",
+    "Renter og risikovillighed",
+    "Regulering og nyheder"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum er en blockchain til smarte kontrakter og applikationer, og dens mønt, ether, er den næststørste kryptovaluta.",
+   "drivers": [
+    "Brug af Ethereum-applikationer",
+    "Netværksopgraderinger og gebyrer",
+    "Markedsstemning"
+   ]
+  },
+  "bnb": {
+   "about": "BNB er mønten i BNB Chain og økosystemet omkring børsen Binance.",
+   "drivers": [
+    "Børsaktivitet og gebyrer",
+    "Tokenafbrændinger",
+    "Regulering"
+   ]
+  },
+  "xrp": {
+   "about": "XRP er en kryptovaluta, der bruges til hurtige internationale betalinger på XRP Ledger.",
+   "drivers": [
+    "Retssager og regulatoriske nyheder",
+    "Bank- og betalingspartnerskaber",
+    "Markedsstemning"
+   ]
+  },
+  "solana": {
+   "about": "Solana er en hurtig blockchain til applikationer og betalinger, og SOL er dens mønt.",
+   "drivers": [
+    "Aktivitet i applikationer og tokens",
+    "Netværkets pålidelighed",
+    "Markedsstemning"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano er en proof-of-stake-blockchain, og ADA er dens mønt.",
+   "drivers": [
+    "Udviklingens fremskridt",
+    "Staking",
+    "Markedsstemning"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin begyndte som en joke-mønt og blev en af de mest handlede kryptovalutaer.",
+   "drivers": [
+    "Opmærksomhed på sociale medier",
+    "Markedsstemning",
+    "Udbredelse af betalinger"
+   ]
+  },
+  "tron": {
+   "about": "TRON er en blockchain, der er meget udbredt til overførsler af stablecoins, og TRX er dens mønt.",
+   "drivers": [
+    "Aktivitet med overførsler af stablecoins",
+    "Netværksgebyrer",
+    "Markedsstemning"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot forbinder mange blockchains, og DOT er dens mønt.",
+   "drivers": [
+    "Netværksudvikling",
+    "Staking",
+    "Markedsstemning"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink leverer data fra den virkelige verden til blockchains, og LINK er dens mønt.",
+   "drivers": [
+    "Brug af andre applikationer",
+    "Partnerskaber",
+    "Markedsstemning"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin er en af de ældste kryptovalutaer, skabt til hurtigere betalinger end Bitcoin.",
+   "drivers": [
+    "Bitcoin-prisen",
+    "Udbredelse af betalinger",
+    "Markedsstemning"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche er en hurtig blockchain-platform, og AVAX er dens mønt.",
+   "drivers": [
+    "Aktivitet i applikationer",
+    "Netværksopgraderinger",
+    "Markedsstemning"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 følger 500 af de største amerikanske virksomheder og er det vigtigste mål for det amerikanske aktiemarked.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite følger tusindvis af aktier noteret på Nasdaq med en stor vægt på teknologivirksomheder.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average følger 30 store amerikanske virksomheder.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 følger de 100 største virksomheder noteret i London.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "dax": {
+   "about": "DAX følger 40 store tyske virksomheder noteret i Frankfurt.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 følger 40 store virksomheder noteret i Paris.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 følger 225 store virksomheder noteret i Tokyo.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng-indekset følger de største virksomheder noteret i Hongkong.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite følger alle aktier noteret på børsen i Shanghai.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 følger 50 store virksomheder på Indiens nationale børs.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex følger 30 store virksomheder på Bombay-børsen.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 følger de 30 mest aktive virksomheder på den egyptiske børs.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share-indekset følger alle virksomheder noteret på den saudiske børs.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 følger de 100 største virksomheder på Borsa Istanbul.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa følger de vigtigste virksomheder på Brasiliens børs B3.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 følger de 200 største virksomheder på den australske børs.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite følger de vigtigste virksomheder noteret på Toronto-børsen.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI følger alle almindelige aktier på Korea-børsen.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 følger 50 store virksomheder i euroområdet.",
+   "drivers": [
+    "Virksomheders indtjening",
+    "Renter og inflation",
+    "Økonomiske og politiske nyheder"
+   ]
+  }
+ }
+}

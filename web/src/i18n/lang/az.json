@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "bu gün",
+  "updated": "Yenilənib: {t}",
+  "delayed": "Gecikmə ilə",
+  "per": "{u} üzrə",
+  "u_gram": "qram",
+  "u_ounce": "unsiya",
+  "u_kilo": "kilo",
+  "u_tola": "tola",
+  "u_ton": "metrik ton",
+  "u_barrel": "barel",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "qallon",
+  "u_bushel": "buşel",
+  "u_lb": "funt",
+  "u_cwt": "sentner",
+  "u_coin": "sikkə",
+  "u_point": "bal",
+  "global_vs_local": "Qlobal və yerli qiymət",
+  "global_price": "Qlobal qiymət",
+  "local_estimate": "Yerli təxmin",
+  "est_retail": "Məmulat haqqı daxil olmaqla təxmini pərakəndə qiymət",
+  "est_note": "Yalnız təxmindir. Mağazalar vergi, məmulat haqqı və marjaya görə fərqlənir.",
+  "karat_title": "{a} karata görə",
+  "karat": "Karat",
+  "purity": "Təmizlik",
+  "price": "Qiymət",
+  "currencies_title": "Digər valyutalarda {a} qiyməti",
+  "col_ounce": "Unsiya üzrə",
+  "col_gram": "Qram üzrə",
+  "col_24h": "24 saat",
+  "col_7d": "7 gün",
+  "markets_title": "Metallar, enerji, kənd təsərrüfatı və kriptovalyuta",
+  "markets_sub": "{cur} ilə canlı qiymətlər",
+  "list_title": "{country} üzrə metalların, enerjinin, əmtəələrin və kriptovalyutanın qiymətləri",
+  "list_desc": "{cur} ilə qızılın, gümüşün, platinin, misin, neftin, qazın, buğdanın, kofenin, səhm indekslərinin, Bitcoinin və digərlərinin canlı qiymətləri.",
+  "alerts_title": "Qiymət bildirişləri",
+  "alerts_desc": "Qiymət hədəfinizə çatanda telefonunuza və ya e-poçtunuza bildiriş alın.",
+  "alerts_cta": "Bildiriş yarat",
+  "search_ph": "Məs. {country} üzrə {a} qiyməti…",
+  "search_btn": "Axtar",
+  "r1d": "1G",
+  "r1w": "1H",
+  "r1m": "1A",
+  "r1y": "1İ",
+  "r5y": "5İ",
+  "rall": "Hamısı",
+  "geo_ask": "{country} üzrə qiymətləri {cur} ilə göstərək?",
+  "geo_yes": "Bəli, keç",
+  "geo_no": "Xeyr, təşəkkür",
+  "footer_note": "Qiymətlər təxminidir və gecikə bilər. Investisiya məsləhəti deyil.",
+  "about": "Haqqında",
+  "privacy": "Məxfilik siyasəti",
+  "contact": "Əlaqə",
+  "theme": "Mövzu",
+  "language": "Dil",
+  "country": "Ölkə",
+  "faq_title": "Tez-tez verilən suallar",
+  "q1": "Bu gün {country} üzrə {a} qiyməti nə qədərdir?",
+  "a1": "Bu gün {country} üzrə {a} qiyməti hər {u} üçün {p} {cur}-dir. Bu, qlobal spot qiymətin ən son məzənnə ilə çevrilmiş dəyəridir və hər bir neçə dəqiqədən bir yenilənir.",
+  "q2": "Yerli qiymət niyə qlobal qiymətdən fərqlidir?",
+  "a2": "Mağazalar qlobal spot qiymətin üzərinə məmulat haqqı, vergilər, idxal rüsumları və diler marjası əlavə edir, buna görə {country} üzrə pərakəndə qiymət adətən daha yüksək olur.",
+  "q3": "Qiymət nə qədər tez-tez yenilənir?",
+  "a3": "Canlı bazar qiymətləri hər bir neçə dəqiqədən bir yenilənir. Canlı axını olmayan qiymətlər əl ilə yenilənir və son yenilənmə vaxtını göstərir.",
+  "title": "Bu gün {country} üzrə {a} qiyməti | {cur} ilə hər {u} üçün",
+  "desc": "{country} üzrə canlı {a} qiyməti {cur} ilə: qram, unsiya və kilo üzrə, qiymət qrafiki və qlobal və yerli qiymət. Hər bir neçə dəqiqədən bir yenilənir.",
+  "title_idx": "Bu gün {a} indeksi | canlı dəyər və qrafik",
+  "desc_idx": "Canlı {a} indeksinin dəyəri, gündəlik dəyişiklik və qiymət qrafiki. Hər bir neçə dəqiqədən bir yenilənir.",
+  "history_note": "Tarixçə gündəlik bağlanış qiymətlərindən qurulur.",
+  "unit_label": "Vahid",
+  "sample_note": "Nümunə məlumatlar",
+  "nav_all": "Bazarlar",
+  "nav_rates": "Valyutalar",
+  "nav_calc": "Kalkulyatorlar",
+  "cat_precious": "Qiymətli metallar",
+  "cat_industrial": "Sənaye metalları",
+  "cat_energy": "Enerji",
+  "cat_agri": "Kənd təsərrüfatı",
+  "cat_index": "Səhm indeksləri",
+  "cat_crypto": "Kriptovalyuta",
+  "bars_title": "{a} külçələri və sikkələri: {cur} ilə alış və satış qiyməti",
+  "bar_size": "Ölçü",
+  "bar_buy": "Diler və ya satıcıdan alış",
+  "bar_sell": "Geri satış",
+  "bar_prem": "Spot qiymətdən artıq",
+  "bars_note": "Qlobal qiymət və adi premium əsasında tipik diler qiymətləri. Faktiki qiymətlər mağazaya və günə görə dəyişir.",
+  "used_title": "İşlənmiş və qırıq {a}: {cur} ilə qramın geri alış qiyməti",
+  "used_note": "İşlənmiş zinət əşyaları adətən yeni qiymətdən aşağı geri alınır. Bunlar tipik təxminlərdir.",
+  "used_col": "Qramın geri alış qiyməti",
+  "rates_title": "{cur} ilə müqayisədə məzənnələr",
+  "rates_sub": "Orta bazar məzənnələri, hər saat yenilənir",
+  "rates_desc": "Dünyanın əsas valyutalarının {cur} ilə canlı məzənnələri və valyuta çeviricisi.",
+  "rates_page_title": "{country} üzrə valyuta məzənnələri və çevirici",
+  "conv_title": "Valyuta çeviricisi",
+  "conv_amount": "Məbləğ",
+  "conv_from": "Haradan",
+  "conv_to": "Hara",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "{country} üzrə qızıl kalkulyatoru və zəkat kalkulyatoru",
+  "calc_page_desc": "Qızılınızın çəkisinə və karatına görə dəyərini {cur} ilə hesablayın və bu günkü qiymətlərlə qızıl və gümüş üzrə zəkatı yoxlayın.",
+  "calc_title": "Qızıl dəyəri kalkulyatoru",
+  "calc_weight": "Çəki",
+  "calc_unit": "Vahid",
+  "calc_karat": "Karat",
+  "calc_value": "Təxmini dəyər",
+  "calc_note": "Qlobal qiymət əsasındadır. Mağazalar işlənmiş qızıl üçün bundan az ödəyir.",
+  "zakat_title": "Qızıl və gümüş üzrə zəkat",
+  "zakat_nisab_gold": "Qızıl nisabı (85 qram)",
+  "zakat_nisab_silver": "Gümüş nisabı (595 qram)",
+  "zakat_gold_g": "Qızılınız, qramla (24K ekvivalent)",
+  "zakat_silver_g": "Gümüşünüz, qramla",
+  "zakat_due": "Ödənilməli zəkat (2,5%)",
+  "zakat_note": "Zəkat nisabdan artıq, bir qəməri il ərzində saxlanılan var-dövlətdən ödənilir. Bu bir bələdçidir, öz halınız barədə alimə müraciət edin.",
+  "zakat_below": "Nisabdan aşağıdır: bu məbləğdən zəkat ödənilmir.",
+  "related_title": "Populyar axtarışlar",
+  "retail_basis": "{n} yerli mənbə əsasında, {d} yoxlanılıb.",
+  "u_share": "səhm",
+  "u_rate": "məzənnə",
+  "u_mbf": "1000 board feet",
+  "cat_stock": "Səhmlər",
+  "cat_forex": "Valyuta cütləri",
+  "cat_construction": "Tikinti materialları",
+  "perf_title": "Göstəricilər",
+  "p_7d": "1 həftə",
+  "p_30d": "1 ay",
+  "p_90d": "3 ay",
+  "p_ytd": "İlin əvvəlindən",
+  "p_1y": "1 il",
+  "p_5y": "5 il",
+  "range52": "52 həftəlik diapazon",
+  "ath": "Məlumatlarımızda ən yüksək",
+  "atl": "Məlumatlarımızda ən aşağı",
+  "since": "{d} tarixindən tarixçə",
+  "about_title": "{a} haqqında",
+  "drivers_title": "Qiyməti nə hərəkətə gətirir",
+  "uses_title": "Hansı məqsədlərlə istifadə olunur",
+  "source_note": "Mənbə: {s}. Qiymətlər təxminidir və gecikə bilər.",
+  "about_stock": "{a} səhmləri {c} ilə qiymətləndirilir. Səhifədə ən son gecikmiş qiymət, bu günkü və daha uzun dövrlər üzrə dəyişiklik və eyni qiymət digər valyutalara çevrilmiş şəkildə göstərilir.",
+  "about_forex": "{a} birinci valyutanın bir vahidinin ikinci valyutanın nə qədərini aldığını göstərir. Məzənnələr hər iki ölkənin faiz dərəcələri, inflyasiya, ticarət və iqtisadi xəbərləri ilə hərəkət edir.",
+  "about_crypto": "{a} kriptovalyutadır. Qiyməti gün ərzində birjalarda ticarət tərəfindən müəyyən edilir və sürətlə dəyişə bilər. Səhifədə canlı qiymət, müxtəlif dövrlər üzrə dəyişiklik və digər valyutalarda qiymət göstərilir.",
+  "about_commodity": "{a} ticarət olunan əmtəədir. Qiyməti təklif, tələb, hava, valyutalar və xəbərlər ilə hərəkət edir. Səhifədə ən son qiymət, müxtəlif dövrlər üzrə dəyişiklik və digər valyutalarda qiymət göstərilir.",
+  "about_index": "{a} səhm səbətinin necə inkişaf etdiyini ölçür. Dəyər indeks bəndlərində ifadə olunur və onun şirkətlərinin səhm qiymətləri ilə hərəkət edir.",
+  "tail_list_title": "Səhmlər, kriptovalyuta, valyuta cütləri və daha çox əmtəə",
+  "tail_list_desc": "Qlobal səhmlərin, daha çox kriptovalyutanın, valyuta cütlərinin və əlavə əmtəələrin canlı qiymətləri, qrafiklər və göstəricilərlə.",
+  "tail_title": "Bu gün {a} qiyməti | canlı dəyər və qrafik",
+  "tail_desc": "Canlı {a} qiyməti, qrafik və 1 həftə, 1 ay, 1 il və daha çox dövr üzrə göstəricilər. Hər bir neçə dəqiqədən bir yenilənir.",
+  "nav_dev": "Developerlər",
+  "nav_compare": "Müqayisə",
+  "terms": "İstifadə şərtləri",
+  "disclaimer": "Məsuliyyətdən imtina",
+  "cookies": "Kuki siyasəti",
+  "developers": "Developerlər üçün API",
+  "alert_title": "Qiymət bildirişi alın",
+  "alert_email": "E-poçtunuz",
+  "alert_target": "Hədəf qiymət ({cur})",
+  "alert_above": "Yuxarı qalxır",
+  "alert_below": "Aşağı düşür",
+  "alert_submit": "Bildiriş yarat",
+  "alert_ok": "Bildiriş yadda saxlanıldı. Qiymət hədəfinizi keçəndə sizə bir dəfə e-poçt göndərəcəyik.",
+  "alert_err": "Bildirişi yadda saxlamaq olmadı. E-poçtu və qiyməti yoxlayıb yenidən cəhd edin.",
+  "alert_privacy": "E-poçtunuzu yalnız bu bildirişi göndərmək üçün istifadə edirik.",
+  "contact_title": "Bizə mesaj göndərin",
+  "contact_name": "Adınız",
+  "contact_email": "E-poçtunuz",
+  "contact_msg": "Mesaj",
+  "contact_send": "Göndər",
+  "contact_ok": "Təşəkkür edirik. Mesajınız göndərildi.",
+  "contact_err": "Mesajı göndərmək olmadı. Bir az sonra yenidən cəhd edin.",
+  "dev_title": "Pulsuz qiymət API-si",
+  "dev_desc": "Qiymətlərimizdən öz tətbiqinizdə və ya saytınızda istifadə edin. Pulsuz açarlar gündə 1000 sorğu ilə məhdudlaşır. Zəhmət olmasa saytı mənbə kimi göstərin.",
+  "dev_endpoints": "Son nöqtələr",
+  "dev_request": "Pulsuz API açarı alın",
+  "dev_email": "E-poçtunuz",
+  "dev_purpose": "Nə qurmaq istəyirsiniz?",
+  "dev_get": "Açar al",
+  "dev_key": "API açarınız (indi yadda saxlayın, yalnız bir dəfə göstərilir)",
+  "dev_err": "Açarı yaratmaq olmadı. E-poçtu yoxlayıb yenidən cəhd edin.",
+  "dev_usage": "Açarı x-api-key başlığında göndərin.",
+  "cmp_title": "İki aktivi müqayisə edin",
+  "cmp_a": "Birinci aktiv",
+  "cmp_b": "İkinci aktiv",
+  "cmp_ratio": "Nisbət (birinci ikinciyə bölünür)",
+  "cmp_now": "İndi",
+  "cmp_desc": "İstənilən iki aktivi müqayisə edin: onlar arasındakı nisbəti zaman üzrə, məsələn qızıl-gümüş nisbətini.",
+  "cmp_page_title": "{country} üzrə qiymətləri və nisbətləri müqayisə edin",
+  "roi_title": "Mənfəət kalkulyatoru",
+  "roi_buy": "Alış qiyməti",
+  "roi_amount": "Miqdar",
+  "roi_now": "Cari qiymət",
+  "roi_profit": "Mənfəət və ya zərər",
+  "roi_pct": "Gəlirlilik",
+  "units_title": "Vahid çeviricisi",
+  "units_value": "Dəyər",
+  "units_from": "Haradan",
+  "units_to": "Hara",
+  "calc_tools_desc": "Qızıl dəyəri, zəkat, mənfəət və vahidlər üçün kalkulyatorlar.",
+  "nav_costs": "Xərclər",
+  "costs_title": "{country} üzrə yaşayış xərcləri: yanacaq, elektrik və Big Mac qiymətləri",
+  "costs_desc": "{country} üzrə ən son yanacaq qiymətləri, məişət elektrik tarifi və Big Mac qiyməti, {cur} ilə və mənbələri ilə.",
+  "fuel_h": "Yanacaq qiymətləri",
+  "petrol95": "Benzin (95 oktan)",
+  "diesel": "Dizel",
+  "lpg": "LPG (avtogaz)",
+  "per_litre": "litr üzrə",
+  "elec_h": "Məişət elektriki",
+  "elec_note": "Bütün vergilər daxil olmaqla kWh üzrə orta məişət qiyməti",
+  "per_kwh": "kWh üzrə",
+  "bigmac_h": "Big Mac qiyməti",
+  "bigmac_note": "{country} üzrə bir Big Mac, yaşayış xərclərini müqayisə etmək üçün sadə bir yol",
+  "costs_asof": "Məlumatlar {date} tarixinə aiddir",
+  "costs_source": "Mənbə: {src}",
+  "costs_note": "Bu rəqəmlər yavaş dəyişir, bir neçə ayda bir yenilənir və yalnız dərc olunmuş mənbə olan yerlərdə göstərilir.",
+  "u_sheet": "vərəq",
+  "u_m3": "kub metr",
+  "nav_coins": "Sikkələr və vahidlər",
+  "coins_title": "{country} üzrə qızıl sikkələr və vahidlər: qızıl tərkibinin dəyəri",
+  "coins_desc": "{country} üzrə məşhur sikkələrin və yerli qızıl vahidlərinin qızıl tərkibinin dəyəri, {cur} ilə, canlı qızıl qiymətinə əsasən.",
+  "coin_weight": "Çəki",
+  "coin_fine": "Əyarı",
+  "coin_pure": "Təmiz qızıl",
+  "coin_value": "Qızılın dəyəri",
+  "coins_note": "Yalnız qızıl tərkibi, canlı spot qiymətlə. Diler qiymətlərinə premium, məmulat haqqı və vergilər əlavə olunduğu üçün onlar daha yüksəkdir."
+ },
+ "assets": {
+  "gold": "Qızıl",
+  "silver": "Gümüş",
+  "platinum": "Platin",
+  "palladium": "Palladium",
+  "copper": "Mis",
+  "aluminum": "Alüminium",
+  "nickel": "Nikel",
+  "zinc": "Sink",
+  "lead": "Qurğuşun",
+  "tin": "Qalay",
+  "cobalt": "Kobalt",
+  "lithium": "Litium",
+  "uranium": "Uran",
+  "iron-ore": "Dəmir filizi",
+  "steel": "Polad",
+  "wti-oil": "WTI xam neft",
+  "brent-oil": "Brent xam neft",
+  "natural-gas": "Təbii qaz",
+  "gasoline": "Benzin",
+  "heating-oil": "İsitmə yanacağı",
+  "wheat": "Buğda",
+  "corn": "Qarğıdalı",
+  "soybeans": "Soya paxlası",
+  "rice": "Düyü",
+  "sugar": "Şəkər",
+  "coffee": "Kofe",
+  "cocoa": "Kakao",
+  "cotton": "Pambıq",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadavul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Soya yağı",
+  "soybean-meal": "Soya küncüsü",
+  "oats": "Yulaf",
+  "orange-juice": "Portağal şirəsi",
+  "live-cattle": "Diri mal-qara",
+  "feeder-cattle": "Tərbiyə olunan mal-qara",
+  "lean-hogs": "Arıq donuzlar",
+  "milk": "Süd (III sinif)",
+  "lumber": "Taxta-şalban",
+  "coal": "Kömür (Nyukasl)",
+  "tea": "Çay",
+  "palm-oil": "Palma yağı",
+  "coconut-oil": "Kokos yağı",
+  "sunflower-oil": "Günəbaxan yağı",
+  "rapeseed-oil": "Kolza yağı",
+  "rubber": "Təbii kauçuk",
+  "urea": "Karbamid gübrəsi",
+  "dap": "DAP gübrəsi",
+  "potash": "Kalium (kalium xlorid)",
+  "phosphate-rock": "Fosfat daşı",
+  "beef": "Mal əti",
+  "chicken": "Toyuq",
+  "banana": "Banan",
+  "orange": "Portağal",
+  "fish-meal": "Balıq unu",
+  "plywood": "Faner",
+  "sawnwood": "Mişar ağacı (Malayziya)"
+ },
+ "kw": {
+  "price": "qiymət",
+  "today": "bu gün",
+  "live": "canlı",
+  "rate": "məzənnə",
+  "per_gram": "qram üzrə",
+  "ounce": "unsiya",
+  "bar": "külçə",
+  "used": "işlənmiş",
+  "karat": "karat",
+  "chart": "qrafik",
+  "convert": "çevirici",
+  "calculator": "kalkulyator",
+  "zakat": "zəkat"
+ },
+ "legal": {
+  "about": [
+   "{site} qlobal qiymətlərlə, dünyanın bir çox ölkəsi və dili üçün öz valyutanızla qızılın, gümüşün, digər metalların, enerjinin, əkinçilik məhsullarının, səhmlərin, indekslərin, kriptovalyutaların və valyutaların canlı qiymətlərini göstərir.",
+   "Qiymətlər açıq bazar məlumat axınlarından gəlir və hər bir neçə dəqiqədən bir yenilənir. Bəzi qiymətlər açıq səhifələrdən və ya əl ilə yenilənir və mənbəsini göstərir.",
+   "Yerli pərakəndə təxminləri qlobal qiymətə tipik vergiləri, məmulat haqqını və diler premiumlarını əlavə edir, mənbə və tarix göstərilir. Bunlar təxminlərdir, təklif deyil.",
+   "Həmçinin qızıl dəyəri, zəkat, mənfəət və vahidlər üzrə kalkulyatorlar, valyuta çeviricisi və qiymət bildirişləri təklif edirik."
+  ],
+  "privacy": [
+   "Hesab və ya şəxsi məlumat tələb etmirik. Brauzerinizdə yalnız dil, ölkə və mövzu seçiminizi saxlayırıq.",
+   "Aktivləşdirildikdə reklamlar Google AdSense tərəfindən göstərilir, o, uyğun reklamları göstərmək üçün kukilərdən istifadə edə bilər. Bunu Google reklam parametrlərinizdən idarə edə bilərsiniz.",
+   "Saytı təkmilləşdirmək üçün anonim, yığcam ziyarət statistikası toplana bilər."
+  ],
+  "contact": [
+   "Suallar, düzəlişlər və ya əməkdaşlıq təklifləri: sayt işə düşdükdən sonra bu səhifədə dərc olunan əlaqə ünvanından istifadə edin.",
+   "Yanlış qiymət görsəniz, aktivi, ölkəni və düzgün dəyəri harada gördüyünüzü bizə bildirin."
+  ],
+  "terms": [
+   "{site} saytından istifadə etməklə bu şərtləri qəbul edirsiniz. Sayt ümumi məlumat üçün təqdim olunur.",
+   "Qiymətlər, qrafiklər və təxminlər təxminidir, gecikə və ya səhv ola bilər və yeganə ticarət və ya alış əsası kimi istifadə edilməməlidir.",
+   "Məlumatları kütləvi şəkildə köçürmək və ya yenidən satmaq olmaz. Avtomatik giriş üçün pulsuz API-mizdən istifadə edin və saytı mənbə kimi göstərin.",
+   "Xidmətin istənilən hissəsini istənilən vaxt dəyişə və ya dayandıra bilərik və onun istifadəsindən yaranan zərərlərə görə məsuliyyət daşımırıq."
+  ],
+  "disclaimer": [
+   "{site} broker, bank və ya maliyyə məsləhətçisi deyil və investisiya məsləhəti vermir.",
+   "Yerli pərakəndə təxminlər, külçə premiumları və geri alış rəqəmləri açıq mənbələrə əsaslanan təxminlərdir. Mağazalar fərqlənir, qiyməti həmişə satıcı ilə təsdiqləyin.",
+   "Keçmiş göstəricilər gələcək nəticələri proqnozlaşdırmır. Metallara, səhmlərə və kriptovalyutaya investisiya riskli olur, investisiya edilən pulun itirilməsi də daxil olmaqla."
+  ],
+  "cookies": [
+   "Yalnız dil, ölkə və mövzu seçiminizi yadda saxlamaq üçün lazım olan brauzer yaddaşından istifadə edirik.",
+   "Aktivləşdirildikdə reklamlar Google AdSense tərəfindən göstərilir, o, uyğun reklamları göstərmək üçün kukilər qoya bilər. Bunu Google reklam parametrlərinizdən idarə edə bilərsiniz.",
+   "Razılıq tələb edən regionlarda ziyarətçilərdən reklam kukiləri istifadə olunmazdan əvvəl icazə istənəcək."
+  ],
+  "developers": [
+   "Qiymət API-miz kiçik layihələr üçün pulsuzdur. Aşağıda açar yaradın və onu x-api-key başlığında göndərin.",
+   "Son nöqtələr: bütün qiymət və göstəricilər üçün /v1/overview, tarixçə üçün /v1/chart/SYMBOL?days=365, valyuta məzənnələri üçün /v1/rates.",
+   "Pulsuz açarlar gündə 1000 sorğuya icazə verir. Cavablar bir dəqiqəlik keşləşdirilir, zəhmət olmasa bundan tez-tez sorğu etməyin.",
+   "Qiymətlərimizi göstərərkən saytı mənbə kimi qeyd edin."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Qızıl ən geniş yayılmış qiymətli metal və ənənəvi dəyər saxlayıcısıdır. Qiyməti dünyada troy unsiyası üzrə, bir çox yerli bazarda isə qram və ya tola üzrə göstərilir, zinət əşyaları isə 10K-dan 24K-ya qədər karat üzrə satılır.",
+   "drivers": [
+    "Faiz dərəcələri və ABŞ dolları",
+    "İnflyasiya və iqtisadi və ya siyasi qeyri-müəyyənlik",
+    "Mərkəzi bankların alışları və investisiya tələbi"
+   ],
+   "uses": [
+    "Zinət əşyaları və hədiyyələr",
+    "İnvestisiya külçələri və sikkələri",
+    "Elektronika və stomatologiya"
+   ]
+  },
+  "silver": {
+   "about": "Gümüş həm qiymətli, həm də sənaye metalıdır. Troy unsiyası üzrə qiymətləndirilir və 999, 925 və 800 kimi əyarlarda külçə, sikkə və zinət əşyaları kimi satılır.",
+   "drivers": [
+    "Günəş panellərindən və elektronikadan gələn sənaye tələbi",
+    "Qızıl qiyməti və ABŞ dolları",
+    "Külçə və sikkələr üçün investisiya tələbi"
+   ],
+   "uses": [
+    "Zinət əşyaları və gümüş qab-qacaq",
+    "Günəş panelləri və elektronika",
+    "İnvestisiya külçələri və sikkələri"
+   ]
+  },
+  "platinum": {
+   "about": "Platin nadir, sıx qiymətli metaldır və bir çox dövrlərdə çəkisinə görə qızıldan daha qiymətlidir. Troy unsiyası üzrə qiymətləndirilir.",
+   "drivers": [
+    "Avtomobil katalizatorlarından gələn tələb",
+    "Mədən təchizatı, əsasən Cənubi Afrika və Rusiyadan",
+    "İnvestisiya tələbi və qızıl qiyməti"
+   ],
+   "uses": [
+    "Katalizatorlar",
+    "Zinət əşyaları",
+    "Kimya sənayesi və hidrogen texnologiyası"
+   ]
+  },
+  "palladium": {
+   "about": "Palladium əsasən benzinli avtomobillərin katalizatorlarında istifadə olunan nadir qiymətli metaldır. Troy unsiyası üzrə qiymətləndirilir.",
+   "drivers": [
+    "Avtomobil istehsalı və emissiya qaydaları",
+    "Rusiya və Cənubi Afrikadan mədən təchizatı",
+    "Platinlə əvəzlənmə"
+   ],
+   "uses": [
+    "Katalizatorlar",
+    "Elektronika",
+    "Stomatologiya və zinət əşyaları"
+   ]
+  },
+  "copper": {
+   "about": "Mis sənaye metallarının etalonudur. Qiyməti metrik ton üzrə göstərilir və qlobal iqtisadi sağlamlığın göstəricisi kimi izlənilir.",
+   "drivers": [
+    "Tikinti və istehsal tələbi, xüsusilə Çində",
+    "Mədən təchizatı və ehtiyatlar",
+    "ABŞ dolları və ticarət siyasəti"
+   ],
+   "uses": [
+    "Elektrik kabelləri və enerji şəbəkələri",
+    "Tikinti və santexnika",
+    "Elektrik avtomobilləri və bərpa olunan enerji"
+   ]
+  },
+  "aluminum": {
+   "about": "Alüminium bauksitdən çox miqdarda elektrik enerjisi ilə istehsal olunan yüngül və geniş istifadə olunan metaldır. Qiyməti metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Əritmə üçün enerji xərcləri",
+    "Avtomobil, qablaşdırma və tikinti tələbi",
+    "Çində istehsal və ticarət tarifləri"
+   ],
+   "uses": [
+    "Qablaşdırma və qutular",
+    "Avtomobillər və təyyarələr",
+    "Tikinti"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel paslanmayan polad və batareyaların istehsalında istifadə olunan metaldır. Qiyməti London Metal Exchange-də metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Paslanmayan polad tələbi",
+    "Elektrik avtomobil batareyalarına tələb",
+    "İndoneziya və Filippindən təchizat"
+   ],
+   "uses": [
+    "Paslanmayan polad",
+    "Batareyalar",
+    "Ərintilər"
+   ]
+  },
+  "zinc": {
+   "about": "Sink əsasən poladı pasdan qorumaq üçün sinkləməkdə istifadə olunur. Qiyməti metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Polad və tikinti tələbi",
+    "Mədən təchizatı və əridici istehsalı",
+    "Avropa və Çində enerji qiymətləri"
+   ],
+   "uses": [
+    "Poladın sinklənməsi",
+    "Latun və ərintilər",
+    "Batareyalar"
+   ]
+  },
+  "lead": {
+   "about": "Qurğuşun əsasən nəqliyyat vasitələrinin batareyalarında istifadə olunan sıx metaldır. Qiyməti metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Avtomobil və batareya tələbi",
+    "Təkrar emal təchizatı",
+    "Mədən istehsalı və ekoloji qaydalar"
+   ],
+   "uses": [
+    "Nəqliyyat vasitələrinin batareyaları",
+    "Radiasiyadan qorunma",
+    "Kabellər və ərintilər"
+   ]
+  },
+  "tin": {
+   "about": "Qalay əsasən elektronikada lehim kimi istifadə olunan nadir metaldır. Qiyməti metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Elektronika və çip tələbi",
+    "İndoneziya, Myanma və Perudan mədən təchizatı",
+    "Ehtiyatlar və ticarət qaydaları"
+   ],
+   "uses": [
+    "Elektronika üçün lehim",
+    "Konserv qutuları",
+    "Kimyəvi maddələr"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt əsasən Konqo Demokratik Respublikasında çıxarılan batareya metalıdır. Qiyməti metrik ton üzrə göstərilir.",
+   "drivers": [
+    "Elektrik avtomobilləri və batareya tələbi",
+    "Konqo mədən təchizatı və ixrac qaydaları",
+    "Batareya kimyasında dəyişikliklər"
+   ],
+   "uses": [
+    "Batareyalar",
+    "Superərintilər",
+    "Maqnitlər"
+   ]
+  },
+  "lithium": {
+   "about": "Litium karbonat şarj olunan batareyaların əsas xammalıdır. Göstərilən qiymət Çində batareya dərəcəli karbonat üçündür, metrik ton üzrə ABŞ dollarına çevrilmişdir.",
+   "drivers": [
+    "Elektrik avtomobillərinin satışı",
+    "Yeni mədən və emal zavodlarının təchizatı",
+    "Batareyalar üzrə dövlət siyasəti"
+   ],
+   "uses": [
+    "Elektrik avtomobillərinin batareyaları",
+    "Telefonlar və noutbuklar",
+    "Enerji saxlanması"
+   ]
+  },
+  "uranium": {
+   "about": "Uran atom elektrik stansiyalarının yanacağıdır. Qiyməti U3O8 funt üzrə ABŞ dolları ilə göstərilir.",
+   "drivers": [
+    "Atom stansiyalarının yenidən işə salınması və yeni reaktorlar",
+    "Əsasən Qazaxıstan və Kanadadan mədən istehsalı",
+    "Dövlət ehtiyatları və sanksiyalar"
+   ],
+   "uses": [
+    "Atom enerjisi",
+    "Tibbi izotoplar"
+   ]
+  },
+  "iron-ore": {
+   "about": "Dəmir filizi polad üçün əsas xammaldır. Göstərilən qiymət Çinə çatdırılan 62% dəmir tərkibli filiz üçündür, metrik ton üzrə.",
+   "drivers": [
+    "Çin polad istehsalı",
+    "Avstraliya və Braziliyadan təchizat",
+    "Əmlak və infrastruktur xərcləri"
+   ],
+   "uses": [
+    "Polad istehsalı"
+   ]
+  },
+  "steel": {
+   "about": "Polad demək olar ki, hər sənaye sahəsində istifadə olunan dəmir ərintisidir. Göstərilən qiymət Çində armatur poladı üçündür, metrik ton üzrə ABŞ dollarına çevrilmişdir.",
+   "drivers": [
+    "Tikinti tələbi",
+    "Dəmir filizi və koks kömürünün xərcləri",
+    "Hökumətin istehsal limitləri"
+   ],
+   "uses": [
+    "Binalar və körpülər",
+    "Avtomobillər və maşınlar"
+   ]
+  },
+  "steel-hrc": {
+   "about": "İsti yuvarlanmış polad rulon istehsalda istifadə olunan yastı polad məhsuludur. Göstərilən qiymət ABŞ-ın Orta Qərbinə metrik ton üzrə çatdırılma üçündür.",
+   "drivers": [
+    "ABŞ-da avtomobil və tikinti tələbi",
+    "İdxal tarifləri və rəqabət",
+    "Xammal və enerji xərcləri"
+   ],
+   "uses": [
+    "Avtomobillər və məişət texnikası",
+    "Borular və tikinti"
+   ]
+  },
+  "lumber": {
+   "about": "Taxta-şalban fyuçersləri evlərin tikintisində istifadə olunan yumşaq ağacın qiymətini izləyir, 1000 board feet üzrə göstərilir.",
+   "drivers": [
+    "Yeni evlərin tikintisi və ipoteka dərəcələri",
+    "Mişarçılıq istehsalı və meşə yanğınları",
+    "ABŞ və Kanada arasında ticarət rüsumları"
+   ],
+   "uses": [
+    "Evin karkası",
+    "Mebel və qablaşdırma"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI xam neft üçün ABŞ etalonudur, barel üzrə göstərilir və Oklahoma ştatının Kushing şəhərində çatdırılır.",
+   "drivers": [
+    "OPEC və ABŞ istehsal qərarları",
+    "Qlobal iqtisadi artım",
+    "Ehtiyatlar, geosiyasət və ABŞ dolları"
+   ],
+   "uses": [
+    "Benzin, dizel və təyyarə yanacağı",
+    "Plastik və kimyəvi maddələr"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent xam neft üçün qlobal etalondur, barel üzrə göstərilir və ABŞ-dan kənarda ticarət olunan neftin çoxunun qiymətini müəyyən edir.",
+   "drivers": [
+    "OPEC+ istehsal qərarları",
+    "Qlobal tələb, xüsusilə Çin və Hindistandan",
+    "İstehsal edən regionlarda münaqişələr və sanksiyalar"
+   ],
+   "uses": [
+    "Benzin, dizel və təyyarə yanacağı",
+    "Plastik və kimyəvi maddələr"
+   ]
+  },
+  "natural-gas": {
+   "about": "Təbii qaz burada ABŞ Henry Hub qiyməti ilə MMBtu üzrə göstərilir. İsitmə, enerji istehsalı və sənaye üçün istifadə olunur.",
+   "drivers": [
+    "Hava və isitmə tələbi",
+    "Ehtiyat səviyyələri və istehsal",
+    "Maye təbii qazın ixracı"
+   ],
+   "uses": [
+    "Enerji istehsalı",
+    "Evlərdə isitmə və yemək bişirmə",
+    "Gübrələr və kimyəvi maddələr"
+   ]
+  },
+  "gasoline": {
+   "about": "Benzin fyuçersləri topdan benzin qiymətlərini izləyir, ABŞ dolları ilə gallon üzrə.",
+   "drivers": [
+    "Xam neftin qiyməti",
+    "Neft emalı istehsalı və sürücülük mövsümü",
+    "Ehtiyatlar və qaydalar"
+   ],
+   "uses": [
+    "Avtomobil yanacağı"
+   ]
+  },
+  "heating-oil": {
+   "about": "İsitmə yanacağı fyuçersləri topdan dizel və isitmə yanacağı qiymətlərini izləyir, ABŞ dolları ilə gallon üzrə.",
+   "drivers": [
+    "Xam neftin qiyməti",
+    "Qış havası",
+    "Yük maşınları və sənayedən dizel tələbi"
+   ],
+   "uses": [
+    "Evlərin isidilməsi",
+    "Dizel yanacağı"
+   ]
+  },
+  "wheat": {
+   "about": "Buğda dünyanın əsas taxıl məhsullarından biridir. Qiyməti Çikaqo birjasında buşel üzrə göstərilir.",
+   "drivers": [
+    "Əsas becərmə regionlarında hava",
+    "Rusiya, Ukrayna, ABŞ və Aİ ixracı",
+    "Ehtiyatlar, enerji qiymətləri və ABŞ dolları"
+   ],
+   "uses": [
+    "Çörək, makaron və un",
+    "Heyvan yemi"
+   ]
+  },
+  "corn": {
+   "about": "Qarğıdalı əsas qida və yem taxılı, həmçinin etanol mənbəyidir. Qiyməti Çikaqo birjasında buşel üzrə göstərilir.",
+   "drivers": [
+    "ABŞ və Braziliya məhsulları",
+    "Etanol və heyvan yemi tələbi",
+    "Hava və ixrac"
+   ],
+   "uses": [
+    "Heyvan yemi",
+    "Etanol yanacağı",
+    "Qida və şirələr"
+   ]
+  },
+  "soybeans": {
+   "about": "Soya paxlası yağa və ununa emal olunur. Qiyməti Çikaqo birjasında buşel üzrə göstərilir.",
+   "drivers": [
+    "ABŞ, Braziliya və Argentina məhsulları",
+    "Çinin idxal tələbi",
+    "Bioyanacaq siyasəti"
+   ],
+   "uses": [
+    "Bitki yağı",
+    "Heyvan yemi",
+    "Biodizel"
+   ]
+  },
+  "rice": {
+   "about": "Qabıqlı düyü milyardlarla insan üçün əsas qidadır. Qiyməti Çikaqo birjasında sentner üzrə göstərilir.",
+   "drivers": [
+    "Asiyada musson və məhsul şəraiti",
+    "Hindistan, Tailand və Vyetnamın ixrac qaydaları",
+    "Ehtiyatlar və ərzaq qiymətləri"
+   ],
+   "uses": [
+    "Qida"
+   ]
+  },
+  "sugar": {
+   "about": "Xam şəkər fyuçersləri dünya şəkər qiymətini izləyir, funt üzrə ABŞ dolları ilə göstərilir.",
+   "drivers": [
+    "Braziliya və Hindistanda şəkər qamışı məhsulları",
+    "Braziliyada etanola tələb",
+    "Hava və valyutalar"
+   ],
+   "uses": [
+    "Qida və içkilər",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Arabika kofe fyuçersləri dünya kofe paxlası qiymətini izləyir, funt üzrə ABŞ dolları ilə göstərilir.",
+   "drivers": [
+    "Braziliya və Kolumbiyada hava",
+    "Ehtiyatlar və ixrac",
+    "Valyutalar və tələb"
+   ],
+   "uses": [
+    "Kofe içkiləri"
+   ]
+  },
+  "cocoa": {
+   "about": "Kakao fyuçersləri kakao paxlasının qiymətini izləyir, metrik ton üzrə ABŞ dolları ilə göstərilir.",
+   "drivers": [
+    "Fil Dişi Sahili və Qanada məhsullar",
+    "Xəstəlik və hava",
+    "Şokolad tələbi"
+   ],
+   "uses": [
+    "Şokolad və şirniyyat",
+    "Kosmetika"
+   ]
+  },
+  "cotton": {
+   "about": "Pambıq fyuçersləri xam pambığın dünya qiymətini izləyir, funt üzrə ABŞ dolları ilə göstərilir.",
+   "drivers": [
+    "ABŞ, Hindistan və Çində hava",
+    "Tekstil tələbi",
+    "Neft qiymətləri və valyutalar"
+   ],
+   "uses": [
+    "Geyim və tekstil"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin ilk və ən böyük kriptovalyutadır. Birjalarda gün ərzində ticarət olunur və təklifi 21 milyon sikkə ilə məhdudlaşdırılıb.",
+   "drivers": [
+    "İnvestor tələbi və ETF axınları",
+    "Faiz dərəcələri və risk iştahı",
+    "Tənzimləmə və xəbərlər"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum ağıllı müqavilələr və tətbiqlər üçün blokçeyndir, onun sikkəsi olan ether isə ikinci ən böyük kriptovalyutadır.",
+   "drivers": [
+    "Ethereum tətbiqlərindən istifadə",
+    "Şəbəkə yeniləmələri və haqlar",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "bnb": {
+   "about": "BNB BNB Chain və Binance birja ekosisteminin sikkəsidir.",
+   "drivers": [
+    "Birja fəaliyyəti və haqlar",
+    "Tokenlərin yandırılması",
+    "Tənzimləmə"
+   ]
+  },
+  "xrp": {
+   "about": "XRP XRP Ledger üzərində sürətli beynəlxalq ödənişlər üçün istifadə olunan kriptovalyutadır.",
+   "drivers": [
+    "Məhkəmə və tənzimləyici xəbərlər",
+    "Bank və ödəniş tərəfdaşlıqları",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "solana": {
+   "about": "Solana tətbiqlər və ödənişlər üçün sürətli blokçeyndir, SOL isə onun sikkəsidir.",
+   "drivers": [
+    "Tətbiq və token fəaliyyəti",
+    "Şəbəkənin etibarlılığı",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano proof-of-stake blokçeyndir, ADA isə onun sikkəsidir.",
+   "drivers": [
+    "İnkişaf proqresi",
+    "Stekinq",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin zarafat sikkə kimi başladı və ən çox ticarət olunan kriptovalyutalardan birinə çevrildi.",
+   "drivers": [
+    "Sosial mediada diqqət",
+    "Bazar əhval-ruhiyyəsi",
+    "Ödənişlərdə qəbul edilməsi"
+   ]
+  },
+  "tron": {
+   "about": "TRON stablecoin köçürmələri üçün geniş istifadə olunan blokçeyndir, TRX isə onun sikkəsidir.",
+   "drivers": [
+    "Stablecoin köçürmə fəaliyyəti",
+    "Şəbəkə haqları",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot bir çox blokçeyni birləşdirir, DOT isə onun sikkəsidir.",
+   "drivers": [
+    "Şəbəkənin inkişafı",
+    "Stekinq",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink blokçeynlərə real dünya məlumatlarını təmin edir, LINK isə onun sikkəsidir.",
+   "drivers": [
+    "Digər tətbiqlər tərəfindən istifadə",
+    "Tərəfdaşlıqlar",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin ən köhnə kriptovalyutalardan biridir və Bitcoin-dən daha sürətli ödənişlər üçün yaradılıb.",
+   "drivers": [
+    "Bitcoin qiyməti",
+    "Ödənişlərdə qəbul edilməsi",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche sürətli blokçeyn platformasıdır, AVAX isə onun sikkəsidir.",
+   "drivers": [
+    "Tətbiq fəaliyyəti",
+    "Şəbəkə yeniləmələri",
+    "Bazar əhval-ruhiyyəsi"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 ABŞ-ın ən böyük 500 şirkətini izləyir və ABŞ səhm bazarının əsas göstəricisidir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite Nasdaq-da listinqdə olan minlərlə səhmi izləyir, texnologiya şirkətlərinin çəkisi isə böyükdür.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average ABŞ-ın 30 böyük şirkətini izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 Londonda listinqdə olan ən böyük 100 şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "dax": {
+   "about": "DAX Frankfurtda listinqdə olan 40 böyük alman şirkətini izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 Parisdə listinqdə olan 40 böyük şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 Tokioda listinqdə olan 225 böyük şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng İndeksi Honkonqda listinqdə olan ən böyük şirkətləri izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite Şanxay Fond Birjasında listinqdə olan bütün səhmləri izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 Hindistanın Milli Fond Birjasında 50 böyük şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex Bombey Fond Birjasında 30 böyük şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 Misir Birjasında ən fəal 30 şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "tasi": {
+   "about": "Tadavul All Share İndeksi Səudiyyə Ərəbistanının fond birjasında listinqdə olan bütün şirkətləri izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 Borsa İstanbulda ən böyük 100 şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa Braziliyanın B3 birjasında əsas şirkətləri izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 Avstraliya birjasında ən böyük 200 şirkəti izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite Torontoda listinqdə olan əsas şirkətləri izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI Koreya Birjasında adi səhmlərin hamısını izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 avro zonasının 50 böyük şirkətini izləyir.",
+   "drivers": [
+    "Şirkətlərin mənfəəti",
+    "Faiz dərəcələri və inflyasiya",
+    "İqtisadi və siyasi xəbərlər"
+   ]
+  }
+ }
+}
