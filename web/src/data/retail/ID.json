@@ -1,0 +1,50 @@
+{
+  "country": "ID",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 1.65,
+    "vatBullionPct": 0,
+    "importDutyPct": 5,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 15.47
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "PMK 48/2023: jewellery VAT 1.65% to end consumer (1.1% other cases); certified 99.99% bars VAT-exempt (PP 49/2022). Duty 5% semi-finished/ready bars, 0% cast - needs tariff confirmation, hence low. Antam buyback 15.47% calc. for 1g (sell 2,501,000 vs buyback 2,114,000 Rp/g, 27 Nov 2026). Making not sourced, null. No spot verified, so no bar premium claimed.",
+  "sources": [
+    {
+      "name": "TaxPrime - Tax Update PMK 48/PMK.03/2023 on gold jewellery and bullion",
+      "url": "https://www.taxprime.net/wp-content/uploads/2023/03/TaxPrime-Tax-Update-Vol-2-May-2023-1.pdf",
+      "what": "Read 2026-11-27: jewellery VAT 1.1%/1.65%/0% matrix; bullion VAT-exempt if bar form, 99.99%, certified; PPh 22 0.25% on Antam purchases"
+    },
+    {
+      "name": "MUC Consulting - Government Slashes Gold Tax, 2023-05-09",
+      "url": "https://muc.co.id/en/article/releasing-new-rules-government-slashes-gold-tax?from=fb&",
+      "what": "Read 2026-11-27: corroborates PMK 48/2023 jewellery VAT rates and bullion VAT-not-collected treatment"
+    },
+    {
+      "name": "ANTARA via Jawawa - Antam gold price, 27 Nov 2026",
+      "url": "https://jawawa.id/newsitem/antam-gold-holds-steady-at-rp2-501-million-per-gram-on-friday-buyback-price-edges-up-1795747991",
+      "what": "Read 2026-11-27: Antam Logam Mulia list 27 Nov 2026: 1g Rp 2,501,000, 1000g Rp 2,441,600,000; buyback Rp 2,114,000/g flat; buyback discount for 1g = 15.47% (calculated)"
+    },
+    {
+      "name": "Indonesia Business Post - Gold import duty classifications, 2023-05-09",
+      "url": "https://indonesiabusinesspost.com/816/Politics/corruption-in-gold-imports-customs-officials-accused-of-costing-the-state-trillions-in-losses",
+      "what": "Read 2026-11-27: HS 7108.12.10 cast bars 0%, HS 7108.12.90/7108.13/7115.90.10 at 5%; unnamed-source report, flagged for primary tariff confirmation"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "country": "TH",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "medium",
+  "defaultKarat": 23,
+  "gold": {
+    "vatJewelryPct": 7,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": {
+      "typical": 1.36,
+      "min": 1.02,
+      "max": 2.04
+    },
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 0.34
+    },
+    "usedGoldDiscountPct": {
+      "typical": 5
+    }
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard 96.5% (about 23K). Bars VAT-exempt, no bullion duty. Plain domestic jewellery VAT 7% only on making+spread; imported 7% on full value. Making THB 600-1200/baht = 1.02-2.04% at GTA sell 58,950 THB/baht 27 Nov 2026 (800 = 1.36%). Bar buyback = GTA spread 200/58,950 = 0.34%. Jewellery resale up to 5% deduction plus making lost. No per-size bar list found.",
+  "sources": [
+    {
+      "name": "LBMA - Spotlight on Thailand, Chapter 2: Introduction and Regulations",
+      "url": "https://www.lbma.org.uk/publications/spotlight-on-thailand/chapter-2-introduction-and-regulations",
+      "what": "Read 2026-11-27: most gold 965 purity; no import/export duty on bullion; 7% VAT on full value of imported jewellery, and on making+spread only for domestic plain jewellery"
+    },
+    {
+      "name": "ThongRoo - Gold Price Today (Gold Traders Association announcements)",
+      "url": "https://thongroo.com/en/gold-price-today",
+      "what": "Read 2026-11-27: GTA 27 Nov 2026 announcement 39: bar buy THB 58,750 / sell THB 58,950 per baht-weight, ornament buy THB 57,577.68 / sell THB 59,750; bar spread = 0.34% (calculated)"
+    },
+    {
+      "name": "The Bangkok Guide - Thai Gold Explained (updated 2026-11-11)",
+      "url": "https://www.thebangkokguide.org/videos/thai-gold-explained-why-it-s-unique-and-what-buyers-should/",
+      "what": "Read 2026-11-27: 96.5% about 23K standard; bars VAT exempt, jewellery 7% on margin only; making THB 600-1200 per baht; jewellery buyback up to 5% deduction (OCPB) plus making lost"
+    },
+    {
+      "name": "Bangkok Vacay - Where to Buy Gold Jewelry in Bangkok",
+      "url": "https://www.bangkokvacay.com/blog/where-to-buy-gold-jewelry-in-bangkok",
+      "what": "Read 2026-11-27: GTA suggested minimum making charge THB 500 per baht-weight, Hua Seng Heng starts at THB 800"
+    }
+  ]
+}
