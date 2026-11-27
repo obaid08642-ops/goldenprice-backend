@@ -47,7 +47,15 @@ export function mountClients({ app, okAdmin, limited, clientIp, EMAIL_RE, clean,
     const st = clean(req.query.status, 20);
     const rows = st && st !== "all" ? await sql`SELECT id, email, purpose, requested_plan, requested_scopes, status, plan, scopes, created_at, approved_at, expires_at, provider, note, (api_key IS NOT NULL) AS has_key FROM api_clients WHERE status = ${st} ORDER BY id DESC LIMIT 200`
       : await sql`SELECT id, email, purpose, requested_plan, requested_scopes, status, plan, scopes, created_at, approved_at, expires_at, provider, note, (api_key IS NOT NULL) AS has_key FROM api_clients ORDER BY id DESC LIMIT 200`;
-    res.json({ clients: rows, plans: PLANS });
+    // overview for the admin: what is active, what is about to expire, expected monthly income (list prices of active paid plans)
+    const act = await sql`SELECT plan, expires_at FROM api_clients WHERE status = 'approved' AND (expires_at IS NULL OR expires_at > now())`;
+    const soon = Date.now() + 7 * 864e5;
+    const summary = { activeFree: act.filter((a) => a.plan === "free").length, activePaid: act.filter((a) => a.plan !== "free").length,
+      expiringSoon: act.filter((a) => a.plan !== "free" && a.expires_at && new Date(a.expires_at).getTime() < soon).length,
+      expired: (await sql`SELECT count(*)::int AS n FROM api_clients WHERE status = 'expired' OR (status = 'approved' AND expires_at <= now())`)[0].n,
+      pending: (await sql`SELECT count(*)::int AS n FROM api_clients WHERE status = 'pending'`)[0].n,
+      monthlyListPriceUsd: act.reduce((t, a) => t + (PLANS[a.plan]?.price || 0), 0) };
+    res.json({ clients: rows, plans: PLANS, summary });
   }));
   app.post("/api/admin/clients/:id/approve", adm(async (req, res) => {
     const id = Number(req.params.id), plan = PLANS[req.body?.plan] ? req.body.plan : "free";
