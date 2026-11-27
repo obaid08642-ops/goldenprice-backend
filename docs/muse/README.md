@@ -47,3 +47,29 @@ Files: `web/src/i18n/lang/<code>.json`. Fix wrong, stiff or machine-sounding str
 
 ## Start prompt to paste into the Muse session
 > Clone obaid08642-ops/goldenprice-backend, check out `muse/staging`, read docs/muse/README.md completely and follow it. Never push or merge to main; never merge your own PRs; open PRs with base muse/staging only. Start with task T1 for BD, LK, NP, ID, TH (one PR), then T2 for the first 10 countries (second PR). Open PRs against muse/staging, describe sources in the PR body, then check the PR comments for review feedback and fix what is asked. Repeat until the lists are done.
+
+## PHASE 2 queue (start after the fixes requested in issue #17 are merged; keep going until all lists are done)
+All REVIEW.md rules apply. Every task: fewer correct figures beat many doubtful ones; a country with no primary source is simply skipped (list skipped countries in the PR).
+
+### T5: local gold data for every remaining country
+Files `web/src/data/retail/<CC>.json`. Order: by population, over every country in `web/src/data/countries.ts` that has no retail file or only `confidence: low`. Small countries and territories: a `tier: 2` file with only what a tax or customs authority page states (VAT on gold jewelry and bullion, import duty) is valuable; leave the rest null. Check: `check-retail.mjs`. Batches of at most 10 countries per PR.
+
+### T6: official fuel and electricity for every remaining country
+`web/src/data/costs-manual.json`, same shape and rules as T2, for every country not yet there and not in the EU (EU is automated). Check: `check-costs.mjs`.
+
+### T7: food staples (new dataset)
+File `web/src/data/staples.json`, validated by `NODE_USE_ENV_PROXY=1 node scripts/check-datasets.mjs`. Shape:
+```json
+{ "EG": { "cur": "EGP", "items": {
+  "sugar": { "value": 32.0, "unit": "kg", "date": "2026-10-31", "src": "CAPMAS retail price bulletin", "url": "https://..." },
+  "rice": {...}, "wheat_flour": {...}, "cooking_oil": {"unit":"litre"}, "eggs": {"unit":"dozen"}, "milk": {"unit":"litre"}, "chicken": {"unit":"kg"}, "beef": {"unit":"kg"} } } }
+```
+Items: sugar, rice, wheat_flour, cooking_oil, eggs, milk, chicken, beef, bread (unit loaf), tea. Sources: national statistics office, ministry of trade/agriculture, consumer protection authority. UN or World Bank databases (FAO FPMA, WFP) only if their licence allows commercial reuse: quote the licence line in the PR body, otherwise do not use them. National average only (not one market/city) unless the source itself is the national reference.
+
+### T8: building materials (new dataset)
+File `web/src/data/construction.json`, same validator. Items: cement (unit bag50kg) or cement_tonne (unit tonne), rebar (tonne), bricks (1000pcs), sand (m3). Sources: statistics office, ministry of housing/industry, national cement or steel association with published price lists. Same rules.
+
+### T4 (parallel, low priority): translation quality pass
+One language per PR, in this order: ar es fr de pt ru tr id hi zh ja ko it fa ur. Native-sounding wording, same keys and placeholders. Check: `check-i18n.mjs <code>`.
+
+Not in scope (no free consistent official source): car prices and real estate prices. Do not add them.
