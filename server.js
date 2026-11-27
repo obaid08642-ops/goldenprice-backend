@@ -657,22 +657,27 @@ async function updateMetals() {
       const group1 = ["zinc", "aluminum", "copper"];
       const group2 = ["lead", "nickel", "platinum", "palladium"];
       let price = null;
-      if (group1.includes(lower) && (METALS_DEV_KEY1 || METALS_DEV_API_KEY)) {
-        price = await fromMetalsDevWithKey(lower, 1);
-        if (isValidNumber(price)) {
-          got = putMetal(name, price, "metals.dev:key1");
+      try {
+        if (group1.includes(lower) && (METALS_DEV_KEY1 || METALS_DEV_API_KEY)) {
+          price = await fromMetalsDevWithKey(lower, 1);
+          if (isValidNumber(price)) {
+            got = putMetal(name, price, "metals.dev:key1");
+          }
+        } else if (group2.includes(lower) && (METALS_DEV_KEY2 || METALS_DEV_API_KEY)) {
+          price = await fromMetalsDevWithKey(lower, 2);
+          if (isValidNumber(price)) {
+            got = putMetal(name, price, "metals.dev:key2");
+          }
+        } else if (METALS_DEV_API_KEY) {
+          // fallback single key
+          price = await fromMetalsDevWithKey(lower, 0);
+          if (isValidNumber(price)) {
+            got = putMetal(name, price, "metals.dev");
+          }
         }
-      } else if (group2.includes(lower) && (METALS_DEV_KEY2 || METALS_DEV_API_KEY)) {
-        price = await fromMetalsDevWithKey(lower, 2);
-        if (isValidNumber(price)) {
-          got = putMetal(name, price, "metals.dev:key2");
-        }
-      } else if (METALS_DEV_API_KEY) {
-        // fallback single key
-        price = await fromMetalsDevWithKey(lower, 0);
-        if (isValidNumber(price)) {
-          got = putMetal(name, price, "metals.dev");
-        }
+
+      } catch (e) {
+        console.warn(`metals.dev ${lower} failed: ${e.message || e}`);
       }
       // If not gotten yet, try configured sources (yahoo / others) in order
       if (!got && Array.isArray(sources)) {
