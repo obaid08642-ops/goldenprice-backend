@@ -2,6 +2,7 @@
 import { ASSETS, CONSTRUCTION, KINDS, hasFx, perUnit, unitsFor, type Asset } from "../data/assets";
 import { TOP_CURRENCIES, type Country } from "../data/countries";
 import type { Lang } from "../data/languages";
+import { iconHtml } from "./icons";
 import type { Retail } from "../data/retail";
 import { assetLabel, contentOf, t } from "../i18n/ui";
 import { countryName, currencyName, fmt, pct } from "./format";
@@ -128,7 +129,7 @@ function marketRows(c: Ctx, list: Asset[]) {
   return list.map((a) => {
     const it = data.items[a.sym];
     const up = (it?.changePct ?? 0) >= 0;
-    return `<tr><td><a class="as" href="${assetUrl(lang, country.code, a)}"><i>${a.code}</i>${assetName(lang, a)}</a></td><td class="n">${fmt(lang, local(c, a, defaultUnit(a)))}</td><td class="n ${cls(it?.changePct)}">${pct(lang, it?.changePct)}</td><td>${spark(it?.spark ?? [], up)}</td></tr>`;
+    return `<tr><td><a class="as" href="${assetUrl(lang, country.code, a)}">${iconHtml(a)}${assetName(lang, a)}</a></td><td class="n">${fmt(lang, local(c, a, defaultUnit(a)))}</td><td class="n ${cls(it?.changePct)}">${pct(lang, it?.changePct)}</td><td>${spark(it?.spark ?? [], up)}</td></tr>`;
   }).join("");
 }
 /** compact table of the most important assets (sidebar on asset pages) */
