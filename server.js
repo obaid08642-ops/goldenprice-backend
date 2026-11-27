@@ -282,12 +282,21 @@ async function fromTwelveData(pair) {
   return v;
 }
 // yahoo
+const YAHOO_HEADERS = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36", Accept: "application/json" };
 async function fromYahoo(ticker) {
-  const url = `https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?region=US&lang=en-US`;
-  const j = await getJSON(url);
-  const v = j?.chart?.result?.[0]?.meta?.regularMarketPrice;
-  if (!v) throw new Error("Yahoo no price");
-  return Number(v);
+  // Yahoo answers 429 to requests without a browser User-Agent, so always send one; try both hosts.
+  let lastErr;
+  for (const host of ["query1", "query2"]) {
+    try {
+      const url = `https://${host}.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(ticker)}?region=US&lang=en-US`;
+      const j = await getJSON(url, { headers: YAHOO_HEADERS });
+      const v = j?.chart?.result?.[0]?.meta?.regularMarketPrice;
+      if (v) return Number(v);
+      lastErr = new Error("Yahoo no price");
+    } catch (e) { lastErr = e; }
+  }
+  console.warn(`yahoo ${ticker} failed: ${lastErr?.message || lastErr}`);
+  throw lastErr;
 }
 // kitco
 async function fromKitco(metal) {
