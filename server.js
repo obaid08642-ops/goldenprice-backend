@@ -24,6 +24,7 @@ import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
 import WebSocket from "ws";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +34,8 @@ const SITES_FILE = path.join(__dirname, "sites.json");
 
 // ---------- env ----------
 const PORT = Number(process.env.PORT || 10000);
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "ADMIN_12345";
+// No default token: admin endpoints are disabled until ADMIN_TOKEN is set.
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "";
 const TWELVEDATA_KEY = process.env.TWELVEDATA_KEY || "";
 const ALPHAVANTAGE_KEY = process.env.ALPHAVANTAGE_KEY || "";
 const EXR_HOST = process.env.EXR_HOST || "https://api.exchangerate.host";
@@ -186,6 +188,7 @@ function put(symbol, price, unit = "usd", src = "unknown") {
       cache.history[symbol] = hist;
     }
     saveCache();
+    recordPrice(symbol, num, src).catch((e) => console.error("db record error", e.message || e));
   } catch (e) {
     console.error("put error", e.message || e);
   }
@@ -836,19 +839,38 @@ updateFX("USD", "EGP");
 updateEnergy();
 
 // ---------- history / chart / change endpoints ----------
-app.get("/api/history/:symbol", (req, res) => {
+app.get("/api/history/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
-  const hist = cache.history && cache.history[symbol] ? cache.history[symbol] : [];
-  res.json({ symbol, history: hist });
+  const days = Math.min(36500, Number(req.query.days || 365));
+  try {
+    const rows = await dailyHistory(symbol, days);
+    if (rows && rows.length) return res.json({ symbol, source: "db", history: rows });
+  } catch (e) { console.error("history db error", e.message || e); }
+  res.json({ symbol, source: "cache", history: (cache.history && cache.history[symbol]) || [] });
 });
 
-// chart endpoint: /api/chart/:symbol?days=30  (returns last N daily points)
-app.get("/api/chart/:symbol", (req, res) => {
+// chart endpoint: /api/chart/:symbol?days=30 (daily points; ?days up to 3650 when DB is on)
+app.get("/api/chart/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
-  const days = Math.min(90, Number(req.query.days || 30)); // cap to 90
-  const hist = (cache.history && cache.history[symbol]) || [];
-  const out = hist.slice(-days);
-  res.json({ symbol, data: out });
+  const days = Math.min(dbEnabled ? 3650 : 90, Number(req.query.days || 30));
+  try {
+    const rows = await dailyHistory(symbol, days);
+    if (rows && rows.length) return res.json({ symbol, source: "db", data: rows });
+  } catch (e) { console.error("chart db error", e.message || e); }
+  res.json({ symbol, source: "cache", data: ((cache.history && cache.history[symbol]) || []).slice(-days) });
+});
+
+app.get("/api/ticks/:symbol", async (req, res) => {
+  const symbol = String(req.params.symbol || "").toUpperCase();
+  try {
+    const rows = await recentTicks(symbol, Math.min(720, Number(req.query.hours || 24)));
+    res.json({ symbol, data: rows || [] });
+  } catch (e) { res.status(500).json({ error: "db error" }); }
+});
+
+app.get("/api/symbols", async (req, res) => {
+  try { res.json({ symbols: (await listSymbols()) || Object.keys(cache.prices) }); }
+  catch (e) { res.json({ symbols: Object.keys(cache.prices) }); }
 });
 
 // change percent: /api/change/:symbol?period=24h
@@ -958,7 +980,7 @@ app.get("/api/oilgas/gas", (req, res) => { const v = get("NATGAS"); if (!v) retu
 // ---------- Admin endpoints ----------
 function okAdmin(req) {
   const t = req.headers["x-admin-token"] || req.query.token || req.body?.token;
-  return String(t) === String(ADMIN_TOKEN);
+  return !!ADMIN_TOKEN && String(t) === String(ADMIN_TOKEN);
 }
 app.get("/api/cache", (req, res) => {
   if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
@@ -991,4 +1013,6 @@ app.post("/api/admin/cache/clear", (req, res) => {
 });
 
 // ---------- start ----------
+initDb().then((on) => console.log(on ? "DB ready" : "DB disabled (no DATABASE_URL)")).catch((e) => console.error("DB init failed", e.message || e));
+setInterval(() => pruneTicks().catch(() => {}), 6 * 60 * 60 * 1000);
 app.listen(PORT, () => console.log(`Backend running on :${PORT}`));
