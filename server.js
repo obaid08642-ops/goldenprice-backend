@@ -28,6 +28,7 @@ import { mountClients } from "./clients.js";
 import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
 import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
+import { loadMonthly } from "./monthly.js";
 import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
@@ -1046,6 +1047,8 @@ async function updateRates() {
 updateRates().then(() => updateIndustrial());
 setInterval(() => updateRates(), 60 * 60 * 1000);
 setInterval(() => updateIndustrial(), 3 * 60 * 60 * 1000);
+const runMonthly = () => loadMonthly({ bulkDaily, cache, saveCache }).catch((e) => console.warn("monthly update failed:", e.message || e));
+setTimeout(runMonthly, 20000); setInterval(runMonthly, 24 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
   res.set("Cache-Control", "public, max-age=300");
   if (!RATES.updated) return res.status(503).json({ error: "rates not ready" });

@@ -1,0 +1,14 @@
+name: Refresh World Bank monthly commodity prices
+on:
+  schedule: [{ cron: "41 6 5 * *" }]
+  workflow_dispatch: {}
+permissions: { contents: write }
+jobs:
+  pinksheet:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/fetch-pinksheet.py
+      - run: |
+          git config user.name "data-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/pinksheet.json && (git diff --cached --quiet || (git commit -m "Refresh Pink Sheet data" && git push))

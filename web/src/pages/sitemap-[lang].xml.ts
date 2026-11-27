@@ -9,7 +9,7 @@ export async function GET({ site, params }: { site?: URL; params: { lang: string
   const lang = params.lang as any;
   const data = await getData();
   const has = (a: { sym: string }) => data.items[a.sym]?.price != null;
-  const slugs = ["", "markets", "rates", "calculators", "compare", "costs", ...CORE.filter((a) => a.slug !== "gold" && has(a)).map((a) => a.slug)];
+  const slugs = ["", "markets", "rates", "calculators", "compare", "costs", "coins", ...CORE.filter((a) => a.slug !== "gold" && has(a)).map((a) => a.slug)];
   const lastmod = new Date().toISOString().slice(0, 10);
   const out: string[] = [];
   for (const c of COUNTRIES) {
