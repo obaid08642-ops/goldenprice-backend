@@ -1062,12 +1062,13 @@ app.get("/api/overview", async (req, res) => {
     try { hist = (await dailyHistory(sym, 12)) || []; } catch {}
     const closes = hist.map((h) => h.value);
     const today = new Date().toISOString().slice(0, 10);
+    // Gold/silver are fed from spot sources while history is futures, so skip the change until a live-recorded previous close exists.
     const prevRow = [...hist].reverse().find((h) => h.date < today);
     const price = cur ? cur.price : closes[closes.length - 1] ?? null;
     items[sym] = {
       price, unit: cur?.unit || "usd", src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
       stale: cur ? Date.now() - cur.t > 3 * 24 * 3600 * 1000 : true,
-      changePct: price && prevRow ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
+      changePct: price && prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym)) ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
       spark: closes.slice(-8),
     };
   }));

@@ -1,0 +1,22 @@
+---
+import Base from "../../layouts/Base.astro";
+import { LANG_CODES } from "../../data/languages";
+import { COUNTRIES } from "../../data/countries";
+import { t } from "../../i18n/ui";
+import { SITE_NAME } from "../../lib/paths";
+export function getStaticPaths() {
+  return LANG_CODES.flatMap((lang) => ["about", "privacy", "contact"].map((legal) => ({ params: { lang, legal }, props: { lang, legal } })));
+}
+const { lang, legal } = Astro.props;
+const country = COUNTRIES.find((c) => c.code === "US")!;
+const title = t(lang, legal as "about" | "privacy" | "contact");
+// Body text is English for now (each language gets a translated version before launch).
+const body: Record<string, string[]> = {
+  about: [`${SITE_NAME} shows live prices for gold, silver, other metals, oil, gas and crypto in your own currency, for every supported country.`, "Prices come from public market data feeds and are updated every few minutes. Some metals are updated manually and show their last update time.", "Local retail estimates add typical taxes and making charges to the global price. They are estimates, not quotes."],
+  privacy: ["We collect no account data. We store only your language, country and theme choice in your browser.", "Ads (when enabled) are served by Google AdSense, which may use cookies to show relevant ads. You can manage this in your Google ad settings.", "Aggregate, anonymous visit statistics may be collected to improve the site."],
+  contact: ["Questions, corrections or partnership requests: please email the address shown here once the domain is live.", "If you spot a wrong price, tell us the asset, country and where you saw the correct value."],
+};
+---
+<Base lang={lang} country={country} slug="" title={`${title} – ${SITE_NAME}`} description={body[legal][0]} noindex={lang !== "en"}>
+  <main class="m"><section class="card prose"><h1>{title}</h1>{body[legal].map((p) => <p>{p}</p>)}</section></main>
+</Base>

@@ -1,0 +1,28 @@
+---
+// Root: pick a language + country from the saved choice, the visitor's country (Cloudflare) or the browser language; fall back to English/US.
+import { COUNTRIES, langsFor } from "../data/countries";
+import { SITE_NAME } from "../lib/paths";
+const map = COUNTRIES.map((c) => ({ code: c.code, langs: langsFor(c) }));
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{SITE_NAME} – Gold, silver, metals, crypto and currency prices worldwide</title>
+  <meta name="description" content="Live gold, silver, metals, oil, crypto and currency prices for every country, in your language and currency." />
+  <link rel="canonical" href={`${Astro.site ?? ""}en/us/`} />
+  <noscript><meta http-equiv="refresh" content="0;url=/en/us/" /></noscript>
+  <script is:inline define:vars={{ map }}>
+    (async function () {
+      var go = function (p) { location.replace(p); };
+      try { var pref = JSON.parse(localStorage.getItem("pref") || "null"); if (pref && pref.path) return go(pref.path); } catch (e) {}
+      var loc = ""; try { loc = (/loc=([A-Z]{2})/.exec(await (await fetch("/cdn-cgi/trace")).text()) || [])[1] || ""; } catch (e) {}
+      var nav = (navigator.language || "en").slice(0, 2).toLowerCase();
+      var c = map.find(function (x) { return x.code === loc; }) || map.find(function (x) { return x.code === "US"; });
+      var lang = c.langs.indexOf(nav) > -1 ? nav : c.langs[0];
+      go("/" + lang + "/" + c.code.toLowerCase() + "/");
+    })();
+  </script>
+</head>
+<body style="font-family:system-ui;padding:2rem"><p>Loading… <a href="/en/us/">Gold price</a></p></body>
+</html>

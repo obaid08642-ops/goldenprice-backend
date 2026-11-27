@@ -44,7 +44,7 @@ export async function pruneTicks() {
 
 export async function dailyHistory(symbol, days = 365) {
   if (!sql) return null;
-  const rows = await sql`SELECT to_char(day,'YYYY-MM-DD') AS date, close AS value, open, high, low
+  const rows = await sql`SELECT to_char(day,'YYYY-MM-DD') AS date, close AS value, open, high, low, src
     FROM price_daily WHERE symbol = ${symbol} AND day >= (now() AT TIME ZONE 'UTC')::date - ${days}::int
     ORDER BY day`;
   return rows;

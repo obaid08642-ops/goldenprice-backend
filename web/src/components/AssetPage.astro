@@ -1,0 +1,104 @@
+---
+import Base from "../layouts/Base.astro";
+import { ASSETS, type Asset } from "../data/assets";
+import { COUNTRIES, langsFor, type Country } from "../data/countries";
+import { LANG_CODES, type Lang } from "../data/languages";
+import { t } from "../i18n/ui";
+import { countryName } from "../lib/format";
+import { getData } from "../lib/api";
+import { url, isPrimary } from "../lib/paths";
+import { assetName, defaultUnit, local, renderCurrencies, renderHero, renderMarkets, renderSide, renderTicker, unitLabel, type Ctx } from "../lib/render";
+import { fmt } from "../lib/format";
+
+interface Props { lang: Lang; country: Country; asset?: Asset | null } // asset null = markets overview
+const { lang, country, asset = null } = Astro.props;
+const data = await getData();
+const slug = asset ? (asset.slug === "gold" ? "" : asset.slug) : "markets";
+const cn = countryName(lang, country.code);
+const ads = import.meta.env.PUBLIC_ADS === "1";
+const gold = ASSETS[0];
+const a = asset ?? gold;
+const unit = defaultUnit(a);
+const c: Ctx = { lang, country, asset: a, unit, data };
+const aName = assetName(lang, a);
+const uName = unitLabel(lang, a, unit);
+const priceNow = fmt(lang, local(c, a, unit));
+
+const title = asset ? t(lang, "title", { a: aName, country: cn, u: uName, cur: country.cur }) : t(lang, "list_title", { country: cn });
+const description = asset ? t(lang, "desc", { a: aName, country: cn, cur: country.cur }) : t(lang, "list_desc", { country: cn, cur: country.cur });
+const primary = isPrimary(lang, country);
+// hreflang: every indexable (language, country) version of this same page
+const alternates = COUNTRIES.flatMap((cc) => langsFor(cc).map((l) => ({ hreflang: `${l}-${cc.code}`, href: url(l, cc.code, slug) })));
+alternates.push({ hreflang: "x-default", href: url("en", "US", slug) });
+
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const faq = asset ? [
+  [t(lang, "q1", { a: aName, country: cn }), t(lang, "a1", { a: aName, country: cn, p: priceNow, cur: country.cur, u: uName })],
+  [t(lang, "q2"), t(lang, "a2", { country: cn })],
+  [t(lang, "q3"), t(lang, "a3")],
+] : [];
+const jsonld: unknown[] = [
+  { "@context": "https://schema.org", "@type": "WebPage", name: title, description, inLanguage: lang, url: site + url(lang, country.code, slug) },
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
+    { "@type": "ListItem", position: 1, name: cn, item: site + url(lang, country.code) },
+    ...(slug ? [{ "@type": "ListItem", position: 2, name: asset ? aName : t(lang, "nav_all"), item: site + url(lang, country.code, slug) }] : []),
+  ] },
+];
+if (faq.length) jsonld.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, ans]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: ans } })) });
+
+const boot = JSON.stringify({ lang, cc: country.code, cur: country.cur, slug: a.slug, sym: a.sym, unit, markets: !asset, tola: !!country.tola, api: import.meta.env.PUBLIC_API_URL || "https://goldenprice-backend.onrender.com",
+  ui: { geo_ask: t(lang, "geo_ask", { country: "{country}", cur: "{cur}" }), geo_yes: t(lang, "geo_yes"), geo_no: t(lang, "geo_no"), updated: t(lang, "updated", { t: "{t}" }), delayed: t(lang, "delayed") },
+  assets: ASSETS.map((x, i) => ({ slug: x.slug, name: assetName(lang, x), en: assetName("en", x) })),
+  countries: COUNTRIES.map((x) => ({ code: x.code, name: countryName(lang, x.code), cur: x.cur, href: url(langsFor(x).includes(lang) ? lang : langsFor(x)[0], x.code, slug) })),
+  searchHref: LANG_CODES.length ? url(lang, country.code) : "" });
+---
+<Base lang={lang} country={country} slug={slug} title={title} description={description} alternates={primary ? alternates : []} noindex={!primary} jsonld={jsonld}>
+  <main class="m" id="page" data-boot={boot}>
+    <div class="geo" id="geo" role="status"><span id="geo-text"></span><button class="y" id="geo-yes" type="button"></button><button id="geo-no" type="button"></button></div>
+    <div class="tk" id="ticker" set:html={renderTicker(c)} />
+    <form class="sr" id="search" role="search">
+      <span aria-hidden="true">🔍</span>
+      <input id="q" type="search" autocomplete="off" placeholder={t(lang, "search_ph", { country: cn, a: aName })} aria-label={t(lang, "search_btn")} />
+      <button type="submit">{t(lang, "search_btn")}</button>
+    </form>
+    <h1 class="sr-only">{asset ? title : t(lang, "list_title", { country: cn })}</h1>
+
+    {asset ? (
+      <div class="top">
+        <section class="card hero">
+          <div id="hero" set:html={renderHero(c)} />
+          <div class="rg" id="ranges">
+            <button data-days="1" type="button">{t(lang, "r1d")}</button><button data-days="7" type="button">{t(lang, "r1w")}</button><button data-days="30" class="on" type="button">{t(lang, "r1m")}</button><button data-days="365" type="button">{t(lang, "r1y")}</button><button data-days="1825" type="button">{t(lang, "r5y")}</button><button data-days="3650" type="button">{t(lang, "rall")}</button>
+          </div>
+          <div id="chart" aria-label={aName}></div>
+        </section>
+        <aside class="side" id="side" set:html={renderSide(c)} />
+      </div>
+    ) : (
+      <section class="card"><h2>{t(lang, "markets_title")}</h2><div class="k">{t(lang, "markets_sub", { cur: country.cur })}</div><div class="tbl" id="markets" set:html={renderMarkets(c)} /></section>
+    )}
+
+    <div class="tiles">
+      {ASSETS.map((x) => <a class:list={["tile", { on: x.slug === a.slug && !!asset }]} href={url(lang, country.code, x.slug)}><i>{x.code}</i>{assetName(lang, x)}</a>)}
+    </div>
+
+    {ads && <div class="ad">Ad · 970×90</div>}
+
+    {asset && (
+      <div class="two">
+        <section class="card"><h2>{t(lang, "currencies_title", { a: aName })}</h2><div class="tbl" id="currencies" set:html={renderCurrencies(c)} /></section>
+        <section class="card"><h2>{t(lang, "markets_title")}</h2><div class="k">{t(lang, "markets_sub", { cur: country.cur })}</div><div class="tbl" id="markets" set:html={renderMarkets(c)} /></section>
+      </div>
+    )}
+
+    {faq.length > 0 && (
+      <section class="card faq"><h2>{t(lang, "faq_title")}</h2>
+        {faq.map(([q, ans]) => <details><summary>{q}</summary><p>{ans}</p></details>)}
+      </section>
+    )}
+    {ads && <div class="ad">Ad · 728×90</div>}
+  </main>
+  <script>
+    import "../scripts/live.ts";
+  </script>
+</Base>
