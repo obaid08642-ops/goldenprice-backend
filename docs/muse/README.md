@@ -3,8 +3,19 @@
 Repository: obaid08642-ops/goldenprice-backend (website in `web/`, backend in the root).
 You work only through pull requests. A reviewer (Claude) checks every PR, merges it or asks for changes in the PR comments. Check your open PRs for comments every time you start a pass.
 
+## Branches (strict)
+- `main` is production source. **You must never push, merge or open a PR into `main`.** Do not change branch protection or settings.
+- `muse/staging` is your integration branch (created from `main`). Branch each piece of work from `muse/staging` as `muse/<task>-<topic>` and open the PR **with base `muse/staging`**.
+- **Do not merge your own PRs.** Leave them open; the reviewer merges them into `muse/staging` and later promotes `muse/staging` to `main` after validation. If the code or data in a branch is incomplete or failing, it simply stays open: nothing breaks.
+- Do not rebase or force-push after review has started; add new commits instead.
+
+## Messages and loop
+- The channel for messages is the GitHub issue titled "Muse and Claude work channel". The reviewer posts instructions and feedback there and as PR comments.
+- Check that issue and the comments on all your open PRs at the start of every pass and again every 20-30 minutes while work remains. Reply in the issue with a short status after each PR (PR link, countries done, what you could not find).
+- Keep going through the task lists without waiting for permission. Stop only when a list is finished or the issue says STOP.
+
 ## Rules (all tasks)
-1. Branch name `muse/<task>-<topic>`, branched from `main`. One PR = one task and at most 10 countries. Never push to `main`.
+1. One PR = one task and at most 10 countries (or one language).
 2. Change only the files named in the task. Do not touch application code, workflows, or any secret/config file. Never write keys or tokens anywhere.
 3. Every number must come from a page you actually opened. No estimates, no memory, no search snippets. Put the exact URL and the date you read it next to the number (the data files have fields for it). If you cannot find a number, leave the field out or `null`.
 4. Primary sources only: ministries, regulators, utilities, state oil companies, central banks, tax authorities, official dealer or bank price lists. Never use aggregators: globalpetrolprices.com, numbeo, statista, tradingeconomics, goodreturns, zahabprice, wikipedia, forums. (Their licences forbid reuse.)
@@ -35,4 +46,4 @@ File: `web/scripts/dealers.json` (array of `{cc, cur, mode, perGram, name, url}`
 Files: `web/src/i18n/lang/<code>.json`. Fix wrong, stiff or machine-sounding strings, one language per PR. Keep keys and placeholders (`{t}`, `{u}`, `{country}`, ...). Check: `cd web && node scripts/check-i18n.mjs <code>`.
 
 ## Start prompt to paste into the Muse session
-> Clone obaid08642-ops/goldenprice-backend, read docs/muse/README.md completely and follow it. Start with task T1 for BD, LK, NP, ID, TH (one PR), then T2 for the first 10 countries (second PR). Open PRs against main, describe sources in the PR body, then check the PR comments for review feedback and fix what is asked. Repeat until the lists are done.
+> Clone obaid08642-ops/goldenprice-backend, check out `muse/staging`, read docs/muse/README.md completely and follow it. Never push or merge to main; never merge your own PRs; open PRs with base muse/staging only. Start with task T1 for BD, LK, NP, ID, TH (one PR), then T2 for the first 10 countries (second PR). Open PRs against muse/staging, describe sources in the PR body, then check the PR comments for review feedback and fix what is asked. Repeat until the lists are done.
