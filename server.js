@@ -24,6 +24,7 @@ import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
 import WebSocket from "ws";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -33,7 +34,8 @@ const SITES_FILE = path.join(__dirname, "sites.json");
 
 // ---------- env ----------
 const PORT = Number(process.env.PORT || 10000);
-const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "ADMIN_12345";
+// No default token: admin endpoints are disabled until ADMIN_TOKEN is set.
+const ADMIN_TOKEN = process.env.ADMIN_TOKEN || "";
 const TWELVEDATA_KEY = process.env.TWELVEDATA_KEY || "";
 const ALPHAVANTAGE_KEY = process.env.ALPHAVANTAGE_KEY || "";
 const EXR_HOST = process.env.EXR_HOST || "https://api.exchangerate.host";
@@ -112,20 +114,20 @@ let SITES = {
   ],
   fx: ["exchangeratehost:USD,EGP", "frankfurter:USD,EGP", "alphavantage:USD,EGP"],
   metals: {
-    // default list - can be replaced by sites.json uploaded by user
-    zinc: ["metalsdev:zinc", "yahoo:MZN=F"],
+    // Only real futures symbols are used as fallback. Other metals rely on metals.dev + manual admin entry.
+    zinc: ["metalsdev:zinc"],
     aluminum: ["metalsdev:aluminum", "yahoo:ALI=F"],
     copper: ["metalsdev:copper", "yahoo:HG=F"],
-    lead: ["metalsdev:lead", "yahoo:LD=F"],
-    nickel: ["metalsdev:nickel", "yahoo:NID=F"],
-    platinum: ["metalsdev:platinum", "yahoo:XPTUSD=X"],
-    palladium: ["metalsdev:palladium", "yahoo:XPDUSD=X"],
-    cobalt: ["yahoo:CO=F"],
-    lithium: ["yahoo:LIT=F"],
-    uranium: ["yahoo:UX=F"],
-    tin: ["yahoo:TIN=F"],
-    iron: ["yahoo:TIO=F"],
-    steel: ["yahoo:STL=F"],
+    lead: ["metalsdev:lead"],
+    nickel: ["metalsdev:nickel"],
+    platinum: ["metalsdev:platinum", "yahoo:PL=F"],
+    palladium: ["metalsdev:palladium", "yahoo:PA=F"],
+    cobalt: ["metalsdev:cobalt"],
+    lithium: ["metalsdev:lithium"],
+    uranium: ["metalsdev:uranium"],
+    tin: ["metalsdev:tin"],
+    iron: ["metalsdev:iron"],
+    steel: ["metalsdev:steel"],
   },
   energy: {
     wti: ["alphavantage:WTI", "yahoo:CL=F"],
@@ -186,12 +188,42 @@ function put(symbol, price, unit = "usd", src = "unknown") {
       cache.history[symbol] = hist;
     }
     saveCache();
+    recordPrice(symbol, num, src).catch((e) => console.error("db record error", e.message || e));
   } catch (e) {
     console.error("put error", e.message || e);
   }
 }
 function get(symbol) {
   return cache.prices[symbol] || null;
+}
+
+// ---------- metals sanity rules ----------
+// Canonical units: industrial metals USD/metric ton, precious USD/troy oz, uranium USD/lb.
+// Values outside [min,max] or jumping > maxJump vs. the last stored price are rejected,
+// so a broken scraper/API can never publish a wildly wrong number.
+const METAL_RULES = {
+  COPPER: { min: 5000, max: 20000 }, ALUMINUM: { min: 1500, max: 5000 }, ZINC: { min: 1500, max: 6000 },
+  LEAD: { min: 1500, max: 4000 }, NICKEL: { min: 8000, max: 40000 }, TIN: { min: 15000, max: 60000 },
+  COBALT: { min: 15000, max: 80000 }, LITHIUM: { min: 5000, max: 100000 }, URANIUM: { min: 30, max: 250 },
+  IRON: { min: 50, max: 250 }, STEEL: { min: 300, max: 1500 },
+  PLATINUM: { min: 500, max: 3000 }, PALLADIUM: { min: 500, max: 3500 },
+};
+const MAX_JUMP = 0.2; // 20% between consecutive updates
+function putMetal(name, price, src) {
+  const sym = String(name).toUpperCase();
+  const r = METAL_RULES[sym];
+  const v = Number(price);
+  if (r && (v < r.min || v > r.max)) {
+    console.warn(`metal ${sym} rejected (out of range): ${v} from ${src}`);
+    return false;
+  }
+  const prev = cache.prices[sym];
+  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > MAX_JUMP) {
+    console.warn(`metal ${sym} rejected (jump >${MAX_JUMP * 100}%): ${prev.price} -> ${v} from ${src}`);
+    return false;
+  }
+  put(sym, v, "usd", src);
+  return true;
 }
 
 // text/JSON fetch helpers
@@ -619,21 +651,18 @@ async function updateMetals() {
       if (group1.includes(lower) && (METALS_DEV_KEY1 || METALS_DEV_API_KEY)) {
         price = await fromMetalsDevWithKey(lower, 1);
         if (isValidNumber(price)) {
-          put(name.toUpperCase(), price, "usd", "metals.dev:key1");
-          got = true;
+          got = putMetal(name, price, "metals.dev:key1");
         }
       } else if (group2.includes(lower) && (METALS_DEV_KEY2 || METALS_DEV_API_KEY)) {
         price = await fromMetalsDevWithKey(lower, 2);
         if (isValidNumber(price)) {
-          put(name.toUpperCase(), price, "usd", "metals.dev:key2");
-          got = true;
+          got = putMetal(name, price, "metals.dev:key2");
         }
       } else if (METALS_DEV_API_KEY) {
         // fallback single key
         price = await fromMetalsDevWithKey(lower, 0);
         if (isValidNumber(price)) {
-          put(name.toUpperCase(), price, "usd", "metals.dev");
-          got = true;
+          got = putMetal(name, price, "metals.dev");
         }
       }
       // If not gotten yet, try configured sources (yahoo / others) in order
@@ -641,17 +670,17 @@ async function updateMetals() {
         for (const src of sources) {
           try {
             if (typeof src === "string" && src.startsWith("yahoo:")) {
-              const v = await fromYahoo(src.split(":")[1]);
+              const tk = src.split(":")[1];
+              let v = await fromYahoo(tk);
+              if (tk === "HG=F") v = v * 2204.62; // USD/lb -> USD/ton
               if (isValidNumber(v)) {
-                put(name.toUpperCase(), v, "usd", src);
-                got = true;
+                got = putMetal(name, v, src);
                 break;
               }
             } else if (typeof src === "string" && src.startsWith("twelvedata:")) {
               const v = await fromTwelveData(src.split(":")[1]);
               if (isValidNumber(v)) {
-                put(name.toUpperCase(), v, "usd", src);
-                got = true;
+                got = putMetal(name, v, src);
                 break;
               }
             } else if (typeof src === "string" && src.startsWith("scrape:")) {
@@ -661,8 +690,7 @@ async function updateMetals() {
               const metal = parts[2] || name.toLowerCase();
               const v = await fromScrapeSite(site, metal);
               if (isValidNumber(v)) {
-                put(name.toUpperCase(), v, "usd", `scrape:${site}`);
-                got = true;
+                got = putMetal(name, v, `scrape:${site}`);
                 break;
               }
             }
@@ -671,16 +699,6 @@ async function updateMetals() {
           }
         }
       }
-      // if still not got, try metalary fallback
-      if (!got) {
-        try {
-          const v2 = await fromMetalFallback(name);
-          if (isValidNumber(v2)) {
-            put(name.toUpperCase(), v2, "usd", "metalary-fallback");
-            got = true;
-          }
-        } catch {}
-      }
     } catch (e) {
       // ignore per-metal failures
     }
@@ -688,6 +706,21 @@ async function updateMetals() {
   }
   cache.lastUpdate.metals = now();
   saveCache();
+}
+
+// near real-time metals from Yahoo futures only (no API quota); other metals wait for metals.dev/manual
+async function updateMetalsLive() {
+  for (const [name, sources] of Object.entries(SITES.metals || {})) {
+    for (const src of sources || []) {
+      if (typeof src !== "string" || !src.startsWith("yahoo:")) continue;
+      try {
+        const tk = src.split(":")[1];
+        let v = await fromYahoo(tk);
+        if (tk === "HG=F") v = v * 2204.62; // USD/lb -> USD/ton
+        if (putMetal(name, v, src)) break;
+      } catch {}
+    }
+  }
 }
 
 // update energy (kept)
@@ -809,7 +842,8 @@ function startMetalsLoops() {
   // updateMetals will use metals.dev keys for the mapped metals every 22 hours
   updateMetals().catch(() => {});
   // schedule 22 hours (22 * 3600 * 1000)
-  setInterval(() => updateMetals().catch(() => {}), 22 * 60 * 60 * 1000);
+  setInterval(() => updateMetals().catch(() => {}), 8 * 60 * 60 * 1000); // metals.dev (quota-limited)
+  setInterval(() => updateMetalsLive().catch(() => {}), 15 * 60 * 1000); // Yahoo futures, near real-time
 }
 
 // ---------- schedules (existing + new loops) ----------
@@ -836,19 +870,38 @@ updateFX("USD", "EGP");
 updateEnergy();
 
 // ---------- history / chart / change endpoints ----------
-app.get("/api/history/:symbol", (req, res) => {
+app.get("/api/history/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
-  const hist = cache.history && cache.history[symbol] ? cache.history[symbol] : [];
-  res.json({ symbol, history: hist });
+  const days = Math.min(36500, Number(req.query.days || 365));
+  try {
+    const rows = await dailyHistory(symbol, days);
+    if (rows && rows.length) return res.json({ symbol, source: "db", history: rows });
+  } catch (e) { console.error("history db error", e.message || e); }
+  res.json({ symbol, source: "cache", history: (cache.history && cache.history[symbol]) || [] });
 });
 
-// chart endpoint: /api/chart/:symbol?days=30  (returns last N daily points)
-app.get("/api/chart/:symbol", (req, res) => {
+// chart endpoint: /api/chart/:symbol?days=30 (daily points; ?days up to 3650 when DB is on)
+app.get("/api/chart/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
-  const days = Math.min(90, Number(req.query.days || 30)); // cap to 90
-  const hist = (cache.history && cache.history[symbol]) || [];
-  const out = hist.slice(-days);
-  res.json({ symbol, data: out });
+  const days = Math.min(dbEnabled ? 3650 : 90, Number(req.query.days || 30));
+  try {
+    const rows = await dailyHistory(symbol, days);
+    if (rows && rows.length) return res.json({ symbol, source: "db", data: rows });
+  } catch (e) { console.error("chart db error", e.message || e); }
+  res.json({ symbol, source: "cache", data: ((cache.history && cache.history[symbol]) || []).slice(-days) });
+});
+
+app.get("/api/ticks/:symbol", async (req, res) => {
+  const symbol = String(req.params.symbol || "").toUpperCase();
+  try {
+    const rows = await recentTicks(symbol, Math.min(720, Number(req.query.hours || 24)));
+    res.json({ symbol, data: rows || [] });
+  } catch (e) { res.status(500).json({ error: "db error" }); }
+});
+
+app.get("/api/symbols", async (req, res) => {
+  try { res.json({ symbols: (await listSymbols()) || Object.keys(cache.prices) }); }
+  catch (e) { res.json({ symbols: Object.keys(cache.prices) }); }
 });
 
 // change percent: /api/change/:symbol?period=24h
@@ -932,7 +985,8 @@ app.get("/api/metals", (req, res) => {
     .map((s) => s.trim().toUpperCase());
   const out = {};
   for (const m of list) {
-    out[m] = get(m) || { error: "Not found" };
+    const v = get(m);
+    out[m] = v ? { ...v, stale: Date.now() - v.t > 3 * 24 * 3600 * 1000 } : { error: "Not found" };
   }
   res.json(out);
 });
@@ -958,7 +1012,7 @@ app.get("/api/oilgas/gas", (req, res) => { const v = get("NATGAS"); if (!v) retu
 // ---------- Admin endpoints ----------
 function okAdmin(req) {
   const t = req.headers["x-admin-token"] || req.query.token || req.body?.token;
-  return String(t) === String(ADMIN_TOKEN);
+  return !!ADMIN_TOKEN && String(t) === String(ADMIN_TOKEN);
 }
 app.get("/api/cache", (req, res) => {
   if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
@@ -991,4 +1045,6 @@ app.post("/api/admin/cache/clear", (req, res) => {
 });
 
 // ---------- start ----------
+initDb().then((on) => console.log(on ? "DB ready" : "DB disabled (no DATABASE_URL)")).catch((e) => console.error("DB init failed", e.message || e));
+setInterval(() => pruneTicks().catch(() => {}), 6 * 60 * 60 * 1000);
 app.listen(PORT, () => console.log(`Backend running on :${PORT}`));

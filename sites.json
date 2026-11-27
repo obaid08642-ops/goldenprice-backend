@@ -7,7 +7,7 @@
   ],
   "silver": [
     "scrape:saudigold:silver",
-    "metalsdev"    
+    "metalsdev"
   ],
   "crypto": [
     "binancews:BTCUSDT,ETHUSDT",
@@ -21,23 +21,62 @@
     "alphavantage:USD,EGP"
   ],
   "metals": {
-    "zinc": ["metalsdev"],
-    "aluminum": ["metalsdev"],
-    "copper": ["metalsdev"],
-    "lead": ["metalsdev"],
-    "nickel": ["metalsdev"],
-    "platinum": ["metalsdev"],
-    "palladium": ["metalsdev"],
-    "cobalt": ["metalsdev"],
-    "lithium": ["metalsdev"],
-    "tin": ["metalsdev"],
-    "iron": ["metalsdev"],
-    "steel": ["metalsdev"],
-    "uranium": ["metalsdev"]
+    "zinc": [
+      "metalsdev:zinc"
+    ],
+    "aluminum": [
+      "metalsdev:aluminum",
+      "yahoo:ALI=F"
+    ],
+    "copper": [
+      "metalsdev:copper",
+      "yahoo:HG=F"
+    ],
+    "lead": [
+      "metalsdev:lead"
+    ],
+    "nickel": [
+      "metalsdev:nickel"
+    ],
+    "platinum": [
+      "metalsdev:platinum",
+      "yahoo:PL=F"
+    ],
+    "palladium": [
+      "metalsdev:palladium",
+      "yahoo:PA=F"
+    ],
+    "cobalt": [
+      "metalsdev:cobalt"
+    ],
+    "lithium": [
+      "metalsdev:lithium"
+    ],
+    "tin": [
+      "metalsdev:tin"
+    ],
+    "iron": [
+      "metalsdev:iron"
+    ],
+    "steel": [
+      "metalsdev:steel"
+    ],
+    "uranium": [
+      "metalsdev:uranium"
+    ]
   },
   "energy": {
-    "wti": ["alphavantage:WTI", "yahoo:CL=F"],
-    "brent": ["alphavantage:BRENT", "yahoo:BRN=F"],
-    "natgas": ["alphavantage:NATGAS", "yahoo:NG=F"]
+    "wti": [
+      "alphavantage:WTI",
+      "yahoo:CL=F"
+    ],
+    "brent": [
+      "alphavantage:BRENT",
+      "yahoo:BRN=F"
+    ],
+    "natgas": [
+      "alphavantage:NATGAS",
+      "yahoo:NG=F"
+    ]
   }
 }

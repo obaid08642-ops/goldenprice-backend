@@ -5,6 +5,10 @@ services:
     buildCommand: "npm i"
     startCommand: "npm start"
     envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: ADMIN_TOKEN
+        sync: false
       - key: TWELVEDATA_KEY
         sync: false
       - key: METALPRICE_KEY
