@@ -1,13 +1,13 @@
 {
   "country": "SE",
   "tier": 1,
-  "verifiedAt": "2026-11-27",
+  "verifiedAt": "2026-11-28",
   "confidence": "medium",
   "defaultKarat": 18,
   "gold": {
     "vatJewelryPct": 25,
     "vatBullionPct": 0,
-    "importDutyPct": 0,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {
       "5g": 14.6,
@@ -27,7 +27,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Investment gold exempt (bars over 1g, 995+; 1g or less is 25% VAT). Jewellery and silver take 25% VAT; no silver exemption. Bars duty 0% (jewellery 2.5%). Premiums are Tavex sell vs its buy price 27 Nov 2026 for sizes opened; buyback typical 6.0% is Tavex spread at 100g (12.72% at 5g). Making % and fixed used % not found, null.",
+  "notes": "Investment gold exempt (bars over 1g, 995+; 1g or less is 25% VAT). Jewellery and silver take 25% VAT; no silver exemption (Tavex). Import duty % removed in review round 1 (tariff-database support only). Premiums are Tavex sell vs its buy price 27 Nov 2026 for sizes opened; buyback typical 6.0% is Tavex spread at 100g (12.72% at 5g). Making % and fixed used % not found, null.",
   "sources": [
     {
       "name": "Tavex Sweden - FAQ: investment gold and silver",
@@ -43,11 +43,6 @@
       "name": "Tavex Sweden - 100g Valcambi gold bar",
       "url": "https://tavex.se/en/gold/100g-valcambi-gold-bar/",
       "what": "Read 2026-11-27: sell SEK 128,187.61 / buy SEK 120,458.62, listed spread 6.03%; premium over buy price 6.4% (calculated)"
-    },
-    {
-      "name": "Customs Tariff heading 7108 (celna24)",
-      "url": "https://celna24.pl/en/customs-tariff/7108",
-      "what": "Read 2026-11-27: EU import of gold under HS 7108 duty-free 0%"
     }
   ]
 }

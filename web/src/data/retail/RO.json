@@ -1,13 +1,13 @@
 {
   "country": "RO",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
   "confidence": "medium",
   "defaultKarat": 14,
   "gold": {
     "vatJewelryPct": 21,
     "vatBullionPct": 0,
-    "importDutyPct": 0,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
@@ -22,7 +22,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 21% from Aug 2025 (Law 141/2025) on jewellery; investment gold exempt (Fiscal Code/EU scheme). Bars duty 0% (jewellery about 2.5%). BNR XAU 576.51 RON/g on 27 Nov 2026. No dealer by-size list, making % or buyback % found on an opened page, so null/empty. 14K everyday standard; 18K also common.",
+  "notes": "VAT 21% from Aug 2025 (Law 141/2025) on jewellery; investment gold exempt (Fiscal Code/EU scheme). Import duty % removed in review round 1 (tariff-database support only). BNR XAU 576.51 RON/g on 27 Nov 2026. No dealer by-size list, making % or buyback % found on an opened page, so null/empty. 14K everyday standard; 18K also common.",
   "sources": [
     {
       "name": "KPMG TaxNewsFlash - Romania Law 141/2025",
@@ -30,19 +30,9 @@
       "what": "Read 2026-11-27: standard VAT rate 21% from 1 Aug 2025"
     },
     {
-      "name": "BaniNostri - Cat costa gramul de aur",
-      "url": "https://www.baniinostri.ro/cat-costa-gramul-de-aur/",
-      "what": "Read 2026-11-27: jewellery VAT at standard 21%; investment gold VAT-exempt; price = metal + manopera + margin + VAT; resale below metal value"
-    },
-    {
       "name": "BCR - Buy Gold",
       "url": "https://www.bcr.ro/en/gold",
       "what": "Read 2026-11-27: major bank sells bars/coins and buys back only gold it sold that stayed in its custody; no prices on the page"
-    },
-    {
-      "name": "Customs Tariff heading 7108 (celna24)",
-      "url": "https://celna24.pl/en/customs-tariff/7108",
-      "what": "Read 2026-11-27: EU import of gold under HS 7108 duty-free 0%"
     }
   ]
 }

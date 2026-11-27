@@ -1,13 +1,13 @@
 {
   "country": "GR",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
-  "confidence": "medium",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
   "defaultKarat": 18,
   "gold": {
-    "vatJewelryPct": 24,
-    "vatBullionPct": 0,
-    "importDutyPct": 0,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": {
@@ -16,35 +16,20 @@
     "usedGoldDiscountPct": null
   },
   "silver": {
-    "vatJewelryPct": 24,
-    "vatBullionPct": 24,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Jewellery VAT 24% standard; investment gold exempt (EU scheme). Bars duty 0% (jewellery about 2.5%). Buyback 11.4% is the Bank of Greece dealing spread on fine gold in Bulletin 236a, 12 Nov 2026 (110.35/124.55 EUR/g) - official spread, not retail. No dealer bar ladder, making % or used % found, so null/empty. 18K dominant.",
+  "notes": "Buyback 11.4% is the Bank of Greece dealing spread on fine gold in Bulletin 236a, 12 Nov 2026 (110.35/124.55 EUR/g) - official spread, not retail. VAT and duty % removed in review round 1 (guide-site support only). No dealer bar ladder, making % or used % found, so null/empty. 18K dominant.",
   "sources": [
     {
       "name": "Bank of Greece - Bulletin of Prices of Gold Bars and Coins No. 236a, 12 Nov 2026",
       "url": "https://www.bankofgreece.gr/en/main-tasks/markets/gold/gold-price-bulletin/bulletin-of-prices-of-gold-bars-and-gold-coins?bulletin=98857226-7899-45e6-b016-d3f1f426f685",
       "what": "Read 2026-11-27: fine gold per gram quoted 110.35/124.55 EUR and sovereign 814.79/954.65 EUR; spread 11.4% on fine gold (calculated)"
-    },
-    {
-      "name": "Vatcalc - Greece VAT guide 2026",
-      "url": "https://www.vatcalc.com/greece/greece-vat-guide/",
-      "what": "Read 2026-11-27: standard VAT (FPA) rate 24%"
-    },
-    {
-      "name": "EU VAT guide - gold in Europe",
-      "url": "https://buygoldbarskenya.com/is-gold-vat-free-in-europe/",
-      "what": "Read 2026-11-27: investment-gold VAT exemption EU-wide; jewellery and silver take the standard rate"
-    },
-    {
-      "name": "Customs Tariff heading 7108 (celna24)",
-      "url": "https://celna24.pl/en/customs-tariff/7108",
-      "what": "Read 2026-11-27: EU import of gold under HS 7108 duty-free 0%"
     }
   ]
 }
