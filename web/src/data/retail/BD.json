@@ -1,23 +1,33 @@
 {
-  "country": "BD", "tier": 1, "verifiedAt": "2026-11-27", "confidence": "medium",
+  "country": "BD",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
   "defaultKarat": 22,
   "gold": {
-    "vatJewelryPct": null, "vatBullionPct": null, "importDutyPct": null,
-    "makingPct": { "typical": 6, "min": 6 },
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
-    "usedGoldDiscountPct": { "typical": 15, "min": 9, "max": 15 }
+    "usedGoldDiscountPct": null
   },
   "silver": {
-    "vatJewelryPct": 5, "vatBullionPct": null, "importDutyPct": null,
-    "makingPct": null, "barPremiumPct": {}, "barBuybackDiscountPct": null, "usedGoldDiscountPct": null
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "notes": "Gold jewellery VAT is no longer a %: from FY2026-27 BAJUS prices are VAT-inclusive with a fixed Tk 2,500 per bhori, so vatJewelryPct is null. Commercial gold duty is also specific (BDT 2,000 per 11.664g, NBR Ch.71), not a %. Making min 6% (BAJUS). Used gold: 9% exchange deduction, 15% outright purchase. No dealer bar-by-size list found, so bar premium/buyback are null.",
+  "notes": "Commercial gold import duty is specific, not a %: BDT 2,000 per 11.664g in the NBR Customs Tariff Ch.71, so importDutyPct is null. Jewellery VAT moved to VAT-inclusive BAJUS pricing in FY2026-27; no % could be read on an NBR page, so it is null. Making/used-gold figures removed in review round 1 (news-only support). No dealer bar list found.",
   "sources": [
-    { "name": "National Board of Revenue - Customs Tariff Chapter 71", "url": "https://nbr.gov.bd/uploads/tariff_schedule/Chapter-719.pdf", "what": "Read 2026-11-27: HS 7108.12.90/7108.13 gold BDT 2,000 per 11.664g specific duty, HS 7113 jewellery 25%, silver HS 7106 rates" },
-    { "name": "The Business Standard (UNB) - BAJUS VAT-inclusive pricing, 18 June 2026", "url": "https://www.tbsnews.net/economy/gold-ornament-prices-fall-bajus-adopts-new-vat-inclusive-pricing-system-1466196", "what": "Read 2026-11-27: 5% VAT replaced by fixed Tk 2,500 per bhori VAT-inclusive pricing for gold ornaments; silver kept 5% VAT" },
-    { "name": "The Business Standard (UNB) - Gold prices, 27 Nov 2026", "url": "https://www.tbsnews.net/economy/gold-prices-2nd-straight-day-22-carat-hits-tk-198930-bhori-1615926", "what": "Read 2026-11-27: BAJUS 22K Tk 198,930/bhori headline rate, 21K/18K rates, 22K silver Tk 3,033/bhori incl. VAT" },
-    { "name": "The Business Standard (UNB) - Gold price, 17 Feb 2026", "url": "https://www.tbsnews.net/economy/gold-price-drops-tk2216-bhori-bangladesh-1363986", "what": "Read 2026-11-27: pre-change regime wording: mandatory VAT plus minimum 6% making charge set by BAJUS, varies by design" },
-    { "name": "BangladeshFX reporting BAJUS, 27 Nov 2026", "url": "https://bangladeshfx.com/news/bangladesh-gold-prices-rise", "what": "Read 2026-11-27: BAJUS exchange deduction 9% and old-jewellery purchase deduction 15%, excl. making charges and stones" }
+    {
+      "name": "National Board of Revenue - Customs Tariff Chapter 71",
+      "url": "https://nbr.gov.bd/uploads/tariff_schedule/Chapter-719.pdf",
+      "what": "Read 2026-11-27: HS 7108.12.90/7108.13 gold BDT 2,000 per 11.664g specific duty, HS 7113 jewellery 25%, silver HS 7106 rates"
+    }
   ]
 }
