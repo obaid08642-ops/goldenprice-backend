@@ -130,9 +130,9 @@ let SITES = {
     steel: ["metalsdev:steel"],
   },
   energy: {
-    wti: ["alphavantage:WTI", "yahoo:CL=F"],
-    brent: ["alphavantage:BRENT", "yahoo:BRN=F"],
-    natgas: ["alphavantage:NATGAS", "yahoo:NG=F"],
+    wti: ["yahoo:CL=F"],
+    brent: ["yahoo:BZ=F"],
+    natgas: ["yahoo:NG=F"],
   },
 };
 
@@ -724,22 +724,21 @@ async function updateMetalsLive() {
 }
 
 // update energy (kept)
+const ENERGY_RULES = { WTI: { min: 20, max: 250 }, BRENT: { min: 20, max: 250 }, NATGAS: { min: 0.5, max: 30 } };
 async function updateEnergy() {
   const e = SITES.energy || {};
   for (const [name, sources] of Object.entries(e)) {
-    let got = false;
+    const sym = name.toUpperCase();
+    const r = ENERGY_RULES[sym];
     for (const src of sources) {
       try {
-        let v = null;
-        if (src === "alphavantage:WTI") v = await fromAlphaEnergy("WTI");
-        else if (src === "alphavantage:BRENT") v = await fromAlphaEnergy("BRENT");
-        else if (src === "alphavantage:NATGAS") v = await fromAlphaEnergy("NATGAS");
-        else if (src.startsWith("yahoo:")) v = await fromYahoo(src.split(":")[1]);
-        if (v && isValidNumber(v)) {
-          put(name.toUpperCase(), v, "usd", src);
-          got = true;
-          break;
-        }
+        // Alpha Vantage parsing is unreliable (it returned junk like 1); only trust Yahoo futures.
+        if (!src.startsWith("yahoo:")) continue;
+        const v = await fromYahoo(src.split(":")[1]);
+        if (!isValidNumber(v)) continue;
+        if (r && (v < r.min || v > r.max)) { console.warn(`energy ${sym} rejected: ${v} from ${src}`); continue; }
+        put(sym, v, "usd", src);
+        break;
       } catch {}
     }
   }
@@ -855,7 +854,7 @@ setInterval(() => {
 
 setInterval(() => updateFX("USD", "EGP"), 2 * 60 * 60 * 1000); // 2 hours
 // don't schedule updateMetals here - startMetalsLoops manages its own schedule
-setInterval(() => updateEnergy(), 5 * 60 * 60 * 1000); // 5 hours
+setInterval(() => updateEnergy(), 15 * 60 * 1000); // 15 min (Yahoo futures)
 
 // start new loops
 startSLXLoop(); // every 5 minutes
