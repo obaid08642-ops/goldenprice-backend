@@ -1,0 +1,4 @@
+[
+  { "cc": "UA", "cur": "UAH", "mode": "text", "perGram": true, "name": "PrivatBank bank gold bars", "url": "https://privatbank.ua/banking-metals" },
+  { "cc": "AT", "cur": "EUR", "mode": "table", "perGram": false, "name": "philoro price list (Goldbarren)", "url": "https://philoro.at/preisliste/goldbarren" }
+]
