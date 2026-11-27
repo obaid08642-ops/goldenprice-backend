@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content="noindex,nofollow"/>
+<title>Admin • GoldenPrice</title>
+<style>
+  :root{--bg:#fff;--fg:#111;--mut:#666;--line:#e4e4e4;--card:#fafafa;--ok:#0a7;--warn:#b60;--bad:#c00}
+  @media (prefers-color-scheme:dark){:root{--bg:#15171c;--fg:#eee;--mut:#9aa;--line:#2b2f38;--card:#1d2027}}
+  body{font-family:system-ui,Arial,sans-serif;margin:16px;background:var(--bg);color:var(--fg);max-width:1100px}
+  h1{margin:0 0 12px} h3{margin:20px 0 8px}
+  .bar,.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:6px 0}
+  input,button{padding:8px;border:1px solid var(--line);border-radius:6px;background:var(--bg);color:var(--fg)}
+  button{cursor:pointer}
+  .grid{display:grid;gap:8px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
+  .card{border:1px solid var(--line);border-radius:10px;padding:10px;background:var(--card)}
+  .card.stale{border-color:var(--warn)} .card.missing{border-color:var(--bad)}
+  .badge{font-size:11px;padding:2px 6px;border-radius:10px;border:1px solid currentColor}
+  .ok{color:var(--ok)} .stale{color:var(--warn)} .missing{color:var(--bad)}
+  .muted{color:var(--mut);font-size:12px} .mono{font-family:ui-monospace,Consolas,monospace}
+  .edit input{width:110px}
+  .log{white-space:pre-wrap;background:var(--card);border-radius:6px;padding:8px;border:1px dashed var(--line);height:140px;overflow:auto}
+  .attn{border:1px solid var(--warn);border-radius:8px;padding:8px 12px;margin:10px 0}
+</style>
+</head>
+<body>
+<h1>Admin • GoldenPrice</h1>
+
+<div class="bar">
+  <label for="tok">Admin token</label>
+  <input id="tok" type="password" autocomplete="off" placeholder="paste ADMIN_TOKEN">
+  <button onclick="loadAll()">Load</button>
+  <button onclick="refreshAll()">Update all now</button>
+  <span id="info" class="muted"></span>
+</div>
+
+<div id="attn"></div>
+<div class="grid" id="cards"></div>
+
+<h3>Danger zone</h3>
+<button onclick="clearCache()">Clear live price cache</button>
+<span class="muted">History in the database is not affected.</span>
+
+<h3>Log</h3>
+<div id="log" class="log"></div>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const log = (m) => { const el = $("#log"); el.textContent += m + "\n"; el.scrollTop = el.scrollHeight; };
+try { $("#tok").value = sessionStorage.getItem("adm") || ""; } catch {}
+
+async function api(path, opts = {}) {
+  const tok = $("#tok").value.trim();
+  try { sessionStorage.setItem("adm", tok); } catch {}
+  const headers = { ...(opts.headers || {}), "X-Admin-Token": tok };
+  const r = await fetch(path, { ...opts, headers });
+  const j = await r.json().catch(() => ({}));
+  if (!r.ok) { const e = new Error(j.error || "HTTP " + r.status); e.status = r.status; e.body = j; throw e; }
+  return j;
+}
+
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+async function loadAll() {
+  let j;
+  try { j = await api("/api/admin/status"); } catch (e) { log("load error: " + e.message); return; }
+  $("#info").textContent = `database: ${j.db ? "on" : "OFF"} · email alerts: ${j.emailAlerts ? "on" : "off"}`;
+  const bad = j.items.filter((i) => i.state !== "ok");
+  $("#attn").innerHTML = bad.length
+    ? `<div class="attn"><b>${bad.length} need attention:</b> ${bad.map((i) => esc(i.symbol) + " (" + i.state + ")").join(", ")}</div>`
+    : `<div class="muted">Everything is fresh.</div>`;
+  const c = $("#cards"); c.innerHTML = "";
+  for (const i of j.items) {
+    const d = document.createElement("div");
+    d.className = "card " + i.state;
+    d.innerHTML = `
+      <div class="row"><b>${esc(i.symbol)}</b><span class="badge ${i.state}">${i.state}</span></div>
+      <div class="row">${i.price != null ? `<span class="mono">${esc(i.price)}</span> <span class="muted">${esc(i.unit)}</span>` : '<span class="muted">no price yet</span>'}</div>
+      <div class="muted">${i.src ? "source: " + esc(i.src) + " · " + esc(i.ageHours) + "h ago" : ""}</div>
+      <div class="row edit"><input placeholder="new price" inputmode="decimal" data-s="${esc(i.symbol)}"><button data-set="${esc(i.symbol)}">Set</button></div>`;
+    c.appendChild(d);
+  }
+  c.querySelectorAll("button[data-set]").forEach((b) => b.onclick = () => setManual(b.dataset.set, b.previousElementSibling.value));
+}
+
+async function setManual(symbol, raw, force = false) {
+  const price = Number(String(raw).trim());
+  if (!price || price <= 0) { alert("Enter a positive number"); return; }
+  try {
+    await api("/api/admin/set", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ symbol, price, force }) });
+    log(`set ${symbol} = ${price}`);
+    await loadAll();
+  } catch (e) {
+    if (e.body && e.body.needsConfirm && !force && confirm(`${symbol}: ${e.message}.\nSave ${price} anyway?`)) return setManual(symbol, raw, true);
+    log("set error: " + e.message);
+  }
+}
+
+async function refreshAll() {
+  try {
+    await api("/api/admin/refresh", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ what: "all" }) });
+    log("refresh done"); await loadAll();
+  } catch (e) { log("refresh error: " + e.message); }
+}
+
+async function clearCache() {
+  if (!confirm("Clear all live prices? They will refill on the next update.")) return;
+  try { await api("/api/admin/cache/clear", { method: "POST" }); log("cache cleared"); await loadAll(); }
+  catch (e) { log("clear error: " + e.message); }
+}
+</script>
+</body>
+</html>

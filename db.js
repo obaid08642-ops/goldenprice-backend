@@ -22,11 +22,11 @@ export async function initDb() {
 }
 
 // Record a price. Daily OHLC is kept forever (tiny); raw ticks are pruned after 30 days.
-export async function recordPrice(symbol, price, src = "") {
+export async function recordPrice(symbol, price, src = "", force = false) {
   if (!sql) return;
   const nowMs = Date.now();
   const gap = nowMs - (lastTick.get(symbol) || 0);
-  if (gap < TICK_MIN_GAP_MS) return;
+  if (!force && gap < TICK_MIN_GAP_MS) return;
   lastTick.set(symbol, nowMs);
   await sql`INSERT INTO price_ticks (symbol, price, src) VALUES (${symbol}, ${price}, ${src})`;
   await sql`INSERT INTO price_daily (symbol, day, open, high, low, close, src)

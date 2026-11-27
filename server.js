@@ -57,7 +57,8 @@ app.use(
   })
 );
 app.options("*", cors());
-app.use(express.static(__dirname));
+// Serve only ./public (admin page). Never expose server.js, cache.json or sites.json.
+app.use(express.static(path.join(__dirname, "public")));
 
 // ---------- persisted cache (prices + history) ----------
 let cache = {
@@ -167,7 +168,7 @@ function todayISO() {
 }
 
 // put: updates cache.prices and appends daily history (max 30 days)
-function put(symbol, price, unit = "usd", src = "unknown") {
+function put(symbol, price, unit = "usd", src = "unknown", force = false) {
   try {
     if (!isValidNumber(price)) return;
     const num = Number(price);
@@ -188,7 +189,7 @@ function put(symbol, price, unit = "usd", src = "unknown") {
       cache.history[symbol] = hist;
     }
     saveCache();
-    recordPrice(symbol, num, src).catch((e) => console.error("db record error", e.message || e));
+    recordPrice(symbol, num, src, force).catch((e) => console.error("db record error", e.message || e));
   } catch (e) {
     console.error("put error", e.message || e);
   }
@@ -1033,11 +1034,59 @@ app.get("/api/cache", (req, res) => {
 });
 app.post("/api/admin/set", (req, res) => {
   if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
-  const { symbol, price, unit = "usd" } = req.body || {};
-  if (!symbol || !price) return res.status(400).json({ error: "symbol and price required" });
-  put(String(symbol).toUpperCase(), Number(price), unit, "manual");
-  res.json({ ok: true, saved: cache.prices[String(symbol).toUpperCase()] });
+  const { symbol, price, unit = "usd", force = false } = req.body || {};
+  const sym = String(symbol || "").toUpperCase();
+  const num = Number(price);
+  if (!sym || !isValidNumber(num)) return res.status(400).json({ error: "symbol and a positive price are required" });
+  // Typo guard: ask for explicit confirmation (force) when the value looks wrong.
+  const rule = METAL_RULES[sym] || ENERGY_RULES[sym];
+  if (!force && rule && (num < rule.min || num > rule.max)) {
+    return res.status(422).json({ error: `outside the expected range ${rule.min}-${rule.max}`, needsConfirm: true });
+  }
+  const prev = cache.prices[sym];
+  if (!force && prev && Math.abs(num - prev.price) / prev.price > 0.3) {
+    return res.status(409).json({ error: `differs from the current ${prev.price} by more than 30%`, needsConfirm: true });
+  }
+  put(sym, num, unit, "manual", true);
+  res.json({ ok: true, saved: cache.prices[sym] });
 });
+// Per-symbol freshness so the admin sees what needs attention (stale, missing, or manual-only).
+const EXPECTED = ["GOLD", "SILVER", "BTC", "ETH", "FX_USD_EGP", ...Object.keys(METAL_RULES), "WTI", "BRENT", "NATGAS"];
+function statusReport() {
+  const t = Date.now();
+  return EXPECTED.map((sym) => {
+    const v = cache.prices[sym];
+    if (!v) return { symbol: sym, state: "missing" };
+    const ageH = (t - v.t) / 3600000;
+    const limit = v.src === "manual" ? 48 : 6; // manual entries should be re-checked every 2 days
+    return { symbol: sym, price: v.price, unit: v.unit, src: v.src, ageHours: Number(ageH.toFixed(1)), state: ageH > limit ? "stale" : "ok" };
+  });
+}
+app.get("/api/admin/status", (req, res) => {
+  if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
+  res.json({ db: dbEnabled, emailAlerts: !!(RESEND_API_KEY && ALERT_EMAIL), items: statusReport() });
+});
+
+// Email alert (optional): set RESEND_API_KEY + ALERT_EMAIL. Sent when something is missing/stale, at most once per day per set.
+const RESEND_API_KEY = process.env.RESEND_API_KEY || "";
+const ALERT_EMAIL = process.env.ALERT_EMAIL || "";
+let lastAlertKey = "", lastAlertAt = 0;
+async function checkAlerts() {
+  const bad = statusReport().filter((x) => x.state !== "ok");
+  if (!bad.length || !RESEND_API_KEY || !ALERT_EMAIL) return;
+  const key = bad.map((x) => x.symbol + ":" + x.state).join(",");
+  if (key === lastAlertKey && Date.now() - lastAlertAt < 24 * 3600 * 1000) return;
+  lastAlertKey = key; lastAlertAt = Date.now();
+  const lines = bad.map((x) => `- ${x.symbol}: ${x.state}${x.ageHours ? ` (${x.ageHours}h old, source ${x.src})` : ""}`).join("\n");
+  try {
+    await fetch("https://api.resend.com/emails", {
+      method: "POST",
+      headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ from: "GoldenPrice <onboarding@resend.dev>", to: [ALERT_EMAIL], subject: `GoldenPrice: ${bad.length} price(s) need attention`, text: `These prices are missing or stale. Open the admin page and update them:\n\n${lines}\n` }),
+    });
+  } catch (e) { console.error("alert email failed", e.message || e); }
+}
+setInterval(() => checkAlerts().catch(() => {}), 60 * 60 * 1000);
 app.post("/api/admin/refresh", (req, res) => {
   if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
   const what = String(req.body?.what || "all").toLowerCase();
