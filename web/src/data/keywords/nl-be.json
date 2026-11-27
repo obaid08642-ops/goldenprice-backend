@@ -1,0 +1,99 @@
+{
+ "gold": [
+  "goud prijs per gram",
+  "goud prijs per kilo",
+  "goud prijs vandaag",
+  "goud prijs grafiek",
+  "goud prijs kg",
+  "goud prijs per gram 18 karaat",
+  "goud prijs 18 karaat",
+  "goud prijs vandaag per gram",
+  "goud prijs koers"
+ ],
+ "silver": [
+  "zilver prijs grafiek",
+  "zilver prijs per gram",
+  "zilver prijs per kilo",
+  "zilver prijs verwachting",
+  "zilver prijs per gram grafiek",
+  "zilver prijs koers",
+  "zilver prijs vandaag",
+  "zilver prijs per ounce",
+  "zilver prijs per gram vandaag"
+ ],
+ "platinum": [
+  "platina prijs per gram",
+  "platina prijs grafiek",
+  "platina prijs per kilo",
+  "platina prijs grafiek 10 jaar",
+  "platina prijs verwachting 2030",
+  "platina prijs verwachting",
+  "platina prijs per ounce",
+  "platina prijs koers",
+  "platinaprijs vandaag"
+ ],
+ "copper": [
+  "koper prijs per kilo",
+  "koper prijs belgië",
+  "koper prijs per kg",
+  "koper prijs per kilo belgie",
+  "koper prijs grafiek",
+  "koper prijs per kilo grafiek",
+  "koper prijs per gram",
+  "koper prijs per kilo vandaag",
+  "koper prijs niet gepeld"
+ ],
+ "brent-oil": [
+  "brent ruwe olie prijs"
+ ],
+ "natural-gas": [
+  "aardgas prijs belgie",
+  "aardgas prijs per kwh",
+  "aardgas prijs grafiek",
+  "aardgas prijs vandaag",
+  "aardgas prijs evolutie",
+  "aardgas prijs per m3",
+  "aardgas prijs evolutie belgie",
+  "aardgas prijs grafiek belgië",
+  "aardgas prijs ttf"
+ ],
+ "bitcoin": [
+  "bitcoin prijs euro",
+  "bitcoin prijs dollar",
+  "bitcoin prijs nu",
+  "bitcoin prijs 2010",
+  "bitcoin prijs vandaag",
+  "bitcoin prijs 2016",
+  "bitcoin prijs 2013",
+  "bitcoin prijsvoorspelling",
+  "bitcoin prijs 2015"
+ ],
+ "ethereum": [
+  "ethereum prijs nieuws",
+  "ethereum prijs verwachting",
+  "ethereum prijs euro",
+  "ethereum prijs dollar",
+  "ethereum prijs nu",
+  "ethereum prijs 1 januari 2025",
+  "ethereum prijs verwachting 2030",
+  "ethereum prijsvoorspelling",
+  "ethereum prijs 2030"
+ ],
+ "wheat": [
+  "tarwe prijs grafiek",
+  "tarwe prijs per ton",
+  "tarwe prijs matif",
+  "tarwe prijs verwachting",
+  "tarwe prijs vandaag",
+  "tarwe prijs parijs",
+  "tarwe prijs groningen",
+  "tarwe prijs 2026",
+  "tarwe prijs nieuwe oogst"
+ ],
+ "sp500": [
+  "s&p 500 prijs per aandeel",
+  "vanguard s&p 500 prijs",
+  "s&p 500 etf prijs",
+  "vanguard s&p 500 etf prijs"
+ ]
+}

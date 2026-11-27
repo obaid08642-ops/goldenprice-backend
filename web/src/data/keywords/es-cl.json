@@ -1,0 +1,104 @@
+{
+ "gold": [
+  "precio oro chile",
+  "precio oro hoy",
+  "precio oro 18k",
+  "precio oro 18k hoy",
+  "precio oro 18k chile",
+  "precio oro chile hoy",
+  "precio oro gramo",
+  "precio oro grafico",
+  "precio oro 24k"
+ ],
+ "silver": [
+  "precio plata 925",
+  "precio plata chile",
+  "precio plata hoy",
+  "precio platano",
+  "precio plata 925 chile",
+  "precio plata italiana 925",
+  "precio plata gramo",
+  "precio plataformas de streaming chile",
+  "precio platano santa isabel"
+ ],
+ "platinum": [
+  "precio platino gramo",
+  "precio platino vs oro",
+  "precio platino chile",
+  "precio platino hoy",
+  "precio platino hoy gramo",
+  "precio platino vs oro blanco",
+  "precio platino hoy colombia",
+  "precio platino colombia",
+  "precio platino y oro"
+ ],
+ "copper": [
+  "precio cobre hoy",
+  "precio cobre chile",
+  "precio cobre por kilo",
+  "precio cobre hoy chile",
+  "precio cobre chatarra",
+  "precio cobre por libra",
+  "precio cobre pelillo",
+  "precio cobre cochilco",
+  "precio cobre londres hoy"
+ ],
+ "brent-oil": [
+  "precio petroleo crudo brent"
+ ],
+ "natural-gas": [
+  "precio gas natural chile",
+  "precio gas natural hoy",
+  "precio gas natural hoy españa",
+  "precio gas natural vehicular",
+  "precio gas natural mercado regulado",
+  "precio gas natural cdmx",
+  "precio gas natural €/kwh",
+  "precio gas natural naturgy",
+  "precio gas natural españa"
+ ],
+ "bitcoin": [
+  "precio bitcoin dolar",
+  "precio bitcoin hoy",
+  "precio bitcoin en dolares",
+  "precio bitcoin usd",
+  "precio bitcoin chile",
+  "precio bitcoin histórico",
+  "precio bitcoin 2010",
+  "precio bitcoin 2009",
+  "precio bitcoin 2016"
+ ],
+ "ethereum": [
+  "precio ethereum hoy",
+  "precio ethereum usd",
+  "precio ethereum dolar",
+  "precio ethereum binance",
+  "precio ethereum en dolares",
+  "precio ethereum chile",
+  "precio ethereum euro",
+  "precio ethereum hoy en dolares",
+  "precio ethereum 2030"
+ ],
+ "wheat": [
+  "precio trigo hoy en chile",
+  "precio trigo hoy",
+  "precio trigo mote",
+  "precio trigo hoy chile 2026",
+  "precio trigo candeal",
+  "precio trigo chile",
+  "precio trigo candeal hoy",
+  "precio trigo cotrisa",
+  "precio trigo sarraceno"
+ ],
+ "sp500": [
+  "precio s&p 500 hoy",
+  "precio s&p 500 usd",
+  "precio s&p 500 en dolares",
+  "precio s&p 500 voo",
+  "precio accion s&p 500",
+  "precio historico s&p 500",
+  "precio objetivo s&p 500",
+  "precio cedear s&p 500",
+  "precio etf s&p 500"
+ ]
+}

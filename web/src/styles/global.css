@@ -86,3 +86,10 @@ h1{font-size:22px;font-weight:700;letter-spacing:-.01em}
 @media(max-width:900px){.top,.two{grid-template-columns:1fr}.hd-in{padding:0 12px;gap:6px;height:auto;min-height:56px;flex-wrap:wrap;padding-block:8px}.nav{display:none}.lg{margin-inline-end:auto}.m{padding:0 14px}.card{padding:18px}.sel{max-width:44vw;padding:6px 10px;font-size:12px}.sp{width:70px}}
 .hd-in>*{min-width:0}.m>*{min-width:0}.tk{max-width:100%}body{overflow-x:hidden}
 @media(prefers-reduced-motion:no-preference){.p{transition:opacity .2s}}
+.stack{display:grid;gap:14px}.stack:empty{display:none}
+.top.solo{grid-template-columns:1fr}
+.conv{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:10px 0}
+.conv label{display:grid;gap:4px;font-size:13px;color:var(--mut)}
+.conv input,.conv select{font:inherit;color:var(--fg);background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:9px 12px;min-width:0;width:100%}
+.conv-out{margin-top:8px}.conv-out .big{font-size:30px;font-weight:700}
+.chipsrow{display:flex;flex-wrap:wrap;gap:8px}.chip2{border:1px solid var(--line);border-radius:99px;padding:5px 13px;font-size:13px;color:var(--mut)}.chip2:hover{color:var(--fg);border-color:var(--acc)}

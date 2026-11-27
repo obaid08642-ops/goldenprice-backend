@@ -1,0 +1,48 @@
+{
+  "country": "TR",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Bullion (kulce) gold/silver delivery is VAT-exempt (KDV 17/4-g). Jewelry uses a special base: the bullion value is deducted and 20% VAT applies only to the remainder (making charge/margin). Quarter/half/Republic coins and 22K bracelets are popular; shops deduct making charges when buying back. No sourced premium, making or buyback percentages.",
+  "sources": [
+    {
+      "name": "Alomaliye - Kuyumculuk sektorunde KDV uygulamasi (2025)",
+      "url": "https://www.alomaliye.com/2025/07/02/kuyumculuk-sektorunde-kdv-uygulamasi/",
+      "what": "20% KDV on jewelry after deducting bullion value (special base); bullion gold/silver exempt under 17/4-g"
+    },
+    {
+      "name": "Alomaliye - Altin ve altina endeksli islemlerin vergisel boyutu (2020)",
+      "url": "https://www.alomaliye.com/2020/09/14/altin-ve-altina-endeksli-islemlerin-vergisel-boyutu/",
+      "what": "Bullion gold and silver KDV exemption, special base for coins and jewelry, workmanship subject to KDV"
+    },
+    {
+      "name": "GZT - Kuyumcuda altin bozdururken zarar etmemenin puf noktalari",
+      "url": "https://www.gzt.com/ekonomi/kuyumcuda-altin-bozdururken-zarar-etmemenin-puf-noktalari-4004439",
+      "what": "Qualitative: jewelers pay below screen price, deduct making charge and wider spread on coins; no percentages given"
+    },
+    {
+      "name": "GZT - Altin fiyatlari 15 Agustos 2026",
+      "url": "https://www.gzt.com/ekonomi/altin-fiyatlari-bugun-ne-kadar-15-agustos-2026-kuyumcu-altin-fiyatlari-canli-kapali-carsi-gram-ve-ceyrek-altin-fiyati-4251460",
+      "what": "Gram gold about 6,737 TRY and ounce 4,376 USD on 15 Aug 2026; gram quote roughly equals spot-derived value, so no premium taken"
+    }
+  ]
+}

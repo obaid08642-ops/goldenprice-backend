@@ -1,0 +1,43 @@
+{
+ "country": "GB",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 9,
+ "gold": {
+  "vatJewelryPct": 20,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": 20,
+  "vatBullionPct": 20,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Investment gold (bars, qualifying coins) is VAT-exempt; jewellery and other gold are 20% standard-rated; silver bullion is standard-rated. Used gold is also VAT-relevant (HMRC special accounting scheme for scrap). Dealer sites (Bullion By Post, gold.co.uk, Royal Mint etc.) could not be opened, so premiums, making charges and buyback are null.",
+ "sources": [
+  {
+   "name": "HMRC VAT Notice 701/21 Gold",
+   "url": "https://www.gov.uk/guidance/gold-acquisitions-imports-investments-and-vat-notice-70121",
+   "what": "Investment gold exempt from VAT; other gold supplies (incl. jewellery/scrap) standard rated; silver treated as taxable"
+  },
+  {
+   "name": "GOV.UK VAT rates",
+   "url": "https://www.gov.uk/vat-rates",
+   "what": "Standard VAT rate 20%"
+  },
+  {
+   "name": "LBMA/HMRC memorandum",
+   "url": "https://www.lbma.org.uk/memorandum-of-understanding-mou-between-hmrc-lbma-and-lppm-2013",
+   "what": "VAT treatment of bullion trades: investment gold exempt, London market zero-rating under Terminal Markets Order"
+  }
+ ]
+}

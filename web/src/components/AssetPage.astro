@@ -1,56 +1,62 @@
 ---
 import Base from "../layouts/Base.astro";
-import { ASSETS, type Asset } from "../data/assets";
-import { COUNTRIES, langsFor, type Country } from "../data/countries";
-import { LANG_CODES, type Lang } from "../data/languages";
+import "../i18n/load";
+import { ASSETS, hasFx, type Asset } from "../data/assets";
+import { COUNTRIES, TOP_CURRENCIES, langsFor, type Country } from "../data/countries";
+import type { Lang } from "../data/languages";
+import { retailFor } from "../data/retail";
+import { keywordsFor } from "../data/keywords";
 import { t } from "../i18n/ui";
-import { countryName } from "../lib/format";
+import { countryName, currencyName, fmt } from "../lib/format";
 import { getData } from "../lib/api";
-import { url, isPrimary } from "../lib/paths";
-import { assetName, defaultUnit, local, renderCurrencies, renderHero, renderMarkets, renderSide, renderTicker, unitLabel, type Ctx } from "../lib/render";
-import { fmt } from "../lib/format";
+import { url, isPrimary, pageExists } from "../lib/paths";
+import { assetName, defaultUnit, hasPrice, local, renderBars, renderCurrencies, renderHero, renderMarkets, renderMarketsAll, renderRates, renderSide, renderTicker, renderUsed, unitLabel, type Ctx } from "../lib/render";
 
-interface Props { lang: Lang; country: Country; asset?: Asset | null } // asset null = markets overview
-const { lang, country, asset = null } = Astro.props;
+interface Props { lang: Lang; country: Country; view: "asset" | "markets" | "rates" | "calc"; asset?: Asset | null }
+const { lang, country, view, asset = null } = Astro.props;
 const data = await getData();
-const slug = asset ? (asset.slug === "gold" ? "" : asset.slug) : "markets";
+const retail = retailFor(country.code);
+const slug = view === "asset" ? (asset!.slug === "gold" ? "" : asset!.slug) : view === "markets" ? "markets" : view === "rates" ? "rates" : "calculators";
 const cn = countryName(lang, country.code);
 const ads = import.meta.env.PUBLIC_ADS === "1";
-const gold = ASSETS[0];
-const a = asset ?? gold;
+const a = asset ?? ASSETS[0];
 const unit = defaultUnit(a);
-const c: Ctx = { lang, country, asset: a, unit, data };
+const c: Ctx = { lang, country, asset: a, unit, data, retail };
 const aName = assetName(lang, a);
-const uName = unitLabel(lang, a, unit);
+const uName = unitLabel(lang, unit);
 const priceNow = fmt(lang, local(c, a, unit));
+const isIdx = a.kind === "index";
 
-const title = asset ? t(lang, "title", { a: aName, country: cn, u: uName, cur: country.cur }) : t(lang, "list_title", { country: cn });
-const description = asset ? t(lang, "desc", { a: aName, country: cn, cur: country.cur }) : t(lang, "list_desc", { country: cn, cur: country.cur });
+const title = view === "asset" ? (isIdx ? t(lang, "title_idx", { a: aName, country: cn }) : t(lang, "title", { a: aName, country: cn, u: uName, cur: country.cur })) : view === "markets" ? t(lang, "list_title", { country: cn }) : view === "rates" ? t(lang, "rates_page_title", { country: cn }) : t(lang, "calc_page_title", { country: cn });
+const description = view === "asset" ? (isIdx ? t(lang, "desc_idx", { a: aName }) : t(lang, "desc", { a: aName, country: cn, cur: country.cur })) : view === "markets" ? t(lang, "list_desc", { country: cn, cur: country.cur }) : view === "rates" ? t(lang, "rates_desc", { cur: country.cur }) : t(lang, "calc_page_desc", { cur: country.cur });
+const allSlugs = ASSETS.filter((x) => hasPrice(data, x)).map((x) => x.slug);
 const primary = isPrimary(lang, country);
-// hreflang: every indexable (language, country) version of this same page
-const alternates = COUNTRIES.flatMap((cc) => langsFor(cc).map((l) => ({ hreflang: `${l}-${cc.code}`, href: url(l, cc.code, slug) })));
-alternates.push({ hreflang: "x-default", href: url("en", "US", slug) });
-
+// hreflang: this page in the other indexable languages of the same country, plus x-default
+const alternates = langsFor(country).map((l) => ({ hreflang: `${l}-${country.code}`, href: url(l, country.code, slug) }));
+alternates.push({ hreflang: "x-default", href: url("en", country.code, slug) });
 const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
-const faq = asset ? [
+const faq = view === "asset" && !isIdx ? [
   [t(lang, "q1", { a: aName, country: cn }), t(lang, "a1", { a: aName, country: cn, p: priceNow, cur: country.cur, u: uName })],
   [t(lang, "q2"), t(lang, "a2", { country: cn })],
   [t(lang, "q3"), t(lang, "a3")],
 ] : [];
 const jsonld: unknown[] = [
   { "@context": "https://schema.org", "@type": "WebPage", name: title, description, inLanguage: lang, url: site + url(lang, country.code, slug) },
-  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [
-    { "@type": "ListItem", position: 1, name: cn, item: site + url(lang, country.code) },
-    ...(slug ? [{ "@type": "ListItem", position: 2, name: asset ? aName : t(lang, "nav_all"), item: site + url(lang, country.code, slug) }] : []),
-  ] },
+  { "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: [{ "@type": "ListItem", position: 1, name: cn, item: site + url(lang, country.code) }, ...(slug ? [{ "@type": "ListItem", position: 2, name: title, item: site + url(lang, country.code, slug) }] : [])] },
 ];
 if (faq.length) jsonld.push({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, ans]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: ans } })) });
 
-const boot = JSON.stringify({ lang, cc: country.code, cur: country.cur, slug: a.slug, sym: a.sym, unit, markets: !asset, tola: !!country.tola, api: import.meta.env.PUBLIC_API_URL || "https://goldenprice-backend.onrender.com",
-  ui: { geo_ask: t(lang, "geo_ask", { country: "{country}", cur: "{cur}" }), geo_yes: t(lang, "geo_yes"), geo_no: t(lang, "geo_no"), updated: t(lang, "updated", { t: "{t}" }), delayed: t(lang, "delayed") },
-  assets: ASSETS.map((x, i) => ({ slug: x.slug, name: assetName(lang, x), en: assetName("en", x) })),
-  countries: COUNTRIES.map((x) => ({ code: x.code, name: countryName(lang, x.code), cur: x.cur, href: url(langsFor(x).includes(lang) ? lang : langsFor(x)[0], x.code, slug) })),
-  searchHref: LANG_CODES.length ? url(lang, country.code) : "" });
+const sameKind = ASSETS.filter((x) => (view !== "asset" || x.kind === a.kind) && hasPrice(data, x)).slice(0, 14);
+const kw = keywordsFor(lang, country.code);
+const related = (view === "asset" ? kw?.[a.slug] : kw?._general)?.slice(0, 10) ?? [];
+const links = (kw ? Object.entries(kw).filter(([k]) => k !== "_general") : []).map(([k]) => k);
+const kwSearch = view === "asset" ? kw?.[a.slug]?.[0] : undefined;
+
+const boot = JSON.stringify({ retail, lang, cc: country.code, cur: country.cur, view, slug: a.slug, sym: a.sym, unit, tola: !!country.tola, api: import.meta.env.PUBLIC_API_URL || "https://goldenprice-backend.onrender.com",
+  ui: { geo_ask: t(lang, "geo_ask", { country: "{country}", cur: "{cur}" }), geo_yes: t(lang, "geo_yes"), geo_no: t(lang, "geo_no"), updated: t(lang, "updated", { t: "{t}" }), conv_result: t(lang, "conv_result", { amount: "{amount}", from: "{from}", value: "{value}", to: "{to}" }), calc_value: t(lang, "calc_value"), zakat_due: t(lang, "zakat_due"), zakat_below: t(lang, "zakat_below") },
+  assets: ASSETS.filter((x) => hasPrice(data, x)).map((x) => ({ slug: x.slug, name: assetName(lang, x), en: assetName("en", x) })),
+  countries: COUNTRIES.map((x) => { const l = langsFor(x).includes(lang) ? lang : langsFor(x)[0]; return { code: x.code, name: countryName(lang, x.code), cur: x.cur, href: url(l, x.code, pageExists(l, x, slug, allSlugs) ? slug : ""), lang: l }; }),
+  currencies: TOP_CURRENCIES.filter((x) => data.rates[x]).map((x) => ({ code: x, name: currencyName(lang, x) })) });
 ---
 <Base lang={lang} country={country} slug={slug} title={title} description={description} alternates={primary ? alternates : []} noindex={!primary} jsonld={jsonld}>
   <main class="m" id="page" data-boot={boot}>
@@ -58,13 +64,13 @@ const boot = JSON.stringify({ lang, cc: country.code, cur: country.cur, slug: a.
     <div class="tk" id="ticker" set:html={renderTicker(c)} />
     <form class="sr" id="search" role="search">
       <span aria-hidden="true">🔍</span>
-      <input id="q" type="search" autocomplete="off" placeholder={t(lang, "search_ph", { country: cn, a: aName })} aria-label={t(lang, "search_btn")} />
+      <input id="q" type="search" autocomplete="off" placeholder={kwSearch ?? t(lang, "search_ph", { country: cn, a: aName })} aria-label={t(lang, "search_btn")} />
       <button type="submit">{t(lang, "search_btn")}</button>
     </form>
-    <h1 class="sr-only">{asset ? title : t(lang, "list_title", { country: cn })}</h1>
+    <h1 class="sr-only">{title}</h1>
 
-    {asset ? (
-      <div class="top">
+    {view === "asset" && (
+      <div class:list={["top", { solo: isIdx }]}>
         <section class="card hero">
           <div id="hero" set:html={renderHero(c)} />
           <div class="rg" id="ranges">
@@ -72,23 +78,63 @@ const boot = JSON.stringify({ lang, cc: country.code, cur: country.cur, slug: a.
           </div>
           <div id="chart" aria-label={aName}></div>
         </section>
-        <aside class="side" id="side" set:html={renderSide(c)} />
+        {!isIdx && <aside class="side" id="side" set:html={renderSide(c)} />}
       </div>
-    ) : (
-      <section class="card"><h2>{t(lang, "markets_title")}</h2><div class="k">{t(lang, "markets_sub", { cur: country.cur })}</div><div class="tbl" id="markets" set:html={renderMarkets(c)} /></section>
     )}
 
-    <div class="tiles">
-      {ASSETS.map((x) => <a class:list={["tile", { on: x.slug === a.slug && !!asset }]} href={url(lang, country.code, x.slug)}><i>{x.code}</i>{assetName(lang, x)}</a>)}
-    </div>
+    {view === "markets" && <div class="stack" id="markets-all" set:html={renderMarketsAll(c)} />}
+
+    {view === "rates" && (
+      <>
+        <section class="card" id="converter"><h2>{t(lang, "conv_title")}</h2>
+          <div class="conv"><label>{t(lang, "conv_amount")}<input id="cv-amount" type="number" inputmode="decimal" value="100" min="0" step="any" /></label>
+            <label>{t(lang, "conv_from")}<select id="cv-from">{TOP_CURRENCIES.filter((x) => data.rates[x]).map((x) => <option value={x} selected={x === country.cur}>{x} · {currencyName(lang, x)}</option>)}</select></label>
+            <label>{t(lang, "conv_to")}<select id="cv-to">{TOP_CURRENCIES.filter((x) => data.rates[x]).map((x) => <option value={x} selected={x === (country.cur === "USD" ? "EUR" : "USD")}>{x} · {currencyName(lang, x)}</option>)}</select></label></div>
+          <div class="conv-out n" id="cv-out"></div></section>
+        <section class="card"><h2>{t(lang, "rates_title", { cur: country.cur })}</h2><div class="k">{t(lang, "rates_sub")}</div><div class="tbl" id="rates-table" set:html={renderRates(c)} /></section>
+      </>
+    )}
+
+    {view === "calc" && (
+      <div class="two" id="calc" data-gold={data.items.GOLD?.price ?? ""} data-silver={data.items.SILVER?.price ?? ""} data-rate={data.rates[country.cur] ?? 1}>
+        <section class="card"><h2>{t(lang, "calc_title")}</h2>
+          <div class="conv"><label>{t(lang, "calc_weight")}<input id="gc-w" type="number" inputmode="decimal" value="10" min="0" step="any" /></label>
+            <label>{t(lang, "calc_unit")}<select id="gc-u"><option value="gram">{t(lang, "u_gram")}</option><option value="ounce">{t(lang, "u_ounce")}</option><option value="kilo">{t(lang, "u_kilo")}</option>{country.tola && <option value="tola">{t(lang, "u_tola")}</option>}</select></label>
+            <label>{t(lang, "calc_karat")}<select id="gc-k">{ASSETS[0].karats!.map((k) => <option value={k} selected={k === 21}>{k}K</option>)}</select></label></div>
+          <div class="conv-out"><span class="k">{t(lang, "calc_value")}</span><div class="big n" id="gc-out"></div></div><div class="k small">{t(lang, "calc_note")}</div></section>
+        <section class="card"><h2>{t(lang, "zakat_title")}</h2>
+          <div class="conv"><label>{t(lang, "zakat_gold_g")}<input id="zk-g" type="number" inputmode="decimal" value="0" min="0" step="any" /></label>
+            <label>{t(lang, "zakat_silver_g")}<input id="zk-s" type="number" inputmode="decimal" value="0" min="0" step="any" /></label></div>
+          <div class="row"><span>{t(lang, "zakat_nisab_gold")}</span><b class="n" id="zk-ng"></b></div><div class="row"><span>{t(lang, "zakat_nisab_silver")}</span><b class="n" id="zk-ns"></b></div>
+          <div class="conv-out"><span class="k">{t(lang, "zakat_due")}</span><div class="big n" id="zk-out"></div></div><div class="k small">{t(lang, "zakat_note")}</div></section>
+      </div>
+    )}
+
+    {view !== "calc" && view !== "rates" && (
+      <div class="tiles">
+        {sameKind.map((x) => <a class:list={["tile", { on: x.slug === a.slug && view === "asset" }]} href={url(lang, country.code, x.slug)}><i>{x.code}</i>{assetName(lang, x)}</a>)}
+      </div>
+    )}
 
     {ads && <div class="ad">Ad · 970×90</div>}
 
-    {asset && (
+    {view === "asset" && (a.sym === "GOLD" || a.sym === "SILVER") && (
+      <>
+        <div class="stack" id="bars" set:html={renderBars(c)} />
+        {a.sym === "GOLD" && <div class="stack" id="used" set:html={renderUsed(c)} />}
+      </>
+    )}
+
+    {view === "asset" && hasFx(a) && (
       <div class="two">
         <section class="card"><h2>{t(lang, "currencies_title", { a: aName })}</h2><div class="tbl" id="currencies" set:html={renderCurrencies(c)} /></section>
-        <section class="card"><h2>{t(lang, "markets_title")}</h2><div class="k">{t(lang, "markets_sub", { cur: country.cur })}</div><div class="tbl" id="markets" set:html={renderMarkets(c)} /></section>
+        <section class="card"><h2>{t(lang, "nav_all")}</h2><div class="k">{t(lang, "markets_sub", { cur: country.cur })}</div><div class="tbl" id="markets" set:html={renderMarkets(c)} /></section>
       </div>
+    )}
+
+    {related.length > 0 && (
+      <section class="card"><h2>{t(lang, "related_title")}</h2>
+        <div class="chipsrow">{related.map((r) => <a class="chip2" href={view === "asset" ? url(lang, country.code, slug) : url(lang, country.code)}>{r}</a>)}</div></section>
     )}
 
     {faq.length > 0 && (

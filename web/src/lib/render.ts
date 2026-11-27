@@ -1,29 +1,29 @@
 // Pure HTML renderers used at build time (first paint for SEO) and again in the browser (live updates).
-import { ASSETS, perUnit, unitsFor, type Asset } from "../data/assets";
+import { ASSETS, KINDS, hasFx, perUnit, unitsFor, type Asset } from "../data/assets";
 import { TOP_CURRENCIES, type Country } from "../data/countries";
 import type { Lang } from "../data/languages";
-import { ASSET_NAMES, t } from "../i18n/ui";
+import type { Retail } from "../data/retail";
+import { assetLabel, t } from "../i18n/ui";
 import { countryName, currencyName, fmt, pct } from "./format";
 import { url } from "./paths";
 import type { Data } from "./api";
 
-export interface Ctx { lang: Lang; country: Country; asset: Asset; unit: string; data: Data }
-const UNIT_KEY: Record<string, string> = { gram: "u_gram", ounce: "u_ounce", kilo: "u_kilo", tola: "u_tola", ton: "u_ton", coin: "u_coin" };
-export const assetName = (lang: Lang, a: Asset) => ASSET_NAMES[lang][ASSETS.indexOf(a)];
-export function unitLabel(lang: Lang, a: Asset, unit: string) {
-  if (unit === "unit") return t(lang, a.sym === "NATGAS" ? "u_mmbtu" : "u_barrel");
-  return t(lang, UNIT_KEY[unit] as any);
-}
-export const defaultUnit = (a: Asset) => unitsFor(a)[0];
+export interface Ctx { lang: Lang; country: Country; asset: Asset; unit: string; data: Data; retail: Retail | null }
+const UNIT_KEY: Record<string, string> = { gram: "u_gram", ounce: "u_ounce", kilo: "u_kilo", tola: "u_tola", ton: "u_ton", lb: "u_lb", barrel: "u_barrel", mmbtu: "u_mmbtu", gallon: "u_gallon", bushel: "u_bushel", cwt: "u_cwt", coin: "u_coin", point: "u_point" };
+export const assetName = (lang: Lang, a: Asset) => assetLabel(lang, a.slug);
+export const unitLabel = (lang: Lang, unit: string) => t(lang, UNIT_KEY[unit] ?? "u_coin");
+export const defaultUnit = (a: Asset) => a.units[0].key;
+export const hasPrice = (data: Data, a: Asset) => data.items[a.sym]?.price != null;
 const rateOf = (c: Ctx) => c.data.rates[c.country.cur] ?? 1;
-const usdOf = (c: Ctx, a = c.asset) => c.data.items[a.sym]?.price ?? null;
-/** price of asset `a` in the page currency per `unit` */
+/** price of asset `a` in the page currency per `unit` (indices stay in points) */
 export function local(c: Ctx, a: Asset, unit: string): number | null {
-  const u = usdOf(c, a);
-  return u == null ? null : perUnit(a, u, unit) * rateOf(c);
+  const u = c.data.items[a.sym]?.price;
+  if (u == null) return null;
+  return hasFx(a) ? perUnit(a, u, unit) * rateOf(c) : u;
 }
-const cls = (v: number | null) => (v == null ? "" : v >= 0 ? "up" : "dn");
-const arrow = (v: number | null) => (v == null ? "" : v >= 0 ? "▲ " : "▼ ");
+const cls = (v: number | null | undefined) => (v == null ? "" : v >= 0 ? "up" : "dn");
+const arrow = (v: number | null | undefined) => (v == null ? "" : v >= 0 ? "▲ " : "▼ ");
+const curLabel = (c: Ctx, a = c.asset) => (hasFx(a) ? c.country.cur : t(c.lang, "u_point"));
 
 export function spark(vals: number[], up: boolean, w = 92, h = 28) {
   if (vals.length < 2) return "";
@@ -38,28 +38,57 @@ export function renderHero(c: Ctx) {
   const price = local(c, asset, unit);
   const units = unitsFor(asset, country.tola);
   const seg = units.length > 1
-    ? `<div class="seg" role="group">${units.map((u) => `<button type="button" data-unit="${u}" class="${u === unit ? "on" : ""}">${unitLabel(lang, asset, u)}</button>`).join("")}</div>` : "";
+    ? `<div class="seg" role="group">${units.map((u) => `<button type="button" data-unit="${u}" class="${u === unit ? "on" : ""}">${unitLabel(lang, u)}</button>`).join("")}</div>` : "";
   const usd = it?.price;
-  const ounce = asset.kind === "precious" && usd ? `<span class="chip n">${t(lang, "u_ounce")} · $${fmt(lang, usd)}</span>` : usd ? `<span class="chip n">USD $${fmt(lang, usd)}</span>` : "";
-  return `<div class="hh"><div class="k">${assetName(lang, asset)} · ${t(lang, "per", { u: unitLabel(lang, asset, unit) })} · ${countryName(lang, country.code)}</div>${seg}</div>
-<div class="p n" data-price>${fmt(lang, price)}<small>${country.cur}</small></div>
-<div class="chips"><span class="chip n ${cls(it?.changePct ?? null)}">${arrow(it?.changePct ?? null)}${pct(lang, it?.changePct)} ${t(lang, "today")}</span>${ounce}<span class="chip k" data-updated></span></div>`;
+  const ref = asset.kind === "precious" && usd ? `<span class="chip n">${t(lang, "u_ounce")} · $${fmt(lang, usd)}</span>` : usd && hasFx(asset) && country.cur !== "USD" ? `<span class="chip n">USD $${fmt(lang, usd)}</span>` : "";
+  const per = hasFx(asset) ? ` · ${t(lang, "per", { u: unitLabel(lang, unit) })}` : "";
+  return `<div class="hh"><div class="k">${assetName(lang, asset)}${per} · ${countryName(lang, country.code)}</div>${seg}</div>
+<div class="p n" data-price>${fmt(lang, price)}<small>${curLabel(c)}</small></div>
+<div class="chips"><span class="chip n ${cls(it?.changePct)}">${arrow(it?.changePct)}${pct(lang, it?.changePct)} ${t(lang, "today")}</span>${ref}<span class="chip k" data-updated></span></div>`;
+}
+
+const gramsOf = (k: string) => parseFloat(k);
+// Local retail data is shown only when it is at least medium confidence (several sources); low-confidence files stay as research notes.
+const usable = (r: Retail | null): r is Retail => !!r && r.confidence !== "low";
+export function renderBars(c: Ctx) {
+  const { lang, country, asset, retail } = c;
+  const rule = usable(retail) && (asset.sym === "GOLD" ? retail.gold : asset.sym === "SILVER" ? retail.silver : null);
+  const g = local(c, asset, "gram");
+  if (!rule || g == null) return "";
+  const sizes = Object.entries(rule.barPremiumPct).sort((a, b) => gramsOf(a[0]) - gramsOf(b[0]));
+  if (sizes.length < 3) return "";
+  const bb = rule.barBuybackDiscountPct?.typical;
+  const rows = sizes.map(([k, prem]) => {
+    const gr = gramsOf(k);
+    return `<tr><td>${gr === 31.1 ? "1 " + t(lang, "u_ounce") : k.replace("g", " " + t(lang, "u_gram"))}</td><td class="n">${fmt(lang, g * gr * (1 + prem / 100))}</td><td class="n">${bb != null ? fmt(lang, g * gr * (1 - bb / 100)) : "—"}</td><td class="n">+${fmt(lang, prem, 1)}%</td></tr>`;
+  }).join("");
+  return `<section class="card"><h2>${t(lang, "bars_title", { a: assetName(lang, asset), cur: country.cur })}</h2><div class="tbl"><table><thead><tr><th>${t(lang, "bar_size")}</th><th>${t(lang, "bar_buy")}</th><th>${t(lang, "bar_sell")}</th><th>${t(lang, "bar_prem")}</th></tr></thead><tbody>${rows}</tbody></table></div><div class="k small">${t(lang, "bars_note")} ${t(lang, "retail_basis", { n: retail!.sources.length, d: retail!.verifiedAt })}</div></section>`;
+}
+
+export function renderUsed(c: Ctx) {
+  const { lang, country, asset, retail } = c;
+  if (asset.sym !== "GOLD" || !usable(retail) || !retail.gold.usedGoldDiscountPct) return "";
+  const g = local(c, asset, "gram");
+  if (g == null) return "";
+  const d = retail.gold.usedGoldDiscountPct.typical;
+  const rows = [24, 22, 21, 18, 14].map((k) => `<tr><td>${k}K</td><td class="n">${fmt(lang, g * (k / 24))}</td><td class="n">${fmt(lang, g * (k / 24) * (1 - d / 100))}</td></tr>`).join("");
+  return `<section class="card"><h2>${t(lang, "used_title", { a: assetName(lang, asset), cur: country.cur })}</h2><div class="tbl"><table><thead><tr><th>${t(lang, "karat")}</th><th>${t(lang, "price")}</th><th>${t(lang, "used_col")}</th></tr></thead><tbody>${rows}</tbody></table></div><div class="k small">${t(lang, "used_note")}</div></section>`;
 }
 
 export function renderSide(c: Ctx) {
-  const { lang, country, asset } = c;
-  const r = country.retail;
+  const { lang, country, asset, retail } = c;
   const name = assetName(lang, asset);
   let out = "";
-  if (r && (asset.sym === "GOLD" || asset.sym === "SILVER")) {
-    const purity = asset.sym === "GOLD" ? r.karat / 24 : 0.925;
+  const rule = usable(retail) && (asset.sym === "GOLD" ? retail.gold : asset.sym === "SILVER" ? retail.silver : null);
+  if (rule && rule.makingPct) {
     const g = local(c, asset, "gram");
     if (g != null) {
-      const glob = g * purity, loc = glob * (1 + r.premium), est = loc * (1 + r.making);
-      const lab = asset.sym === "GOLD" ? `${r.karat}K` : "925";
-      out += `<div class="card"><div class="k">${t(lang, "global_vs_local")} · ${lab}</div>
-<div class="kv"><div><span class="k">${t(lang, "global_price")}</span><b class="n">${fmt(lang, glob)}</b></div><div><span class="k">${t(lang, "local_estimate")}</span><b class="n">${fmt(lang, loc)}</b></div></div>
-<div class="est"><span class="k">${t(lang, "est_retail")}</span><div><b class="n">${fmt(lang, est)} ${country.cur}</b></div></div><div class="k small">${t(lang, "est_note")}</div></div>`;
+      const karat = asset.sym === "GOLD" ? retail!.defaultKarat ?? 21 : 0;
+      const purity = asset.sym === "GOLD" ? karat / 24 : 0.925;
+      const glob = g * purity, making = glob * (1 + rule.makingPct.typical / 100), est = making * (1 + (rule.vatJewelryPct ?? 0) / 100);
+      out += `<div class="card"><div class="k">${t(lang, "global_vs_local")} · ${asset.sym === "GOLD" ? karat + "K" : "925"}</div>
+<div class="kv"><div><span class="k">${t(lang, "global_price")}</span><b class="n">${fmt(lang, glob)}</b></div><div><span class="k">${t(lang, "local_estimate")}</span><b class="n">${fmt(lang, making)}</b></div></div>
+<div class="est"><span class="k">${t(lang, "est_retail")}</span><div><b class="n">${fmt(lang, est)} ${country.cur}</b></div></div><div class="k small">${t(lang, "est_note")} ${t(lang, "retail_basis", { n: retail!.sources.length, d: retail!.verifiedAt })}</div></div>`;
     }
   }
   if (asset.karats || asset.purities) {
@@ -67,44 +96,68 @@ export function renderSide(c: Ctx) {
       const f = asset.karats ? k / 24 : k / 1000;
       return `<div class="row"><span>${asset.karats ? k + "K" : k}</span><span class="k n">${asset.karats ? ((k / 24) * 100).toFixed(1) + "%" : ""}</span><b class="n">${fmt(lang, (local(c, asset, "gram") ?? 0) * f)}</b></div>`;
     }).join("");
-    out += `<div class="card"><div class="k">${t(lang, "karat_title", { a: name })} · ${country.cur}/${t(lang, "u_gram")}</div>${rows}</div>`;
-  } else {
+    out += `<div class="card"><div class="k">${asset.karats ? t(lang, "karat_title", { a: name }) : `${name} · ${t(lang, "purity")}`} · ${country.cur}/${t(lang, "u_gram")}</div>${rows}</div>`;
+  } else if (hasFx(asset)) {
     const units = unitsFor(asset, country.tola);
-    out += `<div class="card"><div class="k">${name} · ${country.cur}</div>${units.map((u) => `<div class="row"><span>${t(lang, "per", { u: unitLabel(lang, asset, u) })}</span><b class="n">${fmt(lang, local(c, asset, u))}</b></div>`).join("")}</div>`;
+    out += `<div class="card"><div class="k">${name} · ${country.cur}</div>${units.map((u) => `<div class="row"><span>${t(lang, "per", { u: unitLabel(lang, u) })}</span><b class="n">${fmt(lang, local(c, asset, u))}</b></div>`).join("")}</div>`;
   }
   return out;
 }
 
 export function renderCurrencies(c: Ctx) {
   const { lang, asset, data } = c;
+  if (!hasFx(asset)) return "";
   const it = data.items[asset.sym];
   const usd = it?.price;
-  const second = asset.kind === "precious" ? "gram" : asset.kind === "industrial" ? "kilo" : null;
-  const rows = TOP_CURRENCIES.map((cur) => {
+  const second = asset.kind === "precious" ? "gram" : null;
+  const rows = TOP_CURRENCIES.slice(0, 12).map((cur) => {
     const r = data.rates[cur] ?? 1;
     const a = usd != null ? usd * r : null;
     const b = usd != null && second ? perUnit(asset, usd, second) * r : null;
-    return `<tr><td>${currencyName(lang, cur)} <span class="k">${cur}</span></td><td class="n">${fmt(lang, a)}</td>${second ? `<td class="n">${fmt(lang, b)}</td>` : ""}<td class="n ${cls(it?.changePct ?? null)}">${pct(lang, it?.changePct)}</td></tr>`;
+    return `<tr><td>${currencyName(lang, cur)} <span class="k">${cur}</span></td><td class="n">${fmt(lang, a)}</td>${second ? `<td class="n">${fmt(lang, b)}</td>` : ""}<td class="n ${cls(it?.changePct)}">${pct(lang, it?.changePct)}</td></tr>`;
   }).join("");
   const h1 = asset.kind === "precious" ? t(lang, "col_ounce") : t(lang, "price");
-  return `<table><thead><tr><th></th><th>${h1}</th>${second ? `<th>${second === "gram" ? t(lang, "col_gram") : t(lang, "per", { u: t(lang, "u_kilo") })}</th>` : ""}<th>${t(lang, "col_24h")}</th></tr></thead><tbody>${rows}</tbody></table>`;
+  return `<table><thead><tr><th></th><th>${h1}</th>${second ? `<th>${t(lang, "col_gram")}</th>` : ""}<th>${t(lang, "col_24h")}</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
+function marketRows(c: Ctx, list: Asset[]) {
+  const { lang, country, data } = c;
+  return list.map((a) => {
+    const it = data.items[a.sym];
+    const up = (it?.changePct ?? 0) >= 0;
+    return `<tr><td><a class="as" href="${url(lang, country.code, a.slug)}"><i>${a.code}</i>${assetName(lang, a)}</a></td><td class="n">${fmt(lang, local(c, a, defaultUnit(a)))}</td><td class="n ${cls(it?.changePct)}">${pct(lang, it?.changePct)}</td><td>${spark(it?.spark ?? [], up)}</td></tr>`;
+  }).join("");
+}
+/** compact table of the most important assets (sidebar on asset pages) */
 export function renderMarkets(c: Ctx) {
   const { lang, country, data } = c;
-  const rows = ASSETS.map((a) => {
-    const it = data.items[a.sym];
-    const u = defaultUnit(a);
-    const up = (it?.changePct ?? 0) >= 0;
-    return `<tr><td><a class="as" href="${url(lang, country.code, a.slug)}"><i>${a.code}</i>${assetName(lang, a)}</a></td><td class="n">${fmt(lang, local(c, a, u))}</td><td class="n ${cls(it?.changePct ?? null)}">${pct(lang, it?.changePct)}</td><td>${spark(it?.spark ?? [], up)}</td></tr>`;
+  const list = ASSETS.filter((a) => hasPrice(data, a)).slice(0, 12);
+  return `<table class="mk"><thead><tr><th></th><th>${country.cur}</th><th>${t(lang, "col_24h")}</th><th>${t(lang, "col_7d")}</th></tr></thead><tbody>${marketRows(c, list)}</tbody></table>`;
+}
+/** full markets page: one table per category */
+export function renderMarketsAll(c: Ctx) {
+  const { lang, country, data } = c;
+  return KINDS.map((k) => {
+    const list = ASSETS.filter((a) => a.kind === k && hasPrice(data, a));
+    if (!list.length) return "";
+    return `<section class="card"><h2>${t(lang, "cat_" + k)}</h2><div class="tbl"><table class="mk"><thead><tr><th></th><th>${hasFx(list[0]) ? country.cur : t(lang, "u_point")}</th><th>${t(lang, "col_24h")}</th><th>${t(lang, "col_7d")}</th></tr></thead><tbody>${marketRows(c, list)}</tbody></table></div></section>`;
   }).join("");
-  return `<table class="mk"><thead><tr><th></th><th>${country.cur}</th><th>${t(lang, "col_24h")}</th><th>${t(lang, "col_7d")}</th></tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 export function renderTicker(c: Ctx) {
   const { lang, data } = c;
-  return ASSETS.slice(0, 9).map((a) => {
+  const keys = ["GOLD", "SILVER", "PLATINUM", "COPPER", "BRENT", "BTC", "ETH", "SP500"];
+  return ASSETS.filter((a) => keys.includes(a.sym) && hasPrice(data, a)).map((a) => {
     const it = data.items[a.sym];
-    return `<span>${assetName(lang, a)} <b class="n">${fmt(lang, it?.price)}</b> <span class="n ${cls(it?.changePct ?? null)}">${pct(lang, it?.changePct)}</span></span>`;
+    return `<span>${assetName(lang, a)} <b class="n">${fmt(lang, it?.price)}</b> <span class="n ${cls(it?.changePct)}">${pct(lang, it?.changePct)}</span></span>`;
   }).join("");
 }
+
+/** exchange rates against the page currency: "1 X = Y local" */
+export function renderRates(c: Ctx) {
+  const { lang, country, data } = c;
+  const local1 = data.rates[country.cur] ?? 1;
+  const rows = TOP_CURRENCIES.filter((x) => x !== country.cur && data.rates[x]).map((cur) => `<tr><td>${currencyName(lang, cur)} <span class="k">${cur}</span></td><td class="n">1 ${cur} = ${fmt(lang, local1 / data.rates[cur])} ${country.cur}</td><td class="n">1 ${country.cur} = ${fmt(lang, data.rates[cur] / local1)} ${cur}</td></tr>`).join("");
+  return `<table><thead><tr><th></th><th>${cur(country)}</th><th></th></tr></thead><tbody>${rows}</tbody></table>`;
+}
+const cur = (c: Country) => c.cur;

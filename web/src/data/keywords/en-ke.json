@@ -1,0 +1,113 @@
+{
+ "gold": [
+  "gold price in kenya",
+  "gold price today",
+  "gold price in kenya today",
+  "gold price in india",
+  "gold price in india today",
+  "gold price in migori",
+  "gold price in nairobi today",
+  "gold price per gram",
+  "gold price chart"
+ ],
+ "silver": [
+  "silver price today",
+  "silver price in kenya",
+  "silver price per gram in kenya",
+  "silver price in india",
+  "silver price per gram",
+  "silver price in india today",
+  "silver price in kenya today",
+  "silver price today nairobi",
+  "silver price per kg"
+ ],
+ "platinum": [
+  "platinum price in kenya",
+  "platinum price per gram",
+  "platinum price today",
+  "platinum price per kg",
+  "platinum price per gram in kenya",
+  "platinum price in india",
+  "platinum price today india",
+  "platinum price vs gold",
+  "platinum price per ounce"
+ ],
+ "copper": [
+  "copper price per kg in kenya",
+  "copper price per kg",
+  "copper price in kenya",
+  "copper price today",
+  "copper price per ton",
+  "copper price per gram",
+  "copper price chart",
+  "copper price lme",
+  "copper price lme today"
+ ],
+ "brent-oil": [
+  "brent crude oil price live",
+  "brent crude oil price today",
+  "brent crude oil price chart",
+  "brent crude oil price today live",
+  "brent crude oil price in dollar",
+  "brent crude oil price futures",
+  "brent crude oil price india",
+  "brent crude oil price prediction",
+  "brent crude oil price chart live"
+ ],
+ "natural-gas": [
+  "natural gas price chart",
+  "natural gas price live",
+  "natural gas price today",
+  "natural gas price prediction",
+  "natural gas price europe",
+  "natural gas price prediction for tomorrow",
+  "natural gas price news",
+  "natural gas price india",
+  "natural gas price prediction today"
+ ],
+ "bitcoin": [
+  "bitcoin price usd",
+  "bitcoin price today",
+  "bitcoin price in kenya",
+  "bitcoin price in 2010",
+  "bitcoin price today usd",
+  "bitcoin price ksh",
+  "bitcoin price in 2013",
+  "bitcoin price in 2011",
+  "bitcoin price now"
+ ],
+ "ethereum": [
+  "ethereum price usd",
+  "ethereum price in kenya",
+  "ethereum price prediction",
+  "ethereum price today",
+  "ethereum price ksh",
+  "ethereum price in 2015",
+  "ethereum price history data",
+  "ethereum price usd prediction",
+  "ethereum price prediction december 2026"
+ ],
+ "wheat": [
+  "wheat prices in kenya",
+  "wheat prices",
+  "wheat price per kg",
+  "wheat price in kenya today",
+  "wheat price today",
+  "wheat price in punjab 2026",
+  "wheat price in pakistan",
+  "wheat price in punjab",
+  "wheat price in up",
+  "wheat price in bihar"
+ ],
+ "sp500": [
+  "s&p 500 price today",
+  "s&p 500 price chart",
+  "s&p 500 price history",
+  "s&p 500 price to earnings ratio",
+  "s&p 500 price usd",
+  "s&p 500 price now",
+  "s&p 500 price target",
+  "s&p 500 price per share",
+  "s&p 500 price prediction"
+ ]
+}

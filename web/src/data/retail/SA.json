@@ -1,0 +1,43 @@
+{
+ "country": "SA",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": 15,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Investment gold, silver and platinum of at least 99% purity (tradable on international bullion market) is zero-rated; jewelry and lower-purity metal carry 15% VAT. No local dealer ask prices could be opened, so bar premiums, making charges and buyback are null.",
+ "sources": [
+  {
+   "name": "ZATCA investment metals VAT guideline",
+   "url": "https://zatca.gov.sa/en/HelpCenter/guidelines/Documents/Guideline-For-the-Investment-Metals-Sector-under-VAT-Provisions.pdf",
+   "what": "Investment gold/silver/platinum (99%+ purity) zero-rated; jewelry subject to 15% standard VAT"
+  },
+  {
+   "name": "ZATCA news notice",
+   "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/News-099.aspx",
+   "what": "Notice that VAT applies to gold below 99% purity"
+  },
+  {
+   "name": "Saudi Gazette",
+   "url": "https://saudigazette.com.sa/article/623255/SAUDI-ARABIA/ZATCA-VAT-applicable-to-gold-if-its-purity-level-is-below-99",
+   "what": "Report (21 Jul 2025): zero VAT at 99%+ purity, VAT below 99%"
+  }
+ ]
+}

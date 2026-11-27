@@ -1,0 +1,111 @@
+{
+ "gold": [
+  "cena złoto wykres",
+  "cena złoto za gram",
+  "cena złoto uncja",
+  "cena złotówki",
+  "cena złoto kurs",
+  "cena złoto pln",
+  "cena złoto złom",
+  "cena złoto 585 za gram"
+ ],
+ "silver": [
+  "cena srebro za gram",
+  "cena srebro uncja",
+  "cena srebro wykres",
+  "cena srebro 925",
+  "cena srebro gram",
+  "cena srebro 925 za gram",
+  "cena srebro mk",
+  "cena srebro złom",
+  "cena srebro 1kg"
+ ],
+ "platinum": [
+  "cena platyna wykres",
+  "cena platyna wykres 10 lat",
+  "cena platyna vs złoto",
+  "cena platyna uncja",
+  "cena platyna za kg",
+  "cena platyna a zloto",
+  "platyna cena za gram pln",
+  "platyna cena za uncję",
+  "platyna cena pln"
+ ],
+ "copper": [
+  "cena miedź skup",
+  "cena miedź złom",
+  "cena miedź milbera",
+  "cena miedź za kg",
+  "cena miedź wykres",
+  "cena miedź w skupie",
+  "cena miedź giełda",
+  "cena miedź pobiał",
+  "cena miedź na giełdzie"
+ ],
+ "brent-oil": [
+  "cena ropa brent wykres",
+  "cena baryłki ropa brent",
+  "aktualna cena ropa brent",
+  "cena za ropa brent",
+  "ropa brent cena kurs",
+  "ropa brent cena za baryłkę",
+  "ropa brent cena bankier",
+  "ropa brent cena i notowania investing com",
+  "ropa brent cena live"
+ ],
+ "natural-gas": [
+  "cena gaz ziemny m3",
+  "cena za gaz ziemny",
+  "cena za gaz ziemny 2026",
+  "cena za gaz ziemny 2025",
+  "cena kwh gaz ziemny",
+  "cena pieca na gaz ziemny",
+  "cena butli na gaz ziemny",
+  "cena zbiornika na gaz ziemny",
+  "gaz ziemny cena za litr"
+ ],
+ "bitcoin": [
+  "cena bitcoina",
+  "cena bitcoina usd",
+  "cena bitcoina w dolarach",
+  "cena bitcoina pln",
+  "cena bitcoina dzisiaj",
+  "cena bitcoina 2010",
+  "cena bitcoina wykres",
+  "cena bitcoin usd",
+  "cena bitcoina w usd"
+ ],
+ "ethereum": [
+  "cena ethereum usd",
+  "cena ethereum pln",
+  "cena ethereum w 2020 roku",
+  "cena ethereum wykres",
+  "cena ethereum w dolarach",
+  "cena ethereum euro",
+  "cena ethereum zonda",
+  "cena ethereum w 2017 roku",
+  "cena ethereum w dolarze"
+ ],
+ "wheat": [
+  "cena pszenica 2026",
+  "cena pszenica paszowa",
+  "cena pszenica matif",
+  "cena pszenica w skupie",
+  "cena pszenica konsumpcyjna",
+  "cena pszenica 2025",
+  "cena pszenica ozima",
+  "cena pszenica agrolok",
+  "cena pszenica agrofoto"
+ ],
+ "sp500": [
+  "cena s&p 500 etf",
+  "cena akcji s&p 500",
+  "aktualna cena s&p 500",
+  "cena do zysku s&p 500",
+  "s&p 500 cena usd",
+  "s&p 500 cena wykres",
+  "s&p 500 cena pln",
+  "vanguard s&p 500 cena",
+  "core s&p 500 cena"
+ ]
+}

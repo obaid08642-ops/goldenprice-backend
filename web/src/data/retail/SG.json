@@ -1,0 +1,57 @@
+{
+  "country": "SG",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 9,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {
+      "100g": 7.1
+    },
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1000g": 23.4
+    },
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Mustafa 100g bar S$16,202 vs spot S$151.26/g (USD/SGD 1.2888) = +7.1%; 916 jewellery S$147.20/g vs 916 spot-equivalent S$138.56 (+6.2%, includes margin/making); silver 1kg bar S$2,247 = +23.4%. GST 9% on jewellery incl. workmanship; investment-grade gold/silver (99.5%/99.9%) GST-exempt. Making and buyback not sourced.",
+  "sources": [
+    {
+      "name": "Mustafa Singapore via LivePriceofGold",
+      "url": "https://www.livepriceofgold.com/singapore-gold-price.html",
+      "what": "Mustafa 100g 999 bar S$16,202, 916 jewellery S$147.20/g, silver 1kg bar S$2,247; spot S$151.26/g and USD/SGD 1.2888 at 27 Nov 2026 05:29 UTC"
+    },
+    {
+      "name": "IRAS e-Tax Guide: GST for gold jewellery industry",
+      "url": "https://www.iras.gov.sg/media/docs/default-source/e-tax/etaxguides_gst_gold-jewellery-industry.pdf",
+      "what": "GST 9% on jewellery and on workmanship fee; IPM supplies exempt; trade-in concession for old jewellery"
+    },
+    {
+      "name": "Singapore Customs: GST exemption for IPM",
+      "url": "https://www.customs.gov.sg/individuals/GST-exemption-for-investment-precious-metals",
+      "what": "IPM qualifying criteria: gold 99.5%+, silver 99.9%+ bars/coins exempt; jewellery and scrap do not qualify (updated 20 May 2026)"
+    },
+    {
+      "name": "MOF parliamentary reply on gold bar GST",
+      "url": "https://www.mof.gov.sg/news-resources/newsroom/sale-of-gold-bars-exemption-from-gst-and-online-sales-/",
+      "what": "Investment-grade gold GST-exempt, retail jewellery and collector coins are not (9 Apr 2012 reply)"
+    },
+    {
+      "name": "BullionStar: Gold Tax and VAT Across Asia",
+      "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",
+      "what": "Country comparison of VAT/GST and import duty on gold (2026 edition)"
+    }
+  ]
+}

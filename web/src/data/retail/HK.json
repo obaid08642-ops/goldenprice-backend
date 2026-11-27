@@ -1,0 +1,48 @@
+{
+  "country": "HK",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 0,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Free port: no VAT/sales tax, no import duty on gold. Bank bar buy-back (CMB Wing Lung) is set at market buy-back price and may be substantially lower than sell price, no percentage published. Bars/jewellery trade in taels (1 tael = 37.43 g) and 99/9999 kilo bars. No dealer ask prices with same-day spot could be opened, so premiums are null.",
+  "sources": [
+    {
+      "name": "BullionStar: Gold Tax and VAT Across Asia",
+      "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",
+      "what": "Country comparison of VAT/GST and import duty on gold (2026 edition)"
+    },
+    {
+      "name": "CMB Wing Lung Bank gold bar and coin",
+      "url": "https://www.cmbwinglungbank.com/wlb_corporate/en/personal/investments/gold-bar-and-gold-coin.html",
+      "what": "Physical bar sizes (250g/500g, 5 tael, 1 oz, kilo), nil service fee, buy-back at discretionary market price below sell price"
+    },
+    {
+      "name": "LivePriceofGold Hong Kong",
+      "url": "https://www.livepriceofgold.com/hong-kong-gold-price.html",
+      "what": "Spot 24K HKD919.99/g, USD/HKD 7.8308 at 27 Nov 2026 (reference only)"
+    },
+    {
+      "name": "HSBC Hong Kong gold services",
+      "url": "https://www.hsbc.com.hk/investments/market-information/hk/gold-services/",
+      "what": "Confirms bank gold trading services; no prices extracted"
+    }
+  ]
+}

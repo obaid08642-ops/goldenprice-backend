@@ -1,0 +1,67 @@
+{
+  "country": "MY",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "medium",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 0,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {
+      "5g": 7.9,
+      "10g": 7.9,
+      "20g": 7.4,
+      "50g": 6.9,
+      "100g": 6.4,
+      "250g": 6.1,
+      "1000g": 6.1
+    },
+    "barBuybackDiscountPct": {
+      "typical": 1.0
+    },
+    "usedGoldDiscountPct": {
+      "typical": 3,
+      "min": 2.2,
+      "max": 3.1
+    }
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "PublicGold bar premiums over same-time spot (USD/MYR 4.119); PG 916 jewellery buy price is 3.1% under 916 spot-equivalent (999: 2.2%), a single dealer, other shops may deduct more. Kijang Emas 1oz coin ~3.8% over spot (BNM). Making charge not sourced. Duty/tax per SBMA 2023 and BullionStar; a 2026 duty change on bars could not be opened.",
+  "sources": [
+    {
+      "name": "PublicGold Malaysia via LivePriceofGold",
+      "url": "https://www.livepriceofgold.com/public-gold-malaysia-gold-price.html",
+      "what": "PG sell/buy RM per gram bar prices 5g-1kg and 999/916 jewellery buy price, updated 27 Nov 2026 13:15 MYT"
+    },
+    {
+      "name": "LivePriceofGold Malaysia spot",
+      "url": "https://www.livepriceofgold.com/malaysia-gold-price.html",
+      "what": "Spot 24K RM483.43/g and USD/MYR 4.1190 at 27 Nov 2026 05:29 UTC, used as spot baseline for premium maths"
+    },
+    {
+      "name": "SBMA / Metals Focus: Malaysia's Gold Market",
+      "url": "https://sbma.org.sg/news/malaysias-gold-market/",
+      "what": "No import/export duty on gold; IPM and jewellery exempt from SST; ~90% of jewellery is 22K; bars 1-100g sold by jewellers, banks, post offices (article c.2023)"
+    },
+    {
+      "name": "Bank Negara Malaysia Kijang Emas prices",
+      "url": "https://www.bnm.gov.my/en/kijang-emas-prices",
+      "what": "27 Nov 2026 Kijang Emas 1oz sell RM15,605 / buy RM14,983 (about 3.8% over and 0.3% under spot-equivalent); cross-check of dealer bar spreads"
+    },
+    {
+      "name": "BullionStar: Gold Tax and VAT Across Asia",
+      "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",
+      "what": "Country comparison of VAT/GST and import duty on gold (2026 edition)"
+    }
+  ]
+}

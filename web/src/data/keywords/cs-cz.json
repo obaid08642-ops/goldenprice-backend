@@ -1,0 +1,110 @@
+{
+ "gold": [
+  "cena zlato gram",
+  "cena zlato graf",
+  "cena zlato 14k",
+  "cena zlato dnes",
+  "cena zlato mk",
+  "cena zlato makedonija",
+  "cena zlato 1 oz",
+  "cena zlato unce",
+  "cena zlato 1g"
+ ],
+ "silver": [
+  "cena stříbro graf",
+  "cena stříbro za gram",
+  "cena stříbro gram",
+  "cena stříbro 1kg",
+  "cena stříbro dnes",
+  "stříbro cena 1g",
+  "stříbro cena unce",
+  "stříbro cena vývoj",
+  "stříbro cena výkup"
+ ],
+ "platinum": [
+  "cena platina vs zlato",
+  "cena platina za gram",
+  "cena platina graf",
+  "platina cena za unci",
+  "platina cena za kilo",
+  "platina cena unce",
+  "platina cena czk",
+  "výkupní cena platina",
+  "quad platina cena"
+ ],
+ "copper": [
+  "cena měď za kg",
+  "cena měď výkup",
+  "měď cena kg",
+  "měď cena graf",
+  "měď cena za gram",
+  "měď cena burza",
+  "měď cena na burze",
+  "měď cena czk",
+  "měď cena kč"
+ ],
+ "brent-oil": [
+  "cena ropa brent graf",
+  "cena ropa brent wykres",
+  "aktuální cena ropa brent",
+  "cena 1 barel ropa brent v usd",
+  "ropa brent cena live",
+  "ropa brent cena xtb",
+  "ropa brent cena usd",
+  "ropa brent cena za barel",
+  "ropa brent cena dzisiaj"
+ ],
+ "natural-gas": [
+  "cena zemní plyn m3",
+  "zemní plyn cena burza",
+  "zemní plyn cena graf",
+  "zemní plyn cena za kwh",
+  "zemní plyn cena na burze",
+  "zemní plyn cena za mwh",
+  "cena propan butan vs zemní plyn"
+ ],
+ "bitcoin": [
+  "cena bitcoinu",
+  "cena bitcoinu usd",
+  "cena bitcoin usd",
+  "cena bitcoinu graf",
+  "cena bitcoinu dnes",
+  "cena bitcoinu v dolarech",
+  "cena bitcoinu v roce 2010",
+  "cena bitcoinu 2010",
+  "cena bitcoinu v usd"
+ ],
+ "ethereum": [
+  "cena ethereum usd",
+  "cena ethereum prognóza",
+  "cena ethereum eur",
+  "ethereum cena v usd",
+  "cena ethereum classic",
+  "cena ethereum 2026",
+  "cena ethereum 2030",
+  "cena ethereum 2015",
+  "binance ethereum cena"
+ ],
+ "wheat": [
+  "cena pšenice za metrák",
+  "cena pšenice 2026",
+  "cena pšenice za tunu",
+  "cena pšenice burza",
+  "cena pšenice matif",
+  "cena pšenice graf",
+  "cena pšenice za metrák 2025",
+  "cena pšenice bazoš",
+  "cena pšenice krmná"
+ ],
+ "sp500": [
+  "cena s&p 500 etf",
+  "s&p 500 cena do zisku",
+  "s&p 500 cena usd",
+  "vanguard s&p 500 cena",
+  "core s&p 500 cena",
+  "s&p 500 index cena",
+  "ishares s&p 500 cena",
+  "vanguard s&p 500 etf cena",
+  "ishares core s&p 500 cena"
+ ]
+}

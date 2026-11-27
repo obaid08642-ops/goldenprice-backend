@@ -1,0 +1,14 @@
+{
+  "country": "XX", "tier": 1, "verifiedAt": "2026-11-27", "confidence": "medium",
+  "defaultKarat": 21,
+  "gold": {
+    "vatJewelryPct": 14, "vatBullionPct": 0, "importDutyPct": null,
+    "makingPct": { "typical": 5, "min": 2, "max": 12 },
+    "barPremiumPct": { "1g": 12, "5g": 6, "10g": 4.5, "31.1g": 3, "100g": 2, "1000g": 0.8 },
+    "barBuybackDiscountPct": { "typical": 1.5 },
+    "usedGoldDiscountPct": { "typical": 8, "min": 5, "max": 15 }
+  },
+  "silver": { "vatJewelryPct": null, "vatBullionPct": null, "importDutyPct": null, "makingPct": null, "barPremiumPct": {}, "barBuybackDiscountPct": null, "usedGoldDiscountPct": null },
+  "notes": "Illustrative example of the schema; numbers are NOT real.",
+  "sources": [{ "name": "Example dealer", "url": "https://example.com/gold", "what": "1g to 1kg bar prices on 2026-11-27 vs spot" }]
+}

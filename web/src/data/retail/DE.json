@@ -1,0 +1,69 @@
+{
+ "country": "DE",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 14,
+ "gold": {
+  "vatJewelryPct": 19,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 6.5,
+   "5g": 2.5,
+   "10g": 1.3,
+   "31.1g": 1.2,
+   "100g": 0.2,
+   "1000g": 0
+  },
+  "barBuybackDiscountPct": {
+   "typical": 2.5
+  },
+  "usedGoldDiscountPct": {
+   "typical": 5,
+   "min": 1,
+   "max": 15
+  }
+ },
+ "silver": {
+  "vatJewelryPct": 19,
+  "vatBullionPct": 19,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "31.1g": 38.7,
+   "100g": 29.8
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Premiums are the cheapest dealer asks on gold.de vs spot on 2026-11-27 (online best-of-market; single shops and banks charge more, e.g. philoro 1oz about +3%). Silver premiums include 19% MwSt. Used gold: online buyers on gold.de paid about 1-16% below 585 melt value (median about 4-5%); walk-in shops often pay 8-15% less. Holding gold over 1 year makes gains tax-free.",
+ "sources": [
+  {
+   "name": "GOLD.DE bar price comparison",
+   "url": "https://www.gold.de/kaufen/goldbarren/10-gramm/",
+   "what": "Dealer asks per gram vs spot for 1g, 5g, 10g, 1oz, 100g, 1kg bars (pages under /kaufen/goldbarren/), gold spot EUR 106.89/g on 2026-11-27; MwSt 0% on bars"
+  },
+  {
+   "name": "GOLD.DE Ankauf and Altgold 585",
+   "url": "https://www.gold.de/verkaufen/altgold/585/",
+   "what": "Dealer buy prices for 585 scrap vs melt value 62.52 EUR/g (best 62.01, median about 59.8); bar buy-back offers about 1.6% under spot for 1oz and 1kg"
+  },
+  {
+   "name": "GOLD.DE tax guide",
+   "url": "https://www.gold.de/steuern-edelmetalle/",
+   "what": "Investment gold VAT-free; silver bars, silver coins and other metals 19% MwSt (as of 15.04.26)"
+  },
+  {
+   "name": "philoro Deutschland price list",
+   "url": "https://philoro.de/preisliste/goldbarren",
+   "what": "Bar buy/sell price list: 1oz ask about +3.4% and bid about 4% under spot; used as cross-check of dealer spread"
+  },
+  {
+   "name": "GoldSilberShop.de 10g bar buy-back",
+   "url": "https://www.goldsilbershop.de/ankauf/10-g-goldbarren-verkaufen.html",
+   "what": "Confirms bar buy-back priced from the daily gold rate by a large dealer (live prices not rendered, no figures taken)"
+  }
+ ]
+}
