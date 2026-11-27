@@ -387,5 +387,128 @@
       "src": "Taipower residential first tier (first 120 kWh/month, same summer and non-summer), schedules from 1 Oct 2025",
       "url": "https://hc1.taipower.com.tw/media/vqplk13w/20251124_TAIWAN POWER COMPANY RATE SCHEDULES.pdf?mediaDL=true"
     }
+  },
+  "JP": {
+    "fuel": {
+      "cur": "JPY",
+      "date": "2026-11-24",
+      "src": "METI/ANRE Petroleum Products Price Survey 24 Nov 2026 (regular gasoline, main grade; premium 180.8; post-subsidy pump prices)",
+      "url": "https://www.enecho.meti.go.jp/statistics/petroleum_and_lpgas/pl007/results.html",
+      "petrol95": 169.9,
+      "diesel": 159.5,
+      "lpg": null
+    }
+  },
+  "KR": {
+    "fuel": {
+      "cur": "KRW",
+      "date": "2026-11-25",
+      "src": "KNOC Opinet national average station prices (ordinary gasoline RON 92 main grade; premium about 2,348), weekly release 21 Nov 2026 and daily 25 Nov 2026",
+      "url": "https://www.opinet.co.kr",
+      "petrol95": 1854.7,
+      "diesel": 1841.5,
+      "lpg": 1178.1
+    }
+  },
+  "KZ": {
+    "fuel": {
+      "cur": "KZT",
+      "date": "2026-10-01",
+      "src": "Bureau of National Statistics retail price averages, October 2026 (AI-95/96; AI-92 is 251; state price caps no longer in force)",
+      "url": "https://stat.gov.kz",
+      "petrol95": 315,
+      "diesel": 351,
+      "lpg": null
+    }
+  },
+  "GB": {
+    "fuel": {
+      "cur": "GBP",
+      "date": "2026-11-23",
+      "src": "DESNZ Weekly road fuel prices (ULSP unleaded E10; ULSD diesel B7), week of 23 Nov 2026",
+      "url": "https://www.gov.uk/government/statistics/weekly-road-fuel-prices",
+      "petrol95": 1.6196,
+      "diesel": 1.9329,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "GBP",
+      "kwh": 0.2632,
+      "period": "2026-10",
+      "src": "Ofgem price cap, typical domestic Direct Debit unit rate, 1 Oct - 31 Dec 2026 (plus 54.83p/day standing charge)",
+      "url": "https://www.ofgem.gov.uk/your-energy-supply/your-energy-bill/energy-price-cap-unit-rates-and-standing-charges"
+    }
+  },
+  "CH": {
+    "electricity": {
+      "cur": "CHF",
+      "kwh": 0.277,
+      "period": "2026-01",
+      "src": "ElCom median household tariff (profile H4) for 2026, excl. VAT; 2027 median announced at 0.265",
+      "url": "https://www.news.admin.ch/de/newnsb/1miE201yRzoA"
+    }
+  },
+  "UA": {
+    "electricity": {
+      "cur": "UAH",
+      "kwh": 4.32,
+      "period": "2026-10",
+      "src": "Cabinet of Ministers Resolution 483 fixed household price, extended by Resolution 1245 of 7 Oct 2026 to 30 Apr 2027, incl. VAT",
+      "url": "https://www.kmu.gov.ua"
+    }
+  },
+  "RU": {
+    "fuel": {
+      "cur": "RUB",
+      "date": "2026-11-23",
+      "src": "Rosstat weekly consumer price monitoring (AI-95; AI-92 is 70.31), 23 Nov 2026",
+      "url": "https://rosstat.gov.ru",
+      "petrol95": 76.58,
+      "diesel": 87.73,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "RUB",
+      "kwh": 8.9,
+      "period": "2026-10",
+      "src": "Moscow household single-rate tariff from 1 Oct 2026 (tariffs are regional; no national tariff)",
+      "url": "https://files.yk-logistika.ru/407-25-tr.pdf"
+    }
+  },
+  "US": {
+    "fuel": {
+      "cur": "USD",
+      "date": "2026-11-23",
+      "src": "EIA Gasoline and Diesel Fuel Update (regular gasoline 87 AKI $3.642/gal and on-highway diesel $5.695/gal, converted per litre)",
+      "url": "https://www.eia.gov/PETROLEUM/GASDIESEL/",
+      "petrol95": 0.962,
+      "diesel": 1.504,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "USD",
+      "kwh": 0.1817,
+      "period": "2026-09",
+      "src": "EIA Electric Power Monthly Table 5.6.A, US average residential price, September 2026",
+      "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_a"
+    }
+  },
+  "CA": {
+    "fuel": {
+      "cur": "CAD",
+      "date": "2026-11-17",
+      "src": "Natural Resources Canada average retail fuel prices (regular gasoline; diesel; auto propane), 17 Nov 2026",
+      "url": "https://www2.nrcan.gc.ca/eneene/sources/pripri/prices_byfuel_e.cfm?productID=5",
+      "petrol95": 1.571,
+      "diesel": 2.463,
+      "lpg": 1.291
+    },
+    "electricity": {
+      "cur": "CAD",
+      "kwh": 0.07065,
+      "period": "2026-04",
+      "src": "Hydro-Quebec Rate D first tier (no national tariff; largest province), from 1 Apr 2026",
+      "url": "https://www.hydroquebec.com/residential/customer-space/rates/rate-d.html"
+    }
   }
 }
