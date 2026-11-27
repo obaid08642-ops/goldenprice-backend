@@ -82,7 +82,7 @@ td.n,th:not(:first-child){text-align:end}
 .al .go{margin-inline-start:auto;background:var(--ink);color:var(--onink);border-radius:12px;padding:9px 18px;font-weight:600;white-space:nowrap}
 .faq details{border-bottom:1px solid var(--line);padding:12px 0}.faq summary{cursor:pointer;font-weight:600}.faq p{margin-top:8px;color:var(--mut)}
 .ft{max-width:1240px;margin:0 auto;padding:6px 20px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px 20px;color:var(--mut);font-size:12px}
-.ft nav{display:flex;gap:16px}
+.ft nav{display:flex;flex-wrap:wrap;gap:6px 16px;min-width:0}.ft>*{min-width:0}
 h1{font-size:22px;font-weight:700;letter-spacing:-.01em}
 .prose{max-width:70ch}.prose p{margin:10px 0;color:var(--fg)}.prose h1{margin-bottom:10px}
 @media(max-width:900px){.top,.two{grid-template-columns:1fr}.hd-in{padding:0 12px;gap:6px;height:auto;min-height:56px;flex-wrap:wrap;padding-block:8px}.nav{display:none}.lg{margin-inline-end:auto}.m{padding:0 14px}.card{padding:18px}.sel{max-width:44vw;padding:6px 10px;font-size:12px}.sp{width:70px}}
