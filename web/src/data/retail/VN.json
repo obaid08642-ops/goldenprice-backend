@@ -1,0 +1,58 @@
+{
+  "country": "VN",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "medium",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": {
+      "typical": 2,
+      "min": 1,
+      "max": 3
+    },
+    "barPremiumPct": {
+      "37.5g": 20.6
+    },
+    "barBuybackDiscountPct": {
+      "typical": 3.68
+    },
+    "usedGoldDiscountPct": {
+      "typical": 4.2
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 10% only on dealer's value added (direct method), not gold value; imported unworked gold 0%. SJC premium is the single tael (37.5g) price vs world price, PNJ board 27 Nov 2026. Buyback 3.68% and jewellery 4.20% calculated from PNJ buy/sell that day. Bar import duty not found (SBV licence regime), null. New 0.1% PIT on bar transfers is in law from Jul 2026 but MoF says not yet collected.",
+  "sources": [
+    {
+      "name": "Andersen in Vietnam - Vietnam Tax Booklet 2024",
+      "url": "https://vn.Andersen.com/wp-content/uploads/2024/09/Andersen-in-Vietnam-Vietnam-Tax-Booklet-2024.pdf",
+      "what": "Read 2026-11-27: VAT direct method for gold/silver/precious-stone traders: VAT = value added x 10%"
+    },
+    {
+      "name": "Vietnam News / congthuong.vn - Taxing gold buyers, 2024-07-16",
+      "url": "https://ven.congthuong.vn/taxing-gold-buyers-is-a-taxontax-say-experts-51615.html",
+      "what": "Read 2026-11-27: SBV foreign-exchange gold taxed 0%; jewellery gold import tax under 3%, VAT 10%"
+    },
+    {
+      "name": "The Viet Media - Vietnam Gold Prices (PNJ board), 27 Nov 2026",
+      "url": "https://en.thevietmedia.net/vietnam-gold-prices/",
+      "what": "Read 2026-11-27: PNJ 27 Nov 2026 SJC bar buy 131.0 / sell 136.0 VND M per tael, sell +20.6% vs world price; jewellery 9999 buy 125.3 / sell 130.8"
+    },
+    {
+      "name": "Vietstock - Finance Ministry clarifies new gold bar tax, Feb 2026",
+      "url": "https://en.vietstock.vn/2026/02/finance-ministry-clarifies-new-gold-bar-tax-amid-market-concerns-970-629229.htm",
+      "what": "Read 2026-11-27: 0.1% PIT on gold-bar transfers in law from 1 Jul 2026, thresholds pending; state bar monopoly ended Oct 2025"
+    }
+  ]
+}

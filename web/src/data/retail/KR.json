@@ -1,0 +1,43 @@
+{
+  "country": "KR",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 10% on physical bars/coins and jewellery. KRX market trades are VAT-free, but physical withdrawal is charged 10% VAT. Duty coded 0% effective: sources conflict (3% basic reported, most imports tariff-free), UNI-PASS line not opened, hence low. Dealer bar premium about 5% flat (Maeil), not by size, so barPremiumPct empty. Jewellery making % and used % not found on an opened dealer page.",
+  "sources": [
+    {
+      "name": "Corgano - VAT on Gold in South Korea (citing KRX/NTS)",
+      "url": "https://goldprice.corgano.com/vat-on-gold/south-korea",
+      "what": "Read 2026-11-27: bars/coins and jewellery 10% VAT; KRX-held gold VAT-free, 10% on withdrawal; imports tariff-free"
+    },
+    {
+      "name": "Corgano - Tax on Selling Gold in South Korea (citing KRX, KB, Maeil Business)",
+      "url": "https://goldprice.corgano.com/tax-on-selling-gold/south-korea",
+      "what": "Read 2026-11-27: physical bar = 10% VAT plus about 5% dealer premium (Maeil), about 15% break-even; silver bars/coins 10% VAT"
+    },
+    {
+      "name": "Daylongs - KRX Gold Market guide",
+      "url": "https://daylongs.com/blog/en/gold-investment-krx-gold-market-2026/",
+      "what": "Read 2026-11-27: KRX trades 99.99% bars (1kg/100g, 1g units), no VAT on exchange trades, 10% VAT plus fee on withdrawal"
+    }
+  ]
+}

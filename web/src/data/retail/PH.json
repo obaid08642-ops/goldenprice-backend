@@ -1,0 +1,52 @@
+{
+  "country": "PH",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "low",
+  "defaultKarat": 21,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 12,
+    "importDutyPct": 10,
+    "makingPct": {
+      "typical": 8,
+      "min": 6,
+      "max": 10
+    },
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 12% on full price, bars and jewellery; no retail exemption (relief only for SSM/trader sales to BSP, RA 11256). Jewellery also has 20% excise (NIRC Sec.150). Duty 10% is MFN for gold jewellery per Tariff Finder reports; bullion duty unverified, hence low. Making 6-10% souk (branded 15-25%). Cebuana minted gift bars not coded as generic premium. 21K most traded; 18K local fine standard.",
+  "sources": [
+    {
+      "name": "BIR Revenue Regulations No. 4-2020 (RA 11256 IRR)",
+      "url": "https://bir-cdn.bir.gov.ph/local/pdf/RR%20No.%204-2020.pdf",
+      "what": "Read 2026-11-27: gold sales to BSP by registered small-scale miners/accredited traders exempt from income and excise tax"
+    },
+    {
+      "name": "NIRC Title VI Ch. VI (Chan Robles full statutory text)",
+      "url": "https://chanrobles.com/legal6title28.htm",
+      "what": "Read 2026-11-27: Sec.150 20% excise on jewellery and goods made of/ornamented with precious metals, on wholesale/import value"
+    },
+    {
+      "name": "Corgano - VAT on Gold in the Philippines (citing PwC/BIR)",
+      "url": "https://goldprice.corgano.com/vat-on-gold/philippines",
+      "what": "Read 2026-11-27: 12% VAT on full price for bars/coins and jewellery, no investment-gold exemption"
+    },
+    {
+      "name": "Saudi Life Guide - Gold import to Philippines 2026 (citing Tariff Commission Finder/BOC)",
+      "url": "https://saudilifeguide.com/how-much-gold-can-i-bring-to-the-philippines/",
+      "what": "Read 2026-11-27: gold jewellery duty 10% MFN 2026 plus 12% import VAT; bar/coin rate not confirmed"
+    }
+  ]
+}

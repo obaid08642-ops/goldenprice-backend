@@ -1,0 +1,52 @@
+{
+  "country": "TW",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "medium",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 0,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 1.1
+    },
+    "usedGoldDiscountPct": {
+      "typical": 0
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 5,
+    "vatBullionPct": null,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Pure gold (99.9%+) bars, coins and jewellery are business-tax exempt incl. import (MOF); karat jewellery is 5%, so jewellery VAT coded 0 for the dominant pure segment. Chapter 71 tariffs 0%. Making is per-design, no % found, null. Buyback 1.10% = Bank of Taiwan passbook spread 27 Nov 2026 (3,901/3,858 NT$/g). Used 24K buyback: no wear deduction at dealer checked; making not refunded.",
+  "sources": [
+    {
+      "name": "Ministry of Finance R.O.C. - Business tax on imported goods directions",
+      "url": "https://law-out.mof.gov.tw/EngLawContent.aspx?lan=E&id=329",
+      "what": "Read 2026-11-27: business tax rate 5%; imported pure gold bars/bricks/foil/coins/ornaments over 99.9% exempt"
+    },
+    {
+      "name": "HowBridge - Jewelry Import Tax to Taiwan (tariff DB synced with Customs Administration)",
+      "url": "https://0523.tw/jewelry-import?lang=en",
+      "what": "Read 2026-11-27: all Chapter 71 first-column tariffs 0%; gold bars exempt, karat jewellery 5%, silver jewellery 0% duty + 5% tax"
+    },
+    {
+      "name": "Charline gold dealer - FAQ",
+      "url": "https://charline.tw/faq?set_lang=en",
+      "what": "Read 2026-11-27: standard product 24K 9999; price = weight x day sell rate plus making charge; 24K buyback with no wear deduction"
+    },
+    {
+      "name": "The Vault Report - Bank of Taiwan Gold Passbook Price History (BOT open data)",
+      "url": "https://thevaultreport.com/gold-passbook-history",
+      "what": "Read 2026-11-27: BOT board 27 Nov 2026 sell NT$3,901/g, buy NT$3,858/g; spread 1.10% (calculated); flat per-gram, no size tiers"
+    }
+  ]
+}
