@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "ngayon",
+  "updated": "Na-update {t}",
+  "delayed": "May pagkaantala",
+  "per": "bawat {u}",
+  "u_gram": "gramo",
+  "u_ounce": "onsa",
+  "u_kilo": "kilo",
+  "u_tola": "tola",
+  "u_ton": "metrikong tonelada",
+  "u_barrel": "bariles",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "galon",
+  "u_bushel": "bushel",
+  "u_lb": "libra",
+  "u_cwt": "hundredweight",
+  "u_coin": "barya",
+  "u_point": "puntos",
+  "global_vs_local": "Presyo sa mundo vs. lokal na presyo",
+  "global_price": "Presyo sa mundo",
+  "local_estimate": "Lokal na tantiya",
+  "est_retail": "Tinatayang presyo sa tingian kasama ang making charge",
+  "est_note": "Tantiya lamang. Nagkakaiba ang mga tindahan sa buwis, making charge at kita.",
+  "karat_title": "{a} ayon sa karat",
+  "karat": "Karat",
+  "purity": "Kadalisayan",
+  "price": "Presyo",
+  "currencies_title": "Presyo ng {a} sa ibang pera",
+  "col_ounce": "Bawat onsa",
+  "col_gram": "Bawat gramo",
+  "col_24h": "24h",
+  "col_7d": "7 araw",
+  "markets_title": "Metal, enerhiya, agrikultura at crypto",
+  "markets_sub": "Live na presyo sa {cur}",
+  "list_title": "Presyo ng metal, enerhiya, commodity at crypto sa {country}",
+  "list_desc": "Live na presyo ng ginto, pilak, platinum, tanso, langis, gas, trigo, kape, stock index, Bitcoin at iba pa sa {cur}.",
+  "alerts_title": "Mga price alert",
+  "alerts_desc": "Makatanggap ng abiso kapag naabot ng presyo ang target mo, sa telepono o sa email.",
+  "alerts_cta": "Gumawa ng alert",
+  "search_ph": "Hal. presyo ng {a} sa {country}…",
+  "search_btn": "Hanapin",
+  "r1d": "1D",
+  "r1w": "1W",
+  "r1m": "1M",
+  "r1y": "1Y",
+  "r5y": "5Y",
+  "rall": "Lahat",
+  "geo_ask": "Ipakita ang presyo para sa {country} sa {cur}?",
+  "geo_yes": "Oo, lumipat",
+  "geo_no": "Hindi na, salamat",
+  "footer_note": "Tinatayang presyo lamang ang mga ito at maaaring may pagkaantala. Hindi ito payo sa pamumuhunan.",
+  "about": "Tungkol sa amin",
+  "privacy": "Patakaran sa privacy",
+  "contact": "Makipag-ugnayan",
+  "theme": "Tema",
+  "language": "Wika",
+  "country": "Bansa",
+  "faq_title": "Mga madalas itanong",
+  "q1": "Magkano ang presyo ng {a} sa {country} ngayon?",
+  "a1": "Ang presyo ng {a} sa {country} ngayon ay {p} {cur} bawat {u}. Ito ang global spot price na na-convert sa pinakabagong exchange rate at ina-update kada ilang minuto.",
+  "q2": "Bakit iba ang lokal na presyo sa global na presyo?",
+  "a2": "Nagdaragdag ang mga tindahan ng making charge, buwis, import duty at kita ng dealer sa global spot price, kaya kadalasang mas mataas ang presyo sa tingian sa {country}.",
+  "q3": "Gaano kadalas ina-update ang presyo?",
+  "a3": "Ina-refresh ang live na presyo sa merkado kada ilang minuto. Ang mga presyong walang live feed ay manu-manong ina-update at ipinapakita ang huling oras ng update.",
+  "title": "Presyo ng {a} sa {country} ngayon | bawat {u} sa {cur}",
+  "desc": "Live na presyo ng {a} sa {country} sa {cur}: bawat gramo, onsa at kilo, price chart, at global vs. lokal na presyo. Ina-update kada ilang minuto.",
+  "title_idx": "Index ng {a} ngayon | live na halaga at chart",
+  "desc_idx": "Live na halaga ng {a} index, pang-araw-araw na pagbabago, at price chart. Ina-update kada ilang minuto.",
+  "history_note": "Ang kasaysayan ay galing sa pang-araw-araw na closing price.",
+  "unit_label": "Yunit",
+  "sample_note": "Sample na data",
+  "nav_all": "Mga merkado",
+  "nav_rates": "Mga pera",
+  "nav_calc": "Mga calculator",
+  "cat_precious": "Mahahalagang metal",
+  "cat_industrial": "Industrial na metal",
+  "cat_energy": "Enerhiya",
+  "cat_agri": "Agrikultura",
+  "cat_index": "Stock index",
+  "cat_crypto": "Crypto",
+  "bars_title": "{a} bars at barya: presyo ng pagbili at pagbenta sa {cur}",
+  "bar_size": "Laki",
+  "bar_buy": "Bilhin sa dealer",
+  "bar_sell": "Ibenta pabalik",
+  "bar_prem": "Premium sa spot",
+  "bars_note": "Tipikal na presyo ng dealer batay sa global na presyo at karaniwang premium. Nagkakaiba ang totoong presyo ayon sa tindahan at araw.",
+  "used_title": "Ginamit at scrap na {a}: presyo ng pagbili pabalik bawat gramo sa {cur}",
+  "used_note": "Karaniwang binibili pabalik ang ginamit na alahas sa mas mababang halaga kaysa bagong presyo. Ito ay tinatayang halaga lamang.",
+  "used_col": "Presyo ng pagbili pabalik bawat gramo",
+  "rates_title": "Mga exchange rate laban sa {cur}",
+  "rates_sub": "Mid-market na rate, ina-update kada oras",
+  "rates_desc": "Live na exchange rate ng mga pangunahing pera sa mundo laban sa {cur}, kasama ang currency converter.",
+  "rates_page_title": "Mga exchange rate ng pera at converter sa {country}",
+  "conv_title": "Currency converter",
+  "conv_amount": "Halaga",
+  "conv_from": "Mula sa",
+  "conv_to": "Patungo sa",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Gold calculator at zakat calculator sa {country}",
+  "calc_page_desc": "Kalkulahin ang halaga ng iyong ginto ayon sa timbang at karat sa {cur}, at tingnan ang zakat sa ginto at pilak gamit ang presyo ngayon.",
+  "calc_title": "Calculator ng halaga ng ginto",
+  "calc_weight": "Timbang",
+  "calc_unit": "Yunit",
+  "calc_karat": "Karat",
+  "calc_value": "Tinatayang halaga",
+  "calc_note": "Batay sa global na presyo. Mas mababa ang binabayad ng mga tindahan para sa ginamit na ginto.",
+  "zakat_title": "Zakat sa ginto at pilak",
+  "zakat_nisab_gold": "Nisab ng ginto (85 gramo)",
+  "zakat_nisab_silver": "Nisab ng pilak (595 gramo)",
+  "zakat_gold_g": "Iyong ginto, sa gramo (katumbas ng 24K)",
+  "zakat_silver_g": "Iyong pilak, sa gramo",
+  "zakat_due": "Zakat na dapat bayaran (2.5%)",
+  "zakat_note": "Ang zakat ay dapat bayaran sa yaman na hawak nang isang taong lunar na lampas sa nisab. Gabay lamang ito, kumonsulta sa iskolar tungkol sa sarili mong kaso.",
+  "zakat_below": "Mas mababa sa nisab: walang zakat na dapat bayaran sa halagang ito.",
+  "related_title": "Mga sikat na paghahanap",
+  "retail_basis": "Batay sa {n} lokal na pinagmulan, na-verify noong {d}.",
+  "u_share": "bahagi",
+  "u_rate": "rate",
+  "u_mbf": "1,000 board feet",
+  "cat_stock": "Mga stock",
+  "cat_forex": "Mga currency pair",
+  "cat_construction": "Mga materyales sa konstruksyon",
+  "perf_title": "Performance",
+  "p_7d": "1 linggo",
+  "p_30d": "1 buwan",
+  "p_90d": "3 buwan",
+  "p_ytd": "Year to date",
+  "p_1y": "1 taon",
+  "p_5y": "5 taon",
+  "range52": "Saklaw ng 52 linggo",
+  "ath": "Pinakamataas sa aming data",
+  "atl": "Pinakamababa sa aming data",
+  "since": "Kasaysayan mula {d}",
+  "about_title": "Tungkol sa {a}",
+  "drivers_title": "Ano ang nagpapagalaw ng presyo",
+  "uses_title": "Saan ito ginagamit",
+  "source_note": "Pinagmulan: {s}. Tinatayang presyo lamang ito at maaaring may pagkaantala.",
+  "about_stock": "Ang mga share ng {a} ay pinepresyuhan sa {c}. Ipinapakita ng pahina ang pinakahuling presyo na may pagkaantala, ang pagbabago ngayon at sa mas mahabang panahon, at ang parehong presyo sa ibang pera.",
+  "about_forex": "Ipinapakita ng {a} kung ilang yunit ng pangalawang pera ang mabibili ng isang yunit ng unang pera. Gumagalaw ang rate kasabay ng interest rate, inflation, kalakalan at balitang pang-ekonomiya ng dalawang bansa.",
+  "about_crypto": "Ang {a} ay isang cryptocurrency. Itinatakda ang presyo nito ng kalakalan sa mga exchange na bukas buong araw at maaaring mabilis magbago. Ipinapakita ng pahina ang live na presyo, pagbabago sa iba't ibang panahon, at presyo sa ibang pera.",
+  "about_commodity": "Ang {a} ay commodity na kinakalakal. Sinusundan ng presyo nito ang suplay, demand, panahon, pera at balita. Ipinapakita ng pahina ang pinakabagong presyo, pagbabago sa iba't ibang panahon, at presyo sa ibang pera.",
+  "about_index": "Sinusukat ng {a} kung paano gumaganap ang isang grupo ng mga stock. Nasa index points ang halaga nito at gumagalaw kasabay ng presyo ng mga share ng mga kumpanya nito.",
+  "tail_list_title": "Mga stock, crypto, currency pair at iba pang commodity",
+  "tail_list_desc": "Live na presyo ng pandaigdigang stock, mas maraming cryptocurrency, currency pair at karagdagang commodity, kasama ang mga chart at performance.",
+  "tail_title": "Presyo ng {a} ngayon | live na halaga at chart",
+  "tail_desc": "Live na presyo ng {a} na may chart at performance sa loob ng 1 linggo, 1 buwan, 1 taon at higit pa. Ina-update kada ilang minuto.",
+  "nav_dev": "Developer",
+  "nav_compare": "Ikumpara",
+  "terms": "Mga tuntunin ng paggamit",
+  "disclaimer": "Paalala",
+  "cookies": "Patakaran sa cookies",
+  "developers": "API para sa developer",
+  "alert_title": "Kumuha ng price alert",
+  "alert_email": "Iyong email",
+  "alert_target": "Target na presyo ({cur})",
+  "alert_above": "Tumaas nang lampas sa",
+  "alert_below": "Bumaba nang mas mababa sa",
+  "alert_submit": "Gumawa ng alert",
+  "alert_ok": "Na-save ang alert. Mag-eemail kami sa iyo minsan kapag tumawid ang presyo sa target mo.",
+  "alert_err": "Hindi ma-save ang alert. Suriin ang email at presyo, at subukan muli.",
+  "alert_privacy": "Ginagamit lamang namin ang iyong email para sa alert na ito.",
+  "contact_title": "Magpadala ng mensahe sa amin",
+  "contact_name": "Iyong pangalan",
+  "contact_email": "Iyong email",
+  "contact_msg": "Mensahe",
+  "contact_send": "Ipadala",
+  "contact_ok": "Salamat. Naipadala na ang iyong mensahe.",
+  "contact_err": "Hindi naipadala ang mensahe. Pakisubukan muli mamaya.",
+  "dev_title": "Libreng price API",
+  "dev_desc": "Gamitin ang aming mga presyo sa sarili mong app o website. Limitado sa 1,000 request kada araw ang libreng key. Pakilagay ang credit sa site.",
+  "dev_endpoints": "Mga endpoint",
+  "dev_request": "Kumuha ng libreng API key",
+  "dev_email": "Iyong email",
+  "dev_purpose": "Ano ang gagawin mo?",
+  "dev_get": "Kunin ang key",
+  "dev_key": "Iyong API key (i-save na ngayon, isang beses lang ito ipapakita)",
+  "dev_err": "Hindi makagawa ng key. Suriin ang email at subukan muli.",
+  "dev_usage": "Ipadala ang key sa x-api-key header.",
+  "cmp_title": "Ikumpara ang dalawang asset",
+  "cmp_a": "Unang asset",
+  "cmp_b": "Ikalawang asset",
+  "cmp_ratio": "Ratio (una hati sa ikalawa)",
+  "cmp_now": "Ngayon",
+  "cmp_desc": "Ikumpara ang kahit anong dalawang asset: ang ratio nila sa paglipas ng panahon, halimbawa ang ratio ng ginto sa pilak.",
+  "cmp_page_title": "Ikumpara ang mga presyo at ratio sa {country}",
+  "roi_title": "Profit calculator",
+  "roi_buy": "Presyo ng pagbili",
+  "roi_amount": "Dami",
+  "roi_now": "Kasalukuyang presyo",
+  "roi_profit": "Kita o lugi",
+  "roi_pct": "Return",
+  "units_title": "Unit converter",
+  "units_value": "Halaga",
+  "units_from": "Mula sa",
+  "units_to": "Patungo sa",
+  "calc_tools_desc": "Mga calculator para sa halaga ng ginto, zakat, kita at unit.",
+  "nav_costs": "Gastos",
+  "costs_title": "Gastos sa pamumuhay sa {country}: presyo ng gasolina, kuryente at Big Mac",
+  "costs_desc": "Pinakabagong presyo ng gasolina, taripa ng kuryente sa bahay at presyo ng Big Mac sa {country}, sa {cur}, kasama ang mga pinagmulan.",
+  "fuel_h": "Presyo ng gasolina",
+  "petrol95": "Gasolina (95 octane)",
+  "diesel": "Diesel",
+  "lpg": "LPG (autogas)",
+  "per_litre": "bawat litro",
+  "elec_h": "Kuryente sa bahay",
+  "elec_note": "Karaniwang presyo kada kWh sa bahay, kasama ang lahat ng buwis",
+  "per_kwh": "bawat kWh",
+  "bigmac_h": "Presyo ng Big Mac",
+  "bigmac_note": "Isang Big Mac sa {country}, simpleng paraan para ikumpara ang gastos sa pamumuhay",
+  "costs_asof": "Data hanggang {date}",
+  "costs_source": "Pinagmulan: {src}",
+  "costs_note": "Dahan-dahang nagbabago ang mga bilang na ito, ina-update tuwing ilang buwan, at ipinapakita lamang kung saan may inilathalang pinagmulan.",
+  "u_sheet": "sheet",
+  "u_m3": "kubikong metro",
+  "nav_coins": "Barya at yunit",
+  "coins_title": "Mga gold coin at yunit sa {country}: halaga ng nilalamang ginto",
+  "coins_desc": "Halaga ng nilalamang ginto ng mga sikat na coin at lokal na yunit ng ginto sa {country}, sa {cur}, batay sa live na presyo ng ginto.",
+  "coin_weight": "Timbang",
+  "coin_fine": "Kadalisayan",
+  "coin_pure": "Purong ginto",
+  "coin_value": "Halaga ng ginto",
+  "coins_note": "Nilalamang ginto lamang, sa live na spot price. Nagdaragdag ang mga dealer ng premium, making charge at buwis, kaya mas mataas ang mga ito."
+ },
+ "assets": {
+  "gold": "Ginto",
+  "silver": "Pilak",
+  "platinum": "Platinum",
+  "palladium": "Palladium",
+  "copper": "Tanso",
+  "aluminum": "Aluminyo",
+  "nickel": "Nikel",
+  "zinc": "Zinc",
+  "lead": "Tingga",
+  "tin": "Lata",
+  "cobalt": "Kobalt",
+  "lithium": "Lithium",
+  "uranium": "Uranyum",
+  "iron-ore": "Iron ore",
+  "steel": "Bakal",
+  "wti-oil": "WTI crude oil",
+  "brent-oil": "Brent crude oil",
+  "natural-gas": "Natural gas",
+  "gasoline": "Gasolina",
+  "heating-oil": "Heating oil",
+  "wheat": "Trigo",
+  "corn": "Mais",
+  "soybeans": "Soybeans",
+  "rice": "Bigas",
+  "sugar": "Asukal",
+  "coffee": "Kape",
+  "cocoa": "Kakaw",
+  "cotton": "Bulak",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Langis ng soybean",
+  "soybean-meal": "Soybean meal",
+  "oats": "Oats",
+  "orange-juice": "Orange juice",
+  "live-cattle": "Live cattle",
+  "feeder-cattle": "Feeder cattle",
+  "lean-hogs": "Lean hogs",
+  "milk": "Gatas (Class III)",
+  "lumber": "Kahoy",
+  "coal": "Uling (Newcastle)",
+  "tea": "Tsaa",
+  "palm-oil": "Palm oil",
+  "coconut-oil": "Langis ng niyog",
+  "sunflower-oil": "Langis ng mirasol",
+  "rapeseed-oil": "Langis ng rapeseed",
+  "rubber": "Natural rubber",
+  "urea": "Urea fertilizer",
+  "dap": "DAP fertilizer",
+  "potash": "Potash (potassium chloride)",
+  "phosphate-rock": "Phosphate rock",
+  "beef": "Karne ng baka",
+  "chicken": "Manok",
+  "banana": "Saging",
+  "orange": "Dalandan",
+  "fish-meal": "Fish meal",
+  "plywood": "Plywood",
+  "sawnwood": "Sawnwood (Malaysia)"
+ },
+ "kw": {
+  "price": "presyo",
+  "today": "ngayon",
+  "live": "live",
+  "rate": "rate",
+  "per_gram": "bawat gramo",
+  "ounce": "onsa",
+  "bar": "bar",
+  "used": "ginamit",
+  "karat": "karat",
+  "chart": "chart",
+  "convert": "converter",
+  "calculator": "calculator",
+  "zakat": "zakat"
+ },
+ "legal": {
+  "about": [
+   "Ipinapakita ng {site} ang live na presyo ng ginto, pilak, iba pang metal, enerhiya, pananim, stock, index, cryptocurrency at pera sa sarili mong pera, para sa maraming bansa at wika.",
+   "Galing ang mga presyo sa pampublikong market data feed at ina-update kada ilang minuto. Ang ilang presyo ay ina-update mula sa pampublikong pahina o manu-mano, at ipinapakita ang pinagmulan nito.",
+   "Idinaragdag ng mga lokal na tantiya sa tingian ang karaniwang buwis, making charge at premium ng dealer sa global na presyo, kasama ang pinagmulan at petsa. Tantiya ang mga ito, hindi quotation.",
+   "Nag-aalok din kami ng calculator para sa halaga ng ginto, zakat, kita at unit, currency converter, at price alert."
+  ],
+  "privacy": [
+   "Hindi kami humihingi ng account o personal na datos. Itinatago lamang namin sa browser mo ang pinili mong wika, bansa at tema.",
+   "Kapag naka-enable ang ads, ipinapakita ang mga ito ng Google AdSense, na maaaring gumamit ng cookies para magpakita ng kaugnay na ads. Mapamamahalaan mo ito sa iyong Google ad settings.",
+   "Maaaring mangolekta ng anonymous at pinagsamang estadistika ng pagbisita para mapabuti ang site."
+  ],
+  "contact": [
+   "Mga tanong, pagwawasto o kahilingan sa partnership: gamitin ang contact address na nakalathala sa pahinang ito kapag live na ang site.",
+   "Kung makakita ka ng maling presyo, sabihin sa amin ang asset, bansa, at kung saan mo nakita ang tamang halaga."
+  ],
+  "terms": [
+   "Sa paggamit ng {site}, sumasang-ayon ka sa mga tuntuning ito. Ibinibigay ang site para sa pangkalahatang impormasyon.",
+   "Ang mga presyo, chart at tantiya ay tinatayang lamang, maaaring may pagkaantala o mali, at hindi dapat gamitin bilang tanging batayan sa anumang kalakalan o pagbili.",
+   "Hindi ka maaaring kopyahin nang maramihan o ibenta muli ang datos. Para sa automated na access, gamitin ang libreng API namin at pakilagay ang credit sa site.",
+   "Maaari naming baguhin o itigil ang anumang bahagi ng serbisyo anumang oras, at hindi kami mananagot sa pagkalugi mula sa paggamit nito."
+  ],
+  "disclaimer": [
+   "Hindi broker, bangko, o financial adviser ang {site} at hindi nagbibigay ng payo sa pamumuhunan.",
+   "Ang mga lokal na tantiya sa tingian, premium ng bar at buyback figure ay tantiyang galing sa pampublikong pinagmulan. Nagkakaiba ang mga tindahan, palaging kumpirmahin ang presyo sa nagbebenta.",
+   "Hindi tumpak na paghula sa hinaharap ang nakaraang performance. May panganib ang pamumuhunan sa metal, stock at cryptocurrency, kabilang ang posibilidad na mawala ang perang na-invest."
+  ],
+  "cookies": [
+   "Gumagamit lamang kami ng browser storage na kailangan para maalala ang iyong wika, bansa at tema.",
+   "Kapag naka-enable ang ads, maaaring magtakda ng cookies ang Google AdSense para magpakita ng kaugnay na ads. Mapamamahalaan mo ito sa iyong Google ad settings.",
+   "Hihingin ang pahintulot ng mga bisita sa mga rehiyong nangangailangan nito bago gamitin ang advertising cookies."
+  ],
+  "developers": [
+   "Libre ang aming price API para sa maliliit na proyekto. Gumawa ng key sa ibaba at ipadala ito sa x-api-key header.",
+   "Mga endpoint: /v1/overview para sa lahat ng presyo at performance, /v1/chart/SYMBOL?days=365 para sa kasaysayan, /v1/rates para sa exchange rate ng pera.",
+   "Pinapayagan ng libreng key ang 1,000 request kada araw. Naka-cache ang mga sagot nang isang minuto, pakiusap huwag tumawag nang mas mabilis kaysa doon.",
+   "Pakilagay ang credit sa site kapag ipinapakita mo ang aming presyo."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Ang ginto ang pinakamalawak na hawak na mahalagang metal at tradisyonal na tagapag-imbak ng halaga. Ang presyo nito ay nakalista kada troy ounce sa buong mundo, at kada gramo o tola sa maraming lokal na merkado, habang ang alahas ay ibinebenta ayon sa karat mula 10K hanggang 24K.",
+   "drivers": [
+    "Interest rate at US dollar",
+    "Inflation at kawalang-katiyakan sa ekonomiya o pulitika",
+    "Pagbili ng central bank at demand sa pamumuhunan"
+   ],
+   "uses": [
+    "Alahas at regalo",
+    "Investment bar at barya",
+    "Electronics at dentistry"
+   ]
+  },
+  "silver": {
+   "about": "Ang pilak ay mahalagang metal at industrial metal din. Presyo ito kada troy ounce at ibinebenta bilang bar, barya at alahas sa mga kadalisayan tulad ng 999, 925 at 800.",
+   "drivers": [
+    "Industrial demand mula sa solar panel at electronics",
+    "Presyo ng ginto at US dollar",
+    "Demand sa pamumuhunan para sa bar at barya"
+   ],
+   "uses": [
+    "Alahas at silverware",
+    "Solar panel at electronics",
+    "Investment bar at barya"
+   ]
+  },
+  "platinum": {
+   "about": "Ang platinum ay bihira at siksik na mahalagang metal, at mas mahal ito kaysa ginto sa maraming panahon kapag tinimbang. Presyo ito kada troy ounce.",
+   "drivers": [
+    "Demand mula sa catalytic converter ng sasakyan",
+    "Suplay mula sa minahan, pangunahin sa South Africa at Russia",
+    "Demand sa pamumuhunan at presyo ng ginto"
+   ],
+   "uses": [
+    "Catalytic converter",
+    "Alahas",
+    "Industriyang kemikal at teknolohiyang hydrogen"
+   ]
+  },
+  "palladium": {
+   "about": "Ang palladium ay bihirang mahalagang metal na pangunahing ginagamit sa catalytic converter ng mga sasakyang gasolina. Presyo ito kada troy ounce.",
+   "drivers": [
+    "Produksyon ng sasakyan at mga patakaran sa emissions",
+    "Suplay mula sa minahan sa Russia at South Africa",
+    "Pamalit ng platinum"
+   ],
+   "uses": [
+    "Catalytic converter",
+    "Electronics",
+    "Dentistry at alahas"
+   ]
+  },
+  "copper": {
+   "about": "Ang tanso ang pangunahing industrial metal. Presyo ito kada metrikong tonelada at binabantayan bilang senyales ng kalusugan ng pandaigdigang ekonomiya.",
+   "drivers": [
+    "Demand sa konstruksyon at pagmamanupaktura, lalo na sa China",
+    "Suplay ng minahan at imbentaryo",
+    "US dollar at patakaran sa kalakalan"
+   ],
+   "uses": [
+    "Kable ng kuryente at power grid",
+    "Konstruksyon at tubo",
+    "Electric vehicle at renewable energy"
+   ]
+  },
+  "aluminum": {
+   "about": "Ang aluminyo ay magaan at malawakang ginagamit na metal na galing sa bauxite at nangangailangan ng malaking kuryente sa paggawa. Presyo ito kada metrikong tonelada.",
+   "drivers": [
+    "Gastos sa enerhiya para sa smelting",
+    "Demand mula sa sasakyan, packaging at konstruksyon",
+    "Produksyon sa China at taripa sa kalakalan"
+   ],
+   "uses": [
+    "Packaging at lata",
+    "Sasakyan at eroplano",
+    "Konstruksyon"
+   ]
+  },
+  "nickel": {
+   "about": "Ang nikel ay metal na ginagamit sa paggawa ng stainless steel at baterya. Nakalista ang presyo nito kada metrikong tonelada sa London Metal Exchange.",
+   "drivers": [
+    "Demand para sa stainless steel",
+    "Demand para sa baterya ng electric vehicle",
+    "Suplay mula sa Indonesia at Pilipinas"
+   ],
+   "uses": [
+    "Stainless steel",
+    "Baterya",
+    "Haluang metal"
+   ]
+  },
+  "zinc": {
+   "about": "Ang zinc ay pangunahing ginagamit sa galvanizing ng bakal para hindi kalawangin. Presyo ito kada metrikong tonelada.",
+   "drivers": [
+    "Demand ng bakal at konstruksyon",
+    "Suplay ng minahan at output ng smelter",
+    "Presyo ng enerhiya sa Europe at China"
+   ],
+   "uses": [
+    "Galvanizing ng bakal",
+    "Tanso at haluang metal",
+    "Baterya"
+   ]
+  },
+  "lead": {
+   "about": "Ang tingga ay siksik na metal na pangunahing ginagamit sa baterya ng sasakyan. Presyo ito kada metrikong tonelada.",
+   "drivers": [
+    "Demand para sa sasakyan at baterya",
+    "Suplay mula sa recycling",
+    "Output ng minahan at mga patakarang pangkapaligiran"
+   ],
+   "uses": [
+    "Baterya ng sasakyan",
+    "Panangga sa radiation",
+    "Kable at haluang metal"
+   ]
+  },
+  "tin": {
+   "about": "Ang lata ay bihirang metal na pangunahing ginagamit bilang solder sa electronics. Presyo ito kada metrikong tonelada.",
+   "drivers": [
+    "Demand para sa electronics at chip",
+    "Suplay mula sa minahan sa Indonesia, Myanmar at Peru",
+    "Imbentaryo at mga patakaran sa kalakalan"
+   ],
+   "uses": [
+    "Solder para sa electronics",
+    "Lata ng pagkain",
+    "Kemikal"
+   ]
+  },
+  "cobalt": {
+   "about": "Ang kobalt ay metal para sa baterya na pangunahing minamina sa Democratic Republic of the Congo. Presyo ito kada metrikong tonelada.",
+   "drivers": [
+    "Demand para sa electric vehicle at baterya",
+    "Suplay ng minahan sa Congo at mga patakaran sa export",
+    "Mga pagbabago sa kemistri ng baterya"
+   ],
+   "uses": [
+    "Baterya",
+    "Superalloy",
+    "Magnet"
+   ]
+  },
+  "lithium": {
+   "about": "Ang lithium carbonate ang pangunahing hilaw na materyal ng rechargeable na baterya. Ang presyong ipinapakita ay para sa battery-grade carbonate sa China, na na-convert sa US dollar kada metrikong tonelada.",
+   "drivers": [
+    "Benta ng electric vehicle",
+    "Bagong suplay mula sa minahan at refinery",
+    "Patakaran ng gobyerno sa baterya"
+   ],
+   "uses": [
+    "Baterya ng electric vehicle",
+    "Telepono at laptop",
+    "Imbakan ng enerhiya"
+   ]
+  },
+  "uranium": {
+   "about": "Ang uranyum ang panggatong ng mga nuclear power plant. Presyo ito sa US dollar kada pound ng U3O8.",
+   "drivers": [
+    "Pagbabalik ng nuclear plant at mga bagong reactor",
+    "Produksyon ng minahan, pangunahin mula sa Kazakhstan at Canada",
+    "Stockpiling ng gobyerno at mga sanction"
+   ],
+   "uses": [
+    "Nuclear power",
+    "Medical isotope"
+   ]
+  },
+  "iron-ore": {
+   "about": "Ang iron ore ang pangunahing hilaw na materyal ng bakal. Ang presyong ipinapakita ay para sa 62% na iron content na ipinadala sa China, kada metrikong tonelada.",
+   "drivers": [
+    "Produksyon ng bakal sa China",
+    "Suplay mula sa Australia at Brazil",
+    "Gastos sa real estate at imprastraktura"
+   ],
+   "uses": [
+    "Paggawa ng bakal"
+   ]
+  },
+  "steel": {
+   "about": "Ang bakal ay haluang metal ng bakal na ginagamit halos sa bawat industriya. Ang presyong ipinapakita ay para sa steel rebar sa China, na na-convert sa US dollar kada metrikong tonelada.",
+   "drivers": [
+    "Demand sa konstruksyon",
+    "Gastos sa iron ore at coking coal",
+    "Limitasyon ng produksyon ng gobyerno"
+   ],
+   "uses": [
+    "Gusali at tulay",
+    "Sasakyan at makina"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Ang hot-rolled steel coil ay flat na produktong bakal na ginagamit sa pagmamanupaktura. Ang presyong ipinapakita ay para sa paghahatid sa US Midwest kada metrikong tonelada.",
+   "drivers": [
+    "Demand ng US mula sa sasakyan at konstruksyon",
+    "Taripa sa import at kompetisyon",
+    "Gastos sa hilaw na materyal at enerhiya"
+   ],
+   "uses": [
+    "Sasakyan at appliance",
+    "Tubo at konstruksyon"
+   ]
+  },
+  "lumber": {
+   "about": "Sinusundan ng lumber futures ang presyo ng softwood na ginagamit sa pagtatayo ng bahay, nakalista kada 1,000 board feet.",
+   "drivers": [
+    "Bilang ng nagsisimulang bahay at mortgage rate",
+    "Output ng sawmill at wildfire",
+    "Taripa sa pagitan ng US at Canada"
+   ],
+   "uses": [
+    "Frame ng bahay",
+    "Muwebles at packaging"
+   ]
+  },
+  "wti-oil": {
+   "about": "Ang WTI ang benchmark ng US para sa crude oil, nakalista kada bariles at inihahatid sa Cushing, Oklahoma.",
+   "drivers": [
+    "Mga desisyon sa produksyon ng OPEC at US",
+    "Paglago ng pandaigdigang ekonomiya",
+    "Imbentaryo, geopolitika at US dollar"
+   ],
+   "uses": [
+    "Gasolina, diesel at jet fuel",
+    "Plastik at kemikal"
+   ]
+  },
+  "brent-oil": {
+   "about": "Ang Brent ang pandaigdigang benchmark para sa crude oil, nakalista kada bariles, at nagtatakda ng presyo ng karamihan sa langis na ipinagbibili sa labas ng US.",
+   "drivers": [
+    "Mga desisyon sa produksyon ng OPEC+",
+    "Pandaigdigang demand, lalo na mula sa China at India",
+    "Tunggalian at sanction sa mga rehiyong gumagawa ng langis"
+   ],
+   "uses": [
+    "Gasolina, diesel at jet fuel",
+    "Plastik at kemikal"
+   ]
+  },
+  "natural-gas": {
+   "about": "Ang natural gas dito ay nakalista sa presyo ng US Henry Hub kada MMBtu. Ginagamit ito sa pagpapainit, paggawa ng kuryente at industriya.",
+   "drivers": [
+    "Panahon at demand sa pagpapainit",
+    "Antas ng imbakan at produksyon",
+    "Export ng liquefied natural gas"
+   ],
+   "uses": [
+    "Paggawa ng kuryente",
+    "Pampainit at pagluluto sa bahay",
+    "Pataba at kemikal"
+   ]
+  },
+  "gasoline": {
+   "about": "Sinusundan ng gasoline futures ang presyo ng gasolina sa wholesale sa US dollar kada galon.",
+   "drivers": [
+    "Presyo ng crude oil",
+    "Output ng refinery at panahon ng pagmamaneho",
+    "Imbentaryo at regulasyon"
+   ],
+   "uses": [
+    "Gasolina ng sasakyan"
+   ]
+  },
+  "heating-oil": {
+   "about": "Sinusundan ng heating oil futures ang presyo ng wholesale na diesel at panggatong sa pagpapainit sa US dollar kada galon.",
+   "drivers": [
+    "Presyo ng crude oil",
+    "Lamig ng panahon sa taglamig",
+    "Demand ng diesel mula sa trak at industriya"
+   ],
+   "uses": [
+    "Pampainit sa bahay",
+    "Diesel fuel"
+   ]
+  },
+  "wheat": {
+   "about": "Ang trigo ay isa sa pangunahing butil ng pagkain sa mundo. Presyo ito kada bushel sa Chicago exchange.",
+   "drivers": [
+    "Panahon sa mga pangunahing rehiyong nagtatanim",
+    "Export mula sa Russia, Ukraine, US at EU",
+    "Stock, presyo ng enerhiya at US dollar"
+   ],
+   "uses": [
+    "Tinapay, pasta at harina",
+    "Pagkain ng hayop"
+   ]
+  },
+  "corn": {
+   "about": "Ang mais ay pangunahing butil para sa pagkain at pagkain ng hayop, at pinagkukunan din ng ethanol. Presyo ito kada bushel sa Chicago exchange.",
+   "drivers": [
+    "Ani sa US at Brazil",
+    "Demand para sa ethanol at pagkain ng hayop",
+    "Panahon at export"
+   ],
+   "uses": [
+    "Pagkain ng hayop",
+    "Ethanol fuel",
+    "Pagkain at syrup"
+   ]
+  },
+  "soybeans": {
+   "about": "Ang soybean ay pinoproseso bilang langis at meal. Presyo ito kada bushel sa Chicago exchange.",
+   "drivers": [
+    "Ani sa US, Brazil at Argentina",
+    "Demand sa pag-angkat ng China",
+    "Patakaran sa biofuel"
+   ],
+   "uses": [
+    "Langis sa pagluluto",
+    "Pagkain ng hayop",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Ang palay ay pangunahing pagkain ng bilyun-bilyong tao. Presyo ito kada hundredweight sa Chicago exchange.",
+   "drivers": [
+    "Kondisyon ng monsoon at ani sa Asia",
+    "Mga patakaran sa export ng India, Thailand at Vietnam",
+    "Imbentaryo at presyo ng pagkain"
+   ],
+   "uses": [
+    "Pagkain"
+   ]
+  },
+  "sugar": {
+   "about": "Sinusundan ng raw sugar futures ang pandaigdigang presyo ng asukal, nakalista sa US dollar kada pound.",
+   "drivers": [
+    "Ani ng tubo sa Brazil at India",
+    "Demand ng ethanol sa Brazil",
+    "Panahon at pera"
+   ],
+   "uses": [
+    "Pagkain at inumin",
+    "Ethanol"
+   ]
+  },
+  "coffee": {
+   "about": "Sinusundan ng arabica coffee futures ang pandaigdigang presyo ng coffee beans, nakalista sa US dollar kada pound.",
+   "drivers": [
+    "Panahon sa Brazil at Colombia",
+    "Imbentaryo at export",
+    "Pera at demand"
+   ],
+   "uses": [
+    "Inuming kape"
+   ]
+  },
+  "cocoa": {
+   "about": "Sinusundan ng cocoa futures ang presyo ng cocoa beans, nakalista sa US dollar kada metrikong tonelada.",
+   "drivers": [
+    "Ani sa Ivory Coast at Ghana",
+    "Sakit at panahon",
+    "Demand para sa tsokolate"
+   ],
+   "uses": [
+    "Tsokolate at kendi",
+    "Cosmetics"
+   ]
+  },
+  "cotton": {
+   "about": "Sinusundan ng cotton futures ang pandaigdigang presyo ng raw cotton, nakalista sa US dollar kada pound.",
+   "drivers": [
+    "Panahon sa US, India at China",
+    "Demand para sa tela",
+    "Presyo ng langis at pera"
+   ],
+   "uses": [
+    "Damit at tela"
+   ]
+  },
+  "bitcoin": {
+   "about": "Ang Bitcoin ang una at pinakamalaking cryptocurrency. Nagkakalakalan ito buong araw sa mga exchange at limitado sa 21 milyong coin ang suplay nito.",
+   "drivers": [
+    "Demand ng mamumuhunan at daloy ng ETF",
+    "Interest rate at gana sa panganib",
+    "Regulasyon at balita"
+   ]
+  },
+  "ethereum": {
+   "about": "Ang Ethereum ay blockchain para sa smart contract at aplikasyon, at ang coin nitong ether ang ikalawang pinakamalaking cryptocurrency.",
+   "drivers": [
+    "Paggamit ng mga aplikasyon ng Ethereum",
+    "Mga upgrade ng network at bayad",
+    "Damdamin ng merkado"
+   ]
+  },
+  "bnb": {
+   "about": "Ang BNB ang coin ng BNB Chain at ng ekosistema ng Binance exchange.",
+   "drivers": [
+    "Aktibidad at bayad sa exchange",
+    "Pagsunog ng token",
+    "Regulasyon"
+   ]
+  },
+  "xrp": {
+   "about": "Ang XRP ay cryptocurrency na ginagamit para sa mabilis na international payment sa XRP Ledger.",
+   "drivers": [
+    "Balita mula sa korte at regulator",
+    "Mga partnership sa bangko at pagbabayad",
+    "Damdamin ng merkado"
+   ]
+  },
+  "solana": {
+   "about": "Ang Solana ay mabilis na blockchain para sa aplikasyon at pagbabayad, at ang SOL ang coin nito.",
+   "drivers": [
+    "Aktibidad ng aplikasyon at token",
+    "Pagiging maaasahan ng network",
+    "Damdamin ng merkado"
+   ]
+  },
+  "cardano": {
+   "about": "Ang Cardano ay proof-of-stake na blockchain, at ang ADA ang coin nito.",
+   "drivers": [
+    "Progreso ng development",
+    "Staking",
+    "Damdamin ng merkado"
+   ]
+  },
+  "dogecoin": {
+   "about": "Nagsimula ang Dogecoin bilang biro na coin at naging isa sa pinakamaraming ikinakalakal na cryptocurrency.",
+   "drivers": [
+    "Atensyon sa social media",
+    "Damdamin ng merkado",
+    "Pagtanggap sa pagbabayad"
+   ]
+  },
+  "tron": {
+   "about": "Ang TRON ay blockchain na malawakang ginagamit sa paglilipat ng stablecoin, at ang TRX ang coin nito.",
+   "drivers": [
+    "Aktibidad ng paglilipat ng stablecoin",
+    "Bayad sa network",
+    "Damdamin ng merkado"
+   ]
+  },
+  "polkadot": {
+   "about": "Pinag-uugnay ng Polkadot ang maraming blockchain, at ang DOT ang coin nito.",
+   "drivers": [
+    "Development ng network",
+    "Staking",
+    "Damdamin ng merkado"
+   ]
+  },
+  "chainlink": {
+   "about": "Nagbibigay ang Chainlink ng real-world data sa mga blockchain, at ang LINK ang coin nito.",
+   "drivers": [
+    "Paggamit ng ibang aplikasyon",
+    "Mga partnership",
+    "Damdamin ng merkado"
+   ]
+  },
+  "litecoin": {
+   "about": "Ang Litecoin ay isa sa pinakamatandang cryptocurrency, na nilikha para sa mas mabilis na pagbabayad kaysa Bitcoin.",
+   "drivers": [
+    "Presyo ng Bitcoin",
+    "Pagtanggap sa pagbabayad",
+    "Damdamin ng merkado"
+   ]
+  },
+  "avalanche": {
+   "about": "Ang Avalanche ay mabilis na blockchain platform, at ang AVAX ang coin nito.",
+   "drivers": [
+    "Aktibidad ng aplikasyon",
+    "Mga upgrade ng network",
+    "Damdamin ng merkado"
+   ]
+  },
+  "sp500": {
+   "about": "Sinusubaybayan ng S&P 500 ang 500 sa pinakamalaking kumpanya sa US at ito ang pangunahing sukatan ng US stock market.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "nasdaq": {
+   "about": "Sinusubaybayan ng Nasdaq Composite ang libu-libong stock na nakalista sa Nasdaq, na may malaking timbang sa mga kumpanya ng teknolohiya.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "dow-jones": {
+   "about": "Sinusubaybayan ng Dow Jones Industrial Average ang 30 malalaking kumpanya sa US.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "ftse-100": {
+   "about": "Sinusubaybayan ng FTSE 100 ang 100 pinakamalaking kumpanyang nakalista sa London.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "dax": {
+   "about": "Sinusubaybayan ng DAX ang 40 malalaking kumpanyang Aleman na nakalista sa Frankfurt.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "cac-40": {
+   "about": "Sinusubaybayan ng CAC 40 ang 40 malalaking kumpanyang nakalista sa Paris.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Sinusubaybayan ng Nikkei 225 ang 225 malalaking kumpanyang nakalista sa Tokyo.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "hang-seng": {
+   "about": "Sinusubaybayan ng Hang Seng Index ang pinakamalalaking kumpanyang nakalista sa Hong Kong.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "shanghai": {
+   "about": "Sinusubaybayan ng Shanghai Composite ang lahat ng share na nakalista sa Shanghai Stock Exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "nifty-50": {
+   "about": "Sinusubaybayan ng Nifty 50 ang 50 malalaking kumpanyang nakalista sa National Stock Exchange ng India.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "sensex": {
+   "about": "Sinusubaybayan ng Sensex ang 30 malalaking kumpanyang nakalista sa Bombay Stock Exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "egx30": {
+   "about": "Sinusubaybayan ng EGX 30 ang 30 pinaka-aktibong kumpanya sa Egyptian Exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "tasi": {
+   "about": "Sinusubaybayan ng Tadawul All Share Index ang lahat ng kumpanyang nakalista sa Saudi stock exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "bist-100": {
+   "about": "Sinusubaybayan ng BIST 100 ang 100 pinakamalalaking kumpanya sa Borsa Istanbul.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "bovespa": {
+   "about": "Sinusubaybayan ng Bovespa ang mga pangunahing kumpanya sa B3 exchange ng Brazil.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "asx-200": {
+   "about": "Sinusubaybayan ng ASX 200 ang 200 pinakamalalaking kumpanya sa Australian exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "tsx": {
+   "about": "Sinusubaybayan ng S&P/TSX Composite ang mga pangunahing kumpanya sa Toronto Stock Exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "kospi": {
+   "about": "Sinusubaybayan ng KOSPI ang lahat ng common share sa Korea Exchange.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Sinusubaybayan ng Euro Stoxx 50 ang 50 malalaking kumpanya sa euro area.",
+   "drivers": [
+    "Kita ng kumpanya",
+    "Interest rate at inflation",
+    "Balitang pang-ekonomiya at pampulitika"
+   ]
+  }
+ }
+}
