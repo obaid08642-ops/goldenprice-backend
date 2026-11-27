@@ -6,13 +6,62 @@ import { COUNTRIES, langsFor } from "../../data/countries";
 import { legalOf, t } from "../../i18n/ui";
 import { SITE_NAME } from "../../lib/paths";
 export function getStaticPaths() {
-  return LANG_CODES.flatMap((lang) => ["about", "privacy", "contact"].map((legal) => ({ params: { lang, legal }, props: { lang, legal } })));
+  const PAGES = ["about", "terms", "privacy", "disclaimer", "cookies", "contact", "developers"];
+  return LANG_CODES.flatMap((lang) => PAGES.map((legal) => ({ params: { lang, legal }, props: { lang, legal } })));
 }
 const { lang, legal } = Astro.props;
 const country = COUNTRIES.find((c) => langsFor(c)[0] === lang) ?? COUNTRIES.find((c) => c.code === "US")!;
 const title = t(lang, legal);
 const paras = legalOf(lang, legal, SITE_NAME);
+const api = import.meta.env.PUBLIC_API_URL || "https://goldenprice-backend.onrender.com";
+const ui = { ok: t(lang, legal === "contact" ? "contact_ok" : "dev_key"), err: t(lang, legal === "contact" ? "contact_err" : "dev_err") };
 ---
-<Base lang={lang} country={country} slug="" title={`${title} – ${SITE_NAME}`} description={paras[0] ?? title}>
-  <main class="m"><section class="card prose"><h1>{title}</h1>{paras.map((p) => <p>{p}</p>)}</section></main>
+<Base lang={lang} country={country} slug="" path={`/${lang}/${legal}/`} title={`${title} – ${SITE_NAME}`} description={paras[0] ?? title}>
+  <main class="m" id="page" data-api={api} data-ui={JSON.stringify(ui)}>
+    <section class="card prose"><h1>{title}</h1>{paras.map((p) => <p>{p}</p>)}</section>
+    {legal === "contact" && (
+      <section class="card"><h2>{t(lang, "contact_title")}</h2>
+        <form class="form" id="contact-form" novalidate>
+          <label>{t(lang, "contact_name")}<input name="name" required autocomplete="name" /></label>
+          <label>{t(lang, "contact_email")}<input name="email" type="email" required autocomplete="email" /></label>
+          <label>{t(lang, "contact_msg")}<textarea name="message" required></textarea></label>
+          <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <button class="btn" type="submit">{t(lang, "contact_send")}</button><div class="msg" id="form-msg" role="status"></div></form></section>
+    )}
+    {legal === "developers" && (
+      <>
+        <section class="card"><h2>{t(lang, "dev_endpoints")}</h2><pre>{`GET ${api}/v1/overview
+GET ${api}/v1/chart/GOLD?days=365
+GET ${api}/v1/rates
+x-api-key: YOUR_KEY`}</pre><div class="k small">{t(lang, "dev_usage")}</div></section>
+        <section class="card"><h2>{t(lang, "dev_request")}</h2>
+          <form class="form" id="dev-form" novalidate>
+            <label>{t(lang, "dev_email")}<input name="email" type="email" required autocomplete="email" /></label>
+            <label>{t(lang, "dev_purpose")}<input name="purpose" /></label>
+            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+            <button class="btn" type="submit">{t(lang, "dev_get")}</button><div class="msg" id="form-msg" role="status"></div><pre id="key-out" hidden></pre></form></section>
+      </>
+    )}
+  </main>
+  <script>
+    // contact + API-key forms post to the backend; the honeypot field stays empty for people
+    const page = document.getElementById("page")!;
+    const api = page.dataset.api!, ui = JSON.parse(page.dataset.ui || "{}");
+    for (const [id, path] of [["contact-form", "/api/contact"], ["dev-form", "/api/keys"]] as const) {
+      const f = document.getElementById(id) as HTMLFormElement | null;
+      f?.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const msg = document.getElementById("form-msg")!, out = document.getElementById("key-out");
+        msg.className = "msg"; msg.textContent = "…";
+        try {
+          const r = await fetch(api + path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(Object.fromEntries(new FormData(f))) });
+          const j = await r.json();
+          if (!r.ok || !j.ok) throw new Error(j.error || "failed");
+          msg.className = "msg ok"; msg.textContent = ui.ok;
+          if (out && j.key) { out.hidden = false; out.textContent = j.key; }
+          if (!out) f.reset();
+        } catch { msg.className = "msg err"; msg.textContent = ui.err; }
+      });
+    }
+  </script>
 </Base>

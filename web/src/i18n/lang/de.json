@@ -1,211 +1,934 @@
 {
- "ui": {
-  "today": "heute",
-  "updated": "Aktualisiert {t}",
-  "delayed": "Verzögert",
-  "per": "pro {u}",
-  "u_gram": "Gramm",
-  "u_ounce": "Unze",
-  "u_kilo": "Kilo",
-  "u_tola": "Tola",
-  "u_ton": "Tonne",
-  "u_barrel": "Barrel",
-  "u_mmbtu": "MMBtu",
-  "u_gallon": "Gallone",
-  "u_bushel": "Bushel",
-  "u_lb": "Pfund",
-  "u_cwt": "Doppelzentner",
-  "u_coin": "Münze",
-  "u_point": "Punkte",
-  "global_vs_local": "Weltmarkt- vs. Ortspreis",
-  "global_price": "Weltmarktpreis",
-  "local_estimate": "Lokale Schätzung",
-  "est_retail": "Geschätzter Verkaufspreis inkl. Verarbeitungsaufschlag",
-  "est_note": "Nur eine Schätzung. Händler unterscheiden sich bei Steuern, Aufschlägen und Margen.",
-  "karat_title": "{a} nach Karat",
-  "karat": "Karat",
-  "purity": "Feingehalt",
-  "price": "Preis",
-  "currencies_title": "{a}-Preis in anderen Währungen",
-  "col_ounce": "Pro Unze",
-  "col_gram": "Pro Gramm",
-  "col_24h": "24 Std.",
-  "col_7d": "7 Tage",
-  "markets_title": "Metalle, Energie, Agrarrohstoffe und Krypto",
-  "markets_sub": "Live-Preise in {cur}",
-  "list_title": "Preise für Metalle, Energie, Rohstoffe und Krypto in {country}",
-  "list_desc": "Live-Preise für Gold, Silber, Platin, Kupfer, Öl, Gas, Weizen, Kaffee, Aktienindizes, Bitcoin und mehr in {cur}.",
-  "alerts_title": "Preisalarme",
-  "alerts_desc": "Erhalten Sie eine Benachrichtigung, wenn der Preis Ihr Ziel erreicht, aufs Handy oder per E-Mail.",
-  "alerts_cta": "Alarm erstellen",
-  "search_ph": "Suche z. B. {a} Preis in {country}…",
-  "search_btn": "Suchen",
-  "r1d": "1T",
-  "r1w": "1W",
-  "r1m": "1M",
-  "r1y": "1J",
-  "r5y": "5J",
-  "rall": "Alle",
-  "geo_ask": "Preise für {country} in {cur} anzeigen?",
-  "geo_yes": "Ja, wechseln",
-  "geo_no": "Nein danke",
-  "footer_note": "Preise sind unverbindlich und können verzögert sein. Keine Anlageberatung.",
-  "about": "Über uns",
-  "privacy": "Datenschutz",
-  "contact": "Kontakt",
-  "theme": "Design",
-  "language": "Sprache",
-  "country": "Land",
-  "faq_title": "Häufig gestellte Fragen",
-  "q1": "Was kostet {a} heute in {country}?",
-  "a1": "Der {a}-Preis in {country} liegt heute bei {p} {cur} pro {u}. Es ist der globale Spotpreis, umgerechnet zum aktuellen Wechselkurs und alle paar Minuten aktualisiert.",
-  "q2": "Warum weicht der Ortspreis vom Weltmarktpreis ab?",
-  "a2": "Händler schlagen auf den globalen Spotpreis Verarbeitungsaufschläge, Steuern, Einfuhrzölle und eine Händlermarge auf. Deshalb liegt der Verkaufspreis in {country} meist höher.",
-  "q3": "Wie oft wird der Preis aktualisiert?",
-  "a3": "Live-Marktpreise werden alle paar Minuten aktualisiert. Preise ohne Live-Datenfeed werden manuell gepflegt und zeigen ihren letzten Aktualisierungszeitpunkt.",
-  "title": "{a} Preis in {country} heute | pro {u} in {cur}",
-  "desc": "Aktueller {a}-Preis in {country} in {cur}: pro Gramm, Unze und Kilo, Kursverlauf sowie Weltmarkt- und Ortspreis. Alle paar Minuten aktualisiert.",
-  "title_idx": "{a} Index heute | aktueller Wert und Chart",
-  "desc_idx": "Aktueller Stand des {a}-Index, tägliche Veränderung und Kursverlauf. Alle paar Minuten aktualisiert.",
-  "history_note": "Der Verlauf basiert auf Tagesschlusskursen.",
-  "unit_label": "Einheit",
-  "sample_note": "Beispieldaten",
-  "nav_all": "Märkte",
-  "nav_rates": "Währungen",
-  "nav_calc": "Rechner",
-  "cat_precious": "Edelmetalle",
-  "cat_industrial": "Industriemetalle",
-  "cat_energy": "Energie",
-  "cat_agri": "Agrarrohstoffe",
-  "cat_index": "Aktienindizes",
-  "cat_crypto": "Krypto",
-  "bars_title": "{a}-Barren und Münzen: Ankaufs- und Verkaufspreis in {cur}",
-  "bar_size": "Größe",
-  "bar_buy": "Kaufpreis beim Händler",
-  "bar_sell": "Rückverkauf",
-  "bar_prem": "Aufschlag auf Spotpreis",
-  "bars_note": "Übliche Händlerpreise auf Basis des Weltmarktpreises plus üblichem Aufschlag. Die tatsächlichen Preise variieren je nach Händler und Tag.",
-  "used_title": "Altgold und Schrott {a}: Ankaufspreis pro Gramm in {cur}",
-  "used_note": "Altschmuck wird in der Regel unter dem Neupreis zurückgekauft. Dies sind übliche Richtwerte.",
-  "used_col": "Ankauf pro Gramm",
-  "rates_title": "Wechselkurse gegenüber {cur}",
-  "rates_sub": "Mittelkurse, stündlich aktualisiert",
-  "rates_desc": "Live-Wechselkurse der wichtigsten Weltwährungen gegenüber {cur}, dazu ein Währungsrechner.",
-  "rates_page_title": "Wechselkurse und Währungsrechner in {country}",
-  "conv_title": "Währungsrechner",
-  "conv_amount": "Betrag",
-  "conv_from": "Von",
-  "conv_to": "In",
-  "conv_result": "{amount} {from} = {value} {to}",
-  "calc_page_title": "Goldrechner und Zakat-Rechner in {country}",
-  "calc_page_desc": "Berechnen Sie den Wert Ihres Goldes nach Gewicht und Karat in {cur} und prüfen Sie die Zakat auf Gold und Silber mit den heutigen Preisen.",
-  "calc_title": "Goldwert-Rechner",
-  "calc_weight": "Gewicht",
-  "calc_unit": "Einheit",
-  "calc_karat": "Karat",
-  "calc_value": "Geschätzter Wert",
-  "calc_note": "Basierend auf dem Weltmarktpreis. Händler zahlen für Altgold meist weniger.",
-  "zakat_title": "Zakat auf Gold und Silber",
-  "zakat_nisab_gold": "Nisab Gold (85 Gramm)",
-  "zakat_nisab_silver": "Nisab Silber (595 Gramm)",
-  "zakat_gold_g": "Ihr Gold in Gramm (24-Karat-Äquivalent)",
-  "zakat_silver_g": "Ihr Silber in Gramm",
-  "zakat_due": "Fällige Zakat (2,5 %)",
-  "zakat_note": "Zakat fällt auf Vermögen an, das ein Mondjahr lang über dem Nisab liegt. Dies ist eine Orientierung, fragen Sie für Ihren Fall einen Gelehrten.",
-  "zakat_below": "Unter dem Nisab: Für diesen Betrag fällt keine Zakat an.",
-  "related_title": "Beliebte Suchanfragen",
-  "retail_basis": "Basierend auf {n} lokalen Quellen, geprüft am {d}."
- },
- "assets": {
-  "gold": "Gold",
-  "silver": "Silber",
-  "platinum": "Platin",
-  "palladium": "Palladium",
-  "copper": "Kupfer",
-  "aluminum": "Aluminium",
-  "nickel": "Nickel",
-  "zinc": "Zink",
-  "lead": "Blei",
-  "tin": "Zinn",
-  "cobalt": "Kobalt",
-  "lithium": "Lithium",
-  "uranium": "Uran",
-  "iron-ore": "Eisenerz",
-  "steel": "Stahl",
-  "wti-oil": "WTI-Rohöl",
-  "brent-oil": "Brent-Rohöl",
-  "natural-gas": "Erdgas",
-  "gasoline": "Benzin",
-  "heating-oil": "Heizöl",
-  "wheat": "Weizen",
-  "corn": "Mais",
-  "soybeans": "Sojabohnen",
-  "rice": "Reis",
-  "sugar": "Zucker",
-  "coffee": "Kaffee",
-  "cocoa": "Kakao",
-  "cotton": "Baumwolle",
-  "bitcoin": "Bitcoin",
-  "ethereum": "Ethereum",
-  "bnb": "BNB",
-  "xrp": "XRP",
-  "solana": "Solana",
-  "cardano": "Cardano",
-  "dogecoin": "Dogecoin",
-  "tron": "TRON",
-  "polkadot": "Polkadot",
-  "chainlink": "Chainlink",
-  "litecoin": "Litecoin",
-  "avalanche": "Avalanche",
-  "sp500": "S&P 500",
-  "nasdaq": "Nasdaq Composite",
-  "dow-jones": "Dow Jones",
-  "ftse-100": "FTSE 100",
-  "dax": "DAX",
-  "cac-40": "CAC 40",
-  "nikkei-225": "Nikkei 225",
-  "hang-seng": "Hang Seng",
-  "shanghai": "Shanghai Composite",
-  "nifty-50": "Nifty 50",
-  "sensex": "Sensex",
-  "egx30": "EGX 30",
-  "tasi": "Tadawul All Share (TASI)",
-  "bist-100": "BIST 100",
-  "bovespa": "Bovespa",
-  "asx-200": "ASX 200",
-  "tsx": "S&P/TSX Composite",
-  "kospi": "KOSPI",
-  "euro-stoxx-50": "Euro Stoxx 50"
- },
- "kw": {
-  "price": "preis",
-  "today": "heute",
-  "live": "live",
-  "rate": "kurs",
-  "per_gram": "pro gramm",
-  "ounce": "unze",
-  "bar": "barren",
-  "used": "altgold",
-  "karat": "karat",
-  "chart": "chart",
-  "convert": "umrechner",
-  "calculator": "rechner",
-  "zakat": "zakat"
- },
- "legal": {
-  "about": [
-   "{site} zeigt Live-Preise für Gold, Silber, andere Metalle, Öl, Gas, Agrarrohstoffe, Aktienindizes und Krypto in Ihrer eigenen Währung, für viele Länder und Sprachen.",
-   "Die Preise stammen aus öffentlichen Marktdatenfeeds und werden alle paar Minuten aktualisiert. Einige Preise werden manuell gepflegt und zeigen ihren letzten Aktualisierungszeitpunkt.",
-   "Lokale Verkaufsschätzungen rechnen übliche Steuern, Verarbeitungsaufschläge und Händleraufschläge auf den Weltmarktpreis auf. Sie sind Schätzungen, keine Angebote."
-  ],
-  "privacy": [
-   "Wir verlangen kein Konto und keine persönlichen Daten. Wir speichern nur Ihre Wahl von Sprache, Land und Design in Ihrem Browser.",
-   "Werbung, sofern aktiviert, wird von Google AdSense ausgeliefert, das Cookies verwenden kann, um passende Anzeigen zu zeigen. Sie können dies in Ihren Google-Anzeigeneinstellungen verwalten.",
-   "Zur Verbesserung der Website können anonyme, zusammengefasste Besuchsstatistiken erhoben werden."
-  ],
-  "contact": [
-   "Fragen, Korrekturen oder Partneranfragen: Bitte nutzen Sie die Kontaktadresse, die auf dieser Seite veröffentlicht wird, sobald die Website live ist.",
-   "Wenn Sie einen falschen Preis sehen, teilen Sie uns das Produkt, das Land und die Quelle des korrekten Werts mit."
-  ]
- }
+  "ui": {
+    "today": "heute",
+    "updated": "Aktualisiert {t}",
+    "delayed": "Verzögert",
+    "per": "pro {u}",
+    "u_gram": "Gramm",
+    "u_ounce": "Unze",
+    "u_kilo": "Kilo",
+    "u_tola": "Tola",
+    "u_ton": "Tonne",
+    "u_barrel": "Barrel",
+    "u_mmbtu": "MMBtu",
+    "u_gallon": "Gallone",
+    "u_bushel": "Bushel",
+    "u_lb": "Pfund",
+    "u_cwt": "Doppelzentner",
+    "u_coin": "Münze",
+    "u_point": "Punkte",
+    "global_vs_local": "Weltmarkt- vs. Ortspreis",
+    "global_price": "Weltmarktpreis",
+    "local_estimate": "Lokale Schätzung",
+    "est_retail": "Geschätzter Verkaufspreis inkl. Verarbeitungsaufschlag",
+    "est_note": "Nur eine Schätzung. Händler unterscheiden sich bei Steuern, Aufschlägen und Margen.",
+    "karat_title": "{a} nach Karat",
+    "karat": "Karat",
+    "purity": "Feingehalt",
+    "price": "Preis",
+    "currencies_title": "{a}-Preis in anderen Währungen",
+    "col_ounce": "Pro Unze",
+    "col_gram": "Pro Gramm",
+    "col_24h": "24 Std.",
+    "col_7d": "7 Tage",
+    "markets_title": "Metalle, Energie, Agrarrohstoffe und Krypto",
+    "markets_sub": "Live-Preise in {cur}",
+    "list_title": "Preise für Metalle, Energie, Rohstoffe und Krypto in {country}",
+    "list_desc": "Live-Preise für Gold, Silber, Platin, Kupfer, Öl, Gas, Weizen, Kaffee, Aktienindizes, Bitcoin und mehr in {cur}.",
+    "alerts_title": "Preisalarme",
+    "alerts_desc": "Erhalten Sie eine Benachrichtigung, wenn der Preis Ihr Ziel erreicht, aufs Handy oder per E-Mail.",
+    "alerts_cta": "Alarm erstellen",
+    "search_ph": "Suche z. B. {a} Preis in {country}…",
+    "search_btn": "Suchen",
+    "r1d": "1T",
+    "r1w": "1W",
+    "r1m": "1M",
+    "r1y": "1J",
+    "r5y": "5J",
+    "rall": "Alle",
+    "geo_ask": "Preise für {country} in {cur} anzeigen?",
+    "geo_yes": "Ja, wechseln",
+    "geo_no": "Nein danke",
+    "footer_note": "Preise sind unverbindlich und können verzögert sein. Keine Anlageberatung.",
+    "about": "Über uns",
+    "privacy": "Datenschutz",
+    "contact": "Kontakt",
+    "theme": "Design",
+    "language": "Sprache",
+    "country": "Land",
+    "faq_title": "Häufig gestellte Fragen",
+    "q1": "Was kostet {a} heute in {country}?",
+    "a1": "Der {a}-Preis in {country} liegt heute bei {p} {cur} pro {u}. Es ist der globale Spotpreis, umgerechnet zum aktuellen Wechselkurs und alle paar Minuten aktualisiert.",
+    "q2": "Warum weicht der Ortspreis vom Weltmarktpreis ab?",
+    "a2": "Händler schlagen auf den globalen Spotpreis Verarbeitungsaufschläge, Steuern, Einfuhrzölle und eine Händlermarge auf. Deshalb liegt der Verkaufspreis in {country} meist höher.",
+    "q3": "Wie oft wird der Preis aktualisiert?",
+    "a3": "Live-Marktpreise werden alle paar Minuten aktualisiert. Preise ohne Live-Datenfeed werden manuell gepflegt und zeigen ihren letzten Aktualisierungszeitpunkt.",
+    "title": "{a} Preis in {country} heute | pro {u} in {cur}",
+    "desc": "Aktueller {a}-Preis in {country} in {cur}: pro Gramm, Unze und Kilo, Kursverlauf sowie Weltmarkt- und Ortspreis. Alle paar Minuten aktualisiert.",
+    "title_idx": "{a} Index heute | aktueller Wert und Chart",
+    "desc_idx": "Aktueller Stand des {a}-Index, tägliche Veränderung und Kursverlauf. Alle paar Minuten aktualisiert.",
+    "history_note": "Der Verlauf basiert auf Tagesschlusskursen.",
+    "unit_label": "Einheit",
+    "sample_note": "Beispieldaten",
+    "nav_all": "Märkte",
+    "nav_rates": "Währungen",
+    "nav_calc": "Rechner",
+    "cat_precious": "Edelmetalle",
+    "cat_industrial": "Industriemetalle",
+    "cat_energy": "Energie",
+    "cat_agri": "Agrarrohstoffe",
+    "cat_index": "Aktienindizes",
+    "cat_crypto": "Krypto",
+    "bars_title": "{a}-Barren und Münzen: Ankaufs- und Verkaufspreis in {cur}",
+    "bar_size": "Größe",
+    "bar_buy": "Kaufpreis beim Händler",
+    "bar_sell": "Rückverkauf",
+    "bar_prem": "Aufschlag auf Spotpreis",
+    "bars_note": "Übliche Händlerpreise auf Basis des Weltmarktpreises plus üblichem Aufschlag. Die tatsächlichen Preise variieren je nach Händler und Tag.",
+    "used_title": "Altgold und Schrott {a}: Ankaufspreis pro Gramm in {cur}",
+    "used_note": "Altschmuck wird in der Regel unter dem Neupreis zurückgekauft. Dies sind übliche Richtwerte.",
+    "used_col": "Ankauf pro Gramm",
+    "rates_title": "Wechselkurse gegenüber {cur}",
+    "rates_sub": "Mittelkurse, stündlich aktualisiert",
+    "rates_desc": "Live-Wechselkurse der wichtigsten Weltwährungen gegenüber {cur}, dazu ein Währungsrechner.",
+    "rates_page_title": "Wechselkurse und Währungsrechner in {country}",
+    "conv_title": "Währungsrechner",
+    "conv_amount": "Betrag",
+    "conv_from": "Von",
+    "conv_to": "In",
+    "conv_result": "{amount} {from} = {value} {to}",
+    "calc_page_title": "Goldrechner und Zakat-Rechner in {country}",
+    "calc_page_desc": "Berechnen Sie den Wert Ihres Goldes nach Gewicht und Karat in {cur} und prüfen Sie die Zakat auf Gold und Silber mit den heutigen Preisen.",
+    "calc_title": "Goldwert-Rechner",
+    "calc_weight": "Gewicht",
+    "calc_unit": "Einheit",
+    "calc_karat": "Karat",
+    "calc_value": "Geschätzter Wert",
+    "calc_note": "Basierend auf dem Weltmarktpreis. Händler zahlen für Altgold meist weniger.",
+    "zakat_title": "Zakat auf Gold und Silber",
+    "zakat_nisab_gold": "Nisab Gold (85 Gramm)",
+    "zakat_nisab_silver": "Nisab Silber (595 Gramm)",
+    "zakat_gold_g": "Ihr Gold in Gramm (24-Karat-Äquivalent)",
+    "zakat_silver_g": "Ihr Silber in Gramm",
+    "zakat_due": "Fällige Zakat (2,5 %)",
+    "zakat_note": "Zakat fällt auf Vermögen an, das ein Mondjahr lang über dem Nisab liegt. Dies ist eine Orientierung, fragen Sie für Ihren Fall einen Gelehrten.",
+    "zakat_below": "Unter dem Nisab: Für diesen Betrag fällt keine Zakat an.",
+    "related_title": "Beliebte Suchanfragen",
+    "retail_basis": "Basierend auf {n} lokalen Quellen, geprüft am {d}.",
+    "u_share": "Anteil",
+    "u_rate": "Kurs",
+    "u_mbf": "1.000 Board Feet",
+    "cat_stock": "Aktien",
+    "cat_forex": "Währungspaare",
+    "cat_construction": "Baustoffe",
+    "perf_title": "Entwicklung",
+    "p_7d": "1 Woche",
+    "p_30d": "1 Monat",
+    "p_90d": "3 Monate",
+    "p_ytd": "Seit Jahresbeginn",
+    "p_1y": "1 Jahr",
+    "p_5y": "5 Jahre",
+    "range52": "52-Wochen-Spanne",
+    "ath": "Höchststand in unseren Daten",
+    "atl": "Tiefststand in unseren Daten",
+    "since": "Verlauf seit {d}",
+    "about_title": "Über {a}",
+    "drivers_title": "Was den Preis bewegt",
+    "uses_title": "Wofür es verwendet wird",
+    "source_note": "Quelle: {s}. Preise sind unverbindlich und können verzögert sein.",
+    "about_stock": "Aktien von {a} werden in {c} gehandelt. Die Seite zeigt den letzten verzögerten Kurs, die Veränderung heute und über längere Zeiträume sowie den gleichen Preis in anderen Währungen.",
+    "about_forex": "{a} zeigt, wie viel von der zweiten Währung eine Einheit der ersten Währung kostet. Die Kurse bewegen sich mit Zinsen, Inflation, Handel und den Wirtschaftsnachrichten beider Länder.",
+    "about_crypto": "{a} ist eine Kryptowährung. Ihr Preis entsteht im Handel an Börsen rund um die Uhr und kann sich schnell ändern. Die Seite zeigt den Live-Kurs, die Veränderung über verschiedene Zeiträume und den Preis in anderen Währungen.",
+    "about_commodity": "{a} ist ein gehandelter Rohstoff. Der Preis folgt Angebot, Nachfrage, Wetter, Währungen und Nachrichten. Die Seite zeigt den letzten Preis, die Veränderung über verschiedene Zeiträume und den Preis in anderen Währungen.",
+    "about_index": "{a} misst, wie sich ein Korb von Aktien entwickelt. Der Wert wird in Indexpunkten angegeben und bewegt sich mit den Aktienkursen der enthaltenen Unternehmen.",
+    "tail_list_title": "Aktien, Krypto, Währungspaare und weitere Rohstoffe",
+    "tail_list_desc": "Live-Preise globaler Aktien, weiterer Kryptowährungen, Währungspaare und zusätzlicher Rohstoffe mit Charts und Entwicklung.",
+    "tail_title": "{a} Preis heute | Live-Wert und Chart",
+    "tail_desc": "Live-Preis von {a} mit Chart und Entwicklung über 1 Woche, 1 Monat, 1 Jahr und mehr. Aktualisierung alle paar Minuten.",
+    "nav_dev": "Entwickler",
+    "nav_compare": "Vergleichen",
+    "terms": "Nutzungsbedingungen",
+    "disclaimer": "Haftungsausschluss",
+    "cookies": "Cookie-Richtlinie",
+    "developers": "API für Entwickler",
+    "alert_title": "Preisalarm einrichten",
+    "alert_email": "Ihre E-Mail",
+    "alert_target": "Zielpreis ({cur})",
+    "alert_above": "Steigt über",
+    "alert_below": "Fällt unter",
+    "alert_submit": "Alarm erstellen",
+    "alert_ok": "Alarm gespeichert. Wir schicken Ihnen einmal eine E-Mail, sobald der Preis Ihren Zielwert erreicht.",
+    "alert_err": "Der Alarm konnte nicht gespeichert werden. Prüfen Sie E-Mail und Preis und versuchen Sie es erneut.",
+    "alert_privacy": "Ihre E-Mail-Adresse verwenden wir nur für diesen Alarm.",
+    "contact_title": "Nachricht senden",
+    "contact_name": "Ihr Name",
+    "contact_email": "Ihre E-Mail",
+    "contact_msg": "Nachricht",
+    "contact_send": "Senden",
+    "contact_ok": "Vielen Dank. Ihre Nachricht wurde gesendet.",
+    "contact_err": "Die Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später noch einmal.",
+    "dev_title": "Kostenlose Preis-API",
+    "dev_desc": "Nutzen Sie unsere Preise in Ihrer eigenen App oder Website. Kostenlose Schlüssel sind auf 1.000 Anfragen pro Tag begrenzt. Bitte nennen Sie die Seite als Quelle.",
+    "dev_endpoints": "Endpunkte",
+    "dev_request": "Kostenlosen API-Schlüssel anfordern",
+    "dev_email": "Ihre E-Mail",
+    "dev_purpose": "Was möchten Sie entwickeln?",
+    "dev_get": "Schlüssel erstellen",
+    "dev_key": "Ihr API-Schlüssel (jetzt speichern, er wird nur einmal angezeigt)",
+    "dev_err": "Der Schlüssel konnte nicht erstellt werden. Prüfen Sie die E-Mail und versuchen Sie es erneut.",
+    "dev_usage": "Senden Sie den Schlüssel im Header x-api-key.",
+    "cmp_title": "Zwei Werte vergleichen",
+    "cmp_a": "Erster Wert",
+    "cmp_b": "Zweiter Wert",
+    "cmp_ratio": "Verhältnis (erster geteilt durch zweiten)",
+    "cmp_now": "Aktuell",
+    "cmp_desc": "Vergleichen Sie zwei beliebige Werte: das Verhältnis zwischen ihnen im Zeitverlauf, zum Beispiel das Gold-Silber-Verhältnis.",
+    "cmp_page_title": "Preise und Verhältnisse vergleichen in {country}",
+    "roi_title": "Gewinnrechner",
+    "roi_buy": "Kaufpreis",
+    "roi_amount": "Menge",
+    "roi_now": "Aktueller Preis",
+    "roi_profit": "Gewinn oder Verlust",
+    "roi_pct": "Rendite",
+    "units_title": "Einheitenrechner",
+    "units_value": "Wert",
+    "units_from": "Von",
+    "units_to": "Nach",
+    "calc_tools_desc": "Rechner für Goldwert, Zakat, Gewinn und Einheiten."
+  },
+  "assets": {
+    "gold": "Gold",
+    "silver": "Silber",
+    "platinum": "Platin",
+    "palladium": "Palladium",
+    "copper": "Kupfer",
+    "aluminum": "Aluminium",
+    "nickel": "Nickel",
+    "zinc": "Zink",
+    "lead": "Blei",
+    "tin": "Zinn",
+    "cobalt": "Kobalt",
+    "lithium": "Lithium",
+    "uranium": "Uran",
+    "iron-ore": "Eisenerz",
+    "steel": "Stahl",
+    "wti-oil": "WTI-Rohöl",
+    "brent-oil": "Brent-Rohöl",
+    "natural-gas": "Erdgas",
+    "gasoline": "Benzin",
+    "heating-oil": "Heizöl",
+    "wheat": "Weizen",
+    "corn": "Mais",
+    "soybeans": "Sojabohnen",
+    "rice": "Reis",
+    "sugar": "Zucker",
+    "coffee": "Kaffee",
+    "cocoa": "Kakao",
+    "cotton": "Baumwolle",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "bnb": "BNB",
+    "xrp": "XRP",
+    "solana": "Solana",
+    "cardano": "Cardano",
+    "dogecoin": "Dogecoin",
+    "tron": "TRON",
+    "polkadot": "Polkadot",
+    "chainlink": "Chainlink",
+    "litecoin": "Litecoin",
+    "avalanche": "Avalanche",
+    "sp500": "S&P 500",
+    "nasdaq": "Nasdaq Composite",
+    "dow-jones": "Dow Jones",
+    "ftse-100": "FTSE 100",
+    "dax": "DAX",
+    "cac-40": "CAC 40",
+    "nikkei-225": "Nikkei 225",
+    "hang-seng": "Hang Seng",
+    "shanghai": "Shanghai Composite",
+    "nifty-50": "Nifty 50",
+    "sensex": "Sensex",
+    "egx30": "EGX 30",
+    "tasi": "Tadawul All Share (TASI)",
+    "bist-100": "BIST 100",
+    "bovespa": "Bovespa",
+    "asx-200": "ASX 200",
+    "tsx": "S&P/TSX Composite",
+    "kospi": "KOSPI",
+    "euro-stoxx-50": "Euro Stoxx 50"
+  },
+  "kw": {
+    "price": "preis",
+    "today": "heute",
+    "live": "live",
+    "rate": "kurs",
+    "per_gram": "pro gramm",
+    "ounce": "unze",
+    "bar": "barren",
+    "used": "altgold",
+    "karat": "karat",
+    "chart": "chart",
+    "convert": "umrechner",
+    "calculator": "rechner",
+    "zakat": "zakat"
+  },
+  "legal": {
+    "about": [
+      "{site} zeigt Live-Preise für Gold, Silber, andere Metalle, Energie, Agrarrohstoffe, Aktien, Indizes, Kryptowährungen und Währungen in Ihrer eigenen Währung, für viele Länder und Sprachen.",
+      "Die Preise stammen aus öffentlichen Marktdatenquellen und werden alle paar Minuten aktualisiert. Einige Preise werden von öffentlichen Seiten oder manuell übernommen; die Quelle wird jeweils angegeben.",
+      "Lokale Einzelhandelsschätzungen rechnen übliche Steuern, Verarbeitungsaufschläge und Händleraufschläge auf den Weltmarktpreis auf. Quellen und Datum werden angezeigt. Es handelt sich um Schätzungen, nicht um verbindliche Angebote.",
+      "Außerdem bieten wir Rechner für Goldwert, Zakat, Gewinn und Einheiten, einen Währungsrechner und Preisalarme an."
+    ],
+    "privacy": [
+      "Wir verlangen kein Konto und keine persönlichen Daten. Wir speichern nur Ihre Wahl von Sprache, Land und Design in Ihrem Browser.",
+      "Werbung, sofern aktiviert, wird von Google AdSense ausgeliefert, das Cookies verwenden kann, um passende Anzeigen zu zeigen. Sie können dies in Ihren Google-Anzeigeneinstellungen verwalten.",
+      "Zur Verbesserung der Website können anonyme, zusammengefasste Besuchsstatistiken erhoben werden."
+    ],
+    "contact": [
+      "Fragen, Korrekturen oder Partneranfragen: Bitte nutzen Sie die Kontaktadresse, die auf dieser Seite veröffentlicht wird, sobald die Website live ist.",
+      "Wenn Sie einen falschen Preis sehen, teilen Sie uns das Produkt, das Land und die Quelle des korrekten Werts mit."
+    ],
+    "terms": [
+      "Mit der Nutzung von {site} stimmen Sie diesen Bedingungen zu. Die Seite dient der allgemeinen Information.",
+      "Preise, Charts und Schätzungen sind unverbindlich, können verzögert oder fehlerhaft sein und dürfen nicht als alleinige Grundlage für einen Kauf oder Verkauf dienen.",
+      "Die Daten dürfen nicht in großem Umfang kopiert oder weiterverkauft werden. Für automatisierten Zugriff nutzen Sie bitte unsere kostenlose API und nennen die Seite als Quelle.",
+      "Wir können jeden Teil des Dienstes jederzeit ändern oder einstellen und haften nicht für Verluste, die durch seine Nutzung entstehen."
+    ],
+    "disclaimer": [
+      "{site} ist kein Broker, keine Bank und kein Finanzberater und gibt keine Anlageempfehlungen.",
+      "Lokale Einzelhandelsschätzungen, Barrenaufschläge und Rückkaufwerte sind Schätzungen auf Basis öffentlicher Quellen. Händler unterscheiden sich; bestätigen Sie den Preis immer beim Verkäufer.",
+      "Frühere Wertentwicklungen lassen keine Rückschlüsse auf künftige Ergebnisse zu. Investitionen in Metalle, Aktien und Kryptowährungen bergen Risiken, einschließlich des Verlusts des eingesetzten Geldes."
+    ],
+    "cookies": [
+      "Wir verwenden nur den Browserspeicher, der nötig ist, um Sprache, Land und Design zu speichern.",
+      "Werbung wird, sofern aktiviert, von Google AdSense ausgespielt, das Cookies setzen kann, um passende Anzeigen zu zeigen. Sie können dies in Ihren Google-Anzeigeneinstellungen verwalten.",
+      "Besucherinnen und Besucher aus Regionen, in denen eine Einwilligung erforderlich ist, werden gefragt, bevor Werbe-Cookies verwendet werden."
+    ],
+    "developers": [
+      "Unsere Preis-API ist für kleine Projekte kostenlos. Erstellen Sie unten einen Schlüssel und senden Sie ihn im Header x-api-key.",
+      "Endpunkte: /v1/overview für alle Preise und Entwicklungen, /v1/chart/SYMBOL?days=365 für den Verlauf, /v1/rates für Währungskurse.",
+      "Kostenlose Schlüssel erlauben 1.000 Anfragen pro Tag. Antworten werden eine Minute zwischengespeichert; bitte rufen Sie die API nicht häufiger auf.",
+      "Bitte nennen Sie die Seite als Quelle, wenn Sie unsere Preise anzeigen."
+    ]
+  },
+  "content": {
+    "gold": {
+      "about": "Gold ist das am weitesten verbreitete Edelmetall und ein traditioneller Wertspeicher. Der Preis wird weltweit je Feinunze angegeben und in vielen lokalen Märkten je Gramm oder Tola. Schmuck wird nach Karat von 10K bis 24K verkauft.",
+      "drivers": [
+        "Zinsen und der US-Dollar",
+        "Inflation sowie wirtschaftliche oder politische Unsicherheit",
+        "Käufe der Zentralbanken und Anlagenachfrage"
+      ],
+      "uses": [
+        "Schmuck und Geschenke",
+        "Anlagebarren und Münzen",
+        "Elektronik und Zahnmedizin"
+      ]
+    },
+    "silver": {
+      "about": "Silber ist sowohl ein Edelmetall als auch ein Industriemetall. Der Preis wird je Feinunze angegeben; verkauft wird es als Barren, Münzen und Schmuck in Feinheitsgraden wie 999, 925 und 800.",
+      "drivers": [
+        "Industrienachfrage durch Solarmodule und Elektronik",
+        "Der Goldpreis und der US-Dollar",
+        "Anlagenachfrage nach Barren und Münzen"
+      ],
+      "uses": [
+        "Schmuck und Silberwaren",
+        "Solarmodule und Elektronik",
+        "Anlagebarren und Münzen"
+      ]
+    },
+    "platinum": {
+      "about": "Platin ist ein seltenes, dichtes Edelmetall, das in vielen Zeiträumen je Gewicht mehr wert war als Gold. Der Preis wird je Feinunze angegeben.",
+      "drivers": [
+        "Nachfrage durch Katalysatoren in Autos",
+        "Minenproduktion, vor allem in Südafrika und Russland",
+        "Anlagenachfrage und Goldpreis"
+      ],
+      "uses": [
+        "Katalysatoren",
+        "Schmuck",
+        "Chemische Industrie und Wasserstofftechnik"
+      ]
+    },
+    "palladium": {
+      "about": "Palladium ist ein seltenes Edelmetall, das vor allem in Katalysatoren für Benziner verwendet wird. Der Preis wird je Feinunze angegeben.",
+      "drivers": [
+        "Automobilproduktion und Abgasvorschriften",
+        "Minenproduktion aus Russland und Südafrika",
+        "Ersatz durch Platin"
+      ],
+      "uses": [
+        "Katalysatoren",
+        "Elektronik",
+        "Zahnmedizin und Schmuck"
+      ]
+    },
+    "copper": {
+      "about": "Kupfer ist das wichtigste Industriemetall. Der Preis wird je Tonne angegeben und gilt als Gradmesser für die globale Konjunktur.",
+      "drivers": [
+        "Nachfrage aus Bau und Industrie, vor allem in China",
+        "Minenangebot und Lagerbestände",
+        "Der US-Dollar und die Handelspolitik"
+      ],
+      "uses": [
+        "Elektrische Leitungen und Stromnetze",
+        "Bau und Installation",
+        "Elektroautos und erneuerbare Energien"
+      ]
+    },
+    "aluminum": {
+      "about": "Aluminium ist ein leichtes, vielfach eingesetztes Metall, das aus Bauxit unter hohem Stromeinsatz hergestellt wird. Der Preis wird je Tonne angegeben.",
+      "drivers": [
+        "Energiekosten für die Verhüttung",
+        "Nachfrage aus Autos, Verpackung und Bau",
+        "Produktion in China und Handelszölle"
+      ],
+      "uses": [
+        "Verpackungen und Dosen",
+        "Autos und Flugzeuge",
+        "Bauwesen"
+      ]
+    },
+    "nickel": {
+      "about": "Nickel ist ein Metall für rostfreien Stahl und Batterien. Der Preis wird je Tonne an der London Metal Exchange angegeben.",
+      "drivers": [
+        "Nachfrage nach Edelstahl",
+        "Nachfrage nach Batterien für Elektroautos",
+        "Angebot aus Indonesien und den Philippinen"
+      ],
+      "uses": [
+        "Edelstahl",
+        "Batterien",
+        "Legierungen"
+      ]
+    },
+    "zinc": {
+      "about": "Zink wird vor allem zum Verzinken von Stahl gegen Rost verwendet. Der Preis wird je Tonne angegeben.",
+      "drivers": [
+        "Nachfrage aus Stahl und Bau",
+        "Minenangebot und Schmelzleistung",
+        "Energiepreise in Europa und China"
+      ],
+      "uses": [
+        "Feuerverzinkung von Stahl",
+        "Messing und Legierungen",
+        "Batterien"
+      ]
+    },
+    "lead": {
+      "about": "Blei ist ein schweres Metall, das überwiegend in Fahrzeugbatterien steckt. Der Preis wird je Tonne angegeben.",
+      "drivers": [
+        "Nachfrage aus Auto- und Batteriebau",
+        "Angebot aus dem Recycling",
+        "Minenproduktion und Umweltauflagen"
+      ],
+      "uses": [
+        "Fahrzeugbatterien",
+        "Strahlenschutz",
+        "Kabel und Legierungen"
+      ]
+    },
+    "tin": {
+      "about": "Zinn ist ein seltenes Metall, das vor allem als Lötmittel in der Elektronik dient. Der Preis wird je Tonne angegeben.",
+      "drivers": [
+        "Nachfrage aus Elektronik und Chipindustrie",
+        "Minenangebot aus Indonesien, Myanmar und Peru",
+        "Lagerbestände und Handelsregeln"
+      ],
+      "uses": [
+        "Lötzinn für Elektronik",
+        "Konservendosen",
+        "Chemikalien"
+      ]
+    },
+    "cobalt": {
+      "about": "Kobalt ist ein Batteriemetall, das vor allem in der Demokratischen Republik Kongo gefördert wird. Der Preis wird je Tonne angegeben.",
+      "drivers": [
+        "Nachfrage nach Batterien für Elektroautos",
+        "Minenangebot im Kongo und Exportregeln",
+        "Veränderungen der Batteriechemie"
+      ],
+      "uses": [
+        "Batterien",
+        "Superlegierungen",
+        "Magnete"
+      ]
+    },
+    "lithium": {
+      "about": "Lithiumcarbonat ist der wichtigste Rohstoff für wiederaufladbare Batterien. Der angezeigte Preis gilt für Carbonat in Batteriequalität in China, umgerechnet in US-Dollar je Tonne.",
+      "drivers": [
+        "Verkaufszahlen von Elektroautos",
+        "Neue Minen- und Raffinerie-Kapazitäten",
+        "Staatliche Batteriepolitik"
+      ],
+      "uses": [
+        "Batterien für Elektroautos",
+        "Smartphones und Laptops",
+        "Energiespeicher"
+      ]
+    },
+    "uranium": {
+      "about": "Uran ist der Brennstoff für Kernkraftwerke. Der Preis wird in US-Dollar je Pfund U3O8 angegeben.",
+      "drivers": [
+        "Wiederinbetriebnahme von Kraftwerken und neue Reaktoren",
+        "Minenproduktion, vor allem aus Kasachstan und Kanada",
+        "Staatliche Lagerhaltung und Sanktionen"
+      ],
+      "uses": [
+        "Kernenergie",
+        "Medizinische Isotope"
+      ]
+    },
+    "iron-ore": {
+      "about": "Eisenerz ist der wichtigste Rohstoff für Stahl. Der angezeigte Preis gilt für Erz mit 62 % Eisengehalt, frei China, je Tonne.",
+      "drivers": [
+        "Stahlproduktion in China",
+        "Angebot aus Australien und Brasilien",
+        "Ausgaben für Immobilien und Infrastruktur"
+      ],
+      "uses": [
+        "Stahlherstellung"
+      ]
+    },
+    "steel": {
+      "about": "Stahl ist eine Eisenlegierung, die in fast allen Branchen verwendet wird. Der angezeigte Preis gilt für Betonstahl in China, umgerechnet in US-Dollar je Tonne.",
+      "drivers": [
+        "Baunachfrage",
+        "Kosten für Eisenerz und Kokskohle",
+        "Staatliche Produktionsgrenzen"
+      ],
+      "uses": [
+        "Gebäude und Brücken",
+        "Autos und Maschinen"
+      ]
+    },
+    "steel-hrc": {
+      "about": "Warmgewalzter Stahlcoil ist ein Flachstahlprodukt für die Industrie. Der angezeigte Preis gilt für Lieferung in den US-Mittelwesten je Tonne.",
+      "drivers": [
+        "US-Nachfrage aus Autoindustrie und Bau",
+        "Importzölle und Wettbewerb",
+        "Kosten für Rohstoffe und Energie"
+      ],
+      "uses": [
+        "Autos und Haushaltsgeräte",
+        "Rohre und Bauwesen"
+      ]
+    },
+    "lumber": {
+      "about": "Holz-Terminkontrakte bilden den Preis von Nadelholz für den Hausbau ab, angegeben je 1.000 Board Feet.",
+      "drivers": [
+        "Baubeginne und Hypothekenzinsen",
+        "Sägewerksproduktion und Waldbrände",
+        "Handelszölle zwischen den USA und Kanada"
+      ],
+      "uses": [
+        "Dachstühle und Rahmen",
+        "Möbel und Verpackungen"
+      ]
+    },
+    "wti-oil": {
+      "about": "WTI ist der US-Referenzpreis für Rohöl. Er wird je Barrel angegeben und in Cushing, Oklahoma, geliefert.",
+      "drivers": [
+        "Förderentscheidungen der OPEC und der USA",
+        "Globales Wirtschaftswachstum",
+        "Lagerbestände, Geopolitik und der US-Dollar"
+      ],
+      "uses": [
+        "Benzin, Diesel und Kerosin",
+        "Kunststoffe und Chemikalien"
+      ]
+    },
+    "brent-oil": {
+      "about": "Brent ist der weltweite Referenzpreis für Rohöl. Er wird je Barrel angegeben und bestimmt den Preis des meisten Öls, das außerhalb der USA gehandelt wird.",
+      "drivers": [
+        "Förderentscheidungen der OPEC+",
+        "Globale Nachfrage, vor allem aus China und Indien",
+        "Konflikte und Sanktionen in Förderregionen"
+      ],
+      "uses": [
+        "Benzin, Diesel und Kerosin",
+        "Kunststoffe und Chemikalien"
+      ]
+    },
+    "natural-gas": {
+      "about": "Erdgas wird hier als Preis des US-Referenzpunkts Henry Hub je MMBtu angegeben. Es dient zum Heizen, zur Stromerzeugung und in der Industrie.",
+      "drivers": [
+        "Wetter und Heizbedarf",
+        "Speicherstände und Förderung",
+        "Exporte von verflüssigtem Erdgas (LNG)"
+      ],
+      "uses": [
+        "Stromerzeugung",
+        "Heizen und Kochen zu Hause",
+        "Dünger und Chemikalien"
+      ]
+    },
+    "gasoline": {
+      "about": "Benzin-Terminkontrakte bilden die Großhandelspreise für Ottokraftstoff in US-Dollar je Gallone ab.",
+      "drivers": [
+        "Rohölpreis",
+        "Raffinerieleistung und Reisesaison",
+        "Lagerbestände und Vorschriften"
+      ],
+      "uses": [
+        "Kraftstoff für Autos"
+      ]
+    },
+    "heating-oil": {
+      "about": "Heizöl-Terminkontrakte bilden die Großhandelspreise für Diesel und Heizöl in US-Dollar je Gallone ab.",
+      "drivers": [
+        "Rohölpreis",
+        "Winterwetter",
+        "Dieselnachfrage von Lkw und Industrie"
+      ],
+      "uses": [
+        "Heizen im Haus",
+        "Dieselkraftstoff"
+      ]
+    },
+    "wheat": {
+      "about": "Weizen ist eines der wichtigsten Getreide der Welt. Der Preis wird je Bushel an der Börse in Chicago angegeben.",
+      "drivers": [
+        "Wetter in wichtigen Anbaugebieten",
+        "Exporte aus Russland, der Ukraine, den USA und der EU",
+        "Lagerbestände, Energiepreise und der US-Dollar"
+      ],
+      "uses": [
+        "Brot, Nudeln und Mehl",
+        "Tierfutter"
+      ]
+    },
+    "corn": {
+      "about": "Mais ist ein wichtiges Nahrungs- und Futtergetreide und zugleich eine Quelle für Ethanol. Der Preis wird je Bushel an der Börse in Chicago angegeben.",
+      "drivers": [
+        "Ernten in den USA und Brasilien",
+        "Nachfrage nach Ethanol und Tierfutter",
+        "Wetter und Exporte"
+      ],
+      "uses": [
+        "Tierfutter",
+        "Ethanol-Kraftstoff",
+        "Lebensmittel und Sirup"
+      ]
+    },
+    "soybeans": {
+      "about": "Sojabohnen werden zu Öl und Schrot verarbeitet. Der Preis wird je Bushel an der Börse in Chicago angegeben.",
+      "drivers": [
+        "Ernten in den USA, Brasilien und Argentinien",
+        "Importnachfrage aus China",
+        "Biokraftstoffpolitik"
+      ],
+      "uses": [
+        "Speiseöl",
+        "Tierfutter",
+        "Biodiesel"
+      ]
+    },
+    "rice": {
+      "about": "Rohreis ist ein Grundnahrungsmittel für Milliarden Menschen. Der Preis wird je Hundredweight (rund 45 kg) an der Börse in Chicago angegeben.",
+      "drivers": [
+        "Monsun und Erntebedingungen in Asien",
+        "Exportregeln in Indien, Thailand und Vietnam",
+        "Lagerbestände und Lebensmittelpreise"
+      ],
+      "uses": [
+        "Lebensmittel"
+      ]
+    },
+    "sugar": {
+      "about": "Rohzucker-Terminkontrakte bilden den Weltmarktpreis für Zucker ab, angegeben in US-Dollar je Pfund.",
+      "drivers": [
+        "Zuckerrohrernten in Brasilien und Indien",
+        "Ethanolnachfrage in Brasilien",
+        "Wetter und Währungen"
+      ],
+      "uses": [
+        "Lebensmittel und Getränke",
+        "Ethanol"
+      ]
+    },
+    "coffee": {
+      "about": "Arabica-Kaffee-Terminkontrakte bilden den Weltmarktpreis für Kaffeebohnen ab, angegeben in US-Dollar je Pfund.",
+      "drivers": [
+        "Wetter in Brasilien und Kolumbien",
+        "Lagerbestände und Exporte",
+        "Währungen und Nachfrage"
+      ],
+      "uses": [
+        "Kaffeegetränke"
+      ]
+    },
+    "cocoa": {
+      "about": "Kakao-Terminkontrakte bilden den Preis von Kakaobohnen ab, angegeben in US-Dollar je Tonne.",
+      "drivers": [
+        "Ernten an der Elfenbeinküste und in Ghana",
+        "Krankheiten und Wetter",
+        "Nachfrage nach Schokolade"
+      ],
+      "uses": [
+        "Schokolade und Süßwaren",
+        "Kosmetik"
+      ]
+    },
+    "cotton": {
+      "about": "Baumwoll-Terminkontrakte bilden den Weltmarktpreis für Rohbaumwolle ab, angegeben in US-Dollar je Pfund.",
+      "drivers": [
+        "Wetter in den USA, Indien und China",
+        "Nachfrage der Textilindustrie",
+        "Ölpreise und Währungen"
+      ],
+      "uses": [
+        "Kleidung und Textilien"
+      ]
+    },
+    "bitcoin": {
+      "about": "Bitcoin ist die erste und größte Kryptowährung. Sie wird rund um die Uhr an Börsen gehandelt, und ihre Menge ist auf 21 Millionen Coins begrenzt.",
+      "drivers": [
+        "Nachfrage von Anlegern und ETF-Zuflüsse",
+        "Zinsen und Risikobereitschaft",
+        "Regulierung und Nachrichten"
+      ]
+    },
+    "ethereum": {
+      "about": "Ethereum ist eine Blockchain für Smart Contracts und Anwendungen. Ihre Münze Ether ist die zweitgrößte Kryptowährung.",
+      "drivers": [
+        "Nutzung von Ethereum-Anwendungen",
+        "Netzwerk-Updates und Gebühren",
+        "Marktstimmung"
+      ]
+    },
+    "bnb": {
+      "about": "BNB ist die Münze der BNB Chain und des Ökosystems der Börse Binance.",
+      "drivers": [
+        "Börsenaktivität und Gebühren",
+        "Token-Verbrennungen",
+        "Regulierung"
+      ]
+    },
+    "xrp": {
+      "about": "XRP ist eine Kryptowährung für schnelle internationale Zahlungen im XRP Ledger.",
+      "drivers": [
+        "Nachrichten aus Gerichtsverfahren und Regulierung",
+        "Partnerschaften mit Banken und Zahlungsdienstleistern",
+        "Marktstimmung"
+      ]
+    },
+    "solana": {
+      "about": "Solana ist eine schnelle Blockchain für Anwendungen und Zahlungen. SOL ist ihre Münze.",
+      "drivers": [
+        "Aktivität von Anwendungen und Token",
+        "Netzwerkstabilität",
+        "Marktstimmung"
+      ]
+    },
+    "cardano": {
+      "about": "Cardano ist eine Blockchain mit Proof-of-Stake. ADA ist ihre Münze.",
+      "drivers": [
+        "Entwicklungsfortschritt",
+        "Staking",
+        "Marktstimmung"
+      ]
+    },
+    "dogecoin": {
+      "about": "Dogecoin entstand als Scherzmünze und zählt heute zu den meistgehandelten Kryptowährungen.",
+      "drivers": [
+        "Aufmerksamkeit in sozialen Medien",
+        "Marktstimmung",
+        "Verbreitung als Zahlungsmittel"
+      ]
+    },
+    "tron": {
+      "about": "TRON ist eine Blockchain, die häufig für Transfers von Stablecoins genutzt wird. TRX ist ihre Münze.",
+      "drivers": [
+        "Aktivität bei Stablecoin-Transfers",
+        "Netzwerkgebühren",
+        "Marktstimmung"
+      ]
+    },
+    "polkadot": {
+      "about": "Polkadot verbindet viele Blockchains miteinander. DOT ist ihre Münze.",
+      "drivers": [
+        "Netzwerkentwicklung",
+        "Staking",
+        "Marktstimmung"
+      ]
+    },
+    "chainlink": {
+      "about": "Chainlink liefert Daten aus der realen Welt an Blockchains. LINK ist ihre Münze.",
+      "drivers": [
+        "Nutzung durch andere Anwendungen",
+        "Partnerschaften",
+        "Marktstimmung"
+      ]
+    },
+    "litecoin": {
+      "about": "Litecoin gehört zu den ältesten Kryptowährungen und wurde für schnellere Zahlungen als Bitcoin geschaffen.",
+      "drivers": [
+        "Bitcoin-Kurs",
+        "Verbreitung als Zahlungsmittel",
+        "Marktstimmung"
+      ]
+    },
+    "avalanche": {
+      "about": "Avalanche ist eine schnelle Blockchain-Plattform. AVAX ist ihre Münze.",
+      "drivers": [
+        "Aktivität von Anwendungen",
+        "Netzwerk-Updates",
+        "Marktstimmung"
+      ]
+    },
+    "sp500": {
+      "about": "Der S&P 500 bildet 500 der größten US-Unternehmen ab und ist der wichtigste Gradmesser des US-Aktienmarkts.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "nasdaq": {
+      "about": "Der Nasdaq Composite bildet Tausende an der Nasdaq notierte Aktien ab, mit hohem Gewicht für Technologieunternehmen.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "dow-jones": {
+      "about": "Der Dow Jones Industrial Average bildet 30 große US-Unternehmen ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "ftse-100": {
+      "about": "Der FTSE 100 bildet die 100 größten Unternehmen ab, die in London notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "dax": {
+      "about": "Der DAX bildet 40 große deutsche Unternehmen ab, die in Frankfurt notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "cac-40": {
+      "about": "Der CAC 40 bildet 40 große Unternehmen ab, die in Paris notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "nikkei-225": {
+      "about": "Der Nikkei 225 bildet 225 große Unternehmen ab, die in Tokio notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "hang-seng": {
+      "about": "Der Hang-Seng-Index bildet die größten Unternehmen ab, die in Hongkong notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "shanghai": {
+      "about": "Der Shanghai Composite bildet alle Aktien ab, die an der Börse Shanghai notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "nifty-50": {
+      "about": "Der Nifty 50 bildet 50 große Unternehmen an der National Stock Exchange of India ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "sensex": {
+      "about": "Der Sensex bildet 30 große Unternehmen an der Bombay Stock Exchange ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "egx30": {
+      "about": "Der EGX 30 bildet die 30 aktivsten Unternehmen der ägyptischen Börse ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "tasi": {
+      "about": "Der Tadawul All Share Index bildet alle Unternehmen ab, die an der saudischen Börse notiert sind.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "bist-100": {
+      "about": "Der BIST 100 bildet die 100 größten Unternehmen an der Börse Istanbul ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "bovespa": {
+      "about": "Der Bovespa bildet die wichtigsten Unternehmen an der brasilianischen Börse B3 ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "asx-200": {
+      "about": "Der ASX 200 bildet die 200 größten Unternehmen an der australischen Börse ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "tsx": {
+      "about": "Der S&P/TSX Composite bildet die wichtigsten Unternehmen an der Toronto Stock Exchange ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "kospi": {
+      "about": "Der KOSPI bildet alle Stammaktien an der koreanischen Börse ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    },
+    "euro-stoxx-50": {
+      "about": "Der Euro Stoxx 50 bildet 50 große Unternehmen aus dem Euroraum ab.",
+      "drivers": [
+        "Unternehmensgewinne",
+        "Zinsen und Inflation",
+        "Wirtschafts- und politische Nachrichten"
+      ]
+    }
+  }
 }

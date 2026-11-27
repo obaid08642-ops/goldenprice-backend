@@ -1,211 +1,934 @@
 {
- "ui": {
-  "today": "vandaag",
-  "updated": "Bijgewerkt {t}",
-  "delayed": "Vertraagd",
-  "per": "per {u}",
-  "u_gram": "gram",
-  "u_ounce": "ounce",
-  "u_kilo": "kilo",
-  "u_tola": "tola",
-  "u_ton": "metrieke ton",
-  "u_barrel": "vat",
-  "u_mmbtu": "MMBtu",
-  "u_gallon": "gallon",
-  "u_bushel": "bushel",
-  "u_lb": "pond",
-  "u_cwt": "centner",
-  "u_coin": "munt",
-  "u_point": "punten",
-  "global_vs_local": "Wereldprijs vs. lokale prijs",
-  "global_price": "Wereldprijs",
-  "local_estimate": "Lokale schatting",
-  "est_retail": "Geschatte winkelprijs incl. makeloon",
-  "est_note": "Alleen een schatting. Winkels verschillen in belastingen, makeloon en marges.",
-  "karat_title": "{a} per karaat",
-  "karat": "Karaat",
-  "purity": "Zuiverheid",
-  "price": "Prijs",
-  "currencies_title": "{a}-prijs in andere valuta",
-  "col_ounce": "Per ounce",
-  "col_gram": "Per gram",
-  "col_24h": "24u",
-  "col_7d": "7 dagen",
-  "markets_title": "Metalen, energie, landbouw en crypto",
-  "markets_sub": "Live koersen in {cur}",
-  "list_title": "Prijzen van metalen, energie, grondstoffen en crypto in {country}",
-  "list_desc": "Live prijzen voor goud, zilver, platina, koper, olie, gas, tarwe, koffie, aandelenindices, bitcoin en meer in {cur}.",
-  "alerts_title": "Prijsalarmen",
-  "alerts_desc": "Ontvang een melding wanneer de prijs je doel bereikt, op je telefoon of per e-mail.",
-  "alerts_cta": "Alarm aanmaken",
-  "search_ph": "Zoek bijv. {a} prijs in {country}…",
-  "search_btn": "Zoeken",
-  "r1d": "1D",
-  "r1w": "1W",
-  "r1m": "1M",
-  "r1y": "1J",
-  "r5y": "5J",
-  "rall": "Alles",
-  "geo_ask": "Prijzen voor {country} in {cur} tonen?",
-  "geo_yes": "Ja, wisselen",
-  "geo_no": "Nee, bedankt",
-  "footer_note": "Prijzen zijn indicatief en kunnen vertraagd zijn. Dit is geen beleggingsadvies.",
-  "about": "Over ons",
-  "privacy": "Privacybeleid",
-  "contact": "Contact",
-  "theme": "Thema",
-  "language": "Taal",
-  "country": "Land",
-  "faq_title": "Veelgestelde vragen",
-  "q1": "Wat is de {a}-prijs vandaag in {country}?",
-  "a1": "De {a}-prijs in {country} is vandaag {p} {cur} per {u}. Dit is de wereldwijde spotprijs, omgerekend tegen de laatste wisselkoers en elke paar minuten bijgewerkt.",
-  "q2": "Waarom is de lokale prijs anders dan de wereldprijs?",
-  "a2": "Winkels rekenen bovenop de wereldwijde spotprijs makeloon, belastingen, invoerrechten en een dealermarge. Daarom ligt de winkelprijs in {country} meestal hoger.",
-  "q3": "Hoe vaak wordt de prijs bijgewerkt?",
-  "a3": "Live marktprijzen worden elke paar minuten ververst. Prijzen zonder live feed worden handmatig bijgewerkt en tonen het tijdstip van de laatste update.",
-  "title": "{a}-prijs in {country} vandaag | per {u} in {cur}",
-  "desc": "Live {a}-prijs in {country} in {cur}: per gram, ounce en kilo, koersgrafiek en de wereldprijs vs. lokale prijs. Elke paar minuten bijgewerkt.",
-  "title_idx": "{a}-index vandaag | live waarde en grafiek",
-  "desc_idx": "Live waarde van de {a}-index, dagelijkse verandering en koersgrafiek. Elke paar minuten bijgewerkt.",
-  "history_note": "De geschiedenis is opgebouwd uit dagelijkse slotkoersen.",
-  "unit_label": "Eenheid",
-  "sample_note": "Voorbeelddata",
-  "nav_all": "Markten",
-  "nav_rates": "Valuta",
-  "nav_calc": "Calculators",
-  "cat_precious": "Edelmetalen",
-  "cat_industrial": "Industriemetalen",
-  "cat_energy": "Energie",
-  "cat_agri": "Landbouw",
-  "cat_index": "Aandelenindices",
-  "cat_crypto": "Crypto",
-  "bars_title": "{a}-baren en munten: koop- en verkoopprijs in {cur}",
-  "bar_size": "Gewicht",
-  "bar_buy": "Koop bij dealer",
-  "bar_sell": "Terugverkopen",
-  "bar_prem": "Opslag op spotprijs",
-  "bars_note": "Gebruikelijke dealerprijzen op basis van de wereldprijs plus de gebruikelijke opslag. Werkelijke prijzen verschillen per winkel en dag.",
-  "used_title": "Gebruikt en schrap {a}: inkoopprijs per gram in {cur}",
-  "used_note": "Gebruikte sieraden worden meestal onder de nieuwprijs ingekocht. Dit zijn gebruikelijke schattingen.",
-  "used_col": "Inkoop per gram",
-  "rates_title": "Wisselkoersen tegenover {cur}",
-  "rates_sub": "Middenkoersen, elk uur bijgewerkt",
-  "rates_desc": "Live wisselkoersen van de belangrijkste wereldvaluta's tegenover {cur}, plus een valutaomrekenaar.",
-  "rates_page_title": "Wisselkoersen en valutaomrekenaar in {country}",
-  "conv_title": "Valutaomrekenaar",
-  "conv_amount": "Bedrag",
-  "conv_from": "Van",
-  "conv_to": "Naar",
-  "conv_result": "{amount} {from} = {value} {to}",
-  "calc_page_title": "Goudcalculator en zakatcalculator in {country}",
-  "calc_page_desc": "Bereken de waarde van je goud op gewicht en karaat in {cur} en controleer de zakat op goud en zilver met de prijzen van vandaag.",
-  "calc_title": "Goudwaarde-calculator",
-  "calc_weight": "Gewicht",
-  "calc_unit": "Eenheid",
-  "calc_karat": "Karaat",
-  "calc_value": "Geschatte waarde",
-  "calc_note": "Gebaseerd op de wereldprijs. Winkels betalen voor gebruikt goud meestal minder.",
-  "zakat_title": "Zakat op goud en zilver",
-  "zakat_nisab_gold": "Nisab goud (85 gram)",
-  "zakat_nisab_silver": "Nisab zilver (595 gram)",
-  "zakat_gold_g": "Je goud, in gram (24-karaat equivalent)",
-  "zakat_silver_g": "Je zilver, in gram",
-  "zakat_due": "Verschuldigde zakat (2,5%)",
-  "zakat_note": "Zakat is verschuldigd over vermogen boven de nisab dat een maanjaar wordt aangehouden. Dit is een richtlijn, vraag bij je eigen situatie een geleerde om advies.",
-  "zakat_below": "Onder de nisab: over dit bedrag is geen zakat verschuldigd.",
-  "related_title": "Populaire zoekopdrachten",
-  "retail_basis": "Gebaseerd op {n} lokale bronnen, gecontroleerd op {d}."
- },
- "assets": {
-  "gold": "Goud",
-  "silver": "Zilver",
-  "platinum": "Platina",
-  "palladium": "Palladium",
-  "copper": "Koper",
-  "aluminum": "Aluminium",
-  "nickel": "Nikkel",
-  "zinc": "Zink",
-  "lead": "Lood",
-  "tin": "Tin",
-  "cobalt": "Kobalt",
-  "lithium": "Lithium",
-  "uranium": "Uranium",
-  "iron-ore": "Ijzererts",
-  "steel": "Staal",
-  "wti-oil": "WTI-ruwe olie",
-  "brent-oil": "Brent-ruwe olie",
-  "natural-gas": "Aardgas",
-  "gasoline": "Benzine",
-  "heating-oil": "Stookolie",
-  "wheat": "Tarwe",
-  "corn": "Maïs",
-  "soybeans": "Sojabonen",
-  "rice": "Rijst",
-  "sugar": "Suiker",
-  "coffee": "Koffie",
-  "cocoa": "Cacao",
-  "cotton": "Katoen",
-  "bitcoin": "Bitcoin",
-  "ethereum": "Ethereum",
-  "bnb": "BNB",
-  "xrp": "XRP",
-  "solana": "Solana",
-  "cardano": "Cardano",
-  "dogecoin": "Dogecoin",
-  "tron": "TRON",
-  "polkadot": "Polkadot",
-  "chainlink": "Chainlink",
-  "litecoin": "Litecoin",
-  "avalanche": "Avalanche",
-  "sp500": "S&P 500",
-  "nasdaq": "Nasdaq Composite",
-  "dow-jones": "Dow Jones",
-  "ftse-100": "FTSE 100",
-  "dax": "DAX",
-  "cac-40": "CAC 40",
-  "nikkei-225": "Nikkei 225",
-  "hang-seng": "Hang Seng",
-  "shanghai": "Shanghai Composite",
-  "nifty-50": "Nifty 50",
-  "sensex": "Sensex",
-  "egx30": "EGX 30",
-  "tasi": "Tadawul All Share (TASI)",
-  "bist-100": "BIST 100",
-  "bovespa": "Bovespa",
-  "asx-200": "ASX 200",
-  "tsx": "S&P/TSX Composite",
-  "kospi": "KOSPI",
-  "euro-stoxx-50": "Euro Stoxx 50"
- },
- "kw": {
-  "price": "prijs",
-  "today": "vandaag",
-  "live": "live",
-  "rate": "koers",
-  "per_gram": "per gram",
-  "ounce": "ounce",
-  "bar": "baar",
-  "used": "gebruikt",
-  "karat": "karaat",
-  "chart": "grafiek",
-  "convert": "omrekenen",
-  "calculator": "calculator",
-  "zakat": "zakat"
- },
- "legal": {
-  "about": [
-   "{site} toont live prijzen voor goud, zilver, andere metalen, olie, gas, landbouwgrondstoffen, aandelenindices en crypto in je eigen valuta, voor veel landen en talen.",
-   "De prijzen komen uit openbare marktdatafeeds en worden elke paar minuten bijgewerkt. Sommige prijzen worden handmatig bijgewerkt en tonen het tijdstip van de laatste update.",
-   "Lokale winkelschattingen tellen gebruikelijke belastingen, makeloon en dealeropslagen op bij de wereldprijs. Het zijn schattingen, geen offertes."
-  ],
-  "privacy": [
-   "We vragen niet om accounts of persoonlijke gegevens. We slaan alleen je keuze van taal, land en thema op in je browser.",
-   "Advertenties, indien ingeschakeld, worden geleverd door Google AdSense, dat cookies kan gebruiken om relevante advertenties te tonen. Je kunt dit beheren in je Google-advertentie-instellingen.",
-   "Anonieme, geaggregeerde bezoekstatistieken kunnen worden verzameld om de site te verbeteren."
-  ],
-  "contact": [
-   "Vragen, correcties of samenwerkingsverzoeken: gebruik het contactadres dat op deze pagina wordt gepubliceerd zodra de site live is.",
-   "Als je een verkeerde prijs ziet, vertel ons dan het product, het land en waar je de juiste waarde zag."
-  ]
- }
+  "ui": {
+    "today": "vandaag",
+    "updated": "Bijgewerkt {t}",
+    "delayed": "Vertraagd",
+    "per": "per {u}",
+    "u_gram": "gram",
+    "u_ounce": "ounce",
+    "u_kilo": "kilo",
+    "u_tola": "tola",
+    "u_ton": "metrieke ton",
+    "u_barrel": "vat",
+    "u_mmbtu": "MMBtu",
+    "u_gallon": "gallon",
+    "u_bushel": "bushel",
+    "u_lb": "pond",
+    "u_cwt": "centner",
+    "u_coin": "munt",
+    "u_point": "punten",
+    "global_vs_local": "Wereldprijs vs. lokale prijs",
+    "global_price": "Wereldprijs",
+    "local_estimate": "Lokale schatting",
+    "est_retail": "Geschatte winkelprijs incl. makeloon",
+    "est_note": "Alleen een schatting. Winkels verschillen in belastingen, makeloon en marges.",
+    "karat_title": "{a} per karaat",
+    "karat": "Karaat",
+    "purity": "Zuiverheid",
+    "price": "Prijs",
+    "currencies_title": "{a}-prijs in andere valuta",
+    "col_ounce": "Per ounce",
+    "col_gram": "Per gram",
+    "col_24h": "24u",
+    "col_7d": "7 dagen",
+    "markets_title": "Metalen, energie, landbouw en crypto",
+    "markets_sub": "Live koersen in {cur}",
+    "list_title": "Prijzen van metalen, energie, grondstoffen en crypto in {country}",
+    "list_desc": "Live prijzen voor goud, zilver, platina, koper, olie, gas, tarwe, koffie, aandelenindices, bitcoin en meer in {cur}.",
+    "alerts_title": "Prijsalarmen",
+    "alerts_desc": "Ontvang een melding wanneer de prijs je doel bereikt, op je telefoon of per e-mail.",
+    "alerts_cta": "Alarm aanmaken",
+    "search_ph": "Zoek bijv. {a} prijs in {country}…",
+    "search_btn": "Zoeken",
+    "r1d": "1D",
+    "r1w": "1W",
+    "r1m": "1M",
+    "r1y": "1J",
+    "r5y": "5J",
+    "rall": "Alles",
+    "geo_ask": "Prijzen voor {country} in {cur} tonen?",
+    "geo_yes": "Ja, wisselen",
+    "geo_no": "Nee, bedankt",
+    "footer_note": "Prijzen zijn indicatief en kunnen vertraagd zijn. Dit is geen beleggingsadvies.",
+    "about": "Over ons",
+    "privacy": "Privacybeleid",
+    "contact": "Contact",
+    "theme": "Thema",
+    "language": "Taal",
+    "country": "Land",
+    "faq_title": "Veelgestelde vragen",
+    "q1": "Wat is de {a}-prijs vandaag in {country}?",
+    "a1": "De {a}-prijs in {country} is vandaag {p} {cur} per {u}. Dit is de wereldwijde spotprijs, omgerekend tegen de laatste wisselkoers en elke paar minuten bijgewerkt.",
+    "q2": "Waarom is de lokale prijs anders dan de wereldprijs?",
+    "a2": "Winkels rekenen bovenop de wereldwijde spotprijs makeloon, belastingen, invoerrechten en een dealermarge. Daarom ligt de winkelprijs in {country} meestal hoger.",
+    "q3": "Hoe vaak wordt de prijs bijgewerkt?",
+    "a3": "Live marktprijzen worden elke paar minuten ververst. Prijzen zonder live feed worden handmatig bijgewerkt en tonen het tijdstip van de laatste update.",
+    "title": "{a}-prijs in {country} vandaag | per {u} in {cur}",
+    "desc": "Live {a}-prijs in {country} in {cur}: per gram, ounce en kilo, koersgrafiek en de wereldprijs vs. lokale prijs. Elke paar minuten bijgewerkt.",
+    "title_idx": "{a}-index vandaag | live waarde en grafiek",
+    "desc_idx": "Live waarde van de {a}-index, dagelijkse verandering en koersgrafiek. Elke paar minuten bijgewerkt.",
+    "history_note": "De geschiedenis is opgebouwd uit dagelijkse slotkoersen.",
+    "unit_label": "Eenheid",
+    "sample_note": "Voorbeelddata",
+    "nav_all": "Markten",
+    "nav_rates": "Valuta",
+    "nav_calc": "Calculators",
+    "cat_precious": "Edelmetalen",
+    "cat_industrial": "Industriemetalen",
+    "cat_energy": "Energie",
+    "cat_agri": "Landbouw",
+    "cat_index": "Aandelenindices",
+    "cat_crypto": "Crypto",
+    "bars_title": "{a}-baren en munten: koop- en verkoopprijs in {cur}",
+    "bar_size": "Gewicht",
+    "bar_buy": "Koop bij dealer",
+    "bar_sell": "Terugverkopen",
+    "bar_prem": "Opslag op spotprijs",
+    "bars_note": "Gebruikelijke dealerprijzen op basis van de wereldprijs plus de gebruikelijke opslag. Werkelijke prijzen verschillen per winkel en dag.",
+    "used_title": "Gebruikt en schrap {a}: inkoopprijs per gram in {cur}",
+    "used_note": "Gebruikte sieraden worden meestal onder de nieuwprijs ingekocht. Dit zijn gebruikelijke schattingen.",
+    "used_col": "Inkoop per gram",
+    "rates_title": "Wisselkoersen tegenover {cur}",
+    "rates_sub": "Middenkoersen, elk uur bijgewerkt",
+    "rates_desc": "Live wisselkoersen van de belangrijkste wereldvaluta's tegenover {cur}, plus een valutaomrekenaar.",
+    "rates_page_title": "Wisselkoersen en valutaomrekenaar in {country}",
+    "conv_title": "Valutaomrekenaar",
+    "conv_amount": "Bedrag",
+    "conv_from": "Van",
+    "conv_to": "Naar",
+    "conv_result": "{amount} {from} = {value} {to}",
+    "calc_page_title": "Goudcalculator en zakatcalculator in {country}",
+    "calc_page_desc": "Bereken de waarde van je goud op gewicht en karaat in {cur} en controleer de zakat op goud en zilver met de prijzen van vandaag.",
+    "calc_title": "Goudwaarde-calculator",
+    "calc_weight": "Gewicht",
+    "calc_unit": "Eenheid",
+    "calc_karat": "Karaat",
+    "calc_value": "Geschatte waarde",
+    "calc_note": "Gebaseerd op de wereldprijs. Winkels betalen voor gebruikt goud meestal minder.",
+    "zakat_title": "Zakat op goud en zilver",
+    "zakat_nisab_gold": "Nisab goud (85 gram)",
+    "zakat_nisab_silver": "Nisab zilver (595 gram)",
+    "zakat_gold_g": "Je goud, in gram (24-karaat equivalent)",
+    "zakat_silver_g": "Je zilver, in gram",
+    "zakat_due": "Verschuldigde zakat (2,5%)",
+    "zakat_note": "Zakat is verschuldigd over vermogen boven de nisab dat een maanjaar wordt aangehouden. Dit is een richtlijn, vraag bij je eigen situatie een geleerde om advies.",
+    "zakat_below": "Onder de nisab: over dit bedrag is geen zakat verschuldigd.",
+    "related_title": "Populaire zoekopdrachten",
+    "retail_basis": "Gebaseerd op {n} lokale bronnen, gecontroleerd op {d}.",
+    "u_share": "Aandeel",
+    "u_rate": "Koers",
+    "u_mbf": "1.000 board feet",
+    "cat_stock": "Aandelen",
+    "cat_forex": "Valutaparen",
+    "cat_construction": "Bouwmaterialen",
+    "perf_title": "Rendement",
+    "p_7d": "1 week",
+    "p_30d": "1 maand",
+    "p_90d": "3 maanden",
+    "p_ytd": "Sinds begin dit jaar",
+    "p_1y": "1 jaar",
+    "p_5y": "5 jaar",
+    "range52": "52-weekbereik",
+    "ath": "Hoogste in onze data",
+    "atl": "Laagste in onze data",
+    "since": "Historie vanaf {d}",
+    "about_title": "Over {a}",
+    "drivers_title": "Wat de prijs beweegt",
+    "uses_title": "Waarvoor het wordt gebruikt",
+    "source_note": "Bron: {s}. Prijzen zijn indicatief en kunnen vertraagd zijn.",
+    "about_stock": "Aandelen van {a} worden verhandeld in {c}. De pagina toont de laatste vertraagde koers, de verandering vandaag en over langere periodes, en dezelfde prijs omgerekend naar andere valuta.",
+    "about_forex": "{a} laat zien hoeveel van de tweede valuta één eenheid van de eerste valuta koopt. Koersen bewegen mee met rentes, inflatie, handel en het economisch nieuws van beide landen.",
+    "about_crypto": "{a} is een cryptovaluta. De prijs wordt bepaald door handel op beurzen, dag en nacht, en kan snel veranderen. De pagina toont de live prijs, de verandering over verschillende periodes en de prijs in andere valuta.",
+    "about_commodity": "{a} is een verhandelde grondstof. De prijs volgt aanbod, vraag, het weer, valuta's en nieuws. De pagina toont de laatste prijs, de verandering over verschillende periodes en de prijs in andere valuta.",
+    "about_index": "{a} meet hoe een mandje aandelen presteert. De waarde is in indexpunten en beweegt mee met de aandelenkoersen van de bedrijven erin.",
+    "tail_list_title": "Aandelen, crypto, valutaparen en meer grondstoffen",
+    "tail_list_desc": "Live prijzen van wereldwijde aandelen, extra cryptovaluta's, valutaparen en extra grondstoffen, met grafieken en rendement.",
+    "tail_title": "{a} prijs vandaag | live waarde en grafiek",
+    "tail_desc": "Live {a}-prijs met grafiek en rendement over 1 week, 1 maand, 1 jaar en meer. Elke paar minuten bijgewerkt.",
+    "nav_dev": "Ontwikkelaars",
+    "nav_compare": "Vergelijken",
+    "terms": "Gebruiksvoorwaarden",
+    "disclaimer": "Disclaimer",
+    "cookies": "Cookiebeleid",
+    "developers": "API voor ontwikkelaars",
+    "alert_title": "Stel een prijsalert in",
+    "alert_email": "Je e-mail",
+    "alert_target": "Doelprijs ({cur})",
+    "alert_above": "Stijgt boven",
+    "alert_below": "Daalt onder",
+    "alert_submit": "Alert maken",
+    "alert_ok": "Alert opgeslagen. We mailen je één keer zodra de prijs je doel bereikt.",
+    "alert_err": "Het alert kon niet worden opgeslagen. Controleer e-mail en prijs en probeer het opnieuw.",
+    "alert_privacy": "We gebruiken je e-mailadres alleen voor deze alert.",
+    "contact_title": "Stuur ons een bericht",
+    "contact_name": "Je naam",
+    "contact_email": "Je e-mail",
+    "contact_msg": "Bericht",
+    "contact_send": "Verzenden",
+    "contact_ok": "Bedankt. Je bericht is verzonden.",
+    "contact_err": "Het bericht kon niet worden verzonden. Probeer het later opnieuw.",
+    "dev_title": "Gratis prijs-API",
+    "dev_desc": "Gebruik onze prijzen in je eigen app of website. Gratis sleutels zijn beperkt tot 1.000 verzoeken per dag. Vermeld de site als bron.",
+    "dev_endpoints": "Endpoints",
+    "dev_request": "Gratis API-sleutel aanvragen",
+    "dev_email": "Je e-mail",
+    "dev_purpose": "Wat ga je bouwen?",
+    "dev_get": "Sleutel ophalen",
+    "dev_key": "Je API-sleutel (bewaar hem nu, hij wordt maar één keer getoond)",
+    "dev_err": "Er kon geen sleutel worden aangemaakt. Controleer je e-mail en probeer het opnieuw.",
+    "dev_usage": "Stuur de sleutel in de header x-api-key.",
+    "cmp_title": "Vergelijk twee assets",
+    "cmp_a": "Eerste asset",
+    "cmp_b": "Tweede asset",
+    "cmp_ratio": "Verhouding (eerste gedeeld door tweede)",
+    "cmp_now": "Nu",
+    "cmp_desc": "Vergelijk twee willekeurige assets: de verhouding tussen beide in de tijd, bijvoorbeeld de goud-zilververhouding.",
+    "cmp_page_title": "Prijzen en verhoudingen vergelijken in {country}",
+    "roi_title": "Winstcalculator",
+    "roi_buy": "Aankoopprijs",
+    "roi_amount": "Hoeveelheid",
+    "roi_now": "Huidige prijs",
+    "roi_profit": "Winst of verlies",
+    "roi_pct": "Rendement",
+    "units_title": "Eenhedenomrekenaar",
+    "units_value": "Waarde",
+    "units_from": "Van",
+    "units_to": "Naar",
+    "calc_tools_desc": "Rekenmachines voor goudwaarde, zakat, winst en eenheden."
+  },
+  "assets": {
+    "gold": "Goud",
+    "silver": "Zilver",
+    "platinum": "Platina",
+    "palladium": "Palladium",
+    "copper": "Koper",
+    "aluminum": "Aluminium",
+    "nickel": "Nikkel",
+    "zinc": "Zink",
+    "lead": "Lood",
+    "tin": "Tin",
+    "cobalt": "Kobalt",
+    "lithium": "Lithium",
+    "uranium": "Uranium",
+    "iron-ore": "Ijzererts",
+    "steel": "Staal",
+    "wti-oil": "WTI-ruwe olie",
+    "brent-oil": "Brent-ruwe olie",
+    "natural-gas": "Aardgas",
+    "gasoline": "Benzine",
+    "heating-oil": "Stookolie",
+    "wheat": "Tarwe",
+    "corn": "Maïs",
+    "soybeans": "Sojabonen",
+    "rice": "Rijst",
+    "sugar": "Suiker",
+    "coffee": "Koffie",
+    "cocoa": "Cacao",
+    "cotton": "Katoen",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "bnb": "BNB",
+    "xrp": "XRP",
+    "solana": "Solana",
+    "cardano": "Cardano",
+    "dogecoin": "Dogecoin",
+    "tron": "TRON",
+    "polkadot": "Polkadot",
+    "chainlink": "Chainlink",
+    "litecoin": "Litecoin",
+    "avalanche": "Avalanche",
+    "sp500": "S&P 500",
+    "nasdaq": "Nasdaq Composite",
+    "dow-jones": "Dow Jones",
+    "ftse-100": "FTSE 100",
+    "dax": "DAX",
+    "cac-40": "CAC 40",
+    "nikkei-225": "Nikkei 225",
+    "hang-seng": "Hang Seng",
+    "shanghai": "Shanghai Composite",
+    "nifty-50": "Nifty 50",
+    "sensex": "Sensex",
+    "egx30": "EGX 30",
+    "tasi": "Tadawul All Share (TASI)",
+    "bist-100": "BIST 100",
+    "bovespa": "Bovespa",
+    "asx-200": "ASX 200",
+    "tsx": "S&P/TSX Composite",
+    "kospi": "KOSPI",
+    "euro-stoxx-50": "Euro Stoxx 50"
+  },
+  "kw": {
+    "price": "prijs",
+    "today": "vandaag",
+    "live": "live",
+    "rate": "koers",
+    "per_gram": "per gram",
+    "ounce": "ounce",
+    "bar": "baar",
+    "used": "gebruikt",
+    "karat": "karaat",
+    "chart": "grafiek",
+    "convert": "omrekenen",
+    "calculator": "calculator",
+    "zakat": "zakat"
+  },
+  "legal": {
+    "about": [
+      "{site} toont live prijzen voor goud, zilver, andere metalen, energie, landbouwgrondstoffen, aandelen, indices, cryptovaluta's en valuta's in je eigen valuta, voor veel landen en talen.",
+      "De prijzen komen uit openbare marktdatabronnen en worden elke paar minuten bijgewerkt. Sommige prijzen worden van openbare pagina's of handmatig overgenomen en tonen hun bron.",
+      "Lokale winkelprijzen zijn schattingen: ze tellen gebruikelijke belastingen, bewerkingskosten en handelaarsopslagen op bij de wereldprijs. Bronnen en datum worden getoond. Het zijn schattingen, geen offertes.",
+      "We bieden daarnaast rekenmachines voor goudwaarde, zakat, winst en eenheden, een valutaomrekenaar en prijsalerts."
+    ],
+    "privacy": [
+      "We vragen niet om accounts of persoonlijke gegevens. We slaan alleen je keuze van taal, land en thema op in je browser.",
+      "Advertenties, indien ingeschakeld, worden geleverd door Google AdSense, dat cookies kan gebruiken om relevante advertenties te tonen. Je kunt dit beheren in je Google-advertentie-instellingen.",
+      "Anonieme, geaggregeerde bezoekstatistieken kunnen worden verzameld om de site te verbeteren."
+    ],
+    "contact": [
+      "Vragen, correcties of samenwerkingsverzoeken: gebruik het contactadres dat op deze pagina wordt gepubliceerd zodra de site live is.",
+      "Als je een verkeerde prijs ziet, vertel ons dan het product, het land en waar je de juiste waarde zag."
+    ],
+    "terms": [
+      "Door {site} te gebruiken ga je akkoord met deze voorwaarden. De site is bedoeld als algemene informatie.",
+      "Prijzen, grafieken en schattingen zijn indicatief, kunnen vertraagd of onjuist zijn en mogen niet als enige basis voor een handel of aankoop worden gebruikt.",
+      "Je mag de gegevens niet in bulk kopiëren of doorverkopen. Voor geautomatiseerde toegang gebruik je onze gratis API en vermeld je de site als bron.",
+      "We kunnen elk onderdeel van de dienst op elk moment wijzigen of stopzetten, en we zijn niet aansprakelijk voor verliezen door het gebruik ervan."
+    ],
+    "disclaimer": [
+      "{site} is geen makelaar, bank of financieel adviseur en geeft geen beleggingsadvies.",
+      "Lokale winkelprijzen, staafopslagen en inkoopcijfers zijn schattingen op basis van openbare bronnen. Winkels verschillen; bevestig de prijs altijd bij de verkoper.",
+      "Het verleden voorspelt de toekomst niet. Beleggen in metalen, aandelen en cryptovaluta's brengt risico's met zich mee, waaronder het verlies van het belegde geld."
+    ],
+    "cookies": [
+      "We gebruiken alleen de browseropslag die nodig is om je taal, land en thema te onthouden.",
+      "Advertenties worden, wanneer ingeschakeld, geleverd door Google AdSense, dat cookies mag plaatsen om relevante advertenties te tonen. Je kunt dit beheren in je Google-advertentie-instellingen.",
+      "Bezoekers in regio's die toestemming vereisen, worden gevraagd voordat advertentiecookies worden gebruikt."
+    ],
+    "developers": [
+      "Onze prijs-API is gratis voor kleine projecten. Maak hieronder een sleutel aan en stuur die in de header x-api-key.",
+      "Endpoints: /v1/overview voor alle prijzen en rendement, /v1/chart/SYMBOL?days=365 voor historie, /v1/rates voor valutakoersen.",
+      "Gratis sleutels staan 1.000 verzoeken per dag toe. Antwoorden worden een minuut in de cache bewaard; roep de API alsjeblieft niet sneller aan.",
+      "Vermeld de site als bron wanneer je onze prijzen toont."
+    ]
+  },
+  "content": {
+    "gold": {
+      "about": "Goud is het meest gehouden edelmetaal en een traditionele waardeopslag. De prijs wordt wereldwijd per troy ounce genoteerd en in veel lokale markten per gram of tola. Sieraden worden verkocht per karaat, van 10K tot 24K.",
+      "drivers": [
+        "Rentes en de Amerikaanse dollar",
+        "Inflatie en economische of politieke onzekerheid",
+        "Aankopen door centrale banken en beleggingsvraag"
+      ],
+      "uses": [
+        "Sieraden en cadeaus",
+        "Beleggingsstaven en munten",
+        "Elektronica en tandheelkunde"
+      ]
+    },
+    "silver": {
+      "about": "Zilver is zowel een edelmetaal als een industrieel metaal. De prijs wordt per troy ounce genoteerd en het wordt verkocht als staven, munten en sieraden in gehalten als 999, 925 en 800.",
+      "drivers": [
+        "Industriële vraag van zonnepanelen en elektronica",
+        "De goudprijs en de Amerikaanse dollar",
+        "Beleggingsvraag naar staven en munten"
+      ],
+      "uses": [
+        "Sieraden en zilverwerk",
+        "Zonnepanelen en elektronica",
+        "Beleggingsstaven en munten"
+      ]
+    },
+    "platinum": {
+      "about": "Platina is een zeldzaam, zwaar edelmetaal dat in veel periodes per gewicht meer waard was dan goud. De prijs wordt per troy ounce genoteerd.",
+      "drivers": [
+        "Vraag van katalysatoren in auto's",
+        "Mijnproductie, vooral in Zuid-Afrika en Rusland",
+        "Beleggingsvraag en de goudprijs"
+      ],
+      "uses": [
+        "Katalysatoren",
+        "Sieraden",
+        "Chemische industrie en waterstoftechnologie"
+      ]
+    },
+    "palladium": {
+      "about": "Palladium is een zeldzaam edelmetaal dat vooral in katalysatoren van benzineauto's wordt gebruikt. De prijs wordt per troy ounce genoteerd.",
+      "drivers": [
+        "Autoproductie en uitstootregels",
+        "Mijnaanbod uit Rusland en Zuid-Afrika",
+        "Vervanging door platina"
+      ],
+      "uses": [
+        "Katalysatoren",
+        "Elektronica",
+        "Tandheelkunde en sieraden"
+      ]
+    },
+    "copper": {
+      "about": "Koper is het belangrijkste industriële metaal. De prijs wordt per metrieke ton genoteerd en wordt gevolgd als graadmeter voor de wereldeconomie.",
+      "drivers": [
+        "Vraag uit bouw en industrie, vooral in China",
+        "Mijnaanbod en voorraden",
+        "De Amerikaanse dollar en het handelsbeleid"
+      ],
+      "uses": [
+        "Elektrische bedrading en stroomnetten",
+        "Bouw en installaties",
+        "Elektrische auto's en hernieuwbare energie"
+      ]
+    },
+    "aluminum": {
+      "about": "Aluminium is een licht, veelgebruikt metaal dat uit bauxiet wordt gemaakt met grote hoeveelheden elektriciteit. De prijs wordt per metrieke ton genoteerd.",
+      "drivers": [
+        "Energiekosten voor het smelten",
+        "Vraag van auto's, verpakkingen en bouw",
+        "Productie in China en handelstarieven"
+      ],
+      "uses": [
+        "Verpakkingen en blikjes",
+        "Auto's en vliegtuigen",
+        "Bouw"
+      ]
+    },
+    "nickel": {
+      "about": "Nikkel is een metaal dat wordt gebruikt voor roestvrij staal en batterijen. De prijs wordt per metrieke ton genoteerd op de London Metal Exchange.",
+      "drivers": [
+        "Vraag naar roestvrij staal",
+        "Vraag naar batterijen voor elektrische auto's",
+        "Aanbod uit Indonesië en de Filipijnen"
+      ],
+      "uses": [
+        "Roestvrij staal",
+        "Batterijen",
+        "Legeringen"
+      ]
+    },
+    "zinc": {
+      "about": "Zink wordt vooral gebruikt om staal tegen roest te verzinken. De prijs wordt per metrieke ton genoteerd.",
+      "drivers": [
+        "Vraag uit staal en bouw",
+        "Mijnaanbod en productie van smelterijen",
+        "Energieprijzen in Europa en China"
+      ],
+      "uses": [
+        "Verzinken van staal",
+        "Messing en legeringen",
+        "Batterijen"
+      ]
+    },
+    "lead": {
+      "about": "Lood is een zwaar metaal dat vooral in autobatterijen zit. De prijs wordt per metrieke ton genoteerd.",
+      "drivers": [
+        "Vraag van auto's en batterijen",
+        "Aanbod uit recycling",
+        "Mijnproductie en milieuregels"
+      ],
+      "uses": [
+        "Autobatterijen",
+        "Stralingsafscherming",
+        "Kabels en legeringen"
+      ]
+    },
+    "tin": {
+      "about": "Tin is een zeldzaam metaal dat vooral als soldeer in elektronica wordt gebruikt. De prijs wordt per metrieke ton genoteerd.",
+      "drivers": [
+        "Vraag van elektronica en chips",
+        "Mijnaanbod uit Indonesië, Myanmar en Peru",
+        "Voorraden en handelsregels"
+      ],
+      "uses": [
+        "Soldeer voor elektronica",
+        "Conservenblikken",
+        "Chemicaliën"
+      ]
+    },
+    "cobalt": {
+      "about": "Kobalt is een batterijmetaal dat vooral in de Democratische Republiek Congo wordt gedolven. De prijs wordt per metrieke ton genoteerd.",
+      "drivers": [
+        "Vraag van elektrische auto's en batterijen",
+        "Mijnaanbod in Congo en exportregels",
+        "Veranderingen in batterijchemie"
+      ],
+      "uses": [
+        "Batterijen",
+        "Superlegeringen",
+        "Magneten"
+      ]
+    },
+    "lithium": {
+      "about": "Lithiumcarbonaat is de belangrijkste grondstof voor oplaadbare batterijen. De getoonde prijs geldt voor carbonaat van batterijkwaliteit in China, omgerekend naar Amerikaanse dollar per metrieke ton.",
+      "drivers": [
+        "Verkoop van elektrische auto's",
+        "Nieuw aanbod van mijnen en raffinaderijen",
+        "Overheidsbeleid voor batterijen"
+      ],
+      "uses": [
+        "Batterijen voor elektrische auto's",
+        "Telefoons en laptops",
+        "Energieopslag"
+      ]
+    },
+    "uranium": {
+      "about": "Uranium is de brandstof van kerncentrales. De prijs wordt in Amerikaanse dollar per pond U3O8 genoteerd.",
+      "drivers": [
+        "Herstart van centrales en nieuwe reactoren",
+        "Mijnproductie, vooral uit Kazachstan en Canada",
+        "Overheidsvoorraden en sancties"
+      ],
+      "uses": [
+        "Kernenergie",
+        "Medische isotopen"
+      ]
+    },
+    "iron-ore": {
+      "about": "IJzererts is de belangrijkste grondstof voor staal. De getoonde prijs geldt voor erts met 62% ijzergehalte, geleverd in China, per metrieke ton.",
+      "drivers": [
+        "Chinese staalproductie",
+        "Aanbod uit Australië en Brazilië",
+        "Uitgaven aan vastgoed en infrastructuur"
+      ],
+      "uses": [
+        "Staalproductie"
+      ]
+    },
+    "steel": {
+      "about": "Staal is een ijzerlegering die in bijna elke industrie wordt gebruikt. De getoonde prijs geldt voor wapeningsstaal in China, omgerekend naar Amerikaanse dollar per metrieke ton.",
+      "drivers": [
+        "Bouwvraag",
+        "Kosten van ijzererts en cokeskolen",
+        "Overheidsbeperkingen op productie"
+      ],
+      "uses": [
+        "Gebouwen en bruggen",
+        "Auto's en machines"
+      ]
+    },
+    "steel-hrc": {
+      "about": "Warmgewalste stalen coil is een plat staalproduct voor de industrie. De getoonde prijs geldt voor levering in het Amerikaanse Midwesten, per metrieke ton.",
+      "drivers": [
+        "Amerikaanse vraag van auto's en bouw",
+        "Importheffingen en concurrentie",
+        "Kosten van grondstoffen en energie"
+      ],
+      "uses": [
+        "Auto's en apparaten",
+        "Buizen en bouw"
+      ]
+    },
+    "lumber": {
+      "about": "Houtfutures volgen de prijs van naaldhout dat voor huizenbouw wordt gebruikt, genoteerd per 1.000 board feet.",
+      "drivers": [
+        "Start van woningbouw en hypotheekrente",
+        "Zaagmolenproductie en bosbranden",
+        "Handelsheffingen tussen de VS en Canada"
+      ],
+      "uses": [
+        "Dakconstructies en kaders",
+        "Meubels en verpakkingen"
+      ]
+    },
+    "wti-oil": {
+      "about": "WTI is de Amerikaanse maatstaf voor ruwe olie. De prijs wordt per vat genoteerd en geleverd in Cushing, Oklahoma.",
+      "drivers": [
+        "Productiebesluiten van OPEC en de VS",
+        "Mondiale economische groei",
+        "Voorraden, geopolitiek en de Amerikaanse dollar"
+      ],
+      "uses": [
+        "Benzine, diesel en kerosine",
+        "Kunststoffen en chemicaliën"
+      ]
+    },
+    "brent-oil": {
+      "about": "Brent is de wereldwijde maatstaf voor ruwe olie. De prijs wordt per vat genoteerd en bepaalt de prijs van het meeste olie dat buiten de VS wordt verhandeld.",
+      "drivers": [
+        "Productiebesluiten van OPEC+",
+        "Mondiale vraag, vooral uit China en India",
+        "Conflicten en sancties in producerende regio's"
+      ],
+      "uses": [
+        "Benzine, diesel en kerosine",
+        "Kunststoffen en chemicaliën"
+      ]
+    },
+    "natural-gas": {
+      "about": "Aardgas wordt hier genoteerd als de Amerikaanse Henry Hub-prijs per MMBtu. Het wordt gebruikt voor verwarming, elektriciteitsopwekking en industrie.",
+      "drivers": [
+        "Weer en vraag naar verwarming",
+        "Opslagniveaus en productie",
+        "Export van vloeibaar aardgas (LNG)"
+      ],
+      "uses": [
+        "Elektriciteitsopwekking",
+        "Verwarming en koken thuis",
+        "Kunstmest en chemicaliën"
+      ]
+    },
+    "gasoline": {
+      "about": "Benzinefutures volgen de groothandelsprijzen van benzine, in Amerikaanse dollar per gallon.",
+      "drivers": [
+        "Ruwe olieprijs",
+        "Raffinageproductie en rijseizoen",
+        "Voorraden en regelgeving"
+      ],
+      "uses": [
+        "Brandstof voor auto's"
+      ]
+    },
+    "heating-oil": {
+      "about": "Stookoliefutures volgen de groothandelsprijzen van diesel en stookolie, in Amerikaanse dollar per gallon.",
+      "drivers": [
+        "Ruwe olieprijs",
+        "Winterweer",
+        "Dieselvraag van vrachtwagens en industrie"
+      ],
+      "uses": [
+        "Verwarming thuis",
+        "Dieselbrandstof"
+      ]
+    },
+    "wheat": {
+      "about": "Tarwe is een van de belangrijkste voedselgranen ter wereld. De prijs wordt per bushel genoteerd op de beurs van Chicago.",
+      "drivers": [
+        "Weer in belangrijke teeltgebieden",
+        "Export uit Rusland, Oekraïne, de VS en de EU",
+        "Voorraden, energieprijzen en de Amerikaanse dollar"
+      ],
+      "uses": [
+        "Brood, pasta en meel",
+        "Diervoeder"
+      ]
+    },
+    "corn": {
+      "about": "Maïs is een belangrijk voedsel- en veevoedergraan en tevens een bron van ethanol. De prijs wordt per bushel genoteerd op de beurs van Chicago.",
+      "drivers": [
+        "Oogsten in de VS en Brazilië",
+        "Vraag naar ethanol en diervoeder",
+        "Weer en export"
+      ],
+      "uses": [
+        "Diervoeder",
+        "Ethanolbrandstof",
+        "Voeding en stroop"
+      ]
+    },
+    "soybeans": {
+      "about": "Sojabonen worden verwerkt tot olie en schroot. De prijs wordt per bushel genoteerd op de beurs van Chicago.",
+      "drivers": [
+        "Oogsten in de VS, Brazilië en Argentinië",
+        "Importvraag uit China",
+        "Biobrandstofbeleid"
+      ],
+      "uses": [
+        "Bakolie",
+        "Diervoeder",
+        "Biodiesel"
+      ]
+    },
+    "rice": {
+      "about": "Ongepelde rijst is een basisvoedsel voor miljarden mensen. De prijs wordt per hundredweight (ruim 45 kg) genoteerd op de beurs van Chicago.",
+      "drivers": [
+        "Moessonweer en oogstomstandigheden in Azië",
+        "Exportregels van India, Thailand en Vietnam",
+        "Voorraden en voedselprijzen"
+      ],
+      "uses": [
+        "Voeding"
+      ]
+    },
+    "sugar": {
+      "about": "Ruwe suikerfutures volgen de wereldprijs van suiker, genoteerd in Amerikaanse dollar per pond.",
+      "drivers": [
+        "Suikerrietoogsten in Brazilië en India",
+        "Vraag naar ethanol in Brazilië",
+        "Weer en valuta's"
+      ],
+      "uses": [
+        "Voeding en dranken",
+        "Ethanol"
+      ]
+    },
+    "coffee": {
+      "about": "Arabica-koffiefutures volgen de wereldprijs van koffiebonen, genoteerd in Amerikaanse dollar per pond.",
+      "drivers": [
+        "Weer in Brazilië en Colombia",
+        "Voorraden en export",
+        "Valuta's en vraag"
+      ],
+      "uses": [
+        "Koffiedranken"
+      ]
+    },
+    "cocoa": {
+      "about": "Cacaofutures volgen de prijs van cacaobonen, genoteerd in Amerikaanse dollar per metrieke ton.",
+      "drivers": [
+        "Oogsten in Ivoorkust en Ghana",
+        "Ziekte en weer",
+        "Vraag naar chocolade"
+      ],
+      "uses": [
+        "Chocolade en snoep",
+        "Cosmetica"
+      ]
+    },
+    "cotton": {
+      "about": "Katoenfutures volgen de wereldprijs van ruw katoen, genoteerd in Amerikaanse dollar per pond.",
+      "drivers": [
+        "Weer in de VS, India en China",
+        "Vraag van de textielindustrie",
+        "Olieprijzen en valuta's"
+      ],
+      "uses": [
+        "Kleding en textiel"
+      ]
+    },
+    "bitcoin": {
+      "about": "Bitcoin is de eerste en grootste cryptovaluta. Er wordt dag en nacht op beurzen gehandeld en het aantal munten is beperkt tot 21 miljoen.",
+      "drivers": [
+        "Vraag van beleggers en ETF-instroom",
+        "Rentes en risicobereidheid",
+        "Regelgeving en nieuws"
+      ]
+    },
+    "ethereum": {
+      "about": "Ethereum is een blockchain voor slimme contracten en applicaties. De munt ether is de op één na grootste cryptovaluta.",
+      "drivers": [
+        "Gebruik van Ethereum-applicaties",
+        "Netwerkupgrades en kosten",
+        "Marktsentiment"
+      ]
+    },
+    "bnb": {
+      "about": "BNB is de munt van de BNB Chain en het ecosysteem van de beurs Binance.",
+      "drivers": [
+        "Beursactiviteit en kosten",
+        "Token-verbrandingen",
+        "Regelgeving"
+      ]
+    },
+    "xrp": {
+      "about": "XRP is een cryptovaluta voor snelle internationale betalingen op het XRP Ledger.",
+      "drivers": [
+        "Nieuws uit rechtszaken en regelgeving",
+        "Partnerschappen met banken en betaalbedrijven",
+        "Marktsentiment"
+      ]
+    },
+    "solana": {
+      "about": "Solana is een snelle blockchain voor applicaties en betalingen. SOL is de munt.",
+      "drivers": [
+        "Activiteit van applicaties en tokens",
+        "Netwerkbetrouwbaarheid",
+        "Marktsentiment"
+      ]
+    },
+    "cardano": {
+      "about": "Cardano is een proof-of-stake-blockchain. ADA is de munt.",
+      "drivers": [
+        "Voortgang van de ontwikkeling",
+        "Staking",
+        "Marktsentiment"
+      ]
+    },
+    "dogecoin": {
+      "about": "Dogecoin begon als grap en is uitgegroeid tot een van de meest verhandelde cryptovaluta's.",
+      "drivers": [
+        "Aandacht op sociale media",
+        "Marktsentiment",
+        "Adoptie als betaalmiddel"
+      ]
+    },
+    "tron": {
+      "about": "TRON is een blockchain die veel wordt gebruikt voor overboekingen van stablecoins. TRX is de munt.",
+      "drivers": [
+        "Activiteit van stablecoin-overboekingen",
+        "Netwerkkosten",
+        "Marktsentiment"
+      ]
+    },
+    "polkadot": {
+      "about": "Polkadot verbindt veel blockchains met elkaar. DOT is de munt.",
+      "drivers": [
+        "Netwerkontwikkeling",
+        "Staking",
+        "Marktsentiment"
+      ]
+    },
+    "chainlink": {
+      "about": "Chainlink levert data uit de echte wereld aan blockchains. LINK is de munt.",
+      "drivers": [
+        "Gebruik door andere applicaties",
+        "Partnerschappen",
+        "Marktsentiment"
+      ]
+    },
+    "litecoin": {
+      "about": "Litecoin is een van de oudste cryptovaluta's, gemaakt voor snellere betalingen dan Bitcoin.",
+      "drivers": [
+        "Bitcoin-prijs",
+        "Adoptie als betaalmiddel",
+        "Marktsentiment"
+      ]
+    },
+    "avalanche": {
+      "about": "Avalanche is een snel blockchainplatform. AVAX is de munt.",
+      "drivers": [
+        "Activiteit van applicaties",
+        "Netwerkupgrades",
+        "Marktsentiment"
+      ]
+    },
+    "sp500": {
+      "about": "De S&P 500 volgt 500 van de grootste Amerikaanse bedrijven en is de belangrijkste graadmeter van de Amerikaanse aandelenmarkt.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "nasdaq": {
+      "about": "De Nasdaq Composite volgt duizenden aandelen op de Nasdaq, met een zware weging van techbedrijven.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "dow-jones": {
+      "about": "De Dow Jones Industrial Average volgt 30 grote Amerikaanse bedrijven.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "ftse-100": {
+      "about": "De FTSE 100 volgt de 100 grootste bedrijven die in Londen zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "dax": {
+      "about": "De DAX volgt 40 grote Duitse bedrijven die in Frankfurt zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "cac-40": {
+      "about": "De CAC 40 volgt 40 grote bedrijven die in Parijs zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "nikkei-225": {
+      "about": "De Nikkei 225 volgt 225 grote bedrijven die in Tokio zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "hang-seng": {
+      "about": "De Hang Seng-index volgt de grootste bedrijven die in Hongkong zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "shanghai": {
+      "about": "De Shanghai Composite volgt alle aandelen die aan de beurs van Shanghai zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "nifty-50": {
+      "about": "De Nifty 50 volgt 50 grote bedrijven op de National Stock Exchange van India.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "sensex": {
+      "about": "De Sensex volgt 30 grote bedrijven op de Bombay Stock Exchange.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "egx30": {
+      "about": "De EGX 30 volgt de 30 meest actieve bedrijven op de Egyptische beurs.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "tasi": {
+      "about": "De Tadawul All Share Index volgt alle bedrijven die aan de Saoedische beurs zijn genoteerd.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "bist-100": {
+      "about": "De BIST 100 volgt de 100 grootste bedrijven op de Borsa Istanbul.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "bovespa": {
+      "about": "De Bovespa volgt de belangrijkste bedrijven op de Braziliaanse beurs B3.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "asx-200": {
+      "about": "De ASX 200 volgt de 200 grootste bedrijven op de Australische beurs.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "tsx": {
+      "about": "De S&P/TSX Composite volgt de belangrijkste bedrijven op de Toronto Stock Exchange.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "kospi": {
+      "about": "De KOSPI volgt alle gewone aandelen op de Koreaanse beurs.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    },
+    "euro-stoxx-50": {
+      "about": "De Euro Stoxx 50 volgt 50 grote bedrijven uit het eurogebied.",
+      "drivers": [
+        "Winstcijfers van bedrijven",
+        "Rentes en inflatie",
+        "Economisch en politiek nieuws"
+      ]
+    }
+  }
 }

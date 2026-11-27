@@ -114,7 +114,87 @@
   "zakat_note": "Zaka hulipwa kwa mali inayoshikiliwa kwa mwaka mmoja wa mwezi na inayozidi nisabu. Huu ni mwongozo tu; muulize mwanazuoni kuhusu hali yako.",
   "zakat_below": "Chini ya nisabu: hakuna zaka inayolipwa kwa kiasi hiki.",
   "related_title": "Utafutaji maarufu",
-  "retail_basis": "Kulingana na vyanzo {n} vya ndani, vilivyokaguliwa {d}."
+  "retail_basis": "Kulingana na vyanzo {n} vya ndani, vilivyokaguliwa {d}.",
+  "u_share": "hisa",
+  "u_rate": "kiwango",
+  "u_mbf": "1,000 board feet",
+  "cat_stock": "Hisa",
+  "cat_forex": "Jozi za sarafu",
+  "cat_construction": "Vifaa vya ujenzi",
+  "perf_title": "Utendaji",
+  "p_7d": "Wiki 1",
+  "p_30d": "Mwezi 1",
+  "p_90d": "Miezi 3",
+  "p_ytd": "Tangu mwanzo wa mwaka",
+  "p_1y": "Mwaka 1",
+  "p_5y": "Miaka 5",
+  "range52": "Kiwango cha wiki 52",
+  "ath": "Kubwa zaidi katika data yetu",
+  "atl": "Ndogo zaidi katika data yetu",
+  "since": "Historia tangu {d}",
+  "about_title": "Kuhusu {a}",
+  "drivers_title": "Kinachosukuma bei",
+  "uses_title": "Matumizi yake",
+  "source_note": "Chanzo: {s}. Bei ni za kukadiria na zinaweza kucheleweshwa.",
+  "about_stock": "Hisa za {a} zinauzwa kwa {c}. Ukurasa huu unaonyesha bei ya hivi karibuni iliyocheleweshwa kidogo, mabadiliko ya leo na ya vipindi virefu zaidi, pamoja na bei hiyo hiyo iliyobadilishwa kuwa sarafu nyingine.",
+  "about_forex": "{a} inaonyesha kiasi cha sarafu ya pili kinachonunuliwa kwa kitengo kimoja cha sarafu ya kwanza. Viwango hubadilika kulingana na riba, mfumuko wa bei, biashara na habari za kiuchumi za nchi zote mbili.",
+  "about_crypto": "{a} ni sarafu ya kidijitali. Bei yake huamuliwa na biashara kwenye mabadilishano yanayofanya kazi saa 24 na inaweza kubadilika haraka. Ukurasa huu unaonyesha bei ya moja kwa moja, mabadiliko katika vipindi tofauti na bei katika sarafu nyingine.",
+  "about_commodity": "{a} ni bidhaa inayouzwa sokoni. Bei yake hufuata ugavi, mahitaji, hali ya hewa, sarafu na habari. Ukurasa huu unaonyesha bei ya hivi karibuni, mabadiliko katika vipindi tofauti na bei katika sarafu nyingine.",
+  "about_index": "{a} hupima utendaji wa kundi la hisa. Thamani yake ni katika pointi za faharasa na hubadilika kulingana na bei za hisa za kampuni zake.",
+  "tail_list_title": "Hisa, kripto, jozi za sarafu na bidhaa zaidi",
+  "tail_list_desc": "Bei za moja kwa moja za hisa za kimataifa, kripto zaidi, jozi za sarafu na bidhaa za ziada, pamoja na chati na utendaji.",
+  "tail_title": "Bei ya {a} leo | thamani ya moja kwa moja na chati",
+  "tail_desc": "Bei ya moja kwa moja ya {a} pamoja na chati na utendaji wa wiki 1, mwezi 1, mwaka 1 na zaidi. Inasasishwa kila dakika chache.",
+  "nav_dev": "Wasanidi",
+  "nav_compare": "Linganisha",
+  "terms": "Masharti ya matumizi",
+  "disclaimer": "Tahadhari",
+  "cookies": "Sera ya vidakuzi",
+  "developers": "API kwa wasanidi",
+  "alert_title": "Pata tahadhari ya bei",
+  "alert_email": "Barua pepe yako",
+  "alert_target": "Bei lengwa ({cur})",
+  "alert_above": "Ipande zaidi ya",
+  "alert_below": "Ishuke chini ya",
+  "alert_submit": "Unda tahadhari",
+  "alert_ok": "Tahadhari imehifadhiwa. Tutakutumia barua pepe mara moja bei itakapofikia lengo lako.",
+  "alert_err": "Haikuweza kuhifadhi tahadhari. Angalia barua pepe na bei kisha ujaribu tena.",
+  "alert_privacy": "Tunatumia barua pepe yako kutuma tahadhari hii pekee.",
+  "contact_title": "Tutumie ujumbe",
+  "contact_name": "Jina lako",
+  "contact_email": "Barua pepe yako",
+  "contact_msg": "Ujumbe",
+  "contact_send": "Tuma",
+  "contact_ok": "Asante. Ujumbe wako umetumwa.",
+  "contact_err": "Haikuweza kutuma ujumbe. Tafadhali jaribu tena baadaye.",
+  "dev_title": "API ya bei bure",
+  "dev_desc": "Tumia bei zetu kwenye programu au tovuti yako. Funguo za bure zina kikomo cha maombi 1,000 kwa siku. Tafadhali taja tovuti yetu.",
+  "dev_endpoints": "Viungo vya API",
+  "dev_request": "Pata funguo ya API bure",
+  "dev_email": "Barua pepe yako",
+  "dev_purpose": "Utajenga nini?",
+  "dev_get": "Pata funguo",
+  "dev_key": "Funguo yako ya API (ihifadhi sasa, huonyeshwa mara moja tu)",
+  "dev_err": "Haikuweza kuunda funguo. Angalia barua pepe na ujaribu tena.",
+  "dev_usage": "Tuma funguo kwenye kichwa cha x-api-key.",
+  "cmp_title": "Linganisha mali mbili",
+  "cmp_a": "Mali ya kwanza",
+  "cmp_b": "Mali ya pili",
+  "cmp_ratio": "Uwiano (ya kwanza kugawanywa na ya pili)",
+  "cmp_now": "Sasa",
+  "cmp_desc": "Linganisha mali yoyote mbili: uwiano kati yake kwa muda, kwa mfano uwiano wa dhahabu na fedha.",
+  "cmp_page_title": "Linganisha bei na uwiano katika {country}",
+  "roi_title": "Kikokotoo cha faida",
+  "roi_buy": "Bei ya kununua",
+  "roi_amount": "Kiasi",
+  "roi_now": "Bei ya sasa",
+  "roi_profit": "Faida au hasara",
+  "roi_pct": "Mapato",
+  "units_title": "Kibadilishaji cha vipimo",
+  "units_value": "Thamani",
+  "units_from": "Kutoka",
+  "units_to": "Kwenda",
+  "calc_tools_desc": "Vikokotoo vya thamani ya dhahabu, zaka, faida na vipimo."
  },
  "assets": {
   "gold": "Dhahabu",
@@ -194,9 +274,10 @@
  },
  "legal": {
   "about": [
-   "{site} inaonyesha bei za moja kwa moja za dhahabu, fedha, madini mengine, mafuta, gesi, bidhaa za kilimo, fahirisi za hisa na kripto kwa sarafu yako mwenyewe, kwa nchi na lugha nyingi.",
-   "Bei zinatoka kwenye mialisho ya data ya soko la umma na zinasasishwa kila dakika chache. Baadhi ya bei husasishwa kwa mkono na huonyesha muda wa sasisho la mwisho.",
-   "Makadirio ya rejareja ya ndani huongeza kodi, gharama za utengenezaji na ziada za wauzaji kwenye bei ya dunia. Ni makadirio, si nukuu rasmi."
+   "{site} inaonyesha bei za moja kwa moja za dhahabu, fedha, madini mengine, nishati, mazao ya kilimo, hisa, faharasa, kripto na sarafu katika sarafu yako mwenyewe, kwa nchi na lugha nyingi.",
+   "Bei hutoka kwenye mipasho ya data ya soko la umma na husasishwa kila dakika chache. Bei nyingine husasishwa kutoka kurasa za umma au kwa mkono, na huonyesha chanzo chake.",
+   "Makadirio ya bei ya rejareja ya ndani huongeza kodi, gharama za utengenezaji na faida ya kawaida ya wauzaji juu ya bei ya kimataifa, pamoja na vyanzo na tarehe vinavyoonyeshwa. Ni makadirio, si nukuu rasmi.",
+   "Pia tunatoa vikokotoo vya thamani ya dhahabu, zaka, faida na vipimo, kibadilishaji cha sarafu na tahadhari za bei."
   ],
   "privacy": [
    "Hatuombi akaunti wala data binafsi. Tunahifadhi tu chaguo lako la lugha, nchi na mandhari kwenye kivinjari chako.",
@@ -206,6 +287,648 @@
   "contact": [
    "Maswali, masahihisho au maombi ya ushirikiano: tafadhali tumia anwani ya mawasiliano iliyochapishwa kwenye ukurasa huu tovuti ikishaanza kutumika.",
    "Ukiona bei isiyo sahihi, tuambie kipengele, nchi na mahali ulipoona thamani sahihi."
+  ],
+  "terms": [
+   "Kwa kutumia {site} unakubali masharti haya. Tovuti hii imetolewa kwa taarifa za jumla.",
+   "Bei, chati na makadirio ni ya kukadiria, yanaweza kucheleweshwa au kuwa si sahihi, na hayapaswi kutumika kama msingi pekee wa biashara au ununuzi.",
+   "Hairuhusiwi kunakili data kwa wingi au kuiuza tena. Kwa ufikiaji wa kiotomatiki, tumia API yetu ya bure na utaje tovuti.",
+   "Tunaweza kubadilisha au kusimamisha sehemu yoyote ya huduma wakati wowote na hatuwajibiki kwa hasara zinazotokana na matumizi yake."
+  ],
+  "disclaimer": [
+   "{site} si wakala wa biashara, benki wala mshauri wa kifedha na haitoi ushauri wa uwekezaji.",
+   "Makadirio ya bei ya rejareja ya ndani, premium ya baa na takwimu za kununua tena ni makadirio yaliyojengwa kutoka vyanzo vya umma. Maduka hutofautiana; thibitisha bei kila mara na muuzaji.",
+   "Utendaji wa zamani hauonyeshi matokeo ya baadaye. Kuwekeza kwenye metali, hisa na sarafu za kidijitali kuna hatari, ikiwemo kupoteza pesa zilizowekezwa."
+  ],
+  "cookies": [
+   "Tunatumia hifadhi ya kivinjari inayohitajika tu kukumbuka lugha, nchi na mandhari yako.",
+   "Matangazo, yakiwashwa, yanatolewa na Google AdSense, ambayo inaweza kuweka vidakuzi ili kuonyesha matangazo yanayofaa. Unaweza kuyadhibiti kwenye mipangilio yako ya matangazo ya Google.",
+   "Wageni kutoka maeneo yanayohitaji ridhaa wataulizwa kabla ya vidakuzi vya matangazo kutumika."
+  ],
+  "developers": [
+   "API yetu ya bei ni bure kwa miradi midogo. Unda funguo hapa chini na uituma kwenye kichwa cha x-api-key.",
+   "Viungo: /v1/overview kwa bei na utendaji wote, /v1/chart/SYMBOL?days=365 kwa historia, /v1/rates kwa viwango vya ubadilishaji.",
+   "Funguo za bure zinaruhusu maombi 1,000 kwa siku. Majibu huhifadhiwa kwa dakika moja, tafadhali usiite kwa kasi zaidi ya hiyo.",
+   "Tafadhali taja tovuti yetu unapoonyesha bei zetu."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Dhahabu ni madini ya thamani yanayomilikiwa zaidi duniani na hutumika kama hifadhi ya thamani kwa muda mrefu. Bei yake hutajwa kwa wakia ya troy duniani kote na kwa gramu au tola katika masoko mengi ya ndani, huku vito vikiuzwa kwa karati kuanzia 10K hadi 24K.",
+   "drivers": [
+    "Viwango vya riba na dola ya Marekani",
+    "Mfumuko wa bei na kutokuwa na uhakika wa kiuchumi au kisiasa",
+    "Ununuzi wa benki kuu na mahitaji ya uwekezaji"
+   ],
+   "uses": [
+    "Vito na zawadi",
+    "Baa na sarafu za uwekezaji",
+    "Vifaa vya elektroniki na meno"
+   ]
+  },
+  "silver": {
+   "about": "Fedha ni madini ya thamani na pia madini ya viwandani. Bei yake hutajwa kwa wakia ya troy na huuzwa kama baa, sarafu na vito katika usafi kama 999, 925 na 800.",
+   "drivers": [
+    "Mahitaji ya viwandani kutoka paneli za jua na vifaa vya elektroniki",
+    "Bei ya dhahabu na dola ya Marekani",
+    "Mahitaji ya uwekezaji wa baa na sarafu"
+   ],
+   "uses": [
+    "Vito na vyombo vya fedha",
+    "Paneli za jua na vifaa vya elektroniki",
+    "Baa na sarafu za uwekezaji"
+   ]
+  },
+  "platinum": {
+   "about": "Platinamu ni madini ya thamani adimu na mazito ambayo katika vipindi vingi ina thamani kubwa kwa uzito kuliko dhahabu. Bei yake hutajwa kwa wakia ya troy.",
+   "drivers": [
+    "Mahitaji kutoka kwenye vichocheo vya magari",
+    "Ugavi kutoka migodini, hasa Afrika Kusini na Urusi",
+    "Mahitaji ya uwekezaji na bei ya dhahabu"
+   ],
+   "uses": [
+    "Vichocheo vya magari",
+    "Vito",
+    "Sekta ya kemikali na teknolojia ya hidrojeni"
+   ]
+  },
+  "palladium": {
+   "about": "Paladiamu ni madini ya thamani adimu yanayotumika hasa kwenye vichocheo vya magari yanayotumia petroli. Bei yake hutajwa kwa wakia ya troy.",
+   "drivers": [
+    "Uzalishaji wa magari na kanuni za utoaji wa moshi",
+    "Ugavi wa migodi kutoka Urusi na Afrika Kusini",
+    "Kubadilishwa na platinamu"
+   ],
+   "uses": [
+    "Vichocheo vya magari",
+    "Vifaa vya elektroniki",
+    "Meno na vito"
+   ]
+  },
+  "copper": {
+   "about": "Shaba ni madini ya viwandani yanayotumika kama kiwango cha kulinganisha. Bei yake hutajwa kwa tani ya metriki na hufuatiliwa kama ishara ya afya ya uchumi wa dunia.",
+   "drivers": [
+    "Mahitaji ya ujenzi na utengenezaji, hasa China",
+    "Ugavi wa migodi na hifadhi",
+    "Dola ya Marekani na sera za biashara"
+   ],
+   "uses": [
+    "Nyaya za umeme na gridi za umeme",
+    "Ujenzi na mabomba",
+    "Magari ya umeme na nishati mbadala"
+   ]
+  },
+  "aluminum": {
+   "about": "Alumini ni madini mepesi yanayotumika sana, yanayotengenezwa kutoka bauxite kwa kutumia umeme mwingi. Bei yake hutajwa kwa tani ya metriki.",
+   "drivers": [
+    "Gharama za nishati ya kuyeyusha",
+    "Mahitaji kutoka magari, vifungashio na ujenzi",
+    "Uzalishaji nchini China na ushuru wa biashara"
+   ],
+   "uses": [
+    "Vifungashio na makopo",
+    "Magari na ndege",
+    "Ujenzi"
+   ]
+  },
+  "nickel": {
+   "about": "Nikeli ni madini yanayotumika kutengeneza chuma cha pua na betri. Bei yake hutajwa kwa tani ya metriki kwenye Soko la Metali la London.",
+   "drivers": [
+    "Mahitaji ya chuma cha pua",
+    "Mahitaji ya betri za magari ya umeme",
+    "Ugavi kutoka Indonesia na Ufilipino"
+   ],
+   "uses": [
+    "Chuma cha pua",
+    "Betri",
+    "Aloi"
+   ]
+  },
+  "zinc": {
+   "about": "Zinki hutumika zaidi kupaka chuma ili kuzuia kutu. Bei yake hutajwa kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya chuma na ujenzi",
+    "Ugavi wa migodi na uzalishaji wa viwanda vya kuyeyusha",
+    "Bei ya nishati Ulaya na China"
+   ],
+   "uses": [
+    "Kupaka chuma",
+    "Shaba ya manjano na aloi",
+    "Betri"
+   ]
+  },
+  "lead": {
+   "about": "Risasi ni madini mazito yanayotumika zaidi kwenye betri za magari. Bei yake hutajwa kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya magari na betri",
+    "Ugavi kutoka urejelezaji",
+    "Uzalishaji wa migodi na kanuni za mazingira"
+   ],
+   "uses": [
+    "Betri za magari",
+    "Kinga dhidi ya mionzi",
+    "Nyaya na aloi"
+   ]
+  },
+  "tin": {
+   "about": "Bati ni madini adimu yanayotumika zaidi kama solder katika vifaa vya elektroniki. Bei yake hutajwa kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya vifaa vya elektroniki na chip",
+    "Ugavi wa migodi kutoka Indonesia, Myanmar na Peru",
+    "Hifadhi na kanuni za biashara"
+   ],
+   "uses": [
+    "Solder ya vifaa vya elektroniki",
+    "Makopo ya chakula",
+    "Kemikali"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalti ni madini ya betri yanayochimbwa zaidi katika Jamhuri ya Kidemokrasia ya Kongo. Bei yake hutajwa kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya magari ya umeme na betri",
+    "Ugavi wa migodi ya Kongo na kanuni za usafirishaji",
+    "Mabadiliko ya kemia ya betri"
+   ],
+   "uses": [
+    "Betri",
+    "Aloi za joto kali",
+    "Sumaku"
+   ]
+  },
+  "lithium": {
+   "about": "Lithiamu kabonati ni malighafi kuu ya betri zinazochajiwa tena. Bei inayoonyeshwa ni ya kabonati ya daraja la betri nchini China, iliyobadilishwa kuwa dola za Marekani kwa tani ya metriki.",
+   "drivers": [
+    "Mauzo ya magari ya umeme",
+    "Ugavi kutoka migodi na viwanda vipya",
+    "Sera ya serikali kuhusu betri"
+   ],
+   "uses": [
+    "Betri za magari ya umeme",
+    "Simu na kompyuta ndogo",
+    "Hifadhi ya nishati"
+   ]
+  },
+  "uranium": {
+   "about": "Urani ni mafuta ya mitambo ya nyuklia ya kuzalisha umeme. Bei yake hutajwa kwa dola za Marekani kwa pauni ya U3O8.",
+   "drivers": [
+    "Kuwashwa upya kwa mitambo ya nyuklia na ujenzi wa vinu vipya",
+    "Uzalishaji wa migodi, hasa Kazakhstan na Kanada",
+    "Akiba ya serikali na vikwazo"
+   ],
+   "uses": [
+    "Umeme wa nyuklia",
+    "Isotopu za kitabibu"
+   ]
+  },
+  "iron-ore": {
+   "about": "Madini ya chuma ni malighafi kuu ya chuma. Bei inayoonyeshwa ni ya madini yenye asilimia 62 ya chuma yanayosafirishwa hadi China, kwa tani ya metriki.",
+   "drivers": [
+    "Uzalishaji wa chuma nchini China",
+    "Ugavi kutoka Australia na Brazil",
+    "Matumizi ya majengo na miundombinu"
+   ],
+   "uses": [
+    "Utengenezaji wa chuma"
+   ]
+  },
+  "steel": {
+   "about": "Chuma ni aloi ya chuma inayotumika karibu katika kila sekta. Bei inayoonyeshwa ni ya nondo za chuma nchini China, iliyobadilishwa kuwa dola za Marekani kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya ujenzi",
+    "Gharama za madini ya chuma na makaa ya mawe ya kokuti",
+    "Vikomo vya uzalishaji vya serikali"
+   ],
+   "uses": [
+    "Majengo na madaraja",
+    "Magari na mashine"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Koili ya chuma iliyoviringishwa kwa moto ni bidhaa bapa ya chuma inayotumika katika utengenezaji. Bei inayoonyeshwa ni kwa usafirishaji wa Midwest ya Marekani kwa tani ya metriki.",
+   "drivers": [
+    "Mahitaji ya Marekani kutoka magari na ujenzi",
+    "Ushuru wa uagizaji na ushindani",
+    "Gharama za malighafi na nishati"
+   ],
+   "uses": [
+    "Magari na vifaa vya nyumbani",
+    "Mabomba na ujenzi"
+   ]
+  },
+  "lumber": {
+   "about": "Mkataba wa baadaye wa mbao hufuatilia bei ya mbao laini zinazotumika kujenga nyumba, unaonukuliwa kwa board feet 1,000.",
+   "drivers": [
+    "Idadi ya nyumba mpya zinazojengwa na viwango vya mikopo ya nyumba",
+    "Uzalishaji wa viwanda vya mbao na moto wa misitu",
+    "Ushuru wa biashara kati ya Marekani na Kanada"
+   ],
+   "uses": [
+    "Fremu za nyumba",
+    "Samani na vifungashio"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI ni kiwango cha Marekani cha mafuta ghafi, kinachonukuliwa kwa pipa na kukabidhiwa Cushing, Oklahoma.",
+   "drivers": [
+    "Maamuzi ya uzalishaji ya OPEC na Marekani",
+    "Ukuaji wa uchumi duniani",
+    "Hifadhi, jiografia ya siasa na dola ya Marekani"
+   ],
+   "uses": [
+    "Petroli, dizeli na mafuta ya ndege",
+    "Plastiki na kemikali"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent ni kiwango cha kimataifa cha mafuta ghafi, kinachonukuliwa kwa pipa, na ndicho bei ya mafuta mengi yanayouzwa nje ya Marekani.",
+   "drivers": [
+    "Maamuzi ya uzalishaji ya OPEC+",
+    "Mahitaji ya dunia, hasa kutoka China na India",
+    "Migogoro na vikwazo katika nchi zinazozalisha"
+   ],
+   "uses": [
+    "Petroli, dizeli na mafuta ya ndege",
+    "Plastiki na kemikali"
+   ]
+  },
+  "natural-gas": {
+   "about": "Gesi asilia hapa inanukuliwa kama bei ya Henry Hub ya Marekani kwa MMBtu. Hutumika kwa kupasha joto, kuzalisha umeme na viwandani.",
+   "drivers": [
+    "Hali ya hewa na mahitaji ya kupasha joto",
+    "Viwango vya hifadhi na uzalishaji",
+    "Usafirishaji wa gesi asilia iliyogandishwa (LNG)"
+   ],
+   "uses": [
+    "Uzalishaji wa umeme",
+    "Kupasha joto na kupikia majumbani",
+    "Mbolea na kemikali"
+   ]
+  },
+  "gasoline": {
+   "about": "Mkataba wa baadaye wa petroli hufuatilia bei ya jumla ya petroli kwa dola za Marekani kwa galoni.",
+   "drivers": [
+    "Bei ya mafuta ghafi",
+    "Uzalishaji wa viwanda vya kusafisha na msimu wa kuendesha",
+    "Hifadhi na kanuni"
+   ],
+   "uses": [
+    "Mafuta ya magari"
+   ]
+  },
+  "heating-oil": {
+   "about": "Mkataba wa baadaye wa mafuta ya kupasha joto hufuatilia bei ya jumla ya dizeli na mafuta ya kupasha joto kwa dola za Marekani kwa galoni.",
+   "drivers": [
+    "Bei ya mafuta ghafi",
+    "Hali ya hewa ya msimu wa baridi",
+    "Mahitaji ya dizeli kutoka malori na viwanda"
+   ],
+   "uses": [
+    "Kupasha joto nyumbani",
+    "Mafuta ya dizeli"
+   ]
+  },
+  "wheat": {
+   "about": "Ngano ni mojawapo ya nafaka kuu za chakula duniani. Bei yake hutajwa kwa bushel kwenye soko la Chicago.",
+   "drivers": [
+    "Hali ya hewa katika maeneo makuu ya kilimo",
+    "Usafirishaji kutoka Urusi, Ukraine, Marekani na EU",
+    "Hifadhi, bei ya nishati na dola ya Marekani"
+   ],
+   "uses": [
+    "Mkate, tambi na unga",
+    "Chakula cha mifugo"
+   ]
+  },
+  "corn": {
+   "about": "Mahindi ni nafaka kuu ya chakula na malisho, pia chanzo cha ethanoli. Bei yake hutajwa kwa bushel kwenye soko la Chicago.",
+   "drivers": [
+    "Mavuno ya Marekani na Brazil",
+    "Mahitaji ya ethanoli na chakula cha mifugo",
+    "Hali ya hewa na usafirishaji"
+   ],
+   "uses": [
+    "Chakula cha mifugo",
+    "Mafuta ya ethanoli",
+    "Chakula na sharubati"
+   ]
+  },
+  "soybeans": {
+   "about": "Soya huchakatwa kuwa mafuta na unga wa mabaki. Bei yake hutajwa kwa bushel kwenye soko la Chicago.",
+   "drivers": [
+    "Mavuno ya Marekani, Brazil na Argentina",
+    "Mahitaji ya uagizaji wa China",
+    "Sera ya nishati ya mimea"
+   ],
+   "uses": [
+    "Mafuta ya kupikia",
+    "Chakula cha mifugo",
+    "Dizeli ya mimea"
+   ]
+  },
+  "rice": {
+   "about": "Mchele wa kwenye ganda ni chakula kikuu kwa mabilioni ya watu. Bei yake hutajwa kwa hundredweight kwenye soko la Chicago.",
+   "drivers": [
+    "Hali ya masika na mavuno barani Asia",
+    "Kanuni za usafirishaji za India, Thailand na Vietnam",
+    "Hifadhi na bei ya chakula"
+   ],
+   "uses": [
+    "Chakula"
+   ]
+  },
+  "sugar": {
+   "about": "Mkataba wa baadaye wa sukari ghafi hufuatilia bei ya sukari duniani, inayonukuliwa kwa dola za Marekani kwa pauni.",
+   "drivers": [
+    "Mavuno ya miwa Brazil na India",
+    "Mahitaji ya ethanoli nchini Brazil",
+    "Hali ya hewa na sarafu"
+   ],
+   "uses": [
+    "Chakula na vinywaji",
+    "Ethanoli"
+   ]
+  },
+  "coffee": {
+   "about": "Mkataba wa baadaye wa kahawa ya arabika hufuatilia bei ya maharage ya kahawa duniani, inayonukuliwa kwa dola za Marekani kwa pauni.",
+   "drivers": [
+    "Hali ya hewa Brazil na Colombia",
+    "Hifadhi na usafirishaji",
+    "Sarafu na mahitaji"
+   ],
+   "uses": [
+    "Vinywaji vya kahawa"
+   ]
+  },
+  "cocoa": {
+   "about": "Mkataba wa baadaye wa kakao hufuatilia bei ya maharage ya kakao, inayonukuliwa kwa dola za Marekani kwa tani ya metriki.",
+   "drivers": [
+    "Mavuno ya Côte d'Ivoire na Ghana",
+    "Magonjwa na hali ya hewa",
+    "Mahitaji ya chokoleti"
+   ],
+   "uses": [
+    "Chokoleti na peremende",
+    "Vipodozi"
+   ]
+  },
+  "cotton": {
+   "about": "Mkataba wa baadaye wa pamba hufuatilia bei ya pamba ghafi duniani, inayonukuliwa kwa dola za Marekani kwa pauni.",
+   "drivers": [
+    "Hali ya hewa Marekani, India na China",
+    "Mahitaji ya nguo",
+    "Bei ya mafuta na sarafu"
+   ],
+   "uses": [
+    "Nguo na vitambaa"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin ni sarafu ya kwanza na kubwa zaidi ya kidijitali. Inauzwa saa 24 kwenye mabadilishano na ugavi wake umewekewa kikomo cha sarafu milioni 21.",
+   "drivers": [
+    "Mahitaji ya wawekezaji na mitiririko ya fedha ya ETF",
+    "Viwango vya riba na hamu ya hatari",
+    "Kanuni na habari"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum ni blockchain ya mikataba mahiri na programu, na sarafu yake, ether, ni sarafu ya pili kwa ukubwa wa kidijitali.",
+   "drivers": [
+    "Matumizi ya programu za Ethereum",
+    "Maboresho ya mtandao na ada",
+    "Hisia za soko"
+   ]
+  },
+  "bnb": {
+   "about": "BNB ni sarafu ya BNB Chain na mfumo ikolojia wa mabadilishano ya Binance.",
+   "drivers": [
+    "Shughuli na ada za mabadilishano",
+    "Uteketezaji wa tokeni",
+    "Kanuni"
+   ]
+  },
+  "xrp": {
+   "about": "XRP ni sarafu ya kidijitali inayotumika kwa malipo ya kimataifa ya haraka kwenye XRP Ledger.",
+   "drivers": [
+    "Habari za mahakama na wadhibiti",
+    "Ushirikiano na benki na mifumo ya malipo",
+    "Hisia za soko"
+   ]
+  },
+  "solana": {
+   "about": "Solana ni blockchain ya haraka kwa programu na malipo, na SOL ndiyo sarafu yake.",
+   "drivers": [
+    "Shughuli za programu na tokeni",
+    "Uaminifu wa mtandao",
+    "Hisia za soko"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano ni blockchain ya proof-of-stake, na ADA ndiyo sarafu yake.",
+   "drivers": [
+    "Maendeleo ya uundaji",
+    "Staking",
+    "Hisia za soko"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin ilianza kama sarafu ya mzaha na ikawa mojawapo ya sarafu za kidijitali zinazouzwa zaidi.",
+   "drivers": [
+    "Umakini kwenye mitandao ya kijamii",
+    "Hisia za soko",
+    "Kupitishwa kwa malipo"
+   ]
+  },
+  "tron": {
+   "about": "TRON ni blockchain inayotumika sana kuhamisha stablecoin, na TRX ndiyo sarafu yake.",
+   "drivers": [
+    "Shughuli za uhamishaji wa stablecoin",
+    "Ada za mtandao",
+    "Hisia za soko"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot huunganisha blockchain nyingi, na DOT ndiyo sarafu yake.",
+   "drivers": [
+    "Maendeleo ya mtandao",
+    "Staking",
+    "Hisia za soko"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink hutoa data ya ulimwengu halisi kwa blockchain, na LINK ndiyo sarafu yake.",
+   "drivers": [
+    "Matumizi na programu nyingine",
+    "Ushirikiano",
+    "Hisia za soko"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin ni mojawapo ya sarafu kongwe za kidijitali, iliyoundwa kwa malipo ya haraka kuliko Bitcoin.",
+   "drivers": [
+    "Bei ya Bitcoin",
+    "Kupitishwa kwa malipo",
+    "Hisia za soko"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche ni jukwaa la haraka la blockchain, na AVAX ndiyo sarafu yake.",
+   "drivers": [
+    "Shughuli za programu",
+    "Maboresho ya mtandao",
+    "Hisia za soko"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 hufuatilia kampuni 500 kubwa za Marekani na ndicho kipimo kikuu cha soko la hisa la Marekani.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite hufuatilia maelfu ya hisa zilizoorodheshwa Nasdaq, yenye uzito mkubwa kwa kampuni za teknolojia.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average hufuatilia kampuni 30 kubwa za Marekani.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 hufuatilia kampuni 100 kubwa zaidi zilizoorodheshwa London.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "dax": {
+   "about": "DAX hufuatilia kampuni 40 kubwa za Ujerumani zilizoorodheshwa Frankfurt.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 hufuatilia kampuni 40 kubwa zilizoorodheshwa Paris.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 hufuatilia kampuni 225 kubwa zilizoorodheshwa Tokyo.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "hang-seng": {
+   "about": "Faharasa ya Hang Seng hufuatilia kampuni kubwa zaidi zilizoorodheshwa Hong Kong.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite hufuatilia hisa zote zilizoorodheshwa kwenye Soko la Hisa la Shanghai.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 hufuatilia kampuni 50 kubwa kwenye Soko la Kitaifa la Hisa la India.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex hufuatilia kampuni 30 kubwa kwenye Soko la Hisa la Bombay.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 hufuatilia kampuni 30 zinazofanya biashara zaidi kwenye Soko la Hisa la Misri.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "tasi": {
+   "about": "Faharasa ya Tadawul All Share hufuatilia kampuni zote zilizoorodheshwa kwenye soko la hisa la Saudi Arabia.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 hufuatilia kampuni 100 kubwa zaidi kwenye Borsa Istanbul.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa hufuatilia kampuni kuu zilizoorodheshwa kwenye soko la B3 la Brazil.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 hufuatilia kampuni 200 kubwa zaidi kwenye soko la hisa la Australia.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite hufuatilia kampuni kuu zilizoorodheshwa kwenye Soko la Hisa la Toronto.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI hufuatilia hisa zote za kawaida kwenye Soko la Hisa la Korea.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 hufuatilia kampuni 50 kubwa za eneo la euro.",
+   "drivers": [
+    "Faida za kampuni",
+    "Viwango vya riba na mfumuko wa bei",
+    "Habari za kiuchumi na kisiasa"
+   ]
+  }
  }
 }

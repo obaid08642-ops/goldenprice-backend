@@ -114,7 +114,87 @@
   "zakat_note": "Zakatul se datorează pentru averea deținută un an lunar peste nisab. Este un ghid; consultă un savant pentru cazul tău.",
   "zakat_below": "Sub nisab: nu se datorează zakat pentru această sumă.",
   "related_title": "Căutări populare",
-  "retail_basis": "Pe baza a {n} surse locale, verificat {d}."
+  "retail_basis": "Pe baza a {n} surse locale, verificat {d}.",
+  "u_share": "acțiune",
+  "u_rate": "curs",
+  "u_mbf": "1.000 de picioare-placă",
+  "cat_stock": "Acțiuni",
+  "cat_forex": "Perechi valutare",
+  "cat_construction": "Materiale de construcții",
+  "perf_title": "Performanță",
+  "p_7d": "1 săptămână",
+  "p_30d": "1 lună",
+  "p_90d": "3 luni",
+  "p_ytd": "De la începutul anului",
+  "p_1y": "1 an",
+  "p_5y": "5 ani",
+  "range52": "Interval pe 52 de săptămâni",
+  "ath": "Maximul din datele noastre",
+  "atl": "Minimul din datele noastre",
+  "since": "Istoric din {d}",
+  "about_title": "Despre {a}",
+  "drivers_title": "Ce influențează prețul",
+  "uses_title": "La ce este folosit",
+  "source_note": "Sursa: {s}. Prețurile sunt orientative și pot fi întârziate.",
+  "about_stock": "Acțiunile {a} sunt cotate în {c}. Pagina arată ultimul preț întârziat, variația de azi și pe perioade mai lungi, precum și același preț convertit în alte monede.",
+  "about_forex": "{a} arată cât din a doua monedă se poate cumpăra cu o unitate din prima. Cursurile se mișcă odată cu dobânzile, inflația, comerțul și știrile economice din ambele țări.",
+  "about_crypto": "{a} este o criptomonedă. Prețul ei se formează prin tranzacționare pe platforme de schimb, non-stop, și se poate schimba rapid. Pagina arată prețul în timp real, variația pe perioade diferite și prețul în alte monede.",
+  "about_commodity": "{a} este o marfă tranzacționată pe piețe. Prețul ei urmărește oferta, cererea, vremea, monedele și știrile. Pagina arată ultimul preț, variația pe perioade diferite și prețul în alte monede.",
+  "about_index": "{a} măsoară evoluția unui coș de acțiuni. Valoarea se exprimă în puncte și se mișcă odată cu prețurile acțiunilor companiilor care îl compun.",
+  "tail_list_title": "Acțiuni, criptomonede, perechi valutare și alte mărfuri",
+  "tail_list_desc": "Prețuri în timp real pentru acțiuni globale, alte criptomonede, perechi valutare și mărfuri suplimentare, cu grafice și performanță.",
+  "tail_title": "Prețul {a} astăzi | valoare și grafic în timp real",
+  "tail_desc": "Prețul {a} în timp real, cu grafic și performanță pe 1 săptămână, 1 lună, 1 an și altele. Actualizat la câteva minute.",
+  "nav_dev": "Dezvoltatori",
+  "nav_compare": "Compară",
+  "terms": "Termeni de utilizare",
+  "disclaimer": "Declinare de responsabilitate",
+  "cookies": "Politica privind cookie-urile",
+  "developers": "API pentru dezvoltatori",
+  "alert_title": "Primește o alertă de preț",
+  "alert_email": "Adresa ta de e-mail",
+  "alert_target": "Preț țintă ({cur})",
+  "alert_above": "Urcă peste",
+  "alert_below": "Scade sub",
+  "alert_submit": "Creează alerta",
+  "alert_ok": "Alertă salvată. Îți vom trimite un e-mail o singură dată, când prețul atinge ținta ta.",
+  "alert_err": "Alerta nu a putut fi salvată. Verifică e-mailul și prețul, apoi încearcă din nou.",
+  "alert_privacy": "Folosim adresa ta de e-mail doar pentru a trimite această alertă.",
+  "contact_title": "Trimite-ne un mesaj",
+  "contact_name": "Numele tău",
+  "contact_email": "Adresa ta de e-mail",
+  "contact_msg": "Mesaj",
+  "contact_send": "Trimite",
+  "contact_ok": "Mulțumim. Mesajul tău a fost trimis.",
+  "contact_err": "Mesajul nu a putut fi trimis. Te rugăm să încerci din nou mai târziu.",
+  "dev_title": "API gratuit pentru prețuri",
+  "dev_desc": "Folosește prețurile noastre în propria aplicație sau pe propriul site. Cheile gratuite sunt limitate la 1.000 de cereri pe zi. Te rugăm să menționezi site-ul.",
+  "dev_endpoints": "Endpoint-uri",
+  "dev_request": "Obține o cheie API gratuită",
+  "dev_email": "Adresa ta de e-mail",
+  "dev_purpose": "Ce vei construi?",
+  "dev_get": "Obține cheia",
+  "dev_key": "Cheia ta API (salvează-o acum, se afișează o singură dată)",
+  "dev_err": "Cheia nu a putut fi creată. Verifică e-mailul și încearcă din nou.",
+  "dev_usage": "Trimite cheia în antetul x-api-key.",
+  "cmp_title": "Compară două active",
+  "cmp_a": "Primul activ",
+  "cmp_b": "Al doilea activ",
+  "cmp_ratio": "Raport (primul împărțit la al doilea)",
+  "cmp_now": "Acum",
+  "cmp_desc": "Compară oricare două active: raportul dintre ele în timp, de exemplu raportul aur/argint.",
+  "cmp_page_title": "Compară prețuri și rapoarte în {country}",
+  "roi_title": "Calculator de profit",
+  "roi_buy": "Preț de cumpărare",
+  "roi_amount": "Cantitate",
+  "roi_now": "Preț actual",
+  "roi_profit": "Profit sau pierdere",
+  "roi_pct": "Randament",
+  "units_title": "Convertor de unități",
+  "units_value": "Valoare",
+  "units_from": "De la",
+  "units_to": "La",
+  "calc_tools_desc": "Calculatoare pentru valoarea aurului, zakat, profit și unități."
  },
  "assets": {
   "gold": "Aur",
@@ -196,7 +276,8 @@
   "about": [
    "{site} afișează prețuri live pentru aur, argint, alte metale, petrol, gaze, mărfuri agricole, indici bursieri și criptomonede în propria ta monedă, pentru multe țări și limbi.",
    "Prețurile provin din fluxuri publice de date de piață și se actualizează la câteva minute. Unele prețuri se actualizează manual și arată ora ultimei actualizări.",
-   "Estimările locale de vânzare adaugă la prețul global taxele, manopera și primele obișnuite ale dealerilor. Sunt estimări, nu oferte."
+   "Estimările locale de vânzare adaugă la prețul global taxele, manopera și primele obișnuite ale dealerilor. Sunt estimări, nu oferte.",
+   "Oferim și calculatoare pentru valoarea aurului, zakat, profit și unități, un convertor valutar și alerte de preț."
   ],
   "privacy": [
    "Nu cerem conturi sau date personale. Stocăm în browserul tău doar alegerea de limbă, țară și temă.",
@@ -206,6 +287,648 @@
   "contact": [
    "Întrebări, corecturi sau solicitări de parteneriat: folosește adresa de contact publicată pe această pagină când site-ul va fi live.",
    "Dacă vezi un preț greșit, spune-ne activul, țara și unde ai văzut valoarea corectă."
+  ],
+  "terms": [
+   "Prin folosirea {site} accepți acești termeni. Site-ul este oferit pentru informare generală.",
+   "Prețurile, graficele și estimările sunt orientative, pot fi întârziate sau greșite și nu trebuie folosite ca unică bază pentru o tranzacție sau o achiziție.",
+   "Nu poți copia datele în masă și nu le poți revinde. Pentru acces automatizat, folosește API-ul nostru gratuit și menționează site-ul.",
+   "Putem modifica sau opri oricând orice parte a serviciului și nu răspundem pentru pierderile rezultate din utilizarea lui."
+  ],
+  "disclaimer": [
+   "{site} nu este broker, bancă sau consilier financiar și nu oferă consultanță de investiții.",
+   "Estimările locale de vânzare cu amănuntul, primele pentru lingouri și valorile de răscumpărare sunt estimări bazate pe surse publice. Magazinele diferă; confirmă întotdeauna prețul cu vânzătorul.",
+   "Performanța trecută nu prevede rezultatele viitoare. Investițiile în metale, acțiuni și criptomonede comportă riscuri, inclusiv pierderea banilor investiți."
+  ],
+  "cookies": [
+   "Folosim doar stocarea din browser necesară pentru a reține limba, țara și tema ta.",
+   "Reclamele, atunci când sunt active, sunt difuzate de Google AdSense, care poate seta cookie-uri pentru a afișa reclame relevante. Poți gestiona acest lucru în setările de reclame Google.",
+   "Vizitatorilor din regiuni care cer consimțământ li se va cere permisiunea înainte de utilizarea cookie-urilor publicitare."
+  ],
+  "developers": [
+   "API-ul nostru de prețuri este gratuit pentru proiecte mici. Creează o cheie mai jos și trimite-o în antetul x-api-key.",
+   "Endpoint-uri: /v1/overview pentru toate prețurile și performanța, /v1/chart/SYMBOL?days=365 pentru istoric, /v1/rates pentru cursurile valutare.",
+   "Cheile gratuite permit 1.000 de cereri pe zi. Răspunsurile sunt păstrate în cache un minut; te rugăm să nu faci apeluri mai frecvent.",
+   "Menționează site-ul când afișezi prețurile noastre."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Aurul este cel mai răspândit metal prețios și o formă tradițională de păstrare a valorii. Prețul este cotat pe uncie troy în lume și pe gram sau tola pe multe piețe locale, cu bijuterii vândute după carate, de la 10K la 24K.",
+   "drivers": [
+    "Dobânzile și dolarul american",
+    "Inflația și incertitudinea economică sau politică",
+    "Cumpărările băncilor centrale și cererea de investiții"
+   ],
+   "uses": [
+    "Bijuterii și cadouri",
+    "Lingouri și monede de investiții",
+    "Electronică și stomatologie"
+   ]
+  },
+  "silver": {
+   "about": "Argintul este atât metal prețios, cât și metal industrial. Este cotat pe uncie troy și vândut sub formă de lingouri, monede și bijuterii în titluri precum 999, 925 și 800.",
+   "drivers": [
+    "Cererea industrială din panouri solare și electronică",
+    "Prețul aurului și dolarul american",
+    "Cererea de investiții în lingouri și monede"
+   ],
+   "uses": [
+    "Bijuterii și argintărie",
+    "Panouri solare și electronică",
+    "Lingouri și monede de investiții"
+   ]
+  },
+  "platinum": {
+   "about": "Platina este un metal prețios rar și dens, care în multe perioade valorează mai mult decât aurul la greutate. Este cotată pe uncie troy.",
+   "drivers": [
+    "Cererea pentru convertoarele catalitice ale mașinilor",
+    "Producția din mine, mai ales din Africa de Sud și Rusia",
+    "Cererea de investiții și prețul aurului"
+   ],
+   "uses": [
+    "Convertoare catalitice",
+    "Bijuterii",
+    "Industria chimică și tehnologia hidrogenului"
+   ]
+  },
+  "palladium": {
+   "about": "Paladiul este un metal prețios rar, folosit mai ales în convertoarele catalitice ale mașinilor pe benzină. Este cotat pe uncie troy.",
+   "drivers": [
+    "Producția de automobile și regulile privind emisiile",
+    "Producția din mine din Rusia și Africa de Sud",
+    "Înlocuirea cu platină"
+   ],
+   "uses": [
+    "Convertoare catalitice",
+    "Electronică",
+    "Stomatologie și bijuterii"
+   ]
+  },
+  "copper": {
+   "about": "Cuprul este metalul industrial de referință. Prețul este cotat pe tonă metrică și este urmărit ca semn al sănătății economiei globale.",
+   "drivers": [
+    "Cererea din construcții și industrie, mai ales din China",
+    "Producția din mine și stocurile",
+    "Dolarul american și politica comercială"
+   ],
+   "uses": [
+    "Cabluri electrice și rețele de energie",
+    "Construcții și instalații sanitare",
+    "Vehicule electrice și energie regenerabilă"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminiul este un metal ușor și foarte folosit, obținut din bauxită cu mari cantități de electricitate. Prețul este cotat pe tonă metrică.",
+   "drivers": [
+    "Costurile energetice ale topirii",
+    "Cererea din industria auto, ambalaje și construcții",
+    "Producția din China și taxele vamale"
+   ],
+   "uses": [
+    "Ambalaje și conserve",
+    "Automobile și avioane",
+    "Construcții"
+   ]
+  },
+  "nickel": {
+   "about": "Nichelul este folosit pentru oțelul inoxidabil și baterii. Prețul este cotat pe tonă metrică la London Metal Exchange.",
+   "drivers": [
+    "Cererea de oțel inoxidabil",
+    "Cererea de baterii pentru vehicule electrice",
+    "Oferta din Indonezia și Filipine"
+   ],
+   "uses": [
+    "Oțel inoxidabil",
+    "Baterii",
+    "Aliaje"
+   ]
+  },
+  "zinc": {
+   "about": "Zincul este folosit mai ales pentru zincarea oțelului, ca protecție împotriva ruginii. Prețul este cotat pe tonă metrică.",
+   "drivers": [
+    "Cererea de oțel și construcții",
+    "Producția din mine și a topitoriilor",
+    "Prețurile energiei în Europa și China"
+   ],
+   "uses": [
+    "Zincarea oțelului",
+    "Alamă și aliaje",
+    "Baterii"
+   ]
+  },
+  "lead": {
+   "about": "Plumbul este un metal dens, folosit mai ales în bateriile auto. Prețul este cotat pe tonă metrică.",
+   "drivers": [
+    "Cererea din industria auto și a bateriilor",
+    "Oferta din reciclare",
+    "Producția din mine și regulile de mediu"
+   ],
+   "uses": [
+    "Baterii auto",
+    "Protecție împotriva radiațiilor",
+    "Cabluri și aliaje"
+   ]
+  },
+  "tin": {
+   "about": "Staniul este un metal rar, folosit mai ales ca aliaj de lipit în electronică. Prețul este cotat pe tonă metrică.",
+   "drivers": [
+    "Cererea din electronică și cipuri",
+    "Producția din mine din Indonezia, Myanmar și Peru",
+    "Stocurile și regulile comerciale"
+   ],
+   "uses": [
+    "Lipire în electronică",
+    "Conserve alimentare",
+    "Produse chimice"
+   ]
+  },
+  "cobalt": {
+   "about": "Cobaltul este un metal pentru baterii, extras mai ales în Republica Democrată Congo. Prețul este cotat pe tonă metrică.",
+   "drivers": [
+    "Cererea de vehicule electrice și baterii",
+    "Producția din Congo și regulile de export",
+    "Schimbările din chimia bateriilor"
+   ],
+   "uses": [
+    "Baterii",
+    "Superaliaje",
+    "Magneți"
+   ]
+  },
+  "lithium": {
+   "about": "Carbonatul de litiu este principala materie primă pentru bateriile reîncărcabile. Prețul afișat este pentru carbonatul de calitate pentru baterii din China, convertit în dolari americani pe tonă metrică.",
+   "drivers": [
+    "Vânzările de vehicule electrice",
+    "Noua ofertă din mine și rafinării",
+    "Politica guvernamentală privind bateriile"
+   ],
+   "uses": [
+    "Baterii pentru vehicule electrice",
+    "Telefoane și laptopuri",
+    "Stocarea energiei"
+   ]
+  },
+  "uranium": {
+   "about": "Uraniul este combustibilul centralelor nucleare. Prețul este cotat în dolari americani pe livră de U3O8.",
+   "drivers": [
+    "Repornirea centralelor nucleare și reactoarele noi",
+    "Producția din mine, mai ales din Kazahstan și Canada",
+    "Constituirea de rezerve de stat și sancțiunile"
+   ],
+   "uses": [
+    "Energie nucleară",
+    "Izotopi medicali"
+   ]
+  },
+  "iron-ore": {
+   "about": "Minereul de fier este principala materie primă a oțelului. Prețul afișat este pentru minereul cu 62% fier livrat în China, pe tonă metrică.",
+   "drivers": [
+    "Producția de oțel din China",
+    "Oferta din Australia și Brazilia",
+    "Cheltuielile pentru imobiliare și infrastructură"
+   ],
+   "uses": [
+    "Producția de oțel"
+   ]
+  },
+  "steel": {
+   "about": "Oțelul este un aliaj de fier folosit în aproape toate industriile. Prețul afișat este pentru armătura de oțel din China, convertit în dolari americani pe tonă metrică.",
+   "drivers": [
+    "Cererea din construcții",
+    "Costurile minereului de fier și ale cocsului",
+    "Limitele de producție impuse de guverne"
+   ],
+   "uses": [
+    "Clădiri și poduri",
+    "Automobile și mașini"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Bobina de oțel laminat la cald este un produs plat folosit în industrie. Prețul afișat este pentru livrarea în Midwestul SUA, pe tonă metrică.",
+   "drivers": [
+    "Cererea din SUA pentru automobile și construcții",
+    "Taxele de import și concurența",
+    "Costurile materiilor prime și ale energiei"
+   ],
+   "uses": [
+    "Automobile și electrocasnice",
+    "Conducte și construcții"
+   ]
+  },
+  "lumber": {
+   "about": "Contractele futures pe lemn urmăresc prețul lemnului de rășinoase folosit la construcția caselor, cotat pe 1.000 de picioare-placă.",
+   "drivers": [
+    "Începerea construcțiilor de locuințe și ratele ipotecare",
+    "Producția fabricilor de cherestea și incendiile de pădure",
+    "Taxele comerciale dintre SUA și Canada"
+   ],
+   "uses": [
+    "Structura caselor",
+    "Mobilă și ambalaje"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI este reperul american pentru petrolul brut, cotat pe baril și livrat la Cushing, Oklahoma.",
+   "drivers": [
+    "Deciziile OPEC și producția din SUA",
+    "Creșterea economică globală",
+    "Stocurile, geopolitica și dolarul american"
+   ],
+   "uses": [
+    "Benzină, motorină și kerosen pentru avioane",
+    "Materiale plastice și produse chimice"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent este reperul global pentru petrolul brut, cotat pe baril, și stabilește prețul majorității petrolului tranzacționat în afara SUA.",
+   "drivers": [
+    "Deciziile de producție ale OPEC+",
+    "Cererea globală, mai ales din China și India",
+    "Conflictele și sancțiunile din regiunile producătoare"
+   ],
+   "uses": [
+    "Benzină, motorină și kerosen pentru avioane",
+    "Materiale plastice și produse chimice"
+   ]
+  },
+  "natural-gas": {
+   "about": "Gazul natural este cotat aici după prețul american Henry Hub, în MMBtu. Este folosit pentru încălzire, producția de energie electrică și industrie.",
+   "drivers": [
+    "Vremea și cererea pentru încălzire",
+    "Nivelurile de stocare și producție",
+    "Exporturile de gaz natural lichefiat"
+   ],
+   "uses": [
+    "Producția de energie electrică",
+    "Încălzirea și gătitul în locuințe",
+    "Îngrășăminte și produse chimice"
+   ]
+  },
+  "gasoline": {
+   "about": "Contractele futures pe benzină urmăresc prețurile en-gros ale benzinei, în dolari americani pe galon.",
+   "drivers": [
+    "Prețul petrolului brut",
+    "Producția rafinăriilor și sezonul de conducere",
+    "Stocurile și reglementările"
+   ],
+   "uses": [
+    "Combustibil pentru mașini"
+   ]
+  },
+  "heating-oil": {
+   "about": "Contractele futures pe păcură de încălzire urmăresc prețurile en-gros ale motorinei și ale combustibilului de încălzire, în dolari americani pe galon.",
+   "drivers": [
+    "Prețul petrolului brut",
+    "Vremea de iarnă",
+    "Cererea de motorină din camioane și industrie"
+   ],
+   "uses": [
+    "Încălzire în locuințe",
+    "Combustibil diesel"
+   ]
+  },
+  "wheat": {
+   "about": "Grâul este unul dintre principalele cereale alimentare ale lumii. Prețul este cotat pe bushel la bursa din Chicago.",
+   "drivers": [
+    "Vremea în principalele zone de cultivare",
+    "Exporturile din Rusia, Ucraina, SUA și UE",
+    "Stocurile, prețurile energiei și dolarul american"
+   ],
+   "uses": [
+    "Pâine, paste și făină",
+    "Hrană pentru animale"
+   ]
+  },
+  "corn": {
+   "about": "Porumbul este un cereal important pentru hrană și furaje, și o sursă de etanol. Prețul este cotat pe bushel la bursa din Chicago.",
+   "drivers": [
+    "Recoltele din SUA și Brazilia",
+    "Cererea de etanol și de furaje",
+    "Vremea și exporturile"
+   ],
+   "uses": [
+    "Furaje pentru animale",
+    "Etanol drept combustibil",
+    "Alimente și siropuri"
+   ]
+  },
+  "soybeans": {
+   "about": "Soia este prelucrată în ulei și șrot. Prețul este cotat pe bushel la bursa din Chicago.",
+   "drivers": [
+    "Recoltele din SUA, Brazilia și Argentina",
+    "Cererea de import din China",
+    "Politica privind biocombustibilii"
+   ],
+   "uses": [
+    "Ulei de gătit",
+    "Furaje pentru animale",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Orezul brut este un aliment de bază pentru miliarde de oameni. Prețul este cotat pe sută de livre (cwt) la bursa din Chicago.",
+   "drivers": [
+    "Musonul și condițiile de recoltare din Asia",
+    "Regulile de export ale Indiei, Thailandei și Vietnamului",
+    "Stocurile și prețurile alimentelor"
+   ],
+   "uses": [
+    "Alimentație"
+   ]
+  },
+  "sugar": {
+   "about": "Contractele futures pe zahăr brut urmăresc prețul mondial al zahărului, cotat în dolari americani pe livră.",
+   "drivers": [
+    "Recoltele de trestie din Brazilia și India",
+    "Cererea de etanol din Brazilia",
+    "Vremea și monedele"
+   ],
+   "uses": [
+    "Alimente și băuturi",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Contractele futures pe cafea arabica urmăresc prețul mondial al boabelor de cafea, cotat în dolari americani pe livră.",
+   "drivers": [
+    "Vremea în Brazilia și Columbia",
+    "Stocurile și exporturile",
+    "Monedele și cererea"
+   ],
+   "uses": [
+    "Băuturi din cafea"
+   ]
+  },
+  "cocoa": {
+   "about": "Contractele futures pe cacao urmăresc prețul boabelor de cacao, cotat în dolari americani pe tonă metrică.",
+   "drivers": [
+    "Recoltele din Coasta de Fildeș și Ghana",
+    "Boli și vreme",
+    "Cererea de ciocolată"
+   ],
+   "uses": [
+    "Ciocolată și dulciuri",
+    "Cosmetice"
+   ]
+  },
+  "cotton": {
+   "about": "Contractele futures pe bumbac urmăresc prețul mondial al bumbacului brut, cotat în dolari americani pe livră.",
+   "drivers": [
+    "Vremea în SUA, India și China",
+    "Cererea din industria textilă",
+    "Prețurile petrolului și monedele"
+   ],
+   "uses": [
+    "Îmbrăcăminte și textile"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin este prima și cea mai mare criptomonedă. Se tranzacționează non-stop pe platforme de schimb, iar oferta sa este limitată la 21 de milioane de monede.",
+   "drivers": [
+    "Cererea investitorilor și fluxurile de ETF-uri",
+    "Dobânzile și apetitul pentru risc",
+    "Reglementările și știrile"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum este o blockchain pentru contracte inteligente și aplicații, iar moneda sa, ether, este a doua cea mai mare criptomonedă.",
+   "drivers": [
+    "Utilizarea aplicațiilor Ethereum",
+    "Actualizările rețelei și comisioanele",
+    "Sentimentul pieței"
+   ]
+  },
+  "bnb": {
+   "about": "BNB este moneda BNB Chain și a ecosistemului platformei de schimb Binance.",
+   "drivers": [
+    "Activitatea și comisioanele platformei",
+    "Arderea tokenilor",
+    "Reglementările"
+   ]
+  },
+  "xrp": {
+   "about": "XRP este o criptomonedă folosită pentru plăți internaționale rapide pe XRP Ledger.",
+   "drivers": [
+    "Știrile judiciare și de reglementare",
+    "Parteneriatele cu bănci și procesatori de plăți",
+    "Sentimentul pieței"
+   ]
+  },
+  "solana": {
+   "about": "Solana este o blockchain rapidă pentru aplicații și plăți, iar SOL este moneda sa.",
+   "drivers": [
+    "Activitatea aplicațiilor și a tokenilor",
+    "Fiabilitatea rețelei",
+    "Sentimentul pieței"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano este o blockchain bazată pe dovada participării, iar ADA este moneda sa.",
+   "drivers": [
+    "Progresul dezvoltării",
+    "Staking",
+    "Sentimentul pieței"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin a pornit ca o monedă de glumă și a devenit una dintre cele mai tranzacționate criptomonede.",
+   "drivers": [
+    "Atenția din rețelele sociale",
+    "Sentimentul pieței",
+    "Adoptarea în plăți"
+   ]
+  },
+  "tron": {
+   "about": "TRON este o blockchain folosită pe scară largă pentru transferuri de stablecoinuri, iar TRX este moneda sa.",
+   "drivers": [
+    "Activitatea de transfer de stablecoinuri",
+    "Comisioanele rețelei",
+    "Sentimentul pieței"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot conectează multe blockchain-uri, iar DOT este moneda sa.",
+   "drivers": [
+    "Dezvoltarea rețelei",
+    "Staking",
+    "Sentimentul pieței"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink aduce date din lumea reală în blockchain-uri, iar LINK este moneda sa.",
+   "drivers": [
+    "Utilizarea de către alte aplicații",
+    "Parteneriate",
+    "Sentimentul pieței"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin este una dintre cele mai vechi criptomonede, creată pentru plăți mai rapide decât cele cu bitcoin.",
+   "drivers": [
+    "Prețul bitcoinului",
+    "Adoptarea în plăți",
+    "Sentimentul pieței"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche este o platformă blockchain rapidă, iar AVAX este moneda sa.",
+   "drivers": [
+    "Activitatea aplicațiilor",
+    "Actualizările rețelei",
+    "Sentimentul pieței"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 urmărește 500 dintre cele mai mari companii din SUA și este principalul indicator al pieței bursiere americane.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite urmărește mii de acțiuni listate la Nasdaq, cu o pondere mare a companiilor de tehnologie.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average urmărește 30 de mari companii americane.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 urmărește cele mai mari 100 de companii listate la Londra.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "dax": {
+   "about": "DAX urmărește 40 de mari companii germane listate la Frankfurt.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 urmărește 40 de mari companii listate la Paris.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 urmărește 225 de mari companii listate la Tokyo.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "hang-seng": {
+   "about": "Indicele Hang Seng urmărește cele mai mari companii listate la Hong Kong.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite urmărește toate acțiunile listate la Bursa din Shanghai.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 urmărește 50 de mari companii de la Bursa Națională a Indiei.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex urmărește 30 de mari companii de la Bursa din Bombay.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 urmărește cele mai active 30 de companii de la Bursa din Egipt.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Index urmărește toate companiile listate la bursa din Arabia Saudită.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 urmărește cele mai mari 100 de companii de la Borsa Istanbul.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa urmărește principalele companii listate la B3, bursa din Brazilia.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 urmărește cele mai mari 200 de companii de la bursa australiană.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite urmărește principalele companii listate la Bursa din Toronto.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI urmărește toate acțiunile ordinare listate la Bursa din Coreea.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 urmărește 50 de mari companii din zona euro.",
+   "drivers": [
+    "Rezultatele financiare ale companiilor",
+    "Dobânzile și inflația",
+    "Știrile economice și politice"
+   ]
+  }
  }
 }

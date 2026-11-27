@@ -1,4 +1,4 @@
-import { ASSETS } from "../data/assets";
+import { ASSETS, CORE, TAIL } from "../data/assets";
 import { COUNTRIES, langsFor } from "../data/countries";
 import { LANG_CODES } from "../data/languages";
 import { getData } from "../lib/api";
@@ -8,7 +8,8 @@ export async function GET({ site, params }: { site?: URL; params: { lang: string
   const base = (site?.toString() ?? "").replace(/\/$/, "");
   const lang = params.lang as any;
   const data = await getData();
-  const slugs = ["", "markets", "rates", "calculators", ...ASSETS.filter((a) => a.slug !== "gold" && data.items[a.sym]?.price != null).map((a) => a.slug)];
+  const has = (a: { sym: string }) => data.items[a.sym]?.price != null;
+  const slugs = ["", "markets", "rates", "calculators", "compare", ...CORE.filter((a) => a.slug !== "gold" && has(a)).map((a) => a.slug)];
   const lastmod = new Date().toISOString().slice(0, 10);
   const out: string[] = [];
   for (const c of COUNTRIES) {
@@ -18,5 +19,8 @@ export async function GET({ site, params }: { site?: URL; params: { lang: string
       out.push(`<url><loc>${base}${url(lang, c.code, s)}</loc><lastmod>${lastmod}</lastmod><changefreq>hourly</changefreq>${alts}</url>`);
     }
   }
+  // global pages (stocks, extra crypto, currency pairs, more commodities) + legal pages exist once per language
+  const extra = [`/${lang}/p/`, ...TAIL.filter(has).map((a) => `/${lang}/p/${a.slug}/`), ...["about", "terms", "privacy", "disclaimer", "cookies", "contact", "developers"].map((p) => `/${lang}/${p}/`)];
+  for (const e of extra) out.push(`<url><loc>${base}${e}</loc><lastmod>${lastmod}</lastmod></url>`);
   return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${out.join("")}</urlset>`, { headers: { "Content-Type": "application/xml" } });
 }

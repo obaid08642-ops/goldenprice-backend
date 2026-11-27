@@ -18,6 +18,10 @@ export async function initDb() {
     symbol TEXT NOT NULL, day DATE NOT NULL,
     open DOUBLE PRECISION, high DOUBLE PRECISION, low DOUBLE PRECISION, close DOUBLE PRECISION,
     n INT NOT NULL DEFAULT 1, src TEXT, PRIMARY KEY (symbol, day))`;
+  await sql`CREATE TABLE IF NOT EXISTS contact_messages (id SERIAL PRIMARY KEY, ts TIMESTAMPTZ NOT NULL DEFAULT now(), name TEXT, email TEXT, message TEXT, ip TEXT)`;
+  await sql`CREATE TABLE IF NOT EXISTS api_keys (key TEXT PRIMARY KEY, email TEXT NOT NULL, purpose TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now(), disabled BOOLEAN NOT NULL DEFAULT false)`;
+  await sql`CREATE TABLE IF NOT EXISTS alerts (id SERIAL PRIMARY KEY, email TEXT NOT NULL, sym TEXT NOT NULL, dir TEXT NOT NULL, target DOUBLE PRECISION NOT NULL, label TEXT, lang TEXT, token TEXT NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT now(), fired_at TIMESTAMPTZ)`;
+  await sql`CREATE INDEX IF NOT EXISTS alerts_active ON alerts (sym) WHERE fired_at IS NULL`;
   return true;
 }
 
@@ -88,3 +92,12 @@ export async function overviewStats() {
   const names = ["d7", "d30", "d90", "y1", "y5", "ytd"];
   return { hist, agg: by(agg), refs: Object.fromEntries(names.map((n, i) => [n, by(refs[i])])) };
 }
+
+// ---- contact, API keys, alerts ----
+export async function saveContact(name, email, message, ip) { if (!sql) return false; await sql`INSERT INTO contact_messages (name, email, message, ip) VALUES (${name}, ${email}, ${message}, ${ip})`; return true; }
+export async function createKey(key, email, purpose) { if (!sql) return false; await sql`INSERT INTO api_keys (key, email, purpose) VALUES (${key}, ${email}, ${purpose})`; return true; }
+export async function keyActive(key) { if (!sql) return false; const r = await sql`SELECT 1 FROM api_keys WHERE key = ${key} AND NOT disabled`; return r.length > 0; }
+export async function addAlert(a) { if (!sql) return false; await sql`INSERT INTO alerts (email, sym, dir, target, label, lang, token) VALUES (${a.email}, ${a.sym}, ${a.dir}, ${a.target}, ${a.label}, ${a.lang}, ${a.token})`; return true; }
+export async function activeAlerts() { if (!sql) return []; return sql`SELECT id, email, sym, dir, target, label, lang, token FROM alerts WHERE fired_at IS NULL`; }
+export async function markAlertFired(id) { if (!sql) return; await sql`UPDATE alerts SET fired_at = now() WHERE id = ${id}`; }
+export async function cancelAlert(token) { if (!sql) return 0; return (await sql`DELETE FROM alerts WHERE token = ${token} AND fired_at IS NULL RETURNING 1`).length; }

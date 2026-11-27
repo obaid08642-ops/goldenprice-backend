@@ -1,15 +1,15 @@
 ---
 import AssetPage from "../../../components/AssetPage.astro";
-import { ASSETS } from "../../../data/assets";
+import { CORE } from "../../../data/assets";
 import { getData } from "../../../lib/api";
 import { combos } from "../../../lib/paths";
 export async function getStaticPaths() {
   const data = await getData();
-  // assets without a price yet (manual metals) get no page until a price exists
-  const assets = ASSETS.filter((a) => a.slug !== "gold" && data.items[a.sym]?.price != null);
+  // assets without a price yet get no page; long-tail assets live on /{lang}/p/{slug}/
+  const assets = CORE.filter((a) => a.slug !== "gold" && data.items[a.sym]?.price != null);
   return combos().flatMap((c) => {
-    const pages = [{ page: "markets", view: "markets", asset: null as any }];
-    if (c.primary) pages.push({ page: "rates", view: "rates", asset: null }, { page: "calculators", view: "calc", asset: null }, ...assets.map((a) => ({ page: a.slug, view: "asset", asset: a as any })));
+    const pages: { page: string; view: string; asset: any }[] = [{ page: "markets", view: "markets", asset: null }];
+    if (c.primary) pages.push({ page: "rates", view: "rates", asset: null }, { page: "calculators", view: "calc", asset: null }, { page: "compare", view: "compare", asset: null }, ...assets.map((a) => ({ page: a.slug, view: "asset", asset: a as any })));
     return pages.map((p) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase(), page: p.page }, props: { lang: c.lang, country: c.country, view: p.view, asset: p.asset } }));
   });
 }

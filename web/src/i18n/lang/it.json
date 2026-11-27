@@ -114,7 +114,87 @@
   "zakat_note": "Lo zakat è dovuto sulla ricchezza posseduta per un anno lunare sopra il nisab. È una guida; chiedi a un sapiente per il tuo caso.",
   "zakat_below": "Sotto il nisab: nessuno zakat dovuto su questo importo.",
   "related_title": "Ricerche popolari",
-  "retail_basis": "Basato su {n} fonti locali, verificato {d}."
+  "retail_basis": "Basato su {n} fonti locali, verificato {d}.",
+  "u_share": "azione",
+  "u_rate": "tasso",
+  "u_mbf": "1.000 piedi tavola",
+  "cat_stock": "Azioni",
+  "cat_forex": "Coppie di valute",
+  "cat_construction": "Materiali da costruzione",
+  "perf_title": "Performance",
+  "p_7d": "1 settimana",
+  "p_30d": "1 mese",
+  "p_90d": "3 mesi",
+  "p_ytd": "Da inizio anno",
+  "p_1y": "1 anno",
+  "p_5y": "5 anni",
+  "range52": "Intervallo a 52 settimane",
+  "ath": "Massimo nei nostri dati",
+  "atl": "Minimo nei nostri dati",
+  "since": "Storico dal {d}",
+  "about_title": "Info su {a}",
+  "drivers_title": "Cosa fa muovere il prezzo",
+  "uses_title": "A cosa serve",
+  "source_note": "Fonte: {s}. I prezzi sono indicativi e possono essere in ritardo.",
+  "about_stock": "Le azioni di {a} sono quotate in {c}. La pagina mostra l'ultimo prezzo in ritardo, la variazione di oggi e su periodi più lunghi, e lo stesso prezzo convertito in altre valute.",
+  "about_forex": "{a} indica quanta della seconda valuta si ottiene con un'unità della prima. I tassi si muovono con i tassi d'interesse, l'inflazione, il commercio e le notizie economiche di entrambi i Paesi.",
+  "about_crypto": "{a} è una criptovaluta. Il suo prezzo si forma con le negoziazioni sugli exchange, sempre attive, e può cambiare rapidamente. La pagina mostra il prezzo in tempo reale, la variazione su diversi periodi e il prezzo in altre valute.",
+  "about_commodity": "{a} è una materia prima negoziata sui mercati. Il suo prezzo segue offerta, domanda, meteo, valute e notizie. La pagina mostra l'ultimo prezzo, la variazione su diversi periodi e il prezzo in altre valute.",
+  "about_index": "{a} misura l'andamento di un paniere di azioni. Il valore è espresso in punti e si muove con i prezzi delle azioni delle società che lo compongono.",
+  "tail_list_title": "Azioni, criptovalute, coppie di valute e altre materie prime",
+  "tail_list_desc": "Prezzi in tempo reale di azioni internazionali, altre criptovalute, coppie di valute e materie prime aggiuntive, con grafici e performance.",
+  "tail_title": "Prezzo di {a} oggi | valore e grafico in tempo reale",
+  "tail_desc": "Prezzo in tempo reale di {a} con grafico e performance su 1 settimana, 1 mese, 1 anno e altro. Aggiornato ogni pochi minuti.",
+  "nav_dev": "Sviluppatori",
+  "nav_compare": "Confronta",
+  "terms": "Termini di utilizzo",
+  "disclaimer": "Avvertenza",
+  "cookies": "Informativa sui cookie",
+  "developers": "API per sviluppatori",
+  "alert_title": "Ricevi un avviso di prezzo",
+  "alert_email": "La tua email",
+  "alert_target": "Prezzo obiettivo ({cur})",
+  "alert_above": "Sale sopra",
+  "alert_below": "Scende sotto",
+  "alert_submit": "Crea avviso",
+  "alert_ok": "Avviso salvato. Ti invieremo un'email una sola volta quando il prezzo raggiungerà il tuo obiettivo.",
+  "alert_err": "Impossibile salvare l'avviso. Controlla l'email e il prezzo, poi riprova.",
+  "alert_privacy": "Usiamo la tua email solo per inviare questo avviso.",
+  "contact_title": "Scrivici un messaggio",
+  "contact_name": "Il tuo nome",
+  "contact_email": "La tua email",
+  "contact_msg": "Messaggio",
+  "contact_send": "Invia",
+  "contact_ok": "Grazie. Il tuo messaggio è stato inviato.",
+  "contact_err": "Impossibile inviare il messaggio. Riprova più tardi.",
+  "dev_title": "API prezzi gratuita",
+  "dev_desc": "Usa i nostri prezzi nella tua app o nel tuo sito. Le chiavi gratuite sono limitate a 1.000 richieste al giorno. Ti preghiamo di citare il sito.",
+  "dev_endpoints": "Endpoint",
+  "dev_request": "Richiedi una chiave API gratuita",
+  "dev_email": "La tua email",
+  "dev_purpose": "Cosa realizzerai?",
+  "dev_get": "Ottieni chiave",
+  "dev_key": "La tua chiave API (salvala ora, viene mostrata una sola volta)",
+  "dev_err": "Impossibile creare la chiave. Controlla l'email e riprova.",
+  "dev_usage": "Invia la chiave nell'intestazione x-api-key.",
+  "cmp_title": "Confronta due asset",
+  "cmp_a": "Primo asset",
+  "cmp_b": "Secondo asset",
+  "cmp_ratio": "Rapporto (primo diviso secondo)",
+  "cmp_now": "Ora",
+  "cmp_desc": "Confronta due asset qualsiasi: il rapporto tra loro nel tempo, ad esempio il rapporto oro/argento.",
+  "cmp_page_title": "Confronta prezzi e rapporti in {country}",
+  "roi_title": "Calcolatore di profitto",
+  "roi_buy": "Prezzo d'acquisto",
+  "roi_amount": "Quantità",
+  "roi_now": "Prezzo attuale",
+  "roi_profit": "Profitto o perdita",
+  "roi_pct": "Rendimento",
+  "units_title": "Convertitore di unità",
+  "units_value": "Valore",
+  "units_from": "Da",
+  "units_to": "A",
+  "calc_tools_desc": "Calcolatori per valore dell'oro, zakat, profitto e unità."
  },
  "assets": {
   "gold": "Oro",
@@ -196,7 +276,8 @@
   "about": [
    "{site} mostra i prezzi in tempo reale di oro, argento, altri metalli, petrolio, gas, materie prime agricole, indici azionari e criptovalute nella tua valuta, per molti paesi e lingue.",
    "I prezzi provengono da flussi pubblici di dati di mercato e vengono aggiornati ogni pochi minuti. Alcuni prezzi sono aggiornati manualmente e mostrano l'ora dell'ultimo aggiornamento.",
-   "Le stime al dettaglio locali aggiungono al prezzo globale le tasse, la manodopera e i premi tipici dei rivenditori. Sono stime, non quotazioni."
+   "Le stime al dettaglio locali aggiungono al prezzo globale le tasse, la manodopera e i premi tipici dei rivenditori. Sono stime, non quotazioni.",
+   "Offriamo anche calcolatori per il valore dell'oro, lo zakat, il profitto e le unità, un convertitore di valute e avvisi di prezzo."
   ],
   "privacy": [
    "Non chiediamo account né dati personali. Memorizziamo nel tuo browser solo la scelta di lingua, paese e tema.",
@@ -206,6 +287,648 @@
   "contact": [
    "Domande, correzioni o richieste di collaborazione: usa l'indirizzo di contatto pubblicato in questa pagina una volta online il sito.",
    "Se vedi un prezzo errato, indicaci il bene, il paese e dove hai visto il valore corretto."
+  ],
+  "terms": [
+   "Utilizzando {site} accetti questi termini. Il sito è offerto a scopo di informazione generale.",
+   "Prezzi, grafici e stime sono indicativi, possono essere in ritardo o errati e non devono essere usati come unica base per una operazione o un acquisto.",
+   "Non puoi copiare i dati in blocco né rivenderli. Per l'accesso automatizzato usa la nostra API gratuita e cita il sito.",
+   "Possiamo modificare o interrompere in qualsiasi momento qualsiasi parte del servizio e non siamo responsabili delle perdite derivanti dal suo utilizzo."
+  ],
+  "disclaimer": [
+   "{site} non è un intermediario, una banca né un consulente finanziario e non fornisce consulenza in materia di investimenti.",
+   "Le stime al dettaglio locali, i premi sui lingotti e i valori di riacquisto sono stime basate su fonti pubbliche. I negozi differiscono: conferma sempre il prezzo con il venditore.",
+   "I rendimenti passati non anticipano i risultati futuri. Investire in metalli, azioni e criptovalute comporta rischi, inclusa la perdita del capitale investito."
+  ],
+  "cookies": [
+   "Usiamo solo l'archiviazione del browser necessaria per ricordare la tua lingua, il Paese e il tema.",
+   "Gli annunci, quando attivi, sono forniti da Google AdSense, che può impostare cookie per mostrare annunci pertinenti. Puoi gestirlo nelle impostazioni annunci di Google.",
+   "Ai visitatori delle regioni che richiedono il consenso sarà chiesto il permesso prima dell'uso dei cookie pubblicitari."
+  ],
+  "developers": [
+   "La nostra API dei prezzi è gratuita per i progetti piccoli. Crea una chiave qui sotto e inviala nell'intestazione x-api-key.",
+   "Endpoint: /v1/overview per tutti i prezzi e le performance, /v1/chart/SYMBOL?days=365 per lo storico, /v1/rates per i tassi di cambio.",
+   "Le chiavi gratuite consentono 1.000 richieste al giorno. Le risposte sono memorizzate in cache per un minuto; ti preghiamo di non fare chiamate più frequenti.",
+   "Cita il sito quando mostri i nostri prezzi."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "L'oro è il metallo prezioso più diffuso e una riserva di valore tradizionale. Il prezzo è quotato per oncia troy in tutto il mondo e per grammo o tola in molti mercati locali, con gioielli venduti per carati da 10K a 24K.",
+   "drivers": [
+    "Tassi d'interesse e dollaro USA",
+    "Inflazione e incertezza economica o politica",
+    "Acquisti delle banche centrali e domanda di investimento"
+   ],
+   "uses": [
+    "Gioielli e regali",
+    "Lingotti e monete da investimento",
+    "Elettronica e odontoiatria"
+   ]
+  },
+  "silver": {
+   "about": "L'argento è sia un metallo prezioso sia un metallo industriale. Viene quotato per oncia troy e venduto in lingotti, monete e gioielli in titoli come 999, 925 e 800.",
+   "drivers": [
+    "Domanda industriale da pannelli solari ed elettronica",
+    "Il prezzo dell'oro e il dollaro USA",
+    "Domanda di investimento in lingotti e monete"
+   ],
+   "uses": [
+    "Gioielli e argenteria",
+    "Pannelli solari ed elettronica",
+    "Lingotti e monete da investimento"
+   ]
+  },
+  "platinum": {
+   "about": "Il platino è un metallo prezioso raro e denso, che in alcuni periodi vale più dell'oro a parità di peso. Viene quotato per oncia troy.",
+   "drivers": [
+    "Domanda di marmitte catalitiche per auto",
+    "Produzione mineraria, soprattutto da Sudafrica e Russia",
+    "Domanda di investimento e prezzo dell'oro"
+   ],
+   "uses": [
+    "Marmitte catalitiche",
+    "Gioielli",
+    "Industria chimica e tecnologie dell'idrogeno"
+   ]
+  },
+  "palladium": {
+   "about": "Il palladio è un metallo prezioso raro usato soprattutto nelle marmitte catalitiche delle auto a benzina. Viene quotato per oncia troy.",
+   "drivers": [
+    "Produzione di auto e norme sulle emissioni",
+    "Produzione mineraria da Russia e Sudafrica",
+    "Sostituzione con il platino"
+   ],
+   "uses": [
+    "Marmitte catalitiche",
+    "Elettronica",
+    "Odontoiatria e gioielli"
+   ]
+  },
+  "copper": {
+   "about": "Il rame è il metallo industriale di riferimento. Il prezzo è quotato per tonnellata metrica ed è seguito come indicatore della salute economica globale.",
+   "drivers": [
+    "Domanda da edilizia e industria, soprattutto in Cina",
+    "Produzione mineraria e scorte",
+    "Il dollaro USA e la politica commerciale"
+   ],
+   "uses": [
+    "Cablaggi elettrici e reti di distribuzione",
+    "Edilizia e impianti idraulici",
+    "Veicoli elettrici ed energie rinnovabili"
+   ]
+  },
+  "aluminum": {
+   "about": "L'alluminio è un metallo leggero e molto usato, ricavato dalla bauxite con grandi quantità di elettricità. Il prezzo è quotato per tonnellata metrica.",
+   "drivers": [
+    "Costi energetici della fusione",
+    "Domanda da auto, imballaggi ed edilizia",
+    "Produzione in Cina e dazi commerciali"
+   ],
+   "uses": [
+    "Imballaggi e lattine",
+    "Auto e aerei",
+    "Edilizia"
+   ]
+  },
+  "nickel": {
+   "about": "Il nichel serve a produrre acciaio inossidabile e batterie. Il prezzo è quotato per tonnellata metrica al London Metal Exchange.",
+   "drivers": [
+    "Domanda di acciaio inossidabile",
+    "Domanda di batterie per veicoli elettrici",
+    "Offerta da Indonesia e Filippine"
+   ],
+   "uses": [
+    "Acciaio inossidabile",
+    "Batterie",
+    "Leghe"
+   ]
+  },
+  "zinc": {
+   "about": "Lo zinco serve soprattutto a zincare l'acciaio per proteggerlo dalla ruggine. Il prezzo è quotato per tonnellata metrica.",
+   "drivers": [
+    "Domanda di acciaio ed edilizia",
+    "Produzione mineraria e fonderie",
+    "Prezzi dell'energia in Europa e Cina"
+   ],
+   "uses": [
+    "Zincatura dell'acciaio",
+    "Ottone e leghe",
+    "Batterie"
+   ]
+  },
+  "lead": {
+   "about": "Il piombo è un metallo denso usato soprattutto nelle batterie delle auto. Il prezzo è quotato per tonnellata metrica.",
+   "drivers": [
+    "Domanda da auto e batterie",
+    "Offerta dal riciclo",
+    "Produzione mineraria e norme ambientali"
+   ],
+   "uses": [
+    "Batterie per veicoli",
+    "Schermatura dalle radiazioni",
+    "Cavi e leghe"
+   ]
+  },
+  "tin": {
+   "about": "Lo stagno è un metallo raro usato soprattutto come saldatura in elettronica. Il prezzo è quotato per tonnellata metrica.",
+   "drivers": [
+    "Domanda di elettronica e chip",
+    "Produzione mineraria da Indonesia, Myanmar e Perù",
+    "Scorte e regole commerciali"
+   ],
+   "uses": [
+    "Saldature per elettronica",
+    "Lattine alimentari",
+    "Prodotti chimici"
+   ]
+  },
+  "cobalt": {
+   "about": "Il cobalto è un metallo per batterie estratto soprattutto nella Repubblica Democratica del Congo. Il prezzo è quotato per tonnellata metrica.",
+   "drivers": [
+    "Domanda di veicoli elettrici e batterie",
+    "Produzione congolese e regole di esportazione",
+    "Evoluzione della chimica delle batterie"
+   ],
+   "uses": [
+    "Batterie",
+    "Superleghe",
+    "Magneti"
+   ]
+  },
+  "lithium": {
+   "about": "Il carbonato di litio è la principale materia prima delle batterie ricaricabili. Il prezzo indicato è quello del carbonato di grado batteria in Cina, convertito in dollari USA per tonnellata metrica.",
+   "drivers": [
+    "Vendite di veicoli elettrici",
+    "Nuova offerta da miniere e raffinerie",
+    "Politiche governative sulle batterie"
+   ],
+   "uses": [
+    "Batterie per veicoli elettrici",
+    "Telefoni e portatili",
+    "Accumulo di energia"
+   ]
+  },
+  "uranium": {
+   "about": "L'uranio è il combustibile delle centrali nucleari. Il prezzo è quotato in dollari USA per libbra di U3O8.",
+   "drivers": [
+    "Riavvio di centrali nucleari e nuovi reattori",
+    "Produzione mineraria, soprattutto da Kazakistan e Canada",
+    "Accumulo di scorte pubbliche e sanzioni"
+   ],
+   "uses": [
+    "Energia nucleare",
+    "Isotopi per uso medico"
+   ]
+  },
+  "iron-ore": {
+   "about": "Il minerale di ferro è la principale materia prima dell'acciaio. Il prezzo indicato si riferisce a un minerale con il 62% di ferro consegnato in Cina, per tonnellata metrica.",
+   "drivers": [
+    "Produzione di acciaio in Cina",
+    "Offerta da Australia e Brasile",
+    "Spesa per immobili e infrastrutture"
+   ],
+   "uses": [
+    "Produzione di acciaio"
+   ]
+  },
+  "steel": {
+   "about": "L'acciaio è una lega di ferro usata in quasi tutti i settori industriali. Il prezzo indicato si riferisce al tondino per cemento armato in Cina, convertito in dollari USA per tonnellata metrica.",
+   "drivers": [
+    "Domanda dell'edilizia",
+    "Costi del minerale di ferro e del carbon coke",
+    "Limiti di produzione imposti dai governi"
+   ],
+   "uses": [
+    "Edifici e ponti",
+    "Auto e macchinari"
+   ]
+  },
+  "steel-hrc": {
+   "about": "La bobina di acciaio laminato a caldo è un prodotto piano usato nell'industria. Il prezzo indicato si riferisce alla consegna nel Midwest statunitense, per tonnellata metrica.",
+   "drivers": [
+    "Domanda statunitense da auto ed edilizia",
+    "Dazi all'importazione e concorrenza",
+    "Costi di materie prime ed energia"
+   ],
+   "uses": [
+    "Auto ed elettrodomestici",
+    "Tubi e costruzioni"
+   ]
+  },
+  "lumber": {
+   "about": "I futures sul legname seguono il prezzo del legno dolce usato per costruire case, quotato per 1.000 piedi tavola.",
+   "drivers": [
+    "Avvio di nuove costruzioni residenziali e tassi dei mutui",
+    "Produzione delle segherie e incendi boschivi",
+    "Dazi commerciali tra USA e Canada"
+   ],
+   "uses": [
+    "Struttura delle case",
+    "Mobili e imballaggi"
+   ]
+  },
+  "wti-oil": {
+   "about": "Il WTI è il riferimento statunitense per il petrolio greggio, quotato al barile e consegnato a Cushing, in Oklahoma.",
+   "drivers": [
+    "Decisioni dell'OPEC e della produzione statunitense",
+    "Crescita economica globale",
+    "Scorte, geopolitica e dollaro USA"
+   ],
+   "uses": [
+    "Benzina, gasolio e cherosene per aerei",
+    "Plastiche e prodotti chimici"
+   ]
+  },
+  "brent-oil": {
+   "about": "Il Brent è il riferimento globale per il petrolio greggio, quotato al barile, e fissa il prezzo della maggior parte del petrolio scambiato al di fuori degli USA.",
+   "drivers": [
+    "Decisioni di produzione dell'OPEC+",
+    "Domanda globale, soprattutto da Cina e India",
+    "Conflitti e sanzioni nelle regioni produttrici"
+   ],
+   "uses": [
+    "Benzina, gasolio e cherosene per aerei",
+    "Plastiche e prodotti chimici"
+   ]
+  },
+  "natural-gas": {
+   "about": "Il gas naturale è quotato qui con il prezzo statunitense Henry Hub, in MMBtu. Viene usato per il riscaldamento, la produzione di energia elettrica e l'industria.",
+   "drivers": [
+    "Meteo e domanda per il riscaldamento",
+    "Livelli di stoccaggio e produzione",
+    "Esportazioni di gas naturale liquefatto"
+   ],
+   "uses": [
+    "Produzione di energia elettrica",
+    "Riscaldamento e cucina domestici",
+    "Fertilizzanti e prodotti chimici"
+   ]
+  },
+  "gasoline": {
+   "about": "I futures sulla benzina seguono i prezzi all'ingrosso della benzina, in dollari USA al gallone.",
+   "drivers": [
+    "Prezzo del greggio",
+    "Produzione delle raffinerie e stagione di guida",
+    "Scorte e normative"
+   ],
+   "uses": [
+    "Carburante per auto"
+   ]
+  },
+  "heating-oil": {
+   "about": "I futures sull'olio combustibile per riscaldamento seguono i prezzi all'ingrosso del gasolio e del combustibile per riscaldamento, in dollari USA al gallone.",
+   "drivers": [
+    "Prezzo del greggio",
+    "Clima invernale",
+    "Domanda di gasolio da camion e industria"
+   ],
+   "uses": [
+    "Riscaldamento domestico",
+    "Gasolio per motori diesel"
+   ]
+  },
+  "wheat": {
+   "about": "Il grano è uno dei principali cereali alimentari del mondo. Il prezzo è quotato per bushel alla borsa di Chicago.",
+   "drivers": [
+    "Meteo nelle principali zone di coltivazione",
+    "Esportazioni di Russia, Ucraina, USA e UE",
+    "Scorte, prezzi dell'energia e dollaro USA"
+   ],
+   "uses": [
+    "Pane, pasta e farina",
+    "Mangimi per animali"
+   ]
+  },
+  "corn": {
+   "about": "Il mais è un importante cereale alimentare e per mangimi, ed è anche una fonte di etanolo. Il prezzo è quotato per bushel alla borsa di Chicago.",
+   "drivers": [
+    "Raccolti di USA e Brasile",
+    "Domanda di etanolo e mangimi",
+    "Meteo ed esportazioni"
+   ],
+   "uses": [
+    "Mangimi per animali",
+    "Etanolo come carburante",
+    "Alimenti e sciroppi"
+   ]
+  },
+  "soybeans": {
+   "about": "La soia viene trasformata in olio e farina. Il prezzo è quotato per bushel alla borsa di Chicago.",
+   "drivers": [
+    "Raccolti di USA, Brasile e Argentina",
+    "Domanda di importazione della Cina",
+    "Politiche sui biocarburanti"
+   ],
+   "uses": [
+    "Olio da cucina",
+    "Mangimi per animali",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Il riso greggio è un alimento di base per miliardi di persone. Il prezzo è quotato per quintale (cwt) alla borsa di Chicago.",
+   "drivers": [
+    "Monsone e condizioni del raccolto in Asia",
+    "Norme di esportazione di India, Thailandia e Vietnam",
+    "Scorte e prezzi alimentari"
+   ],
+   "uses": [
+    "Alimentazione"
+   ]
+  },
+  "sugar": {
+   "about": "I futures sullo zucchero greggio seguono il prezzo mondiale dello zucchero, quotato in dollari USA per libbra.",
+   "drivers": [
+    "Raccolti di canna in Brasile e India",
+    "Domanda di etanolo in Brasile",
+    "Meteo e valute"
+   ],
+   "uses": [
+    "Alimenti e bevande",
+    "Etanolo"
+   ]
+  },
+  "coffee": {
+   "about": "I futures sul caffè arabica seguono il prezzo mondiale dei chicchi di caffè, quotato in dollari USA per libbra.",
+   "drivers": [
+    "Meteo in Brasile e Colombia",
+    "Scorte ed esportazioni",
+    "Valute e domanda"
+   ],
+   "uses": [
+    "Bevande al caffè"
+   ]
+  },
+  "cocoa": {
+   "about": "I futures sul cacao seguono il prezzo dei fave di cacao, quotato in dollari USA per tonnellata metrica.",
+   "drivers": [
+    "Raccolti in Costa d'Avorio e Ghana",
+    "Malattie e meteo",
+    "Domanda di cioccolato"
+   ],
+   "uses": [
+    "Cioccolato e dolciumi",
+    "Cosmetici"
+   ]
+  },
+  "cotton": {
+   "about": "I futures sul cotone seguono il prezzo mondiale del cotone greggio, quotato in dollari USA per libbra.",
+   "drivers": [
+    "Meteo in USA, India e Cina",
+    "Domanda del settore tessile",
+    "Prezzi del petrolio e valute"
+   ],
+   "uses": [
+    "Abbigliamento e tessuti"
+   ]
+  },
+  "bitcoin": {
+   "about": "Il bitcoin è la prima e più grande criptovaluta. Viene scambiato in continuo sugli exchange e la sua offerta è limitata a 21 milioni di monete.",
+   "drivers": [
+    "Domanda degli investitori e flussi di ETF",
+    "Tassi d'interesse e propensione al rischio",
+    "Regolamentazione e notizie"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum è una blockchain per contratti intelligenti e applicazioni, e la sua moneta, l'ether, è la seconda criptovaluta per dimensione.",
+   "drivers": [
+    "Uso delle applicazioni Ethereum",
+    "Aggiornamenti della rete e commissioni",
+    "Sentiment del mercato"
+   ]
+  },
+  "bnb": {
+   "about": "BNB è la moneta della BNB Chain e dell'ecosistema dell'exchange Binance.",
+   "drivers": [
+    "Attività e commissioni dell'exchange",
+    "Distruzione di token",
+    "Regolamentazione"
+   ]
+  },
+  "xrp": {
+   "about": "XRP è una criptovaluta usata per pagamenti internazionali rapidi sull'XRP Ledger.",
+   "drivers": [
+    "Notizie giudiziarie e regolamentari",
+    "Partnership con banche e operatori di pagamento",
+    "Sentiment del mercato"
+   ]
+  },
+  "solana": {
+   "about": "Solana è una blockchain veloce per applicazioni e pagamenti, e SOL è la sua moneta.",
+   "drivers": [
+    "Attività di applicazioni e token",
+    "Affidabilità della rete",
+    "Sentiment del mercato"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano è una blockchain proof-of-stake, e ADA è la sua moneta.",
+   "drivers": [
+    "Avanzamento dello sviluppo",
+    "Staking",
+    "Sentiment del mercato"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin è nato come una moneta per scherzo ed è diventata una delle criptovalute più scambiate.",
+   "drivers": [
+    "Attenzione sui social media",
+    "Sentiment del mercato",
+    "Adozione nei pagamenti"
+   ]
+  },
+  "tron": {
+   "about": "TRON è una blockchain molto usata per i trasferimenti di stablecoin, e TRX è la sua moneta.",
+   "drivers": [
+    "Attività di trasferimento di stablecoin",
+    "Commissioni di rete",
+    "Sentiment del mercato"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot collega molte blockchain, e DOT è la sua moneta.",
+   "drivers": [
+    "Sviluppo della rete",
+    "Staking",
+    "Sentiment del mercato"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink porta dati del mondo reale nelle blockchain, e LINK è la sua moneta.",
+   "drivers": [
+    "Utilizzo da parte di altre applicazioni",
+    "Partnership",
+    "Sentiment del mercato"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin è una delle criptovalute più antiche, creata per pagamenti più rapidi di quelli del bitcoin.",
+   "drivers": [
+    "Prezzo del bitcoin",
+    "Adozione nei pagamenti",
+    "Sentiment del mercato"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche è una piattaforma blockchain veloce, e AVAX è la sua moneta.",
+   "drivers": [
+    "Attività delle applicazioni",
+    "Aggiornamenti della rete",
+    "Sentiment del mercato"
+   ]
+  },
+  "sp500": {
+   "about": "L'S&P 500 segue 500 tra le maggiori società statunitensi ed è il principale indicatore del mercato azionario degli USA.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "nasdaq": {
+   "about": "Il Nasdaq Composite segue migliaia di azioni quotate al Nasdaq, con un forte peso delle società tecnologiche.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "dow-jones": {
+   "about": "Il Dow Jones Industrial Average segue 30 grandi società statunitensi.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "ftse-100": {
+   "about": "Il FTSE 100 segue le 100 maggiori società quotate a Londra.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "dax": {
+   "about": "Il DAX segue 40 grandi società tedesche quotate a Francoforte.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "cac-40": {
+   "about": "Il CAC 40 segue 40 grandi società quotate a Parigi.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Il Nikkei 225 segue 225 grandi società quotate a Tokyo.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "hang-seng": {
+   "about": "L'indice Hang Seng segue le maggiori società quotate a Hong Kong.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "shanghai": {
+   "about": "Lo Shanghai Composite segue tutte le azioni quotate alla Borsa di Shanghai.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "nifty-50": {
+   "about": "Il Nifty 50 segue 50 grandi società della National Stock Exchange indiana.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "sensex": {
+   "about": "Il Sensex segue 30 grandi società della Borsa di Bombay.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "egx30": {
+   "about": "L'EGX 30 segue le 30 società più scambiate della Borsa egiziana.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "tasi": {
+   "about": "Il Tadawul All Share Index segue tutte le società quotate nella borsa saudita.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "bist-100": {
+   "about": "Il BIST 100 segue le 100 maggiori società della Borsa di Istanbul.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "bovespa": {
+   "about": "Il Bovespa segue le principali società quotate alla B3, la borsa del Brasile.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "asx-200": {
+   "about": "L'ASX 200 segue le 200 maggiori società della borsa australiana.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "tsx": {
+   "about": "Lo S&P/TSX Composite segue le principali società quotate alla Borsa di Toronto.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "kospi": {
+   "about": "Il KOSPI segue tutte le azioni ordinarie quotate alla Borsa coreana.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "L'Euro Stoxx 50 segue 50 grandi società dell'area euro.",
+   "drivers": [
+    "Utili delle società",
+    "Tassi d'interesse e inflazione",
+    "Notizie economiche e politiche"
+   ]
+  }
  }
 }

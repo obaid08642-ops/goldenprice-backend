@@ -1,6 +1,7 @@
 // Build-time data for the first paint (SEO). The browser refreshes everything live after load.
 export const API = (import.meta.env.PUBLIC_API_URL as string) || "https://goldenprice-backend.onrender.com";
-export interface OverviewItem { price: number | null; changePct: number | null; spark: number[]; stale?: boolean; t?: number | null }
+export interface Perf { d7: number | null; d30: number | null; d90: number | null; ytd: number | null; y1: number | null; y5: number | null }
+export interface OverviewItem { price: number | null; changePct: number | null; spark: number[]; stale?: boolean; t?: number | null; src?: string | null; perf?: Perf | null; hi52?: number | null; lo52?: number | null; ath?: number | null; athDay?: string | null; atl?: number | null; atlDay?: string | null; since?: string | null }
 export interface Data { items: Record<string, OverviewItem>; rates: Record<string, number>; live: boolean }
 const FALLBACK: Data = {
   live: false,

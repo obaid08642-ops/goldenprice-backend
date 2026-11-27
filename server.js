@@ -23,10 +23,11 @@ import path from "path";
 import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
+import crypto from "node:crypto";
 import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
 import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
-import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats } from "./db.js";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -1233,6 +1234,92 @@ app.post("/api/admin/cache/clear", (req, res) => {
   saveCache();
   res.json({ ok: true });
 });
+
+// ---------- contact form, free API keys, public /v1 API, price alerts ----------
+const buckets = new Map();
+function limited(ip, name, max, windowMs) {
+  const k = `${name}:${ip}`, now0 = Date.now();
+  const b = (buckets.get(k) || []).filter((t) => now0 - t < windowMs);
+  if (b.length >= max) { buckets.set(k, b); return true; }
+  b.push(now0); buckets.set(k, b); return false;
+}
+setInterval(() => { for (const [k, v] of buckets) if (!v.length || Date.now() - v[v.length - 1] > 24 * 3600 * 1000) buckets.delete(k); }, 3600 * 1000);
+const clientIp = (req) => String(req.headers["cf-connecting-ip"] || req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].trim();
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const clean = (v, n) => String(v ?? "").replace(/[\u0000-\u001f]/g, " ").trim().slice(0, n);
+
+app.post("/api/contact", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true }); // honeypot filled: pretend success
+  if (limited(clientIp(req), "contact", 5, 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200), message = clean(b.message, 4000), name = clean(b.name, 120);
+  if (!EMAIL_RE.test(email) || message.length < 5) return res.status(400).json({ ok: false, error: "invalid input" });
+  try { if (!(await saveContact(name, email, message, clientIp(req)))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch (e) { return res.status(500).json({ ok: false, error: "failed" }); }
+  if (RESEND_API_KEY && ALERT_EMAIL) sendMail(ALERT_EMAIL, `Contact form: ${name || email}`, `${name} <${email}>\n\n${message}`).catch(() => {});
+  res.json({ ok: true });
+});
+
+app.post("/api/keys", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true });
+  if (limited(clientIp(req), "keys", 3, 24 * 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200);
+  if (!EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "invalid email" });
+  const key = "gp_" + crypto.randomBytes(18).toString("hex");
+  try { if (!(await createKey(key, email, clean(b.purpose, 300)))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch { return res.status(500).json({ ok: false, error: "failed" }); }
+  keyCache.set(key, { ok: true, t: Date.now() });
+  res.json({ ok: true, key });
+});
+
+const keyCache = new Map(); // key -> { ok, t }
+const usage = new Map(); // key:day -> count
+const DAILY_LIMIT = Number(process.env.API_DAILY_LIMIT || 1000);
+async function requireKey(req, res, next) {
+  const key = String(req.headers["x-api-key"] || req.query.key || "");
+  if (!/^gp_[0-9a-f]{36}$/.test(key)) return res.status(401).json({ error: "missing or invalid x-api-key" });
+  let c = keyCache.get(key);
+  if (!c || Date.now() - c.t > 5 * 60 * 1000) { c = { ok: await keyActive(key).catch(() => false), t: Date.now() }; keyCache.set(key, c); }
+  if (!c.ok) return res.status(401).json({ error: "unknown or disabled key" });
+  const day = new Date().toISOString().slice(0, 10), uk = `${key}:${day}`;
+  const n = (usage.get(uk) || 0) + 1; usage.set(uk, n);
+  if (n > DAILY_LIMIT) return res.status(429).json({ error: `daily limit of ${DAILY_LIMIT} requests reached` });
+  res.set("X-RateLimit-Remaining", String(DAILY_LIMIT - n));
+  next();
+}
+setInterval(() => { const day = new Date().toISOString().slice(0, 10); for (const k of usage.keys()) if (!k.endsWith(day)) usage.delete(k); }, 6 * 3600 * 1000);
+const selfGet = (path, res) => fetch(`http://127.0.0.1:${PORT}${path}`).then((r) => r.json()).then((j) => res.json(j)).catch(() => res.status(502).json({ error: "upstream error" }));
+app.get("/v1/overview", requireKey, (req, res) => selfGet("/api/overview", res));
+app.get("/v1/rates", requireKey, (req, res) => selfGet("/api/rates", res));
+app.get("/v1/chart/:sym", requireKey, (req, res) => selfGet(`/api/chart/${encodeURIComponent(req.params.sym)}?days=${Number(req.query.days || 365)}&points=${Number(req.query.points || 400)}`, res));
+
+async function sendMail(to, subject, text) {
+  if (!RESEND_API_KEY) return false;
+  const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: process.env.MAIL_FROM || "GoldenPrice <onboarding@resend.dev>", to: [to], subject, text }) });
+  return r.ok;
+}
+app.post("/api/alerts", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true });
+  if (limited(clientIp(req), "alerts", 10, 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200), sym = clean(b.sym, 20).toUpperCase(), dir = b.dir === "below" ? "below" : "above", target = Number(b.target);
+  if (!EMAIL_RE.test(email) || !BY_SYM[sym] || !Number.isFinite(target) || target <= 0) return res.status(400).json({ ok: false, error: "invalid input" });
+  const token = crypto.randomBytes(16).toString("hex");
+  try { if (!(await addAlert({ email, sym, dir, target, label: clean(b.label, 60), lang: clean(b.lang, 8), token }))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch { return res.status(500).json({ ok: false, error: "failed" }); }
+  res.json({ ok: true, delivery: RESEND_API_KEY ? "email" : "pending-config" });
+});
+app.get("/api/alerts/cancel", async (req, res) => { const n = await cancelAlert(clean(req.query.token, 64)).catch(() => 0); res.type("text").send(n ? "Alert cancelled." : "Alert not found or already sent."); });
+async function checkPriceAlerts() {
+  if (!RESEND_API_KEY) return;
+  let list; try { list = await activeAlerts(); } catch { return; }
+  for (const a of list) {
+    const p = cache.prices[a.sym]?.price;
+    if (p == null || !((a.dir === "above" && p >= a.target) || (a.dir === "below" && p <= a.target))) continue;
+    const site = process.env.SITE_URL || "";
+    const ok = await sendMail(a.email, `Price alert: ${BY_SYM[a.sym]?.name || a.sym} ${a.dir === "above" ? "rose above" : "fell below"} ${a.label || a.target}`, `${BY_SYM[a.sym]?.name || a.sym} has crossed your target (${a.label || a.target}).\n\nThis alert will not repeat. Cancel/ignore: ${(process.env.API_PUBLIC_URL || "")}/api/alerts/cancel?token=${a.token}\n${site}`).catch(() => false);
+    if (ok) await markAlertFired(a.id).catch(() => {});
+  }
+}
+setInterval(() => checkPriceAlerts().catch(() => {}), 5 * 60 * 1000);
 
 // ---------- start ----------
 initDb().then((on) => console.log(on ? "DB ready" : "DB disabled (no DATABASE_URL)")).catch((e) => console.error("DB init failed", e.message || e));

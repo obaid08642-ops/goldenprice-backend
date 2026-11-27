@@ -5,4 +5,5 @@ export default defineConfig({
   output: "static",
   trailingSlash: "always",
   build: { inlineStylesheets: "auto" },
+  vite: { server: { fs: { allow: [".."] } } }, // the asset catalog lives one level up (../catalog.js)
 });

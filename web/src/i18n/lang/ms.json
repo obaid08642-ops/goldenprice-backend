@@ -114,7 +114,87 @@
   "zakat_note": "Zakat wajib ke atas harta yang dipegang selama satu tahun qamariah dan melebihi nisab. Ini hanya panduan, tanya ulama tentang kes anda.",
   "zakat_below": "Di bawah nisab: tiada zakat perlu dibayar bagi jumlah ini.",
   "related_title": "Carian popular",
-  "retail_basis": "Berdasarkan {n} sumber tempatan, disemak {d}."
+  "retail_basis": "Berdasarkan {n} sumber tempatan, disemak {d}.",
+  "u_share": "saham",
+  "u_rate": "kadar",
+  "u_mbf": "1,000 board feet",
+  "cat_stock": "Saham",
+  "cat_forex": "Pasangan mata wang",
+  "cat_construction": "Bahan binaan",
+  "perf_title": "Prestasi",
+  "p_7d": "1 minggu",
+  "p_30d": "1 bulan",
+  "p_90d": "3 bulan",
+  "p_ytd": "Sejak awal tahun",
+  "p_1y": "1 tahun",
+  "p_5y": "5 tahun",
+  "range52": "Julat 52 minggu",
+  "ath": "Tertinggi dalam data kami",
+  "atl": "Terendah dalam data kami",
+  "since": "Sejarah sejak {d}",
+  "about_title": "Mengenai {a}",
+  "drivers_title": "Apa yang menggerakkan harga",
+  "uses_title": "Kegunaannya",
+  "source_note": "Sumber: {s}. Harga ialah anggaran dan mungkin tertangguh.",
+  "about_stock": "Saham {a} didagangkan dalam {c}. Halaman ini memaparkan harga terkini yang mungkin tertangguh, perubahan hari ini dan dalam tempoh yang lebih panjang, serta harga yang sama ditukar kepada mata wang lain.",
+  "about_forex": "{a} menunjukkan berapa unit mata wang kedua yang boleh dibeli dengan satu unit mata wang pertama. Kadar bergerak mengikut kadar faedah, inflasi, perdagangan dan berita ekonomi kedua-dua negara.",
+  "about_crypto": "{a} ialah mata wang kripto. Harganya ditentukan oleh dagangan di bursa yang berjalan 24 jam dan boleh berubah dengan pantas. Halaman ini memaparkan harga langsung, perubahan dalam pelbagai tempoh dan harga dalam mata wang lain.",
+  "about_commodity": "{a} ialah komoditi yang didagangkan. Harganya mengikut bekalan, permintaan, cuaca, mata wang dan berita. Halaman ini memaparkan harga terkini, perubahan dalam pelbagai tempoh dan harga dalam mata wang lain.",
+  "about_index": "{a} mengukur prestasi sekumpulan saham. Nilainya dalam mata indeks dan bergerak mengikut harga saham syarikat-syarikatnya.",
+  "tail_list_title": "Saham, kripto, pasangan mata wang dan lebih banyak komoditi",
+  "tail_list_desc": "Harga langsung saham global, lebih banyak kripto, pasangan mata wang dan komoditi tambahan, dengan carta dan prestasi.",
+  "tail_title": "Harga {a} hari ini | nilai langsung dan carta",
+  "tail_desc": "Harga {a} langsung dengan carta dan prestasi dalam 1 minggu, 1 bulan, 1 tahun dan lain-lain. Dikemas kini setiap beberapa minit.",
+  "nav_dev": "Pembangun",
+  "nav_compare": "Bandingkan",
+  "terms": "Syarat penggunaan",
+  "disclaimer": "Penafian",
+  "cookies": "Dasar kuki",
+  "developers": "API untuk pembangun",
+  "alert_title": "Dapatkan makluman harga",
+  "alert_email": "E-mel anda",
+  "alert_target": "Harga sasaran ({cur})",
+  "alert_above": "Naik melepasi",
+  "alert_below": "Turun di bawah",
+  "alert_submit": "Cipta makluman",
+  "alert_ok": "Makluman disimpan. Kami akan menghantar e-mel sekali apabila harga mencapai sasaran anda.",
+  "alert_err": "Makluman tidak dapat disimpan. Semak e-mel dan harga, kemudian cuba lagi.",
+  "alert_privacy": "Kami hanya menggunakan e-mel anda untuk menghantar makluman ini.",
+  "contact_title": "Hantar mesej kepada kami",
+  "contact_name": "Nama anda",
+  "contact_email": "E-mel anda",
+  "contact_msg": "Mesej",
+  "contact_send": "Hantar",
+  "contact_ok": "Terima kasih. Mesej anda telah dihantar.",
+  "contact_err": "Mesej tidak dapat dihantar. Sila cuba lagi kemudian.",
+  "dev_title": "API harga percuma",
+  "dev_desc": "Gunakan harga kami dalam aplikasi atau laman web anda sendiri. Kunci percuma terhad kepada 1,000 permintaan sehari. Sila nyatakan sumber laman kami.",
+  "dev_endpoints": "Titik akhir",
+  "dev_request": "Dapatkan kunci API percuma",
+  "dev_email": "E-mel anda",
+  "dev_purpose": "Apa yang akan anda bina?",
+  "dev_get": "Dapatkan kunci",
+  "dev_key": "Kunci API anda (simpan sekarang, ia dipaparkan sekali sahaja)",
+  "dev_err": "Kunci tidak dapat dicipta. Semak e-mel dan cuba lagi.",
+  "dev_usage": "Hantar kunci dalam pengepala x-api-key.",
+  "cmp_title": "Bandingkan dua aset",
+  "cmp_a": "Aset pertama",
+  "cmp_b": "Aset kedua",
+  "cmp_ratio": "Nisbah (pertama dibahagi kedua)",
+  "cmp_now": "Kini",
+  "cmp_desc": "Bandingkan mana-mana dua aset: nisbah antara keduanya dari semasa ke semasa, contohnya nisbah emas kepada perak.",
+  "cmp_page_title": "Bandingkan harga dan nisbah di {country}",
+  "roi_title": "Kalkulator untung",
+  "roi_buy": "Harga beli",
+  "roi_amount": "Kuantiti",
+  "roi_now": "Harga semasa",
+  "roi_profit": "Untung atau rugi",
+  "roi_pct": "Pulangan",
+  "units_title": "Penukar unit",
+  "units_value": "Nilai",
+  "units_from": "Dari",
+  "units_to": "Kepada",
+  "calc_tools_desc": "Kalkulator nilai emas, zakat, untung dan unit."
  },
  "assets": {
   "gold": "Emas",
@@ -194,9 +274,10 @@
  },
  "legal": {
   "about": [
-   "{site} memaparkan harga semasa emas, perak, logam lain, minyak, gas, komoditi pertanian, indeks saham dan kripto dalam mata wang anda sendiri, untuk banyak negara dan bahasa.",
-   "Harga diperoleh daripada suapan data pasaran awam dan dikemas kini setiap beberapa minit. Sesetengah harga dikemas kini secara manual dan menunjukkan masa kemas kini terakhir.",
-   "Anggaran runcit tempatan menambah cukai, caj tempaan dan premium peniaga yang lazim pada harga global. Ia adalah anggaran, bukan sebut harga."
+   "{site} memaparkan harga semasa emas, perak, logam lain, tenaga, hasil tanaman, saham, indeks, kripto dan mata wang dalam mata wang anda sendiri, untuk banyak negara dan bahasa.",
+   "Harga datang daripada suapan data pasaran awam dan dikemas kini setiap beberapa minit. Sesetengah harga dikemas kini daripada halaman awam atau secara manual dan menunjukkan sumbernya.",
+   "Anggaran runcit tempatan menambah cukai, caj pembuatan dan premium peniaga yang biasa kepada harga global, dengan sumber dan tarikh dipaparkan. Ini ialah anggaran, bukan sebut harga.",
+   "Kami juga menawarkan kalkulator nilai emas, zakat, untung dan unit, penukar mata wang serta makluman harga."
   ],
   "privacy": [
    "Kami tidak meminta akaun atau data peribadi. Kami hanya menyimpan pilihan bahasa, negara dan tema anda dalam pelayar anda.",
@@ -206,6 +287,648 @@
   "contact": [
    "Soalan, pembetulan atau permintaan perkongsian: sila gunakan alamat hubungan yang disiarkan di halaman ini selepas laman ini dilancarkan.",
    "Jika anda melihat harga yang salah, beritahu kami aset, negara dan tempat anda melihat nilai yang betul."
+  ],
+  "terms": [
+   "Dengan menggunakan {site}, anda bersetuju dengan syarat ini. Laman ini disediakan untuk maklumat umum.",
+   "Harga, carta dan anggaran bersifat petunjuk, mungkin tertangguh atau salah, dan tidak boleh dijadikan satu-satunya asas untuk dagangan atau pembelian.",
+   "Anda tidak boleh menyalin data secara besar-besaran atau menjualnya semula. Untuk akses automatik, gunakan API percuma kami dan nyatakan sumber laman.",
+   "Kami boleh mengubah atau menghentikan mana-mana bahagian perkhidmatan pada bila-bila masa dan kami tidak bertanggungjawab atas kerugian daripada penggunaannya."
+  ],
+  "disclaimer": [
+   "{site} bukan broker, bank atau penasihat kewangan dan tidak memberikan nasihat pelaburan.",
+   "Anggaran runcit tempatan, premium jongkong dan angka beli balik ialah anggaran yang dibina daripada sumber awam. Kedai berbeza-beza, sentiasa sahkan harga dengan penjual.",
+   "Prestasi lalu tidak meramalkan keputusan masa depan. Melabur dalam logam, saham dan mata wang kripto membawa risiko, termasuk kehilangan wang yang dilaburkan."
+  ],
+  "cookies": [
+   "Kami hanya menggunakan storan pelayar yang diperlukan untuk mengingati bahasa, negara dan tema anda.",
+   "Iklan, apabila diaktifkan, disediakan oleh Google AdSense, yang mungkin menetapkan kuki untuk menunjukkan iklan yang relevan. Anda boleh mengurusnya dalam tetapan iklan Google anda.",
+   "Pelawat di wilayah yang memerlukan persetujuan akan ditanya sebelum kuki iklan digunakan."
+  ],
+  "developers": [
+   "API harga kami percuma untuk projek kecil. Cipta kunci di bawah dan hantarkannya dalam pengepala x-api-key.",
+   "Titik akhir: /v1/overview untuk semua harga dan prestasi, /v1/chart/SYMBOL?days=365 untuk sejarah, /v1/rates untuk kadar pertukaran.",
+   "Kunci percuma membenarkan 1,000 permintaan sehari. Respons disimpan dalam cache selama seminit, sila jangan memanggil lebih kerap daripada itu.",
+   "Sila nyatakan sumber laman apabila anda memaparkan harga kami."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Emas ialah logam berharga yang paling banyak dipegang dan secara tradisinya menjadi simpanan nilai. Harganya dinyatakan per auns troy di seluruh dunia dan per gram atau tola di banyak pasaran tempatan, dengan barang kemas dijual mengikut karat dari 10K hingga 24K.",
+   "drivers": [
+    "Kadar faedah dan dolar AS",
+    "Inflasi dan ketidakpastian ekonomi atau politik",
+    "Pembelian bank pusat dan permintaan pelaburan"
+   ],
+   "uses": [
+    "Barang kemas dan hadiah",
+    "Jongkong dan syiling pelaburan",
+    "Elektronik dan pergigian"
+   ]
+  },
+  "silver": {
+   "about": "Perak ialah logam berharga sekali gus logam industri. Harganya dinyatakan per auns troy dan dijual sebagai jongkong, syiling dan barang kemas dalam ketulenan seperti 999, 925 dan 800.",
+   "drivers": [
+    "Permintaan industri daripada panel solar dan elektronik",
+    "Harga emas dan dolar AS",
+    "Permintaan pelaburan untuk jongkong dan syiling"
+   ],
+   "uses": [
+    "Barang kemas dan peralatan perak",
+    "Panel solar dan elektronik",
+    "Jongkong dan syiling pelaburan"
+   ]
+  },
+  "platinum": {
+   "about": "Platinum ialah logam berharga yang jarang dan tumpat, dalam banyak tempoh lebih bernilai mengikut berat berbanding emas. Harganya dinyatakan per auns troy.",
+   "drivers": [
+    "Permintaan daripada pemangkin kereta",
+    "Bekalan lombong, terutamanya dari Afrika Selatan dan Rusia",
+    "Permintaan pelaburan dan harga emas"
+   ],
+   "uses": [
+    "Pemangkin ekzos",
+    "Barang kemas",
+    "Industri kimia dan teknologi hidrogen"
+   ]
+  },
+  "palladium": {
+   "about": "Paladium ialah logam berharga yang jarang, digunakan terutamanya dalam pemangkin ekzos kereta petrol. Harganya dinyatakan per auns troy.",
+   "drivers": [
+    "Pengeluaran kereta dan peraturan pelepasan",
+    "Bekalan lombong dari Rusia dan Afrika Selatan",
+    "Penggantian dengan platinum"
+   ],
+   "uses": [
+    "Pemangkin ekzos",
+    "Elektronik",
+    "Pergigian dan barang kemas"
+   ]
+  },
+  "copper": {
+   "about": "Tembaga ialah logam industri penanda aras. Harganya dinyatakan per tan metrik dan diperhatikan sebagai tanda kesihatan ekonomi global.",
+   "drivers": [
+    "Permintaan pembinaan dan pembuatan, terutamanya di China",
+    "Bekalan lombong dan inventori",
+    "Dolar AS dan dasar perdagangan"
+   ],
+   "uses": [
+    "Wayar elektrik dan grid kuasa",
+    "Pembinaan dan paip",
+    "Kenderaan elektrik dan tenaga boleh diperbaharui"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminium ialah logam ringan yang digunakan secara meluas, dihasilkan daripada bauksit dengan jumlah elektrik yang besar. Harganya dinyatakan per tan metrik.",
+   "drivers": [
+    "Kos tenaga untuk peleburan",
+    "Permintaan daripada kereta, pembungkusan dan pembinaan",
+    "Pengeluaran China dan tarif perdagangan"
+   ],
+   "uses": [
+    "Pembungkusan dan tin",
+    "Kereta dan kapal terbang",
+    "Pembinaan"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel ialah logam yang digunakan untuk membuat keluli tahan karat dan bateri. Harganya dinyatakan per tan metrik di Bursa Logam London.",
+   "drivers": [
+    "Permintaan keluli tahan karat",
+    "Permintaan bateri kenderaan elektrik",
+    "Bekalan dari Indonesia dan Filipina"
+   ],
+   "uses": [
+    "Keluli tahan karat",
+    "Bateri",
+    "Aloi"
+   ]
+  },
+  "zinc": {
+   "about": "Zink kebanyakannya digunakan untuk menggalvani keluli supaya tidak berkarat. Harganya dinyatakan per tan metrik.",
+   "drivers": [
+    "Permintaan keluli dan pembinaan",
+    "Bekalan lombong dan output kilang peleburan",
+    "Harga tenaga di Eropah dan China"
+   ],
+   "uses": [
+    "Penggalvanian keluli",
+    "Loyang dan aloi",
+    "Bateri"
+   ]
+  },
+  "lead": {
+   "about": "Plumbum ialah logam tumpat yang kebanyakannya digunakan dalam bateri kenderaan. Harganya dinyatakan per tan metrik.",
+   "drivers": [
+    "Permintaan kereta dan bateri",
+    "Bekalan kitar semula",
+    "Output lombong dan peraturan alam sekitar"
+   ],
+   "uses": [
+    "Bateri kenderaan",
+    "Perisai sinaran",
+    "Kabel dan aloi"
+   ]
+  },
+  "tin": {
+   "about": "Timah ialah logam jarang yang kebanyakannya digunakan sebagai pateri dalam elektronik. Harganya dinyatakan per tan metrik.",
+   "drivers": [
+    "Permintaan elektronik dan cip",
+    "Bekalan lombong dari Indonesia, Myanmar dan Peru",
+    "Inventori dan peraturan perdagangan"
+   ],
+   "uses": [
+    "Pateri untuk elektronik",
+    "Tin makanan",
+    "Kimia"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt ialah logam bateri yang kebanyakannya dilombong di Republik Demokratik Congo. Harganya dinyatakan per tan metrik.",
+   "drivers": [
+    "Permintaan kenderaan elektrik dan bateri",
+    "Bekalan lombong Congo dan peraturan eksport",
+    "Perubahan kimia bateri"
+   ],
+   "uses": [
+    "Bateri",
+    "Superaloi",
+    "Magnet"
+   ]
+  },
+  "lithium": {
+   "about": "Litium karbonat ialah bahan mentah utama bagi bateri boleh dicas semula. Harga yang dipaparkan ialah bagi karbonat gred bateri di China, ditukar kepada dolar AS per tan metrik.",
+   "drivers": [
+    "Jualan kenderaan elektrik",
+    "Bekalan lombong dan kilang penapisan baharu",
+    "Dasar kerajaan mengenai bateri"
+   ],
+   "uses": [
+    "Bateri kenderaan elektrik",
+    "Telefon dan komputer riba",
+    "Simpanan tenaga"
+   ]
+  },
+  "uranium": {
+   "about": "Uranium ialah bahan api loji kuasa nuklear. Harganya dinyatakan dalam dolar AS per paun U3O8.",
+   "drivers": [
+    "Pengaktifan semula loji nuklear dan reaktor baharu",
+    "Output lombong, terutamanya dari Kazakhstan dan Kanada",
+    "Pengumpulan stok kerajaan dan sekatan"
+   ],
+   "uses": [
+    "Kuasa nuklear",
+    "Isotop perubatan"
+   ]
+  },
+  "iron-ore": {
+   "about": "Bijih besi ialah bahan mentah utama keluli. Harga yang dipaparkan ialah bagi kandungan besi 62% yang dihantar ke China, per tan metrik.",
+   "drivers": [
+    "Pengeluaran keluli China",
+    "Bekalan dari Australia dan Brazil",
+    "Perbelanjaan hartanah dan infrastruktur"
+   ],
+   "uses": [
+    "Pembuatan keluli"
+   ]
+  },
+  "steel": {
+   "about": "Keluli ialah aloi besi yang digunakan hampir dalam setiap industri. Harga yang dipaparkan ialah bagi rod tetulang keluli di China, ditukar kepada dolar AS per tan metrik.",
+   "drivers": [
+    "Permintaan pembinaan",
+    "Kos bijih besi dan arang kok",
+    "Had pengeluaran kerajaan"
+   ],
+   "uses": [
+    "Bangunan dan jambatan",
+    "Kereta dan mesin"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Gelung keluli canai panas ialah produk keluli rata yang digunakan dalam pembuatan. Harga yang dipaparkan ialah bagi penghantaran di Midwest AS per tan metrik.",
+   "drivers": [
+    "Permintaan AS daripada kereta dan pembinaan",
+    "Tarif import dan persaingan",
+    "Kos bahan mentah dan tenaga"
+   ],
+   "uses": [
+    "Kereta dan peralatan",
+    "Paip dan pembinaan"
+   ]
+  },
+  "lumber": {
+   "about": "Niaga hadapan kayu balak menjejaki harga kayu lembut yang digunakan untuk membina rumah, dinyatakan per 1,000 board feet.",
+   "drivers": [
+    "Permulaan pembinaan rumah dan kadar gadai janji",
+    "Output kilang papan dan kebakaran hutan",
+    "Duti perdagangan antara AS dan Kanada"
+   ],
+   "uses": [
+    "Rangka rumah",
+    "Perabot dan pembungkusan"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI ialah penanda aras minyak mentah AS, dinyatakan per tong dan dihantar di Cushing, Oklahoma.",
+   "drivers": [
+    "Keputusan pengeluaran OPEC dan AS",
+    "Pertumbuhan ekonomi global",
+    "Inventori, geopolitik dan dolar AS"
+   ],
+   "uses": [
+    "Petrol, diesel dan bahan api jet",
+    "Plastik dan kimia"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent ialah penanda aras global untuk minyak mentah, dinyatakan per tong, dan menentukan harga kebanyakan minyak yang didagangkan di luar AS.",
+   "drivers": [
+    "Keputusan pengeluaran OPEC+",
+    "Permintaan global, terutamanya dari China dan India",
+    "Konflik dan sekatan di kawasan pengeluar"
+   ],
+   "uses": [
+    "Petrol, diesel dan bahan api jet",
+    "Plastik dan kimia"
+   ]
+  },
+  "natural-gas": {
+   "about": "Gas asli di sini dinyatakan sebagai harga Henry Hub AS per MMBtu. Ia digunakan untuk pemanasan, penjanaan kuasa dan industri.",
+   "drivers": [
+    "Cuaca dan permintaan pemanasan",
+    "Tahap simpanan dan pengeluaran",
+    "Eksport gas asli cecair (LNG)"
+   ],
+   "uses": [
+    "Penjanaan kuasa",
+    "Pemanasan dan memasak di rumah",
+    "Baja dan kimia"
+   ]
+  },
+  "gasoline": {
+   "about": "Niaga hadapan petrol menjejaki harga borong petrol dalam dolar AS per gelen.",
+   "drivers": [
+    "Harga minyak mentah",
+    "Output kilang penapisan dan musim memandu",
+    "Inventori dan peraturan"
+   ],
+   "uses": [
+    "Bahan api kereta"
+   ]
+  },
+  "heating-oil": {
+   "about": "Niaga hadapan minyak pemanas menjejaki harga borong diesel dan bahan api pemanas dalam dolar AS per gelen.",
+   "drivers": [
+    "Harga minyak mentah",
+    "Cuaca musim sejuk",
+    "Permintaan diesel daripada lori dan industri"
+   ],
+   "uses": [
+    "Pemanasan rumah",
+    "Bahan api diesel"
+   ]
+  },
+  "wheat": {
+   "about": "Gandum ialah salah satu bijirin makanan utama dunia. Harganya dinyatakan per gantang di bursa Chicago.",
+   "drivers": [
+    "Cuaca di kawasan tanaman utama",
+    "Eksport dari Rusia, Ukraine, AS dan EU",
+    "Stok, harga tenaga dan dolar AS"
+   ],
+   "uses": [
+    "Roti, pasta dan tepung",
+    "Makanan ternakan"
+   ]
+  },
+  "corn": {
+   "about": "Jagung ialah bijirin utama untuk makanan dan ternakan, serta sumber etanol. Harganya dinyatakan per gantang di bursa Chicago.",
+   "drivers": [
+    "Hasil tuaian AS dan Brazil",
+    "Permintaan etanol dan makanan ternakan",
+    "Cuaca dan eksport"
+   ],
+   "uses": [
+    "Makanan ternakan",
+    "Bahan api etanol",
+    "Makanan dan sirap"
+   ]
+  },
+  "soybeans": {
+   "about": "Kacang soya diproses menjadi minyak dan hampas. Harganya dinyatakan per gantang di bursa Chicago.",
+   "drivers": [
+    "Tuaian AS, Brazil dan Argentina",
+    "Permintaan import China",
+    "Dasar biobahan api"
+   ],
+   "uses": [
+    "Minyak masak",
+    "Makanan ternakan",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Beras kasar ialah makanan asas bagi berbilion orang. Harganya dinyatakan per hundredweight di bursa Chicago.",
+   "drivers": [
+    "Keadaan monsun dan tuaian di Asia",
+    "Peraturan eksport India, Thailand dan Vietnam",
+    "Stok dan harga makanan"
+   ],
+   "uses": [
+    "Makanan"
+   ]
+  },
+  "sugar": {
+   "about": "Niaga hadapan gula mentah menjejaki harga gula dunia, dinyatakan dalam dolar AS per paun.",
+   "drivers": [
+    "Tuaian tebu di Brazil dan India",
+    "Permintaan etanol di Brazil",
+    "Cuaca dan mata wang"
+   ],
+   "uses": [
+    "Makanan dan minuman",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Niaga hadapan kopi arabika menjejaki harga biji kopi dunia, dinyatakan dalam dolar AS per paun.",
+   "drivers": [
+    "Cuaca di Brazil dan Colombia",
+    "Stok dan eksport",
+    "Mata wang dan permintaan"
+   ],
+   "uses": [
+    "Minuman kopi"
+   ]
+  },
+  "cocoa": {
+   "about": "Niaga hadapan koko menjejaki harga biji koko, dinyatakan dalam dolar AS per tan metrik.",
+   "drivers": [
+    "Tuaian di Ivory Coast dan Ghana",
+    "Penyakit dan cuaca",
+    "Permintaan koko"
+   ],
+   "uses": [
+    "Koko dan gula-gula",
+    "Kosmetik"
+   ]
+  },
+  "cotton": {
+   "about": "Niaga hadapan kapas menjejaki harga kapas mentah dunia, dinyatakan dalam dolar AS per paun.",
+   "drivers": [
+    "Cuaca di AS, India dan China",
+    "Permintaan tekstil",
+    "Harga minyak dan mata wang"
+   ],
+   "uses": [
+    "Pakaian dan tekstil"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin ialah mata wang kripto pertama dan terbesar. Ia didagangkan sepanjang masa di bursa dan bekalannya terhad kepada 21 juta syiling.",
+   "drivers": [
+    "Permintaan pelabur dan aliran dana ETF",
+    "Kadar faedah dan selera risiko",
+    "Peraturan dan berita"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum ialah blokchain untuk kontrak pintar dan aplikasi, dan syilingnya, ether, ialah mata wang kripto kedua terbesar.",
+   "drivers": [
+    "Penggunaan aplikasi Ethereum",
+    "Peningkatan rangkaian dan yuran",
+    "Sentimen pasaran"
+   ]
+  },
+  "bnb": {
+   "about": "BNB ialah syiling bagi BNB Chain dan ekosistem bursa Binance.",
+   "drivers": [
+    "Aktiviti dan yuran bursa",
+    "Pembakaran token",
+    "Peraturan"
+   ]
+  },
+  "xrp": {
+   "about": "XRP ialah mata wang kripto yang digunakan untuk pembayaran antarabangsa yang pantas di XRP Ledger.",
+   "drivers": [
+    "Berita mahkamah dan pengawal selia",
+    "Perkongsian dengan bank dan sistem pembayaran",
+    "Sentimen pasaran"
+   ]
+  },
+  "solana": {
+   "about": "Solana ialah blokchain pantas untuk aplikasi dan pembayaran, dan SOL ialah syilingnya.",
+   "drivers": [
+    "Aktiviti aplikasi dan token",
+    "Kebolehpercayaan rangkaian",
+    "Sentimen pasaran"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano ialah blokchain proof-of-stake, dan ADA ialah syilingnya.",
+   "drivers": [
+    "Kemajuan pembangunan",
+    "Staking",
+    "Sentimen pasaran"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin bermula sebagai syiling jenaka dan menjadi antara mata wang kripto yang paling banyak didagangkan.",
+   "drivers": [
+    "Perhatian di media sosial",
+    "Sentimen pasaran",
+    "Penerimaan pembayaran"
+   ]
+  },
+  "tron": {
+   "about": "TRON ialah blokchain yang digunakan secara meluas untuk pemindahan stablecoin, dan TRX ialah syilingnya.",
+   "drivers": [
+    "Aktiviti pemindahan stablecoin",
+    "Yuran rangkaian",
+    "Sentimen pasaran"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot menghubungkan banyak blokchain, dan DOT ialah syilingnya.",
+   "drivers": [
+    "Pembangunan rangkaian",
+    "Staking",
+    "Sentimen pasaran"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink membekalkan data dunia sebenar kepada blokchain, dan LINK ialah syilingnya.",
+   "drivers": [
+    "Penggunaan oleh aplikasi lain",
+    "Perkongsian",
+    "Sentimen pasaran"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin ialah antara mata wang kripto tertua, dicipta untuk pembayaran yang lebih pantas daripada Bitcoin.",
+   "drivers": [
+    "Harga Bitcoin",
+    "Penerimaan pembayaran",
+    "Sentimen pasaran"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche ialah platform blokchain yang pantas, dan AVAX ialah syilingnya.",
+   "drivers": [
+    "Aktiviti aplikasi",
+    "Peningkatan rangkaian",
+    "Sentimen pasaran"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 menjejaki 500 syarikat AS terbesar dan merupakan penunjuk utama pasaran saham AS.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite menjejaki beribu saham yang disenaraikan di Nasdaq, dengan pemberat besar pada syarikat teknologi.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average menjejaki 30 syarikat besar AS.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 menjejaki 100 syarikat terbesar yang disenaraikan di London.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "dax": {
+   "about": "DAX menjejaki 40 syarikat besar Jerman yang disenaraikan di Frankfurt.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 menjejaki 40 syarikat besar yang disenaraikan di Paris.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 menjejaki 225 syarikat besar yang disenaraikan di Tokyo.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "hang-seng": {
+   "about": "Indeks Hang Seng menjejaki syarikat terbesar yang disenaraikan di Hong Kong.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite menjejaki semua saham yang disenaraikan di Bursa Saham Shanghai.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 menjejaki 50 syarikat besar di Bursa Saham Nasional India.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex menjejaki 30 syarikat besar di Bursa Saham Bombay.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 menjejaki 30 syarikat paling aktif di Bursa Saham Mesir.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "tasi": {
+   "about": "Indeks Tadawul All Share menjejaki semua syarikat yang disenaraikan di bursa saham Arab Saudi.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 menjejaki 100 syarikat terbesar di Borsa Istanbul.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa menjejaki syarikat utama yang disenaraikan di bursa B3 Brazil.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 menjejaki 200 syarikat terbesar di bursa Australia.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite menjejaki syarikat utama yang disenaraikan di Bursa Toronto.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI menjejaki semua saham biasa di Bursa Korea.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 menjejaki 50 syarikat besar di zon euro.",
+   "drivers": [
+    "Pendapatan syarikat",
+    "Kadar faedah dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  }
  }
 }

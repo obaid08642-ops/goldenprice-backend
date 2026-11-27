@@ -4,7 +4,7 @@ import { ASSETS, perUnit, TROY_OZ_G } from "../data/assets";
 import { COUNTRIES } from "../data/countries";
 import { registerDict } from "../i18n/ui";
 import { fmt } from "../lib/format";
-import { renderBars, renderCurrencies, renderHero, renderMarkets, renderMarketsAll, renderRates, renderSide, renderTicker, renderUsed, type Ctx } from "../lib/render";
+import { renderBars, renderCurrencies, renderHero, renderMarkets, renderMarketsAll, renderRates, renderSide, renderStats, renderTicker, renderUsed, local, type Ctx } from "../lib/render";
 import type { Data } from "../lib/api";
 
 const page = document.getElementById("page");
@@ -33,6 +33,7 @@ if (page) {
     if (boot.view === "asset") {
       $("hero")!.innerHTML = renderHero(c);
       if ($("side")) $("side")!.innerHTML = renderSide(c);
+      if ($("stats")) $("stats")!.innerHTML = renderStats(c);
       if ($("currencies")) $("currencies")!.innerHTML = renderCurrencies(c);
       if ($("markets")) $("markets")!.innerHTML = renderMarkets(c);
       if ($("bars")) $("bars")!.innerHTML = renderBars(c);
@@ -41,6 +42,7 @@ if (page) {
     if ($("markets-all")) $("markets-all")!.innerHTML = renderMarketsAll(c);
     if ($("rates-table")) { $("rates-table")!.innerHTML = renderRates(c); convert(); }
     if ($("calc")) calc();
+    if (boot.view === "compare") compare();
     const chip = page!.querySelector("[data-updated]");
     if (chip && updatedAt) chip.textContent = boot.ui.updated.replace("{t}", new Date(updatedAt).toLocaleTimeString(boot.lang, { hour: "2-digit", minute: "2-digit" }));
   }
@@ -63,7 +65,11 @@ if (page) {
   // ---- calculators ----
   function calc() {
     const box = $("calc");
-    if (!box || !data) return;
+    if (!box) return;
+    const b = num("roi-b"), q = num("roi-q"), n = num("roi-n");
+    if ($("roi-p")) { $("roi-p")!.textContent = fmt(boot.lang, (n - b) * q); $("roi-r")!.textContent = b ? `${fmt(boot.lang, ((n - b) / b) * 100)}%` : "—"; }
+    if ($("un-out")) { $("un-out")!.textContent = fmt(boot.lang, (num("un-v") * parseFloat(($("un-f") as HTMLSelectElement).value)) / parseFloat(($("un-t") as HTMLSelectElement).value)); }
+    if (!data) return;
     const rate = data.rates[country.cur] ?? 1;
     const gold = data.items.GOLD?.price, silver = data.items.SILVER?.price;
     if (gold != null) {
@@ -85,10 +91,12 @@ if (page) {
   }
 
   // ---- chart ----
+  let plain = false; // plain = ratio chart (no currency label)
   let series: { x: number; v: number }[] = [];
   async function drawChart() {
     const box = $("chart");
     if (!box || !data) return;
+    if (boot.view === "compare") return compare();
     const rate = hasFxLocal() ? data.rates[country.cur] ?? 1 : 1;
     try {
       let rows: { x: number; v: number }[];
@@ -103,7 +111,7 @@ if (page) {
     } catch { series = []; }
     render(box);
   }
-  const hasFxLocal = () => asset.kind !== "index";
+  const hasFxLocal = () => asset.kind !== "index" && asset.kind !== "forex";
   function render(box: HTMLElement) {
     if (series.length < 2) { box.innerHTML = ""; return; }
     const W = 700, H = 240, P = 6;
@@ -113,7 +121,7 @@ if (page) {
     const Y = (v: number) => H - 22 - ((H - 22 - P) * (v - mn)) / (mx - mn || 1);
     const d = series.map((s, i) => `${i ? "L" : "M"}${X(s.x).toFixed(1)} ${Y(s.v).toFixed(1)}`).join("");
     const lab = (x: number) => new Date(x).toLocaleDateString(boot.lang, days <= 1 ? { hour: "2-digit", minute: "2-digit" } : { month: "short", year: days > 90 ? "numeric" : undefined, day: days <= 90 ? "numeric" : undefined });
-    const unitTxt = hasFxLocal() ? country.cur : "";
+    const unitTxt = !plain && hasFxLocal() ? country.cur : "";
     box.innerHTML = `<svg viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img"><defs><linearGradient id="gf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity=".22"/><stop offset="1" stop-color="currentColor" stop-opacity="0"/></linearGradient></defs>
 <path d="${d} L${X(x1)} ${H - 22} L${X(x0)} ${H - 22}Z" fill="url(#gf)"/><path d="${d}" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"/>
 <line id="cl" y1="0" y2="${H - 22}" stroke="currentColor" stroke-opacity=".4" style="display:none" vector-effect="non-scaling-stroke"/></svg>
@@ -131,6 +139,39 @@ if (page) {
     svg.addEventListener("pointerleave", () => { tip.style.display = "none"; cl.style.display = "none"; });
   }
 
+  // ---- compare two assets: ratio over time ----
+  async function compare() {
+    const box = $("chart");
+    if (!box || !data) return;
+    const sa = boot.assets.find((x: any) => x.slug === ($("cmp-a") as HTMLSelectElement).value), sb = boot.assets.find((x: any) => x.slug === ($("cmp-b") as HTMLSelectElement).value);
+    if (!sa || !sb) return;
+    const pa = data.items[sa.sym]?.price, pb = data.items[sb.sym]?.price;
+    $("cmp-now")!.textContent = pa && pb ? fmt(boot.lang, pa / pb) : "—";
+    try {
+      const [ja, jb] = await Promise.all([sa.sym, sb.sym].map((s) => fetch(`${boot.api}/api/chart/${s}?days=${days}&points=300`).then((x) => x.json())));
+      const mb = new Map<string, number>((jb.data || []).map((d: any) => [d.date, d.value]));
+      series = (ja.data || []).filter((d: any) => mb.has(d.date)).map((d: any) => ({ x: new Date(d.date).getTime(), v: d.value / mb.get(d.date)! }));
+    } catch { series = []; }
+    plain = true; render(box);
+  }
+
+  // ---- price alert ----
+  $("alert-form")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const f = e.target as HTMLFormElement, msg = $("alert-msg")!;
+    const fd = Object.fromEntries(new FormData(f)) as Record<string, string>;
+    msg.className = "msg"; msg.textContent = "…";
+    try {
+      if (!data) throw new Error("no data");
+      const c = ctx(), loc = local(c, asset, unit), usd = data.items[asset.sym]?.price;
+      const factor = loc && usd ? loc / usd : 1; // display price per canonical price
+      const r = await fetch(`${boot.api}/api/alerts`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: fd.email, sym: asset.sym, dir: fd.dir, target: Number(fd.target) / factor, label: `${fd.target} ${hasFxLocal() ? country.cur : ""}`.trim(), lang: boot.lang, website: fd.website }) });
+      const j = await r.json();
+      if (!r.ok || !j.ok) throw new Error(j.error || "failed");
+      msg.className = "msg ok"; msg.textContent = (document.querySelector("[data-alert-ok]") as HTMLElement)?.dataset.alertOk || "OK"; f.reset();
+    } catch { msg.className = "msg err"; msg.textContent = (document.querySelector("[data-alert-err]") as HTMLElement)?.dataset.alertErr || "Error"; }
+  });
+
   // ---- controls ----
   page.addEventListener("click", (e) => {
     const b = (e.target as HTMLElement).closest("button");
@@ -138,10 +179,12 @@ if (page) {
     if (b.dataset.unit) { unit = b.dataset.unit; paint(); drawChart(); }
     if (b.dataset.days) { days = +b.dataset.days; $("ranges")!.querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); drawChart(); }
   });
+  page.addEventListener("change", (e) => { if (((e.target as HTMLElement).id || "").startsWith("cmp-")) compare(); });
   page.addEventListener("input", (e) => {
     const id = (e.target as HTMLElement).id;
     if (id.startsWith("cv-")) convert();
-    if (id.startsWith("gc-") || id.startsWith("zk-")) calc();
+    if (id.startsWith("gc-") || id.startsWith("zk-") || id.startsWith("roi-") || id.startsWith("un-")) calc();
+    if (id.startsWith("cmp-")) compare();
   });
   $("search")?.addEventListener("submit", (e) => {
     e.preventDefault();

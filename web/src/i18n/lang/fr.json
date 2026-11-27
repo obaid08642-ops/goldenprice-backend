@@ -114,7 +114,87 @@
   "zakat_note": "Le zakat est dû sur les biens détenus pendant une année lunaire au-delà du nisab. Ce guide est indicatif ; interrogez un savant pour votre cas.",
   "zakat_below": "En dessous du nisab : aucun zakat n'est dû sur ce montant.",
   "related_title": "Recherches populaires",
-  "retail_basis": "Basé sur {n} sources locales, vérifié {d}."
+  "retail_basis": "Basé sur {n} sources locales, vérifié {d}.",
+  "u_share": "action",
+  "u_rate": "taux",
+  "u_mbf": "1 000 pieds-planche",
+  "cat_stock": "Actions",
+  "cat_forex": "Paires de devises",
+  "cat_construction": "Matériaux de construction",
+  "perf_title": "Performance",
+  "p_7d": "1 semaine",
+  "p_30d": "1 mois",
+  "p_90d": "3 mois",
+  "p_ytd": "Depuis le début de l'année",
+  "p_1y": "1 an",
+  "p_5y": "5 ans",
+  "range52": "Fourchette sur 52 semaines",
+  "ath": "Plus haut de nos données",
+  "atl": "Plus bas de nos données",
+  "since": "Historique depuis {d}",
+  "about_title": "À propos de {a}",
+  "drivers_title": "Ce qui fait bouger le cours",
+  "uses_title": "À quoi ça sert",
+  "source_note": "Source : {s}. Les cours sont indicatifs et peuvent être différés.",
+  "about_stock": "Les actions de {a} se négocient en {c}. La page affiche le dernier cours différé, la variation du jour et sur des périodes plus longues, ainsi que le même cours converti dans d'autres devises.",
+  "about_forex": "{a} indique combien de la seconde devise permet d'acheter une unité de la première. Les taux évoluent avec les taux d'intérêt, l'inflation, le commerce et l'actualité économique des deux pays.",
+  "about_crypto": "{a} est une cryptomonnaie. Son cours se forme en continu sur les plateformes d'échange et peut changer très vite. La page affiche le cours en direct, la variation sur différentes périodes et le cours dans d'autres devises.",
+  "about_commodity": "{a} est une matière première négociée sur les marchés. Son cours suit l'offre, la demande, la météo, les devises et l'actualité. La page affiche le dernier cours, la variation sur différentes périodes et le cours dans d'autres devises.",
+  "about_index": "{a} mesure la performance d'un panier d'actions. Sa valeur s'exprime en points et évolue avec les cours des sociétés qui le composent.",
+  "tail_list_title": "Actions, cryptomonnaies, paires de devises et autres matières premières",
+  "tail_list_desc": "Cours en direct d'actions internationales, d'autres cryptomonnaies, de paires de devises et de matières premières supplémentaires, avec graphiques et performances.",
+  "tail_title": "Cours de {a} aujourd'hui | valeur et graphique en direct",
+  "tail_desc": "Cours en direct de {a} avec graphique et performance sur 1 semaine, 1 mois, 1 an et plus. Mis à jour toutes les quelques minutes.",
+  "nav_dev": "Développeurs",
+  "nav_compare": "Comparer",
+  "terms": "Conditions d'utilisation",
+  "disclaimer": "Avertissement",
+  "cookies": "Politique relative aux cookies",
+  "developers": "API pour développeurs",
+  "alert_title": "Recevoir une alerte de cours",
+  "alert_email": "Votre e-mail",
+  "alert_target": "Cours visé ({cur})",
+  "alert_above": "Monte au-dessus de",
+  "alert_below": "Descend sous",
+  "alert_submit": "Créer l'alerte",
+  "alert_ok": "Alerte enregistrée. Nous vous enverrons un e-mail une seule fois lorsque le cours atteindra votre objectif.",
+  "alert_err": "Impossible d'enregistrer l'alerte. Vérifiez l'e-mail et le cours, puis réessayez.",
+  "alert_privacy": "Nous utilisons votre e-mail uniquement pour envoyer cette alerte.",
+  "contact_title": "Écrivez-nous",
+  "contact_name": "Votre nom",
+  "contact_email": "Votre e-mail",
+  "contact_msg": "Message",
+  "contact_send": "Envoyer",
+  "contact_ok": "Merci. Votre message a bien été envoyé.",
+  "contact_err": "Impossible d'envoyer le message. Veuillez réessayer plus tard.",
+  "dev_title": "API de cours gratuite",
+  "dev_desc": "Utilisez nos cours dans votre propre application ou site. Les clés gratuites sont limitées à 1 000 requêtes par jour. Merci de citer le site.",
+  "dev_endpoints": "Points d'accès",
+  "dev_request": "Obtenir une clé API gratuite",
+  "dev_email": "Votre e-mail",
+  "dev_purpose": "Qu'allez-vous créer ?",
+  "dev_get": "Obtenir la clé",
+  "dev_key": "Votre clé API (enregistrez-la maintenant, elle n'est affichée qu'une fois)",
+  "dev_err": "Impossible de créer la clé. Vérifiez l'e-mail et réessayez.",
+  "dev_usage": "Envoyez la clé dans l'en-tête x-api-key.",
+  "cmp_title": "Comparer deux actifs",
+  "cmp_a": "Premier actif",
+  "cmp_b": "Second actif",
+  "cmp_ratio": "Ratio (premier divisé par second)",
+  "cmp_now": "Maintenant",
+  "cmp_desc": "Comparez deux actifs quelconques : le ratio entre eux au fil du temps, par exemple le ratio or/argent.",
+  "cmp_page_title": "Comparer les cours et ratios en {country}",
+  "roi_title": "Calculateur de gains",
+  "roi_buy": "Prix d'achat",
+  "roi_amount": "Quantité",
+  "roi_now": "Cours actuel",
+  "roi_profit": "Gain ou perte",
+  "roi_pct": "Rendement",
+  "units_title": "Convertisseur d'unités",
+  "units_value": "Valeur",
+  "units_from": "De",
+  "units_to": "En",
+  "calc_tools_desc": "Calculateurs de valeur de l'or, zakat, gains et unités."
  },
  "assets": {
   "gold": "Or",
@@ -196,7 +276,8 @@
   "about": [
    "{site} affiche les cours en direct de l'or, de l'argent, des autres métaux, du pétrole, du gaz, des matières premières agricoles, des indices boursiers et des cryptomonnaies dans votre propre devise, pour de nombreux pays et langues.",
    "Les cours proviennent de flux publics de données de marché et sont mis à jour toutes les quelques minutes. Certains prix sont mis à jour manuellement et affichent l'heure de leur dernière mise à jour.",
-   "Les estimations de détail locales ajoutent au cours mondial les taxes, façons et primes de revendeur habituelles. Ce sont des estimations, pas des devis."
+   "Les estimations de détail locales ajoutent au cours mondial les taxes, façons et primes de revendeur habituelles. Ce sont des estimations, pas des devis.",
+   "Nous proposons aussi des calculateurs de valeur de l'or, de zakat, de gains et d'unités, un convertisseur de devises et des alertes de cours."
   ],
   "privacy": [
    "Nous ne demandons ni compte ni donnée personnelle. Nous ne conservons dans votre navigateur que votre choix de langue, de pays et de thème.",
@@ -206,6 +287,648 @@
   "contact": [
    "Questions, corrections ou demandes de partenariat : utilisez l'adresse de contact publiée sur cette page une fois le site en ligne.",
    "Si vous voyez un prix erroné, indiquez-nous l'actif, le pays et où vous avez vu la bonne valeur."
+  ],
+  "terms": [
+   "En utilisant {site}, vous acceptez ces conditions. Le site est fourni à titre d'information générale.",
+   "Les cours, graphiques et estimations sont indicatifs, peuvent être différés ou erronés, et ne doivent pas servir de seule base à une transaction ou à un achat.",
+   "Vous ne pouvez pas copier les données en masse ni les revendre. Pour un accès automatisé, utilisez notre API gratuite et citez le site.",
+   "Nous pouvons modifier ou arrêter à tout moment toute partie du service, et nous ne sommes pas responsables des pertes liées à son utilisation."
+  ],
+  "disclaimer": [
+   "{site} n'est ni un courtier, ni une banque, ni un conseiller financier, et ne fournit aucun conseil en investissement.",
+   "Les estimations de détail locales, les primes sur lingots et les valeurs de rachat sont des estimations établies à partir de sources publiques. Les boutiques diffèrent : confirmez toujours le prix auprès du vendeur.",
+   "Les performances passées ne préjugent pas des résultats futurs. Investir dans les métaux, les actions et les cryptomonnaies comporte des risques, y compris la perte du capital investi."
+  ],
+  "cookies": [
+   "Nous utilisons uniquement le stockage du navigateur nécessaire pour mémoriser votre langue, votre pays et votre thème.",
+   "Les publicités, lorsqu'elles sont activées, sont diffusées par Google AdSense, qui peut déposer des cookies pour afficher des annonces pertinentes. Vous pouvez gérer cela dans vos paramètres de publicité Google.",
+   "Les visiteurs des régions qui exigent un consentement seront interrogés avant l'utilisation de cookies publicitaires."
+  ],
+  "developers": [
+   "Notre API de cours est gratuite pour les petits projets. Créez une clé ci-dessous et envoyez-la dans l'en-tête x-api-key.",
+   "Points d'accès : /v1/overview pour tous les cours et performances, /v1/chart/SYMBOL?days=365 pour l'historique, /v1/rates pour les taux de change.",
+   "Les clés gratuites permettent 1 000 requêtes par jour. Les réponses sont mises en cache pendant une minute ; merci de ne pas appeler plus souvent.",
+   "Merci de citer le site lorsque vous affichez nos cours."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "L'or est le métal précieux le plus détenu au monde et une réserve de valeur traditionnelle. Son cours est coté par once troy dans le monde entier, et au gramme ou à la tola sur de nombreux marchés locaux, avec des bijoux vendus au carat, de 10 à 24 carats.",
+   "drivers": [
+    "Taux d'intérêt et dollar américain",
+    "Inflation et incertitudes économiques ou politiques",
+    "Achats des banques centrales et demande d'investissement"
+   ],
+   "uses": [
+    "Bijoux et cadeaux",
+    "Lingots et pièces d'investissement",
+    "Électronique et dentisterie"
+   ]
+  },
+  "silver": {
+   "about": "L'argent est à la fois un métal précieux et un métal industriel. Il est coté par once troy et vendu en lingots, en pièces et en bijoux de titres tels que 999, 925 et 800.",
+   "drivers": [
+    "Demande industrielle des panneaux solaires et de l'électronique",
+    "Le cours de l'or et le dollar américain",
+    "Demande d'investissement en lingots et pièces"
+   ],
+   "uses": [
+    "Bijoux et orfèvrerie",
+    "Panneaux solaires et électronique",
+    "Lingots et pièces d'investissement"
+   ]
+  },
+  "platinum": {
+   "about": "Le platine est un métal précieux rare et dense, qui vaut parfois davantage que l'or au poids. Il est coté par once troy.",
+   "drivers": [
+    "Demande des pots catalytiques automobiles",
+    "Production minière, surtout en Afrique du Sud et en Russie",
+    "Demande d'investissement et cours de l'or"
+   ],
+   "uses": [
+    "Pots catalytiques",
+    "Bijoux",
+    "Industrie chimique et technologies de l'hydrogène"
+   ]
+  },
+  "palladium": {
+   "about": "Le palladium est un métal précieux rare utilisé surtout dans les pots catalytiques des voitures à essence. Il est coté par once troy.",
+   "drivers": [
+    "Production automobile et normes antipollution",
+    "Production minière de Russie et d'Afrique du Sud",
+    "Substitution par le platine"
+   ],
+   "uses": [
+    "Pots catalytiques",
+    "Électronique",
+    "Dentisterie et bijoux"
+   ]
+  },
+  "copper": {
+   "about": "Le cuivre est le métal industriel de référence. Son cours est coté à la tonne métrique et suivi comme un indicateur de la santé économique mondiale.",
+   "drivers": [
+    "Demande de la construction et de l'industrie, notamment en Chine",
+    "Production minière et stocks",
+    "Le dollar américain et la politique commerciale"
+   ],
+   "uses": [
+    "Câblage électrique et réseaux électriques",
+    "Construction et plomberie",
+    "Véhicules électriques et énergies renouvelables"
+   ]
+  },
+  "aluminum": {
+   "about": "L'aluminium est un métal léger très utilisé, produit à partir de bauxite avec de grandes quantités d'électricité. Son cours est coté à la tonne métrique.",
+   "drivers": [
+    "Coûts de l'énergie pour la fonte",
+    "Demande de l'automobile, de l'emballage et de la construction",
+    "Production en Chine et droits de douane"
+   ],
+   "uses": [
+    "Emballages et canettes",
+    "Automobiles et avions",
+    "Construction"
+   ]
+  },
+  "nickel": {
+   "about": "Le nickel sert à fabriquer l'acier inoxydable et des batteries. Son cours est coté à la tonne métrique sur le London Metal Exchange.",
+   "drivers": [
+    "Demande d'acier inoxydable",
+    "Demande de batteries pour véhicules électriques",
+    "Production d'Indonésie et des Philippines"
+   ],
+   "uses": [
+    "Acier inoxydable",
+    "Batteries",
+    "Alliages"
+   ]
+  },
+  "zinc": {
+   "about": "Le zinc sert surtout à galvaniser l'acier pour le protéger de la rouille. Son cours est coté à la tonne métrique.",
+   "drivers": [
+    "Demande de l'acier et de la construction",
+    "Production minière et fonderies",
+    "Prix de l'énergie en Europe et en Chine"
+   ],
+   "uses": [
+    "Galvanisation de l'acier",
+    "Laiton et alliages",
+    "Batteries"
+   ]
+  },
+  "lead": {
+   "about": "Le plomb est un métal dense utilisé surtout dans les batteries automobiles. Son cours est coté à la tonne métrique.",
+   "drivers": [
+    "Demande automobile et des batteries",
+    "Offre issue du recyclage",
+    "Production minière et règles environnementales"
+   ],
+   "uses": [
+    "Batteries automobiles",
+    "Protection contre les rayonnements",
+    "Câbles et alliages"
+   ]
+  },
+  "tin": {
+   "about": "L'étain est un métal rare utilisé surtout comme soudure en électronique. Son cours est coté à la tonne métrique.",
+   "drivers": [
+    "Demande de l'électronique et des puces",
+    "Production minière d'Indonésie, du Myanmar et du Pérou",
+    "Stocks et règles commerciales"
+   ],
+   "uses": [
+    "Soudure pour l'électronique",
+    "Boîtes de conserve",
+    "Produits chimiques"
+   ]
+  },
+  "cobalt": {
+   "about": "Le cobalt est un métal de batterie extrait surtout en République démocratique du Congo. Son cours est coté à la tonne métrique.",
+   "drivers": [
+    "Demande de véhicules électriques et de batteries",
+    "Production congolaise et règles d'exportation",
+    "Évolution de la chimie des batteries"
+   ],
+   "uses": [
+    "Batteries",
+    "Superalliages",
+    "Aimants"
+   ]
+  },
+  "lithium": {
+   "about": "Le carbonate de lithium est la principale matière première des batteries rechargeables. Le cours affiché concerne le carbonate de qualité batterie en Chine, converti en dollars américains la tonne métrique.",
+   "drivers": [
+    "Ventes de véhicules électriques",
+    "Nouvelle production de mines et de raffineries",
+    "Politique publique sur les batteries"
+   ],
+   "uses": [
+    "Batteries de véhicules électriques",
+    "Téléphones et ordinateurs portables",
+    "Stockage d'énergie"
+   ]
+  },
+  "uranium": {
+   "about": "L'uranium est le combustible des centrales nucléaires. Son cours est coté en dollars américains par livre d'U3O8.",
+   "drivers": [
+    "Redémarrages de centrales et nouveaux réacteurs",
+    "Production minière, surtout au Kazakhstan et au Canada",
+    "Constitution de stocks publics et sanctions"
+   ],
+   "uses": [
+    "Énergie nucléaire",
+    "Isotopes médicaux"
+   ]
+  },
+  "iron-ore": {
+   "about": "Le minerai de fer est la principale matière première de l'acier. Le cours affiché correspond à un minerai titrant 62 % de fer, livré en Chine, à la tonne métrique.",
+   "drivers": [
+    "Production d'acier en Chine",
+    "Production d'Australie et du Brésil",
+    "Dépenses d'immobilier et d'infrastructures"
+   ],
+   "uses": [
+    "Fabrication de l'acier"
+   ]
+  },
+  "steel": {
+   "about": "L'acier est un alliage de fer utilisé dans presque toutes les industries. Le cours affiché correspond à l'acier à béton en Chine, converti en dollars américains la tonne métrique.",
+   "drivers": [
+    "Demande de la construction",
+    "Coûts du minerai de fer et du charbon à coke",
+    "Limites de production imposées par les pouvoirs publics"
+   ],
+   "uses": [
+    "Bâtiments et ponts",
+    "Automobiles et machines"
+   ]
+  },
+  "steel-hrc": {
+   "about": "La bobine d'acier laminé à chaud est un produit plat utilisé dans l'industrie. Le cours affiché concerne la livraison au Midwest américain, à la tonne métrique.",
+   "drivers": [
+    "Demande américaine de l'automobile et de la construction",
+    "Droits d'importation et concurrence",
+    "Coûts des matières premières et de l'énergie"
+   ],
+   "uses": [
+    "Automobiles et électroménager",
+    "Tuyauteries et construction"
+   ]
+  },
+  "lumber": {
+   "about": "Les contrats à terme sur bois suivent le prix du bois résineux utilisé pour construire les maisons, coté aux 1 000 pieds-planche.",
+   "drivers": [
+    "Mises en chantier de logements et taux hypothécaires",
+    "Production des scieries et incendies de forêt",
+    "Droits de douane entre les États-Unis et le Canada"
+   ],
+   "uses": [
+    "Charpentes de maisons",
+    "Meubles et emballages"
+   ]
+  },
+  "wti-oil": {
+   "about": "Le WTI est la référence américaine du pétrole brut, coté au baril et livré à Cushing, dans l'Oklahoma.",
+   "drivers": [
+    "Décisions de l'OPEP et de la production américaine",
+    "Croissance économique mondiale",
+    "Stocks, géopolitique et dollar américain"
+   ],
+   "uses": [
+    "Essence, gazole et kérosène d'aviation",
+    "Plastiques et produits chimiques"
+   ]
+  },
+  "brent-oil": {
+   "about": "Le Brent est la référence mondiale du pétrole brut, coté au baril, et fixe le prix de la plupart du pétrole échangé hors des États-Unis.",
+   "drivers": [
+    "Décisions de production de l'OPEP+",
+    "Demande mondiale, surtout de la Chine et de l'Inde",
+    "Conflits et sanctions dans les régions productrices"
+   ],
+   "uses": [
+    "Essence, gazole et kérosène d'aviation",
+    "Plastiques et produits chimiques"
+   ]
+  },
+  "natural-gas": {
+   "about": "Le gaz naturel est coté ici au prix américain Henry Hub, en MMBtu. Il sert au chauffage, à la production d'électricité et à l'industrie.",
+   "drivers": [
+    "Météo et demande de chauffage",
+    "Niveaux de stockage et production",
+    "Exportations de gaz naturel liquéfié"
+   ],
+   "uses": [
+    "Production d'électricité",
+    "Chauffage et cuisson domestiques",
+    "Engrais et produits chimiques"
+   ]
+  },
+  "gasoline": {
+   "about": "Les contrats à terme sur essence suivent les prix de gros de l'essence, en dollars américains le gallon.",
+   "drivers": [
+    "Cours du pétrole brut",
+    "Production des raffineries et saison de conduite",
+    "Stocks et réglementations"
+   ],
+   "uses": [
+    "Carburant automobile"
+   ]
+  },
+  "heating-oil": {
+   "about": "Les contrats à terme sur fioul domestique suivent les prix de gros du gazole et du combustible de chauffage, en dollars américains le gallon.",
+   "drivers": [
+    "Cours du pétrole brut",
+    "Conditions météo hivernales",
+    "Demande de gazole des camions et de l'industrie"
+   ],
+   "uses": [
+    "Chauffage domestique",
+    "Carburant diesel"
+   ]
+  },
+  "wheat": {
+   "about": "Le blé est l'une des principales céréales alimentaires du monde. Son cours est coté au boisseau à la bourse de Chicago.",
+   "drivers": [
+    "Météo dans les grandes régions de culture",
+    "Exportations de Russie, d'Ukraine, des États-Unis et de l'UE",
+    "Stocks, prix de l'énergie et dollar américain"
+   ],
+   "uses": [
+    "Pain, pâtes et farine",
+    "Alimentation animale"
+   ]
+  },
+  "corn": {
+   "about": "Le maïs est une grande céréale alimentaire et fourragère, et une source d'éthanol. Son cours est coté au boisseau à la bourse de Chicago.",
+   "drivers": [
+    "Récoltes des États-Unis et du Brésil",
+    "Demande d'éthanol et d'alimentation animale",
+    "Météo et exportations"
+   ],
+   "uses": [
+    "Alimentation animale",
+    "Éthanol carburant",
+    "Alimentation humaine et sirops"
+   ]
+  },
+  "soybeans": {
+   "about": "Le soja est transformé en huile et en tourteau. Son cours est coté au boisseau à la bourse de Chicago.",
+   "drivers": [
+    "Récoltes des États-Unis, du Brésil et d'Argentine",
+    "Demande d'importation chinoise",
+    "Politique des biocarburants"
+   ],
+   "uses": [
+    "Huile de cuisson",
+    "Alimentation animale",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Le riz paddy est un aliment de base pour des milliards de personnes. Son cours est coté au quintal (cwt) à la bourse de Chicago.",
+   "drivers": [
+    "Mousson et conditions de récolte en Asie",
+    "Règles d'exportation de l'Inde, de la Thaïlande et du Vietnam",
+    "Stocks et prix alimentaires"
+   ],
+   "uses": [
+    "Alimentation"
+   ]
+  },
+  "sugar": {
+   "about": "Les contrats à terme sur sucre brut suivent le cours mondial du sucre, coté en dollars américains la livre.",
+   "drivers": [
+    "Récoltes de canne au Brésil et en Inde",
+    "Demande d'éthanol au Brésil",
+    "Météo et devises"
+   ],
+   "uses": [
+    "Alimentation et boissons",
+    "Éthanol"
+   ]
+  },
+  "coffee": {
+   "about": "Les contrats à terme sur café arabica suivent le cours mondial des grains de café, coté en dollars américains la livre.",
+   "drivers": [
+    "Météo au Brésil et en Colombie",
+    "Stocks et exportations",
+    "Devises et demande"
+   ],
+   "uses": [
+    "Boissons au café"
+   ]
+  },
+  "cocoa": {
+   "about": "Les contrats à terme sur cacao suivent le cours des fèves de cacao, coté en dollars américains la tonne métrique.",
+   "drivers": [
+    "Récoltes de Côte d'Ivoire et du Ghana",
+    "Maladies et météo",
+    "Demande de chocolat"
+   ],
+   "uses": [
+    "Chocolat et confiseries",
+    "Cosmétiques"
+   ]
+  },
+  "cotton": {
+   "about": "Les contrats à terme sur coton suivent le cours mondial du coton brut, coté en dollars américains la livre.",
+   "drivers": [
+    "Météo aux États-Unis, en Inde et en Chine",
+    "Demande du textile",
+    "Cours du pétrole et devises"
+   ],
+   "uses": [
+    "Vêtements et textiles"
+   ]
+  },
+  "bitcoin": {
+   "about": "Le bitcoin est la première et la plus grande cryptomonnaie. Il se négocie en continu sur les plateformes d'échange, et son offre est plafonnée à 21 millions de pièces.",
+   "drivers": [
+    "Demande des investisseurs et flux des ETF",
+    "Taux d'intérêt et appétit pour le risque",
+    "Régulation et actualité"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum est une blockchain dédiée aux contrats intelligents et aux applications, et sa monnaie, l'ether, est la deuxième plus grande cryptomonnaie.",
+   "drivers": [
+    "Utilisation des applications Ethereum",
+    "Améliorations du réseau et frais",
+    "Sentiment du marché"
+   ]
+  },
+  "bnb": {
+   "about": "BNB est la monnaie de la BNB Chain et de l'écosystème de la plateforme d'échange Binance.",
+   "drivers": [
+    "Activité et frais de la plateforme",
+    "Destruction de jetons",
+    "Régulation"
+   ]
+  },
+  "xrp": {
+   "about": "XRP est une cryptomonnaie utilisée pour des paiements internationaux rapides sur le XRP Ledger.",
+   "drivers": [
+    "Actualité judiciaire et réglementaire",
+    "Partenariats avec des banques et des acteurs du paiement",
+    "Sentiment du marché"
+   ]
+  },
+  "solana": {
+   "about": "Solana est une blockchain rapide pour les applications et les paiements, et SOL est sa monnaie.",
+   "drivers": [
+    "Activité des applications et des jetons",
+    "Fiabilité du réseau",
+    "Sentiment du marché"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano est une blockchain à preuve d'enjeu, et ADA est sa monnaie.",
+   "drivers": [
+    "Avancement du développement",
+    "Staking",
+    "Sentiment du marché"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin est né comme une pièce de plaisanterie et est devenu l'une des cryptomonnaies les plus échangées.",
+   "drivers": [
+    "Attention sur les réseaux sociaux",
+    "Sentiment du marché",
+    "Adoption comme moyen de paiement"
+   ]
+  },
+  "tron": {
+   "about": "TRON est une blockchain très utilisée pour les transferts de stablecoins, et TRX est sa monnaie.",
+   "drivers": [
+    "Activité de transfert de stablecoins",
+    "Frais du réseau",
+    "Sentiment du marché"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot relie de nombreuses blockchains, et DOT est sa monnaie.",
+   "drivers": [
+    "Développement du réseau",
+    "Staking",
+    "Sentiment du marché"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink apporte des données du monde réel aux blockchains, et LINK est sa monnaie.",
+   "drivers": [
+    "Utilisation par d'autres applications",
+    "Partenariats",
+    "Sentiment du marché"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin est l'une des plus anciennes cryptomonnaies, créée pour des paiements plus rapides que ceux du bitcoin.",
+   "drivers": [
+    "Cours du bitcoin",
+    "Adoption comme moyen de paiement",
+    "Sentiment du marché"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche est une plateforme blockchain rapide, et AVAX est sa monnaie.",
+   "drivers": [
+    "Activité des applications",
+    "Améliorations du réseau",
+    "Sentiment du marché"
+   ]
+  },
+  "sp500": {
+   "about": "Le S&P 500 suit 500 des plus grandes entreprises américaines et constitue le principal indicateur du marché boursier des États-Unis.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "nasdaq": {
+   "about": "Le Nasdaq Composite suit des milliers d'actions cotées au Nasdaq, avec un poids important des entreprises technologiques.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "dow-jones": {
+   "about": "Le Dow Jones Industrial Average suit 30 grandes entreprises américaines.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "ftse-100": {
+   "about": "Le FTSE 100 suit les 100 plus grandes entreprises cotées à Londres.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "dax": {
+   "about": "Le DAX suit 40 grandes entreprises allemandes cotées à Francfort.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "cac-40": {
+   "about": "Le CAC 40 suit 40 grandes entreprises cotées à Paris.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Le Nikkei 225 suit 225 grandes entreprises cotées à Tokyo.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "hang-seng": {
+   "about": "L'indice Hang Seng suit les plus grandes entreprises cotées à Hong Kong.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "shanghai": {
+   "about": "Le Shanghai Composite suit toutes les actions cotées à la Bourse de Shanghai.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "nifty-50": {
+   "about": "Le Nifty 50 suit 50 grandes entreprises de la Bourse nationale indienne.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "sensex": {
+   "about": "Le Sensex suit 30 grandes entreprises de la Bourse de Bombay.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "egx30": {
+   "about": "L'EGX 30 suit les 30 entreprises les plus actives de la Bourse égyptienne.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "tasi": {
+   "about": "Le Tadawul All Share Index suit toutes les entreprises cotées à la Bourse saoudienne.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "bist-100": {
+   "about": "Le BIST 100 suit les 100 plus grandes entreprises de la Bourse d'Istanbul.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "bovespa": {
+   "about": "Le Bovespa suit les principales entreprises cotées à la B3, la bourse brésilienne.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "asx-200": {
+   "about": "L'ASX 200 suit les 200 plus grandes entreprises de la bourse australienne.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "tsx": {
+   "about": "Le S&P/TSX Composite suit les principales entreprises cotées à la Bourse de Toronto.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "kospi": {
+   "about": "Le KOSPI suit toutes les actions ordinaires cotées à la Bourse de Corée.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "L'Euro Stoxx 50 suit 50 grandes entreprises de la zone euro.",
+   "drivers": [
+    "Résultats des entreprises",
+    "Taux d'intérêt et inflation",
+    "Actualité économique et politique"
+   ]
+  }
  }
 }
