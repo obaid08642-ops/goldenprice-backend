@@ -24,7 +24,7 @@ import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
 import WebSocket from "ws";
-import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols } from "./db.js";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -899,8 +899,10 @@ app.get("/api/chart/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
   const days = Math.min(dbEnabled ? 3650 : 90, Number(req.query.days || 30));
   try {
-    const rows = await dailyHistory(symbol, days);
-    if (rows && rows.length) return res.json({ symbol, source: "db", data: rows });
+    let rows = await dailyHistory(symbol, days);
+    const maxPts = Math.min(1500, Number(req.query.points || 400));
+    if (rows && rows.length > maxPts) { const step = rows.length / maxPts; rows = rows.filter((_, i) => Math.floor(i % step) === 0 || i === rows.length - 1); }
+    if (rows && rows.length) { res.set("Cache-Control", "public, max-age=300"); return res.json({ symbol, source: "db", data: rows }); }
   } catch (e) { console.error("chart db error", e.message || e); }
   res.json({ symbol, source: "cache", data: ((cache.history && cache.history[symbol]) || []).slice(-days) });
 });
@@ -991,6 +993,60 @@ app.get("/api/fx", (req, res) => {
   const v = get(`FX_${from}_${to}`);
   if (!v) return res.status(404).json({ error: "Not found" });
   res.json({ from, to, ...v });
+});
+
+// ---------- all-currency rates (free, no key) ----------
+let RATES = { base: "USD", rates: {}, updated: 0, source: "" };
+async function updateRates() {
+  const sources = [
+    ["open.er-api.com", async () => (await getJSON("https://open.er-api.com/v6/latest/USD")).rates],
+    ["exchangerate-api.com", async () => (await getJSON("https://api.exchangerate-api.com/v4/latest/USD")).rates],
+  ];
+  for (const [name, fn] of sources) {
+    try {
+      const r = await fn();
+      if (r && r.EUR && r.EGP && Object.keys(r).length > 100) {
+        RATES = { base: "USD", rates: r, updated: Date.now(), source: name };
+        if (r.EGP) put("FX_USD_EGP", Number(r.EGP), "egp", name);
+        return;
+      }
+    } catch (e) { console.warn(`rates from ${name} failed: ${e.message || e}`); }
+  }
+}
+updateRates();
+setInterval(() => updateRates(), 60 * 60 * 1000);
+app.get("/api/rates", (req, res) => {
+  res.set("Cache-Control", "public, max-age=300");
+  if (!RATES.updated) return res.status(503).json({ error: "rates not ready" });
+  res.json(RATES);
+});
+
+// ---------- history backfill from Yahoo (admin) ----------
+const BACKFILL = { GOLD: "GC=F", SILVER: "SI=F", PLATINUM: "PL=F", PALLADIUM: "PA=F", COPPER: "HG=F", ALUMINUM: "ALI=F", WTI: "CL=F", BRENT: "BZ=F", NATGAS: "NG=F", BTC: "BTC-USD", ETH: "ETH-USD" };
+async function backfillSymbol(sym, tk, range = "5y") {
+  const j = await getJSON(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(tk)}?range=${range}&interval=1d`, { headers: YAHOO_HEADERS });
+  const r = j?.chart?.result?.[0];
+  const ts = r?.timestamp || [], cl = r?.indicators?.quote?.[0]?.close || [];
+  const rows = [];
+  for (let i = 0; i < ts.length; i++) {
+    let v = cl[i];
+    if (!isValidNumber(v)) continue;
+    if (tk === "HG=F") v *= 2204.62; // USD/lb -> USD/ton
+    const rule = METAL_RULES[sym] || ENERGY_RULES[sym];
+    if (rule && (v < rule.min * 0.4 || v > rule.max * 2.5)) continue; // skip obviously broken points
+    rows.push({ day: new Date(ts[i] * 1000).toISOString().slice(0, 10), close: Number(v) });
+  }
+  return bulkDaily(sym, rows, "backfill:yahoo");
+}
+app.post("/api/admin/backfill", async (req, res) => {
+  if (!okAdmin(req)) return res.status(401).json({ error: "unauthorized" });
+  if (!dbEnabled) return res.status(400).json({ error: "database is not configured" });
+  const range = ["1y", "2y", "5y", "10y", "max"].includes(req.body?.range) ? req.body.range : "5y";
+  const out = {};
+  for (const [sym, tk] of Object.entries(BACKFILL)) {
+    try { out[sym] = await backfillSymbol(sym, tk, range); } catch (e) { out[sym] = "error: " + (e.message || e); }
+  }
+  res.json({ ok: true, range, inserted: out });
 });
 
 app.get("/api/metals", (req, res) => {
