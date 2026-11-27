@@ -1,12 +1,12 @@
 {
   "country": "NZ",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 9,
   "gold": {
-    "vatJewelryPct": 15,
-    "vatBullionPct": 0,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {
@@ -18,21 +18,16 @@
     }
   },
   "silver": {
-    "vatJewelryPct": 15,
-    "vatBullionPct": 0,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "GST: 'fine metal' (gold 99.5%+, silver 99.9%+) from a dealer or imported is an exempt supply (GST Act 1985); jewellery and sub-purity coins carry 15%. Premium is NZ Pure 1/2 oz bar vs same-morning spot (calculated). Used 10% is a floor: NZ Gold Merchants guarantees at least 90% of melt. Duty not verified, null. 9ct most popular by volume; 18ct fine standard.",
+  "notes": "Premium is NZ Pure 1/2 oz bar vs same-morning spot on the dealer's site (calculated). Used 10% is a floor: NZ Gold Merchants guarantees at least 90% of melt. GST and duty % removed in review round 1 (dealer-blog support only / not verified). 9ct most popular by volume; 18ct fine standard.",
   "sources": [
-    {
-      "name": "Gold Survival Guide - GST on gold and silver bullion (quoting IRD)",
-      "url": "https://goldsurvivalguide.co.nz/gold-silver-blog/gst-on-gold-silver-bullion/",
-      "what": "Read 2026-11-28: fine metal (gold 99.5%+, silver 99.9%+) is an exempt supply; jewellery and 91.67% coins attract 15% GST"
-    },
     {
       "name": "Gold Survival Guide - NZ Pure 1/2 oz gold cast bar",
       "url": "https://goldsurvivalguide.co.nz/product/nz-pure-1-2oz-gold-cast-bar/",
@@ -42,11 +37,6 @@
       "name": "NZ Gold Merchants - Sell to us",
       "url": "https://gogold.co.nz/sell",
       "what": "Read 2026-11-28: guarantees a minimum of 90% of gold's melt value on buyback"
-    },
-    {
-      "name": "Zoe McBride Jewellery - Understanding 9ct, 14ct, 18ct and 24ct gold",
-      "url": "https://www.zoemcbride.co.nz/blogs/thoughts/understanding-9ct-14ct-18ct-and-24ct-gold",
-      "what": "Read 2026-11-28: 9ct is by far the most popular gold in New Zealand; 18ct the fine-jewellery standard"
     }
   ]
 }

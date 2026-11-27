@@ -1,13 +1,13 @@
 {
   "country": "HU",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 14,
   "gold": {
-    "vatJewelryPct": 27,
-    "vatBullionPct": 0,
-    "importDutyPct": 0,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {
       "2g": 12.8,
@@ -25,35 +25,20 @@
     "usedGoldDiscountPct": null
   },
   "silver": {
-    "vatJewelryPct": 27,
-    "vatBullionPct": 27,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Investment gold exempt (VAT Act ss.234-243) but only for bars over 1g, so no 1g bar premium is coded. Jewellery and silver bars take standard 27% (silver coins often margin-scheme). Bars duty 0%. Premiums and spreads calculated from Conclude's official price list 27 Nov 2026 (sell vs its own buy price per gram). Making % and used-gold % not found, null.",
+  "notes": "Premiums and spreads calculated from Conclude's official price list 27 Nov 2026 (sell vs its own buy price per gram); buyback typical 5.3%. VAT and duty % removed in review round 1 (blog/guide and tariff-database support only). Making % and used-gold % not found, null.",
   "sources": [
-    {
-      "name": "IMBA - Taxation of investment gold in Hungary",
-      "url": "https://www.imba.hu/gazdasag/a-befektetesi-arany-adozasa-magyarorszagon-okosan-es-szabalyosan",
-      "what": "Read 2026-11-28: investment gold (bars 995+ over 1g, coins 900+) carries no Hungarian VAT under the special scheme"
-    },
     {
       "name": "Conclude - Official gold price list",
       "url": "https://web.conclude.hu/components/com_aranyrendeles/pricelist.php",
       "what": "Read 2026-11-28: list 27 Nov 2026 sell/buy by size 2g-1000g; premiums vs buy price and spreads calculated (100g spread 5.3%)"
-    },
-    {
-      "name": "Eurofiscalis - VAT rates in the EU",
-      "url": "https://www.eurofiscalis.com/en/vat-rates-in-ue/",
-      "what": "Read 2026-11-28: Hungary standard VAT rate 27%"
-    },
-    {
-      "name": "Customs Tariff heading 7108 (celna24)",
-      "url": "https://celna24.pl/en/customs-tariff/7108",
-      "what": "Read 2026-11-28: EU import of gold under HS 7108 duty-free 0%"
     }
   ]
 }
