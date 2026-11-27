@@ -4,6 +4,7 @@ import { neon } from "@neondatabase/serverless";
 const URL = process.env.DATABASE_URL || "";
 const sql = URL ? neon(URL) : null;
 export const dbEnabled = !!sql;
+export { sql };
 
 const TICK_MIN_GAP_MS = 5 * 60 * 1000; // at most one raw tick per symbol per 5 min
 const lastTick = new Map();
@@ -22,6 +23,11 @@ export async function initDb() {
   await sql`CREATE TABLE IF NOT EXISTS api_keys (key TEXT PRIMARY KEY, email TEXT NOT NULL, purpose TEXT, created_at TIMESTAMPTZ NOT NULL DEFAULT now(), disabled BOOLEAN NOT NULL DEFAULT false)`;
   await sql`CREATE TABLE IF NOT EXISTS alerts (id SERIAL PRIMARY KEY, email TEXT NOT NULL, sym TEXT NOT NULL, dir TEXT NOT NULL, target DOUBLE PRECISION NOT NULL, label TEXT, lang TEXT, token TEXT NOT NULL, created_at TIMESTAMPTZ NOT NULL DEFAULT now(), fired_at TIMESTAMPTZ)`;
   await sql`CREATE INDEX IF NOT EXISTS alerts_active ON alerts (sym) WHERE fired_at IS NULL`;
+  await sql`CREATE TABLE IF NOT EXISTS api_clients (
+    id SERIAL PRIMARY KEY, email TEXT NOT NULL, purpose TEXT, requested_plan TEXT NOT NULL DEFAULT 'free', requested_scopes TEXT[] NOT NULL DEFAULT '{}',
+    status TEXT NOT NULL DEFAULT 'pending', plan TEXT NOT NULL DEFAULT 'free', scopes TEXT[] NOT NULL DEFAULT '{}', api_key TEXT UNIQUE, status_token TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(), approved_at TIMESTAMPTZ, expires_at TIMESTAMPTZ, provider TEXT, provider_ref TEXT, note TEXT)`;
+  await sql`CREATE INDEX IF NOT EXISTS api_clients_status ON api_clients (status)`;
   return true;
 }
 

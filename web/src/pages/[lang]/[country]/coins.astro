@@ -1,0 +1,31 @@
+---
+import Base from "../../../layouts/Base.astro";
+import "../../../i18n/load";
+import { combos, url, SITE_NAME } from "../../../lib/paths";
+import { langsFor } from "../../../data/countries";
+import { COINS, hasCoins } from "../../../data/coins";
+import { getData } from "../../../lib/api";
+import { t } from "../../../i18n/ui";
+import { countryName } from "../../../lib/format";
+import { bcpOf } from "../../../data/languages";
+export function getStaticPaths() {
+  return combos().filter((c) => c.primary && hasCoins(c.country.code)).map((c) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase() }, props: { lang: c.lang, country: c.country } }));
+}
+const { lang, country } = Astro.props;
+const data = await getData(), coins = COINS[country.code];
+const name = countryName(lang, country.code), loc = `${bcpOf(lang)}-u-nu-latn`;
+const gramVal = ((data.items.GOLD?.price ?? NaN) / 31.1035) * (data.rates[country.cur] ?? NaN);
+const money = (v: number) => Number.isFinite(v) ? new Intl.NumberFormat(loc, { style: "currency", currency: country.cur, maximumFractionDigits: v > 1000 ? 0 : 2 }).format(v) : "–";
+const nf = (v: number, d = 3) => new Intl.NumberFormat(loc, { maximumFractionDigits: d }).format(v);
+const title = t(lang, "coins_title", { country: name }) + " | " + SITE_NAME;
+const description = t(lang, "coins_desc", { country: name, cur: country.cur });
+const alternates = [...langsFor(country).map((l) => ({ hreflang: `${l}-${country.code}`, href: url(l, country.code, "coins") })), { hreflang: "x-default", href: url("en", country.code, "coins") }];
+---
+<Base lang={lang} country={country} slug="coins" title={title} description={description} alternates={alternates}>
+  <main class="m">
+    <section class="card prose"><h1>{t(lang, "coins_title", { country: name })}</h1><p>{description}</p></section>
+    <section class="card"><div class="tbl"><table><thead><tr><th></th><th>{t(lang, "coin_weight")}</th><th>{t(lang, "coin_fine")}</th><th>{t(lang, "coin_pure")}</th><th>{t(lang, "coin_value")}</th></tr></thead><tbody>
+      {coins.map((c) => <tr><td>{c.name}</td><td class="n">{nf(c.grams)} g</td><td class="n">{nf(c.fine * 1000, 1)}‰</td><td class="n">{nf(c.grams * c.fine)} g</td><td class="n"><b>{money(c.grams * c.fine * gramVal)}</b></td></tr>)}
+    </tbody></table></div><div class="k small">{t(lang, "coins_note")}</div></section>
+  </main>
+</Base>

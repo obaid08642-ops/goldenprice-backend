@@ -38,6 +38,10 @@
 <div id="attn"></div>
 <div class="grid" id="cards"></div>
 
+<h3>API clients</h3>
+<div class="bar"><select id="cl-st" class="sel"><option value="pending">pending</option><option value="approved">approved</option><option value="awaiting_payment">awaiting payment</option><option value="rejected">rejected</option><option value="disabled">disabled</option><option value="all">all</option></select><button onclick="loadClients()">Load</button></div>
+<div id="clients" class="grid"></div>
+
 <h3>Danger zone</h3>
 <button onclick="clearCache()">Clear live price cache</button>
 <span class="muted">History in the database is not affected.</span>
@@ -95,6 +99,27 @@ async function setManual(symbol, raw, force = false) {
     if (e.body && e.body.needsConfirm && !force && confirm(`${symbol}: ${e.message}.\nSave ${price} anyway?`)) return setManual(symbol, raw, true);
     log("set error: " + e.message);
   }
+}
+
+async function loadClients() {
+  let j; try { j = await api("/api/admin/clients?status=" + $("#cl-st").value); } catch (e) { log("clients error: " + e.message); return; }
+  const c = $("#clients"); c.innerHTML = "";
+  for (const k of j.clients) {
+    const d = document.createElement("div"); d.className = "card";
+    const scopes = (k.scopes && k.scopes.length ? k.scopes : k.requested_scopes || []).join(", ");
+    d.innerHTML = `<div class="row"><b>#${k.id} ${esc(k.email)}</b><span class="badge">${esc(k.status)}</span></div>
+      <div class="muted">${esc(k.purpose || "")}</div>
+      <div class="muted">requested: ${esc(k.requested_plan)} · scopes: ${esc(scopes)}</div>
+      <div class="muted">${k.provider ? "paid via " + esc(k.provider) + " · " : ""}${k.expires_at ? "expires " + esc(new Date(k.expires_at).toLocaleDateString()) : ""}</div>
+      <div class="row edit"><select data-plan>${Object.keys(j.plans).map((p) => `<option ${p === k.requested_plan ? "selected" : ""}>${p}</option>`).join("")}</select><input data-days placeholder="days (optional)">
+      <button data-a="approve">Approve</button><button data-a="reject">Reject</button><button data-a="disable">Disable</button></div>`;
+    d.querySelectorAll("button[data-a]").forEach((b) => b.onclick = async () => {
+      const body = { plan: d.querySelector("[data-plan]").value, days: d.querySelector("[data-days]").value, scopes: (k.scopes && k.scopes.length ? k.scopes : k.requested_scopes) || [] };
+      try { const r = await api(`/api/admin/clients/${k.id}/${b.dataset.a}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) }); log(`${b.dataset.a} #${k.id} ok` + (r.key ? " key " + r.key : "")); loadClients(); } catch (e) { log(`${b.dataset.a} error: ` + e.message); }
+    });
+    c.appendChild(d);
+  }
+  if (!j.clients.length) c.innerHTML = '<div class="muted">nothing here</div>';
 }
 
 async function refreshAll() {

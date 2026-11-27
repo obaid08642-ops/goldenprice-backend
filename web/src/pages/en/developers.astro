@@ -1,0 +1,106 @@
+---
+import Base from "../../layouts/Base.astro";
+import "../../i18n/load";
+import { COUNTRIES } from "../../data/countries";
+import { ASSETS, KINDS } from "../../data/assets";
+import { SITE_NAME } from "../../lib/paths";
+import { PLANS } from "../../../../plans.js";
+const country = COUNTRIES.find((c) => c.code === "US")!;
+const api = (import.meta.env.PUBLIC_API_URL as string) || "https://goldenprice-backend.onrender.com";
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const title = "Free price API for gold, metals, crypto, commodities, stocks and currencies";
+const description = "Free and paid JSON API with live and 5-year history prices for gold, silver, industrial metals, oil, crops, 39 cryptocurrencies, stocks, indices and 166 currencies. Request a free key in a minute.";
+const catNames: Record<string, string> = { precious: "Precious metals (gold, silver, platinum, palladium)", industrial: "Industrial metals (copper, nickel, zinc, lithium...)", energy: "Energy (oil, gas, fuels)", agri: "Agriculture (wheat, coffee, sugar...)", crypto: "Cryptocurrencies", stock: "Stocks", index: "Stock indices", forex: "Currency pairs" };
+const counts = Object.fromEntries(KINDS.map((k) => [k, ASSETS.filter((a) => a.kind === k).length]));
+const faq: [string, string][] = [
+  ["Is the price API really free?", "Yes. The Free plan gives up to 5 assets or one category with 200 requests per day. Free keys are approved manually, usually within a day, and we ask you to credit the site."],
+  ["How fresh is the data?", "Futures, stocks and indices refresh about every 15 minutes, major crypto in near real time, and some industrial metals every few hours. No plan offers tick-by-tick data. Every response includes the update time."],
+  ["Which assets are covered?", `${ASSETS.length} assets: ${KINDS.map((k) => `${counts[k]} ${k}`).join(", ")}, plus exchange rates for 166 currencies.`],
+  ["How do paid plans work?", "Pick a plan and the categories you need, pay by card (worldwide) or crypto, and your key is activated automatically when the payment is confirmed."],
+  ["Can I get historical data?", "Yes, daily history for up to about 5 years for most assets through /v1/chart."],
+];
+const jsonld = [
+  { "@context": "https://schema.org", "@type": "WebAPI", name: `${SITE_NAME} price API`, description, documentation: `${site}/en/developers/`, provider: { "@type": "Organization", name: SITE_NAME }, termsOfService: `${site}/en/terms/` },
+  { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(([q, a]) => ({ "@type": "Question", name: q, acceptedAnswer: { "@type": "Answer", text: a } })) },
+  ...Object.values(PLANS).map((p: any) => ({ "@context": "https://schema.org", "@type": "Product", name: `${SITE_NAME} API ${p.name}`, description: `${p.daily.toLocaleString("en")} requests per day`, offers: { "@type": "Offer", price: p.price, priceCurrency: "USD", availability: "https://schema.org/InStock" } })),
+];
+const boot = JSON.stringify({ api, kinds: KINDS, catNames, assets: ASSETS.map((a) => ({ sym: a.sym, name: a.name, kind: a.kind })) });
+---
+<Base lang="en" country={country} slug="" path="/en/developers/" title={`${title} | ${SITE_NAME}`} description={description} jsonld={jsonld}>
+  <main class="m" id="dev" data-boot={boot}>
+    <section class="card prose"><h1>{title}</h1>
+      <p>Use our prices in your app, spreadsheet, bot or website. JSON over HTTPS, 5 years of daily history, 166 currencies. Request a free key below; paid plans raise the limits and unlock every category.</p>
+      <p>Base URL: <code>{api}</code> · OpenAPI spec: <a href="/openapi.json"><code>/openapi.json</code></a></p></section>
+
+    <section class="card"><h2>Plans</h2><div class="tbl"><table><thead><tr><th>Plan</th><th>Price</th><th>Requests / day</th><th>Per minute</th><th>Assets</th><th>Max data age</th></tr></thead><tbody>
+      {Object.entries(PLANS).map(([k, p]: [string, any]) => <tr><td><b>{p.name}</b></td><td class="n">{p.price ? `$${p.price}/mo` : "Free"}</td><td class="n">{p.daily.toLocaleString("en")}</td><td class="n">{p.perMin}</td><td>{k === "free" ? "1 category or 5 assets" : k === "starter" ? "1 category or 25 assets" : "All categories"}</td><td class="n">{p.freshnessSec}s</td></tr>)}
+    </tbody></table></div><div class="k small">Prices are USD per month and can change. Free keys need approval; paid keys activate automatically after the payment is confirmed. Enterprise or higher limits: <a href="/en/contact/">contact us</a>.</div></section>
+
+    <section class="card"><h2>Get a key</h2>
+      <form class="form" id="req-form" novalidate>
+        <div class="conv"><label>Email<input name="email" type="email" required autocomplete="email" /></label>
+          <label>Plan<select name="plan" id="plan">{Object.entries(PLANS).map(([k, p]: [string, any]) => <option value={k}>{p.name} {p.price ? `($${p.price}/mo)` : "(free, needs approval)"}</option>)}</select></label>
+          <label id="pay-row" hidden>Pay with<select name="provider"><option value="card">Card / PayPal (worldwide)</option><option value="crypto">Crypto (USDT, BTC, ETH...)</option></select></label></div>
+        <fieldset class="scopes"><legend>What do you need?</legend>
+          <div class="cats">{KINDS.map((k) => <label class="chk"><input type="checkbox" name="kind" value={k} /> {catNames[k]} <span class="k">({counts[k]})</span></label>)}<label class="chk" id="all-row" hidden><input type="checkbox" name="kind" value="all" /> Everything</label></div>
+          <label>Or specific assets (comma separated symbols, e.g. GOLD, SILVER, BTC)<input name="syms" placeholder="GOLD, SILVER, BTC" /></label></fieldset>
+        <label>What will you build? (optional)<input name="purpose" /></label>
+        <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <button class="btn" type="submit" id="req-btn">Request free key</button><div class="msg" id="req-msg" role="status"></div></form>
+      <div id="status-box" hidden><h3>Your request</h3><div id="status-text" class="msg"></div><pre id="key-out" hidden></pre></div>
+      <form class="form" id="chk-form"><div class="conv"><label>Request ID<input name="id" inputmode="numeric" /></label><label>Status code<input name="token" /></label></div><button class="btn" type="submit">Check status</button></form>
+    </section>
+
+    <section class="card"><h2>Quick start</h2>
+      <pre>{`curl -H "x-api-key: YOUR_KEY" ${api}/v1/overview
+curl -H "x-api-key: YOUR_KEY" "${api}/v1/chart/GOLD?days=365"
+curl -H "x-api-key: YOUR_KEY" ${api}/v1/rates`}</pre>
+      <div class="tbl"><table><thead><tr><th>Endpoint</th><th>Returns</th></tr></thead><tbody>
+        <tr><td><code>/v1/overview</code></td><td>Latest price, daily change, performance (1w to 5y), 52-week and all-time range, 7-day sparkline for every asset in your scope</td></tr>
+        <tr><td><code>/v1/chart/SYMBOL?days=365&amp;points=400</code></td><td>Daily history (value, open, high, low)</td></tr>
+        <tr><td><code>/v1/rates</code></td><td>166 currency rates against USD, updated hourly</td></tr>
+        <tr><td><code>/v1/symbols</code></td><td>Every symbol and whether your key covers it</td></tr>
+        <tr><td><code>/v1/usage</code></td><td>Your plan, scope and today's usage</td></tr></tbody></table></div>
+      <div class="k small">Headers on every response: X-Plan, X-RateLimit-Limit-Day, X-RateLimit-Remaining-Day. Over the limit you get HTTP 429. Please cache responses and credit the site.</div></section>
+
+    <section class="card"><h2>Supported assets</h2>
+      {KINDS.map((k) => <><h3>{catNames[k]}</h3><p class="syms">{ASSETS.filter((a) => a.kind === k).map((a) => `${a.name} (${a.sym})`).join(" · ")}</p></>)}</section>
+
+    <section class="card faq"><h2>Frequently asked questions</h2>{faq.map(([q, a]) => <details><summary>{q}</summary><p>{a}</p></details>)}</section>
+  </main>
+  <script>
+    const root = document.getElementById("dev")!;
+    const boot = JSON.parse(root.dataset.boot || "{}");
+    const $ = (id: string) => document.getElementById(id)!;
+    const plan = $("plan") as HTMLSelectElement;
+    const sync = () => { const free = plan.value === "free"; $("pay-row").hidden = free; $("all-row").hidden = !(plan.value === "pro" || plan.value === "business"); $("req-btn").textContent = free ? "Request free key" : "Continue to payment"; };
+    plan.addEventListener("change", sync); sync();
+    const showStatus = (j: any, id: number, token: string) => {
+      $("status-box").hidden = false;
+      const t = $("status-text"); t.className = "msg" + (j.status === "approved" ? " ok" : "");
+      t.textContent = j.status === "approved" ? "Approved. Your API key:" : j.status === "pending" ? `Pending approval. Save your request ID ${id} and status code ${token} to check later.` : j.status === "awaiting_payment" ? "Waiting for the payment confirmation. Check again in a minute." : j.status === "rejected" ? `Rejected. ${j.note || ""}` : `Status: ${j.status}`;
+      const out = $("key-out"); out.hidden = !j.key; if (j.key) out.textContent = j.key;
+    };
+    const check = async (id: string, token: string) => {
+      try { const r = await fetch(`${boot.api}/api/keys/status?id=${encodeURIComponent(id)}&token=${encodeURIComponent(token)}`); const j = await r.json(); if (!r.ok) throw 0; showStatus(j, Number(id), token); } catch { $("status-box").hidden = false; $("status-text").className = "msg err"; $("status-text").textContent = "Not found. Check the ID and code."; }
+    };
+    $("req-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const f = e.target as HTMLFormElement, fd = new FormData(f), msg = $("req-msg");
+      const kinds = fd.getAll("kind").map(String), syms = String(fd.get("syms") || "").split(/[,\s]+/).filter(Boolean).map((s) => s.toUpperCase());
+      const scopes = [...(kinds.includes("all") ? ["all"] : kinds.map((k) => `kind:${k}`)), ...syms.map((s) => `sym:${s}`)];
+      msg.className = "msg"; msg.textContent = "…";
+      try {
+        const free = fd.get("plan") === "free";
+        const r = await fetch(boot.api + (free ? "/api/keys" : "/api/billing/checkout"), { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email: fd.get("email"), plan: fd.get("plan"), provider: fd.get("provider"), purpose: fd.get("purpose"), scopes, website: fd.get("website") }) });
+        const j = await r.json();
+        if (!r.ok || !j.ok) throw new Error(j.error || "failed");
+        if (!free) { location.href = j.url; return; }
+        msg.className = "msg ok"; msg.textContent = "Request received."; showStatus({ status: "pending" }, j.id, j.statusToken);
+      } catch (err: any) { msg.className = "msg err"; msg.textContent = err?.message || "Something went wrong. Please try again."; }
+    });
+    $("chk-form").addEventListener("submit", (e) => { e.preventDefault(); const fd = new FormData(e.target as HTMLFormElement); check(String(fd.get("id")), String(fd.get("token"))); });
+    const q = new URLSearchParams(location.search);
+    if (q.get("client") && q.get("token")) check(q.get("client")!, q.get("token")!);
+  </script>
+</Base>

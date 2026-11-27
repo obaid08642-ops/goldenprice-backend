@@ -2,7 +2,7 @@
 import AssetPage from "../../../components/AssetPage.astro";
 import { CORE } from "../../../data/assets";
 import { getData } from "../../../lib/api";
-import { combos } from "../../../lib/paths";
+import { combos, litePage } from "../../../lib/paths";
 export async function getStaticPaths() {
   const data = await getData();
   // assets without a price yet get no page; long-tail assets live on /{lang}/p/{slug}/
@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   return combos().flatMap((c) => {
     const pages: { page: string; view: string; asset: any }[] = [{ page: "markets", view: "markets", asset: null }];
     if (c.primary) pages.push({ page: "rates", view: "rates", asset: null }, { page: "calculators", view: "calc", asset: null }, { page: "compare", view: "compare", asset: null }, ...assets.map((a) => ({ page: a.slug, view: "asset", asset: a as any })));
-    return pages.map((p) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase(), page: p.page }, props: { lang: c.lang, country: c.country, view: p.view, asset: p.asset } }));
+    return pages.filter((p) => !c.country.lite || litePage(p.page)).map((p) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase(), page: p.page }, props: { lang: c.lang, country: c.country, view: p.view, asset: p.asset } }));
   });
 }
 const { lang, country, view, asset } = Astro.props;

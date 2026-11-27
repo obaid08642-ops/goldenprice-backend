@@ -24,9 +24,11 @@ import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
 import crypto from "node:crypto";
+import { mountClients } from "./clients.js";
 import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
 import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
+import { loadMonthly } from "./monthly.js";
 import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
@@ -50,7 +52,7 @@ const SLX_PAIR_ADDRESS = (process.env.SLX_PAIR_ADDRESS || "0x7c755e961a8d415c407
 
 // ---------- app ----------
 const app = express();
-app.use(express.json());
+app.use(express.json({ verify: (req, _res, buf) => { if (String(req.url).startsWith("/api/billing/")) req.rawBody = buf; } }));
 app.use(express.urlencoded({ extended: true }));
 app.use(
   cors({
@@ -1045,6 +1047,8 @@ async function updateRates() {
 updateRates().then(() => updateIndustrial());
 setInterval(() => updateRates(), 60 * 60 * 1000);
 setInterval(() => updateIndustrial(), 3 * 60 * 60 * 1000);
+const runMonthly = () => loadMonthly({ bulkDaily, cache, saveCache }).catch((e) => console.warn("monthly update failed:", e.message || e));
+setTimeout(runMonthly, 20000); setInterval(runMonthly, 24 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
   res.set("Cache-Control", "public, max-age=300");
   if (!RATES.updated) return res.status(503).json({ error: "rates not ready" });
@@ -1089,9 +1093,8 @@ app.post("/api/admin/backfill", async (req, res) => {
 // ---------- one-call overview for the website (prices + 24h change + 7-day sparkline) ----------
 const OVERVIEW = CATALOG.map((c) => c.sym);
 let overviewCache = { t: 0, body: null };
-app.get("/api/overview", async (req, res) => {
-  res.set("Cache-Control", "public, max-age=60");
-  if (overviewCache.body && Date.now() - overviewCache.t < 60000) return res.json(overviewCache.body);
+async function getOverviewBody() {
+  if (overviewCache.body && Date.now() - overviewCache.t < 60000) return overviewCache.body;
   let st = null;
   try { st = await overviewStats(); } catch (e) { console.error("overview stats error", e.message || e); }
   const today = new Date().toISOString().slice(0, 10);
@@ -1119,7 +1122,11 @@ app.get("/api/overview", async (req, res) => {
   }
   const body = { updated: Date.now(), items };
   overviewCache = { t: Date.now(), body };
-  res.json(body);
+  return body;
+}
+app.get("/api/overview", async (req, res) => {
+  res.set("Cache-Control", "public, max-age=60");
+  res.json(await getOverviewBody());
 });
 
 app.get("/api/metals", (req, res) => {
@@ -1259,44 +1266,12 @@ app.post("/api/contact", async (req, res) => {
   res.json({ ok: true });
 });
 
-app.post("/api/keys", async (req, res) => {
-  const b = req.body || {};
-  if (b.website) return res.json({ ok: true });
-  if (limited(clientIp(req), "keys", 3, 24 * 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
-  const email = clean(b.email, 200);
-  if (!EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "invalid email" });
-  const key = "gp_" + crypto.randomBytes(18).toString("hex");
-  try { if (!(await createKey(key, email, clean(b.purpose, 300)))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch { return res.status(500).json({ ok: false, error: "failed" }); }
-  keyCache.set(key, { ok: true, t: Date.now() });
-  res.json({ ok: true, key });
-});
-
-const keyCache = new Map(); // key -> { ok, t }
-const usage = new Map(); // key:day -> count
-const DAILY_LIMIT = Number(process.env.API_DAILY_LIMIT || 1000);
-async function requireKey(req, res, next) {
-  const key = String(req.headers["x-api-key"] || req.query.key || "");
-  if (!/^gp_[0-9a-f]{36}$/.test(key)) return res.status(401).json({ error: "missing or invalid x-api-key" });
-  let c = keyCache.get(key);
-  if (!c || Date.now() - c.t > 5 * 60 * 1000) { c = { ok: await keyActive(key).catch(() => false), t: Date.now() }; keyCache.set(key, c); }
-  if (!c.ok) return res.status(401).json({ error: "unknown or disabled key" });
-  const day = new Date().toISOString().slice(0, 10), uk = `${key}:${day}`;
-  const n = (usage.get(uk) || 0) + 1; usage.set(uk, n);
-  if (n > DAILY_LIMIT) return res.status(429).json({ error: `daily limit of ${DAILY_LIMIT} requests reached` });
-  res.set("X-RateLimit-Remaining", String(DAILY_LIMIT - n));
-  next();
-}
-setInterval(() => { const day = new Date().toISOString().slice(0, 10); for (const k of usage.keys()) if (!k.endsWith(day)) usage.delete(k); }, 6 * 3600 * 1000);
-const selfGet = (path, res) => fetch(`http://127.0.0.1:${PORT}${path}`).then((r) => r.json()).then((j) => res.json(j)).catch(() => res.status(502).json({ error: "upstream error" }));
-app.get("/v1/overview", requireKey, (req, res) => selfGet("/api/overview", res));
-app.get("/v1/rates", requireKey, (req, res) => selfGet("/api/rates", res));
-app.get("/v1/chart/:sym", requireKey, (req, res) => selfGet(`/api/chart/${encodeURIComponent(req.params.sym)}?days=${Number(req.query.days || 365)}&points=${Number(req.query.points || 400)}`, res));
-
 async function sendMail(to, subject, text) {
   if (!RESEND_API_KEY) return false;
   const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: process.env.MAIL_FROM || "GoldenPrice <onboarding@resend.dev>", to: [to], subject, text }) });
   return r.ok;
 }
+mountClients({ app, okAdmin, limited, clientIp, EMAIL_RE, clean, getOverview: getOverviewBody, getRates: () => RATES, BY_SYM, CATALOG, sendMail });
 app.post("/api/alerts", async (req, res) => {
   const b = req.body || {};
   if (b.website) return res.json({ ok: true });

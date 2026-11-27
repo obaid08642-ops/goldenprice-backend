@@ -7,6 +7,8 @@ import { ASSETS } from "../data/assets";
 import { t } from "../i18n/ui";
 import { countryName } from "../lib/format";
 import { url, SITE_NAME, pageExists } from "../lib/paths";
+import { hasCosts } from "../data/costs";
+import { hasCoins } from "../data/coins";
 import { assetName } from "../lib/render";
 
 interface Props {
@@ -52,7 +54,9 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
       <a href={url(lang, country.code, "rates")} class:list={{ on: slug === "rates" }}>{t(lang, "nav_rates")}</a>
       <a href={url(lang, country.code, "calculators")} class:list={{ on: slug === "calculators" }}>{t(lang, "nav_calc")}</a>
       <a href={url(lang, country.code, "compare")} class:list={{ on: slug === "compare" }}>{t(lang, "nav_compare")}</a>
-      <a href={`/${lang}/developers/`}>{t(lang, "nav_dev")}</a>
+      {hasCosts(country.code) && <a href={url(lang, country.code, "costs")} class:list={{ on: slug === "costs" }}>{t(lang, "nav_costs")}</a>}
+      {hasCoins(country.code) && <a href={url(lang, country.code, "coins")} class:list={{ on: slug === "coins" }}>{t(lang, "nav_coins")}</a>}
+      <a href="/en/developers/">{t(lang, "nav_dev")}</a>
     </nav>
     <select class="sel" id="sel-country" hidden={tail} aria-label={t(lang, "country")}>
       {countryOpts.map((o) => <option value={o.href} selected={o.code === country.code}>{o.name} · {o.cur}</option>)}
@@ -65,7 +69,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
   <slot />
   <footer class="ft">
     <span>{t(lang, "footer_note")}</span>
-    <nav><a href={`/${lang}/about/`}>{t(lang, "about")}</a><a href={`/${lang}/terms/`}>{t(lang, "terms")}</a><a href={`/${lang}/privacy/`}>{t(lang, "privacy")}</a><a href={`/${lang}/disclaimer/`}>{t(lang, "disclaimer")}</a><a href={`/${lang}/cookies/`}>{t(lang, "cookies")}</a><a href={`/${lang}/developers/`}>{t(lang, "developers")}</a><a href={`/${lang}/contact/`}>{t(lang, "contact")}</a></nav>
+    <nav><a href={`/${lang}/about/`}>{t(lang, "about")}</a><a href={`/${lang}/terms/`}>{t(lang, "terms")}</a><a href={`/${lang}/privacy/`}>{t(lang, "privacy")}</a><a href={`/${lang}/disclaimer/`}>{t(lang, "disclaimer")}</a><a href={`/${lang}/cookies/`}>{t(lang, "cookies")}</a><a href="/en/developers/">{t(lang, "developers")}</a><a href={`/${lang}/contact/`}>{t(lang, "contact")}</a></nav>
   </footer>
   <script>
     // theme toggle, language/country switch (any page keeps its place), remembered choice

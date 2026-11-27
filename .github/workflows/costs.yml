@@ -1,0 +1,14 @@
+name: Refresh fuel, electricity and Big Mac data
+on:
+  schedule: [{ cron: "23 4 3 * *" }]
+  workflow_dispatch: {}
+permissions: { contents: write }
+jobs:
+  costs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cd web && python3 scripts/fetch-costs.py
+      - run: |
+          git config user.name "costs-bot"; git config user.email "bot@users.noreply.github.com"
+          git add web/src/data/costs.json && (git diff --cached --quiet || (git commit -m "Refresh costs data" && git push))

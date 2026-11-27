@@ -1,0 +1,42 @@
+{
+  "country": "UA",
+  "tier": 2,
+  "confidence": "medium",
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null,
+    "barPremiumPct": {
+      "1g": 38.7,
+      "2g": 36.7,
+      "2.5g": 35.7,
+      "5g": 24,
+      "10g": 21.6,
+      "20g": 17.3,
+      "31.1g": 16.1,
+      "50g": 15.3,
+      "100g": 14.2
+    }
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "sources": [
+    {
+      "name": "PrivatBank bank gold bars",
+      "url": "https://privatbank.ua/banking-metals",
+      "what": "Gold bar ask per gram by size vs live spot, read automatically 2026-11-27"
+    }
+  ],
+  "notes": "Bar prices read automatically from the dealer's public price list.",
+  "verifiedAt": "2026-11-27"
+}
