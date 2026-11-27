@@ -67,15 +67,12 @@
   },
   "energy": {
     "wti": [
-      "alphavantage:WTI",
       "yahoo:CL=F"
     ],
     "brent": [
-      "alphavantage:BRENT",
-      "yahoo:BRN=F"
+      "yahoo:BZ=F"
     ],
     "natgas": [
-      "alphavantage:NATGAS",
       "yahoo:NG=F"
     ]
   }
