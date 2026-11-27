@@ -20,7 +20,8 @@ export async function GET({ site, params }: { site?: URL; params: { lang: string
     }
   }
   // global pages (stocks, extra crypto, currency pairs, more commodities) + legal pages exist once per language
-  const extra = [`/${lang}/p/`, ...TAIL.filter(has).map((a) => `/${lang}/p/${a.slug}/`), ...["about", "terms", "privacy", "disclaimer", "cookies", "contact", "developers"].map((p) => `/${lang}/${p}/`)];
+  const extra = [`/${lang}/p/`, ...TAIL.filter(has).map((a) => `/${lang}/p/${a.slug}/`), ...["about", "terms", "privacy", "disclaimer", "cookies", "contact"].map((p) => `/${lang}/${p}/`)];
   for (const e of extra) out.push(`<url><loc>${base}${e}</loc><lastmod>${lastmod}</lastmod></url>`);
+  if (lang === "en") for (const e of ["/en/developers/"]) out.push(`<url><loc>${base}${e}</loc><lastmod>${lastmod}</lastmod></url>`);
   return new Response(`<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${out.join("")}</urlset>`, { headers: { "Content-Type": "application/xml" } });
 }

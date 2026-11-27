@@ -6,7 +6,7 @@ import { COUNTRIES, langsFor } from "../../data/countries";
 import { legalOf, t } from "../../i18n/ui";
 import { SITE_NAME } from "../../lib/paths";
 export function getStaticPaths() {
-  const PAGES = ["about", "terms", "privacy", "disclaimer", "cookies", "contact", "developers"];
+  const PAGES = ["about", "terms", "privacy", "disclaimer", "cookies", "contact"];
   return LANG_CODES.flatMap((lang) => PAGES.map((legal) => ({ params: { lang, legal }, props: { lang, legal } })));
 }
 const { lang, legal } = Astro.props;
@@ -28,26 +28,13 @@ const ui = { ok: t(lang, legal === "contact" ? "contact_ok" : "dev_key"), err: t
           <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <button class="btn" type="submit">{t(lang, "contact_send")}</button><div class="msg" id="form-msg" role="status"></div></form></section>
     )}
-    {legal === "developers" && (
-      <>
-        <section class="card"><h2>{t(lang, "dev_endpoints")}</h2><pre>{`GET ${api}/v1/overview
-GET ${api}/v1/chart/GOLD?days=365
-GET ${api}/v1/rates
-x-api-key: YOUR_KEY`}</pre><div class="k small">{t(lang, "dev_usage")}</div></section>
-        <section class="card"><h2>{t(lang, "dev_request")}</h2>
-          <form class="form" id="dev-form" novalidate>
-            <label>{t(lang, "dev_email")}<input name="email" type="email" required autocomplete="email" /></label>
-            <label>{t(lang, "dev_purpose")}<input name="purpose" /></label>
-            <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" />
-            <button class="btn" type="submit">{t(lang, "dev_get")}</button><div class="msg" id="form-msg" role="status"></div><pre id="key-out" hidden></pre></form></section>
-      </>
-    )}
+
   </main>
   <script>
     // contact + API-key forms post to the backend; the honeypot field stays empty for people
     const page = document.getElementById("page")!;
     const api = page.dataset.api!, ui = JSON.parse(page.dataset.ui || "{}");
-    for (const [id, path] of [["contact-form", "/api/contact"], ["dev-form", "/api/keys"]] as const) {
+    for (const [id, path] of [["contact-form", "/api/contact"]] as const) {
       const f = document.getElementById(id) as HTMLFormElement | null;
       f?.addEventListener("submit", async (e) => {
         e.preventDefault();
