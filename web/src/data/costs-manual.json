@@ -1,1 +1,34 @@
-{}
+{
+  "EG": {
+    "fuel": { "cur": "EGP", "date": "2026-10-15", "src": "Ministry of Petroleum / Automatic Pricing Committee decision 15 Oct 2026 (95 octane; prices in force to end-Dec 2026)", "url": "https://www.petroleum.gov.eg/en/Pages/Home.aspx", "petrol95": 24.0, "diesel": 20.5, "lpg": null }
+  },
+  "SA": {
+    "fuel": { "cur": "SAR", "date": "2026-11-01", "src": "Saudi Aramco retail fuels (95 octane)", "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels", "petrol95": 2.33, "diesel": 1.79, "lpg": 1.09 },
+    "electricity": { "cur": "SAR", "kwh": 0.18, "period": "2026-11", "src": "SERA/SEC residential tariff, first tier up to 6000 kWh", "url": "https://sera.gov.sa/en/consumer/electric-tariff/electric-tariff-categories/consumption-tariff" }
+  },
+  "AE": {
+    "fuel": { "cur": "AED", "date": "2026-11-01", "src": "ADNOC Distribution / UAE Fuel Price Committee (Special 95, incl. VAT)", "url": "https://www.adnocdistribution.ae/en/car-care/vehicle-inspection-centres-vic", "petrol95": 4.04, "diesel": 4.75, "lpg": null }
+  },
+  "KW": {
+    "fuel": { "cur": "KWD", "date": "2026-07-01", "src": "KNPC price announcement Q3 2026 (Super 95)", "url": "https://www.knpc.com.kw", "petrol95": 0.105, "diesel": 0.115, "lpg": null }
+  },
+  "QA": {
+    "fuel": { "cur": "QAR", "date": "2026-10-01", "src": "QatarEnergy fuel prices (Super 95)", "url": "https://www.qatarenergy.qa/en/Documents/Fuel%20Prices.pdf", "petrol95": 2.1, "diesel": 2.05, "lpg": null }
+  },
+  "BH": {
+    "electricity": { "cur": "BHD", "kwh": 0.003, "period": "2026-11", "src": "EWA domestic tariff, Bahraini single account, first tier 0-3000 kWh (3 fils/kWh)", "url": "https://www.ewa.bh/en/tariff" }
+  },
+  "OM": {
+    "fuel": { "cur": "OMR", "date": "2026-11-01", "src": "OOMCO Fuel Retail Prices November (Mogas 95)", "url": "https://oomco.om/", "petrol95": 0.239, "diesel": 0.258, "lpg": null },
+    "electricity": { "cur": "OMR", "kwh": 0.014, "period": "2026-11", "src": "APSR residential tariff, basic account, first tier 0-4000 kWh (14 baisas/kWh)", "url": "https://omannews.gov.om/topics/en/80/show/120313" }
+  },
+  "JO": {
+    "fuel": { "cur": "JOD", "date": "2026-11-01", "src": "MEMR Fuel Pricing Committee via Petra, November 2026 (Octane 90 main grade; Octane 95 is 1.375)", "url": "https://petra.gov.jo/en/news/fuel-pricing-committee-adjusts-november-rates-maintains-diesel-and-kerosene-subsidies-amid-market-volatility", "petrol95": 1.08, "diesel": 0.9, "lpg": null }
+  },
+  "LB": {
+    "fuel": { "cur": "LBP", "date": "2026-11-27", "src": "Ministry of Energy and Water, General Directorate of Oil schedule 27 Nov 2026 (95 octane, LBP 2,158,000 per 20L canister, converted per litre)", "url": "https://energyandwater.gov.lb", "petrol95": 107900, "diesel": 114750, "lpg": null }
+  },
+  "IQ": {
+    "fuel": { "cur": "IQD", "date": "2026-11-01", "src": "Ministry of Oil (improved/muhassan petrol, main grade; premium is 1250)", "url": "https://oil.gov.iq/?article=2007", "petrol95": 850, "diesel": null, "lpg": null }
+  }
+}
