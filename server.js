@@ -24,6 +24,7 @@ import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
 import WebSocket from "ws";
+import { CATALOG, BY_SYM } from "./catalog.js";
 import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily } from "./db.js";
 
 // ---------- paths ----------
@@ -723,22 +724,34 @@ async function updateMetals() {
   saveCache();
 }
 
-// near real-time metals from Yahoo futures only (no API quota); other metals wait for metals.dev/manual
-async function updateMetalsLive() {
-  for (const [name, sources] of Object.entries(SITES.metals || {})) {
-    for (const src of sources || []) {
-      if (typeof src !== "string" || !src.startsWith("yahoo:")) continue;
+// near real-time prices for the whole catalog from Yahoo (futures, crops, indices, crypto). No API quota, batched.
+async function updateCatalogLive() {
+  const list = CATALOG.filter((c) => c.yahoo && c.live !== false);
+  for (let i = 0; i < list.length; i += 8) {
+    await Promise.all(list.slice(i, i + 8).map(async (c) => {
       try {
-        const tk = src.split(":")[1];
-        let v = await fromYahoo(tk);
-        if (tk === "HG=F") v = v * 2204.62; // USD/lb -> USD/ton
-        if (putMetal(name, v, src)) break;
+        const cur = cache.prices[c.sym];
+        // a dedicated live feed (e.g. CoinGecko) wrote a fresh price recently: leave it alone
+        if (cur && !String(cur.src).startsWith("yahoo") && cur.src !== "manual" && Date.now() - cur.t < 30 * 60 * 1000) return;
+        if (cur && cur.src === "manual" && Date.now() - cur.t < 48 * 3600 * 1000) return;
+        const v = await fromYahoo(c.yahoo) * (c.factor || 1);
+        putCatalog(c, v, `yahoo:${c.yahoo}`);
       } catch {}
-    }
+    }));
   }
 }
+function putCatalog(c, price, src) {
+  const v = Number(price);
+  if (!isValidNumber(v)) return false;
+  if (c.min != null && (v < c.min || v > c.max)) { console.warn(`${c.sym} rejected (out of range): ${v} from ${src}`); return false; }
+  const prev = cache.prices[c.sym];
+  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > 0.3) { console.warn(`${c.sym} rejected (jump >30%): ${prev.price} -> ${v} from ${src}`); return false; }
+  put(c.sym, v, c.index ? "points" : "usd", src);
+  return true;
+}
+async function updateMetalsLive() { return updateCatalogLive(); }
 
-// update energy (kept)
+// update energy (kept)// update energy (kept)
 const ENERGY_RULES = { WTI: { min: 20, max: 250 }, BRENT: { min: 20, max: 250 }, NATGAS: { min: 0.5, max: 30 } };
 async function updateEnergy() {
   const e = SITES.energy || {};
@@ -1022,7 +1035,7 @@ app.get("/api/rates", (req, res) => {
 });
 
 // ---------- history backfill from Yahoo (admin) ----------
-const BACKFILL = { GOLD: "GC=F", SILVER: "SI=F", PLATINUM: "PL=F", PALLADIUM: "PA=F", COPPER: "HG=F", ALUMINUM: "ALI=F", WTI: "CL=F", BRENT: "BZ=F", NATGAS: "NG=F", BTC: "BTC-USD", ETH: "ETH-USD" };
+const BACKFILL = Object.fromEntries(CATALOG.filter((c) => c.yahoo).map((c) => [c.sym, c.yahoo]));
 async function backfillSymbol(sym, tk, range = "5y") {
   const j = await getJSON(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(tk)}?range=${range}&interval=1d`, { headers: YAHOO_HEADERS });
   const r = j?.chart?.result?.[0];
@@ -1031,9 +1044,9 @@ async function backfillSymbol(sym, tk, range = "5y") {
   for (let i = 0; i < ts.length; i++) {
     let v = cl[i];
     if (!isValidNumber(v)) continue;
-    if (tk === "HG=F") v *= 2204.62; // USD/lb -> USD/ton
-    const rule = METAL_RULES[sym] || ENERGY_RULES[sym];
-    if (rule && (v < rule.min * 0.4 || v > rule.max * 2.5)) continue; // skip obviously broken points
+    const c = BY_SYM[sym];
+    v *= c.factor || 1;
+    if (c.min != null && (v < c.min * 0.4 || v > c.max * 2.5)) continue; // skip obviously broken points
     rows.push({ day: new Date(ts[i] * 1000).toISOString().slice(0, 10), close: Number(v) });
   }
   return bulkDaily(sym, rows, "backfill:yahoo");
@@ -1050,7 +1063,7 @@ app.post("/api/admin/backfill", async (req, res) => {
 });
 
 // ---------- one-call overview for the website (prices + 24h change + 7-day sparkline) ----------
-const OVERVIEW = ["GOLD", "SILVER", "PLATINUM", "PALLADIUM", "COPPER", "ALUMINUM", "WTI", "BRENT", "NATGAS", "BTC", "ETH"];
+const OVERVIEW = CATALOG.map((c) => c.sym);
 let overviewCache = { t: 0, body: null };
 app.get("/api/overview", async (req, res) => {
   res.set("Cache-Control", "public, max-age=60");
@@ -1066,7 +1079,7 @@ app.get("/api/overview", async (req, res) => {
     const prevRow = [...hist].reverse().find((h) => h.date < today);
     const price = cur ? cur.price : closes[closes.length - 1] ?? null;
     items[sym] = {
-      price, unit: cur?.unit || "usd", src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
+      price, unit: cur?.unit || (BY_SYM[sym]?.index ? "points" : "usd"), src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
       stale: cur ? Date.now() - cur.t > 3 * 24 * 3600 * 1000 : true,
       changePct: price && prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym)) ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
       spark: closes.slice(-8),
@@ -1123,8 +1136,8 @@ app.post("/api/admin/set", (req, res) => {
   const num = Number(price);
   if (!sym || !isValidNumber(num)) return res.status(400).json({ error: "symbol and a positive price are required" });
   // Typo guard: ask for explicit confirmation (force) when the value looks wrong.
-  const rule = METAL_RULES[sym] || ENERGY_RULES[sym];
-  if (!force && rule && (num < rule.min || num > rule.max)) {
+  const rule = BY_SYM[sym];
+  if (!force && rule && rule.min != null && (num < rule.min || num > rule.max)) {
     return res.status(422).json({ error: `outside the expected range ${rule.min}-${rule.max}`, needsConfirm: true });
   }
   const prev = cache.prices[sym];
@@ -1135,7 +1148,7 @@ app.post("/api/admin/set", (req, res) => {
   res.json({ ok: true, saved: cache.prices[sym] });
 });
 // Per-symbol freshness so the admin sees what needs attention (stale, missing, or manual-only).
-const EXPECTED = ["GOLD", "SILVER", "BTC", "ETH", "FX_USD_EGP", ...Object.keys(METAL_RULES), "WTI", "BRENT", "NATGAS"];
+const EXPECTED = ["FX_USD_EGP", ...CATALOG.filter((c) => !c.index).map((c) => c.sym)];
 function statusReport() {
   const t = Date.now();
   return EXPECTED.map((sym) => {
