@@ -29,6 +29,7 @@ import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
 import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
 import { loadMonthly } from "./monthly.js";
+import { sql as dbSql } from "./db.js";
 import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
@@ -1048,6 +1049,17 @@ updateRates().then(() => updateIndustrial());
 setInterval(() => updateRates(), 60 * 60 * 1000);
 setInterval(() => updateIndustrial(), 3 * 60 * 60 * 1000);
 const runMonthly = () => loadMonthly({ bulkDaily, cache, saveCache }).catch((e) => console.warn("monthly update failed:", e.message || e));
+// new Yahoo-backed assets get their 5-year history automatically (no admin call needed): any symbol with fewer than 60 daily rows
+async function autoBackfill() {
+  if (!dbEnabled || !dbSql) return;
+  const have = Object.fromEntries((await dbSql`SELECT symbol, count(*)::int AS n FROM price_daily GROUP BY symbol`).map((r) => [r.symbol, r.n]));
+  for (const [sym, tk] of Object.entries(BACKFILL)) {
+    if ((have[sym] || 0) >= 60) continue;
+    try { console.log("auto backfill", sym, await backfillSymbol(sym, tk, "5y")); } catch (e) { console.warn("auto backfill failed", sym, e.message || e); }
+    await new Promise((r) => setTimeout(r, 1500));
+  }
+}
+setTimeout(() => autoBackfill().catch((e) => console.warn("autoBackfill:", e.message || e)), 60000);
 setTimeout(runMonthly, 20000); setInterval(runMonthly, 24 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
   res.set("Cache-Control", "public, max-age=300");
