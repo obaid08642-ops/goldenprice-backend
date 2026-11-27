@@ -132,7 +132,7 @@
   "ath": "Najviša u našim podacima",
   "atl": "Najniža u našim podacima",
   "since": "Istorija od {d}",
-  "about_title": "O: {a}",
+  "about_title": "O {a}",
   "drivers_title": "Šta pokreće cenu",
   "uses_title": "Čemu služi",
   "source_note": "Izvor: {s}. Cene su orijentacione i mogu kasniti.",
