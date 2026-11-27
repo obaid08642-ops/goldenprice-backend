@@ -44,7 +44,7 @@ export async function pruneTicks() {
 
 export async function dailyHistory(symbol, days = 365) {
   if (!sql) return null;
-  const rows = await sql`SELECT to_char(day,'YYYY-MM-DD') AS date, close AS value, open, high, low
+  const rows = await sql`SELECT to_char(day,'YYYY-MM-DD') AS date, close AS value, open, high, low, src
     FROM price_daily WHERE symbol = ${symbol} AND day >= (now() AT TIME ZONE 'UTC')::date - ${days}::int
     ORDER BY day`;
   return rows;
@@ -59,4 +59,14 @@ export async function recentTicks(symbol, hours = 24) {
 export async function listSymbols() {
   if (!sql) return null;
   return (await sql`SELECT DISTINCT symbol FROM price_daily ORDER BY symbol`).map((r) => r.symbol);
+}
+
+// Bulk-insert daily closes (used for history backfill). Never overwrites days already recorded live.
+export async function bulkDaily(symbol, rows, src = "backfill") {
+  if (!sql || !rows.length) return 0;
+  const days = rows.map((r) => r.day), closes = rows.map((r) => r.close);
+  const res = await sql`INSERT INTO price_daily (symbol, day, open, high, low, close, src)
+    SELECT ${symbol}, d::date, c, c, c, c, ${src} FROM unnest(${days}::text[], ${closes}::float8[]) AS t(d, c)
+    ON CONFLICT (symbol, day) DO NOTHING RETURNING 1`;
+  return res.length;
 }

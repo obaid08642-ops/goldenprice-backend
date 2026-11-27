@@ -1,0 +1,10 @@
+---
+import AssetPage from "../../../components/AssetPage.astro";
+import { ASSETS } from "../../../data/assets";
+import { combos } from "../../../lib/paths";
+export function getStaticPaths() {
+  return combos().map((c) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase() }, props: { lang: c.lang, country: c.country } }));
+}
+const { lang, country } = Astro.props;
+---
+<AssetPage lang={lang} country={country} asset={ASSETS[0]} />

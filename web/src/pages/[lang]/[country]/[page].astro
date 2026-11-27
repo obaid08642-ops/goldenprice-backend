@@ -1,0 +1,14 @@
+---
+import AssetPage from "../../../components/AssetPage.astro";
+import { ASSETS } from "../../../data/assets";
+import { combos } from "../../../lib/paths";
+export function getStaticPaths() {
+  const pages = [...ASSETS.filter((a) => a.slug !== "gold").map((a) => a.slug), "markets"];
+  return combos().flatMap((c) => pages.map((p) => ({
+    params: { lang: c.lang, country: c.country.code.toLowerCase(), page: p },
+    props: { lang: c.lang, country: c.country, asset: ASSETS.find((a) => a.slug === p) ?? null },
+  })));
+}
+const { lang, country, asset } = Astro.props;
+---
+<AssetPage lang={lang} country={country} asset={asset} />

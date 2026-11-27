@@ -1,0 +1,13 @@
+name: Rebuild site hourly
+on:
+  schedule: [{ cron: "7 * * * *" }]
+  workflow_dispatch:
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Cloudflare Pages deploy hook
+        env: { HOOK: "${{ secrets.CF_DEPLOY_HOOK }}" }
+        run: |
+          if [ -z "$HOOK" ]; then echo "CF_DEPLOY_HOOK not set; skipping"; exit 0; fi
+          curl -fsS -X POST "$HOOK"

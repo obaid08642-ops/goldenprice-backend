@@ -1,0 +1,82 @@
+---
+import "../styles/global.css";
+import { LANGS, dirOf, type Lang } from "../data/languages";
+import { COUNTRIES, langsFor, type Country } from "../data/countries";
+import { ASSETS } from "../data/assets";
+import { t } from "../i18n/ui";
+import { countryName } from "../lib/format";
+import { url, SITE_NAME } from "../lib/paths";
+import { assetName } from "../lib/render";
+
+interface Props {
+  lang: Lang; country: Country; slug: string; title: string; description: string;
+  alternates?: { hreflang: string; href: string }[]; noindex?: boolean; jsonld?: unknown[];
+}
+const { lang, country, slug, title, description, alternates = [], noindex = false, jsonld = [] } = Astro.props;
+const site = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const path = url(lang, country.code, slug);
+const canonical = site + path;
+const bySlug = (s: string) => ASSETS.find((a) => a.slug === s)!;
+const nav = [["gold", ""], ["silver", "silver"], ["copper", "copper"], ["bitcoin", "bitcoin"], ["brent-oil", "brent-oil"]] as const;
+// country switch keeps the current page; language falls back to the country's first language (or English)
+const countryOpts = COUNTRIES.map((c) => ({ code: c.code, cur: c.cur, name: countryName(lang, c.code), href: url(langsFor(c).includes(lang) ? lang : langsFor(c)[0], c.code, slug) })).sort((a, b) => a.name.localeCompare(b.name, lang));
+const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Readex+Pro:wght@400;500;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;600&family=Noto+Sans+JP:wght@400;600&display=swap";
+---
+<!doctype html>
+<html lang={lang} dir={dirOf(lang)}>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex,follow" />}
+  {alternates.map((a) => <link rel="alternate" hreflang={a.hreflang} href={site + a.href} />)}
+  <meta property="og:title" content={title} /><meta property="og:description" content={description} /><meta property="og:type" content="website" /><meta property="og:url" content={canonical} /><meta property="og:site_name" content={SITE_NAME} />
+  <meta name="twitter:card" content="summary" />
+  <meta name="theme-color" content="#a97c0b" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href={fonts} />
+  <script is:inline>try{var s=localStorage.getItem("theme");if(s==="dark"||s==="light")document.documentElement.setAttribute("data-theme",s)}catch(e){}</script>
+  {jsonld.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} />)}
+</head>
+<body>
+  <header class="hd"><div class="hd-in">
+    <a class="lg" href={url(lang, country.code)}><i>G</i>{SITE_NAME}</a>
+    <nav class="nav" aria-label="Main">
+      {nav.map(([a, s]) => <a href={url(lang, country.code, s)} class:list={{ on: s === slug }}>{assetName(lang, bySlug(a))}</a>)}
+      <a href={url(lang, country.code, "markets")} class:list={{ on: slug === "markets" }}>{t(lang, "nav_all")}</a>
+    </nav>
+    <select class="sel" id="sel-country" aria-label={t(lang, "country")}>
+      {countryOpts.map((o) => <option value={o.href} selected={o.code === country.code}>{o.name} · {o.cur}</option>)}
+    </select>
+    <select class="sel" id="sel-lang" aria-label={t(lang, "language")}>
+      {LANGS.map((l) => <option value={url(l.code, country.code, slug)} selected={l.code === lang}>{l.native}</option>)}
+    </select>
+    <button class="ic" id="theme-btn" type="button" aria-label={t(lang, "theme")}>◐</button>
+  </div></header>
+  <slot />
+  <footer class="ft">
+    <span>{t(lang, "footer_note")}</span>
+    <nav><a href={`/${lang}/about/`}>{t(lang, "about")}</a><a href={`/${lang}/privacy/`}>{t(lang, "privacy")}</a><a href={`/${lang}/contact/`}>{t(lang, "contact")}</a></nav>
+  </footer>
+  <script>
+    // theme toggle, language/country switch (any page keeps its place), remembered choice
+    const root = document.documentElement;
+    document.getElementById("theme-btn")?.addEventListener("click", () => {
+      const dark = root.getAttribute("data-theme") ? root.getAttribute("data-theme") === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+      const next = dark ? "light" : "dark";
+      root.setAttribute("data-theme", next);
+      try { localStorage.setItem("theme", next); } catch {}
+    });
+    for (const id of ["sel-country", "sel-lang"]) {
+      document.getElementById(id)?.addEventListener("change", (e) => {
+        const v = (e.target as HTMLSelectElement).value;
+        try { localStorage.setItem("pref", JSON.stringify({ path: v })); } catch {}
+        location.href = v;
+      });
+    }
+  </script>
+</body>
+</html>
