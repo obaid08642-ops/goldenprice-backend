@@ -1,1 +1,252 @@
-{}
+{
+  "EG": {
+    "fuel": {
+      "cur": "EGP",
+      "date": "2026-10-15",
+      "src": "Ministry of Petroleum / Automatic Pricing Committee decision 15 Oct 2026 (95 octane; prices in force to end-Dec 2026)",
+      "url": "https://www.petroleum.gov.eg/en/Pages/Home.aspx",
+      "petrol95": 24.0,
+      "diesel": 20.5,
+      "lpg": null
+    }
+  },
+  "SA": {
+    "fuel": {
+      "cur": "SAR",
+      "date": "2026-11-01",
+      "src": "Saudi Aramco retail fuels (95 octane)",
+      "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
+      "petrol95": 2.33,
+      "diesel": 1.79,
+      "lpg": 1.09
+    },
+    "electricity": {
+      "cur": "SAR",
+      "kwh": 0.18,
+      "period": "2026-11",
+      "src": "SERA/SEC residential tariff, first tier up to 6000 kWh",
+      "url": "https://sera.gov.sa/en/consumer/electric-tariff/electric-tariff-categories/consumption-tariff"
+    }
+  },
+  "AE": {
+    "fuel": {
+      "cur": "AED",
+      "date": "2026-11-01",
+      "src": "ADNOC Distribution / UAE Fuel Price Committee (Special 95, incl. VAT)",
+      "url": "https://www.adnocdistribution.ae/en/car-care/vehicle-inspection-centres-vic",
+      "petrol95": 4.04,
+      "diesel": 4.75,
+      "lpg": null
+    }
+  },
+  "KW": {
+    "fuel": {
+      "cur": "KWD",
+      "date": "2026-07-01",
+      "src": "KNPC price announcement Q3 2026 (Super 95)",
+      "url": "https://www.knpc.com.kw",
+      "petrol95": 0.105,
+      "diesel": 0.115,
+      "lpg": null
+    }
+  },
+  "QA": {
+    "fuel": {
+      "cur": "QAR",
+      "date": "2026-10-01",
+      "src": "QatarEnergy fuel prices (Super 95)",
+      "url": "https://www.qatarenergy.qa/en/Documents/Fuel%20Prices.pdf",
+      "petrol95": 2.1,
+      "diesel": 2.05,
+      "lpg": null
+    }
+  },
+  "BH": {
+    "electricity": {
+      "cur": "BHD",
+      "kwh": 0.003,
+      "period": "2026-11",
+      "src": "EWA domestic tariff, Bahraini single account, first tier 0-3000 kWh (3 fils/kWh)",
+      "url": "https://www.ewa.bh/en/tariff"
+    }
+  },
+  "OM": {
+    "fuel": {
+      "cur": "OMR",
+      "date": "2026-11-01",
+      "src": "OOMCO Fuel Retail Prices November (Mogas 95)",
+      "url": "https://oomco.om/",
+      "petrol95": 0.239,
+      "diesel": 0.258,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "OMR",
+      "kwh": 0.014,
+      "period": "2026-11",
+      "src": "APSR residential tariff, basic account, first tier 0-4000 kWh (14 baisas/kWh)",
+      "url": "https://omannews.gov.om/topics/en/80/show/120313"
+    }
+  },
+  "JO": {
+    "fuel": {
+      "cur": "JOD",
+      "date": "2026-11-01",
+      "src": "MEMR Fuel Pricing Committee via Petra, November 2026 (Octane 90 main grade; Octane 95 is 1.375)",
+      "url": "https://petra.gov.jo/en/news/fuel-pricing-committee-adjusts-november-rates-maintains-diesel-and-kerosene-subsidies-amid-market-volatility",
+      "petrol95": 1.08,
+      "diesel": 0.9,
+      "lpg": null
+    }
+  },
+  "LB": {
+    "fuel": {
+      "cur": "LBP",
+      "date": "2026-11-27",
+      "src": "Ministry of Energy and Water, General Directorate of Oil schedule 27 Nov 2026 (95 octane, LBP 2,158,000 per 20L canister, converted per litre)",
+      "url": "https://energyandwater.gov.lb",
+      "petrol95": 107900,
+      "diesel": 114750,
+      "lpg": null
+    }
+  },
+  "IQ": {
+    "fuel": {
+      "cur": "IQD",
+      "date": "2026-11-01",
+      "src": "Ministry of Oil (improved/muhassan petrol, main grade; premium is 1250)",
+      "url": "https://oil.gov.iq/?article=2007",
+      "petrol95": 850,
+      "diesel": null,
+      "lpg": null
+    }
+  },
+  "DZ": {
+    "fuel": {
+      "cur": "DZD",
+      "date": "2026-01-01",
+      "src": "Ministry of Hydrocarbons and Mines / ARH decision 2025-1619 (unleaded petrol, single grade; GPL-c autogas per litre)",
+      "url": "https://news.radioalgerie.dz/fr/node/77012",
+      "petrol95": 47.0,
+      "diesel": 31.0,
+      "lpg": 12.0
+    },
+    "electricity": {
+      "cur": "DZD",
+      "kwh": 1.7787,
+      "period": "2026-01",
+      "src": "CREG household tariff 54M, tranche 1 up to 125 kWh/quarter, excl. tax",
+      "url": "https://creg.gov.dz/fr/consommateurs/comment-lire-votre-facture/"
+    }
+  },
+  "TN": {
+    "fuel": {
+      "cur": "TND",
+      "date": "2026-11-12",
+      "src": "Ministry of Industry, Mines and Energy, Conjoncture energetique septembre 2026 (prices in force since 24 Nov 2022, confirmed current; standard sans plomb; premium grade is 2.855)",
+      "url": "https://www.energiemines.gov.tn/fileadmin/docs-u1/Conjoncture_%C3%A9nerg%C3%A9tique__septembre_2026.pdf",
+      "petrol95": 2.525,
+      "diesel": 2.205,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "TND",
+      "kwh": 0.062,
+      "period": "2026-11",
+      "src": "STEG residential economic tier 1-50 kWh/month, excl. tax (grid in force since May 2022, still published as current)",
+      "url": "https://www.steg.com.tn/"
+    }
+  },
+  "TR": {
+    "electricity": {
+      "cur": "TRY",
+      "kwh": 3.238,
+      "period": "2026-04",
+      "src": "EPDK residential (mesken) first tier up to 8 kWh/day, final price incl. VAT, from 4 Apr 2026",
+      "url": "https://www.epdk.gov.tr/Detay/DownloadDocument?id=5NlL5ZC3I1Y="
+    }
+  },
+  "IN": {
+    "fuel": {
+      "cur": "INR",
+      "date": "2026-06-30",
+      "src": "PPAC (Ministry of Petroleum) retail selling price, Delhi: regular petrol MS (91 RON) and HSD diesel",
+      "url": "https://ppac.gov.in/download.php?file=rep_studies/1793969542_Final_SOP_Volume_2026-27_Edition-I(April-June)Web%2013-8-2026.pdf",
+      "petrol95": 102.12,
+      "diesel": 95.2,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "INR",
+      "kwh": 3.0,
+      "period": "2026-11",
+      "src": "DERC Delhi domestic tariff 0-200 units (schedule still in force Nov 2026; India has no national tariff)",
+      "url": "https://www.derc.gov.in/sites/default/files/Tariff%20Schedule%202020-21.pdf"
+    }
+  },
+  "PK": {
+    "fuel": {
+      "cur": "PKR",
+      "date": "2026-11-27",
+      "src": "OGRA / Petroleum Division notification via APP state wire (regular petrol MS; HSD diesel)",
+      "url": "https://www.urdupoint.com/en/pakistan/new-petroleum-prices-petrol-diesel-2299739.html",
+      "petrol95": 312.0,
+      "diesel": 346.0,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "PKR",
+      "kwh": 3.95,
+      "period": "2026-02",
+      "src": "NEPRA uniform national tariff, S.R.O. 279(I)/2026, lifeline 1-50 units",
+      "url": "https://nepra.org.pk/tariff/Distribution%20K-Electric.php"
+    }
+  },
+  "BD": {
+    "fuel": {
+      "cur": "BDT",
+      "date": "2026-09-20",
+      "src": "EMRD gazette notification 20 Sep 2026, held for Oct-Nov 2026 (Octane 95; regular petrol 160); LPG = BERC autogas decision 2 Nov 2026",
+      "url": "https://emrd.gov.bd",
+      "petrol95": 165.0,
+      "diesel": 135.0,
+      "lpg": 91.95
+    },
+    "electricity": {
+      "cur": "BDT",
+      "kwh": 5.26,
+      "period": "2026-06",
+      "src": "BERC retail tariff Jun 2026, first regular step 0-75 units (lifeline up to 50 units is 4.63)",
+      "url": "https://berc.gov.bd"
+    }
+  },
+  "LK": {
+    "fuel": {
+      "cur": "LKR",
+      "date": "2026-11-01",
+      "src": "Ceypetco (CPC) official prices (Petrol 95 Octane; 92 Octane is 424; Auto Diesel)",
+      "url": "https://ceypetco.gov.lk/marketing-sales",
+      "petrol95": 490.0,
+      "diesel": 397.0,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "LKR",
+      "kwh": 5.0,
+      "period": "2026-05",
+      "src": "PUCSL approved tariff, domestic block 1 (0-30 kWh), from 11 May 2026",
+      "url": "https://www.pucsl.gov.lk/wp-content/uploads/2026/05/Annex-2-Approved-Tariff-Tabel_May-2026.pdf"
+    }
+  },
+  "NP": {
+    "fuel": {
+      "cur": "NPR",
+      "date": "2026-11-01",
+      "src": "Nepal Oil Corporation retail price list (petrol MS and HSD diesel, Kathmandu Category 3; LPG per 14.2kg cylinder only)",
+      "url": "https://noc.org.np/retailprice?offset=50&max=10",
+      "petrol95": 200.0,
+      "diesel": 200.0,
+      "lpg": null
+    }
+  }
+}
