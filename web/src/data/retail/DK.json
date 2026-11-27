@@ -1,0 +1,52 @@
+{
+  "country": "DK",
+  "tier": 1,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 6.7
+    },
+    "usedGoldDiscountPct": {
+      "typical": 8
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Jewellery VAT 25% (PwC standard rate); investment gold is VAT-exempt under the EU special scheme (European Commission). Tavex DK, 27 Nov 2026: 1 oz Valcambi bar sell DKK 26,279.39 / buy DKK 24,515.13, a 6.7% buyback discount. Scrap paid 'up to' per gram (585: DKK 421.43; 750: DKK 538.49) vs Tavex's 999.9 bar bid DKK 781.38/g implies a used-gold discount of ~8%.",
+  "sources": [
+    {
+      "name": "European Commission - VAT Special Schemes (Taxation and Customs)",
+      "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-special-schemes_en",
+      "what": "Type I investment-gold scheme is obligatory for EU countries: supply, intra-EU acquisition and importation of investment gold are normally exempt from VAT - gold vatBullionPct 0."
+    },
+    {
+      "name": "PwC Tax Summaries - Value-added tax (VAT) rates quick chart",
+      "url": "https://taxsummaries.pwc.com/quick-charts/value-added-tax-vat-rates?pc=adwords",
+      "what": "Lists Denmark's standard VAT rate as 25 - gold jewellery 25; silver jewellery and bullion 25 (the EU exemption covers gold only)."
+    },
+    {
+      "name": "Tavex Denmark - 1 oz Valcambi Suisse Gold Bar",
+      "url": "https://tavex.dk/en/gold/1oz-gold-bar-valcambi/",
+      "what": "Live sell/buy table read 27 Nov 2026: sell DKK 26,279.39, buy DKK 24,515.13 (1-4 bars) - buyback discount (26279.39-24515.13)/26279.39 = 6.7%."
+    },
+    {
+      "name": "Tavex Denmark - Sell your gold & silver to Tavex",
+      "url": "https://tavex.dk/en/sell-gold-and-silver-in-store/",
+      "what": "Published 'We Buy (Up to)' scrap prices per gram read 27 Nov 2026: 585 DKK 421.43, 750 DKK 538.49, 999.9 bars DKK 781.38 - scrap pays ~8% below the fine-gold bar bid, so used-gold discount typical 8."
+    }
+  ]
+}

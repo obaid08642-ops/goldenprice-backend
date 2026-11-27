@@ -1,0 +1,43 @@
+{
+  "country": "NO",
+  "tier": 1,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "No investment-gold VAT exemption: Skatteetaten states investment-gold turnover is taxable and sales to private persons follow the ordinary rules; gold jewellery is 25%. Legal-tender gold coins are exempt (VAT Act s.3-6). PwC: customs duties exist only on agricultural products, foodstuffs, clothes and textiles, so gold/silver duty is 0%. No primary dealer bar list was opened, so premiums are null.",
+  "sources": [
+    {
+      "name": "Skatteetaten - VAT rates for purchase and sale of gold",
+      "url": "https://www.skatteetaten.no/en/rates/vat-rates-for-purchase-and-sale-of-gold-businesses-and-public-sector-enterprises/",
+      "what": "Rate table: 'Gold jewellery and other gold objects 25%'; gold sold by weight and fineness to businesses/public enterprises is under reverse charge (buyer calculates VAT)."
+    },
+    {
+      "name": "Skatteetaten - VAT Handbook M-11-1.4, domestic turnover of gold",
+      "url": "https://www.skatteetaten.no/rettskilder/type/handboker/merverdiavgiftshandboken/gjeldende/M-11/M-11-1/M-11-1.4/",
+      "what": "States turnover of investment gold in Norway is taxable, unlike most of Europe, and sales to private persons remain taxable under the ordinary rules - bullion bars take 25% VAT; gold coins that are legal tender are excluded (VAT Act s.3-6)."
+    },
+    {
+      "name": "PwC Tax Summaries - Norway, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/norway/corporate/other-taxes",
+      "what": "'The general VAT rate is 25% and applies to all supplies of goods and services not qualifying for another rate or an exemption' (silver 25/25); 'There are no customs duties on other products than agricultural products, foodstuffs, clothes, and textile products' - import duty 0 for gold and silver."
+    }
+  ]
+}

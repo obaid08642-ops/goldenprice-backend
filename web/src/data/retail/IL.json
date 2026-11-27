@@ -1,0 +1,33 @@
+{
+  "country": "IL",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT is 18% for 2025 (PwC Israel). Israel has no investment-gold VAT exemption, so gold bullion and jewellery are both taxed at the standard 18%; silver likewise. Customs duty on gold is not quantified on any primary page opened, so it is null. Dealer premiums: Israel Mint lists bars in USD but no same-day spot could be read on a primary page, so premiums/buyback are null.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Israel, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/israel/corporate/other-taxes",
+      "what": "States 'The 2025 current rate of VAT is 18%'; customs duty depends on tariff classification and no gold-specific rate is given, so importDutyPct is null."
+    }
+  ]
+}
