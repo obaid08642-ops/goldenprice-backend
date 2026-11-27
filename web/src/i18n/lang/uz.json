@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "bugun",
+  "updated": "Yangilangan: {t}",
+  "delayed": "Kechikish bilan",
+  "per": "{u} uchun",
+  "u_gram": "gramm",
+  "u_ounce": "unsiya",
+  "u_kilo": "kilogramm",
+  "u_tola": "tola",
+  "u_ton": "metrik tonna",
+  "u_barrel": "barrel",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "gallon",
+  "u_bushel": "bushel",
+  "u_lb": "funt",
+  "u_cwt": "sentner",
+  "u_coin": "tanga",
+  "u_point": "ball",
+  "global_vs_local": "Jahon va mahalliy narx",
+  "global_price": "Jahon narxi",
+  "local_estimate": "Mahalliy taxmin",
+  "est_retail": "Ishlov berish haqi bilan taxminiy chakana narx",
+  "est_note": "Faqat taxmin. Do‘konlar soliqlari, ishlov berish haqi va ustamasi bilan farq qiladi.",
+  "karat_title": "{a} karat bo‘yicha",
+  "karat": "Karat",
+  "purity": "Tozalik",
+  "price": "Narx",
+  "currencies_title": "{a} narxi boshqa valyutalarda",
+  "col_ounce": "Unsiyaga",
+  "col_gram": "Grammga",
+  "col_24h": "24 soat",
+  "col_7d": "7 kun",
+  "markets_title": "Metallar, energiya, qishloq xo‘jaligi va kripto",
+  "markets_sub": "{cur} da jonli narxlar",
+  "list_title": "Metallar, energiya, tovarlar va kriptovalyutalar narxlari: {country}",
+  "list_desc": "Oltin, kumush, platina, mis, neft, gaz, bug‘doy, kofe, fond indekslari, Bitcoin va boshqalar uchun jonli narxlar {cur} da.",
+  "alerts_title": "Narx ogohlantirishlari",
+  "alerts_desc": "Narx maqsadingizga yetganda telefoningizga yoki elektron pochtaga xabar oling.",
+  "alerts_cta": "Ogohlantirish yaratish",
+  "search_ph": "Masalan, {country} da {a} narxi…",
+  "search_btn": "Qidirish",
+  "r1d": "1K",
+  "r1w": "1H",
+  "r1m": "1O",
+  "r1y": "1Y",
+  "r5y": "5Y",
+  "rall": "Barchasi",
+  "geo_ask": "{country} narxlarini {cur} da ko‘rsatilsinmi?",
+  "geo_yes": "Ha, o‘zgartirish",
+  "geo_no": "Yo‘q, rahmat",
+  "footer_note": "Narxlar taxminiy bo‘lib, kechikishi mumkin. Investitsiya bo‘yicha maslahat emas.",
+  "about": "Biz haqimizda",
+  "privacy": "Maxfiylik siyosati",
+  "contact": "Aloqa",
+  "theme": "Mavzu",
+  "language": "Til",
+  "country": "Mamlakat",
+  "faq_title": "Ko‘p so‘raladigan savollar",
+  "q1": "Bugun {country} da {a} narxi qancha?",
+  "a1": "Bugun {country} da {a} narxi {u} uchun {p} {cur} ni tashkil etadi. Bu jahon spot narxi bo‘lib, eng so‘nggi valyuta kursida hisoblanadi va har bir necha daqiqada yangilanadi.",
+  "q2": "Nega mahalliy narx jahon narxidan farq qiladi?",
+  "a2": "Do‘konlar jahon spot narxiga ishlov berish haqi, soliqlar, import bojlari va diler ustamasini qo‘shadi, shuning uchun {country} dagi chakana narx odatda yuqoriroq bo‘ladi.",
+  "q3": "Narx qanchalik tez-tez yangilanadi?",
+  "a3": "Jonli bozor narxlari har bir necha daqiqada yangilanadi. Jonli oqimi bo‘lmagan narxlar qo‘lda yangilanadi va so‘nggi yangilanish vaqtini ko‘rsatadi.",
+  "title": "Bugun {country} da {a} narxi | {cur} da {u} uchun",
+  "desc": "{country} da {cur} dagi {a} jonli narxi: gramm, unsiya va kilogramm bo‘yicha, narx grafigi va jahon hamda mahalliy narx. Har bir necha daqiqada yangilanadi.",
+  "title_idx": "Bugun {a} indeksi | jonli qiymat va grafik",
+  "desc_idx": "{a} indeksining jonli qiymati, kunlik o‘zgarishi va narx grafigi. Har bir necha daqiqada yangilanadi.",
+  "history_note": "Tarix kunlik yopilish narxlari asosida tuzilgan.",
+  "unit_label": "Birlik",
+  "sample_note": "Namuna ma’lumotlari",
+  "nav_all": "Bozorlar",
+  "nav_rates": "Valyutalar",
+  "nav_calc": "Kalkulyatorlar",
+  "cat_precious": "Qimmatbaho metallar",
+  "cat_industrial": "Sanoat metallari",
+  "cat_energy": "Energiya",
+  "cat_agri": "Qishloq xo‘jaligi",
+  "cat_index": "Fond indekslari",
+  "cat_crypto": "Kripto",
+  "bars_title": "{a} quymalari va tangalari: {cur} da sotib olish va sotish narxi",
+  "bar_size": "Hajmi",
+  "bar_buy": "Dilerdan sotib olish",
+  "bar_sell": "Qaytarib sotish",
+  "bar_prem": "Spot narxdan ustama",
+  "bars_note": "Jahon narxi va odatdagi ustamaga asoslangan diler narxlari. Haqiqiy narxlar do‘kon va kunga qarab farq qiladi.",
+  "used_title": "Ishlatilgan va chiqindi {a}: {cur} da grammiga qaytarib sotib olish narxi",
+  "used_note": "Ishlatilgan zargarlik buyumlari odatda yangi narxdan past narxda qaytarib sotib olinadi. Bu odatiy taxminlar.",
+  "used_col": "Grammiga qaytarib sotib olish",
+  "rates_title": "{cur} ga nisbatan valyuta kurslari",
+  "rates_sub": "O‘rtacha bozor kurslari, har soatda yangilanadi",
+  "rates_desc": "Dunyoning asosiy valyutalarining {cur} ga nisbatan jonli kurslari va valyuta konvertori.",
+  "rates_page_title": "Valyuta kurslari va konverter: {country}",
+  "conv_title": "Valyuta konverteri",
+  "conv_amount": "Summa",
+  "conv_from": "Dan",
+  "conv_to": "Ga",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Oltin kalkulyatori va zakot kalkulyatori: {country}",
+  "calc_page_desc": "Oltiningiz qiymatini og‘irligi va karati bo‘yicha {cur} da hisoblang hamda bugungi narxlar bo‘yicha oltin va kumush zakotini tekshiring.",
+  "calc_title": "Oltin qiymati kalkulyatori",
+  "calc_weight": "Og‘irlik",
+  "calc_unit": "Birlik",
+  "calc_karat": "Karat",
+  "calc_value": "Taxminiy qiymat",
+  "calc_note": "Jahon narxiga asoslangan. Do‘konlar ishlatilgan oltin uchun bundan kam to‘laydi.",
+  "zakat_title": "Oltin va kumushdan zakot",
+  "zakat_nisab_gold": "Oltin nisobi (85 gramm)",
+  "zakat_nisab_silver": "Kumush nisobi (595 gramm)",
+  "zakat_gold_g": "Oltiningiz grammda (24 karatga teng)",
+  "zakat_silver_g": "Kumushingiz grammda",
+  "zakat_due": "To‘lanadigan zakot (2,5%)",
+  "zakat_note": "Zakot nisobdan oshgan, bir oy yil davomida saqlangan boylikdan to‘lanadi. Bu yo‘riqnoma; o‘z holatingiz bo‘yicha olimdan so‘rang.",
+  "zakat_below": "Nisobdan past: ushbu summadan zakot to‘lanmaydi.",
+  "related_title": "Mashhur qidiruvlar",
+  "retail_basis": "{n} ta mahalliy manbaga asoslangan, {d} tekshirilgan.",
+  "u_share": "aksiya",
+  "u_rate": "kurs",
+  "u_mbf": "1 000 fut taxta",
+  "cat_stock": "Aksiyalar",
+  "cat_forex": "Valyuta juftliklari",
+  "cat_construction": "Qurilish materiallari",
+  "perf_title": "Ko‘rsatkichlar",
+  "p_7d": "1 hafta",
+  "p_30d": "1 oy",
+  "p_90d": "3 oy",
+  "p_ytd": "Yil boshidan",
+  "p_1y": "1 yil",
+  "p_5y": "5 yil",
+  "range52": "52 haftalik oraliq",
+  "ath": "Ma’lumotlarimizdagi eng yuqori",
+  "atl": "Ma’lumotlarimizdagi eng past",
+  "since": "{d} dan boshlab tarix",
+  "about_title": "{a} haqida",
+  "drivers_title": "Narxga nima ta’sir qiladi",
+  "uses_title": "Nima uchun ishlatiladi",
+  "source_note": "Manba: {s}. Narxlar taxminiy bo‘lib, kechikishi mumkin.",
+  "about_stock": "{a} aksiyalari {c} da narxlanadi. Sahifada so‘nggi kechikkan narx, bugungi o‘zgarish va uzoqroq davrlardagi o‘zgarish, shuningdek, xuddi shu narx boshqa valyutalarda ko‘rsatiladi.",
+  "about_forex": "{a} birinchi valyutaning bir birligi ikkinchi valyutadan qancha sotib olishini ko‘rsatadi. Kurslar foiz stavkalari, inflyatsiya, savdo va ikki mamlakatning iqtisodiy yangiliklari bilan o‘zgaradi.",
+  "about_crypto": "{a} — kriptovalyuta. Uning narxini birjalarda kun bo‘yi savdo belgilaydi va u tez o‘zgarishi mumkin. Sahifada jonli narx, turli davrlardagi o‘zgarish va boshqa valyutalardagi narx ko‘rsatiladi.",
+  "about_commodity": "{a} — savdo tovari. Uning narxiga taklif, talab, ob-havo, valyutalar va yangiliklar ta’sir qiladi. Sahifada so‘nggi narx, turli davrlardagi o‘zgarish va boshqa valyutalardagi narx ko‘rsatiladi.",
+  "about_index": "{a} aksiyalar savatining ko‘rsatkichini o‘lchaydi. Qiymat indeks punktlarida ifodalanadi va uning kompaniyalari aksiyalari narxlari bilan birga o‘zgaradi.",
+  "tail_list_title": "Aksiyalar, kripto, valyuta juftliklari va boshqa tovarlar",
+  "tail_list_desc": "Jahon aksiyalari, qo‘shimcha kriptovalyutalar, valyuta juftliklari va qo‘shimcha tovarlarning jonli narxlari, grafiklar va ko‘rsatkichlar bilan.",
+  "tail_title": "Bugungi {a} narxi | jonli qiymat va grafik",
+  "tail_desc": "{a} ning jonli narxi, grafik va 1 hafta, 1 oy, 1 yil va undan ko‘proq davrdagi ko‘rsatkichlar bilan. Har bir necha daqiqada yangilanadi.",
+  "nav_dev": "Dasturchilar",
+  "nav_compare": "Solishtirish",
+  "terms": "Foydalanish shartlari",
+  "disclaimer": "Javobgarlikni cheklash",
+  "cookies": "Cookie-fayllar siyosati",
+  "developers": "Dasturchilar uchun API",
+  "alert_title": "Narx ogohlantirishini olish",
+  "alert_email": "Elektron pochtangiz",
+  "alert_target": "Maqsadli narx ({cur})",
+  "alert_above": "Yuqoriga o‘tadi",
+  "alert_below": "Pastga tushadi",
+  "alert_submit": "Ogohlantirish yaratish",
+  "alert_ok": "Ogohlantirish saqlandi. Narx maqsadingizdan o‘tganda sizga bir marta elektron pochta orqali xabar beramiz.",
+  "alert_err": "Ogohlantirishni saqlab bo‘lmadi. Elektron pochta va narxni tekshirib, qayta urinib ko‘ring.",
+  "alert_privacy": "Elektron pochtangizni faqat shu ogohlantirishni yuborish uchun ishlatamiz.",
+  "contact_title": "Bizga xabar yuboring",
+  "contact_name": "Ismingiz",
+  "contact_email": "Elektron pochtangiz",
+  "contact_msg": "Xabar",
+  "contact_send": "Yuborish",
+  "contact_ok": "Rahmat. Xabaringiz yuborildi.",
+  "contact_err": "Xabarni yuborib bo‘lmadi. Iltimos, keyinroq qayta urinib ko‘ring.",
+  "dev_title": "Bepul narx API",
+  "dev_desc": "Bizning narxlarimizdan o‘z ilovangiz yoki veb-saytingizda foydalaning. Bepul kalitlar kuniga 1 000 so‘rov bilan cheklangan. Iltimos, saytimizga havola bering.",
+  "dev_endpoints": "Endpointlar",
+  "dev_request": "Bepul API kalit olish",
+  "dev_email": "Elektron pochtangiz",
+  "dev_purpose": "Nima yaratmoqchisiz?",
+  "dev_get": "Kalit olish",
+  "dev_key": "API kalitingiz (hozir saqlang, u faqat bir marta ko‘rsatiladi)",
+  "dev_err": "Kalit yaratib bo‘lmadi. Elektron pochtani tekshirib, qayta urinib ko‘ring.",
+  "dev_usage": "Kalitni x-api-key sarlavhasida yuboring.",
+  "cmp_title": "Ikki aktivni solishtirish",
+  "cmp_a": "Birinchi aktiv",
+  "cmp_b": "Ikkinchi aktiv",
+  "cmp_ratio": "Nisbat (birinchisi ikkinchisiga bo‘lingan)",
+  "cmp_now": "Hozir",
+  "cmp_desc": "Istalgan ikki aktivni vaqt bo‘yicha nisbati bilan solishtiring, masalan, oltin va kumush nisbati.",
+  "cmp_page_title": "{country} da narxlar va nisbatlarni solishtirish",
+  "roi_title": "Foyda kalkulyatori",
+  "roi_buy": "Sotib olish narxi",
+  "roi_amount": "Miqdor",
+  "roi_now": "Joriy narx",
+  "roi_profit": "Foyda yoki zarar",
+  "roi_pct": "Daromadlilik",
+  "units_title": "Birliklar konverteri",
+  "units_value": "Qiymat",
+  "units_from": "Dan",
+  "units_to": "Ga",
+  "calc_tools_desc": "Oltin qiymati, zakot, foyda va birliklar uchun kalkulyatorlar.",
+  "nav_costs": "Xarajatlar",
+  "costs_title": "{country} da yashash qiymati: yoqilg‘i, elektr energiyasi va Big Mac narxlari",
+  "costs_desc": "{country} da {cur} da eng so‘nggi yoqilg‘i narxlari, uy xo‘jaligi elektr tarifi va Big Mac narxi, manbalari bilan.",
+  "fuel_h": "Yoqilg‘i narxlari",
+  "petrol95": "Benzin (95 oktan)",
+  "diesel": "Dizel",
+  "lpg": "LPG (avtogaz)",
+  "per_litre": "litriga",
+  "elec_h": "Uy xo‘jaligi elektr energiyasi",
+  "elec_note": "Barcha soliqlar bilan kiradigan uy xo‘jaligining kWh uchun o‘rtacha narxi",
+  "per_kwh": "kWh uchun",
+  "bigmac_h": "Big Mac narxi",
+  "bigmac_note": "{country} da bitta Big Mac, yashash qiymatini solishtirishning oddiy usuli",
+  "costs_asof": "Ma’lumotlar {date} holatiga ko‘ra",
+  "costs_source": "Manba: {src}",
+  "costs_note": "Bu ko‘rsatkichlar sekin o‘zgaradi, bir necha oyda bir marta yangilanadi va faqat e’lon qilingan manba mavjud bo‘lgan joylarda ko‘rsatiladi.",
+  "u_sheet": "varaq",
+  "u_m3": "kub metr",
+  "nav_coins": "Tangalar va birliklar",
+  "coins_title": "{country} da oltin tangalar va birliklar: oltin miqdori qiymati",
+  "coins_desc": "{country} da mashhur tangalar va mahalliy oltin birliklarining oltin miqdori qiymati, {cur} da, jonli oltin narxiga asoslangan.",
+  "coin_weight": "Og‘irlik",
+  "coin_fine": "Tozalik darajasi",
+  "coin_pure": "Sof oltin",
+  "coin_value": "Oltin qiymati",
+  "coins_note": "Faqat jonli spot narxdagi oltin miqdori. Diler narxlariga ustama, ishlov berish haqi va soliqlar kiradi, shuning uchun ular yuqoriroq bo‘ladi."
+ },
+ "assets": {
+  "gold": "Oltin",
+  "silver": "Kumush",
+  "platinum": "Platina",
+  "palladium": "Palladiy",
+  "copper": "Mis",
+  "aluminum": "Alyuminiy",
+  "nickel": "Nikel",
+  "zinc": "Rux",
+  "lead": "Qo‘rg‘oshin",
+  "tin": "Qalay",
+  "cobalt": "Kobalt",
+  "lithium": "Litiy",
+  "uranium": "Uran",
+  "iron-ore": "Temir rudasi",
+  "steel": "Po‘lat",
+  "wti-oil": "WTI xom neft",
+  "brent-oil": "Brent xom neft",
+  "natural-gas": "Tabiiy gaz",
+  "gasoline": "Benzin",
+  "heating-oil": "Isitish moyi",
+  "wheat": "Bug‘doy",
+  "corn": "Makkajo‘xori",
+  "soybeans": "Soya",
+  "rice": "Guruch",
+  "sugar": "Shakar",
+  "coffee": "Kofe",
+  "cocoa": "Kakao",
+  "cotton": "Paxta",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Soya moyi",
+  "soybean-meal": "Soya uni",
+  "oats": "Suli",
+  "orange-juice": "Apelsin sharbati",
+  "live-cattle": "Tirik mol",
+  "feeder-cattle": "Boqiladigan mol",
+  "lean-hogs": "Cho‘chqalar",
+  "milk": "Sut (III sinf)",
+  "lumber": "Yog‘och",
+  "coal": "Ko‘mir (Nyukasl)",
+  "tea": "Choy",
+  "palm-oil": "Palma moyi",
+  "coconut-oil": "Kokos moyi",
+  "sunflower-oil": "Kungaboqar moyi",
+  "rapeseed-oil": "Raps moyi",
+  "rubber": "Tabiiy kauchuk",
+  "urea": "Karbamid o‘g‘it",
+  "dap": "DAP o‘g‘it",
+  "potash": "Kaliy o‘g‘iti (kaliy xlorid)",
+  "phosphate-rock": "Fosforit",
+  "beef": "Mol go‘shti",
+  "chicken": "Tovuq go‘shti",
+  "banana": "Banan",
+  "orange": "Apelsin",
+  "fish-meal": "Baliq uni",
+  "plywood": "Fanera",
+  "sawnwood": "Arralangan yog‘och (Malayziya)"
+ },
+ "kw": {
+  "price": "narx",
+  "today": "bugun",
+  "live": "jonli",
+  "rate": "kurs",
+  "per_gram": "grammiga",
+  "ounce": "unsiya",
+  "bar": "quyma",
+  "used": "ishlatilgan",
+  "karat": "karat",
+  "chart": "grafik",
+  "convert": "konverter",
+  "calculator": "kalkulyator",
+  "zakat": "zakot"
+ },
+ "legal": {
+  "about": [
+   "{site} oltin, kumush, boshqa metallar, energiya, qishloq xo‘jaligi mahsulotlari, aksiyalar, indekslar, kriptovalyutalar va valyutalarning jonli narxlarini sizning valyutangizda, ko‘plab mamlakat va tillar uchun ko‘rsatadi.",
+   "Narxlar ochiq bozor ma’lumot manbalaridan olinadi va har bir necha daqiqada yangilanadi. Ba’zi narxlar ochiq sahifalardan yoki qo‘lda yangilanadi va manbasini ko‘rsatadi.",
+   "Mahalliy chakana taxminlar jahon narxiga odatiy soliqlar, ishlov berish haqi va diler ustamalarini qo‘shadi, manbalar va sana ko‘rsatiladi. Bular taxminlar, rasmiy narx takliflari emas.",
+   "Shuningdek, biz oltin qiymati, zakot, foyda va birliklar kalkulyatorlarini, valyuta konverterini va narx ogohlantirishlarini taklif qilamiz."
+  ],
+  "privacy": [
+   "Biz hisob yoki shaxsiy ma’lumotlarni so‘ramaymiz. Brauzeringizda faqat tilingiz, mamlakatingiz va mavzu tanlovini saqlaymiz.",
+   "Reklamalar, yoqilgan bo‘lsa, Google AdSense tomonidan taqdim etiladi, u mos reklamalarni ko‘rsatish uchun cookie-fayllardan foydalanishi mumkin. Buni Google reklama sozlamalarida boshqarishingiz mumkin.",
+   "Saytni yaxshilash uchun noma’lum, umumlashtirilgan tashrif statistikasi yig‘ilishi mumkin."
+  ],
+  "contact": [
+   "Savollar, tuzatishlar yoki hamkorlik so‘rovlari uchun: sayt ishga tushgach, ushbu sahifada e’lon qilinadigan aloqa manzilidan foydalaning.",
+   "Noto‘g‘ri narxni ko‘rsangiz, aktiv, mamlakat va to‘g‘ri qiymatni qayerda ko‘rganingizni xabar qiling."
+  ],
+  "terms": [
+   "{site} dan foydalanish orqali siz ushbu shartlarga rozilik bildirasiz. Sayt umumiy ma’lumot uchun taqdim etiladi.",
+   "Narxlar, grafiklar va taxminlar taxminiy bo‘lib, kechikishi yoki xato bo‘lishi mumkin va savdo yoki xarid uchun yagona asos sifatida ishlatilmasligi kerak.",
+   "Ma’lumotlarni ommaviy ravishda nusxalash yoki qayta sotish taqiqlanadi. Avtomatik kirish uchun bizning bepul API’dan foydalaning va saytni ko‘rsating.",
+   "Biz xizmatning istalgan qismini istalgan vaqtda o‘zgartirishimiz yoki to‘xtatishimiz mumkin va undan foydalanish natijasida yuzaga kelgan zararlar uchun javobgar emasmiz."
+  ],
+  "disclaimer": [
+   "{site} broker, bank yoki moliyaviy maslahatchi emas va investitsiya bo‘yicha maslahat bermaydi.",
+   "Mahalliy chakana taxminlar, quyma ustamalari va qaytarib sotib olish ko‘rsatkichlari ochiq manbalarga asoslangan taxminlardir. Do‘konlar farq qiladi; narxni har doim sotuvchi bilan tasdiqlang.",
+   "O‘tgan natijalar kelajakdagi natijalarni belgilamaydi. Metallar, aksiyalar va kriptovalyutalarga investitsiya qilish xavf bilan bog‘liq, shu jumladan investitsiya qilingan mablag‘ni yo‘qotish xavfi bor."
+  ],
+  "cookies": [
+   "Biz faqat tilingiz, mamlakatingiz va mavzuni eslab qolish uchun zarur bo‘lgan brauzer xotirasidan foydalanamiz.",
+   "Reklamalar, yoqilgan bo‘lsa, Google AdSense tomonidan taqdim etiladi, u mos reklamalarni ko‘rsatish uchun cookie-fayllarni o‘rnatishi mumkin. Buni Google reklama sozlamalarida boshqarishingiz mumkin.",
+   "Rozilik talab qilinadigan hududlardagi tashrifchilardan reklama cookie-fayllari ishlatilishidan oldin rozilik so‘raladi."
+  ],
+  "developers": [
+   "Bizning narx API’imiz kichik loyihalar uchun bepul. Quyida kalit yarating va uni x-api-key sarlavhasida yuboring.",
+   "Endpointlar: barcha narxlar va ko‘rsatkichlar uchun /v1/overview, tarix uchun /v1/chart/SYMBOL?days=365, valyuta kurslari uchun /v1/rates.",
+   "Bepul kalitlar kuniga 1 000 so‘rovga ruxsat beradi. Javoblar bir daqiqa keshlanadi, iltimos, bundan tezroq chaqirmang.",
+   "Narxlarimizni ko‘rsatganda, iltimos, saytni ko‘rsating."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Oltin eng keng tarqalgan qimmatbaho metall va an’anaviy qiymat saqlash vositasi. Uning narxi dunyo miqyosida troy unsiyasida, ko‘plab mahalliy bozorlarda esa grammda yoki tolada ko‘rsatiladi; zargarlik buyumlari 10K dan 24K gacha karatda sotiladi.",
+   "drivers": [
+    "Foiz stavkalari va AQSh dollari",
+    "Inflyatsiya va iqtisodiy yoki siyosiy noaniqlik",
+    "Markaziy banklar xaridlari va investitsion talab"
+   ],
+   "uses": [
+    "Zargarlik buyumlari va sovg‘alar",
+    "Investitsion quymalar va tangalar",
+    "Elektronika va stomatologiya"
+   ]
+  },
+  "silver": {
+   "about": "Kumush ham qimmatbaho, ham sanoat metalli. U troy unsiyasida narxlanadi va 999, 925 va 800 proba bilan quymalar, tangalar va zargarlik buyumlari ko‘rinishida sotiladi.",
+   "drivers": [
+    "Quyosh panellari va elektronikadan sanoat talabi",
+    "Oltin narxi va AQSh dollari",
+    "Quymalar va tangalarga investitsion talab"
+   ],
+   "uses": [
+    "Zargarlik buyumlari va kumush idishlar",
+    "Quyosh panellari va elektronika",
+    "Investitsion quymalar va tangalar"
+   ]
+  },
+  "platinum": {
+   "about": "Platina kam uchraydigan, zich qimmatbaho metall bo‘lib, ba’zi davrlarda og‘irligi bo‘yicha oltindan qimmatroq bo‘ladi. Uning narxi troy unsiyasida ko‘rsatiladi.",
+   "drivers": [
+    "Avtomobil katalizatorlaridan talab",
+    "Asosan Janubiy Afrika va Rossiyadan kon ta’minoti",
+    "Investitsion talab va oltin narxi"
+   ],
+   "uses": [
+    "Katalizatorlar",
+    "Zargarlik buyumlari",
+    "Kimyo sanoati va vodorod texnologiyalari"
+   ]
+  },
+  "palladium": {
+   "about": "Palladiy asosan benzinli avtomobillarning katalizatorlarida ishlatiladigan kam uchraydigan qimmatbaho metaldir. Uning narxi troy unsiyasida ko‘rsatiladi.",
+   "drivers": [
+    "Avtomobil ishlab chiqarish va emissiya qoidalari",
+    "Rossiya va Janubiy Afrikadan kon ta’minoti",
+    "Platina bilan almashtirish"
+   ],
+   "uses": [
+    "Katalizatorlar",
+    "Elektronika",
+    "Stomatologiya va zargarlik buyumlari"
+   ]
+  },
+  "copper": {
+   "about": "Mis sanoat metallarining asosiy ko‘rsatkichi hisoblanadi. Uning narxi metrik tonnada ko‘rsatiladi va jahon iqtisodiy holatining belgisi sifatida kuzatiladi.",
+   "drivers": [
+    "Qurilish va ishlab chiqarish talabi, ayniqsa Xitoyda",
+    "Kon ta’minoti va zaxiralar",
+    "AQSh dollari va savdo siyosati"
+   ],
+   "uses": [
+    "Elektr simlari va elektr tarmoqlari",
+    "Qurilish va santexnika",
+    "Elektromobillar va qayta tiklanadigan energiya"
+   ]
+  },
+  "aluminum": {
+   "about": "Alyuminiy boksitdan katta miqdordagi elektr energiyasi yordamida ishlab chiqariladigan yengil va keng qo‘llaniladigan metaldir. Uning narxi metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Eritish uchun energiya xarajatlari",
+    "Avtomobil, qadoqlash va qurilishdan talab",
+    "Xitoyda ishlab chiqarish va savdo bojlari"
+   ],
+   "uses": [
+    "Qadoqlash va banka",
+    "Avtomobil va samolyotlar",
+    "Qurilish"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel zanglamas po‘lat va batareyalar ishlab chiqarishda ishlatiladigan metaldir. Uning narxi London metall birjasida metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Zanglamas po‘latga talab",
+    "Elektromobil batareyalariga talab",
+    "Indoneziya va Filippindan ta’minot"
+   ],
+   "uses": [
+    "Zanglamas po‘lat",
+    "Batareyalar",
+    "Qotishmalar"
+   ]
+  },
+  "zinc": {
+   "about": "Rux asosan po‘latni zanglashdan himoya qilish uchun ishlatiladi. Uning narxi metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Po‘lat va qurilishga talab",
+    "Kon ta’minoti va eritish zavodlari chiqarishi",
+    "Yevropa va Xitoydagi energiya narxlari"
+   ],
+   "uses": [
+    "Po‘latni ruxlash",
+    "Guruch va qotishmalar",
+    "Batareyalar"
+   ]
+  },
+  "lead": {
+   "about": "Qo‘rg‘oshin asosan avtomobil batareyalarida ishlatiladigan zich metaldir. Uning narxi metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Avtomobil va batareyalarga talab",
+    "Qayta ishlashdan olinadigan ta’minot",
+    "Kon chiqarishi va atrof-muhit qoidalari"
+   ],
+   "uses": [
+    "Avtomobil batareyalari",
+    "Radiatsiyadan himoya",
+    "Kabellar va qotishmalar"
+   ]
+  },
+  "tin": {
+   "about": "Qalay asosan elektronikada lehim sifatida ishlatiladigan kam uchraydigan metaldir. Uning narxi metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Elektronika va chiplarga talab",
+    "Indoneziya, Myanma va Peru kon ta’minoti",
+    "Zaxiralar va savdo qoidalari"
+   ],
+   "uses": [
+    "Elektronika uchun lehim",
+    "Oziq-ovqat banka idishlari",
+    "Kimyoviy moddalar"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt asosan Kongo Demokratik Respublikasida qazib olinadigan batareya metalidir. Uning narxi metrik tonnada ko‘rsatiladi.",
+   "drivers": [
+    "Elektromobil va batareyalarga talab",
+    "Kongo kon ta’minoti va eksport qoidalari",
+    "Batareya kimyosidagi o‘zgarishlar"
+   ],
+   "uses": [
+    "Batareyalar",
+    "Superqotishmalar",
+    "Magnitlar"
+   ]
+  },
+  "lithium": {
+   "about": "Litiy karbonati qayta zaryadlanadigan batareyalarning asosiy xom ashyosidir. Ko‘rsatilgan narx Xitoydagi batareya sinfidagi karbonat uchun, AQSh dollarida metrik tonnaga aylantirilgan.",
+   "drivers": [
+    "Elektromobil sotuvlari",
+    "Yangi konlar va qayta ishlash zavodlari ta’minoti",
+    "Batareyalar bo‘yicha hukumat siyosati"
+   ],
+   "uses": [
+    "Elektromobil batareyalari",
+    "Telefonlar va noutbuklar",
+    "Energiyani saqlash"
+   ]
+  },
+  "uranium": {
+   "about": "Uran atom elektr stansiyalarining yoqilg‘isi hisoblanadi. Uning narxi AQSh dollarida funt U3O8 uchun ko‘rsatiladi.",
+   "drivers": [
+    "Atom stansiyalarini qayta ishga tushirish va yangi reaktorlar",
+    "Asosan Qozog‘iston va Kanadadan kon chiqarishi",
+    "Hukumat zaxiralari va sanksiyalar"
+   ],
+   "uses": [
+    "Atom energiyasi",
+    "Tibbiy izotoplar"
+   ]
+  },
+  "iron-ore": {
+   "about": "Temir rudasi po‘latning asosiy xom ashyosidir. Ko‘rsatilgan narx Xitoyga yetkazilgan, 62% temir tarkibli ruda uchun, metrik tonnaga.",
+   "drivers": [
+    "Xitoy po‘lat ishlab chiqarishi",
+    "Avstraliya va Braziliyadan ta’minot",
+    "Ko‘chmas mulk va infratuzilma xarajatlari"
+   ],
+   "uses": [
+    "Po‘lat ishlab chiqarish"
+   ]
+  },
+  "steel": {
+   "about": "Po‘lat deyarli barcha sanoat tarmoqlarida ishlatiladigan temir qotishmasidir. Ko‘rsatilgan narx Xitoydagi armatura po‘lat uchun, AQSh dollarida metrik tonnaga aylantirilgan.",
+   "drivers": [
+    "Qurilishga talab",
+    "Temir rudasi va koks ko‘mir xarajatlari",
+    "Hukumatning ishlab chiqarish cheklovlari"
+   ],
+   "uses": [
+    "Binolar va ko‘priklar",
+    "Avtomobil va mashinalar"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Issiq prokatlangan po‘lat rulon ishlab chiqarishda ishlatiladigan yassi po‘lat mahsulotidir. Ko‘rsatilgan narx AQShning Midwest hududiga yetkazib berish uchun metrik tonnaga.",
+   "drivers": [
+    "AQShda avtomobil va qurilishdan talab",
+    "Import bojlari va raqobat",
+    "Xom ashyo va energiya xarajatlari"
+   ],
+   "uses": [
+    "Avtomobil va maishiy texnika",
+    "Quvurlar va qurilish"
+   ]
+  },
+  "lumber": {
+   "about": "Yog‘och fyuchers kelajakdagi narxlarni kuzatadi, uy qurishda ishlatiladigan yumshoq yog‘och narxi 1 000 fut taxta uchun ko‘rsatiladi.",
+   "drivers": [
+    "Uy qurilishi boshlanishi va ipoteka stavkalari",
+    "Arra zavodlari chiqarishi va o‘rmon yong‘inlari",
+    "AQSh va Kanada o‘rtasidagi savdo bojlari"
+   ],
+   "uses": [
+    "Uy karkasi",
+    "Mebel va qadoqlash"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI AQSh xom neftining asosiy ko‘rsatkichidir. Narxi barrelda ko‘rsatiladi va Oklahoma shtatidagi Kushingda yetkazib beriladi.",
+   "drivers": [
+    "OPEC va AQSh ishlab chiqarish qarorlari",
+    "Jahon iqtisodiy o‘sishi",
+    "Zaxiralar, geosiyosat va AQSh dollari"
+   ],
+   "uses": [
+    "Benzin, dizel va aviatsiya yoqilg‘isi",
+    "Plastmassa va kimyoviy moddalar"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent xom neft bo‘yicha jahon ko‘rsatkichidir. Narxi barrelda ko‘rsatiladi va AQShdan tashqarida savdo qilinadigan neftning ko‘p qismi narxini belgilaydi.",
+   "drivers": [
+    "OPEC+ ishlab chiqarish qarorlari",
+    "Jahon talabi, ayniqsa Xitoy va Hindistondan",
+    "Ishlab chiqaruvchi hududlardagi nizolar va sanksiyalar"
+   ],
+   "uses": [
+    "Benzin, dizel va aviatsiya yoqilg‘isi",
+    "Plastmassa va kimyoviy moddalar"
+   ]
+  },
+  "natural-gas": {
+   "about": "Tabiiy gaz bu yerda AQShdagi Henry Hub narxi bo‘yicha MMBtu uchun ko‘rsatilgan. U isitish, elektr energiyasi ishlab chiqarish va sanoatda ishlatiladi.",
+   "drivers": [
+    "Ob-havo va isitishga talab",
+    "Zaxira darajasi va ishlab chiqarish",
+    "Suyultirilgan tabiiy gaz eksporti"
+   ],
+   "uses": [
+    "Elektr energiyasi ishlab chiqarish",
+    "Uy isitish va pishirish",
+    "O‘g‘itlar va kimyoviy moddalar"
+   ]
+  },
+  "gasoline": {
+   "about": "Benzin fyuchers chakana benzin narxlarini AQSh dollarida gallon uchun kuzatadi.",
+   "drivers": [
+    "Xom neft narxi",
+    "Neftni qayta ishlash hajmi va haydash mavsumi",
+    "Zaxiralar va qoidalar"
+   ],
+   "uses": [
+    "Avtomobil yoqilg‘isi"
+   ]
+  },
+  "heating-oil": {
+   "about": "Isitish moyi fyuchers ulgurji dizel va isitish yoqilg‘isi narxlarini AQSh dollarida gallon uchun kuzatadi.",
+   "drivers": [
+    "Xom neft narxi",
+    "Qishki ob-havo",
+    "Yuk mashinalari va sanoatdan dizelga talab"
+   ],
+   "uses": [
+    "Uy isitish",
+    "Dizel yoqilg‘isi"
+   ]
+  },
+  "wheat": {
+   "about": "Bug‘doy dunyodagi asosiy oziq-ovqat donlaridan biri. Narxi Chikago birjasida bushelda ko‘rsatiladi.",
+   "drivers": [
+    "Asosiy yetishtirish hududlaridagi ob-havo",
+    "Rossiya, Ukraina, AQSh va Yevropa Ittifoqidan eksport",
+    "Zaxiralar, energiya narxlari va AQSh dollari"
+   ],
+   "uses": [
+    "Non, makaron va un",
+    "Chorvachilik uchun yem"
+   ]
+  },
+  "corn": {
+   "about": "Makkajo‘xori asosiy oziq-ovqat va yem donidir hamda etanol manbai. Narxi Chikago birjasida bushelda ko‘rsatiladi.",
+   "drivers": [
+    "AQSh va Braziliya hosili",
+    "Etanol va chorva yemiga talab",
+    "Ob-havo va eksport"
+   ],
+   "uses": [
+    "Chorva yemi",
+    "Etanol yoqilg‘isi",
+    "Oziq-ovqat va sirop"
+   ]
+  },
+  "soybeans": {
+   "about": "Soya moy va unga qayta ishlanadi. Narxi Chikago birjasida bushelda ko‘rsatiladi.",
+   "drivers": [
+    "AQSh, Braziliya va Argentina hosili",
+    "Xitoy import talabi",
+    "Biyoyoqilg‘i siyosati"
+   ],
+   "uses": [
+    "Oshxona moyi",
+    "Chorva yemi",
+    "Biodizel"
+   ]
+  },
+  "rice": {
+   "about": "Qayta ishlanmagan guruch milliardlab odamning asosiy oziq-ovqatidir. Narxi Chikago birjasida sentnerda ko‘rsatiladi.",
+   "drivers": [
+    "Osiyodagi musson va hosil sharoitlari",
+    "Hindiston, Tailand va Vyetnam eksport qoidalari",
+    "Zaxiralar va oziq-ovqat narxlari"
+   ],
+   "uses": [
+    "Oziq-ovqat"
+   ]
+  },
+  "sugar": {
+   "about": "Xom shakar fyuchers shakarning jahon narxini kuzatadi, AQSh dollarida funt uchun ko‘rsatiladi.",
+   "drivers": [
+    "Braziliya va Hindistondagi qamish hosili",
+    "Braziliyada etanolga talab",
+    "Ob-havo va valyutalar"
+   ],
+   "uses": [
+    "Oziq-ovqat va ichimliklar",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Arabika kofe fyuchers kofe donlarining jahon narxini kuzatadi, AQSh dollarida funt uchun ko‘rsatiladi.",
+   "drivers": [
+    "Braziliya va Kolumbiyadagi ob-havo",
+    "Zaxiralar va eksport",
+    "Valyutalar va talab"
+   ],
+   "uses": [
+    "Kofe ichimliklari"
+   ]
+  },
+  "cocoa": {
+   "about": "Kakao fyuchers kakao donlari narxini kuzatadi, AQSh dollarida metrik tonna uchun ko‘rsatiladi.",
+   "drivers": [
+    "Kot-d’Ivuar va Ganadagi hosil",
+    "Kasalliklar va ob-havo",
+    "Shokolad talabi"
+   ],
+   "uses": [
+    "Shokolad va shirinliklar",
+    "Kosmetika"
+   ]
+  },
+  "cotton": {
+   "about": "Paxta fyuchers xom paxtaning jahon narxini kuzatadi, AQSh dollarida funt uchun ko‘rsatiladi.",
+   "drivers": [
+    "AQSh, Hindiston va Xitoydagi ob-havo",
+    "To‘qimachilik talabi",
+    "Neft narxlari va valyutalar"
+   ],
+   "uses": [
+    "Kiyim-kechak va to‘qimachilik"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin birinchi va eng yirik kriptovalyuta. U birjalarda kun bo‘yi savdo qilinadi va uning taklifi 21 million tanga bilan cheklangan.",
+   "drivers": [
+    "Investorlar talabi va ETF oqimlari",
+    "Foiz stavkalari va risk ishtiyoqi",
+    "Tartibga solish va yangiliklar"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum aqlli shartnomalar va ilovalar uchun blokcheyn bo‘lib, uning tangasi ether ikkinchi yirik kriptovalyuta hisoblanadi.",
+   "drivers": [
+    "Ethereum ilovalaridan foydalanish",
+    "Tarmoq yangilanishlari va to‘lovlar",
+    "Bozor kayfiyati"
+   ]
+  },
+  "bnb": {
+   "about": "BNB — BNB Chain va Binance birjasi ekotizimining tangasi.",
+   "drivers": [
+    "Birja faolligi va to‘lovlar",
+    "Tokenlarni yoqish",
+    "Tartibga solish"
+   ]
+  },
+  "xrp": {
+   "about": "XRP — XRP Ledger’da tez xalqaro to‘lovlar uchun ishlatiladigan kriptovalyuta.",
+   "drivers": [
+    "Sud va tartibga solish yangiliklari",
+    "Bank va to‘lov hamkorliklari",
+    "Bozor kayfiyati"
+   ]
+  },
+  "solana": {
+   "about": "Solana ilovalar va to‘lovlar uchun tez blokcheyn bo‘lib, SOL uning tangasi hisoblanadi.",
+   "drivers": [
+    "Ilova va token faolligi",
+    "Tarmoq ishonchliligi",
+    "Bozor kayfiyati"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano proof-of-stake blokcheyni bo‘lib, ADA uning tangasi hisoblanadi.",
+   "drivers": [
+    "Rivojlanish jarayoni",
+    "Staking",
+    "Bozor kayfiyati"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin hazil tangasi sifatida boshlangan va eng ko‘p savdo qilinadigan kriptovalyutalardan biriga aylangan.",
+   "drivers": [
+    "Ijtimoiy tarmoqlardagi e’tibor",
+    "Bozor kayfiyati",
+    "To‘lovlarda qabul qilinishi"
+   ]
+  },
+  "tron": {
+   "about": "TRON stablecoin o‘tkazmalari uchun keng qo‘llaniladigan blokcheyn bo‘lib, TRX uning tangasi hisoblanadi.",
+   "drivers": [
+    "Stablecoin o‘tkazmalari faolligi",
+    "Tarmoq to‘lovlari",
+    "Bozor kayfiyati"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot ko‘plab blokcheynlarni birlashtiradi, DOT uning tangasi hisoblanadi.",
+   "drivers": [
+    "Tarmoq rivojlanishi",
+    "Staking",
+    "Bozor kayfiyati"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink blokcheynlarga real dunyo ma’lumotlarini yetkazib beradi, LINK uning tangasi hisoblanadi.",
+   "drivers": [
+    "Boshqa ilovalar tomonidan foydalanish",
+    "Hamkorliklar",
+    "Bozor kayfiyati"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin eng qadimgi kriptovalyutalardan biri bo‘lib, Bitcoin’dan tezroq to‘lovlar uchun yaratilgan.",
+   "drivers": [
+    "Bitcoin narxi",
+    "To‘lovlarda qabul qilinishi",
+    "Bozor kayfiyati"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche tez blokcheyn platformasi bo‘lib, AVAX uning tangasi hisoblanadi.",
+   "drivers": [
+    "Ilovalar faolligi",
+    "Tarmoq yangilanishlari",
+    "Bozor kayfiyati"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 AQShdagi 500 ta yirik kompaniyani kuzatadi va AQSh aksiyalar bozorining asosiy ko‘rsatkichi hisoblanadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite Nasdaqda ro‘yxatga olingan minglab aksiyalarni kuzatadi, texnologiya kompaniyalariga katta vazn beriladi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average AQShdagi 30 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 Londonda ro‘yxatga olingan 100 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "dax": {
+   "about": "DAX Frankfurtda ro‘yxatga olingan 40 ta yirik nemis kompaniyasini kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 Parijda ro‘yxatga olingan 40 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 Tokioda ro‘yxatga olingan 225 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng indeksi Gonkongda ro‘yxatga olingan yirik kompaniyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite Shanxay fond birjasida ro‘yxatga olingan barcha aksiyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 Hindistonning milliy fond birjasida ro‘yxatga olingan 50 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex Bombey fond birjasida ro‘yxatga olingan 30 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 Misr fond birjasidagi eng faol 30 ta kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Index Saudiya Arabistoni fond birjasida ro‘yxatga olingan barcha kompaniyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 Istanbul fond birjasidagi 100 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa Braziliyaning B3 birjasidagi asosiy kompaniyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 Avstraliya birjasidagi 200 ta yirik kompaniyani kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite Toronto fond birjasidagi asosiy kompaniyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI Koreya birjasida ro‘yxatga olingan barcha oddiy aksiyalarni kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 yevrohudud 50 ta yirik kompaniyasini kuzatadi.",
+   "drivers": [
+    "Kompaniyalar daromadi",
+    "Foiz stavkalari va inflyatsiya",
+    "Iqtisodiy va siyosiy yangiliklar"
+   ]
+  }
+ }
+}
