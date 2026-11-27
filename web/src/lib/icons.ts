@@ -2,4 +2,4 @@
 const BY_SLUG: Record<string, string> = { gold: "coin", silver: "money_bag", platinum: "gem_stone", palladium: "gem_stone", gasoline: "fuel_pump", "natural-gas": "electric_plug", "heating-oil": "fuel_pump", "brent-oil": "oil_drum", "wti-oil": "oil_drum", bitcoin: "coin", ethereum: "gem_stone", steel: "hammer_and_wrench", "steel-hrc": "hammer_and_wrench", lumber: "package", plywood: "package", sawnwood: "package" };
 const BY_KIND: Record<string, string> = { precious: "coin", industrial: "gear", energy: "oil_drum", agri: "sheaf_of_rice", crypto: "rocket", index: "bar_chart", stock: "chart_increasing", forex: "dollar_banknote", construction: "hammer_and_wrench" };
 export const iconFor = (a: { slug: string; kind: string }) => `/emoji/${BY_SLUG[a.slug] ?? BY_KIND[a.kind] ?? "package"}.png`;
-export const iconHtml = (a: { slug: string; kind: string }) => `<i class="ic3"><img src="${iconFor(a)}" alt="" width="28" height="28" loading="lazy" decoding="async"></i>`;
+export const iconHtml = (a: { slug: string; kind: string }) => `<i class="ic3" data-k="${a.kind}"><img src="${iconFor(a)}" alt="" width="28" height="28" loading="lazy" decoding="async"></i>`;
