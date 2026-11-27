@@ -2,17 +2,13 @@
   "country": "KR",
   "tier": 1,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 24,
   "gold": {
     "vatJewelryPct": 10,
     "vatBullionPct": 10,
     "importDutyPct": 3,
-    "makingPct": {
-      "typical": 20,
-      "min": 15,
-      "max": 25
-    },
+    "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": {
       "typical": 1.8
@@ -22,15 +18,15 @@
     }
   },
   "silver": {
-    "vatJewelryPct": 10,
-    "vatBullionPct": 10,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 10% on physical bars/coins and jewellery; KRX trades VAT-free, 10% on withdrawal. Duty 3% basic/MFN (Korea Customs; UNI-PASS HS 7108.13); 0% is FTA-origin only. Buyback 1.8% and used 3.8% are Korea Gold Exchange prices vs own sell price, VAT-excl., 27 Nov 2026; VAT-inclusive retail spread about 14%. Segongbi is usually flat per piece; % range is trade-average for simple pieces.",
+  "notes": "VAT 10% on physical bars/coins and jewellery; KRX trades VAT-free, 10% on withdrawal (Korea Customs release). Duty 3% basic/MFN (Customs; UNI-PASS HS 7108.13); 0% is FTA-origin only. Buyback 1.8% and used 3.8% are Korea Gold Exchange prices vs own sell price, VAT-excl., 27 Nov 2026; VAT-inclusive retail spread about 14%. Making (segongbi) % removed in round 1 (calculator-site support).",
   "sources": [
     {
       "name": "Corgano - VAT on Gold in South Korea (citing KRX/NTS)",
@@ -51,11 +47,6 @@
       "name": "Korea Gold Exchange (Geumjjoki head store) - buy/sell prices",
       "url": "https://xn--jj0b359bckc.com/mokdong-gold-buying",
       "what": "Read 2026-11-28: prices 27 Nov 2026 VAT-excl.: sell 613,000 KRW/don; bar buyback 602,000 (-1.8%), 24K ring 590,000 (-3.8%)"
-    },
-    {
-      "name": "DACalc - Gold craft cost (segongbi), industry data",
-      "url": "https://www.dacalc.com/kr/gold-craft-cost/",
-      "what": "Read 2026-11-28: segongbi usually flat per piece; as % of metal value simple rings 15-25%, necklaces 20-35% (trade averages)"
     }
   ]
 }

@@ -1,22 +1,16 @@
 {
   "country": "PH",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 21,
   "gold": {
     "vatJewelryPct": 12,
     "vatBullionPct": 12,
-    "importDutyPct": 10,
-    "makingPct": {
-      "typical": 8,
-      "min": 6,
-      "max": 10
-    },
+    "importDutyPct": null,
+    "makingPct": null,
     "barPremiumPct": {},
-    "barBuybackDiscountPct": {
-      "typical": 10
-    },
+    "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
   "silver": {
@@ -28,7 +22,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 12% on full price, bars and jewellery; no retail exemption (relief only for SSM/trader sales to BSP, RA 11256). Jewellery also has 20% excise (NIRC Sec.150). Duty 10% is MFN for gold jewellery per Tariff Finder reports; bullion duty unverified (3% lead), hence low. Bar buyback 10%: Cebuana pays 90% of current price (secondary report). Making is usually flat per-piece labour, not %.",
+  "notes": "VAT 12% on full price, bars and jewellery; no retail exemption (relief only for SSM/trader sales to BSP, RA 11256; BIR RR 4-2020). Jewellery also has 20% excise (NIRC Sec.150). Import duty, making and bar buyback % removed in review round 1: duty rested on Tariff Finder reports, making on guide pages, buyback on a blog report of the Cebuana programme. 21K most traded.",
   "sources": [
     {
       "name": "BIR Revenue Regulations No. 4-2020 (RA 11256 IRR)",
@@ -39,21 +33,6 @@
       "name": "NIRC Title VI Ch. VI (Chan Robles full statutory text)",
       "url": "https://chanrobles.com/legal6title28.htm",
       "what": "Read 2026-11-27: Sec.150 20% excise on jewellery and goods made of/ornamented with precious metals, on wholesale/import value"
-    },
-    {
-      "name": "Corgano - VAT on Gold in the Philippines (citing PwC/BIR)",
-      "url": "https://goldprice.corgano.com/vat-on-gold/philippines",
-      "what": "Read 2026-11-27: 12% VAT on full price for bars/coins and jewellery, no investment-gold exemption"
-    },
-    {
-      "name": "Saudi Life Guide - Gold import to Philippines 2026 (citing Tariff Commission Finder/BOC)",
-      "url": "https://saudilifeguide.com/how-much-gold-can-i-bring-to-the-philippines/",
-      "what": "Read 2026-11-27: gold jewellery duty 10% MFN 2026 plus 12% import VAT; bar/coin rate not confirmed"
-    },
-    {
-      "name": "Shopgirl Jen - Cebuana Lhuillier Gold Buyback Program",
-      "url": "http://www.shopgirljen.com/2025/06/cebuana-lhuilliers-gold-buyback-program.html",
-      "what": "Read 2026-11-28: Cebuana buyback programme pays 90% of the current gold price in cash for its gold bars (10% discount)"
     }
   ]
 }
