@@ -1,47 +1,33 @@
 {
   "country": "NP",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
-  "confidence": "medium",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
   "defaultKarat": 24,
   "gold": {
-    "vatJewelryPct": 0,
-    "vatBullionPct": 0,
-    "importDutyPct": 20,
-    "makingPct": {
-      "typical": 9,
-      "min": 6,
-      "max": 15
-    },
-    "barPremiumPct": {},
-    "barBuybackDiscountPct": null,
-    "usedGoldDiscountPct": null
-  },
-  "silver": {
-    "vatJewelryPct": 0,
-    "vatBullionPct": 0,
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Gold, silver and jewellery VAT-exempt (VAT Act 2052 Sch.1); making also exempt from FY2083/84. Customs 20% (Tariff 2026/27 HS 7108), inside FENEGOSIDA rate. 2% luxury fee replaced by 0.5% skill fee. Making 6-12% plain, guideline up to 15%. No bar-by-size list or reliable buyback/used % published, so null.",
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "The daily gold/silver fix is set by FENEGOSIDA and published on its own site; the fix embeds customs duty and taxes. The duty %, VAT exemption and making % previously cited came from guide and news pages and were removed in review round 1 pending a primary tariff/VAT page. No bar-by-size list or buyback % published.",
   "sources": [
     {
-      "name": "CareerKYT - Gold Making Charge in Nepal: Jarti, VAT and Your Bill",
-      "url": "https://careerkyt.com/guides/gold-making-charge-nepal/",
-      "what": "Read 2026-11-27: VAT 0% on gold/silver/jewellery and (from 2083/84) making charge; customs 20% HS 7108; 0.5% skill fee; making 6-12% plain, guideline up to 15%; no reliable buyback figure"
-    },
-    {
-      "name": "Digital Solution Nepal - Gold Price in Nepal: Tihar Guide 2083",
-      "url": "https://digitalsolutionnepal.com/gold-silver-price-nepal-tihar-buying-guide/",
-      "what": "Read 2026-11-27: corroborates customs 20% (up from 10%), VAT exempt, luxury tax removed, 0.5% fee; most ornaments 24K, 22K for heavier/daily wear"
-    },
-    {
-      "name": "ShareSansar - Gold Price Rises, 27 Nov 2026",
-      "url": "https://www.sharesansar.com/newsdetail/gold-price-rises-by-3300-in-tola-silver-by-rs-120-2026-11-27",
-      "what": "Read 2026-11-27: FENEGOSIDA hallmark gold Rs 246,100/tola, tejabi Rs 245,400/tola, silver Rs 3,195/tola on 2026-11-27"
+      "name": "FENEGOSIDA - Federation of Nepal Gold and Silver Dealers' Association (official site)",
+      "url": "https://www.fenegosida.org/graph",
+      "what": "Read 2026-11-28: the federation's own site publishes its official daily gold and silver fix (per tola and per 10g); the fix is the market rate for Nepal."
     }
   ]
 }

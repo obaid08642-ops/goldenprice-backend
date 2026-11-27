@@ -1,18 +1,16 @@
 {
   "country": "ID",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 24,
   "gold": {
     "vatJewelryPct": 1.65,
     "vatBullionPct": 0,
-    "importDutyPct": 5,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
-    "barBuybackDiscountPct": {
-      "typical": 15.47
-    },
+    "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
   "silver": {
@@ -24,7 +22,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "PMK 48/2023: jewellery VAT 1.65% to end consumer (1.1% other cases); certified 99.99% bars VAT-exempt (PP 49/2022). Duty 5% semi-finished/ready bars, 0% cast - needs tariff confirmation, hence low. Antam buyback 15.47% calc. for 1g (sell 2,501,000 vs buyback 2,114,000 Rp/g, 27 Nov 2026). Making not sourced, null. No spot verified, so no bar premium claimed.",
+  "notes": "PMK 48/2023: jewellery VAT 1.65% to end consumer (1.1% other cases); certified 99.99% bars VAT-exempt (PP 49/2022). Import duty and the Antam buyback % were removed in review round 1 (news-only support); see the ID upgrade PR for figures re-based on Antam's own price list. Making not sourced, null.",
   "sources": [
     {
       "name": "TaxPrime - Tax Update PMK 48/PMK.03/2023 on gold jewellery and bullion",
@@ -35,16 +33,6 @@
       "name": "MUC Consulting - Government Slashes Gold Tax, 2023-05-09",
       "url": "https://muc.co.id/en/article/releasing-new-rules-government-slashes-gold-tax?from=fb&",
       "what": "Read 2026-11-27: corroborates PMK 48/2023 jewellery VAT rates and bullion VAT-not-collected treatment"
-    },
-    {
-      "name": "ANTARA via Jawawa - Antam gold price, 27 Nov 2026",
-      "url": "https://jawawa.id/newsitem/antam-gold-holds-steady-at-rp2-501-million-per-gram-on-friday-buyback-price-edges-up-1795747991",
-      "what": "Read 2026-11-27: Antam Logam Mulia list 27 Nov 2026: 1g Rp 2,501,000, 1000g Rp 2,441,600,000; buyback Rp 2,114,000/g flat; buyback discount for 1g = 15.47% (calculated)"
-    },
-    {
-      "name": "Indonesia Business Post - Gold import duty classifications, 2023-05-09",
-      "url": "https://indonesiabusinesspost.com/816/Politics/corruption-in-gold-imports-customs-officials-accused-of-costing-the-state-trillions-in-losses",
-      "what": "Read 2026-11-27: HS 7108.12.10 cast bars 0%, HS 7108.12.90/7108.13/7115.90.10 at 5%; unnamed-source report, flagged for primary tariff confirmation"
     }
   ]
 }
