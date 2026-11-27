@@ -1,0 +1,33 @@
+{
+ "country": "IQ",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": 0,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Iraq has no VAT; sales tax applies only to listed items (alcohol, tobacco, cars, travel tickets, telecom), not gold. Gold is traded in mithqal (about 5 g) and 21K is popular. Dealer data not found.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Iraq",
+   "url": "https://taxsummaries.pwc.com/iraq/corporate/other-taxes",
+   "what": "No VAT; sales-tax list (reviewed 24 Jun 2026) does not include gold or jewelry."
+  }
+ ]
+}

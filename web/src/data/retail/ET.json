@@ -1,0 +1,33 @@
+{
+ "country": "ET",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Capital Ethiopia: retail 24K ~ETB 29,900/g incl. taxes vs NBE official ~19,960 (2025-10-24); parallel USD rate ~20% above official (150.96 vs ~180), distorting local prices. Official-rate % maths not meaningful; all fields null.",
+ "sources": [
+  {
+   "name": "Capital Ethiopia gold surge",
+   "url": "https://capitalethiopia.com/?p=76087",
+   "what": "Retail vs NBE gold price and official vs parallel FX rates, Oct 2025"
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "country": "YE",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Yemen has split exchange rates (Aden vs Sanaa) and a fragmented market; no local tax, dealer or buyback data found. Only an aggregator page showing spot-derived prices was read.",
+ "sources": [
+  {
+   "name": "GoldPricez Yemen",
+   "url": "https://goldpricez.com/ye/24k/gram",
+   "what": "27 Nov 2026 spot USD 3645.37/oz and derived YER per gram; aggregator only."
+  }
+ ]
+}

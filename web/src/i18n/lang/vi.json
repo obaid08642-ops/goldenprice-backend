@@ -114,7 +114,87 @@
   "zakat_note": "Zakat áp dụng cho tài sản vượt nisab và được giữ đủ một năm âm lịch. Đây chỉ là hướng dẫn, hãy hỏi người có hiểu biết tôn giáo về trường hợp của bạn.",
   "zakat_below": "Dưới mức nisab: không phải nộp zakat cho số tiền này.",
   "related_title": "Tìm kiếm phổ biến",
-  "retail_basis": "Dựa trên {n} nguồn tại địa phương, kiểm tra ngày {d}."
+  "retail_basis": "Dựa trên {n} nguồn tại địa phương, kiểm tra ngày {d}.",
+  "u_share": "cổ phiếu",
+  "u_rate": "tỷ giá",
+  "u_mbf": "1.000 board feet",
+  "cat_stock": "Cổ phiếu",
+  "cat_forex": "Cặp tiền tệ",
+  "cat_construction": "Vật liệu xây dựng",
+  "perf_title": "Hiệu suất",
+  "p_7d": "1 tuần",
+  "p_30d": "1 tháng",
+  "p_90d": "3 tháng",
+  "p_ytd": "Từ đầu năm",
+  "p_1y": "1 năm",
+  "p_5y": "5 năm",
+  "range52": "Biên độ 52 tuần",
+  "ath": "Cao nhất trong dữ liệu của chúng tôi",
+  "atl": "Thấp nhất trong dữ liệu của chúng tôi",
+  "since": "Lịch sử từ {d}",
+  "about_title": "Giới thiệu về {a}",
+  "drivers_title": "Yếu tố tác động đến giá",
+  "uses_title": "Công dụng",
+  "source_note": "Nguồn: {s}. Giá chỉ mang tính tham khảo và có thể chậm.",
+  "about_stock": "Cổ phiếu {a} được niêm yết bằng {c}. Trang hiển thị giá trễ mới nhất, biến động trong ngày và trong các khoảng thời gian dài hơn, cùng giá đã quy đổi sang các loại tiền khác.",
+  "about_forex": "{a} cho biết một đơn vị đồng tiền thứ nhất mua được bao nhiêu đồng tiền thứ hai. Tỷ giá biến động theo lãi suất, lạm phát, thương mại và tin tức kinh tế của cả hai nước.",
+  "about_crypto": "{a} là một loại tiền số. Giá được xác định bởi giao dịch trên các sàn suốt ngày đêm và có thể thay đổi nhanh. Trang hiển thị giá trực tiếp, biến động theo các khoảng thời gian khác nhau và giá bằng các loại tiền khác.",
+  "about_commodity": "{a} là hàng hóa được giao dịch. Giá của nó phụ thuộc vào cung, cầu, thời tiết, tiền tệ và tin tức. Trang hiển thị giá mới nhất, biến động theo các khoảng thời gian khác nhau và giá bằng các loại tiền khác.",
+  "about_index": "{a} đo lường hiệu suất của một rổ cổ phiếu. Giá trị tính bằng điểm chỉ số và biến động theo giá cổ phiếu của các công ty trong rổ.",
+  "tail_list_title": "Cổ phiếu, tiền số, cặp tiền tệ và thêm hàng hóa",
+  "tail_list_desc": "Giá trực tiếp của cổ phiếu toàn cầu, thêm tiền số, cặp tiền tệ và hàng hóa, kèm biểu đồ và hiệu suất.",
+  "tail_title": "Giá {a} hôm nay | giá trị trực tiếp và biểu đồ",
+  "tail_desc": "Giá {a} trực tiếp, kèm biểu đồ và hiệu suất trong 1 tuần, 1 tháng, 1 năm và hơn thế. Cập nhật vài phút một lần.",
+  "nav_dev": "Nhà phát triển",
+  "nav_compare": "So sánh",
+  "terms": "Điều khoản sử dụng",
+  "disclaimer": "Tuyên bố miễn trừ",
+  "cookies": "Chính sách cookie",
+  "developers": "API cho nhà phát triển",
+  "alert_title": "Nhận cảnh báo giá",
+  "alert_email": "Email của bạn",
+  "alert_target": "Giá mục tiêu ({cur})",
+  "alert_above": "Tăng vượt",
+  "alert_below": "Giảm xuống dưới",
+  "alert_submit": "Tạo cảnh báo",
+  "alert_ok": "Đã lưu cảnh báo. Chúng tôi sẽ gửi email một lần khi giá vượt mức mục tiêu của bạn.",
+  "alert_err": "Không thể lưu cảnh báo. Vui lòng kiểm tra email và giá rồi thử lại.",
+  "alert_privacy": "Chúng tôi chỉ dùng email của bạn để gửi cảnh báo này.",
+  "contact_title": "Gửi tin nhắn cho chúng tôi",
+  "contact_name": "Họ tên",
+  "contact_email": "Email của bạn",
+  "contact_msg": "Nội dung",
+  "contact_send": "Gửi",
+  "contact_ok": "Cảm ơn bạn. Tin nhắn đã được gửi.",
+  "contact_err": "Không thể gửi tin nhắn. Vui lòng thử lại sau.",
+  "dev_title": "API giá miễn phí",
+  "dev_desc": "Dùng giá của chúng tôi trong ứng dụng hoặc website của bạn. Khóa miễn phí giới hạn 1.000 yêu cầu mỗi ngày. Vui lòng ghi nguồn trang web.",
+  "dev_endpoints": "Điểm cuối",
+  "dev_request": "Nhận khóa API miễn phí",
+  "dev_email": "Email của bạn",
+  "dev_purpose": "Bạn sẽ xây dựng gì?",
+  "dev_get": "Lấy khóa",
+  "dev_key": "Khóa API của bạn (hãy lưu ngay, khóa chỉ hiển thị một lần)",
+  "dev_err": "Không thể tạo khóa. Vui lòng kiểm tra email và thử lại.",
+  "dev_usage": "Gửi khóa trong header x-api-key.",
+  "cmp_title": "So sánh hai tài sản",
+  "cmp_a": "Tài sản thứ nhất",
+  "cmp_b": "Tài sản thứ hai",
+  "cmp_ratio": "Tỷ lệ (thứ nhất chia cho thứ hai)",
+  "cmp_now": "Hiện tại",
+  "cmp_desc": "So sánh hai tài sản bất kỳ: tỷ lệ giữa chúng theo thời gian, ví dụ tỷ lệ vàng/bạc.",
+  "cmp_page_title": "So sánh giá và tỷ lệ tại {country}",
+  "roi_title": "Máy tính lợi nhuận",
+  "roi_buy": "Giá mua",
+  "roi_amount": "Số lượng",
+  "roi_now": "Giá hiện tại",
+  "roi_profit": "Lãi hoặc lỗ",
+  "roi_pct": "Tỷ suất sinh lời",
+  "units_title": "Đổi đơn vị",
+  "units_value": "Giá trị",
+  "units_from": "Từ",
+  "units_to": "Sang",
+  "calc_tools_desc": "Máy tính giá trị vàng, zakat, lợi nhuận và đổi đơn vị."
  },
  "assets": {
   "gold": "Vàng",
@@ -195,8 +275,9 @@
  "legal": {
   "about": [
    "{site} hiển thị giá trực tiếp của vàng, bạc, các kim loại khác, dầu, khí đốt, nông sản, chỉ số chứng khoán và tiền số bằng đồng tiền của bạn, cho nhiều quốc gia và ngôn ngữ.",
-   "Giá được lấy từ nguồn dữ liệu thị trường công khai và được cập nhật vài phút một lần. Một số giá được cập nhật thủ công và hiển thị thời điểm cập nhật gần nhất.",
-   "Ước tính giá bán lẻ trong nước cộng thêm thuế, phí gia công và phụ phí đại lý thông thường vào giá thế giới. Đây là ước tính, không phải báo giá."
+   "Giá được lấy từ nguồn dữ liệu thị trường công khai và được cập nhật vài phút một lần. Một số giá được cập nhật thủ công và hiển thị nguồn của chúng.",
+   "Ước tính giá bán lẻ trong nước cộng thêm thuế, phí gia công và phụ phí đại lý thông thường vào giá thế giới, kèm nguồn và ngày. Đây là ước tính, không phải báo giá.",
+   "Chúng tôi cũng cung cấp máy tính giá trị vàng, zakat, lợi nhuận và đơn vị, công cụ quy đổi tiền tệ và cảnh báo giá."
   ],
   "privacy": [
    "Chúng tôi không yêu cầu tài khoản hay dữ liệu cá nhân. Chúng tôi chỉ lưu lựa chọn ngôn ngữ, quốc gia và giao diện trong trình duyệt của bạn.",
@@ -206,6 +287,648 @@
   "contact": [
    "Câu hỏi, đính chính hoặc yêu cầu hợp tác: vui lòng dùng địa chỉ liên hệ được công bố trên trang này khi trang đã hoạt động.",
    "Nếu bạn thấy giá sai, hãy cho chúng tôi biết tài sản, quốc gia và nơi bạn thấy giá đúng."
+  ],
+  "terms": [
+   "Khi sử dụng {site}, bạn đồng ý với các điều khoản này. Trang web được cung cấp nhằm mục đích thông tin chung.",
+   "Giá, biểu đồ và ước tính chỉ mang tính tham khảo, có thể chậm hoặc sai, và không được dùng làm căn cứ duy nhất cho giao dịch hoặc mua bán.",
+   "Bạn không được sao chép dữ liệu hàng loạt hoặc bán lại. Để truy cập tự động, hãy dùng API miễn phí của chúng tôi và ghi nguồn trang web.",
+   "Chúng tôi có thể thay đổi hoặc ngừng bất kỳ phần nào của dịch vụ vào bất cứ lúc nào và không chịu trách nhiệm về thiệt hại phát sinh từ việc sử dụng."
+  ],
+  "disclaimer": [
+   "{site} không phải là công ty môi giới, ngân hàng hay cố vấn tài chính và không đưa ra lời khuyên đầu tư.",
+   "Ước tính giá bán lẻ trong nước, phí cộng thêm của vàng miếng và số liệu thu mua lại là ước tính dựa trên nguồn công khai. Các cửa hàng khác nhau, luôn xác nhận giá với người bán.",
+   "Hiệu suất quá khứ không dự báo kết quả tương lai. Đầu tư vào kim loại, cổ phiếu và tiền số có rủi ro, kể cả mất số tiền đã đầu tư."
+  ],
+  "cookies": [
+   "Chúng tôi chỉ dùng bộ nhớ trình duyệt cần thiết để ghi nhớ ngôn ngữ, quốc gia và giao diện của bạn.",
+   "Quảng cáo, khi được bật, do Google AdSense cung cấp và có thể đặt cookie để hiển thị quảng cáo phù hợp. Bạn có thể quản lý điều này trong cài đặt quảng cáo của Google.",
+   "Khách truy cập ở các khu vực yêu cầu sự đồng ý sẽ được hỏi trước khi cookie quảng cáo được sử dụng."
+  ],
+  "developers": [
+   "API giá của chúng tôi miễn phí cho dự án nhỏ. Tạo khóa bên dưới và gửi trong header x-api-key.",
+   "Điểm cuối: /v1/overview cho tất cả giá và hiệu suất, /v1/chart/SYMBOL?days=365 cho lịch sử, /v1/rates cho tỷ giá.",
+   "Khóa miễn phí cho phép 1.000 yêu cầu mỗi ngày. Phản hồi được lưu đệm trong một phút, vui lòng không gọi nhanh hơn thế.",
+   "Vui lòng ghi nguồn trang web khi hiển thị giá của chúng tôi."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Vàng là kim loại quý được nắm giữ rộng rãi nhất và là phương tiện giữ giá trị truyền thống. Giá được niêm yết theo troy ounce trên toàn thế giới và theo gram hoặc tola ở nhiều thị trường trong nước, còn trang sức được bán theo karat từ 10K đến 24K.",
+   "drivers": [
+    "Lãi suất và đồng đô la Mỹ",
+    "Lạm phát và bất định kinh tế hay chính trị",
+    "Mua vào của ngân hàng trung ương và nhu cầu đầu tư"
+   ],
+   "uses": [
+    "Trang sức và quà tặng",
+    "Vàng miếng và vàng nén đầu tư",
+    "Điện tử và nha khoa"
+   ]
+  },
+  "silver": {
+   "about": "Bạc vừa là kim loại quý vừa là kim loại công nghiệp. Giá được niêm yết theo troy ounce và được bán dưới dạng vàng miếng, đồng xu và trang sức với các độ tinh khiết như 999, 925 và 800.",
+   "drivers": [
+    "Nhu cầu công nghiệp từ pin mặt trời và điện tử",
+    "Giá vàng và đồng đô la Mỹ",
+    "Nhu cầu đầu tư vào vàng miếng và đồng xu"
+   ],
+   "uses": [
+    "Trang sức và bộ đồ bạc",
+    "Pin mặt trời và điện tử",
+    "Vàng miếng và đồng xu đầu tư"
+   ]
+  },
+  "platinum": {
+   "about": "Bạch kim là kim loại quý hiếm, đặc, có giá trị theo trọng lượng cao hơn vàng trong nhiều giai đoạn. Giá được niêm yết theo troy ounce.",
+   "drivers": [
+    "Nhu cầu từ bộ chuyển đổi xúc tác trên ô tô",
+    "Nguồn cung từ mỏ, chủ yếu ở Nam Phi và Nga",
+    "Nhu cầu đầu tư và giá vàng"
+   ],
+   "uses": [
+    "Bộ chuyển đổi xúc tác",
+    "Trang sức",
+    "Công nghiệp hóa chất và công nghệ hydro"
+   ]
+  },
+  "palladium": {
+   "about": "Palladi là kim loại quý hiếm, chủ yếu dùng trong bộ chuyển đổi xúc tác của xe chạy xăng. Giá được niêm yết theo troy ounce.",
+   "drivers": [
+    "Sản lượng ô tô và quy định khí thải",
+    "Nguồn cung từ mỏ ở Nga và Nam Phi",
+    "Thay thế bằng bạch kim"
+   ],
+   "uses": [
+    "Bộ chuyển đổi xúc tác",
+    "Điện tử",
+    "Nha khoa và trang sức"
+   ]
+  },
+  "copper": {
+   "about": "Đồng là kim loại công nghiệp chuẩn mực. Giá được niêm yết theo tấn và được theo dõi như một chỉ dấu về sức khỏe kinh tế toàn cầu.",
+   "drivers": [
+    "Nhu cầu xây dựng và sản xuất, đặc biệt ở Trung Quốc",
+    "Nguồn cung từ mỏ và tồn kho",
+    "Đồng đô la Mỹ và chính sách thương mại"
+   ],
+   "uses": [
+    "Dây điện và lưới điện",
+    "Xây dựng và đường ống",
+    "Xe điện và năng lượng tái tạo"
+   ]
+  },
+  "aluminum": {
+   "about": "Nhôm là kim loại nhẹ, được sử dụng rộng rãi, được sản xuất từ quặng bauxite với lượng điện lớn. Giá được niêm yết theo tấn.",
+   "drivers": [
+    "Chi phí năng lượng để luyện kim",
+    "Nhu cầu từ ô tô, bao bì và xây dựng",
+    "Sản lượng ở Trung Quốc và thuế quan thương mại"
+   ],
+   "uses": [
+    "Bao bì và lon",
+    "Ô tô và máy bay",
+    "Xây dựng"
+   ]
+  },
+  "nickel": {
+   "about": "Niken là kim loại dùng để sản xuất thép không gỉ và pin. Giá được niêm yết theo tấn trên Sàn Kim loại London.",
+   "drivers": [
+    "Nhu cầu thép không gỉ",
+    "Nhu cầu pin xe điện",
+    "Nguồn cung từ Indonesia và Philippines"
+   ],
+   "uses": [
+    "Thép không gỉ",
+    "Pin",
+    "Hợp kim"
+   ]
+  },
+  "zinc": {
+   "about": "Kẽm chủ yếu được dùng để mạ thép nhằm chống gỉ. Giá được niêm yết theo tấn.",
+   "drivers": [
+    "Nhu cầu thép và xây dựng",
+    "Nguồn cung từ mỏ và sản lượng luyện",
+    "Giá năng lượng ở châu Âu và Trung Quốc"
+   ],
+   "uses": [
+    "Mạ kẽm thép",
+    "Đồng thau và hợp kim",
+    "Pin"
+   ]
+  },
+  "lead": {
+   "about": "Chì là kim loại đặc, chủ yếu dùng cho ắc quy xe cộ. Giá được niêm yết theo tấn.",
+   "drivers": [
+    "Nhu cầu ô tô và ắc quy",
+    "Nguồn cung từ tái chế",
+    "Sản lượng mỏ và quy định môi trường"
+   ],
+   "uses": [
+    "Ắc quy xe",
+    "Che chắn bức xạ",
+    "Dây cáp và hợp kim"
+   ]
+  },
+  "tin": {
+   "about": "Thiếc là kim loại hiếm, chủ yếu dùng làm chất hàn trong điện tử. Giá được niêm yết theo tấn.",
+   "drivers": [
+    "Nhu cầu điện tử và chip bán dẫn",
+    "Nguồn cung từ mỏ ở Indonesia, Myanmar và Peru",
+    "Tồn kho và quy định thương mại"
+   ],
+   "uses": [
+    "Chất hàn cho điện tử",
+    "Hộp thực phẩm",
+    "Hóa chất"
+   ]
+  },
+  "cobalt": {
+   "about": "Coban là kim loại dùng cho pin, được khai thác chủ yếu tại Cộng hòa Dân chủ Congo. Giá được niêm yết theo tấn.",
+   "drivers": [
+    "Nhu cầu xe điện và pin",
+    "Nguồn cung từ mỏ ở Congo và quy định xuất khẩu",
+    "Thay đổi trong công nghệ hóa học pin"
+   ],
+   "uses": [
+    "Pin",
+    "Siêu hợp kim",
+    "Nam châm"
+   ]
+  },
+  "lithium": {
+   "about": "Lithium carbonate là nguyên liệu chính cho pin sạc. Giá hiển thị là giá lithium carbonate cấp pin tại Trung Quốc, quy đổi sang đô la Mỹ theo tấn.",
+   "drivers": [
+    "Doanh số xe điện",
+    "Nguồn cung từ mỏ và nhà máy tinh luyện mới",
+    "Chính sách của chính phủ về pin"
+   ],
+   "uses": [
+    "Pin xe điện",
+    "Điện thoại và laptop",
+    "Lưu trữ năng lượng"
+   ]
+  },
+  "uranium": {
+   "about": "Uranium là nhiên liệu của nhà máy điện hạt nhân. Giá được niêm yết bằng đô la Mỹ theo pound U3O8.",
+   "drivers": [
+    "Khởi động lại nhà máy điện hạt nhân và lò phản ứng mới",
+    "Sản lượng mỏ, chủ yếu từ Kazakhstan và Canada",
+    "Dự trữ của chính phủ và lệnh trừng phạt"
+   ],
+   "uses": [
+    "Điện hạt nhân",
+    "Đồng vị y tế"
+   ]
+  },
+  "iron-ore": {
+   "about": "Quặng sắt là nguyên liệu chính để sản xuất thép. Giá hiển thị là giá quặng có hàm lượng sắt 62% giao tại Trung Quốc, theo tấn.",
+   "drivers": [
+    "Sản lượng thép của Trung Quốc",
+    "Nguồn cung từ Australia và Brazil",
+    "Chi tiêu cho bất động sản và hạ tầng"
+   ],
+   "uses": [
+    "Sản xuất thép"
+   ]
+  },
+  "steel": {
+   "about": "Thép là hợp kim của sắt, được dùng trong hầu hết các ngành công nghiệp. Giá hiển thị là giá thép cây tại Trung Quốc, quy đổi sang đô la Mỹ theo tấn.",
+   "drivers": [
+    "Nhu cầu xây dựng",
+    "Chi phí quặng sắt và than cốc",
+    "Giới hạn sản lượng của chính phủ"
+   ],
+   "uses": [
+    "Tòa nhà và cầu",
+    "Ô tô và máy móc"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Cuộn thép cán nóng là sản phẩm thép phẳng dùng trong sản xuất. Giá hiển thị là giá giao tại vùng Trung Tây nước Mỹ, theo tấn.",
+   "drivers": [
+    "Nhu cầu từ ô tô và xây dựng tại Mỹ",
+    "Thuế nhập khẩu và cạnh tranh",
+    "Chi phí nguyên liệu và năng lượng"
+   ],
+   "uses": [
+    "Ô tô và đồ gia dụng",
+    "Đường ống và xây dựng"
+   ]
+  },
+  "lumber": {
+   "about": "Hợp đồng tương lai gỗ xẻ theo dõi giá gỗ mềm dùng để xây nhà, được niêm yết theo 1.000 board feet.",
+   "drivers": [
+    "Số lượng nhà khởi công và lãi suất thế chấp",
+    "Sản lượng xưởng cưa và cháy rừng",
+    "Thuế quan thương mại giữa Mỹ và Canada"
+   ],
+   "uses": [
+    "Khung nhà",
+    "Đồ nội thất và bao bì"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI là chuẩn dầu thô của Mỹ, được niêm yết theo thùng và giao tại Cushing, Oklahoma.",
+   "drivers": [
+    "Quyết định sản lượng của OPEC và Mỹ",
+    "Tăng trưởng kinh tế toàn cầu",
+    "Tồn kho, địa chính trị và đồng đô la Mỹ"
+   ],
+   "uses": [
+    "Xăng, dầu diesel và nhiên liệu máy bay",
+    "Nhựa và hóa chất"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent là chuẩn dầu thô toàn cầu, được niêm yết theo thùng và là giá tham chiếu cho phần lớn dầu được giao dịch ngoài nước Mỹ.",
+   "drivers": [
+    "Quyết định sản lượng của OPEC+",
+    "Nhu cầu toàn cầu, đặc biệt từ Trung Quốc và Ấn Độ",
+    "Xung đột và lệnh trừng phạt tại các khu vực sản xuất"
+   ],
+   "uses": [
+    "Xăng, dầu diesel và nhiên liệu máy bay",
+    "Nhựa và hóa chất"
+   ]
+  },
+  "natural-gas": {
+   "about": "Khí đốt tự nhiên được niêm yết ở đây theo giá Henry Hub của Mỹ, tính theo MMBtu. Khí đốt được dùng để sưởi ấm, phát điện và trong công nghiệp.",
+   "drivers": [
+    "Thời tiết và nhu cầu sưởi ấm",
+    "Mức tồn kho và sản lượng",
+    "Xuất khẩu khí tự nhiên hóa lỏng (LNG)"
+   ],
+   "uses": [
+    "Phát điện",
+    "Sưởi ấm và nấu nướng trong nhà",
+    "Phân bón và hóa chất"
+   ]
+  },
+  "gasoline": {
+   "about": "Hợp đồng tương lai xăng theo dõi giá xăng bán buôn, tính bằng đô la Mỹ theo gallon.",
+   "drivers": [
+    "Giá dầu thô",
+    "Sản lượng nhà máy lọc dầu và mùa lái xe",
+    "Tồn kho và quy định"
+   ],
+   "uses": [
+    "Nhiên liệu xe cộ"
+   ]
+  },
+  "heating-oil": {
+   "about": "Hợp đồng tương lai dầu sưởi theo dõi giá dầu diesel và nhiên liệu sưởi bán buôn, tính bằng đô la Mỹ theo gallon.",
+   "drivers": [
+    "Giá dầu thô",
+    "Thời tiết mùa đông",
+    "Nhu cầu diesel từ xe tải và công nghiệp"
+   ],
+   "uses": [
+    "Sưởi ấm gia đình",
+    "Nhiên liệu diesel"
+   ]
+  },
+  "wheat": {
+   "about": "Lúa mì là một trong những loại ngũ cốc lương thực chính của thế giới. Giá được niêm yết theo bushel trên sàn Chicago.",
+   "drivers": [
+    "Thời tiết tại các vùng trồng chính",
+    "Xuất khẩu từ Nga, Ukraine, Mỹ và EU",
+    "Tồn kho, giá năng lượng và đồng đô la Mỹ"
+   ],
+   "uses": [
+    "Bánh mì, mì ống và bột mì",
+    "Thức ăn chăn nuôi"
+   ]
+  },
+  "corn": {
+   "about": "Ngô là loại ngũ cốc lương thực và thức ăn chăn nuôi quan trọng, cũng là nguồn sản xuất ethanol. Giá được niêm yết theo bushel trên sàn Chicago.",
+   "drivers": [
+    "Vụ thu hoạch tại Mỹ và Brazil",
+    "Nhu cầu ethanol và thức ăn chăn nuôi",
+    "Thời tiết và xuất khẩu"
+   ],
+   "uses": [
+    "Thức ăn chăn nuôi",
+    "Nhiên liệu ethanol",
+    "Thực phẩm và siro"
+   ]
+  },
+  "soybeans": {
+   "about": "Đậu nành được chế biến thành dầu và khô đậu. Giá được niêm yết theo bushel trên sàn Chicago.",
+   "drivers": [
+    "Vụ mùa tại Mỹ, Brazil và Argentina",
+    "Nhu cầu nhập khẩu của Trung Quốc",
+    "Chính sách nhiên liệu sinh học"
+   ],
+   "uses": [
+    "Dầu ăn",
+    "Thức ăn chăn nuôi",
+    "Dầu diesel sinh học"
+   ]
+  },
+  "rice": {
+   "about": "Gạo thô là lương thực chính của hàng tỷ người. Giá được niêm yết theo cwt trên sàn Chicago.",
+   "drivers": [
+    "Điều kiện gió mùa và thu hoạch tại châu Á",
+    "Quy định xuất khẩu của Ấn Độ, Thái Lan và Việt Nam",
+    "Tồn kho và giá lương thực"
+   ],
+   "uses": [
+    "Lương thực"
+   ]
+  },
+  "sugar": {
+   "about": "Hợp đồng tương lai đường thô theo dõi giá đường thế giới, được niêm yết bằng đô la Mỹ theo pound.",
+   "drivers": [
+    "Vụ mía tại Brazil và Ấn Độ",
+    "Nhu cầu ethanol tại Brazil",
+    "Thời tiết và tỷ giá"
+   ],
+   "uses": [
+    "Thực phẩm và đồ uống",
+    "Ethanol"
+   ]
+  },
+  "coffee": {
+   "about": "Hợp đồng tương lai cà phê Arabica theo dõi giá hạt cà phê thế giới, được niêm yết bằng đô la Mỹ theo pound.",
+   "drivers": [
+    "Thời tiết tại Brazil và Colombia",
+    "Tồn kho và xuất khẩu",
+    "Tỷ giá và nhu cầu"
+   ],
+   "uses": [
+    "Đồ uống cà phê"
+   ]
+  },
+  "cocoa": {
+   "about": "Hợp đồng tương lai ca cao theo dõi giá hạt ca cao, được niêm yết bằng đô la Mỹ theo tấn.",
+   "drivers": [
+    "Vụ thu hoạch tại Bờ Biển Ngà và Ghana",
+    "Dịch bệnh và thời tiết",
+    "Nhu cầu sô-cô-la"
+   ],
+   "uses": [
+    "Sô-cô-la và kẹo",
+    "Mỹ phẩm"
+   ]
+  },
+  "cotton": {
+   "about": "Hợp đồng tương lai bông theo dõi giá bông thô trên thế giới, được niêm yết bằng đô la Mỹ theo pound.",
+   "drivers": [
+    "Thời tiết tại Mỹ, Ấn Độ và Trung Quốc",
+    "Nhu cầu dệt may",
+    "Giá dầu và tỷ giá"
+   ],
+   "uses": [
+    "Quần áo và hàng dệt"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin là loại tiền số đầu tiên và lớn nhất. Đồng tiền này giao dịch suốt ngày đêm trên các sàn và nguồn cung được giới hạn ở 21 triệu đồng.",
+   "drivers": [
+    "Nhu cầu nhà đầu tư và dòng tiền vào quỹ ETF",
+    "Lãi suất và mức độ chấp nhận rủi ro",
+    "Quy định và tin tức"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum là blockchain dành cho hợp đồng thông minh và ứng dụng, còn đồng coin của nó là ether, đứng thứ hai về quy mô trong các loại tiền số.",
+   "drivers": [
+    "Mức sử dụng các ứng dụng trên Ethereum",
+    "Nâng cấp mạng và phí giao dịch",
+    "Tâm lý thị trường"
+   ]
+  },
+  "bnb": {
+   "about": "BNB là đồng coin của BNB Chain và hệ sinh thái sàn giao dịch Binance.",
+   "drivers": [
+    "Hoạt động và phí của sàn giao dịch",
+    "Đốt token",
+    "Quy định"
+   ]
+  },
+  "xrp": {
+   "about": "XRP là loại tiền số được dùng để chuyển tiền quốc tế nhanh trên XRP Ledger.",
+   "drivers": [
+    "Tin tức về tòa án và quy định",
+    "Hợp tác với ngân hàng và đơn vị thanh toán",
+    "Tâm lý thị trường"
+   ]
+  },
+  "solana": {
+   "about": "Solana là blockchain nhanh dành cho ứng dụng và thanh toán, còn SOL là đồng coin của nó.",
+   "drivers": [
+    "Hoạt động của ứng dụng và token",
+    "Độ ổn định của mạng",
+    "Tâm lý thị trường"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano là blockchain theo cơ chế proof-of-stake, còn ADA là đồng coin của nó.",
+   "drivers": [
+    "Tiến độ phát triển",
+    "Staking",
+    "Tâm lý thị trường"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin bắt đầu như một đồng coin đùa vui và đã trở thành một trong những loại tiền số giao dịch nhiều nhất.",
+   "drivers": [
+    "Sự chú ý trên mạng xã hội",
+    "Tâm lý thị trường",
+    "Mức độ chấp nhận thanh toán"
+   ]
+  },
+  "tron": {
+   "about": "TRON là blockchain được dùng rộng rãi để chuyển stablecoin, còn TRX là đồng coin của nó.",
+   "drivers": [
+    "Hoạt động chuyển stablecoin",
+    "Phí mạng",
+    "Tâm lý thị trường"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot kết nối nhiều blockchain với nhau, còn DOT là đồng coin của nó.",
+   "drivers": [
+    "Phát triển mạng lưới",
+    "Staking",
+    "Tâm lý thị trường"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink cung cấp dữ liệu thế giới thực cho blockchain, còn LINK là đồng coin của nó.",
+   "drivers": [
+    "Mức sử dụng bởi các ứng dụng khác",
+    "Quan hệ đối tác",
+    "Tâm lý thị trường"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin là một trong những loại tiền số lâu đời nhất, được tạo ra để thanh toán nhanh hơn Bitcoin.",
+   "drivers": [
+    "Giá Bitcoin",
+    "Mức độ chấp nhận thanh toán",
+    "Tâm lý thị trường"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche là nền tảng blockchain nhanh, còn AVAX là đồng coin của nó.",
+   "drivers": [
+    "Hoạt động của ứng dụng",
+    "Nâng cấp mạng",
+    "Tâm lý thị trường"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 theo dõi 500 công ty lớn nhất của Mỹ và là thước đo chính của thị trường chứng khoán Mỹ.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite theo dõi hàng nghìn cổ phiếu niêm yết trên Nasdaq, với tỷ trọng lớn của các công ty công nghệ.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average theo dõi 30 công ty lớn của Mỹ.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 theo dõi 100 công ty lớn nhất niêm yết tại London.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "dax": {
+   "about": "DAX theo dõi 40 công ty lớn của Đức niêm yết tại Frankfurt.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 theo dõi 40 công ty lớn niêm yết tại Paris.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 theo dõi 225 công ty lớn niêm yết tại Tokyo.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng Index theo dõi các công ty lớn nhất niêm yết tại Hong Kong.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite theo dõi tất cả cổ phiếu niêm yết trên Sở Giao dịch Chứng khoán Thượng Hải.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 theo dõi 50 công ty lớn trên Sàn Giao dịch Chứng khoán Quốc gia Ấn Độ.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex theo dõi 30 công ty lớn trên Sở Giao dịch Chứng khoán Bombay.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 theo dõi 30 công ty giao dịch sôi động nhất trên Sàn Giao dịch Ai Cập.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Index theo dõi tất cả công ty niêm yết trên sàn chứng khoán Saudi Arabia.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 theo dõi 100 công ty lớn nhất trên Sàn Istanbul (Borsa Istanbul).",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa theo dõi các công ty chính trên Sàn B3 của Brazil.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 theo dõi 200 công ty lớn nhất trên sàn chứng khoán Australia.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite theo dõi các công ty chính trên Sàn Toronto.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI theo dõi tất cả cổ phiếu phổ thông niêm yết trên Sàn Hàn Quốc.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 theo dõi 50 công ty lớn của khu vực đồng euro.",
+   "drivers": [
+    "Lợi nhuận của công ty",
+    "Lãi suất và lạm phát",
+    "Tin tức kinh tế và chính trị"
+   ]
+  }
  }
 }

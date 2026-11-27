@@ -1,15 +1,27 @@
 {
- "country": "AE",
- "tier": 1,
- "verifiedAt": "2026-11-27",
- "confidence": "low",
+ "confidence": "medium",
  "defaultKarat": 22,
  "gold": {
   "vatJewelryPct": 5,
-  "vatBullionPct": null,
+  "vatBullionPct": 0,
   "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
+  "makingPct": {
+   "typical": 8,
+   "min": 3,
+   "max": 20
+  },
+  "barPremiumPct": {
+   "1g": 15.5,
+   "2.5g": 11.6,
+   "5g": 8.3,
+   "10g": 7.3,
+   "20g": 6.6,
+   "31.1g": 6.5,
+   "50g": 5.7,
+   "100g": 5.7,
+   "250g": 5.6,
+   "1000g": 5.3
+  },
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
@@ -22,22 +34,40 @@
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
- "notes": "Retail gold and jewelry sales carry 5% VAT; B2B trade between registered dealers uses reverse charge and investment-grade metals are zero-rated per FTA. Dubai retail board is government-promoted; only the making charge is negotiable. Dubai 24K board 437.50 AED/g on 27 Nov 2026. Bar premiums not computable from opened pages.",
+ "notes": "Retail jewelry carries 5% VAT on full value incl. making; investment bullion (99%+) is zero-rated. Dubai retail board (24K 437.50 AED/g) already sits about 1.7% above spot. Bar premiums are Gold Trade Dubai online asks (PAMP/Emirates Gold) vs spot; large-bar premiums look high, so treat as upper-end retail. Making charge is the negotiable part.",
  "sources": [
   {
    "name": "Khaleej Times (FTA clarification)",
    "url": "https://www.khaleejtimes.com/business/vat-in-uae/fta-clarifies-vat-on-gold-diamond-deals-in-uae",
-   "what": "Retail gold and jewelry fully subject to 5% VAT; reverse charge only B2B; investment-grade metals zero-rated"
+   "what": "Retail gold and jewelry subject to 5% VAT; reverse charge only B2B; investment-grade metals zero-rated"
+  },
+  {
+   "name": "Meydan Free Zone VAT on gold guide",
+   "url": "https://www.meydanfz.ae/blog/vat-gold-jewellery-uae",
+   "what": "Investment bullion 99%+ zero-rated; jewelry 5% on full sale value including making"
+  },
+  {
+   "name": "Gold Trade Dubai bar store",
+   "url": "https://www.goldtrade.ae/store/gold-bars-and-coins",
+   "what": "27 Nov 2026 asks, PAMP 1 g AED 497.13 to 100 g 45,471, Emirates Gold 1 kg 453,152; premium vs spot $3,644.22/oz x 3.6725 = 430.3 AED/g"
+  },
+  {
+   "name": "Al Romaizan live gold rates",
+   "url": "https://alromaizan.com/gold-rates",
+   "what": "27 Nov 2026 08:00 Dubai City of Gold board 24K 437.50 AED/g, 10 g 4,375"
+  },
+  {
+   "name": "Gold24.ae making charges",
+   "url": "https://gold24.ae/making-charges",
+   "what": "Dubai making charge ranges by piece type about 1-30%, 5-12% typical for regular jewelry, negotiable 20-25%"
   },
   {
    "name": "Dubai Online gold rate",
    "url": "https://www.dubai-online.com/essential/gold-rate/",
-   "what": "27 Nov 2026 retail per-gram rates (24K 437.50, 22K 405.25 AED); making charge is the negotiable part, low vs other markets"
-  },
-  {
-   "name": "Khaleej Times gold prices",
-   "url": "https://www.khaleejtimes.com/markets/dubai-gold-prices-oct-16",
-   "what": "Dubai per-gram rates by karat with spot context (16 Oct 2025 article)"
+   "what": "27 Nov 2026 retail per-gram rates (24K 437.50, 22K 405.25 AED); only making charge is negotiable"
   }
- ]
+ ],
+ "country": "AE",
+ "tier": 1,
+ "verifiedAt": "2026-11-27"
 }

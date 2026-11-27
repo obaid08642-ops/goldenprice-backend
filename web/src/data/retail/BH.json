@@ -1,0 +1,57 @@
+{
+ "country": "BH",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 24,
+ "gold": {
+  "vatJewelryPct": 10,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 27.1,
+   "2.5g": 15.3,
+   "5g": 14.3,
+   "10g": 6.6,
+   "20g": 5.0,
+   "31.1g": 3.7,
+   "50g": 3.6,
+   "100g": 2.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Standard VAT 10%; investment gold/silver (>=99% purity, certified, tradeable) is zero-rated under NBR rules. MSS prices are 24K bars sold at retail incl. delivery; spot-linked, fixed on weekends. Small bars (1-5 g) carry large premiums. 21K is common for jewelry. Making/buyback/used-gold discounts not found.",
+ "sources": [
+  {
+   "name": "MSS Gold Bahrain",
+   "url": "https://mssbars.com/index",
+   "what": "Ask prices 1g-100g and 1oz bars (BD 56/127/252/470/926/1421/2283/4516) on 2026-11-27 ~09:00 Bahrain time vs spot USD 3646.11/oz shown on same page; BHD peg 0.376 (open.er-api 2026-11-27). Premium computed from these."
+  },
+  {
+   "name": "MSS Gold sell page",
+   "url": "https://mssbars.com/sell-gold-bars-bahrain",
+   "what": "Buyback quoted individually off spot; no % published, so buyback/used-gold left null."
+  },
+  {
+   "name": "PwC Worldwide Tax Summaries - Bahrain",
+   "url": "https://taxsummaries.pwc.com/bahrain/corporate/other-taxes",
+   "what": "Standard VAT 10% since 2019 (reviewed 26 Jul 2026); general customs duty 5% of CIF."
+  },
+  {
+   "name": "VATupdate (citing KPMG)",
+   "url": "https://www.vatupdate.com/2021/09/05/__trashed-11",
+   "what": "Gold/silver/platinum zero-rated only if purity >=99%, certified and tradeable on global bullion markets."
+  }
+ ]
+}

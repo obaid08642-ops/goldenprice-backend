@@ -1,0 +1,33 @@
+{
+ "country": "PE",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "TuCambista (2026-11-27 page): Peru gold quote is international USD/oz x USD/PEN adjusted for purity, with dealer margin on top. Spot fell to ~USD 3,513 on 2026-11-20 (Reuters via page). No IGV rate or dealer ask prices found, so all fields are null.",
+ "sources": [
+  {
+   "name": "TuCambista gold quote Peru",
+   "url": "https://tucambista.pe/cotizacion-del-oro-en-peru-hoy",
+   "what": "How the PEN gold quote is built; spot context 2026-11-20"
+  }
+ ]
+}

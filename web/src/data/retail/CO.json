@@ -1,0 +1,38 @@
+{
+ "country": "CO",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 19,
+  "vatBullionPct": 19,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Rankia Colombia states no IVA exclusion for investment gold: bars, coins and jewellery pay the 19% general rate (other web sources claim bullion exemption; unresolved). Oroexpress sells 1 g, 5 g and 1 oz 999.9 bars. Undated retail asks not comparable with same-day spot, so premiums are null.",
+ "sources": [
+  {
+   "name": "Rankia: invertir en oro en Colombia",
+   "url": "https://www.rankia.co/blog/trading-desde-cero/5910323-como-invertir-oro-colombia",
+   "what": "19% IVA on bars, coins and jewellery; Oroexpress bar asks (undated, not used)"
+  },
+  {
+   "name": "Oroexpress lingotes",
+   "url": "https://www.oroexpress.com.co/lingotes",
+   "what": "Sizes offered: 1 g, 5 g, 1 oz, 24K 999.9 certified; prices not shown"
+  }
+ ]
+}

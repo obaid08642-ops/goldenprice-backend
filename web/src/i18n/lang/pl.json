@@ -1,211 +1,934 @@
 {
- "ui": {
-  "today": "dziś",
-  "updated": "Zaktualizowano {t}",
-  "delayed": "Opóźnione",
-  "per": "za {u}",
-  "u_gram": "gram",
-  "u_ounce": "uncja",
-  "u_kilo": "kilogram",
-  "u_tola": "tola",
-  "u_ton": "tona metryczna",
-  "u_barrel": "baryłka",
-  "u_mmbtu": "MMBtu",
-  "u_gallon": "galon",
-  "u_bushel": "buszel",
-  "u_lb": "funt",
-  "u_cwt": "cetnar",
-  "u_coin": "moneta",
-  "u_point": "punktów",
-  "global_vs_local": "Cena światowa a lokalna",
-  "global_price": "Cena światowa",
-  "local_estimate": "Szacunek lokalny",
-  "est_retail": "Szacowana cena detaliczna wraz z kosztem wykonania",
-  "est_note": "To tylko szacunek. Sklepy różnią się podatkami, kosztami wykonania i marżami.",
-  "karat_title": "{a} według próby",
-  "karat": "Próba",
-  "purity": "Czystość",
-  "price": "Cena",
-  "currencies_title": "Cena {a} w innych walutach",
-  "col_ounce": "Za uncję",
-  "col_gram": "Za gram",
-  "col_24h": "24 h",
-  "col_7d": "7 dni",
-  "markets_title": "Metale, energia, rolnictwo i kryptowaluty",
-  "markets_sub": "Aktualne ceny w {cur}",
-  "list_title": "Ceny metali, energii, surowców i kryptowalut w: {country}",
-  "list_desc": "Aktualne ceny złota, srebra, platyny, miedzi, ropy, gazu, pszenicy, kawy, indeksów giełdowych, Bitcoina i innych w {cur}.",
-  "alerts_title": "Alerty cenowe",
-  "alerts_desc": "Otrzymaj powiadomienie, gdy cena osiągnie Twój cel, na telefon lub e-mail.",
-  "alerts_cta": "Utwórz alert",
-  "search_ph": "Szukaj np. cena {a} w {country}…",
-  "search_btn": "Szukaj",
-  "r1d": "1D",
-  "r1w": "1T",
-  "r1m": "1M",
-  "r1y": "1R",
-  "r5y": "5L",
-  "rall": "Wszystko",
-  "geo_ask": "Pokazać ceny dla {country} w {cur}?",
-  "geo_yes": "Tak, zmień",
-  "geo_no": "Nie, dziękuję",
-  "footer_note": "Ceny są orientacyjne i mogą być opóźnione. To nie jest porada inwestycyjna.",
-  "about": "O nas",
-  "privacy": "Polityka prywatności",
-  "contact": "Kontakt",
-  "theme": "Motyw",
-  "language": "Język",
-  "country": "Kraj",
-  "faq_title": "Najczęściej zadawane pytania",
-  "q1": "Jaka jest dziś cena {a} w {country}?",
-  "a1": "Cena {a} w {country} wynosi dziś {p} {cur} za {u}. To globalna cena spot przeliczona według najnowszego kursu wymiany i aktualizowana co kilka minut.",
-  "q2": "Dlaczego cena lokalna różni się od światowej?",
-  "a2": "Sklepy doliczają do globalnej ceny spot koszt wykonania, podatki, cła importowe i marżę dealera, dlatego cena detaliczna w {country} jest zwykle wyższa.",
-  "q3": "Jak często aktualizowana jest cena?",
-  "a3": "Aktualne ceny rynkowe odświeżane są co kilka minut. Ceny bez aktualnego źródła danych są aktualizowane ręcznie i pokazują czas ostatniej aktualizacji.",
-  "title": "Cena {a} w {country} dziś | za {u} w {cur}",
-  "desc": "Aktualna cena {a} w {country} w {cur}: za gram, uncję i kilogram, wykres cen oraz cena światowa i lokalna. Aktualizacja co kilka minut.",
-  "title_idx": "Indeks {a} dziś | aktualna wartość i wykres",
-  "desc_idx": "Aktualna wartość indeksu {a}, dzienna zmiana i wykres cen. Aktualizacja co kilka minut.",
-  "history_note": "Historia oparta jest na dziennych kursach zamknięcia.",
-  "unit_label": "Jednostka",
-  "sample_note": "Dane przykładowe",
-  "nav_all": "Rynki",
-  "nav_rates": "Waluty",
-  "nav_calc": "Kalkulatory",
-  "cat_precious": "Metale szlachetne",
-  "cat_industrial": "Metale przemysłowe",
-  "cat_energy": "Energia",
-  "cat_agri": "Rolnictwo",
-  "cat_index": "Indeksy giełdowe",
-  "cat_crypto": "Kryptowaluty",
-  "bars_title": "{a}: sztabki i monety, cena kupna i sprzedaży w {cur}",
-  "bar_size": "Waga",
-  "bar_buy": "Kup u dealera",
-  "bar_sell": "Sprzedaj z powrotem",
-  "bar_prem": "Premia ponad cenę spot",
-  "bars_note": "Typowe ceny dealerskie oparte na cenie światowej i zwykłej premii. Rzeczywiste ceny różnią się w zależności od sklepu i dnia.",
-  "used_title": "Używane i złom {a}: cena skupu za gram w {cur}",
-  "used_note": "Używana biżuteria jest zwykle skupowana poniżej ceny nowej. To typowe szacunki.",
-  "used_col": "Skup za gram",
-  "rates_title": "Kursy walut w stosunku do {cur}",
-  "rates_sub": "Kursy średnie, aktualizowane co godzinę",
-  "rates_desc": "Aktualne kursy głównych walut świata w stosunku do {cur} oraz kalkulator walutowy.",
-  "rates_page_title": "Kursy walut i kalkulator walutowy w: {country}",
-  "conv_title": "Kalkulator walutowy",
-  "conv_amount": "Kwota",
-  "conv_from": "Z",
-  "conv_to": "Na",
-  "conv_result": "{amount} {from} = {value} {to}",
-  "calc_page_title": "Kalkulator złota i kalkulator zakatu w: {country}",
-  "calc_page_desc": "Oblicz wartość swojego złota według wagi i próby w {cur} oraz sprawdź zakat od złota i srebra według dzisiejszych cen.",
-  "calc_title": "Kalkulator wartości złota",
-  "calc_weight": "Waga",
-  "calc_unit": "Jednostka",
-  "calc_karat": "Próba",
-  "calc_value": "Szacowana wartość",
-  "calc_note": "Oparte na cenie światowej. Sklepy płacą za używane złoto zwykle mniej.",
-  "zakat_title": "Zakat od złota i srebra",
-  "zakat_nisab_gold": "Nisab złota (85 gramów)",
-  "zakat_nisab_silver": "Nisab srebra (595 gramów)",
-  "zakat_gold_g": "Twoje złoto w gramach (ekwiwalent 24K)",
-  "zakat_silver_g": "Twoje srebro w gramach",
-  "zakat_due": "Należny zakat (2,5%)",
-  "zakat_note": "Zakat należy się od majątku powyżej nisabu, przechowywanego przez jeden rok księżycowy. To tylko wskazówka, w swojej sprawie zapytaj uczonego.",
-  "zakat_below": "Poniżej nisabu: od tej kwoty nie jest należny zakat.",
-  "related_title": "Popularne wyszukiwania",
-  "retail_basis": "Na podstawie {n} lokalnych źródeł, sprawdzono {d}."
- },
- "assets": {
-  "gold": "Złoto",
-  "silver": "Srebro",
-  "platinum": "Platyna",
-  "palladium": "Pallad",
-  "copper": "Miedź",
-  "aluminum": "Aluminium",
-  "nickel": "Nikiel",
-  "zinc": "Cynk",
-  "lead": "Ołów",
-  "tin": "Cyna",
-  "cobalt": "Kobalt",
-  "lithium": "Lit",
-  "uranium": "Uran",
-  "iron-ore": "Ruda żelaza",
-  "steel": "Stal",
-  "wti-oil": "Ropa WTI",
-  "brent-oil": "Ropa Brent",
-  "natural-gas": "Gaz ziemny",
-  "gasoline": "Benzyna",
-  "heating-oil": "Olej opałowy",
-  "wheat": "Pszenica",
-  "corn": "Kukurydza",
-  "soybeans": "Soja",
-  "rice": "Ryż",
-  "sugar": "Cukier",
-  "coffee": "Kawa",
-  "cocoa": "Kakao",
-  "cotton": "Bawełna",
-  "bitcoin": "Bitcoin",
-  "ethereum": "Ethereum",
-  "bnb": "BNB",
-  "xrp": "XRP",
-  "solana": "Solana",
-  "cardano": "Cardano",
-  "dogecoin": "Dogecoin",
-  "tron": "TRON",
-  "polkadot": "Polkadot",
-  "chainlink": "Chainlink",
-  "litecoin": "Litecoin",
-  "avalanche": "Avalanche",
-  "sp500": "S&P 500",
-  "nasdaq": "Nasdaq Composite",
-  "dow-jones": "Dow Jones",
-  "ftse-100": "FTSE 100",
-  "dax": "DAX",
-  "cac-40": "CAC 40",
-  "nikkei-225": "Nikkei 225",
-  "hang-seng": "Hang Seng",
-  "shanghai": "Shanghai Composite",
-  "nifty-50": "Nifty 50",
-  "sensex": "Sensex",
-  "egx30": "EGX 30",
-  "tasi": "Tadawul All Share (TASI)",
-  "bist-100": "BIST 100",
-  "bovespa": "Bovespa",
-  "asx-200": "ASX 200",
-  "tsx": "S&P/TSX Composite",
-  "kospi": "KOSPI",
-  "euro-stoxx-50": "Euro Stoxx 50"
- },
- "kw": {
-  "price": "cena",
-  "today": "dziś",
-  "live": "online",
-  "rate": "kurs",
-  "per_gram": "za gram",
-  "ounce": "uncja",
-  "bar": "sztabka",
-  "used": "używane",
-  "karat": "próba",
-  "chart": "wykres",
-  "convert": "przelicznik",
-  "calculator": "kalkulator",
-  "zakat": "zakat"
- },
- "legal": {
-  "about": [
-   "{site} pokazuje aktualne ceny złota, srebra, innych metali, ropy, gazu, surowców rolnych, indeksów giełdowych i kryptowalut w Twojej walucie, dla wielu krajów i języków.",
-   "Ceny pochodzą z publicznych kanałów danych rynkowych i są aktualizowane co kilka minut. Niektóre ceny są aktualizowane ręcznie i pokazują czas ostatniej aktualizacji.",
-   "Lokalne szacunki detaliczne doliczają do ceny światowej typowe podatki, koszty wykonania i premie dealerskie. To szacunki, a nie oferty."
-  ],
-  "privacy": [
-   "Nie wymagamy kont ani danych osobowych. W przeglądarce zapisujemy wyłącznie Twój wybór języka, kraju i motywu.",
-   "Reklamy, jeśli są włączone, wyświetla Google AdSense, który może używać plików cookie, aby pokazywać trafne reklamy. Możesz nimi zarządzać w ustawieniach reklam Google.",
-   "Mogą być zbierane anonimowe, zbiorcze statystyki odwiedzin w celu ulepszania serwisu."
-  ],
-  "contact": [
-   "Pytania, poprawki lub propozycje współpracy: prosimy o kontakt pod adresem podanym na tej stronie po uruchomieniu serwisu.",
-   "Jeśli zauważysz błędną cenę, podaj nam aktywo, kraj i miejsce, w którym widziałeś poprawną wartość."
-  ]
- }
+  "ui": {
+    "today": "dziś",
+    "updated": "Zaktualizowano {t}",
+    "delayed": "Opóźnione",
+    "per": "za {u}",
+    "u_gram": "gram",
+    "u_ounce": "uncja",
+    "u_kilo": "kilogram",
+    "u_tola": "tola",
+    "u_ton": "tona metryczna",
+    "u_barrel": "baryłka",
+    "u_mmbtu": "MMBtu",
+    "u_gallon": "galon",
+    "u_bushel": "buszel",
+    "u_lb": "funt",
+    "u_cwt": "cetnar",
+    "u_coin": "moneta",
+    "u_point": "punktów",
+    "global_vs_local": "Cena światowa a lokalna",
+    "global_price": "Cena światowa",
+    "local_estimate": "Szacunek lokalny",
+    "est_retail": "Szacowana cena detaliczna wraz z kosztem wykonania",
+    "est_note": "To tylko szacunek. Sklepy różnią się podatkami, kosztami wykonania i marżami.",
+    "karat_title": "{a} według próby",
+    "karat": "Próba",
+    "purity": "Czystość",
+    "price": "Cena",
+    "currencies_title": "Cena {a} w innych walutach",
+    "col_ounce": "Za uncję",
+    "col_gram": "Za gram",
+    "col_24h": "24 h",
+    "col_7d": "7 dni",
+    "markets_title": "Metale, energia, rolnictwo i kryptowaluty",
+    "markets_sub": "Aktualne ceny w {cur}",
+    "list_title": "Ceny metali, energii, surowców i kryptowalut w: {country}",
+    "list_desc": "Aktualne ceny złota, srebra, platyny, miedzi, ropy, gazu, pszenicy, kawy, indeksów giełdowych, Bitcoina i innych w {cur}.",
+    "alerts_title": "Alerty cenowe",
+    "alerts_desc": "Otrzymaj powiadomienie, gdy cena osiągnie Twój cel, na telefon lub e-mail.",
+    "alerts_cta": "Utwórz alert",
+    "search_ph": "Szukaj np. cena {a} w {country}…",
+    "search_btn": "Szukaj",
+    "r1d": "1D",
+    "r1w": "1T",
+    "r1m": "1M",
+    "r1y": "1R",
+    "r5y": "5L",
+    "rall": "Wszystko",
+    "geo_ask": "Pokazać ceny dla {country} w {cur}?",
+    "geo_yes": "Tak, zmień",
+    "geo_no": "Nie, dziękuję",
+    "footer_note": "Ceny są orientacyjne i mogą być opóźnione. To nie jest porada inwestycyjna.",
+    "about": "O nas",
+    "privacy": "Polityka prywatności",
+    "contact": "Kontakt",
+    "theme": "Motyw",
+    "language": "Język",
+    "country": "Kraj",
+    "faq_title": "Najczęściej zadawane pytania",
+    "q1": "Jaka jest dziś cena {a} w {country}?",
+    "a1": "Cena {a} w {country} wynosi dziś {p} {cur} za {u}. To globalna cena spot przeliczona według najnowszego kursu wymiany i aktualizowana co kilka minut.",
+    "q2": "Dlaczego cena lokalna różni się od światowej?",
+    "a2": "Sklepy doliczają do globalnej ceny spot koszt wykonania, podatki, cła importowe i marżę dealera, dlatego cena detaliczna w {country} jest zwykle wyższa.",
+    "q3": "Jak często aktualizowana jest cena?",
+    "a3": "Aktualne ceny rynkowe odświeżane są co kilka minut. Ceny bez aktualnego źródła danych są aktualizowane ręcznie i pokazują czas ostatniej aktualizacji.",
+    "title": "Cena {a} w {country} dziś | za {u} w {cur}",
+    "desc": "Aktualna cena {a} w {country} w {cur}: za gram, uncję i kilogram, wykres cen oraz cena światowa i lokalna. Aktualizacja co kilka minut.",
+    "title_idx": "Indeks {a} dziś | aktualna wartość i wykres",
+    "desc_idx": "Aktualna wartość indeksu {a}, dzienna zmiana i wykres cen. Aktualizacja co kilka minut.",
+    "history_note": "Historia oparta jest na dziennych kursach zamknięcia.",
+    "unit_label": "Jednostka",
+    "sample_note": "Dane przykładowe",
+    "nav_all": "Rynki",
+    "nav_rates": "Waluty",
+    "nav_calc": "Kalkulatory",
+    "cat_precious": "Metale szlachetne",
+    "cat_industrial": "Metale przemysłowe",
+    "cat_energy": "Energia",
+    "cat_agri": "Rolnictwo",
+    "cat_index": "Indeksy giełdowe",
+    "cat_crypto": "Kryptowaluty",
+    "bars_title": "{a}: sztabki i monety, cena kupna i sprzedaży w {cur}",
+    "bar_size": "Waga",
+    "bar_buy": "Kup u dealera",
+    "bar_sell": "Sprzedaj z powrotem",
+    "bar_prem": "Premia ponad cenę spot",
+    "bars_note": "Typowe ceny dealerskie oparte na cenie światowej i zwykłej premii. Rzeczywiste ceny różnią się w zależności od sklepu i dnia.",
+    "used_title": "Używane i złom {a}: cena skupu za gram w {cur}",
+    "used_note": "Używana biżuteria jest zwykle skupowana poniżej ceny nowej. To typowe szacunki.",
+    "used_col": "Skup za gram",
+    "rates_title": "Kursy walut w stosunku do {cur}",
+    "rates_sub": "Kursy średnie, aktualizowane co godzinę",
+    "rates_desc": "Aktualne kursy głównych walut świata w stosunku do {cur} oraz kalkulator walutowy.",
+    "rates_page_title": "Kursy walut i kalkulator walutowy w: {country}",
+    "conv_title": "Kalkulator walutowy",
+    "conv_amount": "Kwota",
+    "conv_from": "Z",
+    "conv_to": "Na",
+    "conv_result": "{amount} {from} = {value} {to}",
+    "calc_page_title": "Kalkulator złota i kalkulator zakatu w: {country}",
+    "calc_page_desc": "Oblicz wartość swojego złota według wagi i próby w {cur} oraz sprawdź zakat od złota i srebra według dzisiejszych cen.",
+    "calc_title": "Kalkulator wartości złota",
+    "calc_weight": "Waga",
+    "calc_unit": "Jednostka",
+    "calc_karat": "Próba",
+    "calc_value": "Szacowana wartość",
+    "calc_note": "Oparte na cenie światowej. Sklepy płacą za używane złoto zwykle mniej.",
+    "zakat_title": "Zakat od złota i srebra",
+    "zakat_nisab_gold": "Nisab złota (85 gramów)",
+    "zakat_nisab_silver": "Nisab srebra (595 gramów)",
+    "zakat_gold_g": "Twoje złoto w gramach (ekwiwalent 24K)",
+    "zakat_silver_g": "Twoje srebro w gramach",
+    "zakat_due": "Należny zakat (2,5%)",
+    "zakat_note": "Zakat należy się od majątku powyżej nisabu, przechowywanego przez jeden rok księżycowy. To tylko wskazówka, w swojej sprawie zapytaj uczonego.",
+    "zakat_below": "Poniżej nisabu: od tej kwoty nie jest należny zakat.",
+    "related_title": "Popularne wyszukiwania",
+    "retail_basis": "Na podstawie {n} lokalnych źródeł, sprawdzono {d}.",
+    "u_share": "Udział",
+    "u_rate": "Kurs",
+    "u_mbf": "1000 board feet",
+    "cat_stock": "Akcje",
+    "cat_forex": "Pary walutowe",
+    "cat_construction": "Materiały budowlane",
+    "perf_title": "Wyniki",
+    "p_7d": "1 tydzień",
+    "p_30d": "1 miesiąc",
+    "p_90d": "3 miesiące",
+    "p_ytd": "Od początku roku",
+    "p_1y": "1 rok",
+    "p_5y": "5 lat",
+    "range52": "Zakres 52-tygodniowy",
+    "ath": "Najwyższa wartość w naszych danych",
+    "atl": "Najniższa wartość w naszych danych",
+    "since": "Historia od {d}",
+    "about_title": "O {a}",
+    "drivers_title": "Co wpływa na cenę",
+    "uses_title": "Do czego jest używane",
+    "source_note": "Źródło: {s}. Ceny mają charakter orientacyjny i mogą być opóźnione.",
+    "about_stock": "Akcje {a} są notowane w {c}. Strona pokazuje ostatnią opóźnioną cenę, zmianę dzisiaj i w dłuższych okresach oraz tę samą cenę przeliczoną na inne waluty.",
+    "about_forex": "{a} pokazuje, ile jednostek drugiej waluty kupuje jedna jednostka pierwszej waluty. Kursy zmieniają się wraz ze stopami procentowymi, inflacją, handlem i wiadomościami gospodarczymi obu krajów.",
+    "about_crypto": "{a} to kryptowaluta. Jej cena wynika z handlu na giełdach przez całą dobę i może szybko się zmieniać. Strona pokazuje aktualną cenę, zmianę w różnych okresach oraz cenę w innych walutach.",
+    "about_commodity": "{a} to surowiec będący przedmiotem obrotu. Jego cena zależy od podaży, popytu, pogody, walut i wiadomości. Strona pokazuje ostatnią cenę, zmianę w różnych okresach oraz cenę w innych walutach.",
+    "about_index": "{a} mierzy wyniki koszyka akcji. Wartość podawana jest w punktach indeksu i zmienia się wraz z cenami akcji spółek wchodzących w jego skład.",
+    "tail_list_title": "Akcje, krypto, pary walutowe i więcej surowców",
+    "tail_list_desc": "Aktualne ceny globalnych akcji, kolejnych kryptowalut, par walutowych i dodatkowych surowców, z wykresami i wynikami.",
+    "tail_title": "Cena {a} dzisiaj | wartość na żywo i wykres",
+    "tail_desc": "Aktualna cena {a} z wykresem i wynikami za 1 tydzień, 1 miesiąc, 1 rok i więcej. Aktualizowana co kilka minut.",
+    "nav_dev": "Dla programistów",
+    "nav_compare": "Porównaj",
+    "terms": "Regulamin",
+    "disclaimer": "Zastrzeżenie",
+    "cookies": "Polityka cookies",
+    "developers": "API dla programistów",
+    "alert_title": "Ustaw alert cenowy",
+    "alert_email": "Twój e-mail",
+    "alert_target": "Cena docelowa ({cur})",
+    "alert_above": "Wzrośnie powyżej",
+    "alert_below": "Spadnie poniżej",
+    "alert_submit": "Utwórz alert",
+    "alert_ok": "Alert zapisany. Wyślemy Ci jednego e-maila, gdy cena osiągnie Twój cel.",
+    "alert_err": "Nie udało się zapisać alertu. Sprawdź e-mail i cenę i spróbuj ponownie.",
+    "alert_privacy": "Twojego adresu e-mail używamy wyłącznie do wysłania tego alertu.",
+    "contact_title": "Napisz do nas",
+    "contact_name": "Twoje imię",
+    "contact_email": "Twój e-mail",
+    "contact_msg": "Wiadomość",
+    "contact_send": "Wyślij",
+    "contact_ok": "Dziękujemy. Twoja wiadomość została wysłana.",
+    "contact_err": "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
+    "dev_title": "Darmowe API cen",
+    "dev_desc": "Wykorzystaj nasze ceny we własnej aplikacji lub na stronie. Darmowe klucze są ograniczone do 1000 zapytań dziennie. Prosimy o podanie strony jako źródła.",
+    "dev_endpoints": "Endpointy",
+    "dev_request": "Uzyskaj darmowy klucz API",
+    "dev_email": "Twój e-mail",
+    "dev_purpose": "Co zamierzasz zbudować?",
+    "dev_get": "Pobierz klucz",
+    "dev_key": "Twój klucz API (zapisz go teraz, jest wyświetlany tylko raz)",
+    "dev_err": "Nie udało się utworzyć klucza. Sprawdź e-mail i spróbuj ponownie.",
+    "dev_usage": "Wyślij klucz w nagłówku x-api-key.",
+    "cmp_title": "Porównaj dwa aktywa",
+    "cmp_a": "Pierwsze aktywo",
+    "cmp_b": "Drugie aktywo",
+    "cmp_ratio": "Stosunek (pierwsze podzielone przez drugie)",
+    "cmp_now": "Teraz",
+    "cmp_desc": "Porównaj dowolne dwa aktywa: stosunek między nimi w czasie, na przykład stosunek złota do srebra.",
+    "cmp_page_title": "Porównanie cen i stosunków: {country}",
+    "roi_title": "Kalkulator zysku",
+    "roi_buy": "Cena zakupu",
+    "roi_amount": "Ilość",
+    "roi_now": "Aktualna cena",
+    "roi_profit": "Zysk lub strata",
+    "roi_pct": "Zwrot",
+    "units_title": "Konwerter jednostek",
+    "units_value": "Wartość",
+    "units_from": "Z",
+    "units_to": "Na",
+    "calc_tools_desc": "Kalkulatory wartości złota, zakat, zysku i jednostek."
+  },
+  "assets": {
+    "gold": "Złoto",
+    "silver": "Srebro",
+    "platinum": "Platyna",
+    "palladium": "Pallad",
+    "copper": "Miedź",
+    "aluminum": "Aluminium",
+    "nickel": "Nikiel",
+    "zinc": "Cynk",
+    "lead": "Ołów",
+    "tin": "Cyna",
+    "cobalt": "Kobalt",
+    "lithium": "Lit",
+    "uranium": "Uran",
+    "iron-ore": "Ruda żelaza",
+    "steel": "Stal",
+    "wti-oil": "Ropa WTI",
+    "brent-oil": "Ropa Brent",
+    "natural-gas": "Gaz ziemny",
+    "gasoline": "Benzyna",
+    "heating-oil": "Olej opałowy",
+    "wheat": "Pszenica",
+    "corn": "Kukurydza",
+    "soybeans": "Soja",
+    "rice": "Ryż",
+    "sugar": "Cukier",
+    "coffee": "Kawa",
+    "cocoa": "Kakao",
+    "cotton": "Bawełna",
+    "bitcoin": "Bitcoin",
+    "ethereum": "Ethereum",
+    "bnb": "BNB",
+    "xrp": "XRP",
+    "solana": "Solana",
+    "cardano": "Cardano",
+    "dogecoin": "Dogecoin",
+    "tron": "TRON",
+    "polkadot": "Polkadot",
+    "chainlink": "Chainlink",
+    "litecoin": "Litecoin",
+    "avalanche": "Avalanche",
+    "sp500": "S&P 500",
+    "nasdaq": "Nasdaq Composite",
+    "dow-jones": "Dow Jones",
+    "ftse-100": "FTSE 100",
+    "dax": "DAX",
+    "cac-40": "CAC 40",
+    "nikkei-225": "Nikkei 225",
+    "hang-seng": "Hang Seng",
+    "shanghai": "Shanghai Composite",
+    "nifty-50": "Nifty 50",
+    "sensex": "Sensex",
+    "egx30": "EGX 30",
+    "tasi": "Tadawul All Share (TASI)",
+    "bist-100": "BIST 100",
+    "bovespa": "Bovespa",
+    "asx-200": "ASX 200",
+    "tsx": "S&P/TSX Composite",
+    "kospi": "KOSPI",
+    "euro-stoxx-50": "Euro Stoxx 50"
+  },
+  "kw": {
+    "price": "cena",
+    "today": "dziś",
+    "live": "online",
+    "rate": "kurs",
+    "per_gram": "za gram",
+    "ounce": "uncja",
+    "bar": "sztabka",
+    "used": "używane",
+    "karat": "próba",
+    "chart": "wykres",
+    "convert": "przelicznik",
+    "calculator": "kalkulator",
+    "zakat": "zakat"
+  },
+  "legal": {
+    "about": [
+      "{site} pokazuje aktualne ceny złota, srebra, innych metali, energii, surowców rolnych, akcji, indeksów, kryptowalut i walut w Twojej walucie, dla wielu krajów i języków.",
+      "Ceny pochodzą z publicznych źródeł danych rynkowych i są aktualizowane co kilka minut. Niektóre ceny są pobierane z publicznych stron lub wprowadzane ręcznie, a ich źródło jest podane.",
+      "Lokalne szacunki detaliczne doliczają typowe podatki, koszty wykonania i marże dealerów do ceny światowej. Podajemy źródła i datę. To szacunki, nie oferty.",
+      "Oferujemy też kalkulatory wartości złota, zakat, zysku i jednostek, przelicznik walut oraz alerty cenowe."
+    ],
+    "privacy": [
+      "Nie wymagamy kont ani danych osobowych. W przeglądarce zapisujemy wyłącznie Twój wybór języka, kraju i motywu.",
+      "Reklamy, jeśli są włączone, wyświetla Google AdSense, który może używać plików cookie, aby pokazywać trafne reklamy. Możesz nimi zarządzać w ustawieniach reklam Google.",
+      "Mogą być zbierane anonimowe, zbiorcze statystyki odwiedzin w celu ulepszania serwisu."
+    ],
+    "contact": [
+      "Pytania, poprawki lub propozycje współpracy: prosimy o kontakt pod adresem podanym na tej stronie po uruchomieniu serwisu.",
+      "Jeśli zauważysz błędną cenę, podaj nam aktywo, kraj i miejsce, w którym widziałeś poprawną wartość."
+    ],
+    "terms": [
+      "Korzystając z {site}, akceptujesz niniejszy regulamin. Serwis jest udostępniany w celach informacyjnych.",
+      "Ceny, wykresy i szacunki mają charakter orientacyjny, mogą być opóźnione lub błędne i nie mogą być jedyną podstawą transakcji ani zakupu.",
+      "Nie wolno kopiować danych na dużą skalę ani ich odsprzedawać. Do zautomatyzowanego dostępu użyj naszego darmowego API i podaj serwis jako źródło.",
+      "Możemy w dowolnym momencie zmienić lub wstrzymać dowolną część usługi i nie odpowiadamy za straty wynikające z jej użycia."
+    ],
+    "disclaimer": [
+      "{site} nie jest biurem maklerskim, bankiem ani doradcą finansowym i nie udziela porad inwestycyjnych.",
+      "Lokalne szacunki detaliczne, premie za sztabki i wartości skupu to szacunki oparte na publicznych źródłach. Sklepy się różnią, dlatego zawsze potwierdź cenę u sprzedawcy.",
+      "Wyniki z przeszłości nie przesądzają o przyszłych wynikach. Inwestowanie w metale, akcje i kryptowaluty wiąże się z ryzykiem, w tym z utratą zainwestowanych pieniędzy."
+    ],
+    "cookies": [
+      "Korzystamy wyłącznie z pamięci przeglądarki potrzebnej do zapamiętania języka, kraju i motywu.",
+      "Reklamy, jeśli są włączone, dostarcza Google AdSense, który może ustawiać pliki cookie, aby wyświetlać trafne reklamy. Możesz tym zarządzać w ustawieniach reklam Google.",
+      "Odwiedzający z regionów, w których wymagana jest zgoda, zostaną o nią poproszeni przed użyciem reklamowych plików cookie."
+    ],
+    "developers": [
+      "Nasze API cen jest bezpłatne dla małych projektów. Utwórz klucz poniżej i wyślij go w nagłówku x-api-key.",
+      "Endpointy: /v1/overview – wszystkie ceny i wyniki, /v1/chart/SYMBOL?days=365 – historia, /v1/rates – kursy walut.",
+      "Darmowe klucze pozwalają na 1000 zapytań dziennie. Odpowiedzi są buforowane przez minutę, dlatego prosimy nie wysyłać zapytań częściej.",
+      "Prosimy o podanie serwisu jako źródła, gdy pokazujesz nasze ceny."
+    ]
+  },
+  "content": {
+    "gold": {
+      "about": "Złoto to najczęściej posiadany metal szlachetny i tradycyjny środek przechowywania wartości. Na świecie cena podawana jest za uncję trojańską, a na wielu lokalnych rynkach za gram lub tolę. Biżuteria sprzedawana jest według próby karatowej od 10K do 24K.",
+      "drivers": [
+        "Stopy procentowe i dolar amerykański",
+        "Inflacja oraz niepewność gospodarcza lub polityczna",
+        "Zakupy banków centralnych i popyt inwestycyjny"
+      ],
+      "uses": [
+        "Biżuteria i prezenty",
+        "Sztabki i monety inwestycyjne",
+        "Elektronika i stomatologia"
+      ]
+    },
+    "silver": {
+      "about": "Srebro jest zarówno metalem szlachetnym, jak i przemysłowym. Cena podawana jest za uncję trojańską, a srebro sprzedaje się jako sztabki, monety i biżuterię o próbach takich jak 999, 925 i 800.",
+      "drivers": [
+        "Popyt przemysłowy ze strony paneli słonecznych i elektroniki",
+        "Cena złota i dolar amerykański",
+        "Popyt inwestycyjny na sztabki i monety"
+      ],
+      "uses": [
+        "Biżuteria i srebra stołowe",
+        "Panele słoneczne i elektronika",
+        "Sztabki i monety inwestycyjne"
+      ]
+    },
+    "platinum": {
+      "about": "Platyna to rzadki, gęsty metal szlachetny, który w wielu okresach był cenniejszy na wagę niż złoto. Cena podawana jest za uncję trojańską.",
+      "drivers": [
+        "Popyt ze strony katalizatorów samochodowych",
+        "Podaż z kopalń, głównie z RPA i Rosji",
+        "Popyt inwestycyjny i cena złota"
+      ],
+      "uses": [
+        "Katalizatory",
+        "Biżuteria",
+        "Przemysł chemiczny i technologie wodorowe"
+      ]
+    },
+    "palladium": {
+      "about": "Pallad to rzadki metal szlachetny, używany głównie w katalizatorach samochodów benzynowych. Cena podawana jest za uncję trojańską.",
+      "drivers": [
+        "Produkcja samochodów i przepisy emisyjne",
+        "Podaż z kopalń w Rosji i RPA",
+        "Zastępowanie platyną"
+      ],
+      "uses": [
+        "Katalizatory",
+        "Elektronika",
+        "Stomatologia i biżuteria"
+      ]
+    },
+    "copper": {
+      "about": "Miedź to wzorcowy metal przemysłowy. Cena podawana jest za tonę metryczną i śledzona jako wskaźnik kondycji światowej gospodarki.",
+      "drivers": [
+        "Popyt z budownictwa i przemysłu, zwłaszcza w Chinach",
+        "Podaż z kopalń i zapasy",
+        "Dolar amerykański i polityka handlowa"
+      ],
+      "uses": [
+        "Okablowanie elektryczne i sieci energetyczne",
+        "Budownictwo i instalacje hydrauliczne",
+        "Samochody elektryczne i odnawialne źródła energii"
+      ]
+    },
+    "aluminum": {
+      "about": "Aluminium to lekki, powszechnie używany metal produkowany z boksytu przy dużym zużyciu energii elektrycznej. Cena podawana jest za tonę metryczną.",
+      "drivers": [
+        "Koszty energii przy wytopie",
+        "Popyt z motoryzacji, opakowań i budownictwa",
+        "Produkcja w Chinach i cła handlowe"
+      ],
+      "uses": [
+        "Opakowania i puszki",
+        "Samochody i samoloty",
+        "Budownictwo"
+      ]
+    },
+    "nickel": {
+      "about": "Nikiel to metal używany do produkcji stali nierdzewnej i baterii. Cena podawana jest za tonę metryczną na London Metal Exchange.",
+      "drivers": [
+        "Popyt na stal nierdzewną",
+        "Popyt na baterie do samochodów elektrycznych",
+        "Podaż z Indonezji i Filipin"
+      ],
+      "uses": [
+        "Stal nierdzewna",
+        "Baterie",
+        "Stopy metali"
+      ]
+    },
+    "zinc": {
+      "about": "Cynk służy głównie do cynkowania stali, czyli zabezpieczania jej przed rdzą. Cena podawana jest za tonę metryczną.",
+      "drivers": [
+        "Popyt ze strony stali i budownictwa",
+        "Podaż z kopalń i produkcja hut",
+        "Ceny energii w Europie i Chinach"
+      ],
+      "uses": [
+        "Cynkowanie stali",
+        "Mosiądz i stopy",
+        "Baterie"
+      ]
+    },
+    "lead": {
+      "about": "Ołów to ciężki metal wykorzystywany głównie w akumulatorach samochodowych. Cena podawana jest za tonę metryczną.",
+      "drivers": [
+        "Popyt z motoryzacji i produkcji akumulatorów",
+        "Podaż z recyklingu",
+        "Wydobycie i przepisy środowiskowe"
+      ],
+      "uses": [
+        "Akumulatory samochodowe",
+        "Osłony przed promieniowaniem",
+        "Kable i stopy"
+      ]
+    },
+    "tin": {
+      "about": "Cyna to rzadki metal, używany głównie jako lut w elektronice. Cena podawana jest za tonę metryczną.",
+      "drivers": [
+        "Popyt z elektroniki i produkcji chipów",
+        "Podaż z kopalń w Indonezji, Mjanmie i Peru",
+        "Zapasy i przepisy handlowe"
+      ],
+      "uses": [
+        "Lut do elektroniki",
+        "Puszki na żywność",
+        "Chemikalia"
+      ]
+    },
+    "cobalt": {
+      "about": "Kobalt to metal do baterii, wydobywany głównie w Demokratycznej Republice Konga. Cena podawana jest za tonę metryczną.",
+      "drivers": [
+        "Popyt na samochody elektryczne i baterie",
+        "Podaż z kopalń w Kongu i przepisy eksportowe",
+        "Zmiany w chemii baterii"
+      ],
+      "uses": [
+        "Baterie",
+        "Superstopy",
+        "Magnesy"
+      ]
+    },
+    "lithium": {
+      "about": "Węglan litu to podstawowy surowiec do akumulatorów wielokrotnego ładowania. Podana cena dotyczy węglanu klasy bateryjnej w Chinach, przeliczonego na dolary amerykańskie za tonę metryczną.",
+      "drivers": [
+        "Sprzedaż samochodów elektrycznych",
+        "Nowe kopalnie i rafinerie",
+        "Polityka rządu wobec baterii"
+      ],
+      "uses": [
+        "Akumulatory do samochodów elektrycznych",
+        "Telefony i laptopy",
+        "Magazynowanie energii"
+      ]
+    },
+    "uranium": {
+      "about": "Uran to paliwo elektrowni jądrowych. Cena podawana jest w dolarach amerykańskich za funt U3O8.",
+      "drivers": [
+        "Ponowne uruchamianie elektrowni i nowe reaktory",
+        "Wydobycie, głównie z Kazachstanu i Kanady",
+        "Rządowe zapasy i sankcje"
+      ],
+      "uses": [
+        "Energetyka jądrowa",
+        "Izotopy medyczne"
+      ]
+    },
+    "iron-ore": {
+      "about": "Ruda żelaza to podstawowy surowiec do produkcji stali. Podana cena dotyczy rudy o zawartości 62% żelaza dostarczanej do Chin, za tonę metryczną.",
+      "drivers": [
+        "Produkcja stali w Chinach",
+        "Podaż z Australii i Brazylii",
+        "Wydatki na nieruchomości i infrastrukturę"
+      ],
+      "uses": [
+        "Produkcja stali"
+      ]
+    },
+    "steel": {
+      "about": "Stal to stop żelaza używany prawie we wszystkich gałęziach przemysłu. Podana cena dotyczy prętów zbrojeniowych w Chinach, przeliczonych na dolary amerykańskie za tonę metryczną.",
+      "drivers": [
+        "Popyt budowlany",
+        "Koszty rudy żelaza i węgla koksowego",
+        "Rządowe limity produkcji"
+      ],
+      "uses": [
+        "Budynki i mosty",
+        "Samochody i maszyny"
+      ]
+    },
+    "steel-hrc": {
+      "about": "Zwój stali walcowanej na gorąco to płaski wyrób stalowy stosowany w przemyśle. Podana cena dotyczy dostawy na środkowy zachód USA, za tonę metryczną.",
+      "drivers": [
+        "Popyt w USA z motoryzacji i budownictwa",
+        "Cła importowe i konkurencja",
+        "Koszty surowców i energii"
+      ],
+      "uses": [
+        "Samochody i urządzenia AGD",
+        "Rury i budownictwo"
+      ]
+    },
+    "lumber": {
+      "about": "Kontrakty terminowe na drewno odzwierciedlają cenę drewna iglastego używanego do budowy domów, podawaną za 1000 board feet.",
+      "drivers": [
+        "Rozpoczęte budowy domów i stopy kredytów hipotecznych",
+        "Produkcja tartaków i pożary lasów",
+        "Cła handlowe między USA a Kanadą"
+      ],
+      "uses": [
+        "Konstrukcje dachowe i szkielety domów",
+        "Meble i opakowania"
+      ]
+    },
+    "wti-oil": {
+      "about": "WTI to amerykański wzorzec ropy naftowej. Cena podawana jest za baryłkę i dotyczy dostawy w Cushing w stanie Oklahoma.",
+      "drivers": [
+        "Decyzje OPEC i produkcja USA",
+        "Globalny wzrost gospodarczy",
+        "Zapasy, geopolityka i dolar amerykański"
+      ],
+      "uses": [
+        "Benzyna, olej napędowy i paliwo lotnicze",
+        "Tworzywa sztuczne i chemikalia"
+      ]
+    },
+    "brent-oil": {
+      "about": "Brent to światowy wzorzec ropy naftowej. Cena podawana jest za baryłkę i wyznacza cenę większości ropy handlowanej poza USA.",
+      "drivers": [
+        "Decyzje OPEC+ o produkcji",
+        "Globalny popyt, zwłaszcza z Chin i Indii",
+        "Konflikty i sankcje w regionach wydobycia"
+      ],
+      "uses": [
+        "Benzyna, olej napędowy i paliwo lotnicze",
+        "Tworzywa sztuczne i chemikalia"
+      ]
+    },
+    "natural-gas": {
+      "about": "Gaz ziemny jest tu podawany jako amerykańska cena Henry Hub za MMBtu. Służy do ogrzewania, produkcji energii elektrycznej i w przemyśle.",
+      "drivers": [
+        "Pogoda i zapotrzebowanie na ogrzewanie",
+        "Poziomy zapasów i produkcja",
+        "Eksport skroplonego gazu ziemnego (LNG)"
+      ],
+      "uses": [
+        "Produkcja energii elektrycznej",
+        "Ogrzewanie i gotowanie w domach",
+        "Nawozy i chemikalia"
+      ]
+    },
+    "gasoline": {
+      "about": "Kontrakty terminowe na benzynę odzwierciedlają hurtowe ceny benzyny w dolarach amerykańskich za galon.",
+      "drivers": [
+        "Cena ropy naftowej",
+        "Produkcja rafinerii i sezon jazdy",
+        "Zapasy i przepisy"
+      ],
+      "uses": [
+        "Paliwo do samochodów"
+      ]
+    },
+    "heating-oil": {
+      "about": "Kontrakty terminowe na olej opałowy odzwierciedlają hurtowe ceny oleju napędowego i opałowego w dolarach amerykańskich za galon.",
+      "drivers": [
+        "Cena ropy naftowej",
+        "Pogoda zimowa",
+        "Popyt na olej napędowy z ciężarówek i przemysłu"
+      ],
+      "uses": [
+        "Ogrzewanie domów",
+        "Olej napędowy"
+      ]
+    },
+    "wheat": {
+      "about": "Pszenica to jedno z najważniejszych zbóż na świecie. Cena podawana jest za bushel na giełdzie w Chicago.",
+      "drivers": [
+        "Pogoda w głównych regionach uprawy",
+        "Eksport z Rosji, Ukrainy, USA i UE",
+        "Zapasy, ceny energii i dolar amerykański"
+      ],
+      "uses": [
+        "Chleb, makaron i mąka",
+        "Pasza dla zwierząt"
+      ]
+    },
+    "corn": {
+      "about": "Kukurydza to ważne zboże paszowe i spożywcze, a także źródło etanolu. Cena podawana jest za bushel na giełdzie w Chicago.",
+      "drivers": [
+        "Zbiory w USA i Brazylii",
+        "Popyt na etanol i pasze",
+        "Pogoda i eksport"
+      ],
+      "uses": [
+        "Pasza dla zwierząt",
+        "Paliwo etanolowe",
+        "Żywność i syropy"
+      ]
+    },
+    "soybeans": {
+      "about": "Soja jest przetwarzana na olej i śrutę. Cena podawana jest za bushel na giełdzie w Chicago.",
+      "drivers": [
+        "Zbiory w USA, Brazylii i Argentynie",
+        "Popyt importowy z Chin",
+        "Polityka biopaliw"
+      ],
+      "uses": [
+        "Olej spożywczy",
+        "Pasza dla zwierząt",
+        "Biodiesel"
+      ]
+    },
+    "rice": {
+      "about": "Ryż niełuskany to podstawowy pokarm dla miliardów ludzi. Cena podawana jest za hundredweight (ok. 45 kg) na giełdzie w Chicago.",
+      "drivers": [
+        "Monsun i warunki zbiorów w Azji",
+        "Przepisy eksportowe Indii, Tajlandii i Wietnamu",
+        "Zapasy i ceny żywności"
+      ],
+      "uses": [
+        "Żywność"
+      ]
+    },
+    "sugar": {
+      "about": "Kontrakty terminowe na cukier surowy odzwierciedlają światową cenę cukru, podawaną w dolarach amerykańskich za funt.",
+      "drivers": [
+        "Zbiory trzciny cukrowej w Brazylii i Indiach",
+        "Popyt na etanol w Brazylii",
+        "Pogoda i waluty"
+      ],
+      "uses": [
+        "Żywność i napoje",
+        "Etanol"
+      ]
+    },
+    "coffee": {
+      "about": "Kontrakty terminowe na kawę arabica odzwierciedlają światową cenę ziaren kawy, podawaną w dolarach amerykańskich za funt.",
+      "drivers": [
+        "Pogoda w Brazylii i Kolumbii",
+        "Zapasy i eksport",
+        "Waluty i popyt"
+      ],
+      "uses": [
+        "Napoje kawowe"
+      ]
+    },
+    "cocoa": {
+      "about": "Kontrakty terminowe na kakao odzwierciedlają cenę ziaren kakaowca, podawaną w dolarach amerykańskich za tonę metryczną.",
+      "drivers": [
+        "Zbiory w Wybrzeżu Kości Słoniowej i Ghanie",
+        "Choroby i pogoda",
+        "Popyt na czekoladę"
+      ],
+      "uses": [
+        "Czekolada i słodycze",
+        "Kosmetyki"
+      ]
+    },
+    "cotton": {
+      "about": "Kontrakty terminowe na bawełnę odzwierciedlają światową cenę surowej bawełny, podawaną w dolarach amerykańskich za funt.",
+      "drivers": [
+        "Pogoda w USA, Indiach i Chinach",
+        "Popyt przemysłu tekstylnego",
+        "Ceny ropy i waluty"
+      ],
+      "uses": [
+        "Odzież i tekstylia"
+      ]
+    },
+    "bitcoin": {
+      "about": "Bitcoin to pierwsza i największa kryptowaluta. Jest przedmiotem handlu na giełdach przez całą dobę, a liczba monet jest ograniczona do 21 milionów.",
+      "drivers": [
+        "Popyt inwestorów i napływy do funduszy ETF",
+        "Stopy procentowe i apetyt na ryzyko",
+        "Regulacje i wiadomości"
+      ]
+    },
+    "ethereum": {
+      "about": "Ethereum to blockchain do inteligentnych kontraktów i aplikacji, a jego moneta, ether, jest drugą co do wielkości kryptowalutą.",
+      "drivers": [
+        "Korzystanie z aplikacji Ethereum",
+        "Aktualizacje sieci i opłaty",
+        "Nastroje na rynku"
+      ]
+    },
+    "bnb": {
+      "about": "BNB to moneta BNB Chain i ekosystemu giełdy Binance.",
+      "drivers": [
+        "Aktywność na giełdzie i opłaty",
+        "Spalanie tokenów",
+        "Regulacje"
+      ]
+    },
+    "xrp": {
+      "about": "XRP to kryptowaluta służąca do szybkich międzynarodowych płatności w sieci XRP Ledger.",
+      "drivers": [
+        "Wiadomości z postępowań sądowych i regulacji",
+        "Partnerstwa z bankami i firmami płatniczymi",
+        "Nastroje na rynku"
+      ]
+    },
+    "solana": {
+      "about": "Solana to szybki blockchain dla aplikacji i płatności, a SOL to jego moneta.",
+      "drivers": [
+        "Aktywność aplikacji i tokenów",
+        "Niezawodność sieci",
+        "Nastroje na rynku"
+      ]
+    },
+    "cardano": {
+      "about": "Cardano to blockchain oparty na dowodzie stawki (proof-of-stake), a ADA to jego moneta.",
+      "drivers": [
+        "Postęp prac rozwojowych",
+        "Staking",
+        "Nastroje na rynku"
+      ]
+    },
+    "dogecoin": {
+      "about": "Dogecoin powstał jako żart, a dziś jest jedną z najczęściej handlowanych kryptowalut.",
+      "drivers": [
+        "Uwaga w mediach społecznościowych",
+        "Nastroje na rynku",
+        "Akceptacja jako środek płatniczy"
+      ]
+    },
+    "tron": {
+      "about": "TRON to blockchain szeroko używany do przelewów stablecoinów, a TRX to jego moneta.",
+      "drivers": [
+        "Aktywność przelewów stablecoinów",
+        "Opłaty sieciowe",
+        "Nastroje na rynku"
+      ]
+    },
+    "polkadot": {
+      "about": "Polkadot łączy wiele blockchainów, a DOT to jego moneta.",
+      "drivers": [
+        "Rozwój sieci",
+        "Staking",
+        "Nastroje na rynku"
+      ]
+    },
+    "chainlink": {
+      "about": "Chainlink dostarcza blockchainom dane z realnego świata, a LINK to jego moneta.",
+      "drivers": [
+        "Wykorzystanie przez inne aplikacje",
+        "Partnerstwa",
+        "Nastroje na rynku"
+      ]
+    },
+    "litecoin": {
+      "about": "Litecoin to jedna z najstarszych kryptowalut, stworzona z myślą o szybszych płatnościach niż Bitcoin.",
+      "drivers": [
+        "Cena Bitcoina",
+        "Akceptacja jako środek płatniczy",
+        "Nastroje na rynku"
+      ]
+    },
+    "avalanche": {
+      "about": "Avalanche to szybka platforma blockchain, a AVAX to jej moneta.",
+      "drivers": [
+        "Aktywność aplikacji",
+        "Aktualizacje sieci",
+        "Nastroje na rynku"
+      ]
+    },
+    "sp500": {
+      "about": "S&P 500 obejmuje 500 największych amerykańskich spółek i jest głównym wskaźnikiem amerykańskiego rynku akcji.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "nasdaq": {
+      "about": "Nasdaq Composite obejmuje tysiące akcji notowanych na Nasdaq, z dużym udziałem spółek technologicznych.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "dow-jones": {
+      "about": "Dow Jones Industrial Average obejmuje 30 dużych amerykańskich spółek.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "ftse-100": {
+      "about": "FTSE 100 obejmuje 100 największych spółek notowanych w Londynie.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "dax": {
+      "about": "DAX obejmuje 40 dużych niemieckich spółek notowanych we Frankfurcie.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "cac-40": {
+      "about": "CAC 40 obejmuje 40 dużych spółek notowanych w Paryżu.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "nikkei-225": {
+      "about": "Nikkei 225 obejmuje 225 dużych spółek notowanych w Tokio.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "hang-seng": {
+      "about": "Indeks Hang Seng obejmuje największe spółki notowane w Hongkongu.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "shanghai": {
+      "about": "Shanghai Composite obejmuje wszystkie akcje notowane na giełdzie w Szanghaju.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "nifty-50": {
+      "about": "Nifty 50 obejmuje 50 dużych spółek notowanych na National Stock Exchange of India.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "sensex": {
+      "about": "Sensex obejmuje 30 dużych spółek notowanych na Bombay Stock Exchange.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "egx30": {
+      "about": "EGX 30 obejmuje 30 najbardziej aktywnych spółek na giełdzie w Egipcie.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "tasi": {
+      "about": "Tadawul All Share Index obejmuje wszystkie spółki notowane na giełdzie w Arabii Saudyjskiej.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "bist-100": {
+      "about": "BIST 100 obejmuje 100 największych spółek na giełdzie Borsa Istanbul.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "bovespa": {
+      "about": "Bovespa obejmuje najważniejsze spółki na brazylijskiej giełdzie B3.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "asx-200": {
+      "about": "ASX 200 obejmuje 200 największych spółek na giełdzie australijskiej.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "tsx": {
+      "about": "S&P/TSX Composite obejmuje najważniejsze spółki notowane na Toronto Stock Exchange.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "kospi": {
+      "about": "KOSPI obejmuje wszystkie zwykłe akcje notowane na giełdzie koreańskiej.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    },
+    "euro-stoxx-50": {
+      "about": "Euro Stoxx 50 obejmuje 50 dużych spółek ze strefy euro.",
+      "drivers": [
+        "Wyniki finansowe spółek",
+        "Stopy procentowe i inflacja",
+        "Wiadomości gospodarcze i polityczne"
+      ]
+    }
+  }
 }

@@ -114,7 +114,87 @@
   "zakat_note": "A zakát a nisszábot meghaladó vagyon után jár, amely egy holdévig megmarad. Ez útmutató; a saját esetével kapcsolatban kérdezzen hitbeli tudóst.",
   "zakat_below": "A nisszáb alatt: ezen összeg után nem jár zakát.",
   "related_title": "Népszerű keresések",
-  "retail_basis": "{n} helyi forrás alapján, ellenőrizve: {d}."
+  "retail_basis": "{n} helyi forrás alapján, ellenőrizve: {d}.",
+  "u_share": "részesedés",
+  "u_rate": "árfolyam",
+  "u_mbf": "1000 board foot",
+  "cat_stock": "Részvények",
+  "cat_forex": "Devizapárok",
+  "cat_construction": "Építőanyagok",
+  "perf_title": "Teljesítmény",
+  "p_7d": "1 hét",
+  "p_30d": "1 hónap",
+  "p_90d": "3 hónap",
+  "p_ytd": "Év eleje óta",
+  "p_1y": "1 év",
+  "p_5y": "5 év",
+  "range52": "52 hetes sáv",
+  "ath": "Legmagasabb adataink szerint",
+  "atl": "Legalacsonyabb adataink szerint",
+  "since": "Előzmények: {d} óta",
+  "about_title": "Mi a(z) {a}",
+  "drivers_title": "Mi mozgatja az árat",
+  "uses_title": "Mire használják",
+  "source_note": "Forrás: {s}. Az árak tájékoztató jellegűek, késhetnek.",
+  "about_stock": "A(z) {a} részvényeinek ára {c} pénznemben van feltüntetve. Az oldal a legutóbbi, késleltetett árat, a napi és hosszabb távú változást, valamint ugyanezt az árat más pénznemekben mutatja.",
+  "about_forex": "A(z) {a} megmutatja, hogy az első pénznem egy egysége mennyi második pénznemet ér. Az árfolyamot a kamatok, az infláció, a kereskedelem és mindkét ország gazdasági hírei mozgatják.",
+  "about_crypto": "A(z) {a} egy kriptovaluta. Árát a tőzsdéken folyó kereskedés szabja meg, egész nap, és gyorsan változhat. Az oldal mutatja az élő árat, a változást különböző időszakokra és az árat más pénznemekben.",
+  "about_commodity": "A(z) {a} kereskedett nyersanyag. Árát a kínálat, a kereslet, az időjárás, a pénznemek és a hírek alakítják. Az oldal mutatja a legutóbbi árat, a változást különböző időszakokra és az árat más pénznemekben.",
+  "about_index": "A(z) {a} egy részvénykosár teljesítményét méri. Az értéke indexpontban van megadva, és a benne szereplő cégek részvényárfolyamaival együtt mozog.",
+  "tail_list_title": "Részvények, kriptovaluták, devizapárok és további nyersanyagok",
+  "tail_list_desc": "Globális részvények, további kriptovaluták, devizapárok és extra nyersanyagok élő árai, grafikonokkal és teljesítménnyel.",
+  "tail_title": "{a} ára ma | élő érték és grafikon",
+  "tail_desc": "{a} élő ára grafikonnal és teljesítménnyel 1 hétre, 1 hónapra, 1 évre és tovább. Néhány percenként frissül.",
+  "nav_dev": "Fejlesztőknek",
+  "nav_compare": "Összehasonlítás",
+  "terms": "Felhasználási feltételek",
+  "disclaimer": "Jogi nyilatkozat",
+  "cookies": "Sütikezelési szabályzat",
+  "developers": "API fejlesztőknek",
+  "alert_title": "Árriasztás kérése",
+  "alert_email": "Az Ön e-mail-címe",
+  "alert_target": "Célár ({cur})",
+  "alert_above": "Emelkedik e fölé",
+  "alert_below": "Csökken e alá",
+  "alert_submit": "Riasztás létrehozása",
+  "alert_ok": "A riasztás mentve. Egyszer e-mailben értesítjük, amikor az ár eléri a célját.",
+  "alert_err": "A riasztást nem sikerült menteni. Ellenőrizze az e-mail-címet és az árat, majd próbálja újra.",
+  "alert_privacy": "E-mail-címét csak erre a riasztásra használjuk.",
+  "contact_title": "Írjon nekünk üzenetet",
+  "contact_name": "Az Ön neve",
+  "contact_email": "Az Ön e-mail-címe",
+  "contact_msg": "Üzenet",
+  "contact_send": "Küldés",
+  "contact_ok": "Köszönjük. Üzenetét elküldtük.",
+  "contact_err": "Az üzenetet nem sikerült elküldeni. Próbálja meg később.",
+  "dev_title": "Ingyenes árak API",
+  "dev_desc": "Használja áradatainkat saját alkalmazásában vagy weboldalán. Az ingyenes kulcsok naponta 1000 kéréssel használhatók. Kérjük, tüntesse fel az oldalunkat forrásként.",
+  "dev_endpoints": "Végpontok",
+  "dev_request": "Ingyenes API-kulcs kérése",
+  "dev_email": "Az Ön e-mail-címe",
+  "dev_purpose": "Mit fog építeni?",
+  "dev_get": "Kulcs kérése",
+  "dev_key": "Az Ön API-kulcsa (mentse most, egyszer jelenik meg)",
+  "dev_err": "A kulcsot nem sikerült létrehozni. Ellenőrizze az e-mail-címet, és próbálja újra.",
+  "dev_usage": "A kulcsot az x-api-key fejlécben küldje.",
+  "cmp_title": "Két eszköz összehasonlítása",
+  "cmp_a": "Első eszköz",
+  "cmp_b": "Második eszköz",
+  "cmp_ratio": "Arány (első osztva a második)",
+  "cmp_now": "Most",
+  "cmp_desc": "Hasonlítson össze bármely két eszközt: arányukat az idő függvényében, például az arany–ezüst arányt.",
+  "cmp_page_title": "Árak és arányok összehasonlítása: {country}",
+  "roi_title": "Haszonkalkulátor",
+  "roi_buy": "Vételi ár",
+  "roi_amount": "Mennyiség",
+  "roi_now": "Aktuális ár",
+  "roi_profit": "Nyereség vagy veszteség",
+  "roi_pct": "Hozam",
+  "units_title": "Mértékegység-átváltó",
+  "units_value": "Érték",
+  "units_from": "Ebből",
+  "units_to": "Erre",
+  "calc_tools_desc": "Kalkulátorok aranyérték, zakát, nyereség és mértékegységek számításához."
  },
  "assets": {
   "gold": "Arany",
@@ -196,7 +276,8 @@
   "about": [
    "A(z) {site} élő árakat mutat aranyra, ezüstre és más fémekre, olajra, gázra, mezőgazdasági termékekre, tőzsdeindexekre és kriptovalutákra, a saját pénznemében, sok országra és nyelvre.",
    "Az árak nyilvános piaci adatforrásokból származnak, és néhány percenként frissülnek. Egyes árak kézzel frissülnek, és megmutatják az utolsó frissítés idejét.",
-   "A helyi kiskereskedelmi becslések a globális árhoz hozzáadják a szokásos adókat, készítési díjakat és kereskedői felárakat. Ezek becslések, nem ajánlatok."
+   "A helyi kiskereskedelmi becslések a globális árhoz hozzáadják a szokásos adókat, készítési díjakat és kereskedői felárakat. Ezek becslések, nem ajánlatok.",
+   "Emellett aranyérték-, zakát-, haszon- és mértékegység-kalkulátort, valutaváltót és árriasztásokat is kínálunk."
   ],
   "privacy": [
    "Nem kérünk fiókot és személyes adatot. Csak a nyelv, az ország és a téma választását tároljuk a böngészőben.",
@@ -206,6 +287,648 @@
   "contact": [
    "Kérdések, javítások vagy együttműködési kérések: használja a webhely indulása után ezen az oldalon közzétett elérhetőséget.",
    "Ha hibás árat lát, jelezze az eszközt, az országot és azt, hol látta a helyes értéket."
+  ],
+  "terms": [
+   "A(z) {site} használatával elfogadja ezeket a feltételeket. Az oldal általános tájékoztatást nyújt.",
+   "Az árak, grafikonok és becslések tájékoztató jellegűek, késhetnek vagy hibásak lehetnek, és nem szolgálhatnak az egyetlen alapul kereskedéshez vagy vásárláshoz.",
+   "Az adatokat tömegesen másolni vagy továbbértékesíteni nem szabad. Automatizált hozzáféréshez használja ingyenes API-nkat, és tüntesse fel az oldalt forrásként.",
+   "Bármely szolgáltatásrészt bármikor módosíthatunk vagy megszüntethetünk, és nem vállalunk felelősséget a használatából eredő veszteségekért."
+  ],
+  "disclaimer": [
+   "A(z) {site} nem brókercég, bank vagy pénzügyi tanácsadó, és nem ad befektetési tanácsot.",
+   "A helyi kiskereskedelmi becslések, a rúdfelárak és a visszavásárlási összegek nyilvános forrásokból készült becslések. Az üzletek eltérőek; az árat mindig egyeztesse az eladóval.",
+   "A múltbeli teljesítmény nem jelez előre jövőbeli eredményt. A fémekbe, részvényekbe és kriptovalutákba történő befektetés kockázattal jár, beleértve a befektetett pénz elvesztését is."
+  ],
+  "cookies": [
+   "Csak azt a böngészőbeli tárolót használjuk, amely a nyelv, az ország és a téma megjegyzéséhez szükséges.",
+   "A hirdetéseket, ha be vannak kapcsolva, a Google AdSense jeleníti meg, amely sütiket állíthat be a releváns hirdetések megjelenítéséhez. Ezt a Google hirdetési beállításaiban kezelheti.",
+   "Az engedélyt igénylő régiókból érkező látogatóktól a reklámsütik használata előtt hozzájárulást kérünk."
+  ],
+  "developers": [
+   "Áradat-API-nk kisebb projektek számára ingyenes. Hozzon létre alább kulcsot, és küldje az x-api-key fejlécben.",
+   "Végpontok: /v1/overview minden árhoz és teljesítményhez, /v1/chart/SYMBOL?days=365 az előzményekhez, /v1/rates a devizaárfolyamokhoz.",
+   "Az ingyenes kulcsok naponta 1000 kérést engedélyeznek. A válaszok egy percig gyorsítótárazva vannak, kérjük, ennél gyakrabban ne hívja.",
+   "Kérjük, tüntesse fel az oldalunkat forrásként, amikor áraink megjelennek."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Az arany a legszélesebb körben birtokolt nemesfém és a hagyományos értéktároló. Árát világszerte troy unciánként, sok helyi piacon grammban vagy tolában jegyzik, az ékszereket pedig 10K-tól 24K-ig terjedő karáttal árulják.",
+   "drivers": [
+    "Kamatlábak és az amerikai dollár",
+    "Infláció és gazdasági vagy politikai bizonytalanság",
+    "Központi bankok vásárlásai és befektetési kereslet"
+   ],
+   "uses": [
+    "Ékszerek és ajándékok",
+    "Befektetési rudak és érmék",
+    "Elektronika és fogászat"
+   ]
+  },
+  "silver": {
+   "about": "Az ezüst egyszerre nemesfém és ipari fém. Árát troy unciánként jegyzik, és rudakban, érmékben és 999, 925 és 800 finomságú ékszerekben értékesítik.",
+   "drivers": [
+    "Ipari kereslet napelemekből és elektronikából",
+    "Az aranyár és az amerikai dollár",
+    "Befektetési kereslet rudakra és érmékre"
+   ],
+   "uses": [
+    "Ékszerek és ezüstnemű",
+    "Napelemek és elektronika",
+    "Befektetési rudak és érmék"
+   ]
+  },
+  "platinum": {
+   "about": "A platina ritka, sűrű nemesfém, amely sok időszakban súlyra nézve többet ér, mint az arany. Árát troy unciánként jegyzik.",
+   "drivers": [
+    "Kereslet autók katalizátoraiból",
+    "Bányakínálat, főleg Dél-Afrikából és Oroszországból",
+    "Befektetési kereslet és az aranyár"
+   ],
+   "uses": [
+    "Katalizátorok",
+    "Ékszerek",
+    "Vegyipar és hidrogéntechnológia"
+   ]
+  },
+  "palladium": {
+   "about": "A palládium ritka nemesfém, amelyet főleg benzinmotoros autók katalizátoraiban használnak. Árát troy unciánként jegyzik.",
+   "drivers": [
+    "Autógyártás és kibocsátási szabályok",
+    "Bányakínálat Oroszországból és Dél-Afrikából",
+    "Helyettesítés platinával"
+   ],
+   "uses": [
+    "Katalizátorok",
+    "Elektronika",
+    "Fogászat és ékszerek"
+   ]
+  },
+  "copper": {
+   "about": "A réz a mérvadó ipari fém. Árát metrikus tonnánként jegyzik, és a globális gazdasági egészség jeleként figyelik.",
+   "drivers": [
+    "Építőipari és gyártási kereslet, különösen Kínában",
+    "Bányakínálat és készletek",
+    "Az amerikai dollár és a kereskedelmi politika"
+   ],
+   "uses": [
+    "Elektromos vezetékek és energiahálózatok",
+    "Építőipar és vízvezetékszerelés",
+    "Elektromos autók és megújuló energia"
+   ]
+  },
+  "aluminum": {
+   "about": "Az alumínium könnyű, széles körben használt fém, amelyet bauxitból, nagy mennyiségű elektromos energia felhasználásával állítanak elő. Árát metrikus tonnánként jegyzik.",
+   "drivers": [
+    "Energiaköltségek az olvasztáshoz",
+    "Kereslet autókból, csomagolásból és építőiparból",
+    "Kínai termelés és kereskedelmi vámok"
+   ],
+   "uses": [
+    "Csomagolás és dobozok",
+    "Autók és repülőgépek",
+    "Építőipar"
+   ]
+  },
+  "nickel": {
+   "about": "A nikkel rozsdamentes acél és akkumulátorok készítésére használt fém. Árát metrikus tonnánként jegyzik a londoni fémtőzsdén.",
+   "drivers": [
+    "Rozsdamentes acél iránti kereslet",
+    "Elektromos autók akkumulátorainak kereslete",
+    "Indonéziai és fülöp-szigeteki kínálat"
+   ],
+   "uses": [
+    "Rozsdamentes acél",
+    "Akkumulátorok",
+    "Ötvözetek"
+   ]
+  },
+  "zinc": {
+   "about": "A cinket főleg az acél horganyzásával védik a rozsdától. Árát metrikus tonnánként jegyzik.",
+   "drivers": [
+    "Acél- és építőipari kereslet",
+    "Bányakínálat és olvasztóművek kibocsátása",
+    "Energiaárak Európában és Kínában"
+   ],
+   "uses": [
+    "Acél horganyzása",
+    "Sárgaréz és ötvözetek",
+    "Akkumulátorok"
+   ]
+  },
+  "lead": {
+   "about": "Az ólom sűrű fém, amelyet főleg járműakkumulátorokban használnak. Árát metrikus tonnánként jegyzik.",
+   "drivers": [
+    "Autó- és akkumulátorkereslet",
+    "Újrahasznosított kínálat",
+    "Bányakitermelés és környezetvédelmi szabályok"
+   ],
+   "uses": [
+    "Járműakkumulátorok",
+    "Sugárzásvédelem",
+    "Kábelek és ötvözetek"
+   ]
+  },
+  "tin": {
+   "about": "Az ón ritka fém, amelyet főleg forrasztóanyagként használnak az elektronikában. Árát metrikus tonnánként jegyzik.",
+   "drivers": [
+    "Elektronikai és chipkereslet",
+    "Bányakínálat Indonéziából, Mianmarból és Peruból",
+    "Készletek és kereskedelmi szabályok"
+   ],
+   "uses": [
+    "Forrasztóanyag elektronikához",
+    "Konzervdobozok",
+    "Vegyszerek"
+   ]
+  },
+  "cobalt": {
+   "about": "A kobalt akkumulátorfém, amelyet főleg a Kongói Demokratikus Köztársaságban bányásznak. Árát metrikus tonnánként jegyzik.",
+   "drivers": [
+    "Elektromos autók és akkumulátorok iránti kereslet",
+    "Kongói bányakínálat és exportszabályok",
+    "Akkumulátor-kémiai változások"
+   ],
+   "uses": [
+    "Akkumulátorok",
+    "Szuperötvözetek",
+    "Mágnesek"
+   ]
+  },
+  "lithium": {
+   "about": "A lítium-karbonát az újratölthető akkumulátorok fő nyersanyaga. A megjelenített ár akkumulátor-minőségű karbonátra vonatkozik Kínában, amelyet amerikai dollárra, metrikus tonnánként számítottak át.",
+   "drivers": [
+    "Elektromos autók eladásai",
+    "Új bányák és finomítók kínálata",
+    "Állami akkumulátorpolitika"
+   ],
+   "uses": [
+    "Elektromos autók akkumulátorai",
+    "Telefonok és laptopok",
+    "Energiatárolás"
+   ]
+  },
+  "uranium": {
+   "about": "Az urán az atomerőművek üzemanyaga. Árát amerikai dollárban, fontonként U3O8-ra jegyzik.",
+   "drivers": [
+    "Atomerőművek újraindítása és új reaktorok",
+    "Bányatermelés, főleg Kazahsztánból és Kanadából",
+    "Állami készletezés és szankciók"
+   ],
+   "uses": [
+    "Atomenergia",
+    "Orvosi izotópok"
+   ]
+  },
+  "iron-ore": {
+   "about": "A vasérc az acél fő nyersanyaga. A megjelenített ár 62%-os vastartalmú, Kínába szállított ércre vonatkozik, metrikus tonnánként.",
+   "drivers": [
+    "Kínai acéltermelés",
+    "Kínálat Ausztráliából és Brazíliából",
+    "Ingatlan- és infrastruktúra-beruházások"
+   ],
+   "uses": [
+    "Acélgyártás"
+   ]
+  },
+  "steel": {
+   "about": "Az acél vasötvözet, amelyet szinte minden iparágban használnak. A megjelenített ár kínai betonacélra vonatkozik, amelyet amerikai dollárra, metrikus tonnánként számítottak át.",
+   "drivers": [
+    "Építőipari kereslet",
+    "Vasérc és kokszolható szén költségei",
+    "Állami termelési korlátok"
+   ],
+   "uses": [
+    "Épületek és hidak",
+    "Autók és gépek"
+   ]
+  },
+  "steel-hrc": {
+   "about": "A melegen hengerelt acéltekercs lapos acéltermék, amelyet a gyártásban használnak. A megjelenített ár az amerikai Közép-nyugati szállításra vonatkozik, metrikus tonnánként.",
+   "drivers": [
+    "Amerikai kereslet autókból és építőiparból",
+    "Importvámok és verseny",
+    "Nyersanyag- és energiaköltségek"
+   ],
+   "uses": [
+    "Autók és háztartási gépek",
+    "Csövek és építőipar"
+   ]
+  },
+  "lumber": {
+   "about": "A fűrészáru-határidős ügyletek a házépítésben használt lágyfa árát követik, és 1000 board foot egységben jegyzik.",
+   "drivers": [
+    "Lakásépítési indulások és jelzáloghitel-kamatok",
+    "Fűrésztelepek termelése és erdőtüzek",
+    "Az USA és Kanada közötti kereskedelmi vámok"
+   ],
+   "uses": [
+    "Házak vázszerkezete",
+    "Bútor és csomagolás"
+   ]
+  },
+  "wti-oil": {
+   "about": "A WTI az amerikai nyersolaj-referencia, hordónként jegyzik, és Cushingban, Oklahomában szállítják.",
+   "drivers": [
+    "OPEC- és amerikai termelési döntések",
+    "Globális gazdasági növekedés",
+    "Készletek, geopolitika és az amerikai dollár"
+   ],
+   "uses": [
+    "Benzin, dízel és repülőgép-üzemanyag",
+    "Műanyagok és vegyszerek"
+   ]
+  },
+  "brent-oil": {
+   "about": "A Brent a nyersolaj globális referenciaárfolyama, hordónként jegyzik, és az Egyesült Államokon kívül forgalmazott olaj nagy részének árát adja meg.",
+   "drivers": [
+    "OPEC+ termelési döntések",
+    "Globális kereslet, különösen Kínából és Indiából",
+    "Konfliktusok és szankciók a termelő régiókban"
+   ],
+   "uses": [
+    "Benzin, dízel és repülőgép-üzemanyag",
+    "Műanyagok és vegyszerek"
+   ]
+  },
+  "natural-gas": {
+   "about": "A földgáz itt az amerikai Henry Hub árával, MMBtu-nként szerepel. Fűtésre, villamosenergia-termelésre és iparban használják.",
+   "drivers": [
+    "Időjárás és fűtési kereslet",
+    "Készletszintek és termelés",
+    "Cseppfolyósított földgáz exportja"
+   ],
+   "uses": [
+    "Villamosenergia-termelés",
+    "Otthoni fűtés és főzés",
+    "Műtrágya és vegyszerek"
+   ]
+  },
+  "gasoline": {
+   "about": "A benzin határidős ügyletei a nagykereskedelmi benzinárakat követik, amerikai dollárban, gallononként.",
+   "drivers": [
+    "Nyersolaj ára",
+    "Finomítói termelés és vezetési szezon",
+    "Készletek és szabályozás"
+   ],
+   "uses": [
+    "Autóbenzin"
+   ]
+  },
+  "heating-oil": {
+   "about": "A fűtőolaj határidős ügyletei a nagykereskedelmi dízel- és fűtőanyag-árakat követik, amerikai dollárban, gallononként.",
+   "drivers": [
+    "Nyersolaj ára",
+    "Téli időjárás",
+    "Kamion- és ipari dízelkereslet"
+   ],
+   "uses": [
+    "Otthoni fűtés",
+    "Dízel üzemanyag"
+   ]
+  },
+  "wheat": {
+   "about": "A búza a világ egyik fő élelmiszer-gabonája. Árát bushelenként jegyzik a chicagói tőzsdén.",
+   "drivers": [
+    "Időjárás a fő termesztési régiókban",
+    "Export Oroszországból, Ukrajnából, az USA-ból és az EU-ból",
+    "Készletek, energiaárak és az amerikai dollár"
+   ],
+   "uses": [
+    "Kenyér, tészta és liszt",
+    "Takarmány"
+   ]
+  },
+  "corn": {
+   "about": "A kukorica fontos élelmiszer- és takarmánygabona, és az etanol forrása is. Árát bushelenként jegyzik a chicagói tőzsdén.",
+   "drivers": [
+    "Amerikai és brazil termés",
+    "Etanol- és takarmánykereslet",
+    "Időjárás és export"
+   ],
+   "uses": [
+    "Takarmány",
+    "Etanol üzemanyag",
+    "Élelmiszerek és szirupok"
+   ]
+  },
+  "soybeans": {
+   "about": "A szójababot olajjá és darává dolgozzák fel. Árát bushelenként jegyzik a chicagói tőzsdén.",
+   "drivers": [
+    "Az USA, Brazília és Argentína termése",
+    "Kínai importkereslet",
+    "Bioüzemanyag-politika"
+   ],
+   "uses": [
+    "Étolaj",
+    "Takarmány",
+    "Biodízel"
+   ]
+  },
+  "rice": {
+   "about": "A nyers rizs milliárdok alapélelmiszere. Árát centnerenként jegyzik a chicagói tőzsdén.",
+   "drivers": [
+    "Monszun és betakarítási körülmények Ázsiában",
+    "India, Thaiföld és Vietnam exportszabályai",
+    "Készletek és élelmiszerárak"
+   ],
+   "uses": [
+    "Élelmiszer"
+   ]
+  },
+  "sugar": {
+   "about": "A nyers cukor határidős ügyletei a világpiaci cukorárat követik, amelyet amerikai dollárban, fontonként jegyeznek.",
+   "drivers": [
+    "Brazíliai és indiai cukornádtermés",
+    "Etanolkereslet Brazíliában",
+    "Időjárás és devizák"
+   ],
+   "uses": [
+    "Élelmiszerek és italok",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Az arabica kávé határidős ügyletei a világpiaci kávébab-árat követik, amelyet amerikai dollárban, fontonként jegyeznek.",
+   "drivers": [
+    "Időjárás Brazíliában és Kolumbiában",
+    "Készletek és export",
+    "Devizák és kereslet"
+   ],
+   "uses": [
+    "Kávéitalok"
+   ]
+  },
+  "cocoa": {
+   "about": "A kakaó határidős ügyletei a kakaóbab árát követik, amelyet amerikai dollárban, metrikus tonnánként jegyeznek.",
+   "drivers": [
+    "Elefántcsontparti és ghánai termés",
+    "Betegségek és időjárás",
+    "Csokoládékereslet"
+   ],
+   "uses": [
+    "Csokoládé és édesség",
+    "Kozmetikumok"
+   ]
+  },
+  "cotton": {
+   "about": "A pamut határidős ügyletei a nyers pamut világpiaci árát követik, amelyet amerikai dollárban, fontonként jegyeznek.",
+   "drivers": [
+    "Időjárás az USA-ban, Indiában és Kínában",
+    "Textilipari kereslet",
+    "Olajárak és devizák"
+   ],
+   "uses": [
+    "Ruházat és textíliák"
+   ]
+  },
+  "bitcoin": {
+   "about": "A Bitcoin az első és legnagyobb kriptovaluta. Az egész nap folyamatosan kereskednek vele a tőzsdéken, kínálata pedig 21 millió érmére korlátozott.",
+   "drivers": [
+    "Befektetői kereslet és ETF-es beáramlások",
+    "Kamatlábak és kockázatvállalási hajlandóság",
+    "Szabályozás és hírek"
+   ]
+  },
+  "ethereum": {
+   "about": "Az Ethereum okosszerződésekre és alkalmazásokra szolgáló blokklánc, az ő érméje, az ether pedig a második legnagyobb kriptovaluta.",
+   "drivers": [
+    "Ethereum-alkalmazások használata",
+    "Hálózati frissítések és díjak",
+    "Piaci hangulat"
+   ]
+  },
+  "bnb": {
+   "about": "A BNB a BNB Chain és a Binance tőzsdei ökoszisztéma érméje.",
+   "drivers": [
+    "Tőzsdei aktivitás és díjak",
+    "Tokenégetések",
+    "Szabályozás"
+   ]
+  },
+  "xrp": {
+   "about": "Az XRP kriptovaluta, amelyet gyors nemzetközi fizetésekre használnak az XRP Ledgeren.",
+   "drivers": [
+    "Bírósági és szabályozási hírek",
+    "Bank- és fizetési partnerségek",
+    "Piaci hangulat"
+   ]
+  },
+  "solana": {
+   "about": "A Solana gyors blokklánc alkalmazásokhoz és fizetésekhez, a SOL pedig az érméje.",
+   "drivers": [
+    "Alkalmazás- és tokenaktivitás",
+    "Hálózati megbízhatóság",
+    "Piaci hangulat"
+   ]
+  },
+  "cardano": {
+   "about": "A Cardano proof-of-stake blokklánc, az ADA pedig az érméje.",
+   "drivers": [
+    "Fejlesztési haladás",
+    "Stakelés",
+    "Piaci hangulat"
+   ]
+  },
+  "dogecoin": {
+   "about": "A Dogecoin viccből indult érmeként, és a legtöbbet forgalmazott kriptovaluták egyike lett.",
+   "drivers": [
+    "Közösségi média figyelme",
+    "Piaci hangulat",
+    "Fizetési elfogadás"
+   ]
+  },
+  "tron": {
+   "about": "A TRON széles körben használt blokklánc stabilcoin-átutalásokhoz, a TRX pedig az érméje.",
+   "drivers": [
+    "Stabilcoin-átutalási aktivitás",
+    "Hálózati díjak",
+    "Piaci hangulat"
+   ]
+  },
+  "polkadot": {
+   "about": "A Polkadot sok blokkláncot köt össze, a DOT pedig az érméje.",
+   "drivers": [
+    "Hálózatfejlesztés",
+    "Stakelés",
+    "Piaci hangulat"
+   ]
+  },
+  "chainlink": {
+   "about": "A Chainlink valós világbeli adatokat juttat a blokkláncokra, a LINK pedig az érméje.",
+   "drivers": [
+    "Más alkalmazások általi használat",
+    "Partnerségek",
+    "Piaci hangulat"
+   ]
+  },
+  "litecoin": {
+   "about": "A Litecoin az egyik legrégebbi kriptovaluta, a Bitcoinnál gyorsabb fizetésekre készült.",
+   "drivers": [
+    "Bitcoin ára",
+    "Fizetési elfogadás",
+    "Piaci hangulat"
+   ]
+  },
+  "avalanche": {
+   "about": "Az Avalanche gyors blokklánc-platform, az AVAX pedig az érméje.",
+   "drivers": [
+    "Alkalmazási aktivitás",
+    "Hálózati frissítések",
+    "Piaci hangulat"
+   ]
+  },
+  "sp500": {
+   "about": "Az S&P 500 az USA 500 legnagyobb cégét követi, és az amerikai részvénypiac fő mutatója.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "nasdaq": {
+   "about": "A Nasdaq Composite a Nasdaqon jegyzett ezer részvényt követi, erős súllyal a technológiai cégeknél.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "dow-jones": {
+   "about": "A Dow Jones Ipari Átlag 30 nagy amerikai céget követ.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "ftse-100": {
+   "about": "A FTSE 100 a londoni tőzsdén jegyzett 100 legnagyobb céget követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "dax": {
+   "about": "A DAX 40 nagy német céget követ, amelyeket Frankfurtban jegyeznek.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "cac-40": {
+   "about": "A CAC 40 40 nagy, párizsi tőzsdén jegyzett céget követ.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "nikkei-225": {
+   "about": "A Nikkei 225 225 nagy, tokiói tőzsdén jegyzett céget követ.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "hang-seng": {
+   "about": "A Hang Seng index a hongkongi tőzsdén jegyzett legnagyobb cégeket követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "shanghai": {
+   "about": "A Shanghai Composite a sanghaji tőzsdén kereskedett összes részvényt követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "nifty-50": {
+   "about": "A Nifty 50 az indiai Nemzeti Tőzsde 50 nagy cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "sensex": {
+   "about": "A Sensex a Bombay-i Tőzsde 30 nagy cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "egx30": {
+   "about": "Az EGX 30 az egyiptomi tőzsde 30 legaktívabb cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "tasi": {
+   "about": "A Tadawul All Share index a szaúdi tőzsdén jegyzett összes céget követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "bist-100": {
+   "about": "A BIST 100 az Isztambuli Tőzsde 100 legnagyobb cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "bovespa": {
+   "about": "A Bovespa a brazil B3 tőzsde főbb cégeit követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "asx-200": {
+   "about": "Az ASX 200 az ausztrál tőzsde 200 legnagyobb cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "tsx": {
+   "about": "Az S&P/TSX Composite a torontói tőzsde főbb cégeit követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "kospi": {
+   "about": "A KOSPI a koreai tőzsde összes törzsrészvényét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "A Euro Stoxx 50 az euróövezet 50 nagy cégét követi.",
+   "drivers": [
+    "Vállalati eredmények",
+    "Kamatlábak és infláció",
+    "Gazdasági és politikai hírek"
+   ]
+  }
  }
 }

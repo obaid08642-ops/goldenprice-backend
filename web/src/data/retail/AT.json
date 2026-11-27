@@ -1,0 +1,49 @@
+{
+ "country": "AT",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 20,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 21.3,
+   "5g": 6.2,
+   "10g": 4.1,
+   "20g": 3.1,
+   "31.1g": 1.6,
+   "50g": 2.2,
+   "100g": 1.8,
+   "250g": 1.4,
+   "500g": 1.1,
+   "1000g": 1.2
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Premiums are philoro ask for Muenze Oesterreich bars vs spot; 1 g bar carries a very high premium. Investment gold VAT status not verified from a source read here. Buyback spread not computed (philoro bid column looked inconsistent).",
+ "sources": [
+  {
+   "name": "philoro price list (Goldbarren)",
+   "url": "https://philoro.at/preisliste/goldbarren",
+   "what": "Kaufpreis (customer ask) for Muenze Oesterreich bars 1g-1kg and 10 oz, fetched 2026-11-27; spot EUR/g about 106.7 on 2026-11-27 (goldpricez.com 3644.22 USD/oz, open.er-api USD->EUR 0.9113)"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate AT 20% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

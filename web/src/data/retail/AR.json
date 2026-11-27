@@ -1,0 +1,33 @@
+{
+ "country": "AR",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "El Cronista: after the cepo was lifted, Argentines can buy gold with just a DNI. Gram price hit a record ARS 174,363 on 2025-09-16 (article). No IVA rate or same-day dealer ask prices found, so all fields are null.",
+ "sources": [
+  {
+   "name": "El Cronista gold guide",
+   "url": "https://www.cronista.com/finanzas-mercados/una-oportunidad-de-oro-cuanto-cuesta-el-gramo-hoy-en-argentina-y-como-comprarlo",
+   "what": "Market context, cepo lifted, historical gram prices"
+  }
+ ]
+}

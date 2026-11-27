@@ -1,0 +1,18 @@
+---
+import Base from "../../../layouts/Base.astro";
+import "../../../i18n/load";
+import { COUNTRIES } from "../../../data/countries";
+import { LANG_CODES } from "../../../data/languages";
+import { getData } from "../../../lib/api";
+import { t } from "../../../i18n/ui";
+import { assetName, renderMarketsAll, defaultUnit } from "../../../lib/render";
+import { TAIL } from "../../../data/assets";
+export function getStaticPaths() { return LANG_CODES.map((lang) => ({ params: { lang }, props: { lang } })); }
+const { lang } = Astro.props;
+const data = await getData();
+const country = COUNTRIES.find((c) => c.code === "US")!;
+const c = { lang, country, asset: TAIL[0], unit: defaultUnit(TAIL[0]), data, retail: null };
+---
+<Base lang={lang} country={country} slug="" path={`/${lang}/p/`} tail={true} tailSlug="" title={t(lang, "tail_list_title")} description={t(lang, "tail_list_desc")}>
+  <main class="m"><h1>{t(lang, "tail_list_title")}</h1><div class="stack" set:html={renderMarketsAll(c as any, true)} /></main>
+</Base>

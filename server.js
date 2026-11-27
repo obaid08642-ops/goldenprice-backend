@@ -23,9 +23,11 @@ import path from "path";
 import { fileURLToPath } from "url";
 import * as cheerio from "cheerio";
 import cors from "cors";
+import crypto from "node:crypto";
 import WebSocket from "ws";
 import { CATALOG, BY_SYM } from "./catalog.js";
-import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily } from "./db.js";
+import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
+import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -740,16 +742,30 @@ async function updateCatalogLive() {
     }));
   }
 }
+const jumpRejects = {};
 function putCatalog(c, price, src) {
   const v = Number(price);
   if (!isValidNumber(v)) return false;
   if (c.min != null && (v < c.min || v > c.max)) { console.warn(`${c.sym} rejected (out of range): ${v} from ${src}`); return false; }
   const prev = cache.prices[c.sym];
-  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > 0.3) { console.warn(`${c.sym} rejected (jump >30%): ${prev.price} -> ${v} from ${src}`); return false; }
-  put(c.sym, v, c.index ? "points" : "usd", src);
+  // a >30% jump is usually a bad tick; accept it if the feed keeps reporting it (real crashes/gaps)
+  if (prev && prev.src !== "manual" && Math.abs(v - prev.price) / prev.price > 0.3) {
+    const n = (jumpRejects[c.sym] = (jumpRejects[c.sym] || 0) + 1);
+    if (n < 3) { console.warn(`${c.sym} rejected (jump >30%): ${prev.price} -> ${v} from ${src}`); return false; }
+  }
+  jumpRejects[c.sym] = 0;
+  put(c.sym, v, c.kind === "forex" ? "rate" : c.index ? "points" : c.nativeCur ? c.nativeCur.toLowerCase() : "usd", src);
   return true;
 }
 async function updateMetalsLive() { return updateCatalogLive(); }
+// LME base metals, battery metals, uranium, iron ore, steel from public pages (see sources.js). Every few hours, validated by bounds and a cross-check.
+async function updateIndustrial() {
+  if (process.env.INDUSTRIAL_SCRAPE === "0" || !RATES.rates.CNY) return;
+  try {
+    const got = await fetchIndustrial(RATES.rates);
+    for (const [sym, v] of Object.entries(got)) { const c = BY_SYM[sym]; if (c) putCatalog(c, v.price, v.src); }
+  } catch (e) { console.warn("industrial update failed:", e.message || e); }
+}
 
 // update energy (kept)// update energy (kept)
 const ENERGY_RULES = { WTI: { min: 20, max: 250 }, BRENT: { min: 20, max: 250 }, NATGAS: { min: 0.5, max: 30 } };
@@ -1026,8 +1042,9 @@ async function updateRates() {
     } catch (e) { console.warn(`rates from ${name} failed: ${e.message || e}`); }
   }
 }
-updateRates();
+updateRates().then(() => updateIndustrial());
 setInterval(() => updateRates(), 60 * 60 * 1000);
+setInterval(() => updateIndustrial(), 3 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
   res.set("Cache-Control", "public, max-age=300");
   if (!RATES.updated) return res.status(503).json({ error: "rates not ready" });
@@ -1056,8 +1073,15 @@ app.post("/api/admin/backfill", async (req, res) => {
   if (!dbEnabled) return res.status(400).json({ error: "database is not configured" });
   const range = ["1y", "2y", "5y", "10y", "max"].includes(req.body?.range) ? req.body.range : "5y";
   const out = {};
+  const only = Array.isArray(req.body?.only) ? req.body.only : null;
   for (const [sym, tk] of Object.entries(BACKFILL)) {
+    if (only && !only.includes(sym)) continue;
     try { out[sym] = await backfillSymbol(sym, tk, range); } catch (e) { out[sym] = "error: " + (e.message || e); }
+  }
+  // metals without a futures feed: monthly IMF series (FRED) so their charts have 5 years of context
+  for (const [sym, id] of Object.entries(FRED)) {
+    if (only && !only.includes(sym)) continue;
+    try { out[sym] = await bulkDaily(sym, await fetchFred(id), "backfill:fred-monthly"); } catch (e) { out[sym] = "error: " + (e.message || e); }
   }
   res.json({ ok: true, range, inserted: out });
 });
@@ -1068,23 +1092,31 @@ let overviewCache = { t: 0, body: null };
 app.get("/api/overview", async (req, res) => {
   res.set("Cache-Control", "public, max-age=60");
   if (overviewCache.body && Date.now() - overviewCache.t < 60000) return res.json(overviewCache.body);
+  let st = null;
+  try { st = await overviewStats(); } catch (e) { console.error("overview stats error", e.message || e); }
+  const today = new Date().toISOString().slice(0, 10);
+  const histBy = {};
+  for (const h of st?.hist || []) (histBy[h.symbol] ||= []).push(h);
   const items = {};
-  await Promise.all(OVERVIEW.map(async (sym) => {
+  for (const sym of OVERVIEW) {
     const cur = cache.prices[sym];
-    let hist = [];
-    try { hist = (await dailyHistory(sym, 12)) || []; } catch {}
+    const hist = histBy[sym] || [];
     const closes = hist.map((h) => h.value);
-    const today = new Date().toISOString().slice(0, 10);
+    const price = cur ? cur.price : closes[closes.length - 1] ?? null;
     // Gold/silver are fed from spot sources while history is futures, so skip the change until a live-recorded previous close exists.
     const prevRow = [...hist].reverse().find((h) => h.date < today);
-    const price = cur ? cur.price : closes[closes.length - 1] ?? null;
+    const comparable = prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym));
+    const pc = (ref) => (price && ref ? Number((((price - ref) / ref) * 100).toFixed(2)) : null);
+    const ag = st?.agg[sym];
+    const perf = st ? { d7: pc(st.refs.d7[sym]?.close), d30: pc(st.refs.d30[sym]?.close), d90: pc(st.refs.d90[sym]?.close), ytd: pc(st.refs.ytd[sym]?.close), y1: pc(st.refs.y1[sym]?.close), y5: pc(st.refs.y5[sym]?.close) } : null;
     items[sym] = {
       price, unit: cur?.unit || (BY_SYM[sym]?.index ? "points" : "usd"), src: cur?.src || (closes.length ? "history" : null), t: cur?.t || null,
       stale: cur ? Date.now() - cur.t > 3 * 24 * 3600 * 1000 : true,
-      changePct: price && prevRow && (!String(prevRow.src || "").startsWith("backfill") || !["GOLD", "SILVER"].includes(sym)) ? Number((((price - prevRow.value) / prevRow.value) * 100).toFixed(2)) : null,
+      changePct: comparable ? pc(prevRow.value) : null,
       spark: closes.slice(-8),
+      perf, hi52: ag?.hi52 ?? null, lo52: ag?.lo52 ?? null, ath: ag?.ath ?? null, athDay: ag?.ath_day ?? null, atl: ag?.atl ?? null, atlDay: ag?.atl_day ?? null, since: ag?.since ?? null,
     };
-  }));
+  }
   const body = { updated: Date.now(), items };
   overviewCache = { t: Date.now(), body };
   res.json(body);
@@ -1202,6 +1234,92 @@ app.post("/api/admin/cache/clear", (req, res) => {
   saveCache();
   res.json({ ok: true });
 });
+
+// ---------- contact form, free API keys, public /v1 API, price alerts ----------
+const buckets = new Map();
+function limited(ip, name, max, windowMs) {
+  const k = `${name}:${ip}`, now0 = Date.now();
+  const b = (buckets.get(k) || []).filter((t) => now0 - t < windowMs);
+  if (b.length >= max) { buckets.set(k, b); return true; }
+  b.push(now0); buckets.set(k, b); return false;
+}
+setInterval(() => { for (const [k, v] of buckets) if (!v.length || Date.now() - v[v.length - 1] > 24 * 3600 * 1000) buckets.delete(k); }, 3600 * 1000);
+const clientIp = (req) => String(req.headers["cf-connecting-ip"] || req.headers["x-forwarded-for"] || req.ip || "").split(",")[0].trim();
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+const clean = (v, n) => String(v ?? "").replace(/[\u0000-\u001f]/g, " ").trim().slice(0, n);
+
+app.post("/api/contact", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true }); // honeypot filled: pretend success
+  if (limited(clientIp(req), "contact", 5, 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200), message = clean(b.message, 4000), name = clean(b.name, 120);
+  if (!EMAIL_RE.test(email) || message.length < 5) return res.status(400).json({ ok: false, error: "invalid input" });
+  try { if (!(await saveContact(name, email, message, clientIp(req)))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch (e) { return res.status(500).json({ ok: false, error: "failed" }); }
+  if (RESEND_API_KEY && ALERT_EMAIL) sendMail(ALERT_EMAIL, `Contact form: ${name || email}`, `${name} <${email}>\n\n${message}`).catch(() => {});
+  res.json({ ok: true });
+});
+
+app.post("/api/keys", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true });
+  if (limited(clientIp(req), "keys", 3, 24 * 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200);
+  if (!EMAIL_RE.test(email)) return res.status(400).json({ ok: false, error: "invalid email" });
+  const key = "gp_" + crypto.randomBytes(18).toString("hex");
+  try { if (!(await createKey(key, email, clean(b.purpose, 300)))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch { return res.status(500).json({ ok: false, error: "failed" }); }
+  keyCache.set(key, { ok: true, t: Date.now() });
+  res.json({ ok: true, key });
+});
+
+const keyCache = new Map(); // key -> { ok, t }
+const usage = new Map(); // key:day -> count
+const DAILY_LIMIT = Number(process.env.API_DAILY_LIMIT || 1000);
+async function requireKey(req, res, next) {
+  const key = String(req.headers["x-api-key"] || req.query.key || "");
+  if (!/^gp_[0-9a-f]{36}$/.test(key)) return res.status(401).json({ error: "missing or invalid x-api-key" });
+  let c = keyCache.get(key);
+  if (!c || Date.now() - c.t > 5 * 60 * 1000) { c = { ok: await keyActive(key).catch(() => false), t: Date.now() }; keyCache.set(key, c); }
+  if (!c.ok) return res.status(401).json({ error: "unknown or disabled key" });
+  const day = new Date().toISOString().slice(0, 10), uk = `${key}:${day}`;
+  const n = (usage.get(uk) || 0) + 1; usage.set(uk, n);
+  if (n > DAILY_LIMIT) return res.status(429).json({ error: `daily limit of ${DAILY_LIMIT} requests reached` });
+  res.set("X-RateLimit-Remaining", String(DAILY_LIMIT - n));
+  next();
+}
+setInterval(() => { const day = new Date().toISOString().slice(0, 10); for (const k of usage.keys()) if (!k.endsWith(day)) usage.delete(k); }, 6 * 3600 * 1000);
+const selfGet = (path, res) => fetch(`http://127.0.0.1:${PORT}${path}`).then((r) => r.json()).then((j) => res.json(j)).catch(() => res.status(502).json({ error: "upstream error" }));
+app.get("/v1/overview", requireKey, (req, res) => selfGet("/api/overview", res));
+app.get("/v1/rates", requireKey, (req, res) => selfGet("/api/rates", res));
+app.get("/v1/chart/:sym", requireKey, (req, res) => selfGet(`/api/chart/${encodeURIComponent(req.params.sym)}?days=${Number(req.query.days || 365)}&points=${Number(req.query.points || 400)}`, res));
+
+async function sendMail(to, subject, text) {
+  if (!RESEND_API_KEY) return false;
+  const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${RESEND_API_KEY}`, "Content-Type": "application/json" }, body: JSON.stringify({ from: process.env.MAIL_FROM || "GoldenPrice <onboarding@resend.dev>", to: [to], subject, text }) });
+  return r.ok;
+}
+app.post("/api/alerts", async (req, res) => {
+  const b = req.body || {};
+  if (b.website) return res.json({ ok: true });
+  if (limited(clientIp(req), "alerts", 10, 3600 * 1000)) return res.status(429).json({ ok: false, error: "too many requests" });
+  const email = clean(b.email, 200), sym = clean(b.sym, 20).toUpperCase(), dir = b.dir === "below" ? "below" : "above", target = Number(b.target);
+  if (!EMAIL_RE.test(email) || !BY_SYM[sym] || !Number.isFinite(target) || target <= 0) return res.status(400).json({ ok: false, error: "invalid input" });
+  const token = crypto.randomBytes(16).toString("hex");
+  try { if (!(await addAlert({ email, sym, dir, target, label: clean(b.label, 60), lang: clean(b.lang, 8), token }))) return res.status(503).json({ ok: false, error: "storage unavailable" }); } catch { return res.status(500).json({ ok: false, error: "failed" }); }
+  res.json({ ok: true, delivery: RESEND_API_KEY ? "email" : "pending-config" });
+});
+app.get("/api/alerts/cancel", async (req, res) => { const n = await cancelAlert(clean(req.query.token, 64)).catch(() => 0); res.type("text").send(n ? "Alert cancelled." : "Alert not found or already sent."); });
+async function checkPriceAlerts() {
+  if (!RESEND_API_KEY) return;
+  let list; try { list = await activeAlerts(); } catch { return; }
+  for (const a of list) {
+    const p = cache.prices[a.sym]?.price;
+    if (p == null || !((a.dir === "above" && p >= a.target) || (a.dir === "below" && p <= a.target))) continue;
+    const site = process.env.SITE_URL || "";
+    const ok = await sendMail(a.email, `Price alert: ${BY_SYM[a.sym]?.name || a.sym} ${a.dir === "above" ? "rose above" : "fell below"} ${a.label || a.target}`, `${BY_SYM[a.sym]?.name || a.sym} has crossed your target (${a.label || a.target}).\n\nThis alert will not repeat. Cancel/ignore: ${(process.env.API_PUBLIC_URL || "")}/api/alerts/cancel?token=${a.token}\n${site}`).catch(() => false);
+    if (ok) await markAlertFired(a.id).catch(() => {});
+  }
+}
+setInterval(() => checkPriceAlerts().catch(() => {}), 5 * 60 * 1000);
 
 // ---------- start ----------
 initDb().then((on) => console.log(on ? "DB ready" : "DB disabled (no DATABASE_URL)")).catch((e) => console.error("DB init failed", e.message || e));

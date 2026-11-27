@@ -1,0 +1,38 @@
+{
+ "country": "DZ",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 19,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Standard VAT 19% (jewelry assumed standard-rated, unconfirmed). Since 23 Jul 2026 new rules ban unhallmarked and illegally imported jewelry, with a one-year compliance period for jewelers. Market uses parallel euro rate widely; official dinar rate used here. No dealer data found.",
+ "sources": [
+  {
+   "name": "Tax Rates By Country",
+   "url": "https://taxratesbycountry.com/fr/vat-rate-algeria/",
+   "what": "Standard VAT 19%, reduced 9% (2026)."
+  },
+  {
+   "name": "TSA Algerie",
+   "url": "https://www.tsa-algerie.com/lalgerie-interdit-les-bijoux-sans-poincon-et-importes-illegalement/",
+   "what": "23 Jul 2026 article on new ministerial order tightening jeweler licensing and hallmark rules."
+  }
+ ]
+}

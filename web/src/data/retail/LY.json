@@ -1,0 +1,33 @@
+{
+ "country": "LY",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": 0,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "No VAT in Libya; customs duties abolished in 2005 except tobacco, but a 5% service fee applies to most imports (not verified for gold). Parallel-market dinar rate differs sharply from the official rate; dealer data not found.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Libya",
+   "url": "https://taxsummaries.pwc.com/libya/corporate/other-taxes",
+   "what": "No VAT; customs duties abolished 2005 except tobacco; 5% service fee on most imports (reviewed 31 May 2026)."
+  }
+ ]
+}

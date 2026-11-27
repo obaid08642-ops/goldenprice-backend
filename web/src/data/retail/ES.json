@@ -1,0 +1,45 @@
+{
+ "country": "ES",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 21,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 3.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "10 g premium is the cheapest listed bar; premiums across listed 10 g bars range roughly 3.5% to 23% depending on brand and collectibility. Jewelry taken at the 21% standard VAT.",
+ "sources": [
+  {
+   "name": "StoneX Bullion Spain 10g bars",
+   "url": "https://stonexbullion.com/es/lingotes-de-oro/10g/",
+   "what": "Lowest listed 10g bar 1106.00 EUR, premium 37.14 EUR (about 3.5%) vs spot, 'Exento de IVA', 2026-11-27; other listings up to ~23%"
+  },
+  {
+   "name": "Taxdown gold taxation guide",
+   "url": "https://taxdown.es/blog/oro-fiscalidad-hacienda",
+   "what": "Investment gold exempt from VAT; non-qualifying gold and other metals 21% VAT"
+  },
+  {
+   "name": "Wikipedia EU VAT rates",
+   "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
+   "what": "Standard VAT rate ES 21% (applied to jewelry; read 2026-11-27)"
+  }
+ ]
+}

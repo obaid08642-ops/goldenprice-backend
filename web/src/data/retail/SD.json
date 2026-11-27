@@ -1,0 +1,33 @@
+{
+ "country": "SD",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 21,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Sudan is a gold producer with heavy smuggling; the official pound rate diverges widely from the parallel rate, so official-rate premiums would be meaningless. No tax, dealer or buyback data found; only a spot-derived aggregator page was read.",
+ "sources": [
+  {
+   "name": "GoldPricez Yemen (aggregator, same spot feed)",
+   "url": "https://goldpricez.com/ye/24k/gram",
+   "what": "Opened 27 Nov 2026: spot USD 3645.37/oz; aggregator only, no local dealer data."
+  }
+ ]
+}

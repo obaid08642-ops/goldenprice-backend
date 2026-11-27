@@ -1,0 +1,38 @@
+{
+ "country": "GH",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 15,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "GRA lists VAT standard rate 15% (plus levies); gold not found among exemptions on the page opened, so jewellery assumed taxable. 2026 VAT exemption covers only mandatory gold sales by large miners to the state. No dealer ask prices found.",
+ "sources": [
+  {
+   "name": "GRA VAT exemptions",
+   "url": "https://gra.gov.gh/domestic-tax/tax-types/vat-exemptions/",
+   "what": "Standard rate 15%; no gold jewellery exemption seen"
+  },
+  {
+   "name": "VATupdate Ghana gold",
+   "url": "https://www.vatupdate.com/2026/09/04/ghana-exempts-mandatory-gold-sales-to-the-state-from-vat/",
+   "what": "VAT exemption only for 30% mandated gold sales to the Ghana Gold Board"
+  }
+ ]
+}

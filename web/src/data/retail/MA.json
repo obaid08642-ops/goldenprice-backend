@@ -1,0 +1,33 @@
+{
+ "country": "MA",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 20,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Standard VAT 20% (FY2026) applies to jewelry; imports also taxed at 20%. 18K hallmarked jewelry dominates; investment bullion treatment, making charges and dealer premiums not found.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Morocco",
+   "url": "https://taxsummaries.pwc.com/morocco/corporate/other-taxes",
+   "what": "VAT rates for FY2026 incl. 20% standard rate and 20% on imports (reviewed 30 Apr 2026)."
+  }
+ ]
+}

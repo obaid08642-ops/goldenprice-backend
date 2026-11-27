@@ -114,7 +114,87 @@
   "zakat_note": "Zakat is due on wealth held for one lunar year above the nisab. This is a guide, ask a scholar about your own case.",
   "zakat_below": "Below the nisab: no zakat due on this amount.",
   "related_title": "Popular searches",
-  "retail_basis": "Based on {n} local sources, checked {d}."
+  "retail_basis": "Based on {n} local sources, checked {d}.",
+  "u_share": "share",
+  "u_rate": "rate",
+  "u_mbf": "1,000 board feet",
+  "cat_stock": "Stocks",
+  "cat_forex": "Currency pairs",
+  "cat_construction": "Construction materials",
+  "perf_title": "Performance",
+  "p_7d": "1 week",
+  "p_30d": "1 month",
+  "p_90d": "3 months",
+  "p_ytd": "Year to date",
+  "p_1y": "1 year",
+  "p_5y": "5 years",
+  "range52": "52-week range",
+  "ath": "Highest in our data",
+  "atl": "Lowest in our data",
+  "since": "History since {d}",
+  "about_title": "About {a}",
+  "drivers_title": "What moves the price",
+  "uses_title": "What it is used for",
+  "source_note": "Source: {s}. Prices are indicative and may be delayed.",
+  "about_stock": "{a} shares are priced in {c}. The page shows the latest delayed price, the change today and over longer periods, and the same price converted into other currencies.",
+  "about_forex": "{a} shows how much of the second currency one unit of the first currency buys. Rates move with interest rates, inflation, trade and the economic news of both countries.",
+  "about_crypto": "{a} is a cryptocurrency. Its price is set by trading on exchanges around the clock and can change quickly. The page shows the live price, the change over different periods and the price in other currencies.",
+  "about_commodity": "{a} is a traded commodity. Its price follows supply, demand, the weather, currencies and the news. The page shows the latest price, the change over different periods and the price in other currencies.",
+  "about_index": "{a} measures how a basket of shares performs. The value is in index points and moves with the share prices of its companies.",
+  "tail_list_title": "Stocks, crypto, currency pairs and more commodities",
+  "tail_list_desc": "Live prices of global stocks, more cryptocurrencies, currency pairs and extra commodities, with charts and performance.",
+  "tail_title": "{a} price today | live value and chart",
+  "tail_desc": "Live {a} price with chart and performance over 1 week, 1 month, 1 year and more. Updated every few minutes.",
+  "nav_dev": "Developers",
+  "nav_compare": "Compare",
+  "terms": "Terms of use",
+  "disclaimer": "Disclaimer",
+  "cookies": "Cookie policy",
+  "developers": "API for developers",
+  "alert_title": "Get a price alert",
+  "alert_email": "Your email",
+  "alert_target": "Target price ({cur})",
+  "alert_above": "Rises above",
+  "alert_below": "Falls below",
+  "alert_submit": "Create alert",
+  "alert_ok": "Alert saved. We will email you once when the price crosses your target.",
+  "alert_err": "Could not save the alert. Check the email and price and try again.",
+  "alert_privacy": "We only use your email to send this alert.",
+  "contact_title": "Send us a message",
+  "contact_name": "Your name",
+  "contact_email": "Your email",
+  "contact_msg": "Message",
+  "contact_send": "Send",
+  "contact_ok": "Thank you. Your message was sent.",
+  "contact_err": "Could not send the message. Please try again later.",
+  "dev_title": "Free price API",
+  "dev_desc": "Use our prices in your own app or website. Free keys are limited to 1,000 requests per day. Please credit the site.",
+  "dev_endpoints": "Endpoints",
+  "dev_request": "Get a free API key",
+  "dev_email": "Your email",
+  "dev_purpose": "What will you build?",
+  "dev_get": "Get key",
+  "dev_key": "Your API key (save it now, it is shown once)",
+  "dev_err": "Could not create a key. Check the email and try again.",
+  "dev_usage": "Send the key in the x-api-key header.",
+  "cmp_title": "Compare two assets",
+  "cmp_a": "First asset",
+  "cmp_b": "Second asset",
+  "cmp_ratio": "Ratio (first divided by second)",
+  "cmp_now": "Now",
+  "cmp_desc": "Compare any two assets: the ratio between them over time, for example the gold to silver ratio.",
+  "cmp_page_title": "Compare prices and ratios in {country}",
+  "roi_title": "Profit calculator",
+  "roi_buy": "Buy price",
+  "roi_amount": "Quantity",
+  "roi_now": "Current price",
+  "roi_profit": "Profit or loss",
+  "roi_pct": "Return",
+  "units_title": "Unit converter",
+  "units_value": "Value",
+  "units_from": "From",
+  "units_to": "To",
+  "calc_tools_desc": "Calculators for gold value, zakat, profit and units."
  },
  "assets": {
   "gold": "Gold",
@@ -194,9 +274,10 @@
  },
  "legal": {
   "about": [
-   "{site} shows live prices for gold, silver, other metals, oil, gas, agricultural commodities, stock indices and crypto in your own currency, for many countries and languages.",
-   "Prices come from public market data feeds and are updated every few minutes. Some prices are updated manually and show their last update time.",
-   "Local retail estimates add typical taxes, making charges and dealer premiums to the global price. They are estimates, not quotes."
+   "{site} shows live prices for gold, silver, other metals, energy, crops, stocks, indices, cryptocurrencies and currencies in your own currency, for many countries and languages.",
+   "Prices come from public market data feeds and are updated every few minutes. Some prices are updated from public pages or by hand and show their source.",
+   "Local retail estimates add typical taxes, making charges and dealer premiums to the global price, with the sources and date shown. They are estimates, not quotes.",
+   "We also offer calculators for gold value, zakat, profit and units, a currency converter and price alerts."
   ],
   "privacy": [
    "We do not ask for accounts or personal data. We store only your language, country and theme choice in your browser.",
@@ -206,6 +287,648 @@
   "contact": [
    "Questions, corrections or partnership requests: please use the contact address published on this page once the site is live.",
    "If you see a wrong price, tell us the asset, the country and where you saw the correct value."
+  ],
+  "terms": [
+   "By using {site} you agree to these terms. The site is provided for general information.",
+   "Prices, charts and estimates are indicative, may be delayed or wrong, and must not be used as the only basis for a trade or purchase.",
+   "You may not copy the data in bulk or resell it. For automated access use our free API and credit the site.",
+   "We may change or stop any part of the service at any time and we are not liable for losses from its use."
+  ],
+  "disclaimer": [
+   "{site} is not a broker, bank or financial adviser and gives no investment advice.",
+   "Local retail estimates, bar premiums and buyback figures are estimates built from public sources. Shops differ, always confirm the price with the seller.",
+   "Past performance does not predict future results. Investing in metals, shares and cryptocurrencies carries risk, including the loss of the money invested."
+  ],
+  "cookies": [
+   "We use only the browser storage needed to remember your language, country and theme.",
+   "Ads, when enabled, are served by Google AdSense, which may set cookies to show relevant ads. You can manage this in your Google ad settings.",
+   "Visitors in regions that require consent will be asked before advertising cookies are used."
+  ],
+  "developers": [
+   "Our price API is free for small projects. Create a key below and send it in the x-api-key header.",
+   "Endpoints: /v1/overview for all prices and performance, /v1/chart/SYMBOL?days=365 for history, /v1/rates for currency rates.",
+   "Free keys allow 1,000 requests per day. Responses are cached for a minute, please do not call faster than that.",
+   "Please credit the site when you show our prices."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Gold is the most widely held precious metal and a traditional store of value. Its price is quoted per troy ounce worldwide and per gram or tola in many local markets, with jewelry sold by karat from 10K to 24K.",
+   "drivers": [
+    "Interest rates and the US dollar",
+    "Inflation and economic or political uncertainty",
+    "Central bank buying and investment demand"
+   ],
+   "uses": [
+    "Jewelry and gifts",
+    "Investment bars and coins",
+    "Electronics and dentistry"
+   ]
+  },
+  "silver": {
+   "about": "Silver is both a precious metal and an industrial metal. It is priced per troy ounce and sold as bars, coins and jewelry in purities such as 999, 925 and 800.",
+   "drivers": [
+    "Industrial demand from solar panels and electronics",
+    "The gold price and the US dollar",
+    "Investment demand for bars and coins"
+   ],
+   "uses": [
+    "Jewelry and silverware",
+    "Solar panels and electronics",
+    "Investment bars and coins"
+   ]
+  },
+  "platinum": {
+   "about": "Platinum is a rare, dense precious metal that is more valuable by weight than gold in many periods. It is priced per troy ounce.",
+   "drivers": [
+    "Demand from car catalytic converters",
+    "Mine supply, mostly from South Africa and Russia",
+    "Investment demand and the gold price"
+   ],
+   "uses": [
+    "Catalytic converters",
+    "Jewelry",
+    "Chemical industry and hydrogen technology"
+   ]
+  },
+  "palladium": {
+   "about": "Palladium is a rare precious metal used mainly in petrol-car catalytic converters. It is priced per troy ounce.",
+   "drivers": [
+    "Car production and emissions rules",
+    "Mine supply from Russia and South Africa",
+    "Substitution with platinum"
+   ],
+   "uses": [
+    "Catalytic converters",
+    "Electronics",
+    "Dentistry and jewelry"
+   ]
+  },
+  "copper": {
+   "about": "Copper is the benchmark industrial metal. Its price is quoted per metric ton and is watched as a sign of global economic health.",
+   "drivers": [
+    "Construction and manufacturing demand, especially in China",
+    "Mine supply and inventories",
+    "The US dollar and trade policy"
+   ],
+   "uses": [
+    "Electrical wiring and power grids",
+    "Construction and plumbing",
+    "Electric vehicles and renewable energy"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminum is a light, widely used metal produced from bauxite with large amounts of electricity. Its price is quoted per metric ton.",
+   "drivers": [
+    "Energy costs for smelting",
+    "Demand from cars, packaging and construction",
+    "Production in China and trade tariffs"
+   ],
+   "uses": [
+    "Packaging and cans",
+    "Cars and aircraft",
+    "Construction"
+   ]
+  },
+  "nickel": {
+   "about": "Nickel is a metal used to make stainless steel and batteries. Its price is quoted per metric ton on the London Metal Exchange.",
+   "drivers": [
+    "Stainless steel demand",
+    "Electric vehicle battery demand",
+    "Supply from Indonesia and the Philippines"
+   ],
+   "uses": [
+    "Stainless steel",
+    "Batteries",
+    "Alloys"
+   ]
+  },
+  "zinc": {
+   "about": "Zinc is mainly used to galvanize steel against rust. Its price is quoted per metric ton.",
+   "drivers": [
+    "Steel and construction demand",
+    "Mine supply and smelter output",
+    "Energy prices in Europe and China"
+   ],
+   "uses": [
+    "Galvanizing steel",
+    "Brass and alloys",
+    "Batteries"
+   ]
+  },
+  "lead": {
+   "about": "Lead is a dense metal used mostly in vehicle batteries. Its price is quoted per metric ton.",
+   "drivers": [
+    "Car and battery demand",
+    "Recycling supply",
+    "Mine output and environmental rules"
+   ],
+   "uses": [
+    "Vehicle batteries",
+    "Radiation shielding",
+    "Cables and alloys"
+   ]
+  },
+  "tin": {
+   "about": "Tin is a rare metal used mostly as solder in electronics. Its price is quoted per metric ton.",
+   "drivers": [
+    "Electronics and chip demand",
+    "Mine supply from Indonesia, Myanmar and Peru",
+    "Inventories and trade rules"
+   ],
+   "uses": [
+    "Solder for electronics",
+    "Food cans",
+    "Chemicals"
+   ]
+  },
+  "cobalt": {
+   "about": "Cobalt is a battery metal mined mainly in the Democratic Republic of the Congo. Its price is quoted per metric ton.",
+   "drivers": [
+    "Electric vehicle and battery demand",
+    "Congo mine supply and export rules",
+    "Battery chemistry changes"
+   ],
+   "uses": [
+    "Batteries",
+    "Superalloys",
+    "Magnets"
+   ]
+  },
+  "lithium": {
+   "about": "Lithium carbonate is the main raw material for rechargeable batteries. The price shown is for battery-grade carbonate in China, converted to US dollars per metric ton.",
+   "drivers": [
+    "Electric vehicle sales",
+    "New mine and refinery supply",
+    "Government policy on batteries"
+   ],
+   "uses": [
+    "Electric vehicle batteries",
+    "Phones and laptops",
+    "Energy storage"
+   ]
+  },
+  "uranium": {
+   "about": "Uranium is the fuel of nuclear power plants. Its price is quoted in US dollars per pound of U3O8.",
+   "drivers": [
+    "Nuclear plant restarts and new reactors",
+    "Mine output, mainly from Kazakhstan and Canada",
+    "Government stockpiling and sanctions"
+   ],
+   "uses": [
+    "Nuclear power",
+    "Medical isotopes"
+   ]
+  },
+  "iron-ore": {
+   "about": "Iron ore is the main raw material for steel. The price shown is for 62% iron content delivered to China, per metric ton.",
+   "drivers": [
+    "Chinese steel production",
+    "Supply from Australia and Brazil",
+    "Property and infrastructure spending"
+   ],
+   "uses": [
+    "Steel making"
+   ]
+  },
+  "steel": {
+   "about": "Steel is an alloy of iron used in almost every industry. The price shown is for steel rebar in China, converted to US dollars per metric ton.",
+   "drivers": [
+    "Construction demand",
+    "Iron ore and coking coal costs",
+    "Government output limits"
+   ],
+   "uses": [
+    "Buildings and bridges",
+    "Cars and machines"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Hot-rolled steel coil is a flat steel product used in manufacturing. The price shown is for US Midwest delivery per metric ton.",
+   "drivers": [
+    "US demand from cars and construction",
+    "Import tariffs and competition",
+    "Raw material and energy costs"
+   ],
+   "uses": [
+    "Cars and appliances",
+    "Pipes and construction"
+   ]
+  },
+  "lumber": {
+   "about": "Lumber futures track the price of softwood used in building houses, quoted per 1,000 board feet.",
+   "drivers": [
+    "Housing starts and mortgage rates",
+    "Sawmill output and wildfires",
+    "Trade duties between the US and Canada"
+   ],
+   "uses": [
+    "House framing",
+    "Furniture and packaging"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI is the US benchmark for crude oil, quoted per barrel and delivered in Cushing, Oklahoma.",
+   "drivers": [
+    "OPEC and US production decisions",
+    "Global economic growth",
+    "Inventories, geopolitics and the US dollar"
+   ],
+   "uses": [
+    "Petrol, diesel and jet fuel",
+    "Plastics and chemicals"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent is the global benchmark for crude oil, quoted per barrel, and prices most of the oil traded outside the US.",
+   "drivers": [
+    "OPEC+ production decisions",
+    "Global demand, especially from China and India",
+    "Conflicts and sanctions in producing regions"
+   ],
+   "uses": [
+    "Petrol, diesel and jet fuel",
+    "Plastics and chemicals"
+   ]
+  },
+  "natural-gas": {
+   "about": "Natural gas is quoted here as the US Henry Hub price per MMBtu. It is used for heating, power generation and industry.",
+   "drivers": [
+    "Weather and heating demand",
+    "Storage levels and production",
+    "Exports of liquefied natural gas"
+   ],
+   "uses": [
+    "Power generation",
+    "Home heating and cooking",
+    "Fertilizer and chemicals"
+   ]
+  },
+  "gasoline": {
+   "about": "Gasoline futures track wholesale petrol prices in US dollars per gallon.",
+   "drivers": [
+    "Crude oil price",
+    "Refinery output and driving season",
+    "Inventories and regulations"
+   ],
+   "uses": [
+    "Car fuel"
+   ]
+  },
+  "heating-oil": {
+   "about": "Heating oil futures track wholesale diesel and heating fuel in US dollars per gallon.",
+   "drivers": [
+    "Crude oil price",
+    "Winter weather",
+    "Diesel demand from trucks and industry"
+   ],
+   "uses": [
+    "Home heating",
+    "Diesel fuel"
+   ]
+  },
+  "wheat": {
+   "about": "Wheat is one of the world's main food grains. The price is quoted per bushel on the Chicago exchange.",
+   "drivers": [
+    "Weather in major growing regions",
+    "Exports from Russia, Ukraine, the US and the EU",
+    "Stocks, energy prices and the US dollar"
+   ],
+   "uses": [
+    "Bread, pasta and flour",
+    "Animal feed"
+   ]
+  },
+  "corn": {
+   "about": "Corn is a major food and feed grain and a source of ethanol. The price is quoted per bushel on the Chicago exchange.",
+   "drivers": [
+    "US and Brazil harvests",
+    "Demand for ethanol and animal feed",
+    "Weather and exports"
+   ],
+   "uses": [
+    "Animal feed",
+    "Ethanol fuel",
+    "Food and syrups"
+   ]
+  },
+  "soybeans": {
+   "about": "Soybeans are processed into oil and meal. The price is quoted per bushel on the Chicago exchange.",
+   "drivers": [
+    "US, Brazil and Argentina crops",
+    "Chinese import demand",
+    "Biofuel policy"
+   ],
+   "uses": [
+    "Cooking oil",
+    "Animal feed",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Rough rice is a staple food for billions of people. The price is quoted per hundredweight on the Chicago exchange.",
+   "drivers": [
+    "Monsoon and harvest conditions in Asia",
+    "Export rules of India, Thailand and Vietnam",
+    "Stocks and food prices"
+   ],
+   "uses": [
+    "Food"
+   ]
+  },
+  "sugar": {
+   "about": "Raw sugar futures track the world price of sugar, quoted in US dollars per pound.",
+   "drivers": [
+    "Brazil and India cane harvests",
+    "Ethanol demand in Brazil",
+    "Weather and currencies"
+   ],
+   "uses": [
+    "Food and drinks",
+    "Ethanol"
+   ]
+  },
+  "coffee": {
+   "about": "Arabica coffee futures track the world price of coffee beans, quoted in US dollars per pound.",
+   "drivers": [
+    "Weather in Brazil and Colombia",
+    "Stocks and exports",
+    "Currencies and demand"
+   ],
+   "uses": [
+    "Coffee drinks"
+   ]
+  },
+  "cocoa": {
+   "about": "Cocoa futures track the price of cocoa beans, quoted in US dollars per metric ton.",
+   "drivers": [
+    "Harvests in Ivory Coast and Ghana",
+    "Disease and weather",
+    "Chocolate demand"
+   ],
+   "uses": [
+    "Chocolate and sweets",
+    "Cosmetics"
+   ]
+  },
+  "cotton": {
+   "about": "Cotton futures track the world price of raw cotton, quoted in US dollars per pound.",
+   "drivers": [
+    "Weather in the US, India and China",
+    "Textile demand",
+    "Oil prices and currencies"
+   ],
+   "uses": [
+    "Clothing and textiles"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin is the first and largest cryptocurrency. It trades around the clock on exchanges and its supply is capped at 21 million coins.",
+   "drivers": [
+    "Investor demand and ETF flows",
+    "Interest rates and risk appetite",
+    "Regulation and news"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum is a blockchain for smart contracts and applications, and its coin, ether, is the second largest cryptocurrency.",
+   "drivers": [
+    "Use of Ethereum applications",
+    "Network upgrades and fees",
+    "Market sentiment"
+   ]
+  },
+  "bnb": {
+   "about": "BNB is the coin of the BNB Chain and the Binance exchange ecosystem.",
+   "drivers": [
+    "Exchange activity and fees",
+    "Token burns",
+    "Regulation"
+   ]
+  },
+  "xrp": {
+   "about": "XRP is a cryptocurrency used for fast international payments on the XRP Ledger.",
+   "drivers": [
+    "Court and regulatory news",
+    "Bank and payment partnerships",
+    "Market sentiment"
+   ]
+  },
+  "solana": {
+   "about": "Solana is a fast blockchain for applications and payments, and SOL is its coin.",
+   "drivers": [
+    "Application and token activity",
+    "Network reliability",
+    "Market sentiment"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano is a proof-of-stake blockchain, and ADA is its coin.",
+   "drivers": [
+    "Development progress",
+    "Staking",
+    "Market sentiment"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin began as a joke coin and became one of the most traded cryptocurrencies.",
+   "drivers": [
+    "Social media attention",
+    "Market sentiment",
+    "Payment adoption"
+   ]
+  },
+  "tron": {
+   "about": "TRON is a blockchain widely used for stablecoin transfers, and TRX is its coin.",
+   "drivers": [
+    "Stablecoin transfer activity",
+    "Network fees",
+    "Market sentiment"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot connects many blockchains, and DOT is its coin.",
+   "drivers": [
+    "Network development",
+    "Staking",
+    "Market sentiment"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink supplies real-world data to blockchains, and LINK is its coin.",
+   "drivers": [
+    "Use by other applications",
+    "Partnerships",
+    "Market sentiment"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin is one of the oldest cryptocurrencies, created for faster payments than Bitcoin.",
+   "drivers": [
+    "Bitcoin price",
+    "Payment adoption",
+    "Market sentiment"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche is a fast blockchain platform, and AVAX is its coin.",
+   "drivers": [
+    "Application activity",
+    "Network upgrades",
+    "Market sentiment"
+   ]
+  },
+  "sp500": {
+   "about": "The S&P 500 tracks 500 of the largest US companies and is the main gauge of the US stock market.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "nasdaq": {
+   "about": "The Nasdaq Composite tracks thousands of shares listed on Nasdaq, with a strong weight in technology companies.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "dow-jones": {
+   "about": "The Dow Jones Industrial Average tracks 30 large US companies.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "ftse-100": {
+   "about": "The FTSE 100 tracks the 100 largest companies listed in London.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "dax": {
+   "about": "The DAX tracks 40 large German companies listed in Frankfurt.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "cac-40": {
+   "about": "The CAC 40 tracks 40 large companies listed in Paris.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "nikkei-225": {
+   "about": "The Nikkei 225 tracks 225 large companies listed in Tokyo.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "hang-seng": {
+   "about": "The Hang Seng Index tracks the largest companies listed in Hong Kong.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "shanghai": {
+   "about": "The Shanghai Composite tracks all shares listed on the Shanghai Stock Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "nifty-50": {
+   "about": "The Nifty 50 tracks 50 large companies on India's National Stock Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "sensex": {
+   "about": "The Sensex tracks 30 large companies on the Bombay Stock Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "egx30": {
+   "about": "The EGX 30 tracks the 30 most active companies on the Egyptian Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "tasi": {
+   "about": "The Tadawul All Share Index tracks all companies listed on the Saudi stock exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "bist-100": {
+   "about": "The BIST 100 tracks the 100 largest companies on Borsa Istanbul.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "bovespa": {
+   "about": "The Bovespa tracks the main companies on Brazil's B3 exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "asx-200": {
+   "about": "The ASX 200 tracks the 200 largest companies on the Australian exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "tsx": {
+   "about": "The S&P/TSX Composite tracks the main companies on the Toronto Stock Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "kospi": {
+   "about": "The KOSPI tracks all common shares on the Korea Exchange.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "The Euro Stoxx 50 tracks 50 large companies of the euro area.",
+   "drivers": [
+    "Company earnings",
+    "Interest rates and inflation",
+    "Economic and political news"
+   ]
+  }
  }
 }

@@ -114,7 +114,87 @@
   "zakat_note": "Zekat, nisabı aşan ve bir kamer yılı boyunca elde tutulan servet için ödenir. Bu bir rehberdir; kendi durumunuz için bir din âlimine danışın.",
   "zakat_below": "Nisabın altında: bu tutar için zekat ödenmez.",
   "related_title": "Popüler aramalar",
-  "retail_basis": "{n} yerel kaynağa göre, {d} tarihinde kontrol edildi."
+  "retail_basis": "{n} yerel kaynağa göre, {d} tarihinde kontrol edildi.",
+  "u_share": "pay",
+  "u_rate": "kur",
+  "u_mbf": "1.000 board feet",
+  "cat_stock": "Hisseler",
+  "cat_forex": "Döviz çiftleri",
+  "cat_construction": "İnşaat malzemeleri",
+  "perf_title": "Performans",
+  "p_7d": "1 hafta",
+  "p_30d": "1 ay",
+  "p_90d": "3 ay",
+  "p_ytd": "Yılbaşından bugüne",
+  "p_1y": "1 yıl",
+  "p_5y": "5 yıl",
+  "range52": "52 haftalık aralık",
+  "ath": "Verilerimizdeki en yüksek",
+  "atl": "Verilerimizdeki en düşük",
+  "since": "{d} tarihinden itibaren geçmiş",
+  "about_title": "{a} hakkında",
+  "drivers_title": "Fiyatı neler etkiler",
+  "uses_title": "Kullanım alanları",
+  "source_note": "Kaynak: {s}. Fiyatlar gösterge niteliğindedir ve gecikmeli olabilir.",
+  "about_stock": "{a} hisselerinin fiyatı {c} cinsinden belirlenir. Sayfa son gecikmeli fiyatı, bugünkü ve daha uzun dönemlerdeki değişimi ve aynı fiyatın diğer para birimlerindeki karşılığını gösterir.",
+  "about_forex": "{a}, birinci para biriminin bir biriminin ikinci para biriminden ne kadar aldığını gösterir. Kurlar faiz oranları, enflasyon, ticaret ve iki ülkenin ekonomik haberleriyle hareket eder.",
+  "about_crypto": "{a} bir kripto para birimidir. Fiyatı borsalarda gün boyu yapılan işlemlerle oluşur ve hızla değişebilir. Sayfa canlı fiyatı, farklı dönemlerdeki değişimi ve fiyatın diğer para birimlerindeki karşılığını gösterir.",
+  "about_commodity": "{a} alım satımı yapılan bir emtiadır. Fiyatı arz, talep, hava, para birimleri ve haberlerle hareket eder. Sayfa son fiyatı, farklı dönemlerdeki değişimi ve fiyatın diğer para birimlerindeki karşılığını gösterir.",
+  "about_index": "{a}, bir hisse senedi sepetinin performansını ölçer. Değer endeks puanı cinsindendir ve içindeki şirketlerin hisse fiyatlarıyla birlikte hareket eder.",
+  "tail_list_title": "Hisseler, kripto paralar, döviz çiftleri ve diğer emtialar",
+  "tail_list_desc": "Küresel hisseler, ek kripto paralar, döviz çiftleri ve ek emtiaların grafikli ve performans bilgili canlı fiyatları.",
+  "tail_title": "Bugün {a} fiyatı | canlı değer ve grafik",
+  "tail_desc": "Canlı {a} fiyatı; grafik ve 1 hafta, 1 ay, 1 yıl ve daha uzun dönem performansı ile. Birkaç dakikada bir güncellenir.",
+  "nav_dev": "Geliştiriciler",
+  "nav_compare": "Karşılaştır",
+  "terms": "Kullanım koşulları",
+  "disclaimer": "Sorumluluk reddi",
+  "cookies": "Çerez politikası",
+  "developers": "Geliştiriciler için API",
+  "alert_title": "Fiyat alarmı al",
+  "alert_email": "E-posta adresiniz",
+  "alert_target": "Hedef fiyat ({cur})",
+  "alert_above": "Üstüne çıkarsa",
+  "alert_below": "Altına inerse",
+  "alert_submit": "Alarm oluştur",
+  "alert_ok": "Alarm kaydedildi. Fiyat hedefinizi geçtiğinde size bir kez e-posta göndereceğiz.",
+  "alert_err": "Alarm kaydedilemedi. E-postanızı ve fiyatı kontrol edip tekrar deneyin.",
+  "alert_privacy": "E-posta adresinizi yalnızca bu alarmı göndermek için kullanırız.",
+  "contact_title": "Bize mesaj gönderin",
+  "contact_name": "Adınız",
+  "contact_email": "E-posta adresiniz",
+  "contact_msg": "Mesaj",
+  "contact_send": "Gönder",
+  "contact_ok": "Teşekkürler. Mesajınız gönderildi.",
+  "contact_err": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+  "dev_title": "Ücretsiz fiyat API'si",
+  "dev_desc": "Fiyatlarımızı kendi uygulamanızda veya sitenizde kullanın. Ücretsiz anahtarlar günde 1.000 istekle sınırlıdır. Lütfen sitemize kaynak olarak yer verin.",
+  "dev_endpoints": "Uç noktalar",
+  "dev_request": "Ücretsiz API anahtarı al",
+  "dev_email": "E-posta adresiniz",
+  "dev_purpose": "Neyi geliştireceksiniz?",
+  "dev_get": "Anahtar al",
+  "dev_key": "API anahtarınız (şimdi kaydedin, yalnızca bir kez gösterilir)",
+  "dev_err": "Anahtar oluşturulamadı. E-postanızı kontrol edip tekrar deneyin.",
+  "dev_usage": "Anahtarı x-api-key başlığında gönderin.",
+  "cmp_title": "İki varlığı karşılaştır",
+  "cmp_a": "Birinci varlık",
+  "cmp_b": "İkinci varlık",
+  "cmp_ratio": "Oran (birinci, ikinciye bölünmüş)",
+  "cmp_now": "Şimdi",
+  "cmp_desc": "İki varlığı karşılaştırın: aralarındaki oranı zaman içinde, örneğin altın/gümüş oranını görün.",
+  "cmp_page_title": "{country} için fiyat ve oran karşılaştırması",
+  "roi_title": "Kâr hesaplayıcı",
+  "roi_buy": "Alış fiyatı",
+  "roi_amount": "Miktar",
+  "roi_now": "Güncel fiyat",
+  "roi_profit": "Kâr veya zarar",
+  "roi_pct": "Getiri",
+  "units_title": "Birim çevirici",
+  "units_value": "Değer",
+  "units_from": "Kaynak",
+  "units_to": "Hedef",
+  "calc_tools_desc": "Altın değeri, zekat, kâr ve birim hesaplayıcıları."
  },
  "assets": {
   "gold": "Altın",
@@ -196,7 +276,8 @@
   "about": [
    "{site}, altın, gümüş ve diğer metallerin, petrolün, doğalgazın, tarım ürünlerinin, borsa endekslerinin ve kripto paraların canlı fiyatlarını birçok ülke ve dil için kendi para biriminizde gösterir.",
    "Fiyatlar halka açık piyasa veri akışlarından gelir ve birkaç dakikada bir güncellenir. Bazı fiyatlar elle güncellenir ve son güncelleme zamanını gösterir.",
-   "Yerel perakende tahminleri küresel fiyata tipik vergileri, işçilik ücretlerini ve bayi primlerini ekler. Bunlar tahmindir, teklif değildir."
+   "Yerel perakende tahminleri küresel fiyata tipik vergileri, işçilik ücretlerini ve bayi primlerini ekler. Bunlar tahmindir, teklif değildir.",
+   "Ayrıca altın değeri, zekat, kâr ve birim hesaplayıcıları, döviz çevirici ve fiyat alarmları sunuyoruz."
   ],
   "privacy": [
    "Hesap veya kişisel veri istemiyoruz. Tarayıcınızda yalnızca dil, ülke ve tema seçiminizi saklarız.",
@@ -206,6 +287,648 @@
   "contact": [
    "Sorular, düzeltmeler veya iş birliği talepleri için: site yayına alındığında bu sayfada yayımlanacak iletişim adresini kullanın.",
    "Yanlış bir fiyat görürseniz varlığı, ülkeyi ve doğru değeri nerede gördüğünüzü bize bildirin."
+  ],
+  "terms": [
+   "{site} sitesini kullanarak bu koşulları kabul etmiş olursunuz. Site genel bilgi amacıyla sunulmaktadır.",
+   "Fiyatlar, grafikler ve tahminler gösterge niteliğindedir; gecikmeli veya hatalı olabilir ve tek başına bir alım satım veya satın alma kararının dayanağı olarak kullanılmamalıdır.",
+   "Verileri toplu halde kopyalamak veya yeniden satmak yasaktır. Otomatik erişim için ücretsiz API'mizi kullanın ve siteye kaynak olarak yer verin.",
+   "Hizmetin herhangi bir bölümünü istediğimiz zaman değiştirebilir veya durdurabiliriz; kullanımından doğan kayıplardan sorumlu değiliz."
+  ],
+  "disclaimer": [
+   "{site} bir aracı kurum, banka veya finansal danışman değildir ve yatırım tavsiyesi vermez.",
+   "Yerel perakende tahminleri, külçe primleri ve geri alım rakamları kamuya açık kaynaklardan oluşturulmuş tahminlerdir. Dükkânlar farklılık gösterir; fiyatı her zaman satıcıyla teyit edin.",
+   "Geçmiş performans gelecekteki sonuçların göstergesi değildir. Metal, hisse ve kripto para yatırımları, yatırılan paranın kaybı dahil risk taşır."
+  ],
+  "cookies": [
+   "Yalnızca dilinizi, ülkenizi ve temanızı hatırlamak için gereken tarayıcı depolamasını kullanıyoruz.",
+   "Reklamlar etkinleştirildiğinde Google AdSense tarafından sunulur; ilgili reklamları göstermek için çerez yerleştirebilir. Bunu Google reklam ayarlarınızdan yönetebilirsiniz.",
+   "Onay gerektiren bölgelerdeki ziyaretçilere, reklam çerezleri kullanılmadan önce onay sorulacaktır."
+  ],
+  "developers": [
+   "Fiyat API'miz küçük projeler için ücretsizdir. Aşağıdan bir anahtar oluşturun ve x-api-key başlığında gönderin.",
+   "Uç noktalar: tüm fiyatlar ve performans için /v1/overview, geçmiş için /v1/chart/SYMBOL?days=365, döviz kurları için /v1/rates.",
+   "Ücretsiz anahtarlar günde 1.000 istek sağlar. Yanıtlar bir dakika önbelleğe alınır; lütfen bundan daha sık istek göndermeyin.",
+   "Fiyatlarımızı gösterirken lütfen sitemize kaynak olarak yer verin."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Altın en yaygın tutulan değerli metal ve geleneksel bir değer saklama aracıdır. Fiyatı dünya genelinde troy ons başına, birçok yerel pazarda ise gram veya tola başına verilir; takılar 10K'dan 24K'ya kadar ayarlarla satılır.",
+   "drivers": [
+    "Faiz oranları ve ABD doları",
+    "Enflasyon ile ekonomik veya siyasi belirsizlik",
+    "Merkez bankası alımları ve yatırım talebi"
+   ],
+   "uses": [
+    "Takı ve hediyeler",
+    "Yatırım külçeleri ve sikkeler",
+    "Elektronik ve diş hekimliği"
+   ]
+  },
+  "silver": {
+   "about": "Gümüş hem değerli hem endüstriyel bir metaldir. Fiyatı troy ons başına verilir; külçe, sikke ve 999, 925 ve 800 gibi saflıklarda takı olarak satılır.",
+   "drivers": [
+    "Güneş panelleri ve elektronikten gelen endüstriyel talep",
+    "Altın fiyatı ve ABD doları",
+    "Külçe ve sikkelere yatırım talebi"
+   ],
+   "uses": [
+    "Takı ve gümüş eşya",
+    "Güneş panelleri ve elektronik",
+    "Yatırım külçeleri ve sikkeler"
+   ]
+  },
+  "platinum": {
+   "about": "Platin, birçok dönemde ağırlık başına altından daha değerli olan nadir ve yoğun bir değerli metaldir. Fiyatı troy ons başına verilir.",
+   "drivers": [
+    "Otomobil katalizörlerinden gelen talep",
+    "Başta Güney Afrika ve Rusya'dan gelen madencilik arzı",
+    "Yatırım talebi ve altın fiyatı"
+   ],
+   "uses": [
+    "Katalitik konvertörler",
+    "Takı",
+    "Kimya sanayi ve hidrojen teknolojisi"
+   ]
+  },
+  "palladium": {
+   "about": "Paladyum, esas olarak benzinli otomobillerin katalitik konvertörlerinde kullanılan nadir bir değerli metaldir. Fiyatı troy ons başına verilir.",
+   "drivers": [
+    "Otomobil üretimi ve emisyon kuralları",
+    "Rusya ve Güney Afrika'dan madencilik arzı",
+    "Platinle ikame"
+   ],
+   "uses": [
+    "Katalitik konvertörler",
+    "Elektronik",
+    "Diş hekimliği ve takı"
+   ]
+  },
+  "copper": {
+   "about": "Bakır temel endüstriyel metaldir. Fiyatı metrik ton başına verilir ve küresel ekonomik sağlığın bir göstergesi olarak izlenir.",
+   "drivers": [
+    "Özellikle Çin'de inşaat ve imalat talebi",
+    "Madencilik arzı ve stoklar",
+    "ABD doları ve ticaret politikası"
+   ],
+   "uses": [
+    "Elektrik kabloları ve enerji şebekeleri",
+    "İnşaat ve tesisat",
+    "Elektrikli araçlar ve yenilenebilir enerji"
+   ]
+  },
+  "aluminum": {
+   "about": "Alüminyum, bauksitten büyük miktarda elektrik kullanılarak üretilen hafif ve yaygın kullanılan bir metaldir. Fiyatı metrik ton başına verilir.",
+   "drivers": [
+    "Eritme için enerji maliyetleri",
+    "Otomobil, ambalaj ve inşaattan gelen talep",
+    "Çin üretimi ve ticaret gümrük vergileri"
+   ],
+   "uses": [
+    "Ambalaj ve konserve kutuları",
+    "Otomobiller ve uçaklar",
+    "İnşaat"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel, paslanmaz çelik ve pil üretiminde kullanılan bir metaldir. Fiyatı Londra Metal Borsası'nda metrik ton başına verilir.",
+   "drivers": [
+    "Paslanmaz çelik talebi",
+    "Elektrikli araç pili talebi",
+    "Endonezya ve Filipinler'den gelen arz"
+   ],
+   "uses": [
+    "Paslanmaz çelik",
+    "Piller",
+    "Alaşımlar"
+   ]
+  },
+  "zinc": {
+   "about": "Çinko esas olarak çeliği galvanizleyerek pasa karşı korumak için kullanılır. Fiyatı metrik ton başına verilir.",
+   "drivers": [
+    "Çelik ve inşaat talebi",
+    "Madencilik arzı ve eritme tesisi üretimi",
+    "Avrupa ve Çin'de enerji fiyatları"
+   ],
+   "uses": [
+    "Çeliğin galvanizlenmesi",
+    "Pirinç ve alaşımlar",
+    "Piller"
+   ]
+  },
+  "lead": {
+   "about": "Kurşun, esas olarak araç akülerinde kullanılan yoğun bir metaldir. Fiyatı metrik ton başına verilir.",
+   "drivers": [
+    "Otomobil ve akü talebi",
+    "Geri dönüşüm arzı",
+    "Maden üretimi ve çevre kuralları"
+   ],
+   "uses": [
+    "Araç aküleri",
+    "Radyasyon koruması",
+    "Kablolar ve alaşımlar"
+   ]
+  },
+  "tin": {
+   "about": "Kalay, esas olarak elektronikte lehim olarak kullanılan nadir bir metaldir. Fiyatı metrik ton başına verilir.",
+   "drivers": [
+    "Elektronik ve çip talebi",
+    "Endonezya, Myanmar ve Peru'dan madencilik arzı",
+    "Stoklar ve ticaret kuralları"
+   ],
+   "uses": [
+    "Elektronik için lehim",
+    "Konserve kutuları",
+    "Kimyasallar"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt, esas olarak Demokratik Kongo Cumhuriyeti'nde çıkarılan bir pil metalidir. Fiyatı metrik ton başına verilir.",
+   "drivers": [
+    "Elektrikli araç ve pil talebi",
+    "Kongo madencilik arzı ve ihracat kuralları",
+    "Pil kimyasındaki değişiklikler"
+   ],
+   "uses": [
+    "Piller",
+    "Süper alaşımlar",
+    "Mıknatıslar"
+   ]
+  },
+  "lithium": {
+   "about": "Lityum karbonat, şarj edilebilir piller için temel hammaddedir. Gösterilen fiyat, Çin'deki pil sınıfı karbonata aittir ve metrik ton başına ABD doları cinsine çevrilmiştir.",
+   "drivers": [
+    "Elektrikli araç satışları",
+    "Yeni madenler ve rafineri arzı",
+    "Pillere ilişkin hükümet politikası"
+   ],
+   "uses": [
+    "Elektrikli araç pilleri",
+    "Telefonlar ve dizüstü bilgisayarlar",
+    "Enerji depolama"
+   ]
+  },
+  "uranium": {
+   "about": "Uranyum nükleer santrallerin yakıtıdır. Fiyatı pound U3O8 başına ABD doları cinsinden verilir.",
+   "drivers": [
+    "Nükleer santrallerin yeniden çalıştırılması ve yeni reaktörler",
+    "Başta Kazakistan ve Kanada'dan madencilik üretimi",
+    "Hükümet stokları ve yaptırımlar"
+   ],
+   "uses": [
+    "Nükleer enerji",
+    "Tıbbi izotoplar"
+   ]
+  },
+  "iron-ore": {
+   "about": "Demir cevheri çeliğin temel hammaddesidir. Gösterilen fiyat, Çin'e teslim edilen %62 demir içerikli cevher içindir ve metrik ton başına verilir.",
+   "drivers": [
+    "Çin çelik üretimi",
+    "Avustralya ve Brezilya'dan arz",
+    "Konut ve altyapı harcamaları"
+   ],
+   "uses": [
+    "Çelik üretimi"
+   ]
+  },
+  "steel": {
+   "about": "Çelik, neredeyse her sektörde kullanılan bir demir alaşımıdır. Gösterilen fiyat, Çin'deki inşaat demiri içindir ve metrik ton başına ABD doları cinsine çevrilmiştir.",
+   "drivers": [
+    "İnşaat talebi",
+    "Demir cevheri ve kok kömürü maliyetleri",
+    "Hükümet üretim sınırları"
+   ],
+   "uses": [
+    "Binalar ve köprüler",
+    "Otomobiller ve makineler"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Sıcak haddelenmiş çelik bobini, imalatta kullanılan yassı bir çelik üründür. Gösterilen fiyat, ABD Orta Batı teslimi için metrik ton başına verilir.",
+   "drivers": [
+    "Otomobil ve inşaattan ABD talebi",
+    "İthalat gümrük vergileri ve rekabet",
+    "Hammadde ve enerji maliyetleri"
+   ],
+   "uses": [
+    "Otomobil ve beyaz eşya",
+    "Borular ve inşaat"
+   ]
+  },
+  "lumber": {
+   "about": "Kereste vadeli işlemleri, ev yapımında kullanılan yumuşak ağacın fiyatını izler ve 1.000 board feet başına verilir.",
+   "drivers": [
+    "Konut inşaatı başlangıçları ve ipotek faizleri",
+    "Kereste fabrikası üretimi ve orman yangınları",
+    "ABD ile Kanada arasındaki ticaret gümrük vergileri"
+   ],
+   "uses": [
+    "Ev iskeletleri",
+    "Mobilya ve ambalaj"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI, ham petrol için ABD referans fiyatıdır; varil başına verilir ve Oklahoma'daki Cushing'de teslim edilir.",
+   "drivers": [
+    "OPEC ve ABD üretim kararları",
+    "Küresel ekonomik büyüme",
+    "Stoklar, jeopolitik ve ABD doları"
+   ],
+   "uses": [
+    "Benzin, motorin ve uçak yakıtı",
+    "Plastikler ve kimyasallar"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent, ham petrol için küresel referans fiyatıdır; varil başına verilir ve ABD dışında işlem gören petrolün büyük kısmının fiyatını belirler.",
+   "drivers": [
+    "OPEC+ üretim kararları",
+    "Küresel talep, özellikle Çin ve Hindistan'dan",
+    "Üretici bölgelerdeki çatışmalar ve yaptırımlar"
+   ],
+   "uses": [
+    "Benzin, motorin ve uçak yakıtı",
+    "Plastikler ve kimyasallar"
+   ]
+  },
+  "natural-gas": {
+   "about": "Doğalgaz burada ABD Henry Hub fiyatıyla MMBtu başına verilir. Isıtma, elektrik üretimi ve sanayide kullanılır.",
+   "drivers": [
+    "Hava durumu ve ısıtma talebi",
+    "Depolama seviyeleri ve üretim",
+    "Sıvılaştırılmış doğalgaz ihracatı"
+   ],
+   "uses": [
+    "Elektrik üretimi",
+    "Evde ısıtma ve pişirme",
+    "Gübre ve kimyasallar"
+   ]
+  },
+  "gasoline": {
+   "about": "Benzin vadeli işlemleri, toptan benzin fiyatlarını ABD doları cinsinden galon başına izler.",
+   "drivers": [
+    "Ham petrol fiyatı",
+    "Rafineri üretimi ve sürüş sezonu",
+    "Stoklar ve düzenlemeler"
+   ],
+   "uses": [
+    "Araç yakıtı"
+   ]
+  },
+  "heating-oil": {
+   "about": "Isıtma yakıtı vadeli işlemleri, toptan motorin ve ısıtma yakıtı fiyatlarını ABD doları cinsinden galon başına izler.",
+   "drivers": [
+    "Ham petrol fiyatı",
+    "Kış havası",
+    "Kamyon ve sanayiden motorin talebi"
+   ],
+   "uses": [
+    "Evde ısıtma",
+    "Motorin yakıtı"
+   ]
+  },
+  "wheat": {
+   "about": "Buğday dünyanın başlıca gıda tahıllarından biridir. Fiyatı Chicago borsasında bushel başına verilir.",
+   "drivers": [
+    "Başlıca yetiştirme bölgelerindeki hava durumu",
+    "Rusya, Ukrayna, ABD ve AB'den ihracat",
+    "Stoklar, enerji fiyatları ve ABD doları"
+   ],
+   "uses": [
+    "Ekmek, makarna ve un",
+    "Hayvan yemi"
+   ]
+  },
+  "corn": {
+   "about": "Mısır önemli bir gıda ve yem tahılıdır; aynı zamanda etanol kaynağıdır. Fiyatı Chicago borsasında bushel başına verilir.",
+   "drivers": [
+    "ABD ve Brezilya hasatları",
+    "Etanol ve hayvan yemi talebi",
+    "Hava durumu ve ihracat"
+   ],
+   "uses": [
+    "Hayvan yemi",
+    "Etanol yakıtı",
+    "Gıda ve şuruplar"
+   ]
+  },
+  "soybeans": {
+   "about": "Soya, yağ ve küspeye işlenir. Fiyatı Chicago borsasında bushel başına verilir.",
+   "drivers": [
+    "ABD, Brezilya ve Arjantin hasatları",
+    "Çin ithalat talebi",
+    "Biyoyakıt politikası"
+   ],
+   "uses": [
+    "Yemeklik yağ",
+    "Hayvan yemi",
+    "Biyodizel"
+   ]
+  },
+  "rice": {
+   "about": "Kabuklu pirinç milyarlarca insanın temel gıdasıdır. Fiyatı Chicago borsasında hundredweight başına verilir.",
+   "drivers": [
+    "Asya'da muson ve hasat koşulları",
+    "Hindistan, Tayland ve Vietnam'ın ihracat kuralları",
+    "Stoklar ve gıda fiyatları"
+   ],
+   "uses": [
+    "Gıda"
+   ]
+  },
+  "sugar": {
+   "about": "Ham şeker vadeli işlemleri, dünya şeker fiyatını ABD doları cinsinden pound başına izler.",
+   "drivers": [
+    "Brezilya ve Hindistan şeker kamışı hasatları",
+    "Brezilya'da etanol talebi",
+    "Hava durumu ve para birimleri"
+   ],
+   "uses": [
+    "Gıda ve içecekler",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Arabica kahve vadeli işlemleri, dünya kahve çekirdeği fiyatını ABD doları cinsinden pound başına izler.",
+   "drivers": [
+    "Brezilya ve Kolombiya'da hava durumu",
+    "Stoklar ve ihracat",
+    "Para birimleri ve talep"
+   ],
+   "uses": [
+    "Kahve içecekleri"
+   ]
+  },
+  "cocoa": {
+   "about": "Kakao vadeli işlemleri, kakao çekirdeği fiyatını ABD doları cinsinden metrik ton başına izler.",
+   "drivers": [
+    "Fildişi Sahili ve Gana hasatları",
+    "Hastalık ve hava durumu",
+    "Çikolata talebi"
+   ],
+   "uses": [
+    "Çikolata ve tatlılar",
+    "Kozmetik"
+   ]
+  },
+  "cotton": {
+   "about": "Pamuk vadeli işlemleri, ham pamuğun dünya fiyatını ABD doları cinsinden pound başına izler.",
+   "drivers": [
+    "ABD, Hindistan ve Çin'de hava durumu",
+    "Tekstil talebi",
+    "Petrol fiyatları ve para birimleri"
+   ],
+   "uses": [
+    "Giyim ve tekstil"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin ilk ve en büyük kripto paradır. Borsalarda gün boyu işlem görür ve arzı 21 milyon coin ile sınırlıdır.",
+   "drivers": [
+    "Yatırımcı talebi ve ETF girişleri",
+    "Faiz oranları ve risk iştahı",
+    "Düzenlemeler ve haberler"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum akıllı sözleşmeler ve uygulamalar için bir blokzincirdir; coin'i ether, ikinci en büyük kripto paradır.",
+   "drivers": [
+    "Ethereum uygulamalarının kullanımı",
+    "Ağ güncellemeleri ve ücretler",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "bnb": {
+   "about": "BNB, BNB Chain'in ve Binance borsa ekosisteminin coin'idir.",
+   "drivers": [
+    "Borsa hareketliliği ve ücretler",
+    "Token yakımları",
+    "Düzenleme"
+   ]
+  },
+  "xrp": {
+   "about": "XRP, XRP Ledger üzerinde hızlı uluslararası ödemeler için kullanılan bir kripto paradır.",
+   "drivers": [
+    "Dava ve düzenleyici haberler",
+    "Banka ve ödeme ortaklıkları",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "solana": {
+   "about": "Solana uygulamalar ve ödemeler için hızlı bir blokzincirdir; SOL ise coin'idir.",
+   "drivers": [
+    "Uygulama ve token hareketliliği",
+    "Ağ güvenilirliği",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano, hisse kanıtı (proof-of-stake) tabanlı bir blokzincirdir; ADA ise coin'idir.",
+   "drivers": [
+    "Geliştirme ilerlemesi",
+    "Staking",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin bir şaka coin'i olarak başladı ve en çok işlem gören kripto paralardan biri haline geldi.",
+   "drivers": [
+    "Sosyal medya ilgisi",
+    "Piyasa duyarlılığı",
+    "Ödemelerde kabul"
+   ]
+  },
+  "tron": {
+   "about": "TRON, stablecoin transferleri için yaygın kullanılan bir blokzincirdir; TRX ise coin'idir.",
+   "drivers": [
+    "Stablecoin transfer hareketliliği",
+    "Ağ ücretleri",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot birçok blokzinciri birbirine bağlar; DOT ise coin'idir.",
+   "drivers": [
+    "Ağ geliştirmeleri",
+    "Staking",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink blokzincirlere gerçek dünya verisi sağlar; LINK ise coin'idir.",
+   "drivers": [
+    "Diğer uygulamalar tarafından kullanım",
+    "Ortaklıklar",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin en eski kripto paralardan biridir ve Bitcoin'den daha hızlı ödemeler için oluşturulmuştur.",
+   "drivers": [
+    "Bitcoin fiyatı",
+    "Ödemelerde kabul",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche hızlı bir blokzincir platformudur; AVAX ise coin'idir.",
+   "drivers": [
+    "Uygulama hareketliliği",
+    "Ağ güncellemeleri",
+    "Piyasa duyarlılığı"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500, ABD'nin en büyük 500 şirketini izler ve ABD hisse senedi piyasasının başlıca göstergesidir.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite, Nasdaq'ta işlem gören binlerce hisseyi izler ve teknoloji şirketlerinin ağırlığı yüksektir.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Sanayi Ortalaması 30 büyük ABD şirketini izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100, Londra'da işlem gören en büyük 100 şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "dax": {
+   "about": "DAX, Frankfurt'ta işlem gören 40 büyük Alman şirketini izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40, Paris'te işlem gören 40 büyük şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225, Tokyo'da işlem gören 225 büyük şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng Endeksi, Hong Kong'da işlem gören en büyük şirketleri izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite, Şanghay Menkul Kıymetler Borsası'nda işlem gören tüm hisseleri izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50, Hindistan Ulusal Borsası'ndaki 50 büyük şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex, Bombay Menkul Kıymetler Borsası'ndaki 30 büyük şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30, Mısır Borsası'nda en aktif 30 şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Endeksi, Suudi borsasında işlem gören tüm şirketleri izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100, Borsa İstanbul'daki en büyük 100 şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa, Brezilya'daki B3 borsasının başlıca şirketlerini izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200, Avustralya borsasındaki en büyük 200 şirketi izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite, Toronto Menkul Kıymetler Borsası'ndaki başlıca şirketleri izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI, Kore Borsası'ndaki tüm adi hisseleri izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50, euro bölgesinin 50 büyük şirketini izler.",
+   "drivers": [
+    "Şirket kazançları",
+    "Faiz oranları ve enflasyon",
+    "Ekonomik ve siyasi haberler"
+   ]
+  }
  }
 }

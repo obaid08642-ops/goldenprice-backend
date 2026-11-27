@@ -1,0 +1,38 @@
+{
+ "country": "KE",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 16,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "VAT 16% is the general rate (PwC); gold was not found on the KRA exempt/zero-rated update page opened, so jewellery assumed taxable. Bullion treatment unverified (null). No dealer ask prices found.",
+ "sources": [
+  {
+   "name": "PwC Kenya other taxes",
+   "url": "https://taxsummaries.pwc.com/kenya/corporate/other-taxes",
+   "what": "VAT rates: 16% general, 8% fuel, 0% exempt/zero-rated"
+  },
+  {
+   "name": "Kenyans.co.ke KRA VAT list",
+   "url": "https://www.kenyans.co.ke/news/125329-kra-releases-updated-list-vat-exempt-zero-rated-goods",
+   "what": "Opened; no gold or jewellery mentioned"
+  }
+ ]
+}

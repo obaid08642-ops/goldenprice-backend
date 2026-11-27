@@ -114,7 +114,87 @@
   "zakat_note": "Zakat wajib atas harta yang dimiliki selama satu tahun hijriah dan melebihi nisab. Ini hanya panduan, tanyakan kepada ulama tentang kasus Anda.",
   "zakat_below": "Di bawah nisab: tidak ada zakat yang wajib untuk jumlah ini.",
   "related_title": "Pencarian populer",
-  "retail_basis": "Berdasarkan {n} sumber lokal, diperiksa {d}."
+  "retail_basis": "Berdasarkan {n} sumber lokal, diperiksa {d}.",
+  "u_share": "saham",
+  "u_rate": "kurs",
+  "u_mbf": "1.000 board feet",
+  "cat_stock": "Saham",
+  "cat_forex": "Pasangan mata uang",
+  "cat_construction": "Bahan konstruksi",
+  "perf_title": "Kinerja",
+  "p_7d": "1 minggu",
+  "p_30d": "1 bulan",
+  "p_90d": "3 bulan",
+  "p_ytd": "Sejak awal tahun",
+  "p_1y": "1 tahun",
+  "p_5y": "5 tahun",
+  "range52": "Kisaran 52 minggu",
+  "ath": "Tertinggi dalam data kami",
+  "atl": "Terendah dalam data kami",
+  "since": "Riwayat sejak {d}",
+  "about_title": "Tentang {a}",
+  "drivers_title": "Faktor yang menggerakkan harga",
+  "uses_title": "Kegunaannya",
+  "source_note": "Sumber: {s}. Harga bersifat indikatif dan mungkin tertunda.",
+  "about_stock": "Saham {a} diperdagangkan dalam {c}. Halaman ini menampilkan harga terakhir yang mungkin tertunda, perubahan hari ini dan dalam periode lebih panjang, serta harga yang sama dalam mata uang lain.",
+  "about_forex": "{a} menunjukkan berapa unit mata uang kedua yang bisa dibeli dengan satu unit mata uang pertama. Kurs bergerak mengikuti suku bunga, inflasi, perdagangan, dan berita ekonomi kedua negara.",
+  "about_crypto": "{a} adalah aset kripto. Harganya ditentukan oleh perdagangan di bursa yang berlangsung 24 jam dan bisa berubah dengan cepat. Halaman ini menampilkan harga langsung, perubahan dalam berbagai periode, dan harga dalam mata uang lain.",
+  "about_commodity": "{a} adalah komoditas yang diperdagangkan. Harganya mengikuti penawaran, permintaan, cuaca, mata uang, dan berita. Halaman ini menampilkan harga terakhir, perubahan dalam berbagai periode, dan harga dalam mata uang lain.",
+  "about_index": "{a} mengukur kinerja sekelompok saham. Nilainya dalam poin indeks dan bergerak mengikuti harga saham perusahaan-perusahaannya.",
+  "tail_list_title": "Saham, kripto, pasangan mata uang, dan komoditas lainnya",
+  "tail_list_desc": "Harga langsung saham global, lebih banyak kripto, pasangan mata uang, dan komoditas tambahan, lengkap dengan grafik dan kinerja.",
+  "tail_title": "Harga {a} hari ini | nilai langsung dan grafik",
+  "tail_desc": "Harga {a} langsung dengan grafik dan kinerja dalam 1 minggu, 1 bulan, 1 tahun, dan lainnya. Diperbarui setiap beberapa menit.",
+  "nav_dev": "Pengembang",
+  "nav_compare": "Bandingkan",
+  "terms": "Ketentuan penggunaan",
+  "disclaimer": "Penafian",
+  "cookies": "Kebijakan cookie",
+  "developers": "API untuk pengembang",
+  "alert_title": "Dapatkan notifikasi harga",
+  "alert_email": "Email Anda",
+  "alert_target": "Harga target ({cur})",
+  "alert_above": "Naik di atas",
+  "alert_below": "Turun di bawah",
+  "alert_submit": "Buat notifikasi",
+  "alert_ok": "Notifikasi disimpan. Kami akan mengirim email sekali saat harga mencapai target Anda.",
+  "alert_err": "Notifikasi tidak dapat disimpan. Periksa email dan harga, lalu coba lagi.",
+  "alert_privacy": "Kami hanya menggunakan email Anda untuk mengirim notifikasi ini.",
+  "contact_title": "Kirim pesan kepada kami",
+  "contact_name": "Nama Anda",
+  "contact_email": "Email Anda",
+  "contact_msg": "Pesan",
+  "contact_send": "Kirim",
+  "contact_ok": "Terima kasih. Pesan Anda sudah terkirim.",
+  "contact_err": "Pesan tidak dapat dikirim. Silakan coba lagi nanti.",
+  "dev_title": "API harga gratis",
+  "dev_desc": "Gunakan harga kami di aplikasi atau situs Anda sendiri. Kunci gratis dibatasi 1.000 permintaan per hari. Mohon cantumkan nama situs kami.",
+  "dev_endpoints": "Endpoint",
+  "dev_request": "Dapatkan kunci API gratis",
+  "dev_email": "Email Anda",
+  "dev_purpose": "Apa yang akan Anda buat?",
+  "dev_get": "Dapatkan kunci",
+  "dev_key": "Kunci API Anda (simpan sekarang, hanya ditampilkan sekali)",
+  "dev_err": "Kunci tidak dapat dibuat. Periksa email dan coba lagi.",
+  "dev_usage": "Kirim kunci di header x-api-key.",
+  "cmp_title": "Bandingkan dua aset",
+  "cmp_a": "Aset pertama",
+  "cmp_b": "Aset kedua",
+  "cmp_ratio": "Rasio (pertama dibagi kedua)",
+  "cmp_now": "Sekarang",
+  "cmp_desc": "Bandingkan dua aset apa pun: rasio di antara keduanya dari waktu ke waktu, misalnya rasio emas terhadap perak.",
+  "cmp_page_title": "Bandingkan harga dan rasio di {country}",
+  "roi_title": "Kalkulator keuntungan",
+  "roi_buy": "Harga beli",
+  "roi_amount": "Jumlah",
+  "roi_now": "Harga saat ini",
+  "roi_profit": "Untung atau rugi",
+  "roi_pct": "Imbal hasil",
+  "units_title": "Konverter satuan",
+  "units_value": "Nilai",
+  "units_from": "Dari",
+  "units_to": "Ke",
+  "calc_tools_desc": "Kalkulator nilai emas, zakat, keuntungan, dan satuan."
  },
  "assets": {
   "gold": "Emas",
@@ -194,9 +274,10 @@
  },
  "legal": {
   "about": [
-   "{site} menampilkan harga langsung emas, perak, logam lain, minyak, gas, komoditas pertanian, indeks saham, dan kripto dalam mata uang Anda sendiri, untuk banyak negara dan bahasa.",
-   "Harga berasal dari umpan data pasar publik dan diperbarui setiap beberapa menit. Sebagian harga diperbarui secara manual dan menampilkan waktu pembaruan terakhirnya.",
-   "Estimasi eceran lokal menambahkan pajak, ongkos pembuatan, dan premi dealer yang umum ke harga global. Ini adalah estimasi, bukan penawaran."
+   "{site} menampilkan harga langsung emas, perak, logam lain, energi, hasil pertanian, saham, indeks, kripto, dan mata uang dalam mata uang Anda sendiri, untuk banyak negara dan bahasa.",
+   "Harga berasal dari umpan data pasar publik dan diperbarui setiap beberapa menit. Sebagian harga diperbarui dari halaman publik atau secara manual dan menunjukkan sumbernya.",
+   "Estimasi harga eceran lokal menambahkan pajak, biaya pembuatan, dan premi pedagang yang umum ke harga global, dengan sumber dan tanggal yang ditampilkan. Ini adalah estimasi, bukan penawaran harga.",
+   "Kami juga menyediakan kalkulator nilai emas, zakat, keuntungan, dan satuan, konverter mata uang, serta notifikasi harga."
   ],
   "privacy": [
    "Kami tidak meminta akun atau data pribadi. Kami hanya menyimpan pilihan bahasa, negara, dan tema Anda di peramban.",
@@ -206,6 +287,648 @@
   "contact": [
    "Pertanyaan, koreksi, atau permintaan kerja sama: gunakan alamat kontak yang dipublikasikan di halaman ini setelah situs aktif.",
    "Jika Anda melihat harga yang salah, beri tahu kami asetnya, negaranya, dan di mana Anda melihat nilai yang benar."
+  ],
+  "terms": [
+   "Dengan menggunakan {site}, Anda menyetujui ketentuan ini. Situs ini disediakan untuk informasi umum.",
+   "Harga, grafik, dan estimasi bersifat indikatif, dapat tertunda atau keliru, dan tidak boleh dijadikan satu-satunya dasar untuk transaksi atau pembelian.",
+   "Anda tidak boleh menyalin data dalam jumlah besar atau menjualnya kembali. Untuk akses otomatis, gunakan API gratis kami dan cantumkan nama situs.",
+   "Kami dapat mengubah atau menghentikan bagian mana pun dari layanan kapan saja dan kami tidak bertanggung jawab atas kerugian akibat penggunaannya."
+  ],
+  "disclaimer": [
+   "{site} bukan pialang, bank, atau penasihat keuangan dan tidak memberikan saran investasi.",
+   "Estimasi harga eceran lokal, premi batangan, dan angka buyback adalah perkiraan yang disusun dari sumber publik. Toko berbeda-beda, selalu konfirmasi harga dengan penjual.",
+   "Kinerja masa lalu tidak memprediksi hasil di masa depan. Berinvestasi di logam, saham, dan kripto mengandung risiko, termasuk kehilangan uang yang diinvestasikan."
+  ],
+  "cookies": [
+   "Kami hanya menggunakan penyimpanan peramban yang diperlukan untuk mengingat bahasa, negara, dan tema Anda.",
+   "Iklan, jika diaktifkan, ditampilkan oleh Google AdSense, yang dapat memasang cookie untuk menampilkan iklan yang relevan. Anda dapat mengelolanya di pengaturan iklan Google Anda.",
+   "Pengunjung di wilayah yang mewajibkan persetujuan akan diminta izin sebelum cookie iklan digunakan."
+  ],
+  "developers": [
+   "API harga kami gratis untuk proyek kecil. Buat kunci di bawah dan kirimkan di header x-api-key.",
+   "Endpoint: /v1/overview untuk semua harga dan kinerja, /v1/chart/SYMBOL?days=365 untuk riwayat, /v1/rates untuk kurs.",
+   "Kunci gratis mengizinkan 1.000 permintaan per hari. Respons disimpan dalam cache selama satu menit, mohon jangan memanggil lebih sering dari itu.",
+   "Mohon cantumkan nama situs saat Anda menampilkan harga kami."
   ]
+ },
+ "content": {
+  "gold": {
+   "about": "Emas adalah logam mulia yang paling banyak dimiliki dan secara tradisional menjadi penyimpan nilai. Harganya dikutip per troy ounce di seluruh dunia dan per gram atau tola di banyak pasar lokal, dengan perhiasan dijual berdasarkan karat dari 10K hingga 24K.",
+   "drivers": [
+    "Suku bunga dan dolar AS",
+    "Inflasi serta ketidakpastian ekonomi atau politik",
+    "Pembelian bank sentral dan permintaan investasi"
+   ],
+   "uses": [
+    "Perhiasan dan hadiah",
+    "Batangan dan koin investasi",
+    "Elektronik dan kedokteran gigi"
+   ]
+  },
+  "silver": {
+   "about": "Perak adalah logam mulia sekaligus logam industri. Harganya dikutip per troy ounce dan dijual sebagai batangan, koin, dan perhiasan dalam kemurnian seperti 999, 925, dan 800.",
+   "drivers": [
+    "Permintaan industri dari panel surya dan elektronik",
+    "Harga emas dan dolar AS",
+    "Permintaan investasi untuk batangan dan koin"
+   ],
+   "uses": [
+    "Perhiasan dan peralatan makan dari perak",
+    "Panel surya dan elektronik",
+    "Batangan dan koin investasi"
+   ]
+  },
+  "platinum": {
+   "about": "Platinum adalah logam mulia yang langka dan padat, yang pada banyak periode lebih bernilai per berat dibanding emas. Harganya dikutip per troy ounce.",
+   "drivers": [
+    "Permintaan dari konverter katalitik mobil",
+    "Pasokan tambang, terutama dari Afrika Selatan dan Rusia",
+    "Permintaan investasi dan harga emas"
+   ],
+   "uses": [
+    "Konverter katalitik",
+    "Perhiasan",
+    "Industri kimia dan teknologi hidrogen"
+   ]
+  },
+  "palladium": {
+   "about": "Paladium adalah logam mulia yang langka, terutama digunakan dalam konverter katalitik mobil bensin. Harganya dikutip per troy ounce.",
+   "drivers": [
+    "Produksi mobil dan aturan emisi",
+    "Pasokan tambang dari Rusia dan Afrika Selatan",
+    "Substitusi dengan platinum"
+   ],
+   "uses": [
+    "Konverter katalitik",
+    "Elektronik",
+    "Kedokteran gigi dan perhiasan"
+   ]
+  },
+  "copper": {
+   "about": "Tembaga adalah logam industri acuan. Harganya dikutip per ton metrik dan dipantau sebagai tanda kesehatan ekonomi global.",
+   "drivers": [
+    "Permintaan konstruksi dan manufaktur, terutama di China",
+    "Pasokan tambang dan persediaan",
+    "Dolar AS dan kebijakan perdagangan"
+   ],
+   "uses": [
+    "Kabel listrik dan jaringan listrik",
+    "Konstruksi dan pipa air",
+    "Kendaraan listrik dan energi terbarukan"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminium adalah logam ringan yang banyak digunakan, dihasilkan dari bauksit dengan jumlah listrik yang besar. Harganya dikutip per ton metrik.",
+   "drivers": [
+    "Biaya energi untuk peleburan",
+    "Permintaan dari mobil, kemasan, dan konstruksi",
+    "Produksi China dan tarif perdagangan"
+   ],
+   "uses": [
+    "Kemasan dan kaleng",
+    "Mobil dan pesawat",
+    "Konstruksi"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel adalah logam yang digunakan untuk membuat baja tahan karat dan baterai. Harganya dikutip per ton metrik di London Metal Exchange.",
+   "drivers": [
+    "Permintaan baja tahan karat",
+    "Permintaan baterai kendaraan listrik",
+    "Pasokan dari Indonesia dan Filipina"
+   ],
+   "uses": [
+    "Baja tahan karat",
+    "Baterai",
+    "Paduan"
+   ]
+  },
+  "zinc": {
+   "about": "Seng terutama digunakan untuk melapisi baja agar tahan karat. Harganya dikutip per ton metrik.",
+   "drivers": [
+    "Permintaan baja dan konstruksi",
+    "Pasokan tambang dan output peleburan",
+    "Harga energi di Eropa dan China"
+   ],
+   "uses": [
+    "Galvanisasi baja",
+    "Kuningan dan paduan",
+    "Baterai"
+   ]
+  },
+  "lead": {
+   "about": "Timbal adalah logam padat yang sebagian besar digunakan dalam baterai kendaraan. Harganya dikutip per ton metrik.",
+   "drivers": [
+    "Permintaan mobil dan baterai",
+    "Pasokan dari daur ulang",
+    "Output tambang dan aturan lingkungan"
+   ],
+   "uses": [
+    "Baterai kendaraan",
+    "Perisai radiasi",
+    "Kabel dan paduan"
+   ]
+  },
+  "tin": {
+   "about": "Timah adalah logam langka yang sebagian besar digunakan sebagai solder dalam elektronik. Harganya dikutip per ton metrik.",
+   "drivers": [
+    "Permintaan elektronik dan chip",
+    "Pasokan tambang dari Indonesia, Myanmar, dan Peru",
+    "Persediaan dan aturan perdagangan"
+   ],
+   "uses": [
+    "Solder untuk elektronik",
+    "Kaleng makanan",
+    "Bahan kimia"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt adalah logam baterai yang sebagian besar ditambang di Republik Demokratik Kongo. Harganya dikutip per ton metrik.",
+   "drivers": [
+    "Permintaan kendaraan listrik dan baterai",
+    "Pasokan tambang Kongo dan aturan ekspor",
+    "Perubahan kimia baterai"
+   ],
+   "uses": [
+    "Baterai",
+    "Superalloy",
+    "Magnet"
+   ]
+  },
+  "lithium": {
+   "about": "Litium karbonat adalah bahan baku utama baterai isi ulang. Harga yang ditampilkan adalah untuk karbonat kelas baterai di China, dikonversi ke dolar AS per ton metrik.",
+   "drivers": [
+    "Penjualan kendaraan listrik",
+    "Pasokan dari tambang dan kilang baru",
+    "Kebijakan pemerintah tentang baterai"
+   ],
+   "uses": [
+    "Baterai kendaraan listrik",
+    "Ponsel dan laptop",
+    "Penyimpanan energi"
+   ]
+  },
+  "uranium": {
+   "about": "Uranium adalah bahan bakar pembangkit listrik tenaga nuklir. Harganya dikutip dalam dolar AS per pon U3O8.",
+   "drivers": [
+    "Pengaktifan kembali pembangkit nuklir dan reaktor baru",
+    "Output tambang, terutama dari Kazakhstan dan Kanada",
+    "Penimbunan oleh pemerintah dan sanksi"
+   ],
+   "uses": [
+    "Listrik tenaga nuklir",
+    "Isotop medis"
+   ]
+  },
+  "iron-ore": {
+   "about": "Bijih besi adalah bahan baku utama baja. Harga yang ditampilkan adalah untuk kandungan besi 62% yang dikirim ke China, per ton metrik.",
+   "drivers": [
+    "Produksi baja China",
+    "Pasokan dari Australia dan Brasil",
+    "Belanja properti dan infrastruktur"
+   ],
+   "uses": [
+    "Pembuatan baja"
+   ]
+  },
+  "steel": {
+   "about": "Baja adalah paduan besi yang digunakan hampir di setiap industri. Harga yang ditampilkan adalah untuk batang tulangan baja di China, dikonversi ke dolar AS per ton metrik.",
+   "drivers": [
+    "Permintaan konstruksi",
+    "Biaya bijih besi dan batu bara kokas",
+    "Batas produksi pemerintah"
+   ],
+   "uses": [
+    "Gedung dan jembatan",
+    "Mobil dan mesin"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Gulungan baja canai panas adalah produk baja datar yang digunakan dalam manufaktur. Harga yang ditampilkan adalah untuk pengiriman di Midwest AS per ton metrik.",
+   "drivers": [
+    "Permintaan AS dari mobil dan konstruksi",
+    "Tarif impor dan persaingan",
+    "Biaya bahan baku dan energi"
+   ],
+   "uses": [
+    "Mobil dan peralatan rumah tangga",
+    "Pipa dan konstruksi"
+   ]
+  },
+  "lumber": {
+   "about": "Kontrak berjangka kayu gergajian mengikuti harga kayu lunak yang digunakan untuk membangun rumah, dikutip per 1.000 board feet.",
+   "drivers": [
+    "Jumlah pembangunan rumah dan suku bunga KPR",
+    "Output penggergajian dan kebakaran hutan",
+    "Bea perdagangan antara AS dan Kanada"
+   ],
+   "uses": [
+    "Rangka rumah",
+    "Furnitur dan kemasan"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI adalah acuan minyak mentah AS, dikutip per barel dan dikirim di Cushing, Oklahoma.",
+   "drivers": [
+    "Keputusan produksi OPEC dan AS",
+    "Pertumbuhan ekonomi global",
+    "Persediaan, geopolitik, dan dolar AS"
+   ],
+   "uses": [
+    "Bensin, solar, dan bahan bakar jet",
+    "Plastik dan bahan kimia"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent adalah acuan global untuk minyak mentah, dikutip per barel, dan menjadi harga bagi sebagian besar minyak yang diperdagangkan di luar AS.",
+   "drivers": [
+    "Keputusan produksi OPEC+",
+    "Permintaan global, terutama dari China dan India",
+    "Konflik dan sanksi di wilayah produsen"
+   ],
+   "uses": [
+    "Bensin, solar, dan bahan bakar jet",
+    "Plastik dan bahan kimia"
+   ]
+  },
+  "natural-gas": {
+   "about": "Gas alam di sini dikutip sebagai harga Henry Hub AS per MMBtu. Gas digunakan untuk pemanas, pembangkit listrik, dan industri.",
+   "drivers": [
+    "Cuaca dan permintaan pemanas",
+    "Tingkat penyimpanan dan produksi",
+    "Ekspor gas alam cair (LNG)"
+   ],
+   "uses": [
+    "Pembangkit listrik",
+    "Pemanas dan memasak di rumah",
+    "Pupuk dan bahan kimia"
+   ]
+  },
+  "gasoline": {
+   "about": "Kontrak berjangka bensin mengikuti harga grosir bensin dalam dolar AS per galon.",
+   "drivers": [
+    "Harga minyak mentah",
+    "Output kilang dan musim berkendara",
+    "Persediaan dan regulasi"
+   ],
+   "uses": [
+    "Bahan bakar mobil"
+   ]
+  },
+  "heating-oil": {
+   "about": "Kontrak berjangka minyak pemanas mengikuti harga grosir solar dan bahan bakar pemanas dalam dolar AS per galon.",
+   "drivers": [
+    "Harga minyak mentah",
+    "Cuaca musim dingin",
+    "Permintaan solar dari truk dan industri"
+   ],
+   "uses": [
+    "Pemanas rumah",
+    "Bahan bakar solar"
+   ]
+  },
+  "wheat": {
+   "about": "Gandum adalah salah satu serealia pangan utama dunia. Harganya dikutip per bushel di bursa Chicago.",
+   "drivers": [
+    "Cuaca di wilayah tanam utama",
+    "Ekspor dari Rusia, Ukraina, AS, dan Uni Eropa",
+    "Stok, harga energi, dan dolar AS"
+   ],
+   "uses": [
+    "Roti, pasta, dan tepung",
+    "Pakan ternak"
+   ]
+  },
+  "corn": {
+   "about": "Jagung adalah serealia utama untuk pangan dan pakan, serta sumber etanol. Harganya dikutip per bushel di bursa Chicago.",
+   "drivers": [
+    "Panen AS dan Brasil",
+    "Permintaan etanol dan pakan ternak",
+    "Cuaca dan ekspor"
+   ],
+   "uses": [
+    "Pakan ternak",
+    "Bahan bakar etanol",
+    "Pangan dan sirup"
+   ]
+  },
+  "soybeans": {
+   "about": "Kedelai diolah menjadi minyak dan bungkil. Harganya dikutip per bushel di bursa Chicago.",
+   "drivers": [
+    "Panen AS, Brasil, dan Argentina",
+    "Permintaan impor China",
+    "Kebijakan biofuel"
+   ],
+   "uses": [
+    "Minyak goreng",
+    "Pakan ternak",
+    "Biodiesel"
+   ]
+  },
+  "rice": {
+   "about": "Beras gabah adalah makanan pokok bagi miliaran orang. Harganya dikutip per hundredweight di bursa Chicago.",
+   "drivers": [
+    "Kondisi musim hujan dan panen di Asia",
+    "Aturan ekspor India, Thailand, dan Vietnam",
+    "Stok dan harga pangan"
+   ],
+   "uses": [
+    "Pangan"
+   ]
+  },
+  "sugar": {
+   "about": "Kontrak berjangka gula mentah mengikuti harga gula dunia, dikutip dalam dolar AS per pon.",
+   "drivers": [
+    "Panen tebu di Brasil dan India",
+    "Permintaan etanol di Brasil",
+    "Cuaca dan mata uang"
+   ],
+   "uses": [
+    "Makanan dan minuman",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Kontrak berjangka kopi arabika mengikuti harga biji kopi dunia, dikutip dalam dolar AS per pon.",
+   "drivers": [
+    "Cuaca di Brasil dan Kolombia",
+    "Persediaan dan ekspor",
+    "Mata uang dan permintaan"
+   ],
+   "uses": [
+    "Minuman kopi"
+   ]
+  },
+  "cocoa": {
+   "about": "Kontrak berjangka kakao mengikuti harga biji kakao, dikutip dalam dolar AS per ton metrik.",
+   "drivers": [
+    "Panen di Pantai Gading dan Ghana",
+    "Penyakit dan cuaca",
+    "Permintaan cokelat"
+   ],
+   "uses": [
+    "Cokelat dan permen",
+    "Kosmetik"
+   ]
+  },
+  "cotton": {
+   "about": "Kontrak berjangka kapas mengikuti harga kapas mentah dunia, dikutip dalam dolar AS per pon.",
+   "drivers": [
+    "Cuaca di AS, India, dan China",
+    "Permintaan tekstil",
+    "Harga minyak dan mata uang"
+   ],
+   "uses": [
+    "Pakaian dan tekstil"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin adalah kripto pertama dan terbesar. Diperdagangkan 24 jam di bursa dan pasokannya dibatasi 21 juta koin.",
+   "drivers": [
+    "Permintaan investor dan arus dana ETF",
+    "Suku bunga dan selera risiko",
+    "Regulasi dan berita"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum adalah blockchain untuk kontrak pintar dan aplikasi, dan koinnya, ether, adalah kripto terbesar kedua.",
+   "drivers": [
+    "Penggunaan aplikasi Ethereum",
+    "Peningkatan jaringan dan biaya",
+    "Sentimen pasar"
+   ]
+  },
+  "bnb": {
+   "about": "BNB adalah koin dari BNB Chain dan ekosistem bursa Binance.",
+   "drivers": [
+    "Aktivitas dan biaya bursa",
+    "Pembakaran token",
+    "Regulasi"
+   ]
+  },
+  "xrp": {
+   "about": "XRP adalah kripto yang digunakan untuk pembayaran internasional yang cepat di XRP Ledger.",
+   "drivers": [
+    "Berita pengadilan dan regulator",
+    "Kemitraan dengan bank dan sistem pembayaran",
+    "Sentimen pasar"
+   ]
+  },
+  "solana": {
+   "about": "Solana adalah blockchain cepat untuk aplikasi dan pembayaran, dan SOL adalah koinnya.",
+   "drivers": [
+    "Aktivitas aplikasi dan token",
+    "Keandalan jaringan",
+    "Sentimen pasar"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano adalah blockchain proof-of-stake, dan ADA adalah koinnya.",
+   "drivers": [
+    "Kemajuan pengembangan",
+    "Staking",
+    "Sentimen pasar"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin dimulai sebagai koin lelucon dan menjadi salah satu kripto yang paling banyak diperdagangkan.",
+   "drivers": [
+    "Perhatian di media sosial",
+    "Sentimen pasar",
+    "Adopsi pembayaran"
+   ]
+  },
+  "tron": {
+   "about": "TRON adalah blockchain yang banyak dipakai untuk transfer stablecoin, dan TRX adalah koinnya.",
+   "drivers": [
+    "Aktivitas transfer stablecoin",
+    "Biaya jaringan",
+    "Sentimen pasar"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot menghubungkan banyak blockchain, dan DOT adalah koinnya.",
+   "drivers": [
+    "Pengembangan jaringan",
+    "Staking",
+    "Sentimen pasar"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink menyediakan data dunia nyata bagi blockchain, dan LINK adalah koinnya.",
+   "drivers": [
+    "Penggunaan oleh aplikasi lain",
+    "Kemitraan",
+    "Sentimen pasar"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin adalah salah satu kripto tertua, dibuat untuk pembayaran yang lebih cepat dibanding Bitcoin.",
+   "drivers": [
+    "Harga Bitcoin",
+    "Adopsi pembayaran",
+    "Sentimen pasar"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche adalah platform blockchain yang cepat, dan AVAX adalah koinnya.",
+   "drivers": [
+    "Aktivitas aplikasi",
+    "Peningkatan jaringan",
+    "Sentimen pasar"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 melacak 500 perusahaan AS terbesar dan menjadi tolok ukur utama pasar saham AS.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite melacak ribuan saham yang tercatat di Nasdaq, dengan bobot besar pada perusahaan teknologi.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average melacak 30 perusahaan besar AS.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 melacak 100 perusahaan terbesar yang tercatat di London.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "dax": {
+   "about": "DAX melacak 40 perusahaan besar Jerman yang tercatat di Frankfurt.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 melacak 40 perusahaan besar yang tercatat di Paris.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 melacak 225 perusahaan besar yang tercatat di Tokyo.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "hang-seng": {
+   "about": "Indeks Hang Seng melacak perusahaan terbesar yang tercatat di Hong Kong.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite melacak semua saham yang tercatat di Bursa Efek Shanghai.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 melacak 50 perusahaan besar di Bursa Efek Nasional India.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex melacak 30 perusahaan besar di Bursa Efek Bombay.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 melacak 30 perusahaan paling aktif di Bursa Efek Mesir.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "tasi": {
+   "about": "Indeks Tadawul All Share melacak semua perusahaan yang tercatat di bursa saham Arab Saudi.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 melacak 100 perusahaan terbesar di Borsa Istanbul.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa melacak perusahaan utama yang tercatat di bursa B3 Brasil.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 melacak 200 perusahaan terbesar di bursa Australia.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite melacak perusahaan utama yang tercatat di Bursa Toronto.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI melacak semua saham biasa di Bursa Korea.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 melacak 50 perusahaan besar di kawasan euro.",
+   "drivers": [
+    "Laba perusahaan",
+    "Suku bunga dan inflasi",
+    "Berita ekonomi dan politik"
+   ]
+  }
  }
 }

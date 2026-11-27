@@ -2,15 +2,19 @@
   "country": "JP",
   "tier": 1,
   "verifiedAt": "2026-11-27",
-  "confidence": "low",
+  "confidence": "medium",
   "defaultKarat": 24,
   "gold": {
     "vatJewelryPct": 10,
     "vatBullionPct": 10,
     "importDutyPct": 0,
     "makingPct": null,
-    "barPremiumPct": {},
-    "barBuybackDiscountPct": null,
+    "barPremiumPct": {
+      "31.1g": 6.6
+    },
+    "barBuybackDiscountPct": {
+      "typical": 1.3
+    },
     "usedGoldDiscountPct": null
   },
   "silver": {
@@ -22,8 +26,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "10% consumption tax on gold purchases incl. bars; refunded to sellers when selling to a dealer; no import duty on gold (10% tax at import). Spot 27 Nov 2026 about 18,680 JPY/g (USD/JPY 159.3). Tanaka and other dealer retail prices could not be opened (hosts refused or out of stock), so premiums, buyback and making are null.",
+  "notes": "Tanaka 27 Nov 2026 14:00 JST (tax incl.): gold 20,664 yen/g sell, 20,308 buy; ex-10% tax about +0.6% / -1.3% vs spot ~18,700 yen/g, before bar fees (small bars add commission). 1oz Maple coin 681,837 yen = +6.6% over spot ex-tax. Consumption tax 10% on purchases, refunded when selling to a dealer. Making, used-jewellery and silver not sourced.",
   "sources": [
+    {
+      "name": "Tanaka Kikinzoku retail price",
+      "url": "https://gold.tanaka.co.jp/commodity/souba/english/",
+      "what": "27 Nov 2026 14:00 JST tax-incl. gold 20,664 sell/20,308 buy yen/g; 1oz Maple Leaf coin sell 681,837 yen; compared with spot 18,679-18,713 yen/g at USD/JPY 159.3"
+    },
     {
       "name": "BullionStar: Gold Tax and VAT Across Asia",
       "url": "https://www.bullionstar.com/gold-university/gold-tax-asia",

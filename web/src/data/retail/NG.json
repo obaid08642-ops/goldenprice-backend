@@ -1,0 +1,33 @@
+{
+ "country": "NG",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "No Nigerian dealer ask prices, VAT treatment of gold, or making charges could be sourced. Aggregators only show spot-derived NGN per gram. All fields null.",
+ "sources": [
+  {
+   "name": "KPMG Nigeria VAT reset",
+   "url": "https://kpmg.com/ng/en/insights/2026/10/nigerias-vat-reset.html",
+   "what": "Opened; no gold-specific VAT information found"
+  }
+ ]
+}

@@ -1,0 +1,38 @@
+{
+ "country": "TN",
+ "tier": 2,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 19,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "18K is the main jewelry grade, sold at Souk El Berka (Tunis) prices that include making; on 4 Nov 2026 press cited 18K at 340 TND/g, 24K at 380 TND/g and broken/scrap gold about 300 TND/g (karat unspecified). Gold board prices exceed pure spot value; scrap discount not computable.",
+ "sources": [
+  {
+   "name": "PwC Worldwide Tax Summaries - Tunisia",
+   "url": "https://taxsummaries.pwc.com/tunisia/corporate/other-taxes",
+   "what": "Standard VAT 19% (reviewed 29 Jun 2026); jewelry-specific rate not confirmed."
+  },
+  {
+   "name": "Tuniscope",
+   "url": "https://www.tuniscope.com/ar/article/443918/actualites/societe/or-tunisie-234409",
+   "what": "4 Nov 2026 Souk El Berka prices: 18K 340, 24K 380, scrap about 300 TND/g."
+  }
+ ]
+}

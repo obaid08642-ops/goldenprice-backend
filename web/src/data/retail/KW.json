@@ -1,15 +1,21 @@
 {
- "country": "KW",
- "tier": 1,
- "verifiedAt": "2026-11-27",
- "confidence": "low",
+ "confidence": "medium",
  "defaultKarat": 21,
  "gold": {
-  "vatJewelryPct": null,
-  "vatBullionPct": null,
+  "vatJewelryPct": 0,
+  "vatBullionPct": 0,
   "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
+  "makingPct": {
+   "typical": 9,
+   "min": 5,
+   "max": 15
+  },
+  "barPremiumPct": {
+   "1g": 17.8,
+   "2.5g": 10.7,
+   "5g": 6.8,
+   "10g": 4.8
+  },
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
@@ -22,22 +28,35 @@
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
- "notes": "No VAT or duty figures could be sourced from opened pages. Local per-gram rates track spot closely: Arab Times (10 Aug 2025) cited 24K at KD 33.320/g with spot at $3,398/oz, roughly in line with spot. Bar premiums, making charges and buyback null.",
+ "notes": "No VAT in force in Kuwait. Making is usually quoted per gram in KWD (about 3 KWD/g on 21K/22K, 5 KWD/g on 18K) which equals roughly 9% on 22K. Bar premiums use FK Jewellers BTC bar asks vs spot at the KWD peg-basket rate 0.312; only 1-10 g sizes found. Buyback and used-gold discounts not sourced.",
  "sources": [
   {
-   "name": "Arab Times",
-   "url": "https://www.arabtimesonline.com/news/kuwaits-24k-gold-hits-kd3332",
-   "what": "10 Aug 2025: 24K KD 33.320/g, 22K KD 30.544/g, spot $3,398/oz"
+   "name": "PwC Tax Summaries Kuwait",
+   "url": "https://taxsummaries.pwc.com/kuwait/corporate/other-taxes",
+   "what": "Reviewed 22 Jul 2026: GCC VAT not yet enacted in Kuwait; no excise taxes; unified 5% customs tariff with exceptions"
   },
   {
-   "name": "Goodreturns Kuwait",
-   "url": "https://www.goodreturns.in/gold-rates/kuwait.html",
-   "what": "27 Nov 2026 Kuwait 22K/24K per-gram reference rates"
+   "name": "FK Jewellers gold bullion",
+   "url": "https://bullion.fkjewellers.com/en/product-category/gold-bars/",
+   "what": "27 Nov 2026 BTC 24K bar asks 1 g KWD 43.04, 2.5 g 101.11, 5 g 195.22, 10 g 382.93; spot $3,644.22/oz x 0.31198 = 36.55 KWD/g"
   },
   {
-   "name": "Gold Price Z Kuwait",
-   "url": "https://goldpricez.com/kw/kg",
-   "what": "KWD gold price per kg versus USD spot and exchange rate"
+   "name": "Kuwait Gold Rates making charges",
+   "url": "https://kuwaitgoldrates.com/en/articles/gold-making-charges-kuwait",
+   "what": "Typical making 3 KWD/g on 21K/22K (about 9% on 22K), 5 KWD/g on 18K, plain 5-6% to handmade about 14%; no VAT on gold"
+  },
+  {
+   "name": "QatarGoldLive GCC tax comparison",
+   "url": "https://qatargoldlive.com/gold-tax-qatar/",
+   "what": "Comparison table lists Kuwait at 0% VAT on jewelry and bullion"
+  },
+  {
+   "name": "Gold Price Z",
+   "url": "https://www.goldpricez.com/",
+   "what": "27 Nov 2026 spot reference: gold $3,644.22/oz"
   }
- ]
+ ],
+ "country": "KW",
+ "tier": 1,
+ "verifiedAt": "2026-11-27"
 }

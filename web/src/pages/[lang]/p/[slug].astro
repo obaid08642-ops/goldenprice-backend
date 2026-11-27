@@ -1,0 +1,14 @@
+---
+import AssetPage from "../../../components/AssetPage.astro";
+import { COUNTRIES } from "../../../data/countries";
+import { TAIL } from "../../../data/assets";
+import { LANG_CODES } from "../../../data/languages";
+import { getData } from "../../../lib/api";
+export async function getStaticPaths() {
+  const data = await getData();
+  const us = COUNTRIES.find((c) => c.code === "US")!;
+  return LANG_CODES.flatMap((lang) => TAIL.filter((a) => data.items[a.sym]?.price != null).map((a) => ({ params: { lang, slug: a.slug }, props: { lang, asset: a, country: us } })));
+}
+const { lang, asset, country } = Astro.props;
+---
+<AssetPage lang={lang} country={country} view="asset" asset={asset} tail={true} />

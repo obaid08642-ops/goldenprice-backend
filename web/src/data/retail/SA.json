@@ -1,17 +1,33 @@
 {
- "country": "SA",
- "tier": 1,
- "verifiedAt": "2026-11-27",
- "confidence": "low",
+ "confidence": "medium",
  "defaultKarat": 21,
  "gold": {
   "vatJewelryPct": 15,
   "vatBullionPct": 0,
   "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
+  "makingPct": {
+   "typical": 10,
+   "min": 5,
+   "max": 20
+  },
+  "barPremiumPct": {
+   "1g": 29.5,
+   "2.5g": 20.0,
+   "5g": 12.7,
+   "10g": 8.6,
+   "20g": 7.4,
+   "31.1g": 6.2,
+   "50g": 5.4,
+   "100g": 4.3
+  },
+  "barBuybackDiscountPct": {
+   "typical": 0.5
+  },
+  "usedGoldDiscountPct": {
+   "typical": 1.5,
+   "min": 0.5,
+   "max": 3.6
+  }
  },
  "silver": {
   "vatJewelryPct": null,
@@ -22,7 +38,7 @@
   "barBuybackDiscountPct": null,
   "usedGoldDiscountPct": null
  },
- "notes": "Investment gold, silver and platinum of at least 99% purity (tradable on international bullion market) is zero-rated; jewelry and lower-purity metal carry 15% VAT. No local dealer ask prices could be opened, so bar premiums, making charges and buyback are null.",
+ "notes": "Investment gold of 99%+ purity is zero-rated; jewelry and lower-purity gold carry 15% VAT on gold plus making. Bar premiums are Ounce (Riyadh) Saudi-brand bar asks at 09:00 on 27 Nov vs the 24K raw rate it shows (439.28 SAR/g, equal to spot). Making is quoted 10-20% for 21K; 24K bullion needs little. Used-gold deduction from gold.sa and ZahabPrice market averages (indicative).",
  "sources": [
   {
    "name": "ZATCA investment metals VAT guideline",
@@ -30,14 +46,32 @@
    "what": "Investment gold/silver/platinum (99%+ purity) zero-rated; jewelry subject to 15% standard VAT"
   },
   {
-   "name": "ZATCA news notice",
-   "url": "https://zatca.gov.sa/en/MediaCenter/News/Pages/News-099.aspx",
-   "what": "Notice that VAT applies to gold below 99% purity"
-  },
-  {
    "name": "Saudi Gazette",
    "url": "https://saudigazette.com.sa/article/623255/SAUDI-ARABIA/ZATCA-VAT-applicable-to-gold-if-its-purity-level-is-below-99",
    "what": "Report (21 Jul 2025): zero VAT at 99%+ purity, VAT below 99%"
+  },
+  {
+   "name": "Ounce Precious Metals (ounce.com.sa) gold bars",
+   "url": "https://ounce.com.sa/en/gold-bars/",
+   "what": "27 Nov 2026 Saudi rectangular bar asks 1 g 569 to 100 g 45,828 SAR; premium vs the site's 24K raw price 439.28 SAR/g (09:00 update)"
+  },
+  {
+   "name": "Ounce gold prices",
+   "url": "https://ounce.com.sa/en/%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%87%d8%a8/",
+   "what": "27 Nov 2026 09:00 dealer raw gold rates 24K 439.28 SAR/g (matches spot $3,643/oz x 3.75)"
+  },
+  {
+   "name": "Gold.sa used gold and workmanship",
+   "url": "https://gold.sa/en/used/all",
+   "what": "27 Nov 2026 market-average used-gold buy rates (24K 437.38 vs 439.37, 21K 380.46 vs 384.45, 18K 322.54 vs 329.53 SAR/g); workmanship pages quote 10-20% for 21K, 5-15% for 22K"
+  },
+  {
+   "name": "ZahabPrice Saudi Arabia",
+   "url": "https://www.zahabprice.com/en-sa/bullion",
+   "what": "27 Nov 2026 spot reference ($3,642.15/oz) and used-gold deduction 2-12 SAR/g by karat"
   }
- ]
+ ],
+ "country": "SA",
+ "tier": 1,
+ "verifiedAt": "2026-11-27"
 }
