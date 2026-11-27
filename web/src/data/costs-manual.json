@@ -510,5 +510,114 @@
       "src": "Hydro-Quebec Rate D first tier (no national tariff; largest province), from 1 Apr 2026",
       "url": "https://www.hydroquebec.com/residential/customer-space/rates/rate-d.html"
     }
+  },
+  "MX": {
+    "fuel": {
+      "cur": "MXN",
+      "date": "2026-11-09",
+      "src": "Profeco Quien es Quien en los Precios de los Combustibles (CNE station reports): Regular/Magna 87 octane main grade; Premium 92 is 28.58; observed 27 Oct - 2 Nov 2026",
+      "url": "https://combustibles.profeco.gob.mx",
+      "petrol95": 23.69,
+      "diesel": 26.97,
+      "lpg": null
+    }
+  },
+  "BR": {
+    "electricity": {
+      "cur": "BRL",
+      "kwh": 0.78938,
+      "period": "2026-07",
+      "src": "Enel Sao Paulo residential B1 tariff (TUSD+TE), ex-tax, ANEEL Resolution 3.596/2026 from 4 Jul 2026; Brazil has no national tariff",
+      "url": "https://www.enel.com.br"
+    }
+  },
+  "AR": {
+    "electricity": {
+      "cur": "ARS",
+      "kwh": 163.597,
+      "period": "2026-11",
+      "src": "Edenor Tarifa 1-R, R1 variable charge, unsubsidised Nivel 1, excl. VAT, ENRE Resolution 886/2026 from 1 Nov 2026",
+      "url": "https://www.edenor.com/files/2026-11/Cuadro-Tarifario.pdf"
+    }
+  },
+  "CO": {
+    "fuel": {
+      "cur": "COP",
+      "date": "2026-11-01",
+      "src": "Ministry of Mines and Energy / CREG Circular 371/2026 reference prices, Bogota (gasolina corriente and ACPM diesel, converted from COP/gallon)",
+      "url": "https://gestornormativo.creg.gov.co",
+      "petrol95": 4314,
+      "diesel": 3069,
+      "lpg": null
+    }
+  },
+  "PE": {
+    "fuel": {
+      "cur": "PEN",
+      "date": "2026-11-09",
+      "src": "Osinergmin reference prices PR1, week of 9 Nov 2026 (Gasohol Premium and Diesel B5, GLP; ex-plant reference, not retail pump prices; converted from PEN/gallon)",
+      "url": "https://www.osinergmin.gob.pe",
+      "petrol95": 2.84,
+      "diesel": 4.37,
+      "lpg": 1.65
+    }
+  },
+  "NG": {
+    "electricity": {
+      "cur": "NGN",
+      "kwh": 209.5,
+      "period": "2026-10",
+      "src": "NERC MYTO order: AEDC Band A residential tariff (min 20h supply/day), ex-VAT; lifeline is 4.00 for up to 50 kWh/month",
+      "url": "https://son.gov.ng/wp-content/uploads/2026/10/SON_MELS_AC_2026_0003-%E2%80%93-Daikin-FTKL60UV16UD-_-SONMELS-Product-Information.pdf"
+    }
+  },
+  "ZA": {
+    "fuel": {
+      "cur": "ZAR",
+      "date": "2026-11-04",
+      "src": "Department of Petroleum and Mineral Resources / CEF official monthly prices (Petrol 95 ULP and Diesel 0.05%, Gauteng inland), from 4 Nov 2026",
+      "url": "https://cefgroup.co.za/wp-content/uploads/2026/11/Press-Release-30-October-2026-Change-04-November-2026.pdf",
+      "petrol95": 30.24,
+      "diesel": 30.85,
+      "lpg": null
+    }
+  },
+  "KE": {
+    "fuel": {
+      "cur": "KES",
+      "date": "2026-11-15",
+      "src": "EPRA maximum pump prices, Nairobi, 15 Nov - 14 Dec 2026 (Super Petrol and Diesel, incl. 8% VAT)",
+      "url": "https://www.epra.go.ke",
+      "petrol95": 226.96,
+      "diesel": 227.76,
+      "lpg": null
+    },
+    "electricity": {
+      "cur": "KES",
+      "kwh": 12.24,
+      "period": "2026-11",
+      "src": "EPRA/Kenya Power domestic lifeline base energy charge (0-30 kWh), excl. monthly pass-through charges and VAT",
+      "url": "https://www.epra.go.ke/sites/default/files/2024-10/EPRA%20Energy%20and%20Petroleum%20Statistics%20Report%20FY%202023-2024_2.pdf"
+    }
+  },
+  "GH": {
+    "electricity": {
+      "cur": "GHS",
+      "kwh": 0.8993,
+      "period": "2026-10",
+      "src": "PURC Fourth Schedule tariffs from 1 Oct 2026: residential lifeline 0-30 kWh (0-300 kWh block is 2.0375)",
+      "url": "https://purc.com.gh/attachment/67864-20261001121001.pdf"
+    }
+  },
+  "NZ": {
+    "fuel": {
+      "cur": "NZD",
+      "date": "2026-11-20",
+      "src": "MBIE weekly fuel price monitoring, national average adjusted retail price (Premium 95R; regular 91 main grade is 3.2447), week ending 20 Nov 2026 - monitored averages, not set prices",
+      "url": "https://www.mbie.govt.nz/assets/Data-Files/Energy/Weekly-fuel-price-monitoring/weekly-table.csv",
+      "petrol95": 3.4035,
+      "diesel": 2.9898,
+      "lpg": null
+    }
   }
 }
