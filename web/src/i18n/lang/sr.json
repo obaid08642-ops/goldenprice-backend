@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "danas",
+  "updated": "Ažurirano {t}",
+  "delayed": "Sa kašnjenjem",
+  "per": "po {u}",
+  "u_gram": "gram",
+  "u_ounce": "unca",
+  "u_kilo": "kilogram",
+  "u_tola": "tola",
+  "u_ton": "metrička tona",
+  "u_barrel": "barel",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "galon",
+  "u_bushel": "bušel",
+  "u_lb": "funta",
+  "u_cwt": "cental",
+  "u_coin": "novčić",
+  "u_point": "poena",
+  "global_vs_local": "Svetska naspram lokalne cene",
+  "global_price": "Svetska cena",
+  "local_estimate": "Lokalna procena",
+  "est_retail": "Procenjena maloprodajna cena, uklj. cenu izrade",
+  "est_note": "Samo procena. Prodavnice se razlikuju po porezima, cenama izrade i maržama.",
+  "karat_title": "{a} po karatima",
+  "karat": "Karat",
+  "purity": "Finoća",
+  "price": "Cena",
+  "currencies_title": "Cena: {a} u drugim valutama",
+  "col_ounce": "Po unci",
+  "col_gram": "Po gramu",
+  "col_24h": "24 h",
+  "col_7d": "7 dana",
+  "markets_title": "Metali, energija, poljoprivreda i kripto valute",
+  "markets_sub": "Žive cene u {cur}",
+  "list_title": "Cene metala, energije, robe i kripto valuta u {country}",
+  "list_desc": "Žive cene zlata, srebra, platine, bakra, nafte, gasa, pšenice, kafe, berzanskih indeksa, bitkoina i još mnogo toga, u {cur}.",
+  "alerts_title": "Cenovna upozorenja",
+  "alerts_desc": "Obavestićemo vas kada cena dostigne vaš cilj, na telefon ili e-poštom.",
+  "alerts_cta": "Napravi upozorenje",
+  "search_ph": "Pretraga, npr. {a} cena u {country}…",
+  "search_btn": "Pretraži",
+  "r1d": "1D",
+  "r1w": "1N",
+  "r1m": "1M",
+  "r1y": "1G",
+  "r5y": "5G",
+  "rall": "Sve",
+  "geo_ask": "Prikazati cene za {country} u {cur}?",
+  "geo_yes": "Da, promeni",
+  "geo_no": "Ne, hvala",
+  "footer_note": "Cene su orijentacione i mogu kasniti. Nije savet za ulaganje.",
+  "about": "O nama",
+  "privacy": "Politika privatnosti",
+  "contact": "Kontakt",
+  "theme": "Tema",
+  "language": "Jezik",
+  "country": "Zemlja",
+  "faq_title": "Česta pitanja",
+  "q1": "Kolika je danas cena {a} u {country}?",
+  "a1": "Cena {a} u {country} danas iznosi {p} {cur} po {u}. Reč je o svetskoj spot ceni preračunatoj po najnovijem kursu, koja se ažurira na svakih nekoliko minuta.",
+  "q2": "Zašto se lokalna cena razlikuje od svetske?",
+  "a2": "Prodavnice na svetsku spot cenu dodaju cenu izrade, poreze, uvozne dažbine i maržu trgovca, pa je maloprodajna cena u {country} obično viša.",
+  "q3": "Koliko često se cena ažurira?",
+  "a3": "Žive tržišne cene osvežavaju se na svakih nekoliko minuta. Cene bez žive veze s podacima unose se ručno i prikazuju vreme poslednjeg ažuriranja.",
+  "title": "Cena {a} u {country} danas | po {u} u {cur}",
+  "desc": "Živa cena {a} u {country} u {cur}: po gramu, unci i kilogramu, grafikon cene i svetska naspram lokalne cene. Ažurira se na svakih nekoliko minuta.",
+  "title_idx": "Indeks {a} danas | živa vrednost i grafikon",
+  "desc_idx": "Živa vrednost indeksa {a}, dnevna promena i grafikon cene. Ažurira se na svakih nekoliko minuta.",
+  "history_note": "Istorija se zasniva na dnevnim zatvaranjima.",
+  "unit_label": "Jedinica",
+  "sample_note": "Primer podataka",
+  "nav_all": "Tržišta",
+  "nav_rates": "Valute",
+  "nav_calc": "Kalkulatori",
+  "cat_precious": "Plemeniti metali",
+  "cat_industrial": "Industrijski metali",
+  "cat_energy": "Energija",
+  "cat_agri": "Poljoprivreda",
+  "cat_index": "Berzanski indeksi",
+  "cat_crypto": "Kripto valute",
+  "bars_title": "{a} poluge i novčići: kupovna i prodajna cena u {cur}",
+  "bar_size": "Veličina",
+  "bar_buy": "Cena kupovine kod trgovca",
+  "bar_sell": "Otkup nazad",
+  "bar_prem": "Premija iznad spot cene",
+  "bars_note": "Uobičajene cene trgovaca zasnovane na svetskoj ceni uvećanoj za uobičajenu premiju. Stvarne cene variraju od prodavnice do prodavnice i od dana do dana.",
+  "used_title": "Polovno zlato i otpad {a}: otkupna cena po gramu u {cur}",
+  "used_note": "Polovni nakit se obično otkupljuje ispod cene novog. Reč je o tipičnim procenama.",
+  "used_col": "Otkup po gramu",
+  "rates_title": "Kursevi u odnosu na {cur}",
+  "rates_sub": "Srednji kursevi, ažuriraju se na svakih sat vremena",
+  "rates_desc": "Živi kursevi glavnih svetskih valuta u odnosu na {cur}, uz kalkulator valuta.",
+  "rates_page_title": "Kursevi valuta i kalkulator valuta u {country}",
+  "conv_title": "Kalkulator valuta",
+  "conv_amount": "Iznos",
+  "conv_from": "Iz",
+  "conv_to": "U",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Kalkulator zlata i kalkulator zekata u {country}",
+  "calc_page_desc": "Izračunajte vrednost svog zlata prema težini i karatima u {cur} i proverite zekat na zlato i srebro po današnjim cenama.",
+  "calc_title": "Kalkulator vrednosti zlata",
+  "calc_weight": "Težina",
+  "calc_unit": "Jedinica",
+  "calc_karat": "Karat",
+  "calc_value": "Procenjena vrednost",
+  "calc_note": "Zasnovano na svetskoj ceni. Prodavnice za polovno zlato obično plaćaju manje.",
+  "zakat_title": "Zekat na zlato i srebro",
+  "zakat_nisab_gold": "Nisab zlata (85 grama)",
+  "zakat_nisab_silver": "Nisab srebra (595 grama)",
+  "zakat_gold_g": "Vaše zlato u gramima (ekvivalent 24K)",
+  "zakat_silver_g": "Vaše srebro u gramima",
+  "zakat_due": "Zekat za plaćanje (2,5%)",
+  "zakat_note": "Zekat se duguje na imovinu koja je godinu lunarnih meseci ostala iznad nisaba. Ovo je orijentacija, za vaš slučaj pitajte učenjaka.",
+  "zakat_below": "Ispod nisaba: za ovaj iznos nema zekata za plaćanje.",
+  "related_title": "Popularne pretrage",
+  "retail_basis": "Zasnovano na {n} lokalnih izvora, provereno {d}.",
+  "u_share": "udeo",
+  "u_rate": "kurs",
+  "u_mbf": "1.000 bord-stopa",
+  "cat_stock": "Akcije",
+  "cat_forex": "Parovi valuta",
+  "cat_construction": "Građevinski materijali",
+  "perf_title": "Učinak",
+  "p_7d": "1 nedelja",
+  "p_30d": "1 mesec",
+  "p_90d": "3 meseca",
+  "p_ytd": "Od početka godine",
+  "p_1y": "1 godina",
+  "p_5y": "5 godina",
+  "range52": "Raspon za 52 nedelje",
+  "ath": "Najviša u našim podacima",
+  "atl": "Najniža u našim podacima",
+  "since": "Istorija od {d}",
+  "about_title": "O: {a}",
+  "drivers_title": "Šta pokreće cenu",
+  "uses_title": "Čemu služi",
+  "source_note": "Izvor: {s}. Cene su orijentacione i mogu kasniti.",
+  "about_stock": "Akcije {a} imaju cenu u {c}. Stranica prikazuje poslednju cenu sa kašnjenjem, promenu danas i u dužim periodima, kao i istu cenu preračunatu u druge valute.",
+  "about_forex": "{a} pokazuje koliko jedinica druge valute dobijate za jednu jedinicu prve. Kursevi se kreću zajedno s kamatama, inflacijom, trgovinom i ekonomskim vestima obe zemlje.",
+  "about_crypto": "{a} je kriptovaluta. Njena cena se formira trgovinom na berzama non-stop i može se brzo menjati. Stranica prikazuje cenu uživo, promenu u raznim periodima i cenu u drugim valutama.",
+  "about_commodity": "{a} je roba kojom se trguje. Cena prati ponudu, potražnju, vremenske prilike, valute i vesti. Stranica prikazuje poslednju cenu, promenu u raznim periodima i cenu u drugim valutama.",
+  "about_index": "{a} meri učinak korpe akcija. Vrednost se izražava u indeksnim poenima i menja se zajedno s cenama akcija kompanija u njemu.",
+  "tail_list_title": "Akcije, kripto valute, parovi valuta i ostala roba",
+  "tail_list_desc": "Žive cene svetskih akcija, dodatnih kripto valuta, parova valuta i dodatne robe, uz grafikone i učinak.",
+  "tail_title": "Cena {a} danas | živa vrednost i grafikon",
+  "tail_desc": "Živa cena {a} sa grafikonom i učinkom za 1 nedelju, 1 mesec, 1 godinu i više. Ažurira se na svakih nekoliko minuta.",
+  "nav_dev": "Programeri",
+  "nav_compare": "Poređenje",
+  "terms": "Uslovi korišćenja",
+  "disclaimer": "Odricanje od odgovornosti",
+  "cookies": "Politika kolačića",
+  "developers": "API za programere",
+  "alert_title": "Napravite upozorenje o ceni",
+  "alert_email": "Vaša e-pošta",
+  "alert_target": "Ciljna cena ({cur})",
+  "alert_above": "Raste iznad",
+  "alert_below": "Pada ispod",
+  "alert_submit": "Napravi upozorenje",
+  "alert_ok": "Upozorenje je sačuvano. Poslaćemo vam jednu e-poruku kada cena pređe vaš cilj.",
+  "alert_err": "Upozorenje nije moglo da se sačuva. Proverite e-poštu i cenu, pa pokušajte ponovo.",
+  "alert_privacy": "Vašu e-poštu koristimo samo za slanje ovog upozorenja.",
+  "contact_title": "Pošaljite nam poruku",
+  "contact_name": "Vaše ime",
+  "contact_email": "Vaša e-pošta",
+  "contact_msg": "Poruka",
+  "contact_send": "Pošalji",
+  "contact_ok": "Hvala. Vaša poruka je poslata.",
+  "contact_err": "Poruka nije poslata. Pokušajte ponovo kasnije.",
+  "dev_title": "Besplatan API za cene",
+  "dev_desc": "Koristite naše cene u sopstvenoj aplikaciji ili na sajtu. Besplatni ključevi ograničeni su na 1.000 zahteva dnevno. Molimo navedite izvor sajta.",
+  "dev_endpoints": "Krajnje tačke",
+  "dev_request": "Zatražite besplatan API ključ",
+  "dev_email": "Vaša e-pošta",
+  "dev_purpose": "Šta ćete praviti?",
+  "dev_get": "Zatraži ključ",
+  "dev_key": "Vaš API ključ (sačuvajte ga odmah, prikazuje se samo jednom)",
+  "dev_err": "Ključ nije mogao da se napravi. Proverite e-poštu i pokušajte ponovo.",
+  "dev_usage": "Pošaljite ključ u zaglavlju x-api-key.",
+  "cmp_title": "Poredite dve imovine",
+  "cmp_a": "Prva imovina",
+  "cmp_b": "Druga imovina",
+  "cmp_ratio": "Odnos (prva podeljena drugom)",
+  "cmp_now": "Sada",
+  "cmp_desc": "Uporedite bilo koje dve imovine: odnos između njih kroz vreme, na primer odnos zlata i srebra.",
+  "cmp_page_title": "Poređenje cena i odnosa u {country}",
+  "roi_title": "Kalkulator dobiti",
+  "roi_buy": "Kupovna cena",
+  "roi_amount": "Količina",
+  "roi_now": "Trenutna cena",
+  "roi_profit": "Dobit ili gubitak",
+  "roi_pct": "Prinos",
+  "units_title": "Konvertor jedinica",
+  "units_value": "Vrednost",
+  "units_from": "Iz",
+  "units_to": "U",
+  "calc_tools_desc": "Kalkulatori za vrednost zlata, zekat, dobit i jedinice.",
+  "nav_costs": "Troškovi",
+  "costs_title": "Troškovi života u {country}: gorivo, struja i cene Big Mac-a",
+  "costs_desc": "Najnovije cene goriva na pumpi, tarifa za struju u domaćinstvu i cena Big Mac-a u {country}, u {cur}, sa izvorima.",
+  "fuel_h": "Cene goriva",
+  "petrol95": "Benzin (95 oktana)",
+  "diesel": "Dizel",
+  "lpg": "LPG (autogas)",
+  "per_litre": "po litru",
+  "elec_h": "Struja za domaćinstva",
+  "elec_note": "Prosečna cena za domaćinstvo po kWh, uključujući sve poreze",
+  "per_kwh": "po kWh",
+  "bigmac_h": "Cena Big Mac-a",
+  "bigmac_note": "Jedan Big Mac u {country}, jednostavan način za poređenje troškova života",
+  "costs_asof": "Podaci od {date}",
+  "costs_source": "Izvor: {src}",
+  "costs_note": "Ove vrednosti se sporo menjaju, osvežavaju se na svakih nekoliko meseci i prikazuju se samo tamo gde postoji objavljen izvor.",
+  "u_sheet": "list",
+  "u_m3": "kubni metar",
+  "nav_coins": "Novčići i jedinice",
+  "coins_title": "Zlatnici i jedinice u {country}: vrednost sadržaja zlata",
+  "coins_desc": "Vrednost sadržaja zlata popularnih novčića i lokalnih jedinica zlata u {country}, u {cur}, na osnovu žive cene zlata.",
+  "coin_weight": "Težina",
+  "coin_fine": "Finoća",
+  "coin_pure": "Čisto zlato",
+  "coin_value": "Vrednost zlata",
+  "coins_note": "Samo sadržaj zlata, po živoj spot ceni. Cene trgovaca uključuju premije, cenu izrade i poreze, pa su više."
+ },
+ "assets": {
+  "gold": "Zlato",
+  "silver": "Srebro",
+  "platinum": "Platina",
+  "palladium": "Paladijum",
+  "copper": "Bakar",
+  "aluminum": "Aluminijum",
+  "nickel": "Nikl",
+  "zinc": "Cink",
+  "lead": "Olovo",
+  "tin": "Kalaj",
+  "cobalt": "Kobalt",
+  "lithium": "Litijum",
+  "uranium": "Uranijum",
+  "iron-ore": "Gvožđe ruda",
+  "steel": "Čelik",
+  "wti-oil": "WTI sirova nafta",
+  "brent-oil": "Brent sirova nafta",
+  "natural-gas": "Prirodni gas",
+  "gasoline": "Benzin",
+  "heating-oil": "Loživo ulje",
+  "wheat": "Pšenica",
+  "corn": "Kukuruz",
+  "soybeans": "Soja",
+  "rice": "Pirinač",
+  "sugar": "Šećer",
+  "coffee": "Kafa",
+  "cocoa": "Kakao",
+  "cotton": "Pamuk",
+  "bitcoin": "Bitkoin",
+  "ethereum": "Etereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Kardano",
+  "dogecoin": "Dogkoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litkoin",
+  "avalanche": "Avalanš",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq kompozitni",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Šangaj kompozitni",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX kompozitni",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Sojino ulje",
+  "soybean-meal": "Sojina sačma",
+  "oats": "Ovas",
+  "orange-juice": "Pomorandžin sok",
+  "live-cattle": "Živa goveda",
+  "feeder-cattle": "Goveda za tov",
+  "lean-hogs": "Svinje (mesnate)",
+  "milk": "Mleko (klasa III)",
+  "lumber": "Građa",
+  "coal": "Ugalj (Njukasl)",
+  "tea": "Čaj",
+  "palm-oil": "Palmino ulje",
+  "coconut-oil": "Kokosovo ulje",
+  "sunflower-oil": "Suncokretovo ulje",
+  "rapeseed-oil": "Ulje uljane repice",
+  "rubber": "Prirodna guma",
+  "urea": "Ureja đubrivo",
+  "dap": "DAP đubrivo",
+  "potash": "Kalijum (kalijum-hlorid)",
+  "phosphate-rock": "Fosfatna stena",
+  "beef": "Govedina",
+  "chicken": "Piletina",
+  "banana": "Banane",
+  "orange": "Pomorandže",
+  "fish-meal": "Riblje brašno",
+  "plywood": "Šperploča",
+  "sawnwood": "Rezana građa (Malezija)"
+ },
+ "kw": {
+  "price": "cena",
+  "today": "danas",
+  "live": "uživo",
+  "rate": "kurs",
+  "per_gram": "po gramu",
+  "ounce": "unca",
+  "bar": "poluga",
+  "used": "polovno",
+  "karat": "karat",
+  "chart": "grafikon",
+  "convert": "kalkulator valuta",
+  "calculator": "kalkulator",
+  "zakat": "zekat"
+ },
+ "legal": {
+  "about": [
+   "{site} prikazuje žive cene zlata, srebra, drugih metala, energije, poljoprivrednih proizvoda, akcija, indeksa, kripto valuta i valuta u vašoj sopstvenoj valuti, za mnoge zemlje i jezike.",
+   "Cene potiču iz javnih tržišnih izvora podataka i ažuriraju se na svakih nekoliko minuta. Neke cene se ažuriraju sa javnih stranica ili ručno, a njihov izvor je naveden.",
+   "Lokalne maloprodajne procene dodaju svetskoj ceni tipične poreze, cenu izrade i premije trgovaca, uz prikaz izvora i datuma. Reč je o procenama, a ne o ponudama.",
+   "Takođe nudimo kalkulatore za vrednost zlata, zekat, dobit i jedinice, kalkulator valuta i cenovna upozorenja."
+  ],
+  "privacy": [
+   "Ne tražimo naloge niti lične podatke. U vašem pregledaču čuvamo samo izbor jezika, zemlje i teme.",
+   "Oglasi, kada su uključeni, prikazuju se putem Google AdSense-a, koji može koristiti kolačiće da bi prikazao relevantne oglase. Ovim možete upravljati u podešavanjima oglasa na Google-u.",
+   "Mogu se prikupljati anonimne, zbirne statistike poseta radi poboljšanja sajta."
+  ],
+  "contact": [
+   "Za pitanja, ispravke ili zahteve za saradnju koristite kontakt adresu objavljenu na ovoj stranici kada sajt bude pokrenut.",
+   "Ako vidite pogrešnu cenu, recite nam imovinu, zemlju i gde ste videli tačnu vrednost."
+  ],
+  "terms": [
+   "Korišćenjem {site} slažete se sa ovim uslovima. Sajt je namenjen za opšte informisanje.",
+   "Cene, grafikoni i procene su orijentacioni, mogu kasniti ili biti netačni i ne smeju se koristiti kao jedina osnova za trgovinu ili kupovinu.",
+   "Ne smete kopirati podatke u većem obimu niti ih dalje prodavati. Za automatizovan pristup koristite naš besplatni API i navedite sajt kao izvor.",
+   "Možemo u bilo kom trenutku promeniti ili obustaviti bilo koji deo usluge i ne odgovaramo za gubitke nastale njenim korišćenjem."
+  ],
+  "disclaimer": [
+   "{site} nije brokerska kuća, banka ni finansijski savetnik i ne daje savete za ulaganje.",
+   "Lokalne maloprodajne procene, premije na poluge i otkupne cene su procene zasnovane na javnim izvorima. Prodavnice se razlikuju, zato uvek potvrdite cenu sa prodavcem.",
+   "Prošli rezultati ne predviđaju buduće rezultate. Ulaganje u metale, akcije i kripto valute nosi rizik, uključujući gubitak uloženog novca."
+  ],
+  "cookies": [
+   "Koristimo samo skladištenje u pregledaču koje je potrebno da bismo zapamtili vaš jezik, zemlju i temu.",
+   "Oglasi, kada su uključeni, prikazuju se putem Google AdSense-a, koji može postavljati kolačiće da bi prikazao relevantne oglase. Ovim možete upravljati u podešavanjima oglasa na Google-u.",
+   "Posetiocima iz regiona koji zahtevaju saglasnost biće postavljeno pitanje pre upotrebe kolačića za oglašavanje."
+  ],
+  "developers": [
+   "Naš API za cene je besplatan za manje projekte. Napravite ključ ispod i pošaljite ga u zaglavlju x-api-key.",
+   "Krajnje tačke: /v1/overview za sve cene i učinak, /v1/chart/SYMBOL?days=365 za istoriju, /v1/rates za kurseve valuta.",
+   "Besplatni ključevi omogućavaju 1.000 zahteva dnevno. Odgovori se keširaju jedan minut, zato nemojte slati zahteve češće od toga.",
+   "Navedite sajt kada prikazujete naše cene."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Zlato je najrasprostranjeniji plemeniti metal i tradicionalno sredstvo čuvanja vrednosti. Cena mu se u svetu izražava po trojanskoj unci, a u mnogim lokalnim tržištima po gramu ili toli, dok se nakit prodaje po karatima od 10K do 24K.",
+   "drivers": [
+    "Kamatne stope i američki dolar",
+    "Inflacija i ekonomska ili politička nesigurnost",
+    "Kupovina centralnih banaka i investiciona tražnja"
+   ],
+   "uses": [
+    "Nakit i pokloni",
+    "Investicione poluge i novčići",
+    "Elektronika i stomatologija"
+   ]
+  },
+  "silver": {
+   "about": "Srebro je istovremeno plemeniti i industrijski metal. Cena mu se izražava po trojanskoj unci, a prodaje se kao poluge, novčići i nakit u finoćama kao što su 999, 925 i 800.",
+   "drivers": [
+    "Industrijska tražnja iz solarnih panela i elektronike",
+    "Cena zlata i američki dolar",
+    "Investiciona tražnja za polugama i novčićima"
+   ],
+   "uses": [
+    "Nakit i srebrnina",
+    "Solarni paneli i elektronika",
+    "Investicione poluge i novčići"
+   ]
+  },
+  "platinum": {
+   "about": "Platina je retak, gust plemeniti metal koji je u mnogim periodima po težini vredniji od zlata. Cena joj se izražava po trojanskoj unci.",
+   "drivers": [
+    "Tražnja iz katalizatora automobila",
+    "Ponuda iz rudnika, uglavnom iz Južne Afrike i Rusije",
+    "Investiciona tražnja i cena zlata"
+   ],
+   "uses": [
+    "Katalizatori",
+    "Nakit",
+    "Hemijska industrija i tehnologija vodonika"
+   ]
+  },
+  "palladium": {
+   "about": "Paladijum je retak plemeniti metal koji se uglavnom koristi u katalizatorima benzinskih automobila. Cena mu se izražava po trojanskoj unci.",
+   "drivers": [
+    "Proizvodnja automobila i propisi o emisijama",
+    "Ponuda iz rudnika u Rusiji i Južnoj Africi",
+    "Zamena platinom"
+   ],
+   "uses": [
+    "Katalizatori",
+    "Elektronika",
+    "Stomatologija i nakit"
+   ]
+  },
+  "copper": {
+   "about": "Bakar je referentni industrijski metal. Cena mu se izražava po metričkoj toni i prati se kao znak zdravlja globalne privrede.",
+   "drivers": [
+    "Tražnja iz građevinarstva i proizvodnje, naročito u Kini",
+    "Ponuda iz rudnika i zalihe",
+    "Američki dolar i trgovinska politika"
+   ],
+   "uses": [
+    "Električne instalacije i elektroenergetske mreže",
+    "Građevinarstvo i vodovod",
+    "Električna vozila i obnovljiva energija"
+   ]
+  },
+  "aluminum": {
+   "about": "Aluminijum je lak, široko korišćen metal koji se dobija iz boksita uz velike količine električne energije. Cena mu se izražava po metričkoj toni.",
+   "drivers": [
+    "Troškovi energije za topljenje",
+    "Tražnja iz automobilske industrije, ambalaže i građevinarstva",
+    "Proizvodnja u Kini i carinske tarife"
+   ],
+   "uses": [
+    "Ambalaža i limenke",
+    "Automobili i avioni",
+    "Građevinarstvo"
+   ]
+  },
+  "nickel": {
+   "about": "Nikl je metal koji se koristi za proizvodnju nerđajućeg čelika i baterija. Cena mu se izražava po metričkoj toni na Londonskoj berzi metala.",
+   "drivers": [
+    "Tražnja za nerđajućim čelikom",
+    "Tražnja za baterijama električnih vozila",
+    "Ponuda iz Indonezije i Filipina"
+   ],
+   "uses": [
+    "Nerđajući čelik",
+    "Baterije",
+    "Legure"
+   ]
+  },
+  "zinc": {
+   "about": "Cink se uglavnom koristi za zaštitu čelika od rđe galvanizacijom. Cena mu se izražava po metričkoj toni.",
+   "drivers": [
+    "Tražnja iz čeličke industrije i građevinarstva",
+    "Ponuda iz rudnika i proizvodnja topionica",
+    "Cene energije u Evropi i Kini"
+   ],
+   "uses": [
+    "Galvanizacija čelika",
+    "Mesing i legure",
+    "Baterije"
+   ]
+  },
+  "lead": {
+   "about": "Olovo je gust metal koji se najviše koristi u akumulatorima za vozila. Cena mu se izražava po metričkoj toni.",
+   "drivers": [
+    "Tražnja iz automobilske industrije i za akumulatorima",
+    "Ponuda iz reciklaže",
+    "Proizvodnja rudnika i propisi o zaštiti životne sredine"
+   ],
+   "uses": [
+    "Akumulatori za vozila",
+    "Zaštita od zračenja",
+    "Kablovi i legure"
+   ]
+  },
+  "tin": {
+   "about": "Kalaj je redak metal koji se najviše koristi kao lem u elektronici. Cena mu se izražava po metričkoj toni.",
+   "drivers": [
+    "Tražnja iz elektronike i čipova",
+    "Ponuda iz rudnika u Indoneziji, Mjanmaru i Peruu",
+    "Zalihe i pravila trgovine"
+   ],
+   "uses": [
+    "Lem za elektroniku",
+    "Konzerve za hranu",
+    "Hemikalije"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt je metal za baterije, koji se uglavnom vadi u Demokratskoj Republici Kongo. Cena mu se izražava po metričkoj toni.",
+   "drivers": [
+    "Tražnja za električnim vozilima i baterijama",
+    "Ponuda iz kongoanskih rudnika i pravila izvoza",
+    "Promene u hemiji baterija"
+   ],
+   "uses": [
+    "Baterije",
+    "Superlegure",
+    "Magneti"
+   ]
+  },
+  "lithium": {
+   "about": "Litijum karbonat je glavna sirovina za punjive baterije. Prikazana cena odnosi se na karbonat klase za baterije u Kini, preračunat u američke dolare po metričkoj toni.",
+   "drivers": [
+    "Prodaja električnih vozila",
+    "Nova ponuda rudnika i rafinerija",
+    "Državna politika prema baterijama"
+   ],
+   "uses": [
+    "Baterije za električna vozila",
+    "Telefoni i laptopovi",
+    "Skladištenje energije"
+   ]
+  },
+  "uranium": {
+   "about": "Uranijum je gorivo nuklearnih elektrana. Cena mu se izražava u američkim dolarima po funti U3O8.",
+   "drivers": [
+    "Ponovno puštanje nuklearnih elektrana u rad i nove elektrane",
+    "Proizvodnja rudnika, uglavnom iz Kazahstana i Kanade",
+    "Državno skladištenje i sankcije"
+   ],
+   "uses": [
+    "Nuklearna energija",
+    "Medicinski izotopi"
+   ]
+  },
+  "iron-ore": {
+   "about": "Gvozdena ruda je glavna sirovina za čelik. Prikazana cena odnosi se na sadržaj gvožđa od 62% isporučen u Kinu, po metričkoj toni.",
+   "drivers": [
+    "Proizvodnja čelika u Kini",
+    "Ponuda iz Australije i Brazila",
+    "Ulaganja u nekretnine i infrastrukturu"
+   ],
+   "uses": [
+    "Proizvodnja čelika"
+   ]
+  },
+  "steel": {
+   "about": "Čelik je legura gvožđa koja se koristi u gotovo svakoj industriji. Prikazana cena odnosi se na armaturno gvožđe u Kini, preračunato u američke dolare po metričkoj toni.",
+   "drivers": [
+    "Tražnja iz građevinarstva",
+    "Troškovi gvozdene rude i koksnog uglja",
+    "Državna ograničenja proizvodnje"
+   ],
+   "uses": [
+    "Zgrade i mostovi",
+    "Automobili i mašine"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Vrući valjani čelični svitak je ravan čelični proizvod koji se koristi u proizvodnji. Prikazana cena odnosi se na isporuku na američkom Srednjem zapadu, po metričkoj toni.",
+   "drivers": [
+    "Tražnja iz američke automobilske industrije i građevinarstva",
+    "Uvozne carine i konkurencija",
+    "Troškovi sirovina i energije"
+   ],
+   "uses": [
+    "Automobili i aparati",
+    "Cevi i građevinarstvo"
+   ]
+  },
+  "lumber": {
+   "about": "Terminski ugovori za građu prate cenu četinarske građe koja se koristi u gradnji kuća, izraženu po 1.000 bord-stopa.",
+   "drivers": [
+    "Broj početaka gradnje i kamatne stope na stambene kredite",
+    "Proizvodnja pilana i šumski požari",
+    "Carine u trgovini između SAD i Kanade"
+   ],
+   "uses": [
+    "Skeleti kuća",
+    "Nameštaj i ambalaža"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI je američka referentna cena sirove nafte, izražena po barelu i isporučena u Kušingu, u Oklahomi.",
+   "drivers": [
+    "Odluke OPEC-a i proizvodnja u SAD",
+    "Globalni ekonomski rast",
+    "Zalihe, geopolitika i američki dolar"
+   ],
+   "uses": [
+    "Benzin, dizel i mlazno gorivo",
+    "Plastika i hemikalije"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent je svetska referentna cena sirove nafte, izražena po barelu, po kojoj se određuje cena većine nafte kojom se trguje van SAD.",
+   "drivers": [
+    "Odluke OPEC+ o proizvodnji",
+    "Globalna tražnja, naročito iz Kine i Indije",
+    "Sukobi i sankcije u zemljama proizvođačima"
+   ],
+   "uses": [
+    "Benzin, dizel i mlazno gorivo",
+    "Plastika i hemikalije"
+   ]
+  },
+  "natural-gas": {
+   "about": "Prirodni gas je ovde prikazan po ceni američkog Henry Hub čvorišta, po MMBtu. Koristi se za grejanje, proizvodnju struje i industriju.",
+   "drivers": [
+    "Vreme i tražnja za grejanjem",
+    "Nivoi skladišta i proizvodnja",
+    "Izvoz tečnog prirodnog gasa"
+   ],
+   "uses": [
+    "Proizvodnja struje",
+    "Grejanje i kuvanje u domaćinstvu",
+    "Đubriva i hemikalije"
+   ]
+  },
+  "gasoline": {
+   "about": "Terminski ugovori za benzin prate veleprodajne cene benzina, izražene u američkim dolarima po galonu.",
+   "drivers": [
+    "Cena sirove nafte",
+    "Proizvodnja rafinerija i sezona vožnje",
+    "Zalihe i propisi"
+   ],
+   "uses": [
+    "Gorivo za automobile"
+   ]
+  },
+  "heating-oil": {
+   "about": "Terminski ugovori za loživo ulje prate veleprodajne cene dizela i goriva za grejanje, izražene u američkim dolarima po galonu.",
+   "drivers": [
+    "Cena sirove nafte",
+    "Zimsko vreme",
+    "Tražnja za dizelom iz kamiona i industrije"
+   ],
+   "uses": [
+    "Grejanje u domaćinstvu",
+    "Dizel gorivo"
+   ]
+  },
+  "wheat": {
+   "about": "Pšenica je jedna od glavnih svetskih žitarica za ishranu. Cena se izražava po bušelu na čikaškoj berzi.",
+   "drivers": [
+    "Vreme u glavnim regionima uzgoja",
+    "Izvoz iz Rusije, Ukrajine, SAD i EU",
+    "Zalihe, cene energije i američki dolar"
+   ],
+   "uses": [
+    "Hleb, testenina i brašno",
+    "Stočna hrana"
+   ]
+  },
+  "corn": {
+   "about": "Kukuruz je glavna žitarica za ishranu i stočnu hranu, a i izvor etanola. Cena se izražava po bušelu na čikaškoj berzi.",
+   "drivers": [
+    "Žetve u SAD i Brazilu",
+    "Tražnja za etanolom i stočnom hranom",
+    "Vreme i izvoz"
+   ],
+   "uses": [
+    "Stočna hrana",
+    "Etanol kao gorivo",
+    "Hrana i sirupi"
+   ]
+  },
+  "soybeans": {
+   "about": "Soja se prerađuje u ulje i sačmu. Cena se izražava po bušelu na čikaškoj berzi.",
+   "drivers": [
+    "Žetve u SAD, Brazilu i Argentini",
+    "Tražnja uvoza iz Kine",
+    "Politika biogoriva"
+   ],
+   "uses": [
+    "Jestivo ulje",
+    "Stočna hrana",
+    "Biodizel"
+   ]
+  },
+  "rice": {
+   "about": "Neizlušteni pirinač je osnovna hrana za milijarde ljudi. Cena se izražava po centalu na čikaškoj berzi.",
+   "drivers": [
+    "Monsun i uslovi žetve u Aziji",
+    "Pravila izvoza Indije, Tajlanda i Vijetnama",
+    "Zalihe i cene hrane"
+   ],
+   "uses": [
+    "Hrana"
+   ]
+  },
+  "sugar": {
+   "about": "Terminski ugovori za sirovi šećer prate svetsku cenu šećera, izraženu u američkim dolarima po funti.",
+   "drivers": [
+    "Žetve šećerne trske u Brazilu i Indiji",
+    "Tražnja za etanolom u Brazilu",
+    "Vreme i valute"
+   ],
+   "uses": [
+    "Hrana i pića",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Terminski ugovori za arabiku prate svetsku cenu zrna kafe, izraženu u američkim dolarima po funti.",
+   "drivers": [
+    "Vreme u Brazilu i Kolumbiji",
+    "Zalihe i izvoz",
+    "Valute i tražnja"
+   ],
+   "uses": [
+    "Kafa za piće"
+   ]
+  },
+  "cocoa": {
+   "about": "Terminski ugovori za kakao prate cenu zrna kakaa, izraženu u američkim dolarima po metričkoj toni.",
+   "drivers": [
+    "Žetve na Obali Slonovače i u Gani",
+    "Bolesti i vreme",
+    "Tražnja za čokoladom"
+   ],
+   "uses": [
+    "Čokolada i slatkiši",
+    "Kozmetika"
+   ]
+  },
+  "cotton": {
+   "about": "Terminski ugovori za pamuk prate svetsku cenu sirovog pamuka, izraženu u američkim dolarima po funti.",
+   "drivers": [
+    "Vreme u SAD, Indiji i Kini",
+    "Tražnja tekstilne industrije",
+    "Cene nafte i valute"
+   ],
+   "uses": [
+    "Odeća i tekstil"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitkoin je prva i najveća kriptovaluta. Njime se trguje non-stop na berzama, a ponuda mu je ograničena na 21 milion novčića.",
+   "drivers": [
+    "Tražnja investitora i tokovi ETF-ova",
+    "Kamatne stope i spremnost na rizik",
+    "Regulativa i vesti"
+   ]
+  },
+  "ethereum": {
+   "about": "Etereum je blokčejn za pametne ugovore i aplikacije, a njegov novčić, ether, druga je po veličini kriptovaluta.",
+   "drivers": [
+    "Korišćenje aplikacija na Etereumu",
+    "Nadogradnje mreže i naknade",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "bnb": {
+   "about": "BNB je novčić BNB Chain lanca i ekosistema berze Binance.",
+   "drivers": [
+    "Aktivnost i naknade na berzi",
+    "Spaljivanje tokena",
+    "Regulativa"
+   ]
+  },
+  "xrp": {
+   "about": "XRP je kriptovaluta koja se koristi za brza međunarodna plaćanja na XRP Ledger mreži.",
+   "drivers": [
+    "Sudske i regulatorne vesti",
+    "Partnerstva sa bankama i platnim kompanijama",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "solana": {
+   "about": "Solana je brz blokčejn za aplikacije i plaćanja, a SOL je njen novčić.",
+   "drivers": [
+    "Aktivnost aplikacija i tokena",
+    "Pouzdanost mreže",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "cardano": {
+   "about": "Kardano je blokčejn zasnovan na dokazu uloga, a ADA je njegov novčić.",
+   "drivers": [
+    "Napredak razvoja",
+    "Ulaganje u ulog (staking)",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogkoin je nastao kao šaljivi novčić i postao je jedna od najtrgovanijih kriptovaluta.",
+   "drivers": [
+    "Pažnja na društvenim mrežama",
+    "Raspoloženje tržišta",
+    "Prihvatanje za plaćanje"
+   ]
+  },
+  "tron": {
+   "about": "TRON je blokčejn koji se mnogo koristi za prenos stablkoinova, a TRX je njegov novčić.",
+   "drivers": [
+    "Aktivnost prenosa stablkoinova",
+    "Mrežne naknade",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot povezuje mnoge blokčejnove, a DOT je njegov novčić.",
+   "drivers": [
+    "Razvoj mreže",
+    "Ulaganje u ulog (staking)",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink dostavlja podatke iz stvarnog sveta blokčejnovima, a LINK je njegov novčić.",
+   "drivers": [
+    "Korišćenje od strane drugih aplikacija",
+    "Partnerstva",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "litecoin": {
+   "about": "Litkoin je jedna od najstarijih kriptovaluta, stvorena za brža plaćanja od bitkoina.",
+   "drivers": [
+    "Cena bitkoina",
+    "Prihvatanje za plaćanje",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanš je brza blokčejn platforma, a AVAX je njen novčić.",
+   "drivers": [
+    "Aktivnost aplikacija",
+    "Nadogradnje mreže",
+    "Raspoloženje tržišta"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 prati 500 najvećih američkih kompanija i glavni je pokazatelj američkog tržišta akcija.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq kompozitni prati hiljade akcija koje se kotiraju na Nasdaq-u, sa velikim udelom tehnoloških kompanija.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dau Džouns industrijski prosek prati 30 velikih američkih kompanija.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 prati 100 najvećih kompanija koje se kotiraju u Londonu.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "dax": {
+   "about": "DAX prati 40 velikih nemačkih kompanija koje se kotiraju u Frankfurtu.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 prati 40 velikih kompanija koje se kotiraju u Parizu.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 prati 225 velikih kompanija koje se kotiraju u Tokiju.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng indeks prati najveće kompanije koje se kotiraju u Hong Kongu.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "shanghai": {
+   "about": "Šangaj kompozitni prati sve akcije koje se kotiraju na Šangajskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 prati 50 velikih kompanija na Nacionalnoj berzi Indije.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex prati 30 velikih kompanija na Bombejskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 prati 30 najaktivnijih kompanija na Egipatskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share indeks prati sve kompanije koje se kotiraju na saudijskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 prati 100 najvećih kompanija na istanbulskoj berzi Borsa Istanbul.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa prati glavne kompanije na brazilskoj berzi B3.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 prati 200 najvećih kompanija na australijskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX kompozitni prati glavne kompanije na Torontskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI prati sve obične akcije na korejskoj berzi.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 prati 50 velikih kompanija iz evrozone.",
+   "drivers": [
+    "Finansijski rezultati kompanija",
+    "Kamatne stope i inflacija",
+    "Ekonomske i političke vesti"
+   ]
+  }
+ }
+}

@@ -1,0 +1,987 @@
+{
+ "ui": {
+  "today": "dnes",
+  "updated": "Aktualizované {t}",
+  "delayed": "Oneskorené",
+  "per": "za {u}",
+  "u_gram": "gram",
+  "u_ounce": "unca",
+  "u_kilo": "kilogram",
+  "u_tola": "tola",
+  "u_ton": "metrická tona",
+  "u_barrel": "barel",
+  "u_mmbtu": "MMBtu",
+  "u_gallon": "galón",
+  "u_bushel": "bušel",
+  "u_lb": "libra",
+  "u_cwt": "cwt (stovka libier)",
+  "u_coin": "minca",
+  "u_point": "bodov",
+  "global_vs_local": "Svetová vs. miestna cena",
+  "global_price": "Svetová cena",
+  "local_estimate": "Odhad miestnej ceny",
+  "est_retail": "Odhadovaná maloobchodná cena vrátane poplatku za výrobu",
+  "est_note": "Iba odhad. Predajne sa líšia daňami, poplatkami za výrobu a maržami.",
+  "karat_title": "{a} podľa karátov",
+  "karat": "Karát",
+  "purity": "Ryzosť",
+  "price": "Cena",
+  "currencies_title": "Cena: {a} v iných menách",
+  "col_ounce": "Za unciu",
+  "col_gram": "Za gram",
+  "col_24h": "24 h",
+  "col_7d": "7 dní",
+  "markets_title": "Kovy, energie, poľnohospodárstvo a kryptomeny",
+  "markets_sub": "Ceny v reálnom čase v {cur}",
+  "list_title": "Ceny kovov, energií, komodít a kryptomien v krajine {country}",
+  "list_desc": "Ceny v reálnom čase pre zlato, striebro, platinu, med, ropu, plyn, pšenicu, kávu, akciové indexy, Bitcoin a ďalšie v {cur}.",
+  "alerts_title": "Cenové upozornenia",
+  "alerts_desc": "Dostanite upozornenie, keď cena dosiahne vašu cieľovú hodnotu, do telefónu alebo e-mailom.",
+  "alerts_cta": "Vytvoriť upozornenie",
+  "search_ph": "Hľadajte napr. cenu {a} v krajine {country}…",
+  "search_btn": "Hľadať",
+  "r1d": "1D",
+  "r1w": "1T",
+  "r1m": "1M",
+  "r1y": "1R",
+  "r5y": "5R",
+  "rall": "Všetko",
+  "geo_ask": "Zobraziť ceny pre krajinu {country} v {cur}?",
+  "geo_yes": "Áno, prepnúť",
+  "geo_no": "Nie, ďakujem",
+  "footer_note": "Ceny sú orientačné a môžu byť oneskorené. Nejde o investičné poradenstvo.",
+  "about": "O nás",
+  "privacy": "Zásady ochrany osobných údajov",
+  "contact": "Kontakt",
+  "theme": "Téma",
+  "language": "Jazyk",
+  "country": "Krajina",
+  "faq_title": "Často kladené otázky",
+  "q1": "Aká je dnes cena {a} v krajine {country}?",
+  "a1": "Cena {a} v krajine {country} je dnes {p} {cur} za {u}. Ide o svetovú spotovú cenu prepočítanú najnovším výmenným kurzom, ktorá sa aktualizuje každých niekoľko minút.",
+  "q2": "Prečo sa miestna cena líši od svetovej?",
+  "a2": "Predajne k svetovej spotovej cene pripočítavajú poplatky za výrobu, dane, dovozné clá a maržu predajcu, preto je maloobchodná cena v krajine {country} zvyčajne vyššia.",
+  "q3": "Ako často sa cena aktualizuje?",
+  "a3": "Trhové ceny v reálnom čase sa obnovujú každých niekoľko minút. Ceny bez živého zdroja sa aktualizujú ručne a zobrazujú čas poslednej aktualizácie.",
+  "title": "Cena {a} v krajine {country} dnes | za {u} v {cur}",
+  "desc": "Cena {a} v reálnom čase v krajine {country} v {cur}: za gram, unciu a kilogram, graf vývoja ceny a svetová vs. miestna cena. Aktualizované každých niekoľko minút.",
+  "title_idx": "Index {a} dnes | hodnota v reálnom čase a graf",
+  "desc_idx": "Hodnota indexu {a} v reálnom čase, denná zmena a graf vývoja ceny. Aktualizované každých niekoľko minút.",
+  "history_note": "História je zostavená z denných uzatváracích cien.",
+  "unit_label": "Jednotka",
+  "sample_note": "Ukážkové údaje",
+  "nav_all": "Trhy",
+  "nav_rates": "Meny",
+  "nav_calc": "Kalkulačky",
+  "cat_precious": "Drahé kovy",
+  "cat_industrial": "Priemyselné kovy",
+  "cat_energy": "Energie",
+  "cat_agri": "Poľnohospodárstvo",
+  "cat_index": "Akciové indexy",
+  "cat_crypto": "Kryptomeny",
+  "bars_title": "{a} zlatné tehly a mince: kúpna a predajná cena v {cur}",
+  "bar_size": "Veľkosť",
+  "bar_buy": "Nákup u predajcu",
+  "bar_sell": "Výkup späť",
+  "bar_prem": "Prirážka k spotovej cene",
+  "bars_note": "Typické ceny predajcov vychádzajú zo svetovej ceny plus obvyklá prirážka. Skutočné ceny sa líšia podľa predajne a dňa.",
+  "used_title": "Použité a šrotové {a}: výkupná cena za gram v {cur}",
+  "used_note": "Použité šperky sa zvyčajne vykupujú pod cenou nového tovaru. Ide o typické odhady.",
+  "used_col": "Výkup za gram",
+  "rates_title": "Výmenné kurzy voči {cur}",
+  "rates_sub": "Stredné trhové kurzy, aktualizované každú hodinu",
+  "rates_desc": "Kurzy hlavných svetových mien voči {cur} v reálnom čase, spolu s prevodníkom mien.",
+  "rates_page_title": "Výmenné kurzy a prevodník mien v krajine {country}",
+  "conv_title": "Prevodník mien",
+  "conv_amount": "Suma",
+  "conv_from": "Z",
+  "conv_to": "Na",
+  "conv_result": "{amount} {from} = {value} {to}",
+  "calc_page_title": "Kalkulačka zlata a kalkulačka zakátu v krajine {country}",
+  "calc_page_desc": "Vypočítajte hodnotu svojho zlata podľa hmotnosti a ryzosti v {cur} a skontrolujte zakát zo zlata a striebra podľa dnešných cien.",
+  "calc_title": "Kalkulačka hodnoty zlata",
+  "calc_weight": "Hmotnosť",
+  "calc_unit": "Jednotka",
+  "calc_karat": "Karát",
+  "calc_value": "Odhadovaná hodnota",
+  "calc_note": "Vychádza zo svetovej ceny. Predajne za použité zlato platia menej.",
+  "zakat_title": "Zakát zo zlata a striebra",
+  "zakat_nisab_gold": "Nisab zo zlata (85 gramov)",
+  "zakat_nisab_silver": "Nisab zo striebra (595 gramov)",
+  "zakat_gold_g": "Vaše zlato v gramoch (ekvivalent 24K)",
+  "zakat_silver_g": "Vaše striebro v gramoch",
+  "zakat_due": "Splatný zakát (2,5 %)",
+  "zakat_note": "Zakát sa platí z majetku, ktorý je nad nisabom držaný jeden lunárny rok. Ide len o orientáciu, vo vlastnom prípade sa poraďte s učencom.",
+  "zakat_below": "Pod nisabom: z tejto sumy sa zakát neplatí.",
+  "related_title": "Populárne vyhľadávania",
+  "retail_basis": "Založené na {n} miestnych zdrojoch, overené {d}.",
+  "u_share": "akcia",
+  "u_rate": "kurz",
+  "u_mbf": "1 000 board feet",
+  "cat_stock": "Akcie",
+  "cat_forex": "Menové páry",
+  "cat_construction": "Stavebné materiály",
+  "perf_title": "Výkonnosť",
+  "p_7d": "1 týždeň",
+  "p_30d": "1 mesiac",
+  "p_90d": "3 mesiace",
+  "p_ytd": "Od začiatku roka",
+  "p_1y": "1 rok",
+  "p_5y": "5 rokov",
+  "range52": "Rozpätie za 52 týždňov",
+  "ath": "Najvyššia v našich údajoch",
+  "atl": "Najnižšia v našich údajoch",
+  "since": "História od {d}",
+  "about_title": "O: {a}",
+  "drivers_title": "Čo ovplyvňuje cenu",
+  "uses_title": "Na čo sa používa",
+  "source_note": "Zdroj: {s}. Ceny sú orientačné a môžu byť oneskorené.",
+  "about_stock": "Akcie {a} sa obchodujú v mene {c}. Stránka zobrazuje najnovšiu oneskorenú cenu, zmenu za dnešok a za dlhšie obdobia, a rovnakú cenu prepočítanú do iných mien.",
+  "about_forex": "{a} ukazuje, koľko jednotiek druhej meny získate za jednu jednotku prvej meny. Kurzy sa menia podľa úrokových sadzieb, inflácie, obchodu a ekonomických správ oboch krajín.",
+  "about_crypto": "{a} je kryptomena. Jej cenu určuje obchodovanie na burzách počas celého dňa a môže sa rýchlo meniť. Stránka zobrazuje cenu v reálnom čase, zmeny za rôzne obdobia a cenu v iných menách.",
+  "about_commodity": "{a} je obchodovaná komodita. Jej cena sleduje ponuku, dopyt, počasie, meny a správy. Stránka zobrazuje najnovšiu cenu, zmeny za rôzne obdobia a cenu v iných menách.",
+  "about_index": "{a} meria, ako sa darí košíku akcií. Hodnota je v indexových bodoch a mení sa s cenami akcií spoločností, ktoré do neho patria.",
+  "tail_list_title": "Akcie, kryptomeny, menové páry a ďalšie komodity",
+  "tail_list_desc": "Ceny svetových akcií, ďalších kryptomien, menových párov a dodatočných komodít v reálnom čase, s grafmi a výkonnosťou.",
+  "tail_title": "Cena {a} dnes | hodnota v reálnom čase a graf",
+  "tail_desc": "Cena {a} v reálnom čase s grafom a výkonnosťou za 1 týždeň, 1 mesiac, 1 rok a viac. Aktualizované každých niekoľko minút.",
+  "nav_dev": "Vývojári",
+  "nav_compare": "Porovnať",
+  "terms": "Podmienky použitia",
+  "disclaimer": "Vyhlásenie o zodpovednosti",
+  "cookies": "Zásady používania cookies",
+  "developers": "API pre vývojárov",
+  "alert_title": "Nastaviť cenové upozornenie",
+  "alert_email": "Váš e-mail",
+  "alert_target": "Cieľová cena ({cur})",
+  "alert_above": "Stúpne nad",
+  "alert_below": "Klesne pod",
+  "alert_submit": "Vytvoriť upozornenie",
+  "alert_ok": "Upozornenie bolo uložené. Keď cena prekročí vašu cieľovú hodnotu, pošleme vám jeden e-mail.",
+  "alert_err": "Upozornenie sa nepodarilo uložiť. Skontrolujte e-mail a cenu a skúste to znova.",
+  "alert_privacy": "Váš e-mail používame iba na odoslanie tohto upozornenia.",
+  "contact_title": "Napíšte nám správu",
+  "contact_name": "Vaše meno",
+  "contact_email": "Váš e-mail",
+  "contact_msg": "Správa",
+  "contact_send": "Odoslať",
+  "contact_ok": "Ďakujeme. Vaša správa bola odoslaná.",
+  "contact_err": "Správu sa nepodarilo odoslať. Skúste to prosím neskôr.",
+  "dev_title": "Bezplatné API cien",
+  "dev_desc": "Použite naše ceny vo svojej aplikácii alebo na webe. Bezplatné kľúče sú obmedzené na 1 000 požiadaviek denne. Uveďte prosím odkaz na stránku.",
+  "dev_endpoints": "Koncové body",
+  "dev_request": "Získať bezplatný API kľúč",
+  "dev_email": "Váš e-mail",
+  "dev_purpose": "Čo chcete vytvoriť?",
+  "dev_get": "Získať kľúč",
+  "dev_key": "Váš API kľúč (uložte si ho hneď, zobrazí sa iba raz)",
+  "dev_err": "Kľúč sa nepodarilo vytvoriť. Skontrolujte e-mail a skúste to znova.",
+  "dev_usage": "Kľúč odošlite v hlavičke x-api-key.",
+  "cmp_title": "Porovnanie dvoch aktív",
+  "cmp_a": "Prvé aktívum",
+  "cmp_b": "Druhé aktívum",
+  "cmp_ratio": "Pomer (prvé delené druhým)",
+  "cmp_now": "Teraz",
+  "cmp_desc": "Porovnajte ľubovoľné dve aktíva: pomer medzi nimi v čase, napríklad pomer zlata a striebra.",
+  "cmp_page_title": "Porovnanie cien a pomerov v krajine {country}",
+  "roi_title": "Kalkulačka zisku",
+  "roi_buy": "Nákupná cena",
+  "roi_amount": "Množstvo",
+  "roi_now": "Aktuálna cena",
+  "roi_profit": "Zisk alebo strata",
+  "roi_pct": "Výnos",
+  "units_title": "Prevodník jednotiek",
+  "units_value": "Hodnota",
+  "units_from": "Z",
+  "units_to": "Na",
+  "calc_tools_desc": "Kalkulačky hodnoty zlata, zakátu, zisku a jednotiek.",
+  "nav_costs": "Náklady",
+  "costs_title": "Životné náklady v krajine {country}: palivo, elektrina a ceny Big Mac",
+  "costs_desc": "Najnovšie ceny pohonných hmôt, domáci elektrický tarif a cena Big Mac v krajine {country} v {cur}, so zdrojmi.",
+  "fuel_h": "Ceny pohonných hmôt",
+  "petrol95": "Benzín (95 oktánov)",
+  "diesel": "Nafta",
+  "lpg": "LPG (autoplyn)",
+  "per_litre": "za liter",
+  "elec_h": "Elektrina pre domácnosti",
+  "elec_note": "Priemerná cena pre domácnosti za kWh vrátane všetkých daní",
+  "per_kwh": "za kWh",
+  "bigmac_h": "Cena Big Mac",
+  "bigmac_note": "Jeden Big Mac v krajine {country}, jednoduchý spôsob porovnania životných nákladov",
+  "costs_asof": "Údaje k {date}",
+  "costs_source": "Zdroj: {src}",
+  "costs_note": "Tieto údaje sa menia pomaly, obnovujú sa každých niekoľko mesiacov a zobrazujú sa iba tam, kde existuje zverejnený zdroj.",
+  "u_sheet": "hárok",
+  "u_m3": "kubický meter",
+  "nav_coins": "Mince a jednotky",
+  "coins_title": "Zlaté mince a jednotky v krajine {country}: hodnota obsahu zlata",
+  "coins_desc": "Hodnota obsahu zlata populárnych mincí a miestnych zlatých jednotiek v krajine {country} v {cur}, podľa aktuálnej ceny zlata v reálnom čase.",
+  "coin_weight": "Hmotnosť",
+  "coin_fine": "Ryzosť",
+  "coin_pure": "Čisté zlato",
+  "coin_value": "Hodnota zlata",
+  "coins_note": "Iba obsah zlata podľa spotovej ceny v reálnom čase. Predajcovia pripočítavajú prirážky, poplatky za výrobu a dane, preto sú ich ceny vyššie."
+ },
+ "assets": {
+  "gold": "Zlato",
+  "silver": "Striebro",
+  "platinum": "Platina",
+  "palladium": "Paládium",
+  "copper": "Meď",
+  "aluminum": "Hliník",
+  "nickel": "Nikel",
+  "zinc": "Zinok",
+  "lead": "Olovo",
+  "tin": "Cín",
+  "cobalt": "Kobalt",
+  "lithium": "Lítium",
+  "uranium": "Urán",
+  "iron-ore": "Železná ruda",
+  "steel": "Oceľ",
+  "wti-oil": "Ropa WTI",
+  "brent-oil": "Ropa Brent",
+  "natural-gas": "Zemný plyn",
+  "gasoline": "Benzín",
+  "heating-oil": "Vykurovací olej",
+  "wheat": "Pšenica",
+  "corn": "Kukurica",
+  "soybeans": "Sójové bôby",
+  "rice": "Ryža",
+  "sugar": "Cukor",
+  "coffee": "Káva",
+  "cocoa": "Kakao",
+  "cotton": "Bavlna",
+  "bitcoin": "Bitcoin",
+  "ethereum": "Ethereum",
+  "bnb": "BNB",
+  "xrp": "XRP",
+  "solana": "Solana",
+  "cardano": "Cardano",
+  "dogecoin": "Dogecoin",
+  "tron": "TRON",
+  "polkadot": "Polkadot",
+  "chainlink": "Chainlink",
+  "litecoin": "Litecoin",
+  "avalanche": "Avalanche",
+  "sp500": "S&P 500",
+  "nasdaq": "Nasdaq Composite",
+  "dow-jones": "Dow Jones",
+  "ftse-100": "FTSE 100",
+  "dax": "DAX",
+  "cac-40": "CAC 40",
+  "nikkei-225": "Nikkei 225",
+  "hang-seng": "Hang Seng",
+  "shanghai": "Shanghai Composite",
+  "nifty-50": "Nifty 50",
+  "sensex": "Sensex",
+  "egx30": "EGX 30",
+  "tasi": "Tadawul All Share (TASI)",
+  "bist-100": "BIST 100",
+  "bovespa": "Bovespa",
+  "asx-200": "ASX 200",
+  "tsx": "S&P/TSX Composite",
+  "kospi": "KOSPI",
+  "euro-stoxx-50": "Euro Stoxx 50",
+  "soybean-oil": "Sójový olej",
+  "soybean-meal": "Sójová múka",
+  "oats": "Ovos",
+  "orange-juice": "Pomarančový džús",
+  "live-cattle": "Živý dobytok",
+  "feeder-cattle": "Výkrmový dobytok",
+  "lean-hogs": "Ošípané na výkrm",
+  "milk": "Mlieko (trieda III)",
+  "lumber": "Drevo",
+  "coal": "Uhlie (Newcastle)",
+  "tea": "Čaj",
+  "palm-oil": "Palmový olej",
+  "coconut-oil": "Kokosový olej",
+  "sunflower-oil": "Slnečnicový olej",
+  "rapeseed-oil": "Repkový olej",
+  "rubber": "Prírodný kaučuk",
+  "urea": "Močovina (hnojivo)",
+  "dap": "DAP (hnojivo)",
+  "potash": "Draselná soľ (chlorid draselný)",
+  "phosphate-rock": "Fosforečnan (fosfátová hornina)",
+  "beef": "Hovädzie mäso",
+  "chicken": "Kuracie mäso",
+  "banana": "Banány",
+  "orange": "Pomaranče",
+  "fish-meal": "Rybia múka",
+  "plywood": "Preglejka",
+  "sawnwood": "Rezivo (Malajzia)"
+ },
+ "kw": {
+  "price": "cena",
+  "today": "dnes",
+  "live": "živá",
+  "rate": "kurz",
+  "per_gram": "za gram",
+  "ounce": "unca",
+  "bar": "tehla",
+  "used": "použité",
+  "karat": "karát",
+  "chart": "graf",
+  "convert": "prevodník",
+  "calculator": "kalkulačka",
+  "zakat": "zakát"
+ },
+ "legal": {
+  "about": [
+   "{site} zobrazuje ceny v reálnom čase za zlato, striebro, ďalšie kovy, energie, poľnohospodárske komodity, akcie, indexy, kryptomeny a meny vo vašej mene, pre mnohé krajiny a jazyky.",
+   "Ceny pochádzajú z verejných zdrojov trhových údajov a aktualizujú sa každých niekoľko minút. Niektoré ceny sa aktualizujú z verejných stránok alebo ručne a zobrazujú svoj zdroj.",
+   "Odhady miestnych maloobchodných cien pripočítavajú ku svetovej cene typické dane, poplatky za výrobu a prirážky predajcov, pričom sa zobrazuje zdroj a dátum. Ide o odhady, nie o ponuky.",
+   "Ponúkame tiež kalkulačky hodnoty zlata, zakátu, zisku a jednotiek, prevodník mien a cenové upozornenia."
+  ],
+  "privacy": [
+   "Nevyžadujeme účty ani osobné údaje. Vo vašom prehliadači ukladáme iba voľbu jazyka, krajiny a témy.",
+   "Reklamy, ak sú zapnuté, poskytuje Google AdSense, ktorý môže používať cookies na zobrazovanie relevantných reklám. Tieto nastavenia môžete spravovať v nastaveniach reklám Google.",
+   "Na zlepšovanie stránky sa môžu zbierať anonymné, súhrnné štatistiky návštevnosti."
+  ],
+  "contact": [
+   "Otázky, opravy alebo žiadosti o partnerstvo posielajte na kontaktnú adresu zverejnenú na tejto stránke po spustení stránky.",
+   "Ak vidíte nesprávnu cenu, uveďte nám aktívum, krajinu a to, kde ste videli správnu hodnotu."
+  ],
+  "terms": [
+   "Používaním {site} súhlasíte s týmito podmienkami. Stránka slúži na všeobecné informácie.",
+   "Ceny, grafy a odhady sú orientačné, môžu byť oneskorené alebo nesprávne a nesmú sa používať ako jediný podklad pre obchod alebo nákup.",
+   "Údaje nesmiete kopírovať vo veľkom rozsahu ani ich ďalej predávať. Na automatizovaný prístup používajte náše bezplatné API a uveďte zdroj stránky.",
+   "Kedykoľvek môžeme zmeniť alebo ukončiť ktorúkoľvek časť služby a nezodpovedáme za straty vzniknuté jej použitím."
+  ],
+  "disclaimer": [
+   "{site} nie je maklér, banka ani finančný poradca a neposkytuje investičné poradenstvo.",
+   "Odhady miestnych maloobchodných cien, prirážky za tehly a údaje o výkupe sú odhady zostavené z verejných zdrojov. Predajne sa líšia, cenu vždy potvrďte u predajcu.",
+   "Minulá výkonnosť nepredpovedá budúce výsledky. Investovanie do kovov, akcií a kryptomien je rizikové vrátane straty investovaných peňazí."
+  ],
+  "cookies": [
+   "Používame iba úložisko prehliadača potrebné na zapamätanie vášho jazyka, krajiny a témy.",
+   "Reklamy, ak sú zapnuté, poskytuje Google AdSense, ktorý môže nastavovať cookies na zobrazovanie relevantných reklám. Tieto nastavenia môžete spravovať v nastaveniach reklám Google.",
+   "Návštevníkov z regiónov, ktoré vyžadujú súhlas, požiadame o súhlas predtým, ako sa použijú reklamné cookies."
+  ],
+  "developers": [
+   "Naše API cien je bezplatné pre malé projekty. Vytvorte kľúč nižšie a odošlite ho v hlavičke x-api-key.",
+   "Koncové body: /v1/overview pre všetky ceny a výkonnosť, /v1/chart/SYMBOL?days=365 pre históriu, /v1/rates pre výmenné kurzy.",
+   "Bezplatné kľúče umožňujú 1 000 požiadaviek denne. Odpovede sa ukladajú do vyrovnávacej pamäte na jednu minútu, preto prosím nevolajte častejšie.",
+   "Keď zobrazujete naše ceny, uveďte prosím zdroj stránky."
+  ]
+ },
+ "content": {
+  "gold": {
+   "about": "Zlato je najrozšírenejší drahý kov a tradičné úložisko hodnoty. Jeho cena sa na svete uvádza za trójsku unciu a v mnohých miestnych trhoch za gram alebo tolu, pričom šperky sa predávajú podľa karátov od 10K do 24K.",
+   "drivers": [
+    "Úrokové sadzby a americký dolár",
+    "Inflácia a ekonomická či politická neistota",
+    "Nákupy centrálnych bánk a investičný dopyt"
+   ],
+   "uses": [
+    "Šperky a darčeky",
+    "Investičné tehly a mince",
+    "Elektronika a stomatológia"
+   ]
+  },
+  "silver": {
+   "about": "Striebro je zároveň drahý a priemyselný kov. Cena sa uvádza za trójsku unciu a predáva sa ako tehly, mince a šperky v ryzostiach ako 999, 925 a 800.",
+   "drivers": [
+    "Priemyselný dopyt zo solárnych panelov a elektroniky",
+    "Cena zlata a americký dolár",
+    "Investičný dopyt po tehlách a mincach"
+   ],
+   "uses": [
+    "Šperky a strieborné výrobky",
+    "Solárne panely a elektronika",
+    "Investičné tehly a mince"
+   ]
+  },
+  "platinum": {
+   "about": "Platina je vzácny, hustý drahý kov, ktorý je v mnohých obdobiach hmotnostne cennejší ako zlato. Cena sa uvádza za trójsku unciu.",
+   "drivers": [
+    "Dopyt po katalyzátoroch automobilov",
+    "Ťažba z baní, najmä z Južnej Afriky a Ruska",
+    "Investičný dopyt a cena zlata"
+   ],
+   "uses": [
+    "Katalyzátory",
+    "Šperky",
+    "Chemický priemysel a vodíkové technológie"
+   ]
+  },
+  "palladium": {
+   "about": "Paládium je vzácny drahý kov, ktorý sa používa hlavne v katalyzátoroch benzínových automobilov. Cena sa uvádza za trójsku unciu.",
+   "drivers": [
+    "Výroba automobilov a emisné predpisy",
+    "Ťažba z Ruska a Južnej Afriky",
+    "Nahrádzanie platinou"
+   ],
+   "uses": [
+    "Katalyzátory",
+    "Elektronika",
+    "Stomatológia a šperky"
+   ]
+  },
+  "copper": {
+   "about": "Meď je referenčný priemyselný kov. Cena sa uvádza za metrickú tonu a sleduje sa ako ukazovateľ zdravia svetovej ekonomiky.",
+   "drivers": [
+    "Dopyt stavebníctva a výroby, najmä v Číne",
+    "Ťažba a zásoby",
+    "Americký dolár a obchodná politika"
+   ],
+   "uses": [
+    "Elektroinštalácie a rozvodné siete",
+    "Stavebníctvo a vodoinštalácie",
+    "Elektromobily a obnoviteľné zdroje energie"
+   ]
+  },
+  "aluminum": {
+   "about": "Hliník je ľahký, široko využívaný kov vyrábaný z bauxitu s veľkou spotrebou elektriny. Cena sa uvádza za metrickú tonu.",
+   "drivers": [
+    "Náklady na energiu pri tavení",
+    "Dopyt z automobilov, obalov a stavebníctva",
+    "Výroba v Číne a obchodné clá"
+   ],
+   "uses": [
+    "Obaly a plechovky",
+    "Autá a lietadlá",
+    "Stavebníctvo"
+   ]
+  },
+  "nickel": {
+   "about": "Nikel je kov používaný na výrobu nehrdzavejúcej ocele a batérií. Cena sa uvádza za metrickú tonu na Londýnskej burze kovov.",
+   "drivers": [
+    "Dopyt po nehrdzavejúcej oceli",
+    "Dopyt po batériách elektromobilov",
+    "Ponuka z Indonézie a Filipín"
+   ],
+   "uses": [
+    "Nehrdzavejúca oceľ",
+    "Batérie",
+    "Zliatiny"
+   ]
+  },
+  "zinc": {
+   "about": "Zinok sa používa hlavne na zinkovanie ocele proti hrdzi. Cena sa uvádza za metrickú tonu.",
+   "drivers": [
+    "Dopyt z oceliarstva a stavebníctva",
+    "Ťažba a výstup hutí",
+    "Ceny energií v Európe a Číne"
+   ],
+   "uses": [
+    "Zinkovanie ocele",
+    "Mosadz a zliatiny",
+    "Batérie"
+   ]
+  },
+  "lead": {
+   "about": "Olovo je hustý kov, ktorý sa používa najmä v batériách vozidiel. Cena sa uvádza za metrickú tonu.",
+   "drivers": [
+    "Dopyt z automobilov a batérií",
+    "Ponuka z recyklácie",
+    "Ťažba a environmentálne pravidlá"
+   ],
+   "uses": [
+    "Batérie vozidiel",
+    "Tienenie žiarenia",
+    "Káble a zliatiny"
+   ]
+  },
+  "tin": {
+   "about": "Cín je vzácny kov, ktorý sa používa najmä ako spájkovací materiál v elektronike. Cena sa uvádza za metrickú tonu.",
+   "drivers": [
+    "Dopyt elektroniky a čipov",
+    "Ťažba z Indonézie, Mjanmarska a Peru",
+    "Zásoby a obchodné pravidlá"
+   ],
+   "uses": [
+    "Spájka pre elektroniku",
+    "Konzervy na potraviny",
+    "Chemikálie"
+   ]
+  },
+  "cobalt": {
+   "about": "Kobalt je batériový kov, ktorý sa ťaží hlavne v Demokratickej republike Kongo. Cena sa uvádza za metrickú tonu.",
+   "drivers": [
+    "Dopyt po elektromobiloch a batériách",
+    "Ponuka z baní v Kongu a exportné pravidlá",
+    "Zmeny v chémii batérií"
+   ],
+   "uses": [
+    "Batérie",
+    "Superzliatiny",
+    "Magnety"
+   ]
+  },
+  "lithium": {
+   "about": "Uhličitan lítny je hlavná surovina pre nabíjateľné batérie. Zobrazená cena platí pre uhličitan batériovej kvality v Číne, prepočítaný na americké doláre za metrickú tonu.",
+   "drivers": [
+    "Predaje elektromobilov",
+    "Ponuka z nových baní a rafinérií",
+    "Vládna politika týkajúca sa batérií"
+   ],
+   "uses": [
+    "Batérie elektromobilov",
+    "Telefóny a notebooky",
+    "Ukladanie energie"
+   ]
+  },
+  "uranium": {
+   "about": "Urán je palivom jadrových elektrární. Cena sa uvádza v amerických dolároch za libru U3O8.",
+   "drivers": [
+    "Obnovenie jadrových elektrární a nové reaktory",
+    "Ťažba najmä z Kazachstanu a Kanady",
+    "Vládne zásobovanie a sankcie"
+   ],
+   "uses": [
+    "Jadrová energia",
+    "Lekárske izotopy"
+   ]
+  },
+  "iron-ore": {
+   "about": "Železná ruda je hlavná surovina pre oceľ. Zobrazená cena platí pre obsah železa 62 % dodaný do Číny, za metrickú tonu.",
+   "drivers": [
+    "Čínska výroba ocele",
+    "Ponuka z Austrálie a Brazílie",
+    "Výdavky na nehnuteľnosti a infraštruktúru"
+   ],
+   "uses": [
+    "Výroba ocele"
+   ]
+  },
+  "steel": {
+   "about": "Oceľ je zliatina železa, ktorá sa používa takmer vo všetkých odvetviach. Zobrazená cena platí pre betonársku výstuž v Číne, prepočítanú na americké doláre za metrickú tonu.",
+   "drivers": [
+    "Dopyt stavebníctva",
+    "Náklady na železnú rudu a koks",
+    "Vládne limity výroby"
+   ],
+   "uses": [
+    "Budovy a mosty",
+    "Autá a stroje"
+   ]
+  },
+  "steel-hrc": {
+   "about": "Za tepla valcovaný oceľový zvitok je plochý oceľový výrobok používaný vo výrobe. Zobrazená cena platí pre dodávku na americkom Stredozápade za metrickú tonu.",
+   "drivers": [
+    "Dopyt v USA z automobilov a stavebníctva",
+    "Dovozné clá a konkurencia",
+    "Náklady na suroviny a energiu"
+   ],
+   "uses": [
+    "Autá a spotrebiče",
+    "Potrubia a stavebníctvo"
+   ]
+  },
+  "lumber": {
+   "about": "Terminové kontrakty na drevo sledujú cenu mäkkého dreva používaného na stavbu domov, uvádzanú za 1 000 board feet.",
+   "drivers": [
+    "Počet nových stavieb a hypotekárne sadzby",
+    "Produkcia píl a lesné požiare",
+    "Clá v obchode medzi USA a Kanadou"
+   ],
+   "uses": [
+    "Konštrukcia domov",
+    "Nábytok a obaly"
+   ]
+  },
+  "wti-oil": {
+   "about": "WTI je americký referenčný ukazovateľ pre surovú ropu, uvádzaný za barel a dodávaný v Cushingu v Oklahome.",
+   "drivers": [
+    "Rozhodnutia OPEC a americkej produkcie",
+    "Globálny hospodársky rast",
+    "Zásoby, geopolitika a americký dolár"
+   ],
+   "uses": [
+    "Benzín, nafta a leteckého petrolej",
+    "Plasty a chemikálie"
+   ]
+  },
+  "brent-oil": {
+   "about": "Brent je globálny referenčný ukazovateľ pre surovú ropu, uvádzaný za barel, a určuje cenu väčšiny ropy obchodovanej mimo USA.",
+   "drivers": [
+    "Rozhodnutia OPEC+ o produkcii",
+    "Globálny dopyt, najmä z Číny a Indie",
+    "Konflikty a sankcie v krajinách producentoch"
+   ],
+   "uses": [
+    "Benzín, nafta a leteckého petrolej",
+    "Plasty a chemikálie"
+   ]
+  },
+  "natural-gas": {
+   "about": "Zemný plyn sa tu uvádza ako cena Henry Hub v USA za MMBtu. Používa sa na vykurovanie, výrobu elektriny a v priemysle.",
+   "drivers": [
+    "Počasie a dopyt po vykurovaní",
+    "Úrovne zásob a produkcia",
+    "Export skvapalneného zemného plynu"
+   ],
+   "uses": [
+    "Výroba elektriny",
+    "Vykurovanie a varenie v domácnostiach",
+    "Hnojivá a chemikálie"
+   ]
+  },
+  "gasoline": {
+   "about": "Terminové kontrakty na benzín sledujú veľkoobchodné ceny benzínu v amerických dolároch za galón.",
+   "drivers": [
+    "Cena ropy",
+    "Produkcia rafinérií a sezóna jazdy",
+    "Zásoby a predpisy"
+   ],
+   "uses": [
+    "Palivo do áut"
+   ]
+  },
+  "heating-oil": {
+   "about": "Terminové kontrakty na vykurovací olej sledujú veľkoobchodné ceny nafty a vykurovacieho paliva v amerických dolároch za galón.",
+   "drivers": [
+    "Cena ropy",
+    "Zimné počasie",
+    "Dopyt po nafte z nákladných áut a priemyslu"
+   ],
+   "uses": [
+    "Vykurovanie domov",
+    "Naftové palivo"
+   ]
+  },
+  "wheat": {
+   "about": "Pšenica je jednou z hlavných svetových potravinových obilnín. Cena sa uvádza za bušel na čikagskej burze.",
+   "drivers": [
+    "Počasie v hlavných pestovateľských oblastiach",
+    "Export z Ruska, Ukrajiny, USA a EÚ",
+    "Zásoby, ceny energií a americký dolár"
+   ],
+   "uses": [
+    "Chlieb, cestoviny a múka",
+    "Krmivo pre zvieratá"
+   ]
+  },
+  "corn": {
+   "about": "Kukurica je hlavná potravinová a krmivová obilnina a zdroj etanolu. Cena sa uvádza za bušel na čikagskej burze.",
+   "drivers": [
+    "Úroda v USA a Brazílii",
+    "Dopyt po etanole a krmive",
+    "Počasie a export"
+   ],
+   "uses": [
+    "Krmivo pre zvieratá",
+    "Etanolové palivo",
+    "Potraviny a sirupy"
+   ]
+  },
+  "soybeans": {
+   "about": "Sójové bôby sa spracúvajú na olej a múku. Cena sa uvádza za bušel na čikagskej burze.",
+   "drivers": [
+    "Úrody v USA, Brazílii a Argentíne",
+    "Dopyt čínskeho dovozu",
+    "Politika biopalív"
+   ],
+   "uses": [
+    "Kuchynský olej",
+    "Krmivo pre zvieratá",
+    "Bionafta"
+   ]
+  },
+  "rice": {
+   "about": "Neopracovaná ryža je základnou potravinou pre miliardy ľudí. Cena sa uvádza za cwt na čikagskej burze.",
+   "drivers": [
+    "Podmienky monzúnu a zberu v Ázii",
+    "Exportné pravidlá Indie, Thajska a Vietnamu",
+    "Zásoby a ceny potravín"
+   ],
+   "uses": [
+    "Potraviny"
+   ]
+  },
+  "sugar": {
+   "about": "Terminové kontrakty na surový cukor sledujú svetovú cenu cukru, uvádzanú v amerických dolároch za libru.",
+   "drivers": [
+    "Zber cukrovej trstiny v Brazílii a Indii",
+    "Dopyt po etanole v Brazílii",
+    "Počasie a meny"
+   ],
+   "uses": [
+    "Potraviny a nápoje",
+    "Etanol"
+   ]
+  },
+  "coffee": {
+   "about": "Terminové kontrakty na kávu arabica sledujú svetovú cenu kávových zŕn, uvádzanú v amerických dolároch za libru.",
+   "drivers": [
+    "Počasie v Brazílii a Kolumbii",
+    "Zásoby a export",
+    "Meny a dopyt"
+   ],
+   "uses": [
+    "Kávové nápoje"
+   ]
+  },
+  "cocoa": {
+   "about": "Terminové kontrakty na kakao sledujú cenu kakaových bôbov, uvádzanú v amerických dolároch za metrickú tonu.",
+   "drivers": [
+    "Zber v Pobreží Slonoviny a Ghane",
+    "Choroby a počasie",
+    "Dopyt po čokoláde"
+   ],
+   "uses": [
+    "Čokoláda a sladkosti",
+    "Kozmetika"
+   ]
+  },
+  "cotton": {
+   "about": "Terminové kontrakty na bavlnu sledujú svetovú cenu surovej bavlny, uvádzanú v amerických dolároch za libru.",
+   "drivers": [
+    "Počasie v USA, Indii a Číne",
+    "Dopyt textilného priemyslu",
+    "Ceny ropy a meny"
+   ],
+   "uses": [
+    "Odevy a textílie"
+   ]
+  },
+  "bitcoin": {
+   "about": "Bitcoin je prvá a najväčšia kryptomena. Obchoduje sa na burzách počas celého dňa a jeho ponuka je obmedzená na 21 miliónov mincí.",
+   "drivers": [
+    "Dopyt investorov a toky ETF",
+    "Úrokové sadzby a chuť podstupovať riziko",
+    "Regulácia a správy"
+   ]
+  },
+  "ethereum": {
+   "about": "Ethereum je blockchain pre inteligentné zmluvy a aplikácie a jeho mince, ether, je druhou najväčšou kryptomenou.",
+   "drivers": [
+    "Využívanie aplikácií Ethereum",
+    "Aktualizácie siete a poplatky",
+    "Nálada na trhu"
+   ]
+  },
+  "bnb": {
+   "about": "BNB je minca blockchainu BNB Chain a ekosystému burzy Binance.",
+   "drivers": [
+    "Aktivita a poplatky na burze",
+    "Spaľovanie tokenov",
+    "Regulácia"
+   ]
+  },
+  "xrp": {
+   "about": "XRP je kryptomena používaná na rýchle medzinárodné platby v XRP Ledger.",
+   "drivers": [
+    "Súdne a regulačné správy",
+    "Partnerstvá bánk a platobných systémov",
+    "Nálada na trhu"
+   ]
+  },
+  "solana": {
+   "about": "Solana je rýchly blockchain pre aplikácie a platby a SOL je jeho minca.",
+   "drivers": [
+    "Aktivita aplikácií a tokenov",
+    "Spoľahlivosť siete",
+    "Nálada na trhu"
+   ]
+  },
+  "cardano": {
+   "about": "Cardano je blockchain s dôkazom podielu (proof-of-stake) a ADA je jeho minca.",
+   "drivers": [
+    "Pokrok vo vývoji",
+    "Staking",
+    "Nálada na trhu"
+   ]
+  },
+  "dogecoin": {
+   "about": "Dogecoin vznikol ako žartovná minca a stal sa jednou z najobchodovanejších kryptomien.",
+   "drivers": [
+    "Pozornosť na sociálnych sieťach",
+    "Nálada na trhu",
+    "Rozšírenie platieb"
+   ]
+  },
+  "tron": {
+   "about": "TRON je blockchain, ktorý sa široko používa na prevody stablecoinov, a TRX je jeho minca.",
+   "drivers": [
+    "Aktivita prevodov stablecoinov",
+    "Poplatky siete",
+    "Nálada na trhu"
+   ]
+  },
+  "polkadot": {
+   "about": "Polkadot prepája mnohé blockchainy a DOT je jeho minca.",
+   "drivers": [
+    "Vývoj siete",
+    "Staking",
+    "Nálada na trhu"
+   ]
+  },
+  "chainlink": {
+   "about": "Chainlink dodáva blockchainom reálne údaje a LINK je jeho minca.",
+   "drivers": [
+    "Používanie inými aplikáciami",
+    "Partnerstvá",
+    "Nálada na trhu"
+   ]
+  },
+  "litecoin": {
+   "about": "Litecoin je jednou z najstarších kryptomien, vytvorenou pre rýchlejšie platby ako Bitcoin.",
+   "drivers": [
+    "Cena Bitcoinu",
+    "Rozšírenie platieb",
+    "Nálada na trhu"
+   ]
+  },
+  "avalanche": {
+   "about": "Avalanche je rýchla blockchainová platforma a AVAX je jej minca.",
+   "drivers": [
+    "Aktivita aplikácií",
+    "Aktualizácie siete",
+    "Nálada na trhu"
+   ]
+  },
+  "sp500": {
+   "about": "S&P 500 sleduje 500 najväčších amerických spoločností a je hlavným ukazovateľom amerického akciového trhu.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "nasdaq": {
+   "about": "Nasdaq Composite sleduje tisíce akcií kótovaných na Nasdaqu, s silnou váhou technologických spoločností.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "dow-jones": {
+   "about": "Dow Jones Industrial Average sleduje 30 veľkých amerických spoločností.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "ftse-100": {
+   "about": "FTSE 100 sleduje 100 najväčších spoločností kótovaných v Londýne.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "dax": {
+   "about": "DAX sleduje 40 veľkých nemeckých spoločností kótovaných vo Frankfurte.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "cac-40": {
+   "about": "CAC 40 sleduje 40 veľkých spoločností kótovaných v Paríži.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "nikkei-225": {
+   "about": "Nikkei 225 sleduje 225 veľkých spoločností kótovaných v Tokiu.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "hang-seng": {
+   "about": "Hang Seng Index sleduje najväčšie spoločnosti kótované v Hongkongu.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "shanghai": {
+   "about": "Shanghai Composite sleduje všetky akcie kótované na šanghajskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "nifty-50": {
+   "about": "Nifty 50 sleduje 50 veľkých spoločností na indickej Národnej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "sensex": {
+   "about": "Sensex sleduje 30 veľkých spoločností na Bombajskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "egx30": {
+   "about": "EGX 30 sleduje 30 najaktívnejších spoločností na egyptskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "tasi": {
+   "about": "Tadawul All Share Index sleduje všetky spoločnosti kótované na saudskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "bist-100": {
+   "about": "BIST 100 sleduje 100 najväčších spoločností na istanbulskej burze Borsa Istanbul.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "bovespa": {
+   "about": "Bovespa sleduje hlavné spoločnosti na brazílskej burze B3.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "asx-200": {
+   "about": "ASX 200 sleduje 200 najväčších spoločností na austrálskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "tsx": {
+   "about": "S&P/TSX Composite sleduje hlavné spoločnosti kótované na Torontskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "kospi": {
+   "about": "KOSPI sleduje všetky kmeňové akcie na kórejskej burze.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  },
+  "euro-stoxx-50": {
+   "about": "Euro Stoxx 50 sleduje 50 veľkých spoločností eurozóny.",
+   "drivers": [
+    "Zisky spoločností",
+    "Úrokové sadzby a inflácia",
+    "Ekonomické a politické správy"
+   ]
+  }
+ }
+}
