@@ -1,0 +1,781 @@
+{
+ "bigmac": {
+  "AE": {
+   "cur": "AED",
+   "date": "2026-07-01",
+   "local": 19.0,
+   "usd": 5.17
+  },
+  "AR": {
+   "cur": "ARS",
+   "date": "2026-07-01",
+   "local": 8700.0,
+   "usd": 5.91
+  },
+  "AU": {
+   "cur": "AUD",
+   "date": "2026-07-01",
+   "local": 8.5,
+   "usd": 5.95
+  },
+  "AZ": {
+   "cur": "AZN",
+   "date": "2026-07-01",
+   "local": 7.25,
+   "usd": 4.26
+  },
+  "BH": {
+   "cur": "BHD",
+   "date": "2026-07-01",
+   "local": 1.8,
+   "usd": 4.77
+  },
+  "BR": {
+   "cur": "BRL",
+   "date": "2026-07-01",
+   "local": 23.9,
+   "usd": 4.71
+  },
+  "CA": {
+   "cur": "CAD",
+   "date": "2026-07-01",
+   "local": 8.17,
+   "usd": 5.81
+  },
+  "CH": {
+   "cur": "CHF",
+   "date": "2026-07-01",
+   "local": 7.3,
+   "usd": 9.04
+  },
+  "CL": {
+   "cur": "CLP",
+   "date": "2026-07-01",
+   "local": 4990.0,
+   "usd": 5.41
+  },
+  "CN": {
+   "cur": "CNY",
+   "date": "2026-07-01",
+   "local": 26.5,
+   "usd": 3.91
+  },
+  "CO": {
+   "cur": "COP",
+   "date": "2026-07-01",
+   "local": 25900.0,
+   "usd": 8.0
+  },
+  "CR": {
+   "cur": "CRC",
+   "date": "2026-07-01",
+   "local": 3150.0,
+   "usd": 7.0
+  },
+  "CZ": {
+   "cur": "CZK",
+   "date": "2026-07-01",
+   "local": 115.0,
+   "usd": 5.43
+  },
+  "DK": {
+   "cur": "DKK",
+   "date": "2026-07-01",
+   "local": 46.0,
+   "usd": 7.04
+  },
+  "EG": {
+   "cur": "EGP",
+   "date": "2026-07-01",
+   "local": 145.0,
+   "usd": 2.87
+  },
+  "GB": {
+   "cur": "GBP",
+   "date": "2026-07-01",
+   "local": 5.49,
+   "usd": 7.4
+  },
+  "GT": {
+   "cur": "GTQ",
+   "date": "2026-07-01",
+   "local": 34.0,
+   "usd": 4.46
+  },
+  "HK": {
+   "cur": "HKD",
+   "date": "2026-07-01",
+   "local": 25.5,
+   "usd": 3.25
+  },
+  "HN": {
+   "cur": "HNL",
+   "date": "2026-07-01",
+   "local": 139.0,
+   "usd": 5.19
+  },
+  "HU": {
+   "cur": "HUF",
+   "date": "2026-07-01",
+   "local": 1660.0,
+   "usd": 5.3
+  },
+  "ID": {
+   "cur": "IDR",
+   "date": "2026-07-01",
+   "local": 43000.0,
+   "usd": 2.38
+  },
+  "IL": {
+   "cur": "ILS",
+   "date": "2026-07-01",
+   "local": 23.0,
+   "usd": 7.67
+  },
+  "IN": {
+   "cur": "INR",
+   "date": "2026-07-01",
+   "local": 236.25,
+   "usd": 2.45
+  },
+  "JO": {
+   "cur": "JOD",
+   "date": "2026-07-01",
+   "local": 2.5,
+   "usd": 3.53
+  },
+  "JP": {
+   "cur": "JPY",
+   "date": "2026-07-01",
+   "local": 500.0,
+   "usd": 3.08
+  },
+  "KR": {
+   "cur": "KRW",
+   "date": "2026-07-01",
+   "local": 5700.0,
+   "usd": 3.84
+  },
+  "KW": {
+   "cur": "KWD",
+   "date": "2026-07-01",
+   "local": 1.4,
+   "usd": 4.52
+  },
+  "LB": {
+   "cur": "LBP",
+   "date": "2026-07-01",
+   "local": 480000.0,
+   "usd": 5.36
+  },
+  "LK": {
+   "cur": "LKR",
+   "date": "2024-01-01",
+   "local": 1820.0,
+   "usd": 5.69
+  },
+  "MD": {
+   "cur": "MDL",
+   "date": "2026-07-01",
+   "local": 80.0,
+   "usd": 4.56
+  },
+  "MX": {
+   "cur": "MXN",
+   "date": "2026-07-01",
+   "local": 109.0,
+   "usd": 6.27
+  },
+  "MY": {
+   "cur": "MYR",
+   "date": "2026-07-01",
+   "local": 14.55,
+   "usd": 3.57
+  },
+  "NI": {
+   "cur": "NIO",
+   "date": "2026-07-01",
+   "local": 187.0,
+   "usd": 5.11
+  },
+  "NO": {
+   "cur": "NOK",
+   "date": "2026-07-01",
+   "local": 78.0,
+   "usd": 8.05
+  },
+  "NZ": {
+   "cur": "NZD",
+   "date": "2026-07-01",
+   "local": 8.8,
+   "usd": 5.14
+  },
+  "OM": {
+   "cur": "OMR",
+   "date": "2026-07-01",
+   "local": 1.53,
+   "usd": 3.97
+  },
+  "PE": {
+   "cur": "PEN",
+   "date": "2026-07-01",
+   "local": 16.9,
+   "usd": 4.99
+  },
+  "PH": {
+   "cur": "PHP",
+   "date": "2026-07-01",
+   "local": 169.0,
+   "usd": 2.74
+  },
+  "PK": {
+   "cur": "PKR",
+   "date": "2026-07-01",
+   "local": 1080.0,
+   "usd": 3.89
+  },
+  "PL": {
+   "cur": "PLN",
+   "date": "2026-07-01",
+   "local": 23.5,
+   "usd": 6.22
+  },
+  "QA": {
+   "cur": "QAR",
+   "date": "2026-07-01",
+   "local": 18.0,
+   "usd": 4.94
+  },
+  "RO": {
+   "cur": "RON",
+   "date": "2026-07-01",
+   "local": 18.35,
+   "usd": 4.01
+  },
+  "RU": {
+   "cur": "RUB",
+   "date": "2022-01-01",
+   "local": 135.0,
+   "usd": 1.74
+  },
+  "SA": {
+   "cur": "SAR",
+   "date": "2026-07-01",
+   "local": 19.0,
+   "usd": 5.06
+  },
+  "SE": {
+   "cur": "SEK",
+   "date": "2026-07-01",
+   "local": 69.0,
+   "usd": 7.16
+  },
+  "SG": {
+   "cur": "SGD",
+   "date": "2026-07-01",
+   "local": 7.45,
+   "usd": 5.77
+  },
+  "TH": {
+   "cur": "THB",
+   "date": "2026-07-01",
+   "local": 135.0,
+   "usd": 4.02
+  },
+  "TR": {
+   "cur": "TRY",
+   "date": "2026-07-01",
+   "local": 325.0,
+   "usd": 6.91
+  },
+  "TW": {
+   "cur": "TWD",
+   "date": "2026-07-01",
+   "local": 78.0,
+   "usd": 2.42
+  },
+  "UA": {
+   "cur": "UAH",
+   "date": "2026-07-01",
+   "local": 149.0,
+   "usd": 3.34
+  },
+  "US": {
+   "cur": "USD",
+   "date": "2026-07-01",
+   "local": 6.22,
+   "usd": 6.22
+  },
+  "UY": {
+   "cur": "UYU",
+   "date": "2026-07-01",
+   "local": 359.0,
+   "usd": 8.94
+  },
+  "VE": {
+   "cur": "VES",
+   "date": "2026-07-01",
+   "local": 3267.0,
+   "usd": 4.51
+  },
+  "VN": {
+   "cur": "VND",
+   "date": "2026-07-01",
+   "local": 76000.0,
+   "usd": 2.89
+  },
+  "ZA": {
+   "cur": "ZAR",
+   "date": "2026-07-01",
+   "local": 56.9,
+   "usd": 3.49
+  }
+ },
+ "electricity": {
+  "AL": {
+   "cur": "EUR",
+   "kwh": 0.119,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "AT": {
+   "cur": "EUR",
+   "kwh": 0.326,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "BA": {
+   "cur": "EUR",
+   "kwh": 0.0995,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "BE": {
+   "cur": "EUR",
+   "kwh": 0.3575,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "BG": {
+   "cur": "EUR",
+   "kwh": 0.1341,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "CY": {
+   "cur": "EUR",
+   "kwh": 0.2688,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "CZ": {
+   "cur": "EUR",
+   "kwh": 0.2884,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "DE": {
+   "cur": "EUR",
+   "kwh": 0.3618,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "DK": {
+   "cur": "EUR",
+   "kwh": 0.2375,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "EE": {
+   "cur": "EUR",
+   "kwh": 0.2118,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "ES": {
+   "cur": "EUR",
+   "kwh": 0.2509,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "FI": {
+   "cur": "EUR",
+   "kwh": 0.2694,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "FR": {
+   "cur": "EUR",
+   "kwh": 0.2485,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "GE": {
+   "cur": "EUR",
+   "kwh": 0.0731,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "GR": {
+   "cur": "EUR",
+   "kwh": 0.2401,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "HR": {
+   "cur": "EUR",
+   "kwh": 0.1816,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "HU": {
+   "cur": "EUR",
+   "kwh": 0.1139,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "IE": {
+   "cur": "EUR",
+   "kwh": 0.3871,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "IS": {
+   "cur": "EUR",
+   "kwh": 0.2076,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "IT": {
+   "cur": "EUR",
+   "kwh": 0.3142,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "LI": {
+   "cur": "EUR",
+   "kwh": 0.2988,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "LT": {
+   "cur": "EUR",
+   "kwh": 0.2162,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "LU": {
+   "cur": "EUR",
+   "kwh": 0.2023,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "LV": {
+   "cur": "EUR",
+   "kwh": 0.2415,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "MD": {
+   "cur": "EUR",
+   "kwh": 0.1872,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "ME": {
+   "cur": "EUR",
+   "kwh": 0.1039,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "MK": {
+   "cur": "EUR",
+   "kwh": 0.1168,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "MT": {
+   "cur": "EUR",
+   "kwh": 0.1268,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "NL": {
+   "cur": "EUR",
+   "kwh": 0.244,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "NO": {
+   "cur": "EUR",
+   "kwh": 0.1993,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "PL": {
+   "cur": "EUR",
+   "kwh": 0.2999,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "PT": {
+   "cur": "EUR",
+   "kwh": 0.2367,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "RO": {
+   "cur": "EUR",
+   "kwh": 0.2836,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "RS": {
+   "cur": "EUR",
+   "kwh": 0.1197,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "SE": {
+   "cur": "EUR",
+   "kwh": 0.3062,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "SI": {
+   "cur": "EUR",
+   "kwh": 0.2118,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "SK": {
+   "cur": "EUR",
+   "kwh": 0.1985,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "TR": {
+   "cur": "EUR",
+   "kwh": 0.0657,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  },
+  "XK": {
+   "cur": "EUR",
+   "kwh": 0.0869,
+   "period": "2026-S1",
+   "src": "Eurostat nrg_pc_204, household 2,500-4,999 kWh/yr, all taxes"
+  }
+ },
+ "fuel": {
+  "AT": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.986,
+   "petrol95": 1.57,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "BE": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.207,
+   "lpg": 0.994,
+   "petrol95": 1.723,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "BG": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.82,
+   "lpg": 0.756,
+   "petrol95": 1.484,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "CY": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.963,
+   "petrol95": 1.594,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "CZ": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.775,
+   "lpg": 1.076,
+   "petrol95": 1.568,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "DE": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.125,
+   "lpg": 1.155,
+   "petrol95": 1.964,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "DK": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.341,
+   "petrol95": 2.364,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "EE": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.001,
+   "lpg": 1.01,
+   "petrol95": 1.709,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "ES": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.792,
+   "lpg": 1.141,
+   "petrol95": 1.56,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "FI": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.393,
+   "petrol95": 2.006,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "FR": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.098,
+   "lpg": 1.057,
+   "petrol95": 2.002,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "GR": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.995,
+   "petrol95": 1.923,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "HR": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.945,
+   "lpg": 1.027,
+   "petrol95": 1.615,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "HU": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.86,
+   "lpg": 1.13,
+   "petrol95": 1.555,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "IE": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.07,
+   "petrol95": 1.889,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "IT": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.195,
+   "lpg": 0.845,
+   "petrol95": 1.942,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "LT": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.154,
+   "lpg": 1.044,
+   "petrol95": 1.717,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "LU": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.904,
+   "lpg": 0.872,
+   "petrol95": 1.559,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "LV": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.967,
+   "lpg": 1.131,
+   "petrol95": 1.719,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "MT": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.21,
+   "petrol95": 1.34,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "NL": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.22,
+   "lpg": 1.013,
+   "petrol95": 2.104,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "PL": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.626,
+   "lpg": 0.889,
+   "petrol95": 1.308,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "PT": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 2.04,
+   "lpg": 1.032,
+   "petrol95": 1.856,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "RO": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.964,
+   "lpg": 0.905,
+   "petrol95": 1.694,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "SE": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.814,
+   "petrol95": 1.359,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "SI": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.833,
+   "lpg": 1.138,
+   "petrol95": 1.482,
+   "src": "EU Weekly Oil Bulletin"
+  },
+  "SK": {
+   "cur": "EUR",
+   "date": "2026-11-23",
+   "diesel": 1.854,
+   "lpg": 0.986,
+   "petrol95": 1.571,
+   "src": "EU Weekly Oil Bulletin"
+  }
+ },
+ "updated": "2026-11-27"
+}

@@ -100,3 +100,4 @@ h1{font-size:22px;font-weight:700;letter-spacing:-.01em}
 .btn{background:var(--ink);color:var(--onink);border:0;border-radius:12px;padding:10px 20px;font:inherit;font-weight:600;cursor:pointer;justify-self:start}.msg{font-size:14px}.msg.ok{color:var(--up)}.msg.err{color:var(--dn)}
 code,pre{font-family:ui-monospace,Consolas,monospace;font-size:13px;direction:ltr;unicode-bidi:isolate}pre{background:var(--bg);padding:12px;border-radius:12px;overflow-x:auto}
 .scopes{border:1px solid var(--line);border-radius:14px;padding:12px;margin:0}.scopes legend{padding:0 6px;color:var(--mut);font-size:13px}.cats{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:6px;margin-bottom:8px}.chk{display:flex;gap:8px;align-items:center;color:var(--fg)!important}.chk input{width:auto}.syms{color:var(--mut);font-size:13px}
+.big{font-size:30px;font-weight:700}

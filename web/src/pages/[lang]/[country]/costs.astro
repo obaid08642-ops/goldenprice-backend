@@ -1,0 +1,41 @@
+---
+import Base from "../../../layouts/Base.astro";
+import "../../../i18n/load";
+import { combos, url, SITE_NAME } from "../../../lib/paths";
+import { langsFor } from "../../../data/countries";
+import { costsFor, hasCosts } from "../../../data/costs";
+import { getData } from "../../../lib/api";
+import { t } from "../../../i18n/ui";
+import { countryName } from "../../../lib/format";
+import { bcpOf } from "../../../data/languages";
+export function getStaticPaths() {
+  return combos().filter((c) => c.primary && hasCosts(c.country.code)).map((c) => ({ params: { lang: c.lang, country: c.country.code.toLowerCase() }, props: { lang: c.lang, country: c.country } }));
+}
+const { lang, country } = Astro.props;
+const data = await getData(), c = costsFor(country.code)!;
+const name = countryName(lang, country.code), loc = `${bcpOf(lang)}-u-nu-latn`;
+// published values are converted to the country's currency with the current rates
+const conv = (v: number, from: string) => (from === country.cur ? v : (v / (data.rates[from] ?? NaN)) * (data.rates[country.cur] ?? NaN));
+const money = (v: number, d = 2) => Number.isFinite(v) ? new Intl.NumberFormat(loc, { style: "currency", currency: country.cur, maximumFractionDigits: d, minimumFractionDigits: d }).format(v) : "–";
+const usd = (v: number) => new Intl.NumberFormat(loc, { style: "currency", currency: "USD", maximumFractionDigits: 2 }).format(v);
+const rows: { label: string; unit: string; value: string; sub?: string }[] = [];
+if (c.fuel) for (const [k, key] of [["petrol95", "petrol95"], ["diesel", "diesel"], ["lpg", "lpg"]] as const) { const v = (c.fuel as any)[k]; if (v) rows.push({ label: t(lang, key), unit: t(lang, "per_litre"), value: money(conv(v, c.fuel.cur)), sub: usd(v / (data.rates[c.fuel.cur] ?? NaN)) }); }
+const title = t(lang, "costs_title", { country: name }) + " | " + SITE_NAME;
+const description = t(lang, "costs_desc", { country: name, cur: country.cur });
+const alternates = [...langsFor(country).map((l) => ({ hreflang: `${l}-${country.code}`, href: url(l, country.code, "costs") })), { hreflang: "x-default", href: url("en", country.code, "costs") }];
+---
+<Base lang={lang} country={country} slug="costs" title={title} description={description} alternates={alternates}>
+  <main class="m">
+    <section class="card prose"><h1>{t(lang, "costs_title", { country: name })}</h1><p>{description}</p></section>
+    {rows.length > 0 && <section class="card"><h2>{t(lang, "fuel_h")}</h2>
+      <div class="tbl"><table><tbody>{rows.map((r) => <tr><td>{r.label}</td><td class="n">{r.value} <span class="k">{r.unit}</span></td><td class="n k">{r.sub}</td></tr>)}</tbody></table></div>
+      <div class="k small">{t(lang, "costs_asof", { date: c.fuel!.date })} · {t(lang, "costs_source", { src: c.fuel!.src })}</div></section>}
+    {c.electricity && <section class="card"><h2>{t(lang, "elec_h")}</h2>
+      <div class="big">{money(conv(c.electricity.kwh, c.electricity.cur), 3)} <span class="k">{t(lang, "per_kwh")}</span></div><p class="k">{t(lang, "elec_note")}</p>
+      <div class="k small">{t(lang, "costs_asof", { date: c.electricity.period })} · {t(lang, "costs_source", { src: c.electricity.src })}</div></section>}
+    {c.bigmac && <section class="card"><h2>{t(lang, "bigmac_h")}</h2>
+      <div class="big">{new Intl.NumberFormat(loc, { style: "currency", currency: c.bigmac.cur, maximumFractionDigits: 2 }).format(c.bigmac.local)} <span class="k">≈ {usd(c.bigmac.usd)}</span></div><p class="k">{t(lang, "bigmac_note", { country: name })}</p>
+      <div class="k small">{t(lang, "costs_asof", { date: c.bigmac.date })} · {t(lang, "costs_source", { src: "The Economist Big Mac index (CC BY 4.0)" })}</div></section>}
+    <p class="k small">{t(lang, "costs_note")}</p>
+  </main>
+</Base>

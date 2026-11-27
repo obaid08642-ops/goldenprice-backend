@@ -7,6 +7,7 @@ import { ASSETS } from "../data/assets";
 import { t } from "../i18n/ui";
 import { countryName } from "../lib/format";
 import { url, SITE_NAME, pageExists } from "../lib/paths";
+import { hasCosts } from "../data/costs";
 import { assetName } from "../lib/render";
 
 interface Props {
@@ -52,6 +53,7 @@ const fonts = "https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500
       <a href={url(lang, country.code, "rates")} class:list={{ on: slug === "rates" }}>{t(lang, "nav_rates")}</a>
       <a href={url(lang, country.code, "calculators")} class:list={{ on: slug === "calculators" }}>{t(lang, "nav_calc")}</a>
       <a href={url(lang, country.code, "compare")} class:list={{ on: slug === "compare" }}>{t(lang, "nav_compare")}</a>
+      {hasCosts(country.code) && <a href={url(lang, country.code, "costs")} class:list={{ on: slug === "costs" }}>{t(lang, "nav_costs")}</a>}
       <a href="/en/developers/">{t(lang, "nav_dev")}</a>
     </nav>
     <select class="sel" id="sel-country" hidden={tail} aria-label={t(lang, "country")}>

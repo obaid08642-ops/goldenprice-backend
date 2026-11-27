@@ -2,19 +2,19 @@ import { ASSETS, CORE, TAIL } from "../data/assets";
 import { COUNTRIES, langsFor } from "../data/countries";
 import { LANG_CODES } from "../data/languages";
 import { getData } from "../lib/api";
-import { url } from "../lib/paths";
+import { url, pageExists } from "../lib/paths";
 export function getStaticPaths() { return LANG_CODES.map((lang) => ({ params: { lang } })); }
 export async function GET({ site, params }: { site?: URL; params: { lang: string } }) {
   const base = (site?.toString() ?? "").replace(/\/$/, "");
   const lang = params.lang as any;
   const data = await getData();
   const has = (a: { sym: string }) => data.items[a.sym]?.price != null;
-  const slugs = ["", "markets", "rates", "calculators", "compare", ...CORE.filter((a) => a.slug !== "gold" && has(a)).map((a) => a.slug)];
+  const slugs = ["", "markets", "rates", "calculators", "compare", "costs", ...CORE.filter((a) => a.slug !== "gold" && has(a)).map((a) => a.slug)];
   const lastmod = new Date().toISOString().slice(0, 10);
   const out: string[] = [];
   for (const c of COUNTRIES) {
     if (!langsFor(c).includes(lang)) continue;
-    for (const s of slugs) {
+    for (const s of slugs.filter((x) => pageExists(lang, c, x, slugs))) {
       const alts = langsFor(c).map((l) => `<xhtml:link rel="alternate" hreflang="${l}-${c.code}" href="${base}${url(l, c.code, s)}"/>`).join("") + `<xhtml:link rel="alternate" hreflang="x-default" href="${base}${url("en", c.code, s)}"/>`;
       out.push(`<url><loc>${base}${url(lang, c.code, s)}</loc><lastmod>${lastmod}</lastmod><changefreq>hourly</changefreq>${alts}</url>`);
     }

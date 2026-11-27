@@ -1,6 +1,7 @@
 import { COUNTRIES, langsFor, type Country } from "../data/countries";
 import { LANG_CODES, type Lang } from "../data/languages";
 import { ASSETS } from "../data/assets";
+import { hasCosts } from "../data/costs";
 export const SITE_NAME = "Golden Price"; // brand placeholder until the domain/name is final
 /** home (gold) = "", markets = "markets", rates = "rates", calculators = "calculators", other assets = slug */
 export const url = (lang: Lang, cc: string, slug = "") => `/${lang}/${cc.toLowerCase()}/${slug && slug !== "gold" ? slug + "/" : ""}`;
@@ -11,7 +12,7 @@ export const isPrimary = (lang: Lang, c: Country) => langsFor(c).includes(lang);
 export const combos = () => COUNTRIES.flatMap((c) => LANG_CODES.filter((l) => !c.lite || isPrimary(l, c)).map((l) => ({ lang: l, country: c, primary: isPrimary(l, c) })));
 export const litePage = (slug: string) => slug === "" || ["markets", "rates", "calculators", "silver", "platinum", "palladium"].includes(slug);
 export const LIGHT_PAGES = ["", "markets"];
-export const pageExists = (lang: Lang, c: Country, slug: string, assetSlugs: string[]) => c.lite && !litePage(slug) ? false : isPrimary(lang, c) ? (slug === "" || ["markets", "rates", "calculators", "compare"].includes(slug) || assetSlugs.includes(slug)) : LIGHT_PAGES.includes(slug);
+export const pageExists = (lang: Lang, c: Country, slug: string, assetSlugs: string[]) => slug === "costs" ? isPrimary(lang, c) && hasCosts(c.code) : c.lite && !litePage(slug) ? false : isPrimary(lang, c) ? (slug === "" || ["markets", "rates", "calculators", "compare"].includes(slug) || assetSlugs.includes(slug)) : LIGHT_PAGES.includes(slug);
 /** long-tail assets (stocks, extra crypto, pairs...) have one global page per language: /{lang}/p/{slug}/ */
 export const assetUrl = (lang: Lang, cc: string, a: { slug: string; tail: boolean }) => (a.tail ? `/${lang}/p/${a.slug}/` : url(lang, cc, a.slug));
 export { ASSETS };
