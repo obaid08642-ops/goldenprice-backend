@@ -1,0 +1,44 @@
+{
+  "country": "AM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "5g": 27.2,
+      "10g": 26.3,
+      "20g": 25.5,
+      "50g": 22.5,
+      "100g": 19.9
+    },
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 20% (PwC Armenia); no investment-gold exemption, so bullion and jewellery pay 20%. ArmSwissBank offers, 21 Nov 2026, vs its XAU offer AMD 41,477/g: 5 g bar AMD 263,800 (+27.2%), 10 g 523,900 (+26.3%), 20 g 1,041,400 (+25.5%), 50 g 2,540,300 (+22.5%), 100 g 4,973,300 (+19.9%); bar asks appear VAT-inclusive. No published bar bid, so buyback null; EEU gold duty not stated, so null.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Armenia, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/armenia/corporate/other-taxes",
+      "what": "The standard rate of VAT is 20%; exported goods/services are zero-rated and most financial and education services are exempt - no investment-gold exemption is stated. Customs are under the EEU common tariff with no gold-specific duty rate given."
+    },
+    {
+      "name": "ArmSwissBank - Armenian Financial Market (bank quotes)",
+      "url": "https://www.armswissbank.am/en/markets/",
+      "what": "Bank's published quotes timestamped 21.11.2026: gold bar OFFER prices - 5 g AMD 263,800; 10 g AMD 523,900; 20 g AMD 1,041,400; 50 g AMD 2,540,300; 100 g AMD 4,973,300 - and XAU (gold) non-cash BID AMD 40,429 / OFFER AMD 41,477 per gram on the same page. Premiums = bar offer per gram / XAU offer per gram - 1. No bar bid is published."
+    }
+  ]
+}

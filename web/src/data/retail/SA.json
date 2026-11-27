@@ -1,77 +1,43 @@
 {
- "confidence": "medium",
- "defaultKarat": 21,
- "gold": {
-  "vatJewelryPct": 15,
-  "vatBullionPct": 0,
-  "importDutyPct": null,
-  "makingPct": {
-   "typical": 10,
-   "min": 5,
-   "max": 20
+  "country": "SA",
+  "tier": 1,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 21,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barPremiumPct": {
-   "1g": 29.5,
-   "2.5g": 20.0,
-   "5g": 12.7,
-   "10g": 8.6,
-   "20g": 7.4,
-   "31.1g": 6.2,
-   "50g": 5.4,
-   "100g": 4.3
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barBuybackDiscountPct": {
-   "typical": 0.5
-  },
-  "usedGoldDiscountPct": {
-   "typical": 1.5,
-   "min": 0.5,
-   "max": 3.6
-  }
- },
- "silver": {
-  "vatJewelryPct": null,
-  "vatBullionPct": null,
-  "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
- },
- "notes": "Investment gold of 99%+ purity is zero-rated; jewelry and lower-purity gold carry 15% VAT on gold plus making. Bar premiums are Ounce (Riyadh) Saudi-brand bar asks at 09:00 on 27 Nov vs the 24K raw rate it shows (439.28 SAR/g, equal to spot). Making is quoted 10-20% for 21K; 24K bullion needs little. Used-gold deduction from gold.sa and ZahabPrice market averages (indicative).",
- "sources": [
-  {
-   "name": "ZATCA investment metals VAT guideline",
-   "url": "https://zatca.gov.sa/en/HelpCenter/guidelines/Documents/Guideline-For-the-Investment-Metals-Sector-under-VAT-Provisions.pdf",
-   "what": "Investment gold/silver/platinum (99%+ purity) zero-rated; jewelry subject to 15% standard VAT"
-  },
-  {
-   "name": "Saudi Gazette",
-   "url": "https://saudigazette.com.sa/article/623255/SAUDI-ARABIA/ZATCA-VAT-applicable-to-gold-if-its-purity-level-is-below-99",
-   "what": "Report (21 Jul 2025): zero VAT at 99%+ purity, VAT below 99%"
-  },
-  {
-   "name": "Ounce Precious Metals (ounce.com.sa) gold bars",
-   "url": "https://ounce.com.sa/en/gold-bars/",
-   "what": "27 Nov 2026 Saudi rectangular bar asks 1 g 569 to 100 g 45,828 SAR; premium vs the site's 24K raw price 439.28 SAR/g (09:00 update)"
-  },
-  {
-   "name": "Ounce gold prices",
-   "url": "https://ounce.com.sa/en/%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1-%d8%a7%d9%84%d8%b0%d9%87%d8%a8/",
-   "what": "27 Nov 2026 09:00 dealer raw gold rates 24K 439.28 SAR/g (matches spot $3,643/oz x 3.75)"
-  },
-  {
-   "name": "Gold.sa used gold and workmanship",
-   "url": "https://gold.sa/en/used/all",
-   "what": "27 Nov 2026 market-average used-gold buy rates (24K 437.38 vs 439.37, 21K 380.46 vs 384.45, 18K 322.54 vs 329.53 SAR/g); workmanship pages quote 10-20% for 21K, 5-15% for 22K"
-  },
-  {
-   "name": "ZahabPrice Saudi Arabia",
-   "url": "https://www.zahabprice.com/en-sa/bullion",
-   "what": "27 Nov 2026 spot reference ($3,642.15/oz) and used-gold deduction 2-12 SAR/g by karat"
-  }
- ],
- "country": "SA",
- "tier": 1,
- "verifiedAt": "2026-11-27"
+  "notes": "ZATCA: investment gold/silver (99%+, tradable on the global bullion market) is zero-rated; jewellery is taxed at 15% on the full sale price (guideline s5.2 worked example). Dealer figures dropped: Ounce's price and buy-back pages render no readable rates and the old ladder was built on zahabprice (banned); gold.sa's used-gold page carries only stale 2025 averages.",
+  "sources": [
+    {
+      "name": "ZATCA - Guideline for the Investment Metals Sector under VAT Provisions (Issue 2, May 2026)",
+      "url": "https://zatca.gov.sa/en/HelpCenter/guidelines/Documents/Guideline-For-the-Investment-Metals-Sector-under-VAT-Provisions.pdf",
+      "what": "Qualified metals are gold, silver and platinum; a qualified metal supplied for investment purposes (purity not less than 99% and tradable on the international bullion market) is zero-rated (section 4); jewellery and precious articles are not investment-metal supplies and their sale is subject to VAT at the standard rate of 15%, applied on the sale price (section 5.2 and Example 7); the standard VAT rate is 15%."
+    },
+    {
+      "name": "Common VAT Agreement of the GCC (hosted by ZATCA), Article 35",
+      "url": "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Documents/GCC%20VAT%20Agreement.pdf",
+      "what": "Article 35: gold, silver or platinum is an investment metal when its purity is not less than 99% and it is tradable on the Global Bullion Exchange, and 'the supply of investment gold, silver and platinum shall be subject to the zero-rate'."
+    },
+    {
+      "name": "PwC Tax Summaries - Saudi Arabia, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/saudi-arabia/corporate/other-taxes",
+      "what": "VAT applied from 1 January 2018 and 'effective 1 July 2020, the standard VAT rate was increased by the government to 15%' - corroborates the 15% standard rate applied to jewellery."
+    }
+  ]
 }
