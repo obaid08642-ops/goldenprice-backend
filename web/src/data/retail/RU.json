@@ -1,0 +1,54 @@
+{
+  "country": "RU",
+  "tier": 1,
+  "verifiedAt": "2026-11-27",
+  "confidence": "medium",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1g": 12.2,
+      "5g": 6.8,
+      "10g": 6.4,
+      "20g": 6.0,
+      "50g": 5.6,
+      "100g": 3.2,
+      "500g": 3.6,
+      "1000g": 3.7
+    },
+    "barBuybackDiscountPct": {
+      "typical": 5.4
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 22,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 22% from Jan 2026 (Law 425-FZ) on jewellery and silver; gold bars to individuals exempt since Mar 2022 (Art.149, Law 47-FZ), exemption excludes silver bars. Premiums are Sberbank sell vs CBR accounting price (Oct 2026 list via source); buyback 5.4% is bank buy below CBR price. Duty and making % not found, null.",
+  "sources": [
+    {
+      "name": "Thomson Reuters Onesource - Russia VAT reform 2026",
+      "url": "https://www.thomsonreuters.com/en-us/help/onesource-global-trade/regulatory-insights/2026/february-11th/vat-reform-2026-key-changes-russia-and-kazakhstan",
+      "what": "Read 2026-11-27: standard VAT rate 22% from 1 Jan 2026"
+    },
+    {
+      "name": "UVI - VAT when buying a gold bar",
+      "url": "https://gold.uvi.ru/blog/nds-pri-pokupke-zolotogo-slitka",
+      "what": "Read 2026-11-27: bar sales to individuals VAT-exempt under Art.149(3)(9) from 1 Mar 2022; exemption excludes silver bars"
+    },
+    {
+      "name": "ZOT Moscow - How gold bars and coins are valued and bought back in Russia",
+      "url": "https://zot.moscow/kak-v-rossii-otsenivayut-i-vykupayut-zolotye-slitki-i-investitsionnye-monety.php",
+      "what": "Read 2026-11-27: Sberbank buy/sell table by size vs CBR accounting price 11,162.78 RUB/g; premiums and 5.4% buyback gap calculated from it"
+    }
+  ]
+}
