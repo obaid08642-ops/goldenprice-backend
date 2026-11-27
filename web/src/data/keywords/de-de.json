@@ -1,0 +1,106 @@
+{
+ "gold": [
+  "gold preis pro gramm",
+  "gold preise aktuell",
+  "gold preis heute",
+  "gold preis kg",
+  "gold preis euro",
+  "goldpreis aktuell",
+  "gold preis 585",
+  "gold preis entwicklung",
+  "gold preis unze"
+ ],
+ "silver": [
+  "silber preis pro gramm",
+  "silber preis pro kg",
+  "silber preis heute",
+  "silber preis 925",
+  "silber preis entwicklung",
+  "silber preis kg",
+  "silber preis prognose",
+  "silber preis chart",
+  "silber preis unze"
+ ],
+ "platinum": [
+  "platin preis gramm",
+  "platin preis aktuell",
+  "platin preisentwicklung",
+  "platin preis 1 kg",
+  "platin preis 1 unze",
+  "platin preisentwicklung 20 jahre",
+  "platin preis vs gold",
+  "platin preis prognose",
+  "platin preis chart"
+ ],
+ "copper": [
+  "kupfer preis pro kg",
+  "kupfer preis pro kg schrott",
+  "kupfer preis aktuell",
+  "kupfer preis schrott",
+  "kupfer preisentwicklung",
+  "kupfer preis chart",
+  "kupfer preis pro kg aktuell",
+  "kupfer preis pro tonne",
+  "kupfer preis pro gramm"
+ ],
+ "brent-oil": [
+  "brent rohöl preis",
+  "brent rohöl preis aktuell",
+  "brent rohöl preisentwicklung",
+  "brent rohöl preis heute",
+  "brent crude rohöl preis",
+  "rohöl preis brent chart"
+ ],
+ "natural-gas": [
+  "erdgas preise",
+  "erdgas preisentwicklung",
+  "erdgas preisvergleich",
+  "erdgas preis aktuell",
+  "erdgas preise tankstelle",
+  "erdgas preis pro kwh",
+  "erdgas preise börse",
+  "erdgas preisentwicklung chart",
+  "erdgas preise auto",
+  "erdgas preise m3"
+ ],
+ "bitcoin": [
+  "bitcoin preis aktuell",
+  "bitcoin preis dollar",
+  "bitcoin preis euro",
+  "bitcoin preis 2010",
+  "bitcoin preis 2016",
+  "bitcoin preis 2009",
+  "bitcoin preis 2012",
+  "bitcoin preis usd",
+  "bitcoin preis 2013"
+ ],
+ "ethereum": [
+  "ethereum preis euro",
+  "ethereum preis dollar",
+  "ethereum preis prognose",
+  "ethereum preisentwicklung",
+  "ethereum preis aktuell",
+  "ethereum preis 2018",
+  "ethereum preis 2016",
+  "ethereum preis 2017",
+  "ethereum preisprognose 2030"
+ ],
+ "wheat": [
+  "weizen preis aktuell",
+  "weizen preis börse",
+  "weizen preis pro tonne",
+  "weizen preisentwicklung",
+  "weizen preis pro tonne aktuell",
+  "weizen preis 2026",
+  "weizen preis prognose",
+  "weizen preis matif",
+  "weizen preis aktuell bayern"
+ ],
+ "sp500": [
+  "s&p 500 preis euro",
+  "s&p 500 preisindex",
+  "s&p 500 preisentwicklung",
+  "s&p 500 etf preis",
+  "s&p 500 aktie preis"
+ ]
+}

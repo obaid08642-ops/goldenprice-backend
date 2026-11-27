@@ -1,0 +1,112 @@
+{
+ "gold": [
+  "gold price in nepal",
+  "gold price today",
+  "gold price in nepal today",
+  "gold price live",
+  "gold price chart",
+  "gold price in india",
+  "gold price in india today",
+  "gold price in nepal tola today",
+  "gold price in nepal today per tola"
+ ],
+ "silver": [
+  "silver price in nepal",
+  "silver price in nepal today",
+  "silver price today",
+  "silver price live",
+  "silver price in india",
+  "silver price chart",
+  "silver price in india today",
+  "silver price in nepal today 1 tola",
+  "silver price in international market"
+ ],
+ "platinum": [
+  "platinum price in nepal",
+  "platinum price in india",
+  "platinum price today",
+  "platinum price in nepal tola",
+  "platinum price vs gold",
+  "platinum price in nepal per tola",
+  "platinum price per gram",
+  "platinum price today in nepal",
+  "platinum price in india 10 gram"
+ ],
+ "copper": [
+  "copper price in nepal",
+  "copper price in nepal per kg",
+  "copper price per kg",
+  "copper price in india",
+  "copper price today",
+  "copper price today in nepal",
+  "copper price in india per kg",
+  "copper price chart",
+  "copper price in international market"
+ ],
+ "brent-oil": [
+  "brent crude oil price today",
+  "brent crude oil price live",
+  "brent crude oil price chart",
+  "brent crude oil price today live",
+  "brent crude oil price chart live",
+  "brent crude oil price in international market",
+  "brent crude oil price forecast for next week",
+  "brent crude oil price in dollar",
+  "brent crude oil price futures"
+ ],
+ "natural-gas": [
+  "natural gas price live",
+  "natural gas price today",
+  "natural gas price chart",
+  "natural gas price prediction",
+  "natural gas price forecast",
+  "natural gas price europe",
+  "natural gas price prediction for tomorrow",
+  "natural gas price news",
+  "natural gas price india"
+ ],
+ "bitcoin": [
+  "bitcoin price usd",
+  "bitcoin price in nepal",
+  "bitcoin price today",
+  "bitcoin price today usd",
+  "bitcoin price in india",
+  "bitcoin price in 2010",
+  "bitcoin price in dollars",
+  "bitcoin price in nepal today",
+  "bitcoin price in 2015"
+ ],
+ "ethereum": [
+  "ethereum price usd",
+  "ethereum price in nepal",
+  "ethereum price today",
+  "ethereum price aud",
+  "ethereum price prediction",
+  "ethereum price npr",
+  "ethereum price usd prediction",
+  "ethereum price usdt",
+  "ethereum price history data"
+ ],
+ "wheat": [
+  "wheat price in nepal",
+  "wheat price in india",
+  "wheat price in nepal today",
+  "wheat price in up mandi today",
+  "wheat price today",
+  "wheat price in punjab 2026",
+  "wheat price in pakistan",
+  "wheat price per kg",
+  "wheat price in punjab"
+ ],
+ "sp500": [
+  "s&p 500 price today",
+  "s&p 500 price chart",
+  "s&p 500 price history",
+  "s&p 500 price to earnings ratio",
+  "s&p 500 price usd",
+  "s&p 500 price now",
+  "s&p 500 price target",
+  "s&p 500 price per share",
+  "s&p 500 price prediction"
+ ]
+}

@@ -1,0 +1,105 @@
+{
+ "gold": [
+  "gold preis euro",
+  "gold preis pro gramm",
+  "gold preis kg",
+  "gold preis unze",
+  "gold preis österreich",
+  "gold preis kurs",
+  "gold preise aktuell",
+  "gold preis heute",
+  "goldpreis aktuell"
+ ],
+ "silver": [
+  "silber preis pro kg",
+  "silber preis euro",
+  "silber preis pro gramm",
+  "silber preis kg",
+  "silber preis prognose",
+  "silber preis heute",
+  "silber preis chart",
+  "silber preis unze",
+  "silber preis entwicklung"
+ ],
+ "platinum": [
+  "platin preisentwicklung",
+  "platin preis gramm",
+  "platin preis aktuell",
+  "platin preis kg",
+  "platin preis 1 unze",
+  "platin preis chart",
+  "platin preisentwicklung 20 jahre",
+  "platin preis prognose",
+  "platin preis euro"
+ ],
+ "copper": [
+  "kupfer preis pro kg",
+  "kupfer preis pro kg österreich",
+  "kupfer preis pro kg schrott",
+  "kupfer preis aktuell",
+  "kupfer preis chart",
+  "kupfer preis pro kg wien",
+  "kupfer preis österreich",
+  "kupfer preis pro tonne",
+  "kupfer preisentwicklung"
+ ],
+ "brent-oil": [
+  "brent rohöl preis",
+  "brent rohöl preis aktuell",
+  "brent rohöl preisentwicklung",
+  "brent rohöl preis heute",
+  "brent crude rohöl preis",
+  "rohöl preis brent chart"
+ ],
+ "natural-gas": [
+  "erdgas preisentwicklung",
+  "erdgas preis österreich",
+  "erdgas preisfix 28",
+  "erdgas preis aktuell",
+  "erdgas preis pro kwh",
+  "erdgas preise tankstelle",
+  "erdgas preisvergleich",
+  "erdgas preis europa",
+  "erdgas preisentwicklung österreich"
+ ],
+ "bitcoin": [
+  "bitcoin preis aktuell",
+  "bitcoin preis dollar",
+  "bitcoin preis euro",
+  "bitcoin preis 2010",
+  "bitcoin preis usd",
+  "bitcoin preis 2016",
+  "bitcoin preis 2009",
+  "bitcoin preis 2011",
+  "bitcoin preis 2013"
+ ],
+ "ethereum": [
+  "ethereum preis prognose",
+  "ethereum preis euro",
+  "ethereum preis dollar",
+  "ethereum preis aktuell",
+  "ethereum preisentwicklung",
+  "ethereum preis 2016",
+  "ethereum preis 2017",
+  "ethereum preis 2018",
+  "ethereum preisprognose 2030"
+ ],
+ "wheat": [
+  "weizen preis aktuell",
+  "weizen preis börse",
+  "weizen preisentwicklung",
+  "weizen preis österreich",
+  "weizen preis pro tonne",
+  "weizen preis börse wien",
+  "weizen preis chart",
+  "weizen preise 2026",
+  "weizen preis pro tonne aktuell"
+ ],
+ "sp500": [
+  "s&p 500 preis euro",
+  "s&p 500 preisindex",
+  "s&p 500 preisentwicklung",
+  "s&p 500 etf preis",
+  "s&p 500 aktie preis"
+ ]
+}

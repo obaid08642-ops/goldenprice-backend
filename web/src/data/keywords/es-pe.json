@@ -1,0 +1,104 @@
+{
+ "gold": [
+  "precio oro hoy",
+  "precio oro peru",
+  "precio oro 18k hoy perú",
+  "precio oro 18k hoy",
+  "precio oro hoy peru",
+  "precio oro 24k hoy perú",
+  "precio oro hoy gramo",
+  "precio oro 14k hoy perú",
+  "precio oro 18k"
+ ],
+ "silver": [
+  "precio plata peru",
+  "precio plata hoy",
+  "precio plata 950",
+  "precio plata peru hoy",
+  "precio plata hoy gramo",
+  "precio plata onza",
+  "precio plata 925",
+  "precio plata hoy kitco",
+  "precio plata gramo"
+ ],
+ "platinum": [
+  "precio platino hoy",
+  "precio platino gramo",
+  "precio platino para operacion",
+  "precio platino vs oro",
+  "precio platino hoy gramo",
+  "precio platino vs oro blanco",
+  "precio platino hoy colombia",
+  "precio platino colombia",
+  "precio platino y oro"
+ ],
+ "copper": [
+  "precio cobre hoy",
+  "precio cobre peru",
+  "precio cobre por kilo",
+  "precio cobre hoy peru",
+  "precio cobre kitco",
+  "precio cobre chatarra",
+  "precio cobre por tonelada",
+  "precio cobre hoy kitco",
+  "precio cobre kilo peru"
+ ],
+ "brent-oil": [
+  "precio petroleo crudo brent"
+ ],
+ "natural-gas": [
+  "precio gas natural perú",
+  "precio gas natural cálidda",
+  "precio gas natural hoy",
+  "precio gas natural hoy españa",
+  "precio gas natural vehicular",
+  "precio gas natural mercado regulado",
+  "precio gas natural cdmx",
+  "precio gas natural €/kwh",
+  "precio gas natural naturgy"
+ ],
+ "bitcoin": [
+  "precio bitcoin dolares",
+  "precio bitcoin hoy",
+  "precio bitcoin dolar",
+  "precio bitcoin hoy dolares",
+  "precio bitcoin usd",
+  "precio bitcoin histórico",
+  "precio bitcoin en soles",
+  "precio bitcoin 2009",
+  "precio bitcoin 2010"
+ ],
+ "ethereum": [
+  "precio ethereum dolar",
+  "precio ethereum soles",
+  "precio ethereum en dolares",
+  "precio ethereum hoy",
+  "precio ethereum euro",
+  "precio ethereum usd",
+  "precio ethereum hoy en dolares",
+  "precio ethereum 2030",
+  "precio ethereum pesos"
+ ],
+ "wheat": [
+  "precio trigo hoy",
+  "precio trigo rosario",
+  "precio trigo hoy rosario",
+  "precio trigo hoy españa",
+  "precio trigo pizarra rosario",
+  "precio trigo bahia blanca",
+  "precio trigo chicago",
+  "precio trigo lonja de leon",
+  "precio trigo chicago hoy"
+ ],
+ "sp500": [
+  "precio s&p 500 hoy",
+  "precio s&p 500 usd",
+  "precio s&p 500 en dolares",
+  "precio s&p 500 voo",
+  "precio accion s&p 500",
+  "precio historico s&p 500",
+  "precio objetivo s&p 500",
+  "precio cedear s&p 500",
+  "precio etf s&p 500"
+ ]
+}

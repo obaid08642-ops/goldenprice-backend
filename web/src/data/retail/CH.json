@@ -1,0 +1,43 @@
+{
+ "country": "CH",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 18,
+ "gold": {
+  "vatJewelryPct": 8.1,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {},
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Swiss standard VAT rate is 8.1%. Swiss dealer price lists and buyback pages were not reachable, so bar premiums, buyback and used-gold discounts are null. Commercial buyers of used precious metals must be registered with the federal Precious Metals Control Office since 2024 (about 360 registered); 18K is the usual jewellery standard.",
+ "sources": [
+  {
+   "name": "ESTV Federal Tax Administration VAT",
+   "url": "https://www.estv.admin.ch/de/mehrwertsteuer",
+   "what": "Swiss VAT rates: standard 8.1%, reduced 2.6%, special 3.8%"
+  },
+  {
+   "name": "BAZG Tipps Verkauf von Altgold",
+   "url": "https://www.bazg.admin.ch/de/tipps-verkauf-von-altgold",
+   "what": "Registration duty for commercial used-gold buyers since 1 Jan 2024; advice to compare offers against the spot price"
+  },
+  {
+   "name": "GOLD.DE Goldhaendler Schweiz",
+   "url": "https://www.gold.de/haendler/schweiz/",
+   "what": "Directory of Swiss bullion dealers (Degussa, Geiger, philoro Schweiz, GVS); confirms local market structure, no prices taken"
+  }
+ ]
+}

@@ -1,0 +1,71 @@
+{
+ "country": "AU",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 24,
+ "gold": {
+  "vatJewelryPct": 10,
+  "vatBullionPct": 0,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 13.9,
+   "5g": 5.2,
+   "10g": 4.1,
+   "20g": 3.5,
+   "50g": 3.1,
+   "31.1g": 3.0,
+   "100g": 2.9,
+   "250g": 2.7,
+   "500g": 2.6,
+   "1000g": 2.3
+  },
+  "barBuybackDiscountPct": {
+   "typical": 2.5
+  },
+  "usedGoldDiscountPct": {
+   "typical": 23
+  }
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "31.1g": 20.5,
+   "155.5g": 20.4,
+   "311g": 18.7,
+   "1000g": 12.1,
+   "3110g": 10.3
+  },
+  "barBuybackDiscountPct": {
+   "typical": 6.1
+  },
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Perth Mint and Ainslie are the main bullion dealers; prices quoted per oz/gram vs AUD spot. Investment bars are sold without GST (non-Australian coins such as Krugerrand carry GST); 10% GST on jewellery is the standard rate (ATO page not reachable). Perth Mint pays about 23% below spot-equivalent for hallmarked jewellery across 9-24K (refiner rate, not shop rate). Making charges not sourced.",
+ "sources": [
+  {
+   "name": "Ainslie Bullion (gold bars page)",
+   "url": "https://ainsliebullion.com.au/buy/type/gold/id/23",
+   "what": "Live ask prices 1g to 1kg Ainslie/Perth Mint bars and AUD gold spot (A$5,472.47/oz, A$175,943.74/kg) on 2026-11-27; non-AU coins flagged incl GST"
+  },
+  {
+   "name": "Ainslie Bullion (silver bars page)",
+   "url": "https://ainsliebullion.com.au/buy/type/silver/id/24",
+   "what": "Silver bar asks 1oz to 5kg and AUD silver spot (A$65.82/oz) on 2026-11-27"
+  },
+  {
+   "name": "Perth Mint gold and silver prices",
+   "url": "https://www.perthmint.com/gold-silver-prices/",
+   "what": "Spot bid/ask AUD, 'Perth Mint buys' prices for bars/coins/silver and per-gram hallmarked jewellery buy prices, updated 27/11/2026 01:24 PM"
+  },
+  {
+   "name": "Ainslie Bullion EOFY 2025 price sheet",
+   "url": "https://ainsliebullion.com.au/root/HistoricPricesheets/PricesheetEOFY2025.pdf",
+   "what": "Sell vs BuyBack columns at 30-Jun-2025: gold bars bought back about 2% below spot, silver about 4-5%; coins marked incl GST"
+  }
+ ]
+}

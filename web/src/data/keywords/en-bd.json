@@ -1,0 +1,112 @@
+{
+ "gold": [
+  "gold price today",
+  "gold price in bangladesh",
+  "gold price in bangladesh today",
+  "gold price live",
+  "gold price bd",
+  "gold price chart",
+  "gold price in ksa",
+  "gold price in dubai",
+  "gold price in saudi arabia today"
+ ],
+ "silver": [
+  "silver price in bangladesh",
+  "silver price today",
+  "silver price in bangladesh today",
+  "silver price live",
+  "silver price chart",
+  "silver price in bd",
+  "silver price in india",
+  "silver price in bangladesh today per vori",
+  "silver price per vori in bangladesh"
+ ],
+ "platinum": [
+  "platinum price in bangladesh",
+  "platinum price today",
+  "platinum price in bangladesh today",
+  "platinum price vs gold",
+  "platinum price per gram",
+  "platinum price per gram in bangladesh",
+  "platinum price per kg",
+  "platinum price per vori in bangladesh",
+  "platinum price in india"
+ ],
+ "copper": [
+  "copper price in bangladesh",
+  "copper price today",
+  "copper price per kg in bangladesh",
+  "copper price per kg",
+  "copper price in international market",
+  "copper price in bangladesh today",
+  "copper price per ton",
+  "copper price chart",
+  "copper price live"
+ ],
+ "brent-oil": [
+  "brent crude oil price today",
+  "brent crude oil price live",
+  "brent crude oil price chart",
+  "brent crude oil price now",
+  "brent crude oil price live today",
+  "brent crude oil price chart live",
+  "brent crude oil price in dollar",
+  "brent crude oil price futures",
+  "brent crude oil price india"
+ ],
+ "natural-gas": [
+  "natural gas price in bangladesh",
+  "natural gas price today",
+  "natural gas price chart",
+  "natural gas price for industry in bangladesh",
+  "natural gas price live",
+  "natural gas price prediction",
+  "natural gas price forecast",
+  "natural gas price europe",
+  "natural gas price prediction for tomorrow"
+ ],
+ "bitcoin": [
+  "bitcoin price usd",
+  "bitcoin price in bangladesh",
+  "bitcoin price today",
+  "bitcoin price in 2010",
+  "bitcoin price in bd",
+  "bitcoin price today usd",
+  "bitcoin price bdt",
+  "bitcoin price now",
+  "bitcoin price dollar"
+ ],
+ "ethereum": [
+  "ethereum price usd",
+  "ethereum price today",
+  "ethereum price in bd",
+  "ethereum price prediction",
+  "ethereum price bdt",
+  "ethereum price usdt",
+  "ethereum price history data",
+  "ethereum price usd live",
+  "ethereum price today usd"
+ ],
+ "wheat": [
+  "wheat price in bangladesh",
+  "wheat price in international market",
+  "wheat price in international market today",
+  "wheat price per kg in bangladesh",
+  "wheat price in india",
+  "wheat price per ton today",
+  "wheat price news",
+  "wheat price per ton",
+  "wheat price today"
+ ],
+ "sp500": [
+  "s&p 500 price today",
+  "s&p 500 price chart",
+  "s&p 500 price history",
+  "s&p 500 price to earnings ratio",
+  "s&p 500 price usd",
+  "s&p 500 price now",
+  "s&p 500 price target",
+  "s&p 500 price per share",
+  "s&p 500 price prediction"
+ ]
+}

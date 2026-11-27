@@ -1,0 +1,104 @@
+{
+ "gold": [
+  "prix or aujourd'hui",
+  "prix or canada",
+  "prix or gramme canadien",
+  "prix or 10k",
+  "prix or gramme",
+  "prix or 10k gramme canadien",
+  "prix ordinateur portable",
+  "prix or once canadien",
+  "prix or 18k"
+ ],
+ "silver": [
+  "prix argent once",
+  "prix argent gramme",
+  "prix argent oz",
+  "prix argent 999",
+  "prix argent canada",
+  "prix argent 925",
+  "prix argent sterling",
+  "prix argent once canada",
+  "prix argent us"
+ ],
+ "platinum": [
+  "prix platine vs or",
+  "prix platine au gramme",
+  "prix platine kg",
+  "prix platine vinyle",
+  "prix platine dj",
+  "prix platine pizza",
+  "prix platine et or",
+  "prix platine musique",
+  "prix platine maroc"
+ ],
+ "copper": [
+  "prix cuivre quebec",
+  "prix cuivre recyclage",
+  "prix cuivre lbs",
+  "prix cuivre a la livre",
+  "prix cuivre aim",
+  "prix cuivre #1",
+  "prix cuivre au kilo",
+  "prix cuivre scrap",
+  "prix cuivre recyclage quebec"
+ ],
+ "brent-oil": [
+  "cours pétrole brut brent"
+ ],
+ "natural-gas": [
+  "prix gaz naturel énergir",
+  "prix gaz naturel vs électricité québec",
+  "prix gaz naturel quebec",
+  "prix gaz naturel marché mondial",
+  "prix gaz naturel m3 québec",
+  "prix gaz naturel vs électricité",
+  "prix gaz naturel belgique",
+  "prix gaz naturel kwh",
+  "prix gaz naturel voiture"
+ ],
+ "bitcoin": [
+  "prix bitcoin usd",
+  "prix bitcoin cad",
+  "prix bitcoin us",
+  "prix bitcoin canadien",
+  "prix bitcoin en 2010",
+  "prix bitcoin 2012",
+  "prix bitcoin euro",
+  "prix bitcoin 2016",
+  "prix bitcoin 2013"
+ ],
+ "ethereum": [
+  "prix ethereum usd",
+  "prix ethereum cad",
+  "prix ethereum euro",
+  "prix ethereum 2030",
+  "prix ethereum 2021",
+  "prix ethereum 2016",
+  "prix ethereum en 2017",
+  "prix ethereum 2027",
+  "prix ethereum 2015"
+ ],
+ "wheat": [
+  "prix blé d inde super c",
+  "prix blépharoplastie",
+  "prix blé d'inde",
+  "prix blépharoplastie supérieure",
+  "prix blépharoplastie inférieure",
+  "prix blé bio 2026",
+  "prix blé tendre",
+  "prix blé tonne",
+  "prix blé dur"
+ ],
+ "sp500": [
+  "prix s&p 500 etf",
+  "valeur s&p 500",
+  "valeur s&p 500 etf",
+  "valeur s&p 500 en euro",
+  "prix action s&p 500",
+  "prix bnp s&p 500",
+  "prix part s&p 500",
+  "valeur action s&p 500",
+  "valeur total s&p 500"
+ ]
+}

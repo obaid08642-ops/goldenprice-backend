@@ -1,0 +1,112 @@
+{
+ "gold": [
+  "gold price live",
+  "gold price chart",
+  "gold price today",
+  "gold price live chart",
+  "gold price usd",
+  "gold price prediction",
+  "gold price ounce",
+  "gold price gram",
+  "gold price per gram"
+ ],
+ "silver": [
+  "silver price chart",
+  "silver price today",
+  "silver price prediction",
+  "silver price live",
+  "silver price per gram",
+  "silver price usd",
+  "silver price tradingview",
+  "silver price chart kg",
+  "silver price per ounce"
+ ],
+ "platinum": [
+  "platinum price vs gold",
+  "platinum price per gram",
+  "platinum price today",
+  "platinum price chart",
+  "platinum price tradingview",
+  "platinum price today india",
+  "platinum price in india",
+  "platinum price per ounce",
+  "platinum price in pakistan"
+ ],
+ "copper": [
+  "copper price chart",
+  "copper price per ton",
+  "copper price per kg",
+  "copper price prediction",
+  "copper price live",
+  "copper price lme",
+  "copper price tradingview",
+  "copper price today",
+  "copper price chart per ton"
+ ],
+ "brent-oil": [
+  "brent crude oil price live",
+  "brent crude oil price chart",
+  "brent crude oil price today",
+  "brent crude oil price now",
+  "brent crude oil price tradingview",
+  "brent crude oil price futures",
+  "brent crude oil price chart live",
+  "brent crude oil price prediction",
+  "brent crude oil price today live"
+ ],
+ "natural-gas": [
+  "natural gas price per m3",
+  "natural gas price live",
+  "natural gas price in europe",
+  "natural gas price chart",
+  "natural gas price ttf",
+  "natural gas price today",
+  "natural gas price prediction",
+  "natural gas price forecast",
+  "natural gas price prediction for tomorrow"
+ ],
+ "bitcoin": [
+  "bitcoin price usd",
+  "bitcoin price dollar",
+  "bitcoin price prediction",
+  "bitcoin price chart",
+  "bitcoin price today",
+  "bitcoin price usdt",
+  "bitcoin price usd live",
+  "bitcoin price in 2010",
+  "bitcoin price now"
+ ],
+ "ethereum": [
+  "ethereum price usd",
+  "ethereum price prediction",
+  "ethereum price usdt",
+  "ethereum price chart",
+  "ethereum price usd live",
+  "ethereum price usd prediction",
+  "ethereum price prediction daily",
+  "ethereum price prediction 2030",
+  "ethereum price chart usd"
+ ],
+ "wheat": [
+  "wheat price per ton",
+  "wheat price per kg",
+  "wheat price per ton today",
+  "wheat price chart",
+  "wheat price today",
+  "wheat price in punjab 2026",
+  "wheat price in pakistan",
+  "wheat price in punjab",
+  "wheat price in up"
+ ],
+ "sp500": [
+  "s&p 500 price today",
+  "s&p 500 price chart",
+  "s&p 500 price history",
+  "s&p 500 price to earnings ratio",
+  "s&p 500 price usd",
+  "s&p 500 price now",
+  "s&p 500 price target",
+  "s&p 500 price per share",
+  "s&p 500 price prediction"
+ ]
+}

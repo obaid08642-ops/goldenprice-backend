@@ -96,7 +96,7 @@ export function renderSide(c: Ctx) {
       const f = asset.karats ? k / 24 : k / 1000;
       return `<div class="row"><span>${asset.karats ? k + "K" : k}</span><span class="k n">${asset.karats ? ((k / 24) * 100).toFixed(1) + "%" : ""}</span><b class="n">${fmt(lang, (local(c, asset, "gram") ?? 0) * f)}</b></div>`;
     }).join("");
-    out += `<div class="card"><div class="k">${t(lang, "karat_title", { a: name })} · ${country.cur}/${t(lang, "u_gram")}</div>${rows}</div>`;
+    out += `<div class="card"><div class="k">${asset.karats ? t(lang, "karat_title", { a: name }) : `${name} · ${t(lang, "purity")}`} · ${country.cur}/${t(lang, "u_gram")}</div>${rows}</div>`;
   } else if (hasFx(asset)) {
     const units = unitsFor(asset, country.tola);
     out += `<div class="card"><div class="k">${name} · ${country.cur}</div>${units.map((u) => `<div class="row"><span>${t(lang, "per", { u: unitLabel(lang, u) })}</span><b class="n">${fmt(lang, local(c, asset, u))}</b></div>`).join("")}</div>`;

@@ -1,0 +1,105 @@
+{
+ "gold": [
+  "preț aur 14 karate",
+  "preț aur amanet",
+  "preț aur 24 karate",
+  "preț aur 18 karate",
+  "preț aur bnr",
+  "preț aur 14 karate amanet",
+  "preț aur azi",
+  "preț aur 14k",
+  "preț aur 333"
+ ],
+ "silver": [
+  "preț argint amanet",
+  "preț argint gram",
+  "preț argint 925",
+  "preț argint industrial",
+  "preț argint azi",
+  "preț argint 999",
+  "preț argint pur",
+  "preț argint 800",
+  "preț argint bnr"
+ ],
+ "platinum": [
+  "pret platina gram",
+  "pret platina vs aur",
+  "pret platina catalizator",
+  "pret platina amanet",
+  "pret platina 950",
+  "pret platina bnr",
+  "pret platina bursa",
+  "pret platina romania",
+  "pret platina industriala"
+ ],
+ "copper": [
+  "preț cupru fier vechi",
+  "preț cupru remat",
+  "preț cupru timișoara",
+  "preț cupru buzau",
+  "preț cupru arad",
+  "preț cupru bucurești",
+  "preț cupru pajurca",
+  "preț cupru remat brașov",
+  "preț cupru constanța"
+ ],
+ "brent-oil": [
+  "pret petrol brent azi",
+  "pret petrol brent live",
+  "pret petrol brent 500",
+  "pret petrol brent grafic",
+  "pret petrol brent bursa",
+  "pret baril petrol brent",
+  "pret baril petrol brent azi",
+  "pret baril petrol brent live",
+  "evolutie pret petrol brent"
+ ],
+ "natural-gas": [
+  "preț gaze naturale engie",
+  "preț gaze naturale 2026",
+  "pret gaze naturale 2025",
+  "pret gaze naturale ppc",
+  "pret gaze naturale bursa europa",
+  "pret gaze naturale hidroelectrica",
+  "pret gaze naturale metru cub",
+  "pret gaze naturale romania",
+  "pret gaze naturale anre"
+ ],
+ "bitcoin": [
+  "preț bitcoin azi",
+  "pret bitcoin euro",
+  "pret bitcoin acum",
+  "pret bitcoin dolari",
+  "pret bitcoin azi euro",
+  "pret bitcoin usd",
+  "pret bitcoin 2015",
+  "pret bitcoin 2010",
+  "pret bitcoin grafic"
+ ],
+ "ethereum": [
+  "pret ethereum azi",
+  "pret ethereum in euro",
+  "pret ethereum azi in euro",
+  "pret ethereum grafic",
+  "pret ethereum in lei",
+  "pret ethereum 2020",
+  "pret ethereum live",
+  "ethereum pret dolari",
+  "ethereum pret usd"
+ ],
+ "wheat": [
+  "preț grâu 2026",
+  "preț grâu astăzi",
+  "preț grâu dolj",
+  "preț grâu port constanța",
+  "preț grâu 2025",
+  "preț grâu matif 2026",
+  "preț grâu bursă",
+  "preț grâu recoltă 2026",
+  "preț grâu olx"
+ ],
+ "sp500": [
+  "pret s&p 500",
+  "pret actiuni s&p 500"
+ ]
+}

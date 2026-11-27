@@ -1,0 +1,60 @@
+{
+ "country": "US",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "low",
+ "defaultKarat": 14,
+ "gold": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "1g": 23.3,
+   "5g": 11.4,
+   "10g": 7.2,
+   "31.1g": 2.8,
+   "100g": 1.2,
+   "1000g": 0.9
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": null,
+  "vatBullionPct": null,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "31.1g": 9.7,
+   "311g": 9.7,
+   "1000g": 7.6,
+   "3110g": 7.5
+  },
+  "barBuybackDiscountPct": null,
+  "usedGoldDiscountPct": null
+ },
+ "notes": "No VAT: state sales tax varies (0% to about 10% with local); many states exempt bullion, some above a threshold (California: bulk sales of $2,000 or more exempt) while jewelry and fabrication labor are generally taxable, so tax fields are null. Premiums are SD Bullion lowest listed prices (wire/check) for Perth Mint, JM and generic bars vs USD spot on 2026-11-27.",
+ "sources": [
+  {
+   "name": "SD Bullion gold bars",
+   "url": "https://sdbullion.com/gold/gold-bars/10-gram-gold-bars",
+   "what": "As-low-as asks for 1g, 5g, 10g, 1oz, 100g, 1kg gold bars (pages under /gold/gold-bars/) vs gold spot $3,667.86/oz on 2026-11-27; says buyback priced off spot, no figures"
+  },
+  {
+   "name": "SD Bullion silver bars",
+   "url": "https://sdbullion.com/silver/silver-bars/1-oz-silver-bars",
+   "what": "Silver bar asks 1oz, 10oz, 100oz, 1kg vs silver spot $44.85/oz on 2026-11-27"
+  },
+  {
+   "name": "California CDTFA Publication 64",
+   "url": "https://cdtfa.ca.gov/formspubs/pub64/taxability-of-sales-and-labor-charges.htm",
+   "what": "Jewelry and fabrication labor taxable; bullion/coin bulk sales of $2,000+ exempt from sales tax"
+  },
+  {
+   "name": "Kitco gold",
+   "url": "https://www.kitco.com/charts/gold",
+   "what": "Spot cross-check: 24K gold about $3,656.50/oz bid on 2026-11-27"
+  }
+ ]
+}

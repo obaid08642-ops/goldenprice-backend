@@ -1,0 +1,96 @@
+{
+ "gold": [
+  "prezzo oro al grammo oggi",
+  "prezzo oro al grammo",
+  "prezzo oro al kg",
+  "prezzo oro al grammo 18k",
+  "prezzo oro al kg in franchi",
+  "prezzo oro grafico",
+  "prezzo oro in svizzera",
+  "prezzo oro 24 carati svizzera",
+  "prezzo oro 18 carati"
+ ],
+ "silver": [
+  "prezzo argento al kg",
+  "prezzo argento al grammo",
+  "prezzo argento oggi",
+  "prezzo argento svizzera",
+  "prezzo argento al grammo oggi",
+  "prezzo argento usato al grammo oggi",
+  "prezzo argento grafico",
+  "prezzo argento 925 al grammo",
+  "prezzo argento al kg in franchi"
+ ],
+ "platinum": [
+  "prezzo platino al grammo",
+  "prezzo platino al grammo oggi",
+  "prezzo platino oggi",
+  "prezzo platino al kg",
+  "prezzo platino usato al grammo",
+  "prezzo platino vs oro",
+  "prezzo platino usato",
+  "prezzo platino al grammo vs oro",
+  "prezzo platino oncia"
+ ],
+ "copper": [
+  "prezzo rame al kg svizzera",
+  "prezzo rame al kg",
+  "prezzo rame usato al kg 2026",
+  "prezzo rame usato al kg svizzera",
+  "prezzo rame oggi",
+  "prezzo rame al kg pulito oggi",
+  "prezzo rame pulito al kg svizzera",
+  "prezzo rame usato al kg",
+  "prezzo rame usato"
+ ],
+ "brent-oil": [],
+ "natural-gas": [
+  "prezzo gas naturale oggi",
+  "prezzo gas naturale amsterdam",
+  "prezzo gas naturale oggi amsterdam",
+  "prezzo gas naturale ttf",
+  "prezzo gas naturale europa",
+  "prezzo gas naturale grafico",
+  "prezzo gas naturale nm3",
+  "prezzo gas naturale investing",
+  "prezzo gas naturale italia"
+ ],
+ "bitcoin": [
+  "prezzo bitcoin oggi",
+  "prezzo bitcoin euro",
+  "prezzo bitcoin usd",
+  "prezzo bitcoin in dollari",
+  "prezzo bitcoin 2010",
+  "prezzo bitcoin oggi dollari",
+  "prezzo bitcoin euro oggi",
+  "prezzo bitcoin 2016",
+  "prezzo bitcoin 2012"
+ ],
+ "ethereum": [
+  "prezzo ethereum oggi",
+  "prezzo ethereum euro",
+  "prezzo ethereum dollari",
+  "prezzo ethereum 2030",
+  "prezzo ethereum usd",
+  "prezzo ethereum previsioni",
+  "prezzo ethereum oggi euro"
+ ],
+ "wheat": [
+  "prezzo grano duro foggia",
+  "prezzo grano duro sicilia oggi",
+  "prezzo grano duro",
+  "prezzo grano tenero oggi",
+  "prezzo grano duro oggi",
+  "prezzo grano duro bologna",
+  "prezzo grano duro cun",
+  "prezzo grano duro foggia oggi",
+  "prezzo grano tenero oggi bologna"
+ ],
+ "sp500": [
+  "prezzo azioni s&p 500",
+  "prezzo etf vanguard s&p 500",
+  "rapporto prezzo utili s&p 500",
+  "s&p 500 prezzo oggi",
+  "etf s&p 500 prezzo"
+ ]
+}

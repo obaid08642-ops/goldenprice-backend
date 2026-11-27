@@ -1,0 +1,70 @@
+{
+ "country": "ZA",
+ "tier": 1,
+ "verifiedAt": "2026-11-27",
+ "confidence": "medium",
+ "defaultKarat": 9,
+ "gold": {
+  "vatJewelryPct": 15,
+  "vatBullionPct": 15,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "10g": 9.8,
+   "50g": 6.8,
+   "100g": 5.8
+  },
+  "barBuybackDiscountPct": {
+   "typical": 2
+  },
+  "usedGoldDiscountPct": null
+ },
+ "silver": {
+  "vatJewelryPct": 15,
+  "vatBullionPct": 15,
+  "importDutyPct": null,
+  "makingPct": null,
+  "barPremiumPct": {
+   "31.1g": 38.1,
+   "100g": 31.3,
+   "1000g": 13.5
+  },
+  "barBuybackDiscountPct": {
+   "typical": 5
+  },
+  "usedGoldDiscountPct": null
+ },
+ "notes": "Premiums: MetCon retail asks (shown incl. 15% VAT) with VAT removed vs ZAR spot from goldpricez, 2026-11-27. MetCon buys back bars at spot minus 2% (gold) / 5% (silver), VAT added back for SA residents. Gold zero-rating applies only to supplies to SARB, Mint and banks (2026 Lueven ruling); retail and recycled gold stay at 15%. Making charges and scrap discounts not sourced.",
+ "sources": [
+  {
+   "name": "MetCon Wealth gold bar pages",
+   "url": "https://wealth.metcon.co.za/product/10g-fine-gold-minted-bar-mc-squared/",
+   "what": "Retail asks incl. VAT for 10g (R25,764), 50g (R125,374), 100g (R248,404) gold bars and buyback quote R22,954 for 10g on 2026-11-27"
+  },
+  {
+   "name": "MetCon buy-back policy",
+   "url": "https://wealth.metcon.co.za/buy-back-undertaking-policy/",
+   "what": "Buy-back at spot minus 2.00% gold and 5.00% silver; VAT added to buy-back for undamaged VAT-paid products"
+  },
+  {
+   "name": "MetCon silver bars shop",
+   "url": "https://wealth.metcon.co.za/shop/",
+   "what": "Silver bar asks incl. VAT: 1oz R1,221, 100g R3,730, 1kg R32,256"
+  },
+  {
+   "name": "SARS media release zero-rating of gold",
+   "url": "https://www.sars.gov.za/media-release/sars-commissioner-welcomes-constitutional-court-judgement-on-zero-rating-of-gold/",
+   "what": "Zero-rating limited to gold supplied to SARB/Mint/banks in prescribed forms; recycled gold standard rated (23 June 2026)"
+  },
+  {
+   "name": "SARS VAT overview",
+   "url": "https://www.sars.gov.za/types-of-tax/value-added-tax/",
+   "what": "Standard VAT rate 15% (maintained from 1 May 2025)"
+  },
+  {
+   "name": "goldpricez South Africa gold and silver per gram",
+   "url": "https://goldpricez.com/za/gram",
+   "what": "ZAR spot gold R2,041.16/g (27-NOV-2026 07:29) and silver R24.71/g (07:36) used for premium maths"
+  }
+ ]
+}

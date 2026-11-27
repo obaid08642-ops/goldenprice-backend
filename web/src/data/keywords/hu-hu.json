@@ -1,0 +1,110 @@
+{
+ "gold": [
+  "arany árfolyam",
+  "arany ára",
+  "arany árfolyam grafikon",
+  "arany árfolyam grafikon 1 év",
+  "arany ára 2026",
+  "arany ára gramm",
+  "arany árfolyam előrejelzés 2027",
+  "arany árfolyam ma",
+  "arany árfolyam grafikon 20 év",
+  "arany árfolyam diagram"
+ ],
+ "silver": [
+  "ezüst árfolyam",
+  "ezüst ára",
+  "ezüst árfolyam grafikon",
+  "ezüst árfolyam előrejelzés",
+  "ezüst ára 2026",
+  "ezüst árfolyam gramm",
+  "ezüst ára gramm",
+  "ezüst árfolyam grafikon 5 év",
+  "ezüst árfolyam előrejelzés 2026",
+  "ezüst árfolyam forint"
+ ],
+ "platinum": [
+  "platina ára",
+  "platina árfolyam",
+  "platina árfolyam grafikon",
+  "platina ára gramm",
+  "platina ára ft/g",
+  "platina árfolyam 10 év",
+  "platina árfolyam előrejelzés",
+  "platina árfolyam alakulása",
+  "orvosi platina ára",
+  "platina felvásárlási ára"
+ ],
+ "copper": [
+  "réz ára",
+  "réz árfolyam",
+  "réz ára méh telep",
+  "réz árfolyam grafikon",
+  "réz ára kg",
+  "réz árfolyam 2026",
+  "réz ára méh",
+  "réz árfolyam portfolio",
+  "réz árfolyam tőzsde",
+  "réz ára miskolc"
+ ],
+ "brent-oil": [
+  "brent nyersolaj ára"
+ ],
+ "natural-gas": [
+  "földgáz ára",
+  "földgáz ára magyarországon",
+  "földgáz ára 2026",
+  "földgáz ára európában",
+  "földgáz ára tőzsde",
+  "földgáz árfolyam",
+  "földgáz ára cégeknek",
+  "földgáz ára németországban",
+  "földgáz áremelés"
+ ],
+ "bitcoin": [
+  "bitcoin árfolyam",
+  "bitcoin árfolyam usd",
+  "bitcoin árfolyam 20 év",
+  "bitcoin ára",
+  "bitcoin árfolyam a kezdetektől",
+  "bitcoin árfolyam forint",
+  "bitcoin árfolyam 10 év",
+  "bitcoin árfolyam huf",
+  "bitcoin árfolyam euro",
+  "bitcoin árfolyam grafikon"
+ ],
+ "ethereum": [
+  "ethereum árfolyam",
+  "ethereum árfolyam usd",
+  "ethereum árfolyam előrejelzés",
+  "ethereum árfolyam grafikon",
+  "ethereum árfolyama",
+  "ethereum árfolyam euro",
+  "ethereum árfolyam forint",
+  "ethereum árfolyam huf",
+  "ethereum árfolyam alakulása"
+ ],
+ "wheat": [
+  "búza ára 2026",
+  "búza ára",
+  "búza ára fórum",
+  "búza árfolyam",
+  "búza ára 2026 augusztus",
+  "búza ára 2025",
+  "búza ára agroinform",
+  "búza ára tőzsde",
+  "búza ára matif",
+  "búza árpa megkülönböztetése"
+ ],
+ "sp500": [
+  "s&p 500 árfolyam",
+  "s&p 500 árfolyam grafikon",
+  "s&p 500 árfolyam portfolio",
+  "s&p 500 etf árfolyam",
+  "s&p 500 index árfolyam",
+  "vanguard s&p 500 árfolyam",
+  "s&p 500 részvény árfolyam",
+  "ishares core s&p 500 etf árfolyam",
+  "ishares core s&p 500 ucits etf árfolyam"
+ ]
+}
