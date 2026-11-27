@@ -1,0 +1,45 @@
+{
+  "country": "BG",
+  "tier": 1,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 9.8
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 20% (PwC). Investment gold VAT-exempt under Art. 346, Directive 2006/112/EC. Tavex BG, 27 Nov 2026: 1 g house bar sell 123 EUR, buy 111 EUR = 9.8% buyback discount. Prices dual-displayed EUR/BGN before euro adoption (1 Jan 2026). No primary-page spot read, so premiums empty; duty, making, used-gold null.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Bulgaria, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/bulgaria/corporate/other-taxes",
+      "what": "The standard VAT rate is 20%; customs duties are calculated in accordance with the EU customs tariff (no gold-specific duty rate stated)."
+    },
+    {
+      "name": "Council Directive 2006/112/EC, Chapter 5 - Special scheme for investment gold, Art. 346",
+      "url": "https://www.legislation.gov.uk/eudr/2006/112/title/XII/chapter/5/2010-01-15?view=extent",
+      "what": "Member States shall exempt from VAT the supply, intra-Community acquisition and importation of investment gold (bars/wafers of purity >= 995 thousandths) - gold vatBullionPct 0."
+    },
+    {
+      "name": "Tavex Bulgaria - 1 g Tavex Gold Bar",
+      "url": "https://tavex.bg/en/gold/1-gram-tavex-gold-bar/",
+      "what": "Dealer's own prices read 27 Nov 2026: We sell 123.00 EUR / We buy 111.00 EUR, stated spread 9.76% - bar buyback discount typical 9.8%. Prices dual-displayed in EUR and BGN."
+    }
+  ]
+}

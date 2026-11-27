@@ -1,0 +1,40 @@
+{
+  "country": "UZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 16.1
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 12% (PwC); the jewellery VAT exemption is abolished from 1 Jan 2026, from when gold/silver jewellery carry 12%. The Central Bank sells 999.9 gold bars (5-100 g) via banks, publishing daily sell/buyback prices: on 27 Nov 2026 buyback was 16.1% below selling at all sizes (10 g: sell 16,277,000 UZS, buyback 13,656,000 UZS). No bar premium: no primary spot price read.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Uzbekistan, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/Republic-of-Uzbekistan/Corporate/Other-taxes",
+      "what": "VAT rate for taxable turnover is 12%; starting 1 January 2026 the VAT exemptions on the sale of jewellery and semi-finished products made of precious metals are abolished and jewellery businesses are recognised as VAT payers. Customs duty rates vary from 5% to 70% depending on the goods, with no gold-specific rate stated."
+    },
+    {
+      "name": "Central Bank of the Republic of Uzbekistan - Gold Bar Selling and Buyback Prices",
+      "url": "https://cbu.uz/en/banknotes-coins/gold-bars/prices/",
+      "what": "Daily sell/buyback prices read for 27 Nov 2026 (page updated 09:54), buyback for intact packaging: 5 g sell 8,138,000 / buyback 6,828,000 UZS; 10 g 16,277,000 / 13,656,000; 20 g 32,553,000 / 27,312,000; 50 g 81,383,000 / 68,279,000; 100 g 162,767,000 / 136,558,000. Buyback is 16.1% below the selling price at every size."
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "country": "AZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 18% (PwC); no investment-gold exemption - only supplies of gold to the Central Bank are zero-rated, so retail bullion and jewellery carry 18%. CBAR's 999.9 bullion coins (1/10-1 oz) are sold by agent banks (Bank of Baku, TuranBank) under Central Bank caps: sell at most gold price +10%, repurchase at gold price minus up to 3%; caps are not a dealer list, so premium fields are null.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Azerbaijan, Corporate - Other taxes",
+      "url": "https://taxsummaries.pwc.com/azerbaijan/corporate/other-taxes",
+      "what": "The standard rate of VAT is 18%; zero rating covers the supply of gold and other valuables to the Central Bank of Azerbaijan, and no retail investment-gold exemption is listed. Customs duty rates vary between 0% and 15% depending on the type of goods, with no gold-specific rate stated. Imported gold and jewellery are excise goods, with rates set by the executive authority (not stated)."
+    },
+    {
+      "name": "Central Bank of the Republic of Azerbaijan - Bullion coin sales agents",
+      "url": "https://cbar.az/page-838/bullion-coin-sales-agents?language=en",
+      "what": "CBAR has issued 999.9 gold bullion coins (1 ounce, 1/2 ounce, 1/4 ounce, 1/10 ounce) since 10 May 2023, sold and repurchased through agent banks Bank of Baku OJSC and TuranBank OJSC. Agents must set the selling price at the limit of 'gold price + 10%' and the repurchase price at 'gold price - up to 3%'."
+    }
+  ]
+}
