@@ -6,8 +6,8 @@
   "defaultKarat": 23,
   "gold": {
     "vatJewelryPct": 7,
-    "vatBullionPct": 0,
-    "importDutyPct": 0,
+    "vatBullionPct": null,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
@@ -22,12 +22,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Standard 96.5% (about 23K). Per LBMA: no import/export duty on bullion; bars VAT-exempt; 7% VAT on the full value of imported jewellery, and on making+spread only for domestic plain jewellery. Making, bar buyback and used-gold % removed in review round 1 (blog/aggregator support only).",
+  "notes": "96.5% standard (about 23K). VAT 7% is the general rate per the Revenue Department (no jewellery-specific page openable on rd.go.th). Bullion VAT exemption (RD 311/367) and 0% duty not verifiable on an openable RD/Customs page, so nulled round 2. Making, buyback, used % removed round 1 (blog/aggregator only).",
   "sources": [
     {
-      "name": "LBMA - Spotlight on Thailand, Chapter 2: Introduction and Regulations",
-      "url": "https://www.lbma.org.uk/publications/spotlight-on-thailand/chapter-2-introduction-and-regulations",
-      "what": "Read 2026-11-27: most gold 965 purity; no import/export duty on bullion; 7% VAT on full value of imported jewellery, and on making+spread only for domestic plain jewellery"
+      "name": "Thai Revenue Department - VAT rates (general rate 7%)",
+      "url": "https://www.rd.go.th/english/6043.html",
+      "what": "Read 2026-11-28: general VAT rate is 7 percent"
     }
   ]
 }

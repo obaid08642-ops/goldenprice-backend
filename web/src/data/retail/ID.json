@@ -22,17 +22,17 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "PMK 48/2023: jewellery VAT 1.65% to end consumer (1.1% other cases); certified 99.99% bars VAT-exempt (PP 49/2022). Import duty and the Antam buyback % were removed in review round 1 (news-only support); see the ID upgrade PR for figures re-based on Antam's own price list. Making not sourced, null.",
+  "notes": "PMK 48/PMK.03/2023 (28 Apr 2023, eff. 1 May 2023) on the DJP portal: Pasal 14(3)(b) jewellery VAT to end consumer 15% x 11% = 1.65% (1.1% trade-to-trade). Bullion VAT not collected if bar form, min. 99.99%, certified (DJP article; PMK 48 Pasal 20 defers non-reserve bullion to PP 49/2022). Import duty and Antam buyback removed round 1 (news-only); see ID upgrade PR. Making null.",
   "sources": [
     {
-      "name": "TaxPrime - Tax Update PMK 48/PMK.03/2023 on gold jewellery and bullion",
-      "url": "https://www.taxprime.net/wp-content/uploads/2023/03/TaxPrime-Tax-Update-Vol-2-May-2023-1.pdf",
-      "what": "Read 2026-11-27: jewellery VAT 1.1%/1.65%/0% matrix; bullion VAT-exempt if bar form, 99.99%, certified; PPh 22 0.25% on Antam purchases"
+      "name": "Directorate General of Taxes (DJP) - Full text of PMK 48/PMK.03/2023 on gold jewellery and bullion",
+      "url": "https://stats.pajak.go.id/index.php/id/peraturan/pajak-penghasilan-danatau-pajak-pertambahan-nilai-atas-penjualanpenyerahan-emas-perhiasan",
+      "what": "Read 2026-11-28: Pasal 14(3)(b) jewellery VAT to end consumer 15% x 11% = 1.65% of selling price; Pasal 14(3)(a)/(4)(a) 10% x 11% = 1.1% trade-to-trade; Pasal 14(4)(c) 0% to manufacturers"
     },
     {
-      "name": "MUC Consulting - Government Slashes Gold Tax, 2023-05-09",
-      "url": "https://muc.co.id/en/article/releasing-new-rules-government-slashes-gold-tax?from=fb&",
-      "what": "Read 2026-11-27: corroborates PMK 48/2023 jewellery VAT rates and bullion VAT-not-collected treatment"
+      "name": "Directorate General of Taxes (DJP) - PPN Emas Batangan article",
+      "url": "https://www.pajak.go.id/en/node/97306",
+      "what": "Read 2026-11-28: bullion VAT not collected if bar form, min. fineness 99.99%, proven by certificate; also confirms jewellery VAT 1.65% of selling price where seller lacks a complete tax invoice"
     }
   ]
 }

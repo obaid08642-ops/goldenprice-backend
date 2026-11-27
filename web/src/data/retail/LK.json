@@ -1,18 +1,14 @@
 {
   "country": "LK",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 22,
   "gold": {
     "vatJewelryPct": 18,
     "vatBullionPct": 18,
     "importDutyPct": null,
-    "makingPct": {
-      "typical": 10,
-      "min": 5,
-      "max": 15
-    },
+    "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
@@ -26,22 +22,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 18% from 1 Jan 2024 on locally made jewellery and imported gold coins/bars (Customs Tariff 2026 Ch.71 shows 18% VAT + 2.5% SSCL for HS 7108/7113/7106). A single gold import-duty % could not be reliably read from the tariff PDF columns, so importDutyPct is null. Making 5-15% by craftsmanship (typical shown as range midpoint). No dealer bar-by-size sell list or stated buyback/used % found.",
+  "notes": "VAT 18% from 1 Jan 2024 (Customs Tariff 2026 Ch.71: 18% VAT + 2.5% SSCL, HS 7108/7113/7106). Import-duty % not reliably readable from the tariff PDF columns, null. Making % removed round 2 (no primary source). No dealer bar sell list or buyback/used % found. Tier 2/low: one primary source.",
   "sources": [
     {
       "name": "Sri Lanka Customs - National Imports Tariff Guide 2026, Chapter 71",
       "url": "https://www.customs.gov.lk/wp-content/uploads/2026/06/Tariff 2022 Section XIV Final._Chap_71.pdf",
       "what": "Read 2026-11-27: 18% VAT and 2.5% SSCL columns for gold HS 7108, gold jewellery 7113.19, gold coin 7118.90.10, silver 7106 and silver jewellery 7113.11"
-    },
-    {
-      "name": "V Jewellers - Today Gold Rate in Sri Lanka, 27 Nov 2026",
-      "url": "https://www.vjewellers.lk/gold-rate",
-      "what": "Read 2026-11-27: 22K (916) is standard for wedding jewellery, 24K for investment coins/bars; 22K LKR 34,952/g, 24K LKR 38,129/g; making charge added on top of metal rate"
-    },
-    {
-      "name": "Cash For Gold - Gold Biscuit Price in Sri Lanka",
-      "url": "https://cashforgold.lk/gold-biscuit-price-sri-lanka",
-      "what": "Read 2026-11-27: bar buying list 1-100g at flat LKR 44,830/g for 24K, no size variation on buy side; not a retail sell list, so no bar premium coded"
     }
   ]
 }
