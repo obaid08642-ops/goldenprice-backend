@@ -283,7 +283,7 @@
   "kospi": "KOSPI",
   "euro-stoxx-50": "Euro Stoxx 50",
   "soybean-oil": "Soya yağı",
-  "soybean-meal": "Soya ununun küncüsü",
+  "soybean-meal": "Soya küncüsü",
   "oats": "Yulaf",
   "orange-juice": "Portağal şirəsi",
   "live-cattle": "Diri mal-qara",
@@ -776,7 +776,7 @@
    ]
   },
   "cardano": {
-   "about": "Cardano pay-of-stake blokçeyndir, ADA isə onun sikkəsidir.",
+   "about": "Cardano proof-of-stake blokçeyndir, ADA isə onun sikkəsidir.",
    "drivers": [
     "İnkişaf proqresi",
     "Stekinq",
