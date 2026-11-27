@@ -172,5 +172,5 @@ export function mountClients({ app, okAdmin, limited, clientIp, EMAIL_RE, clean,
   app.get("/v1/rates", requireKey, (req, res) => { const r = getRates(); r.updated ? res.json(r) : res.status(503).json({ error: "rates not ready" }); });
   app.get("/v1/symbols", requireKey, (req, res) => res.json({ symbols: CATALOG.map((c) => ({ symbol: c.sym, name: c.name, kind: c.kind, inScope: inScope(req.apiClient.scopes, c) })) }));
   app.get("/v1/usage", requireKey, (req, res) => res.json({ plan: req.apiClient.plan, scopes: req.apiClient.scopes, usedToday: req.apiClient.used, dailyLimit: req.apiClient.p.daily, perMinute: req.apiClient.p.perMin, expiresAt: req.apiClient.expires_at }));
-  app.get("/v1/plans", (req, res) => res.json({ plans: PLANS, categories: KINDS }));
+  app.get("/v1/plans", (req, res) => res.json({ plans: PLANS, categories: KINDS, providers: { card: !!(env.LS_API_KEY && env.LS_STORE_ID), crypto: !!(env.NOWPAYMENTS_API_KEY && env.NOWPAYMENTS_IPN_SECRET) } }));
 }
