@@ -6,7 +6,7 @@ Hybrid backend for Gold, Silver, Crypto, Oil/Gas and 17 Metals with:
 - CoinGecko for crypto
 - PancakeSwap for SilverX (set `SILVERX_CONTRACT`)
 - In-memory cache + Admin panel (manual overrides)
-- Light UI (public/admin.html)
+- Admin UI: public/admin.html (served at /admin.html; nothing else in the repo is served statically)
 
 ## Deploy (Render)
 1) Create a new **Web Service** → connect this repo.
@@ -39,3 +39,8 @@ Hybrid backend for Gold, Silver, Crypto, Oil/Gas and 17 Metals with:
 ## Notes
 - MetalPriceAPI supports precious metals best (XAU/XAG/XPT/XPD).  
   Industrial/rare metals are placeholders on free tiers and may return empty until a suitable API plan is added.
+
+## Environment
+- `DATABASE_URL` (Neon Postgres), `ADMIN_TOKEN` (required; admin is disabled without it, send as `x-admin-token`).
+- Optional email alerts for missing/stale prices: `RESEND_API_KEY`, `ALERT_EMAIL`.
+- `/api/admin/status` lists every tracked price with its age; manual entries are flagged stale after 48h.
