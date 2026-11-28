@@ -33,11 +33,21 @@ for (const d of dealers) {
   }
   const keys = Object.keys(best).filter((k) => best[k] > -2 && best[k] < 60);
   if (keys.length < 3) { console.log(d.cc, "skipped: only", keys.length, "valid sizes"); continue; }
+  // history: one row per size per day (ask/bid per gram in local currency + the spot used), kept in git so the premium can be measured over time
+  fs.mkdirSync("src/data/retail-history", { recursive: true });
+  const hf = `src/data/retail-history/${d.cc}.csv`;
+  if (!fs.existsSync(hf)) fs.writeFileSync(hf, "date,spot_usd_oz,fx,grams,ask_per_g,bid_per_g,time_utc\n");
+  const seen = new Set(fs.readFileSync(hf, "utf8").split("\n").map((l) => l.split(",").slice(0, 4).join(",")));
+  const hrows = {};
+  for (const r of rows) { const g = Math.round(r.grams * 10) / 10; const [lo, hi] = [Math.min(...r.prices), Math.max(...r.prices)]; const per = (x) => (d.perGram ? x : x / r.grams); const k = `${today},${usdOz.toFixed(2)},${rate},${g}`; if (g >= 1 && g <= 1000 && !seen.has(k) && !(g in hrows)) hrows[g] = `${k},${per(hi).toFixed(4)},${per(lo).toFixed(4)},${new Date().toISOString().slice(11, 16)}\n`; }
+  fs.appendFileSync(hf, Object.values(hrows).join(""));
+  // the published premium is today's own observation (ask vs the spot at the same moment); no averaging across days. The history is raw material for a later regression of local price on world price.
+  const basis = "today";
   const f = `src/data/retail/${d.cc}.json`;
   const j = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : { country: d.cc, tier: 2, confidence: "medium", gold: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, silver: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barPremiumPct: {}, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, sources: [], notes: "Bar prices read automatically from the dealer's public price list." };
   j.gold.barPremiumPct = Object.fromEntries(keys.sort((a, b) => parseFloat(a) - parseFloat(b)).map((k) => [k, +best[k].toFixed(1)]));
   const bb = keys.map((k) => buy[k]).filter((v) => v >= 0 && v < 40).sort((a, b) => a - b); if (bb.length) j.gold.barBuybackDiscountPct = { typical: +bb[Math.floor(bb.length / 2)].toFixed(1) };
-  j.verifiedAt = today; j.sources = j.sources.filter((s) => s.url !== d.url); j.sources.unshift({ name: d.name, url: d.url, what: `Gold bar ask${d.perGram ? " per gram" : ""} by size vs live spot, read automatically ${today}`, quote: `${d.name} price table rows (grams, prices): ${rows.slice(0, 3).map((r) => `${r.grams} g ${r.prices.join(" / ")}`).join("; ")}` });
+  j.verifiedAt = today; j.sources = j.sources.filter((s) => s.url !== d.url); j.sources.unshift({ name: d.name, url: d.url, what: `Gold bar ask${d.perGram ? " per gram" : ""} by size vs live spot, read automatically ${today} (premium basis: ${basis})`, quote: `${d.name} price table rows (grams, prices): ${rows.slice(0, 3).map((r) => `${r.grams} g ${r.prices.join(" / ")}`).join("; ")}` });
   fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n"); console.log(d.cc, "updated", keys.join(","));
 }
 await b.close();
