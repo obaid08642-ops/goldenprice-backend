@@ -1,0 +1,40 @@
+{
+  "country": "UY",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA basic rate 22% (Texto Ordenado 2023, Titulo 10, art. 34); the art. 36 reduced-rate list (read in full) has no jewellery item. Bullion EXEMPT: art. 38(1)(A) exempts sales of precious metals coined or in ingots (Decreto 220/998: gold/silver/platinum/palladium in ingots, bars etc., fineness >= 900/1000); imports of exempt goods also exempt. Duty null (tariff is a spreadsheet).",
+  "sources": [
+    {
+      "name": "IMPO (official gazette database) - Texto Ordenado 2023, Titulo 10 IVA, arts. 34 and 38",
+      "url": "https://www.impo.com.uy/bases/todgi-2023/10-2024",
+      "what": "Read 2026-11-28: the basic IVA rate is 22% and art. 38(1)(A) exempts sales of precious metals coined or in ingots",
+      "quote": "Exonéranse: 1) Las enajenaciones de: A) Moneda extranjera, metales preciosos, amonedados o en lingotes, títulos y cédulas, públicos y privados y valores mobiliarios de análoga naturaleza."
+    },
+    {
+      "name": "IMPO - Decreto 220/998 (Reglamento del IVA), art. 36",
+      "url": "https://www.impo.com.uy/bases/decretos/220-1998",
+      "what": "Read 2026-11-28: precious metals means gold, silver, platinum and palladium in ingots, plates, bars, granules, commemorative medals and demonetised coins of fineness >= 900/1000",
+      "quote": "Se entenderá por metales preciosos: el oro, la plata, el platino y el paladio, en la forma de lingotes, planchas, láminas, barras, granallas, medallas conmemorativas, monedas nacionales o extranjeras desmonetizadas, con título no inferior a 900/1000 (novecientos milésimos)."
+    }
+  ]
+}

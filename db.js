@@ -28,6 +28,7 @@ export async function initDb() {
     status TEXT NOT NULL DEFAULT 'pending', plan TEXT NOT NULL DEFAULT 'free', scopes TEXT[] NOT NULL DEFAULT '{}', api_key TEXT UNIQUE, status_token TEXT NOT NULL,
     created_at TIMESTAMPTZ NOT NULL DEFAULT now(), approved_at TIMESTAMPTZ, expires_at TIMESTAMPTZ, provider TEXT, provider_ref TEXT, note TEXT)`;
   await sql`CREATE INDEX IF NOT EXISTS api_clients_status ON api_clients (status)`;
+  await sql`CREATE TABLE IF NOT EXISTS fx_daily (cur TEXT NOT NULL, day DATE NOT NULL, rate FLOAT8 NOT NULL, src TEXT, PRIMARY KEY (cur, day))`;
   return true;
 }
 
@@ -107,3 +108,27 @@ export async function addAlert(a) { if (!sql) return false; await sql`INSERT INT
 export async function activeAlerts() { if (!sql) return []; return sql`SELECT id, email, sym, dir, target, label, lang, token FROM alerts WHERE fired_at IS NULL`; }
 export async function markAlertFired(id) { if (!sql) return; await sql`UPDATE alerts SET fired_at = now() WHERE id = ${id}`; }
 export async function cancelAlert(token) { if (!sql) return 0; return (await sql`DELETE FROM alerts WHERE token = ${token} AND fired_at IS NULL RETURNING 1`).length; }
+
+// ---- historical exchange rates (units of currency per 1 USD), so local-currency charts use each day's own rate ----
+export async function fxCounts() {
+  if (!sql) return {};
+  return Object.fromEntries((await sql`SELECT cur, count(*)::int AS n FROM fx_daily GROUP BY cur`).map((r) => [r.cur, r.n]));
+}
+export async function bulkFx(cur, rows, src = "backfill:yahoo") {
+  if (!sql || !rows.length) return 0;
+  const days = rows.map((r) => r.day), rates = rows.map((r) => r.rate);
+  const res = await sql`INSERT INTO fx_daily (cur, day, rate, src) SELECT ${cur}, d::date, r, ${src} FROM unnest(${days}::text[], ${rates}::float8[]) AS t(d, r)
+    ON CONFLICT (cur, day) DO NOTHING RETURNING 1`;
+  return res.length;
+}
+export async function upsertFxToday(rates) {
+  if (!sql) return 0;
+  const curs = Object.keys(rates).filter((c) => Number.isFinite(rates[c]) && rates[c] > 0), vals = curs.map((c) => rates[c]);
+  await sql`INSERT INTO fx_daily (cur, day, rate, src) SELECT c, (now() AT TIME ZONE 'UTC')::date, r, 'live' FROM unnest(${curs}::text[], ${vals}::float8[]) AS t(c, r)
+    ON CONFLICT (cur, day) DO UPDATE SET rate = EXCLUDED.rate, src = 'live'`;
+  return curs.length;
+}
+export async function fxSeries(cur, days = 3650) {
+  if (!sql) return [];
+  return sql`SELECT to_char(day,'YYYY-MM-DD') AS day, rate FROM fx_daily WHERE cur = ${cur} AND day >= (now() AT TIME ZONE 'UTC')::date - ${days}::int ORDER BY day`;
+}

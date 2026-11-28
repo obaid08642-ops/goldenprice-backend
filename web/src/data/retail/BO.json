@@ -1,0 +1,40 @@
+{
+  "country": "BO",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA 13% on the net sale price (Ley 843 art. 15, per the SIN general tax chart). The chart's complete IVA exemption list was read: gold, bullion and jewellery appear nowhere. Ley 1503 art. 8 zero-rates only domestic gold sales destined exclusively to Banco Central de Bolivia reserve purchases - retail bullion stays 13%. Import duty null (2026 tariff line not openable).",
+  "sources": [
+    {
+      "name": "Servicio de Impuestos Nacionales (impuestos.gob.bo) - Cuadro General de Impuestos (IVA)",
+      "url": "https://www.impuestos.gob.bo/wp-content/uploads/2025/10/8580c1ef52.pdf",
+      "what": "Read 2026-11-28: IVA is charged at 13% on the net sale price for habitual sales of movable goods and definitive imports; the chart's exemption list contains no gold item",
+      "quote": "13% Sobre el precio neto de venta"
+    },
+    {
+      "name": "Servicio de Impuestos Nacionales (impuestos.gob.bo) - Ley N° 1503, art. 8",
+      "url": "https://www.impuestos.gob.bo/wp-content/uploads/2025/09/LEY-1503.pdf",
+      "what": "Read 2026-11-28: zero IVA applies only to domestic gold sales destined exclusively to increase international reserves",
+      "quote": "Las ventas de oro en el mercado interno destinadas exclusivamente a incrementar las Reservas Internacionales en el marco de la presente Ley, están exentas del Impuesto a las Transacciones - IT y sujetas a la tasa cero del Impuesto al Valor Agregado - IVA."
+    }
+  ]
+}
