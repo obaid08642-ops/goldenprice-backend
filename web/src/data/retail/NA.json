@@ -1,0 +1,40 @@
+{
+  "country": "NA",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 15% (NamRA). Bullion NOT relieved: the full text of the Value-Added Tax Act 10 of 2000 was searched - the words gold/precious/metal occur nowhere, including Schedules III (zero-rated), IV (exempt supplies) and V (exempt imports) - so bullion and silver take 15% in both forms. Duty null (SACU CET rates sit behind the interactive eTariff portal; no openable 7108 line).",
+  "sources": [
+    {
+      "name": "Namibia Revenue Agency (namra.org.na) - Value Added Tax (VAT)",
+      "url": "https://www.namra.org.na/tax-types/page/value-added-tax-vat-30120/",
+      "what": "Read 2026-11-28: VAT is levied at the standard rate of 15% on the supply of most goods and services and on importation",
+      "quote": "VAT is levied at the standard rate of 15% on the supply of most goods and services and on the importation of goods."
+    },
+    {
+      "name": "Value-Added Tax Act 10 of 2000 (Namibia Trade Portal official full text)",
+      "url": "https://namibiatradeportal.gov.na/application/files/8217/2259/1634/Value-Added_Tax_Act_10_of_2000.pdf",
+      "what": "Read 2026-11-28: full-text search of the Act and its zero-rating/exemption schedules finds no gold or precious-metal item",
+      "quote": "Schedule III (Zero-rated Supplies), Schedule IV (Exempt Supplies) and Schedule V (Exempt Imports) contain no entry for gold or precious metals"
+    }
+  ]
+}

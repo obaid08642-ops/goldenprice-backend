@@ -1,0 +1,40 @@
+{
+  "country": "MV",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 8,
+    "vatBullionPct": 8,
+    "importDutyPct": 25,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 8,
+    "vatBullionPct": 8,
+    "importDutyPct": 25,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GST general-sector rate 8% (GST Act s.16; MIRA) - retail gold is general sector, not the 16-17% tourism sector. Bullion: the s.20 exempt list and Schedule 1 zero-rated list were read in full; the Act contains no gold mention, so bullion takes 8%. Import duty (MFN, National Tariff 2026): gold 7108.12 unwrought = 25% (powder/semi-manufactured 0%); silver 7106 unwrought = 25%.",
+  "sources": [
+    {
+      "name": "Maldives Inland Revenue Authority (mira.gov.mv) - GST FAQ and GST Act 10/2011",
+      "url": "https://www.mira.gov.mv/Pages/View/FAQ_GST",
+      "what": "Read 2026-11-28: the general-sector GST rate is 8% from 1 January 2023; the Act's exempt and zero-rated lists contain no gold",
+      "quote": "General sector – 8% (Starting from 1 January 2023 onwards)"
+    },
+    {
+      "name": "Maldives Customs Service (customs.gov.mv) - Maldives National Tariff 2026",
+      "url": "https://www.customs.gov.mv/d/National%20Tariff%20Book%202026_.pdf",
+      "what": "Read 2026-11-28: HS 7108.12 other unwrought forms carry an MFN duty of 25%",
+      "quote": "7108.12.0000 - - Other unwrought forms GRM 25% 5% 0%"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "MU",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 15% (VAT Act Fourth Schedule; MRA guide). Bullion EXEMPT (not zero-rated): the First Schedule (exempt goods) item 52(b) covers gold unwrought/semi-manufactured/powder of heading 71.08; finished jewellery (7113) is not listed. Silver bullion likewise EXEMPT (item 57, heading 71.06); silver jewellery 15%. Duty null (no openable official 7108 line).",
+  "sources": [
+    {
+      "name": "Value Added Tax Act (Attorney-General's Office, Revised Laws of Mauritius), First Schedule item 52 and Fourth Schedule",
+      "url": "https://attorneygeneral.govmu.org/Documents/Laws%20of%20Mauritius/A-Z%20Acts/V/ValueAddedTaxActI9.pdf",
+      "what": "Read 2026-11-28: the rate of VAT is 15 per cent, and the First Schedule of exempt goods covers gold, unwrought or in semi-manufactured forms, or in powder form, of heading 71.08",
+      "quote": "(b) Gold, unwrought or in semi-manufactured forms, or in powder form, or waste and scrap of heading No. 71.08."
+    },
+    {
+      "name": "Mauritius Revenue Authority (mra.mu) - Guide on Simplified VAT Registration, Sep 2025",
+      "url": "https://www.mra.mu/download/GuideVATReg.pdf",
+      "what": "Read 2026-11-28: the standard rate of VAT is 15%",
+      "quote": "The standard rate of VAT is 15%."
+    }
+  ]
+}

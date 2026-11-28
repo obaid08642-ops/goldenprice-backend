@@ -1,0 +1,40 @@
+{
+  "country": "BN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Brunei levies NO VAT, GST or general sales tax (MoFE Revenue Division administers only income tax, petroleum income tax and stamp duty) - VAT fields null for gold and silver. Customs import duty on HS 7108 is Nil (BDTTC). Note: a separate 15% EXCISE duty applies to Chapter 71 goods on import (BDTTC 2022) - an excise, not import duty or VAT, so not coded in the duty field.",
+  "sources": [
+    {
+      "name": "Ministry of Finance and Economy, Revenue Division (mof.gov.bn) - Relevant Acts",
+      "url": "https://www.mof.gov.bn/div_revenue_taxresources_relevantacts/",
+      "what": "Read 2026-11-28: the Acts administered are the Income Tax Act, Income Tax (Petroleum) Act and Stamp Act - no VAT/GST/sales-tax act exists",
+      "quote": "The administration of the Income Tax and Stamp Duty is governed by the following Acts:"
+    },
+    {
+      "name": "Royal Customs and Excise Department (bruneitrade.mofe.gov.bn) - Brunei Darussalam Tariff and Trade Classification 2022",
+      "url": "https://bruneitrade.mofe.gov.bn/wp-content/uploads/2026/02/BDTTC-2022.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines show 15% in the excise column while the import-duty rate is Nil (per the BDTTC 2017 schedule's import-duty column)",
+      "quote": "7108.12.10 - - - In lumps, ingots or cast bars kg 15%"
+    }
+  ]
+}
