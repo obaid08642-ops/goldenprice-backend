@@ -1,0 +1,44 @@
+{
+  "country": "HU",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "2g": 12.8,
+      "5g": 9.7,
+      "10g": 8.3,
+      "20g": 6.5,
+      "50g": 6.1,
+      "100g": 5.6,
+      "250g": 5.2,
+      "1000g": 4.8
+    },
+    "barBuybackDiscountPct": {
+      "typical": 5.3
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Premiums and spreads calculated from Conclude's official price list 27 Nov 2026 (sell vs its own buy price per gram); buyback typical 5.3%. VAT and duty % removed in review round 1 (blog/guide and tariff-database support only). Making % and used-gold % not found, null.",
+  "sources": [
+    {
+      "name": "Conclude - Official gold price list",
+      "url": "https://web.conclude.hu/components/com_aranyrendeles/pricelist.php",
+      "what": "Read 2026-11-28: list 27 Nov 2026 sell/buy by size 2g-1000g; premiums vs buy price and spreads calculated (100g spread 5.3%)"
+    }
+  ]
+}

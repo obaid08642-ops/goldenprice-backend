@@ -1,0 +1,40 @@
+{
+  "country": "NZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 9,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Inland Revenue: fine metal (gold >=99.5%, silver >=99.9%) is a GST-exempt supply; jewellery is taxable at 15% GST. Bar premium removed in round 4 (spot was the selling shop own site, not primary). Used 10% removed: a guaranteed floor (at least 90% of melt), not a typical discount. Duty not verified officially, null. 9ct most popular; 18ct fine standard.",
+  "sources": [
+    {
+      "name": "Inland Revenue - Exempt supplies (fine metal)",
+      "url": "https://www.ird.govt.nz/gst/charging-gst/exempt-supplies",
+      "what": "Read 2026-11-28: the sale of fine metal (gold >=99.5%, silver >=99.9% fine) by a dealer or importer is an exempt supply for GST",
+      "quote": "The sale of fine metal by a dealer, or anyone importing fine metal is an exempt supply."
+    },
+    {
+      "name": "Inland Revenue - Charging GST",
+      "url": "https://www.ird.govt.nz/gst/charging-gst",
+      "what": "Read 2026-11-28: GST-registered sellers charge GST at 15% on most taxable supplies (jewellery is not fine metal)",
+      "quote": "If you're registered for GST, you'll need to charge GST at 15% on most taxable supplies you make."
+    }
+  ]
+}
