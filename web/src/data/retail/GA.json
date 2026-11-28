@@ -1,0 +1,40 @@
+{
+  "country": "GA",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT normal rate 18% (DGI Gabon; CGI art. 221 per Loi 002/2026). Bullion coded 18: the art. 210 exemption items, as restated in the official Journal Officiel finance-law texts of 2022/2023/2026, contain no gold item and there is no investment-gold scheme; caveat - art. 210 is amended piecemeal, so items were read across those texts. Silver 18/18. Duty null.",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts (dgi.ga) - TVA",
+      "url": "https://dgi.ga/imposition-des-personnes-morales/taxes-sur-le-chiffre-daffaires/tva/",
+      "what": "Read 2026-11-28: the normal VAT rate is 18%, applicable to all taxable operations except reduced/zero-rate ones",
+      "quote": "taux normal : 18 % applicable à toutes les opérations taxables à l'exclusion des opérations soumises au taux réduit ou au taux zéro"
+    },
+    {
+      "name": "Journal Officiel (journal-officiel.ga) - Loi N° 002/2026, CGI art. 221 nouveau",
+      "url": "https://journal-officiel.ga/22595-002-2026/",
+      "what": "Read 2026-11-28: the normal rate is 18%, applicable to all taxable operations except those at 10%, 5%, 3% or 0%",
+      "quote": "Taux normal : 18% applicable à toutes opérations taxables à l'exclusion des opérations soumises au taux réduit de 10%, de 5%, de 3% ou de 0%."
+    }
+  ]
+}

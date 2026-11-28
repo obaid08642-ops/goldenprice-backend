@@ -1,0 +1,40 @@
+{
+  "country": "BW",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 14,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 14,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 14% (VAT Act 2026, s.7(2)). Bullion EXEMPT: Schedule 2 makes a supply of a precious metal exempt - defined as gold in any form at fineness >=99.5% and silver >=99.9% - so investment-grade bullion is 0 for both metals; jewellery alloys below those thresholds take 14%. Import duty 0%: BURS tariff book ch. 71 rates all HS 7108 lines free (pages carry 2009/2012 stamps).",
+  "sources": [
+    {
+      "name": "Botswana Unified Revenue Service (burs.org.bw) - Value Added Tax Act 2026, s.7 and Schedule 2",
+      "url": "https://www.burs.org.bw/index.php/tax/tax-laws-2026?download=958:value-added-tax-act-2026",
+      "what": "Read 2026-11-28: the VAT rate is 14 per cent, and a supply of a precious metal is an exempt supply",
+      "quote": "The following supplies are exempt supplies for the purposes of section 9 — (a) a supply of financial services; (b) a supply of a precious metal;"
+    },
+    {
+      "name": "Botswana Unified Revenue Service (burs.org.bw) - Customs and Excise Tariff, Chapter 71",
+      "url": "https://www.burs.org.bw/index.php/treaties-and-legislation/category/41-section-xiv-natural-or-cultured-pearls-precious-or-semi-precious-stones-precious-metals-metals-clad-with-precious-metal-a-articles-thereof-imitation-jewellery-coin?download=145:chapter-71-natural-or-cultured-pearls-precious-or-semi-precious-stones-precious-metals-metals-clad-with-precious-metal-and-articles-thereof-imitation-jewellery-coin",
+      "what": "Read 2026-11-28: HS 7108 lines (powder, other unwrought forms, semi-manufactured, monetary) are rated free in all columns",
+      "quote": "7108.12 — Other unwrought forms … free free free free"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "SZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 15% (ERS; VAT Act 2011). Retail bullion NOT exempt: ERS's exempt list has exactly one precious-metals item - supplies to the Central Bank for the Treasury - and the zero-rated list has no gold. Caveat: an unverified Legal Notice 130 of 2025 reportedly exempts investment-grade bars supplied to licensed institutions (not openable; institution-only anyway). Duty null.",
+  "sources": [
+    {
+      "name": "Eswatini Revenue Service (ers.org.sz) - Eswatini VAT",
+      "url": "https://www.ers.org.sz/VAT/Eswatini",
+      "what": "Read 2026-11-28: VAT is levied on most goods and services at the rate of 15% under the VAT Act 2011",
+      "quote": "it is levied on most goods and services at the rate of 15%. The legal basis is the VAT Act 2011 supplemented by VAT Regulations"
+    },
+    {
+      "name": "Eswatini Revenue Service (ers.org.sz) - Exempt Supplies of Goods & Services",
+      "url": "https://www.ers.org.sz/ExemptSupplies",
+      "what": "Read 2026-11-28: the only precious-metals exemption is for supplies to the Central Bank of Eswatini for the Treasury",
+      "quote": "Goods, being the supply of precious metals and other valuables to the Central Bank of Eswatini for the Treasury of the Government of Eswatini in terms of the Central Bank of Eswatini Order, 1975"
+    }
+  ]
+}

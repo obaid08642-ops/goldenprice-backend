@@ -1,0 +1,40 @@
+{
+  "country": "GQ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT general rate 15% (Ley 4/2004 art. 294; kept by the 2024 Ley General Tributaria). Bullion null: the complete art. 283 exemption list (13 items) was read - no investment-gold item; item 2(a) exempts extractive-product sales under specific taxes, which may cover mine-gate gold but is not a retail-bullion exemption. Silver 15/15. Duty null.",
+  "sources": [
+    {
+      "name": "Ministerio de Hacienda (minhacienda-gob.com) - Ley Núm. 4/2004 Reguladora del Sistema Tributario, art. 294",
+      "url": "https://www.minhacienda-gob.com/uploads/2020/01/LEY-TRIBUTARIA-1.pdf",
+      "what": "Read 2026-11-28: the general rate of 15% applies to all taxable operations except zero/reduced-rate ones; art. 283 exemptions read in full contain no investment-gold item",
+      "quote": "Artículo 294.- El tipo general de 15% se aplica a todas las operaciones imponibles, con exclusión de las sujetas al tipo cero y al tipo reducido del 6%."
+    },
+    {
+      "name": "Oficina de Información y Prensa de Guinea Ecuatorial (guineaecuatorialpress.com) - presentation of the new Ley General Tributaria, 13 Jan 2025",
+      "url": "https://www.guineaecuatorialpress.com/index.php/noticias/presentacion_oficial_de_la_nueva_ley_general_tributaria_de_guinea_ecuatorial",
+      "what": "Read 2026-11-28: under the new tax law the VAT general rate stays at 15%",
+      "quote": "Impuestos sobre el Valor añadido, IVA, su tipo general se mantiene al 15% y su tipo reducido pasa del 6% al 5%."
+    }
+  ]
+}
