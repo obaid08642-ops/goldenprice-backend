@@ -1,0 +1,29 @@
+{
+  "cur": "NGN",
+  "items": {
+    "rice": {
+      "value": 1905.43,
+      "unit": "kg",
+      "date": "2026-05-31",
+      "src": "National Bureau of Statistics - Selected Food Prices Watch, May 2026 (national average, per kg; official data file)",
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162/download/1427/Selected_Food_Report_May%2026.zip",
+      "quote": "Rice Local, short-Grained - Average of May-26: 1905.43"
+    },
+    "beef": {
+      "value": 7171.41,
+      "unit": "kg",
+      "date": "2026-05-31",
+      "src": "National Bureau of Statistics - Selected Food Prices Watch, May 2026 (national average, per kg; official data file)",
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162/download/1427/Selected_Food_Report_May%2026.zip",
+      "quote": "Beef Boneless - Average of May-26: 7171.41"
+    },
+    "chicken": {
+      "value": 6012.6,
+      "unit": "kg",
+      "date": "2026-05-31",
+      "src": "National Bureau of Statistics - Selected Food Prices Watch, May 2026 (national average, per kg; official data file)",
+      "url": "https://microdata.nigerianstat.gov.ng/index.php/catalog/162/download/1427/Selected_Food_Report_May%2026.zip",
+      "quote": "Chicken meat (Frozen) - Average of May-26: 6012.60"
+    }
+  }
+}
