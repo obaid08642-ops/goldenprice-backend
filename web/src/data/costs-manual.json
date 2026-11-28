@@ -18,5 +18,59 @@
       "url": "https://www.pucsl.gov.lk/wp-content/uploads/2026/05/Annex-2-Approved-Tariff-Tabel_May-2026.pdf",
       "quote": "Domestic, Consumption 0-60 kWh/month: Block 1 : 0-30 kWh 5.00 80.00 5.00 80.00 (Energy Charge LKR/kWh). Approved Tariff, Effective from 11th May 2026"
     }
+  },
+  "MY": {
+    "fuel": {
+      "cur": "MYR",
+      "date": "2026-11-26",
+      "src": "Ministry of Finance weekly release 26 Nov-2 Dec 2026 (RON95 BUDI95 subsidised price paid at pump; unsubsidised retail 3.47; diesel BUDI subsidised, unsubsidised 4.47)",
+      "url": "https://www.mof.gov.my/portal/ms/berita/siaran-media/harga-petrol-dan-diesel-tanpa-subsidi-turun-25-sen-seliter-kerajaan-madani-terus-komited-lindungi-rakyat",
+      "petrol95": 1.99,
+      "diesel": 2.1,
+      "lpg": null,
+      "quote": "Melalui BUDI95, penerima yang layak terus menikmati harga RON95 pada RM1.99 seliter berbanding harga tanpa subsidi RM3.47 seliter. Bagi BUDI Diesel pula, penerima yang layak terus membayar RM2.10 seliter berbanding harga tanpa subsidi RM4.47 seliter."
+    }
+  },
+  "TH": {
+    "electricity": {
+      "cur": "THB",
+      "kwh": 2.3488,
+      "period": "2026-09",
+      "src": "MEA residential type 1.1 first block (1-15 units), excl. Ft and VAT, from Sep 2026 billing",
+      "url": "https://www.mea.or.th/our-services/service-rates/other/D5xEaEwgU",
+      "quote": "15 หน่วย (กิโลวัตต์ชั่วโมง) แรก (หน่วยที่ 1 – 15) | หน่วยละ | 2.3488 บาท"
+    }
+  },
+  "HK": {
+    "fuel": {
+      "cur": "HKD",
+      "date": "2026-11-25",
+      "src": "EMSD auto-LPG ceiling prices at dedicated stations for Dec 2026 (lowest station Kwai Chung; range 4.39-5.33 by station; petrol/diesel have no official set price)",
+      "url": "https://www.info.gov.hk/gia/general/202611/25/P2026112500278.htm",
+      "petrol95": null,
+      "diesel": null,
+      "lpg": 4.39,
+      "quote": "The adjusted auto-LPG ceiling prices for dedicated LPG filling stations would range from $4.39 to $5.33 per litre"
+    }
+  },
+  "TW": {
+    "fuel": {
+      "cur": "TWD",
+      "date": "2026-11-23",
+      "src": "CPC Corporation official price list (95 unleaded; Super diesel), from 23 Nov 2026",
+      "url": "https://www.cpc.com.tw/en/HistoryPrice.aspx?n=3058",
+      "petrol95": 32.7,
+      "diesel": 29.9,
+      "lpg": null,
+      "quote": "2026/11/23 | 31.2 | 32.7 | 34.7 | 29.9 (CPC historical prices: 92 unleaded | 95 unleaded | 98 unleaded | super diesel, TWD/litre)"
+    },
+    "electricity": {
+      "cur": "TWD",
+      "kwh": 1.78,
+      "period": "2026-11",
+      "src": "Taipower residential first tier (first 120 kWh/month, same summer and non-summer), schedules from 1 Oct 2025",
+      "url": "https://hc1.taipower.com.tw/media/vqplk13w/20251124_TAIWAN POWER COMPANY RATE SCHEDULES.pdf?mediaDL=true",
+      "quote": "Meter Rate Lighting Service, Residential, Per kWh: First 120 kWh per month 1.78 1.78 (summer / non-summer, NT$)"
+    }
   }
 }
