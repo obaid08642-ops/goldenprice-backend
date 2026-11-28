@@ -76,3 +76,26 @@ Not in scope (no free consistent official source): car prices and real estate pr
 
 ### T9: illustration set (images)
 Generate the soft 3D "clay" illustration set described in `docs/icons-prompts.md` with your image generator and add the files to `web/public/icons3d/` (`<id>.webp` or `<id>.png`, id as in the tables there, square 512-1024 px, transparent background, under 160 KB each; remove the background if the generator cannot output transparency). First PR: the 9 category icons (precious, industrial, energy, agri, crypto, index, stock, forex, construction). Later PRs: the specific items, 10 per PR. One consistent style for the whole set: same generator, same style line, same lighting. No text, letters, logos or brand marks inside the pictures. Check: `cd web && python3 scripts/check-icons.py` (needs Pillow). I review the look; I will send back any that do not match the set.
+
+
+## PHASE 2 execution plan (continuous: do NOT wait for reviews, do NOT stop when a list ends)
+You work in parallel with the reviewer. Branch every batch from the current `muse/staging`, open independent PRs (never stack on another open PR), and move on to the next batch immediately after opening one. Come back to fix review comments whenever you see them, but never idle. Post one status line in issue #17 after every 2 PRs.
+
+Data layout (one file per country, so parallel PRs never conflict):
+- T6 extra fuel/electricity: `web/src/data/costs-extra/<CC>.json` (shape = one country object of costs-manual.json: `{"fuel": {...}, "electricity": {...}}`, each block with `quote`).
+- T7 staples: `web/src/data/staples/<CC>.json` (`{"cur": "...", "items": { "sugar": {...,"quote": "..."} } }`).
+- T8 construction: `web/src/data/construction/<CC>.json` (same shape).
+- T5 retail: `web/src/data/retail/<CC>.json` as before.
+
+Order of countries for T5 and T6 (by population and search interest; skip a country when no primary source exists and list it in the PR): CD TZ UG AF MZ AO CM CI MG NE BF ML MW ZM TD SO SN ZW RW BJ BI SS TG SL PY LA NI HN CR PA UY BO EC VE GT DO HT CU JM MN KH MM PS MD AL BA MK ME SI LT LV EE LU MT CY IS BY KG TJ TM BT MV BN MU NA BW LS SZ GA GQ CG MR GM GN LR CV KM DJ ER SC ST SY TT PG FJ BS AD AG BB BZ CF DM GD GW GY KI XK LI MH FM MC NR PW KN LC VC WS SM SB SR TL TO TV VU VA PR MO GL BM KY RE NC PF GP MQ GF AW CW GI JE IM GU VG FO.
+Order for T7 and T8: EG SA AE TR IN PK BD ID NG ZA KE ET MA DZ TN IQ JO LB LK NP VN TH PH MY CN JP KR BR MX AR CO CL PE US CA GB DE FR IT ES PL RO GR UA RU KZ AU NZ, then the T5 order.
+
+Work queue, in this order, repeating until every list is exhausted:
+1. T5 batches of 5 countries.
+2. T6 batches of 10 countries (T2's list first, then the T5 order).
+3. T7 staples batches of 5 countries.
+4. T8 construction batches of 5 countries.
+5. T4 translation quality passes: ar es fr de pt ru tr id hi zh ja ko it fa ur he sr bg hr sk da no fi az ka hy uz ne si fil, then the rest.
+6. T9 illustrations (see above) whenever your image tool is available.
+7. Audit pass: re-open the sources of files already merged into muse/staging, and open a PR with a correction for every figure that no longer matches its quote.
+Never end your turn with "waiting for review": if all queued PRs are reviewed, take the next batch.

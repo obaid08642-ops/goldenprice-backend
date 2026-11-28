@@ -9,7 +9,8 @@ const SPEC = {
 const fx = process.env.FX_JSON ? JSON.parse(fs.readFileSync(process.env.FX_JSON, "utf8")) : await (await fetch("https://open.er-api.com/v6/latest/USD")).json();
 const errs = []; let n = 0;
 for (const kind of ["staples", "construction"]) {
-  const data = JSON.parse(fs.readFileSync(`src/data/${kind}.json`, "utf8"));
+  const data = {};
+  for (const f of fs.readdirSync(`src/data/${kind}`)) if (/^[A-Z]{2}\.json$/.test(f)) data[f.slice(0, 2)] = JSON.parse(fs.readFileSync(`src/data/${kind}/${f}`, "utf8"));
   for (const [cc, e] of Object.entries(data)) {
     if (!/^[A-Z]{2}$/.test(cc)) { errs.push(`${kind}.${cc}: bad country code`); continue; }
     const rate = e.cur === "USD" ? 1 : fx.rates[e.cur]; if (!rate) { errs.push(`${kind}.${cc}: unknown currency ${e.cur}`); continue; }
@@ -19,6 +20,7 @@ for (const kind of ["staples", "construction"]) {
       if (x.unit !== sp[0]) errs.push(`${id}: unit must be ${sp[0]}`);
       const u = x.value / rate; if (!(u >= sp[1] && u <= sp[2])) errs.push(`${id}: ${x.value} ${e.cur} = ${u.toFixed(2)} USD per ${sp[0]} is outside ${sp[1]}-${sp[2]}`);
       if (!/^https:\/\//.test(x.url || "") || BLOCK.test(x.url)) errs.push(`${id}: url must be an official https page`);
+      if (typeof x.quote !== "string" || x.quote.length < 20) errs.push(`${id}: quote (verbatim sentence from the page containing the number) is required`);
       if (!x.src || BLOCK.test(x.src)) errs.push(`${id}: src missing or not primary`);
       const d = new Date(x.date); const age = (Date.now() - d.getTime()) / 864e5; if (isNaN(age) || age > 550 || age < -2) errs.push(`${id}: date must be within the last 18 months (YYYY-MM-DD)`);
     }
