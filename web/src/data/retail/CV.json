@@ -1,0 +1,34 @@
+{
+  "country": "CV",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA 15% (IVA Regulation art. 17, Lei 21/VI/2003, Boletim Oficial). Bullion coded 15: the Regulation's exemption articles (12-15) were read - gold appears only in art. 12(1)(e), exempting imports of gold by the Banco de Cabo Verde; there is no investment-gold scheme. Silver 15/15. Duty null (no openable ECOWAS CET 7108 line).",
+  "sources": [
+    {
+      "name": "Regulamento do Imposto sobre o Valor Acrescentado (Boletim Oficial, INCV), arts. 12 and 17",
+      "url": "https://boe.incv.cv/Bulletins/Download/12387",
+      "what": "Read 2026-11-28: the tax rate is 15%, and the only gold exemption is for imports effected by the Bank of Cabo Verde",
+      "quote": "A taxa do imposto é de 15%."
+    }
+  ]
+}

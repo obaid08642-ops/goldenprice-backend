@@ -1,0 +1,34 @@
+{
+  "country": "KM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Comoros levies a Taxe sur la Consommation (TC), not a VAT: standard rate 10% (CGI art. 152, per the Ministry of Finance tax-expenditure report 2024). Bullion coded 10: the reports official inventory of TC exemptions by HS chapter omits chapter 71 entirely, and no derogatory measure covers precious metals; caveat - the consolidated CGI text was not openable. Silver 10/10. Duty null.",
+  "sources": [
+    {
+      "name": "Ministère des Finances (finances.gouv.km) - Rapport d'évaluation des dépenses fiscales de fiscalité indirecte, Exercice 2024",
+      "url": "https://finances.gouv.km/wp-content/uploads/2026/02/Rapport-sur-les-Depenses-Fiscales-2024-1-1-5.pdf",
+      "what": "Read 2026-11-28: the reference system lists the Taxe sur la Consommation at 10%, and the exemption inventory by HS chapter contains no chapter 71",
+      "quote": "Taxe sur la Consommation 10%"
+    }
+  ]
+}

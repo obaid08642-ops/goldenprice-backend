@@ -1,0 +1,34 @@
+{
+  "country": "ER",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 12,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Eritrea has no VAT: a sales tax under Proclamation 64/1994 as amended by Proc. 117/2001 (Gazette of Eritrean Laws). Coded rate is the 12% residual rate for goods not in Schedule A (5%) or D (exempt). Caveat: the Gazette scan contains the operative articles but not the substituted Schedules A/D lists, so gold's absence from them is unverified - bullion null. Duty null.",
+  "sources": [
+    {
+      "name": "Gazette of Eritrean Laws - Proclamation No. 117/2001 amending the Sales and Excise Tax Proclamation, art. 5",
+      "url": "https://assets.tobaccocontrollaws.org/uploads/legislation/Eritrea/Eritrea-Tax-Amdt.-Proc.-native.pdf",
+      "what": "Read 2026-11-28: goods other than those in Schedule A or D bear sales tax at 12 percent; Schedule D goods are exempt",
+      "quote": "Goods produced locally and goods imported, except goods mentioned under Schedule \"A\" and Schedule \"D\" of this Proclamation, at the rate of 12% (twelve percent)"
+    }
+  ]
+}

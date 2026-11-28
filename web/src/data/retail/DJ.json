@@ -1,0 +1,34 @@
+{
+  "country": "DJ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA normal rate 10% (CGI art. 187 as amended by the Loi de finances 2015, art. 26, Journal Officiel; the base 2010 code had 7%). Bullion coded 10: the art. 176 exemption list and its exempt-goods annex were read in full - gold and precious metals appear nowhere in the Code. Silver 10/10. Duty null (imports are taxed mainly via the Taxe Intérieure de Consommation; no openable 7108 line).",
+  "sources": [
+    {
+      "name": "Journal Officiel de Djibouti (journalofficiel.dj) - Loi n° 82/AN/14/7ème L, loi de finances 2015, art. 26",
+      "url": "https://www.journalofficiel.dj/texte-juridique/loi-n82-an-14-7eme-l-portant-budget-initial-de-letat-pour-lexercice-2015/",
+      "what": "Read 2026-11-28: CGI art. 187 is amended so the normal VAT rate of 10% applies to all taxable operations",
+      "quote": "Art.187 a1. 1- Les taux de la TVA sont les suivants : 1) Le taux normal de 10 % est applicable à toutes les opérations taxables."
+    }
+  ]
+}
