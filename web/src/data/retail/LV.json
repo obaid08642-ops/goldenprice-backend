@@ -1,0 +1,40 @@
+{
+  "country": "LV",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 21% (VAT Law art. 41(1)(1), likumi.lv); jewellery is in no reduced-rate list. Bullion EXEMPT under the investment-gold special scheme (art. 139(2): supplies, EU acquisitions and imports of investment gold are not taxed; definition art. 139(1)). Silver: scheme is gold-only (21/21). Import duty 0% (EU CN 2026: HS 7108 'Free').",
+  "sources": [
+    {
+      "name": "Pievienotās vērtības nodokļa likums (likumi.lv official legal database), arts. 41 and 139",
+      "url": "https://likumi.lv/ta/id/253451-pievienotas-vertibas-nodokla-likums",
+      "what": "Read 2026-11-28: the standard VAT rate is 21 percent, and investment gold supplies/acquisitions/imports are not taxed under art. 139(2)",
+      "quote": "Ar nodokli neapliek: 1) ieguldījumu zelta piegādi iekšzemē un Eiropas Savienības teritorijā; 2) ieguldījumu zelta iegādi Eiropas Savienības teritorijā; 3) ieguldījumu zelta importu; 4) starpniecības pakalpojumus, kas sniegti darījumos ar ieguldījumu zeltu."
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28 (in the SI/LT pass): HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}
