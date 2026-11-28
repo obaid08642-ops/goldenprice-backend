@@ -1,6 +1,6 @@
 {
   "country": "KR",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 24,
@@ -10,12 +10,8 @@
     "importDutyPct": 3,
     "makingPct": null,
     "barPremiumPct": {},
-    "barBuybackDiscountPct": {
-      "typical": 1.8
-    },
-    "usedGoldDiscountPct": {
-      "typical": 3.8
-    }
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
   "silver": {
     "vatJewelryPct": null,
@@ -26,27 +22,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 10% on physical bars/coins and jewellery; KRX trades VAT-free, 10% on withdrawal (Korea Customs release). Duty 3% basic/MFN (Customs; UNI-PASS HS 7108.13); 0% is FTA-origin only. Buyback 1.8% and used 3.8% are Korea Gold Exchange prices vs own sell price, VAT-excl., 27 Nov 2026; VAT-inclusive retail spread about 14%. Making (segongbi) % removed in round 1 (calculator-site support).",
+  "notes": "Korea Customs Service release (opened 2026-11-28): basic tariff on raw-state gold is 3% (0% is FTA-origin only) and VAT is 10%. Aggregator/guide sources removed in review round 1. Silver VAT, making and used % not cited on a primary page on this branch, null. The KR upgrade PR adds dealer buyback/used figures from the Korea Gold Exchange.",
   "sources": [
-    {
-      "name": "Corgano - VAT on Gold in South Korea (citing KRX/NTS)",
-      "url": "https://goldprice.corgano.com/vat-on-gold/south-korea",
-      "what": "Read 2026-11-27: bars/coins and jewellery 10% VAT; KRX-held gold VAT-free, 10% on withdrawal; imports tariff-free"
-    },
     {
       "name": "Korea Customs Service - press release on gold tariff",
       "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?mi=2891&nttSn=22247&nttSnUrl=search",
       "what": "Read 2026-11-28: tariff rate on raw-state gold is 3% (VAT 10%, exempt only under the special recommendation scheme)"
-    },
-    {
-      "name": "UNI-PASS data via SeonHS - HS 7108.13-9020",
-      "url": "https://seonhs.co.kr/en/hs/7108139020",
-      "what": "Read 2026-11-28: basic rate 3% for 2026, WTO 5%, FTA rates 0%"
-    },
-    {
-      "name": "Korea Gold Exchange (Geumjjoki head store) - buy/sell prices",
-      "url": "https://xn--jj0b359bckc.com/mokdong-gold-buying",
-      "what": "Read 2026-11-28: prices 27 Nov 2026 VAT-excl.: sell 613,000 KRW/don; bar buyback 602,000 (-1.8%), 24K ring 590,000 (-3.8%)"
     }
   ]
 }
