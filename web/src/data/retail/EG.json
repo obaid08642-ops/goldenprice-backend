@@ -1,12 +1,12 @@
 {
   "country": "EG",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 21,
   "gold": {
     "vatJewelryPct": 14,
-    "vatBullionPct": 0,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {
@@ -34,7 +34,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT at 14% applies only to the manufacturing value of gold and silver jewellery, not to the metal value (ETA regulations on Art. 10(9) of the VAT Law); bullion gold purchases are VAT-exempt (Goldady FAQ). Bar premiums are the making charges in Goldady's BTC bar list over its live 24K gold value (EGP 6,403.22/g, read 27 Nov 2026): 1g 187/6,403 = 2.9%, 1000g 31,500/6,403,220 = 0.5%.",
+  "notes": "VAT at 14% applies only to the manufacturing value of gold and silver jewellery, not the metal value (ETA Executive Regulations on Art. 10(9)). Bullion VAT null: no tax-authority page states a bullion rate (dealer FAQ claim removed). Bar premiums are Goldady's BTC making charges over its live 24K value (EGP 6,403.22/g, 27 Nov 2026): 1g 2.9%, 1000g 0.5%.",
   "sources": [
     {
       "name": "Egyptian Tax Authority - Executive Regulations of VAT Law No. 67 of 2016 (English)",
@@ -45,11 +45,6 @@
       "name": "Goldady - Buy Gold Bars (BTC 24K bar price list)",
       "url": "https://goldady.com/en/shop/buy-gold-bars",
       "what": "Dealer list read 27 Nov 2026: every bar is priced as weight x Goldady's live 24K buy price (EGP 6,403.22/g) plus a stated making charge (1g EGP 187; 2.5g 280; 5g 435; 10g 840; 20g 1,640; 31.1g 2,456.90; 50g 3,950; 100g 7,700; 250g 8,750; 500g 16,250; 1000g 31,500). Premium per size = making charge / gold value. Goldady states it buys bars back at the live price with no buyback fee, so no buyback discount is coded."
-    },
-    {
-      "name": "Goldady - FAQ",
-      "url": "https://goldady.com/en/how-it-works/faq",
-      "what": "Dealer states VAT does not apply to purchases of bullion gold in Egypt under Egyptian tax regulations, i.e. bullion gold is VAT-exempt (gold vatBullionPct 0); its service fees on investment gold are subject to 14% VAT."
     }
   ]
 }
