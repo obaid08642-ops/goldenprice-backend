@@ -1,6 +1,6 @@
 {
   "country": "FI",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 14,
@@ -26,17 +26,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Standard VAT 25.5% since 1 Sep 2024 (Vero, PwC). Investment gold VAT-exempt; investment silver carries 25.5% (Tavex FAQ). Tavex, 28 Nov 2026: 100 g Valcambi bar sell 11,200.43 EUR, buyback 10,361.90 EUR = 7.5% buyback discount. Scrap: Tavex pays 56.60 EUR/g for 585 vs 102.12 EUR/g for a 999 bar = 5.3% under melt. No citable same-day spot price, so barPremiumPct left empty.",
+  "notes": "Standard VAT 25.5% since 1 Sep 2024 (Vero); import of investment gold VAT-exempt (VAT Act arts. 94-96, 72h). Investment silver carries 25.5% (Tavex FAQ). Tavex, 28 Nov 2026: 100 g Valcambi bar sell 11,200.43 EUR, buyback 10,361.90 EUR = 7.5% buyback discount. Scrap: Tavex pays 56.60 EUR/g for 585 vs 102.12 EUR/g for a 999 bar = 5.3% under melt. No citable same-day spot, so barPremiumPct empty.",
   "sources": [
     {
       "name": "Finnish Tax Administration (Vero) - VAT procedure for importation guidance",
       "url": "https://vero.fi/en/detailed-guidance/guidance/61955/value-added-tax-procedure-for-importation-as-of-1-january-20182/",
       "what": "Standard VAT rate increased to 25.5% effective 1 September 2024; import of investment gold is VAT-exempt (VAT Act Articles 94-96 and 72h)."
-    },
-    {
-      "name": "PwC Tax Summaries - Finland, Corporate Other taxes",
-      "url": "https://taxsummaries.pwc.com/Finland/Corporate/Other-taxes",
-      "what": "The standard VAT rate is 25.5%; customs duty rates are determined at EU level (no gold-specific rate stated)."
     },
     {
       "name": "Tavex Oy - Sell gold or silver to Tavex (scrap buy price list)",
