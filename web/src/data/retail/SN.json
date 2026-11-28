@@ -1,0 +1,34 @@
+{
+  "country": "SN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA standard rate 18% (DGID rates page; the only reduced rate, 10%, covers approved tourist accommodation). Bullion VAT null: the CGI art. 361 exemption list sits in the DGID CGI 2025 PDF, which could not be opened in this pass, so no bullion treatment is coded. Import duty HS 7108 null (no openable customs tariff line).",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts et des Domaines (dgid.sn) - Lois et règlements",
+      "url": "https://www.dgid.sn/loi-reglement",
+      "what": "Read 2026-11-28: the DGID lists the normal TVA rate at 18%",
+      "quote": "TVA (taux normal) — 18 %"
+    }
+  ]
+}
