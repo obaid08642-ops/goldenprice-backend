@@ -1,0 +1,40 @@
+{
+  "country": "SI",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 22,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 22% (ZDDV-1 art. 41(1)); jewellery is in neither reduced-rate annex. Bullion EXEMPT under the investment-gold special scheme (art. 119; definition art. 118: bars/plates >=995, coins >=900 post-1800 legal tender). Silver has no scheme (22/22). Import duty 0%: EU Combined Nomenclature 2026 (Regulation (EU) 2025/1926) rates all HS 7108 lines 'Free'.",
+  "sources": [
+    {
+      "name": "Zakon o davku na dodano vrednost ZDDV-1 (PisRS official legal database), arts. 41 and 119",
+      "url": "https://pisrs.si/pregledPredpisa?id=ZAKO4701",
+      "what": "Read 2026-11-28: VAT is charged at the general rate of 22%, and supplies/intra-EU acquisitions/imports of investment gold are exempt",
+      "quote": "Plačila DDV so oproščene: – dobave, pridobitve znotraj Unije in uvoz investicijskega zlata, vključno z investicijskim zlatom, ki ga predstavljajo potrdila za alocirano ali nealocirano zlato ali s katerimi se trguje na računih za zlato"
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28: HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}

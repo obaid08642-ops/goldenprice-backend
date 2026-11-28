@@ -1,0 +1,40 @@
+{
+  "country": "BA",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 17,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 17,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Single VAT rate 17% (Indirect Taxation Authority). The authority's complete VAT-exempt activities list was read in full (public-interest, financial, transport): gold and investment gold appear nowhere, so bullion takes 17%; silver likewise. Import duty 0%: the Council of Ministers' 2026 Customs Tariff (mvteo.gov.ba) shows 0 in every rate column for all HS 7108 lines.",
+  "sources": [
+    {
+      "name": "Indirect Taxation Authority (uino.gov.ba) - General information on the VAT system in Bosnia and Herzegovina",
+      "url": "https://www.uino.gov.ba/portal/en/vat/general-information-on-vat-system-in-bosnia-and-herzegovina?print=print",
+      "what": "Read 2026-11-28: the BiH VAT rate is 17%; the page's exempt-activities list contains no gold item",
+      "quote": "BiH VAT rate is 17%."
+    },
+    {
+      "name": "Ministry of Foreign Trade and Economic Relations (mvteo.gov.ba) - Customs Tariff 2026 (Council of Ministers Decision)",
+      "url": "https://mvteo.gov.ba:443/attachments/en_Home/Other_pages/Customs_policy_and_tariff/Akti/Podzakonski_akti_carina/Carinska_tarifa_2026_-_engleski.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines (powder, other unwrought forms, semi-manufactured, monetary) all carry 0 in every duty column",
+      "quote": "7108 12 00 00 − − Other unwrought forms g 0 0 0 0 0 0 0 0"
+    }
+  ]
+}
