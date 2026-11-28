@@ -1,0 +1,34 @@
+{
+  "country": "IL",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Israel Tax Authority interpretation directive 01/2025: VAT is 18% on every transaction and on imports from 1 Jan 2025; the directive has no gold carve-out and Israel has no investment-gold exemption, so bullion and jewellery are both 18%; silver likewise. Customs duty on gold not quantified on an opened primary page, null. No primary same-day spot, so premiums/buyback null.",
+  "sources": [
+    {
+      "name": "Israel Tax Authority - Interpretation Directive 01/2025 (VAT rate rise to 18%)",
+      "url": "https://www.gov.il/BlobFolder/dynamiccollectorresultitem/represent-info-051224-2/he/vat_represent-info-051224-2.pdf",
+      "what": "Read 2026-11-28: from 1 Jan 2025 the VAT rate on a transaction in Israel and on the import of goods is 18%",
+      "quote": "החל מיום 01 בינואר 2025 ישתנה שיעור המע\"מ המוטל על עסקה בישראל ועל יבוא טובין מ17% ל-18%"
+    }
+  ]
+}

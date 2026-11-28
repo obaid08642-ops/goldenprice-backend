@@ -1,0 +1,44 @@
+{
+  "country": "NO",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "No investment-gold VAT exemption: Skatteetaten states investment-gold turnover is taxable, sales to private persons follow ordinary rules; jewellery 25%. Legal-tender gold coins exempt (VAT Act s.3-6). Duty 0: Tolletaten tariff (ed. from 1 Jan 2019, toll.no) shows rate 0 on all Ch. 71 gold (71.08) and silver (71.06) lines. No primary dealer bar list opened, premiums null.",
+  "sources": [
+    {
+      "name": "Skatteetaten - VAT rates for purchase and sale of gold",
+      "url": "https://www.skatteetaten.no/en/rates/vat-rates-for-purchase-and-sale-of-gold-businesses-and-public-sector-enterprises/",
+      "what": "Rate table: 'Gold jewellery and other gold objects 25%'; gold sold by weight and fineness to businesses/public enterprises is under reverse charge (buyer calculates VAT)."
+    },
+    {
+      "name": "Skatteetaten - VAT Handbook M-11-1.4, domestic turnover of gold",
+      "url": "https://www.skatteetaten.no/rettskilder/type/handboker/merverdiavgiftshandboken/gjeldende/M-11/M-11-1/M-11-1.4/",
+      "what": "States turnover of investment gold in Norway is taxable, unlike most of Europe, and sales to private persons remain taxable under the ordinary rules - bullion bars take 25% VAT; gold coins that are legal tender are excluded (VAT Act s.3-6)."
+    },
+    {
+      "name": "Tolletaten (Norwegian Customs) - Customs tariff, chapter 71",
+      "url": "https://www.toll.no/files/beedfe199e8f3a39a90b60e10287c260a27ca8a6.pdf",
+      "what": "Read 2026-11-28: tariff lines 71.08 (gold) and 71.06 (silver) all carry duty rate 0 (tollfri)",
+      "quote": "71.08 Gull (herunder platinert gull), ubearbeidd eller som halvfabrikater eller i pulverform"
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "country": "SK",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 23,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 23,
+    "vatBullionPct": 23,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 23% since 1 Jan 2025 (PwC; Financna sprava). Investment gold is VAT-exempt under s.67 of the Slovak VAT Act (Financna sprava); silver is not covered by the scheme, so bars and jewellery take 23%. Slovak jewellery is typically 585 (14k). No Slovak dealer published price list could be opened and read, so premiums, buyback, used-gold and making figures are null.",
+  "sources": [
+    {
+      "name": "PwC Tax Summaries - Slovak Republic, Corporate Other taxes",
+      "url": "https://taxsummaries.pwc.com/slovak-republic/corporate/other-taxes",
+      "what": "From 1 January 2025 a basic VAT rate of 23% (previously 20%) applies to all taxable supplies, with reduced rates of 19% and 5% for listed categories only."
+    },
+    {
+      "name": "Financna sprava (Slovak Financial Administration) - VAT deduction guidance",
+      "url": "https://www.financnasprava.sk/sk/podnikatelia/dane/dan-z-pridanej-hodnoty/odpocitanie-dane",
+      "what": "Tax authority guidance applying the 23% standard rate and referring to supplies of investment gold exempt from VAT under s.67(3) of the Slovak VAT Act."
+    }
+  ]
+}

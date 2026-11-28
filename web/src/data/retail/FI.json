@@ -1,0 +1,47 @@
+{
+  "country": "FI",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 25.5,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 7.5
+    },
+    "usedGoldDiscountPct": {
+      "typical": 5.3
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 25.5,
+    "vatBullionPct": 25.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 25.5% since 1 Sep 2024 (Vero); import of investment gold VAT-exempt (VAT Act arts. 94-96, 72h). Investment silver carries 25.5% (Tavex FAQ). Tavex, 28 Nov 2026: 100 g Valcambi bar sell 11,200.43 EUR, buyback 10,361.90 EUR = 7.5% buyback discount. Scrap: Tavex pays 56.60 EUR/g for 585 vs 102.12 EUR/g for a 999 bar = 5.3% under melt. No citable same-day spot, so barPremiumPct empty.",
+  "sources": [
+    {
+      "name": "Finnish Tax Administration (Vero) - VAT procedure for importation guidance",
+      "url": "https://vero.fi/en/detailed-guidance/guidance/61955/value-added-tax-procedure-for-importation-as-of-1-january-20182/",
+      "what": "Standard VAT rate increased to 25.5% effective 1 September 2024; import of investment gold is VAT-exempt (VAT Act Articles 94-96 and 72h)."
+    },
+    {
+      "name": "Tavex Oy - Sell gold or silver to Tavex (scrap buy price list)",
+      "url": "https://tavex.fi/myy-kultaa-tai-hopeaa-tavexille/",
+      "what": "Dealer buy prices per gram read 28 Nov 2026: 999 bar 102.12 EUR/g, 585 (14k) 56.60 EUR/g, 750 (18k) 72.56 EUR/g; FAQ states investment gold has been VAT-free since 2000 and investment silver coins/bars carry 25.5% VAT in Finland."
+    },
+    {
+      "name": "Tavex Oy - 100 g Valcambi Suisse gold bar",
+      "url": "https://tavex.fi/kulta/100g-valcambi-gold-bar/",
+      "what": "Sell price 11,200.43 EUR and buyback price 10,361.90 EUR for the 100 g bar read 28 Nov 2026; the page itself states the spread as 7.49%."
+    }
+  ]
+}

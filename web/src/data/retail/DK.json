@@ -1,0 +1,47 @@
+{
+  "country": "DK",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 6.7
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Skattestyrelsen legal guidance: VAT Act s.33 sets the rate at 25% for all taxable goods; s.13(1) item 20 exempts investment gold. Tavex DK, 27 Nov 2026: 1 oz Valcambi bar sell DKK 26,279.39 / buy DKK 24,515.13, a 6.7% buyback discount. Used-gold % removed in round 4: it mixed an 'up to' scrap price with the 999.9 bid (not like for like).",
+  "sources": [
+    {
+      "name": "Skattestyrelsen - Legal guidance D.A.9, VAT rate (VAT Act s.33)",
+      "url": "https://info.skat.dk/data.aspx?oid=1921136&chk=205785",
+      "what": "Read 2026-11-28: the tax amounts to 25% of the taxable base; the rate is the same for all taxable goods and services",
+      "quote": "Afgiften udgør 25 pct. af afgiftsgrundlaget."
+    },
+    {
+      "name": "Skattestyrelsen - Legal guidance D.A.5.20.1, investment gold (VAT Act s.13)",
+      "url": "https://info.skat.dk/data.aspx?oid=1921307&chk=205476",
+      "what": "Read 2026-11-28: VAT Act s.13(1) item 20 exempts investment gold from the tax",
+      "quote": "Investeringsguld, jf. § 73 a, herunder investeringsguld repræsenteret af værdipapirer"
+    },
+    {
+      "name": "Tavex Denmark - 1 oz Valcambi Suisse Gold Bar",
+      "url": "https://tavex.dk/en/gold/1oz-gold-bar-valcambi/",
+      "what": "Live sell/buy table read 27 Nov 2026: sell DKK 26,279.39, buy DKK 24,515.13 (1-4 bars) - buyback discount (26279.39-24515.13)/26279.39 = 6.7%."
+    }
+  ]
+}
