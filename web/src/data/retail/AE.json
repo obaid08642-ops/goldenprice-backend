@@ -9,12 +9,7 @@
     "vatBullionPct": 0,
     "importDutyPct": null,
     "makingPct": null,
-    "barPremiumPct": {
-      "10g": 5.3,
-      "20g": 4.4,
-      "50g": 4.0,
-      "116.64g": 2.9
-    },
+    "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
@@ -27,7 +22,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Jewellery VAT 5% on full value (UAE Government portal: the VAT rate is 5%); investment precious metals (99%+, tradeable form) zero-rated (MoF Executive Regulation art. 36). Premiums: Gold Trade (Dubai dealer) asks read 28 Nov 2026 vs Dubai board reference 439.00 AED/g 24K (Al Romaizan): 10g +5.3%, 20g +4.4%, 50g +4.0%, 10 tola +2.9%. Making % dropped: no dealer's own page states one.",
+  "notes": "Jewellery VAT 5% on full value (UAE Government portal: the VAT rate is 5%); investment precious metals (99%+, tradeable form) zero-rated (MoF Executive Regulation art. 36). Bar premiums removed in this pass: the only available reference was a dealer-published retail board rate, not a spot read on a primary page. Making % null: no dealer's own page states one.",
   "sources": [
     {
       "name": "UAE Ministry of Finance - Executive Regulation of Federal Decree-Law No. 8 of 2017 (Cabinet Decision No. 52 of 2017), Article 36",
@@ -39,16 +34,6 @@
       "url": "https://beta.government.ae/en/information-and-services/finance-and-investment/taxation/valueaddedtaxvat",
       "what": "Read 2026-11-28: VAT was introduced on 1 Jan 2018 and the rate of VAT is 5 per cent - jewellery, which does not meet the investment-metal test, is taxed at 5%",
       "quote": "Value Added Tax (VAT) was introduced in the UAE on 1 January 2018. The rate of VAT is 5 per cent."
-    },
-    {
-      "name": "Al Romaizan - Gold Rate in UAE Today",
-      "url": "https://alromaizan.com/gold-rates",
-      "what": "Dealer's published Dubai reference rates, updated 28 Nov 2026 00:00 GST: 24K gold 439.00 AED per gram (gold value only, excluding making charges and VAT), 22K 406.50, 21K 389.75, 18K 334.00 - the 24K rate is the reference base used for the premium calculations."
-    },
-    {
-      "name": "Gold Trade - Gold Bars and Coins store",
-      "url": "https://www.goldtrade.ae/store/gold-bars-and-coins",
-      "what": "Dubai dealer's own store listing read 28 Nov 2026: 10g bar AED 4,622.13; 20g Emirates Gold bar AED 9,169.50; 50g Emirates Gold bar AED 22,819.95; 10 tola (116.64g) bar AED 52,700.97 - the asks used for barPremiumPct (investment bars are zero-rated, so asks carry no VAT)."
     }
   ]
 }
