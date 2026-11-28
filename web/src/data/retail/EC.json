@@ -1,0 +1,40 @@
+{
+  "country": "EC",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA general rate 15% (Ministerio de Economía y Finanzas fiscal report, Jan 2026, citing SRI Circular NAC-DGECCGC25-00000006 of 26 Dec 2025). The complete LRTI art. 55 zero-rate list was read: its only gold item (num. 16) zero-rates gold acquired by the Banco Central del Ecuador or by mining-concession/licensed traders - retail bullion takes 15%; silver is never mentioned in the law. Duty null.",
+  "sources": [
+    {
+      "name": "Ministerio de Economía y Finanzas (finanzas.gob.ec) - Informe de Seguimiento al Plan de Fortalecimiento y Sostenibilidad Fiscal, Jan 2026",
+      "url": "https://www.finanzas.gob.ec/wp-content/uploads/2026/05/Informe-de-Seguimiento-al-Plan-de-Fortalecimiento-y-Sostenibilidad-Fiscal-Enero-2026.pdf",
+      "what": "Read 2026-11-28: per the SRI circular of 26 Dec 2025 the general IVA rate in force continues to be 15%",
+      "quote": "En consecuencia, la tarifa general del IVA vigente es del 15%, hasta que el Presidente de la República disponga lo contrario."
+    },
+    {
+      "name": "Ley de Régimen Tributario Interno (SRI text), art. 55 numeral 16",
+      "url": "https://gadbulan.gob.ec/azuay/wp-content/uploads/2015/04/LORTI.pdf",
+      "what": "Read 2026-11-28: the art. 55 zero-rate list (numerals 1-17 read in full) zero-rates only gold acquired by the Banco Central or by concession holders/licensed traders",
+      "quote": "El oro adquirido por el Banco Central del Ecuador en forma directa o por intermedio de agentes económicos públicos o privados, debidamente autorizados por el propio Banco."
+    }
+  ]
+}
