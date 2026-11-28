@@ -1,0 +1,55 @@
+{
+  "country": "PL",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 23,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1g": 9.4,
+      "2g": 13.6,
+      "5g": 6.1,
+      "10g": 6.1,
+      "20g": 3.0,
+      "31.1g": 3.4,
+      "50g": 2.5,
+      "100g": 2.4,
+      "250g": 2.2,
+      "500g": 2.8,
+      "1000g": 2.3
+    },
+    "barBuybackDiscountPct": {
+      "typical": 6.7
+    },
+    "usedGoldDiscountPct": {
+      "typical": 7
+    }
+  },
+  "silver": {
+    "vatJewelryPct": 23,
+    "vatBullionPct": 23,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT Act (ISAP consolidated text): standard rate 23% (art. 146ef), investment gold exempt (art. 122) - jewellery and silver at 23%. Premiums from IDF Metale table 27 Nov 2026 vs its metal value. Buyback 6.7% is the 5-10g spread (3.4% at 100g, 13.4% at 1g). Used 7% is scrap 585 buy vs metal value. Duty and making % not found, null.",
+  "sources": [
+    {
+      "name": "Sejm ISAP - VAT Act of 11 March 2004 (consolidated text, Dz.U. 2023 poz. 1570)",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230001570/O/D20231570.pdf",
+      "what": "Read 2026-11-28: art. 122 exempts supply/intra-EU acquisition/import of investment gold; art. 146ef sets the standard rate at 23%",
+      "quote": "Zwalnia się od podatku dostawę, wewnątrzwspólnotowe nabycie i import złota inwestycyjnego, w tym również złota inwestycyjnego reprezentowanego przez certyfikaty na złoto asygnowane lub nieasygnowane"
+    },
+    {
+      "name": "IDF Metale - Gold bars",
+      "url": "https://idfmetale.pl/pl/sztabki-zlota",
+      "what": "Read 2026-11-27: table 27 Nov 2026 with spot, metal value, cheapest bar price and buyback by size 1g-1kg; premiums and spreads calculated from it"
+    }
+  ]
+}

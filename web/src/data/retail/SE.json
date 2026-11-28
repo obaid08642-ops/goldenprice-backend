@@ -1,0 +1,55 @@
+{
+  "country": "SE",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "5g": 14.6,
+      "100g": 6.4
+    },
+    "barBuybackDiscountPct": {
+      "typical": 6.0
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Skatteverket: general VAT rate 25%; trade in investment gold exempt (VAT Act ch. 3 §10a, Skatteverket handbook SKV 553 ch. 6). Duty removed in round 1. Premiums are Tavex sell vs its buy price 27 Nov 2026; buyback typical 6.0% is the Tavex spread at 100g (12.72% at 5g). Making % and fixed used % not found, null.",
+  "sources": [
+    {
+      "name": "Skatteverket - Amounts and percentages 2025 (short version)",
+      "url": "https://www.skatteverket.se/4.262c54c219391f2e9634350.html",
+      "what": "Read 2026-11-28: the general VAT rate is 25%",
+      "quote": "25 % (20 % av priset), generella skattesatsen för moms."
+    },
+    {
+      "name": "Skatteverket handbook SKV 553, ch. 6 - Investment gold exemption",
+      "url": "https://skatteverket.se/download/18.18e1b10334ebe8bc8000114437/1359706012243/kap06.pdf",
+      "what": "Read 2026-11-28: trade in investment gold is exempt from VAT (VAT Act ch. 3 §10a)",
+      "quote": "Handel med investeringsguld undantas från momsbeskattning."
+    },
+    {
+      "name": "Tavex Sweden - 5g Valcambi gold bar",
+      "url": "https://tavex.se/en/gold/5g-investment-gold-bar-valcambi/",
+      "what": "Read 2026-11-27: sell SEK 6,900.35 / buy SEK 6,022.80, listed spread 12.72%; premium over buy price 14.6% (calculated)"
+    },
+    {
+      "name": "Tavex Sweden - 100g Valcambi gold bar",
+      "url": "https://tavex.se/en/gold/100g-valcambi-gold-bar/",
+      "what": "Read 2026-11-27: sell SEK 128,187.61 / buy SEK 120,458.62, listed spread 6.03%; premium over buy price 6.4% (calculated)"
+    }
+  ]
+}

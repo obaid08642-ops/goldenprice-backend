@@ -1,0 +1,40 @@
+{
+  "country": "RO",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 21% standard rate from 1 Aug 2025 (Law 141/2025, ANAF brochure on the rate changes); investment gold exempt under Fiscal Code art. 313(3). Duty removed in round 1. BNR XAU 576.51 RON/g on 27 Nov 2026. No dealer by-size list, making % or buyback % found on an opened page, so null/empty. 14K everyday standard; 18K also common.",
+  "sources": [
+    {
+      "name": "ANAF - VAT rate changes under Law 141/2025 (brochure, Sep 2025)",
+      "url": "https://static.anaf.ro/static/10/Anaf/AsistentaContribuabili_r/Cotele_de_TVA_09.2025.pdf",
+      "what": "Read 2026-11-28: from 1 Aug 2025 the standard VAT rate is 21% for taxable operations neither exempt nor reduced-rate",
+      "quote": "Începând cu data de 1 august 2025, cota standard se aplică asupra bazei de impozitare pentru operaţiunile impozabile care nu sunt scutite de taxă sau care nu sunt supuse cotei reduse, iar nivelul acesteia este 21%."
+    },
+    {
+      "name": "Portal Legislativ (Ministry of Justice) - Fiscal Code (Law 227/2015), art. 313",
+      "url": "https://legislatie.just.ro/Public/DetaliiDocumentAfis/304524",
+      "what": "Read 2026-11-28: art. 313(3)(a) exempts supplies, intra-EU acquisitions and imports of investment gold",
+      "quote": "Următoarele operațiuni sunt scutite de taxă: a) livrările, achizițiile intracomunitare și importul de aur de investiții"
+    }
+  ]
+}

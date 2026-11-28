@@ -1,0 +1,34 @@
+{
+  "country": "RU",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 22,
+    "vatBullionPct": 22,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 22% from 1 Jan 2026 (Law 425-FZ, FNS notice) on jewellery and silver. Gold-bar VAT exemption (Art. 149, Law 47-FZ) nulled in round 4: the law text on pravo.gov.ru is image-only and consultant.ru would not open, so no quotable primary text. Premiums/buyback removed in round 1 (dealer-blog support). Duty and making % not found, null.",
+  "sources": [
+    {
+      "name": "FNS (Federal Tax Service) district inspectorate notice - VAT 22% under Law 425-FZ",
+      "url": "https://kirovskij-r22.gosweb.gosuslugi.ru/dlya-zhiteley/novosti-i-reportazhi/novosti-193_320.html",
+      "what": "Read 2026-11-28: FNS notice - Law 425-FZ of 28 Nov 2025 sets the VAT rate at 22% from 1 Jan 2026",
+      "quote": "предусматривающего с 01.01.2026 установление ставки налога на добавленную стоимость (далее – НДС) в размере 22 процента"
+    }
+  ]
+}
