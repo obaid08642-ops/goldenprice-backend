@@ -30,7 +30,7 @@ import { CATALOG, BY_SYM } from "./catalog.js";
 import { fetchIndustrial, fetchFred, FRED } from "./sources.js";
 import { loadMonthly } from "./monthly.js";
 import { sql as dbSql } from "./db.js";
-import { dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
+import { fxCounts, bulkFx, upsertFxToday, fxSeries, dbEnabled, initDb, recordPrice, pruneTicks, dailyHistory, recentTicks, listSymbols, bulkDaily, overviewStats, saveContact, createKey, keyActive, addAlert, activeAlerts, markAlertFired, cancelAlert } from "./db.js";
 
 // ---------- paths ----------
 const __filename = fileURLToPath(import.meta.url);
@@ -934,6 +934,12 @@ app.get("/api/chart/:symbol", async (req, res) => {
     let rows = await dailyHistory(symbol, days);
     const maxPts = Math.min(1500, Number(req.query.points || 400));
     if (rows && rows.length > maxPts) { const step = rows.length / maxPts; rows = rows.filter((_, i) => Math.floor(i % step) === 0 || i === rows.length - 1); }
+    // ?cur=EGP adds the exchange rate of each day (units per USD) so a local-currency chart is not distorted by today's rate
+    const cur = String(req.query.cur || "").toUpperCase();
+    if (rows && rows.length && /^[A-Z]{3}$/.test(cur) && cur !== "USD") {
+      const fx = await fxSeries(cur, days + 7);
+      if (fx.length) { let k = 0, last = fx[0].rate; rows = rows.map((r) => { while (k < fx.length && fx[k].day <= r.date) last = fx[k++].rate; return { ...r, fx: last }; }); }
+    }
     if (rows && rows.length) { res.set("Cache-Control", "public, max-age=300"); return res.json({ symbol, source: "db", data: rows }); }
   } catch (e) { console.error("chart db error", e.message || e); }
   res.json({ symbol, source: "cache", data: ((cache.history && cache.history[symbol]) || []).slice(-days) });
@@ -1040,6 +1046,7 @@ async function updateRates() {
       if (r && r.EUR && r.EGP && Object.keys(r).length > 100) {
         RATES = { base: "USD", rates: r, updated: Date.now(), source: name };
         if (r.EGP) put("FX_USD_EGP", Number(r.EGP), "egp", name);
+        upsertFxToday(r).catch((e) => console.warn("fx store failed:", e.message || e));
         return;
       }
     } catch (e) { console.warn(`rates from ${name} failed: ${e.message || e}`); }
@@ -1059,6 +1066,22 @@ async function autoBackfill() {
     await new Promise((r) => setTimeout(r, 1500));
   }
 }
+// 5 years of daily exchange rates for every currency Yahoo has (USD<CUR>=X); missing ones fall back to the current rate in the charts
+async function autoFxBackfill() {
+  if (!dbEnabled) return;
+  const have = await fxCounts();
+  for (const cur of Object.keys(RATES.rates || {})) {
+    if (cur === "USD" || (have[cur] || 0) >= 200) continue;
+    try {
+      const j = await getJSON(`https://query1.finance.yahoo.com/v8/finance/chart/USD${cur}=X?range=5y&interval=1d`, { headers: YAHOO_HEADERS });
+      const r = j?.chart?.result?.[0], ts = r?.timestamp || [], cl = r?.indicators?.quote?.[0]?.close || [], rows = [];
+      for (let i = 0; i < ts.length; i++) if (isValidNumber(cl[i]) && cl[i] > 0) rows.push({ day: new Date(ts[i] * 1000).toISOString().slice(0, 10), rate: Number(cl[i]) });
+      if (rows.length) console.log("fx backfill", cur, await bulkFx(cur, rows));
+    } catch (e) { /* currency not on Yahoo: skip */ }
+    await new Promise((r) => setTimeout(r, 1200));
+  }
+}
+setTimeout(() => autoFxBackfill().catch((e) => console.warn("autoFxBackfill:", e.message || e)), 120000);
 setTimeout(() => autoBackfill().catch((e) => console.warn("autoBackfill:", e.message || e)), 60000);
 setTimeout(runMonthly, 20000); setInterval(runMonthly, 24 * 60 * 60 * 1000);
 app.get("/api/rates", (req, res) => {
