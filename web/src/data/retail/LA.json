@@ -1,0 +1,40 @@
+{
+  "country": "LA",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 10% (Law on VAT as amended; rate restored to 10% by Presidential Ordinance 003 of 19 Mar 2024). The full art. 12 exemption list contains no investment-gold item - the only gold exemption is gold bars imported by/for the Bank of the Lao PDR for banknote printing. List read in Law 48/NA (2018) text on the Lao Trade Portal; a newer law (60/NA, 2024) gazette text was not openable. Duty null.",
+  "sources": [
+    {
+      "name": "Lao Trade Portal (Ministry of Industry and Commerce) - Law on Value Added Tax (Amended) No. 207/NA",
+      "url": "https://www.laotradeportal.gov.la/en-gb/site/display/1847",
+      "what": "Read 2026-11-28: the VAT rate is ten percent for imports and domestic supplies (0% only for exports)",
+      "quote": "Ten percent for the import of value-added goods, supplies, and services within the Lao PDR."
+    },
+    {
+      "name": "Lao Trade Portal - Law on VAT (Amended) No. 48/NA, Article 12 (exempt activities)",
+      "url": "https://www.laotradeportal.gov.la/site/display/1846",
+      "what": "Read 2026-11-28: the complete art. 12 list (items 1.1-1.19 and 2.1-2.21) contains no gold bullion or jewellery item; item 1.12 exempts only central-bank banknote-backing gold bars",
+      "quote": "ຄໍາແທ່ງ ເພື່ອຄ້ຳປະກັນການພີມທະນະບັດ, ການນຳເຂົ້າທະນະບັດ ແລະ ການນຳເຂົ້າເຈ້ຍ ຫຼື ໂລຫະ ເພື່ອພີມທະນະບັດ ໂດຍທະນາຄານ ແຫ່ງ ສປປ ລາວ"
+    }
+  ]
+}

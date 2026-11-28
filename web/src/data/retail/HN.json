@@ -1,0 +1,34 @@
+{
+  "country": "HN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "ISV general rate 15% (Ley del Impuesto Sobre Ventas, art. 6, consolidated text on SEFIN). The complete art. 15 exemption list was read and the law full-text searched: gold, bullion and jewellery are absent (18% applies only to alcohol, cigarettes and premium air tickets). Import duty HS 7108 null (no openable customs page).",
+  "sources": [
+    {
+      "name": "Secretaría de Finanzas (sefin.gob.hn) - Ley del Impuesto Sobre Ventas, texto consolidado, art. 6",
+      "url": "http://www.sefin.gob.hn/wp-content/uploads/2016/06/TEXTO_CONSOLIDADO_LEY_IMPUESTO_SOBRE_VENTAS_10JUNIO2016.pdf",
+      "what": "Read 2026-11-28: the general sales tax rate is 15%; the art. 15 exemption list contains no gold or precious-metals item",
+      "quote": "ARTÍCULO 6.- La tasa general del impuesto es del quince por ciento (15%) sobre el valor de la base imponible de las importaciones o de la venta de bienes y servicios sujetos al mismo."
+    }
+  ]
+}
