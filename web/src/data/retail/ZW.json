@@ -1,0 +1,40 @@
+{
+  "country": "ZW",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15.5,
+    "vatBullionPct": 15.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15.5,
+    "vatBullionPct": 15.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 15.5% (ZIMRA; raised from 15% on 1 Jan 2026). Gold bullion is zero-rated ONLY when supplied to the Reserve Bank or a registered bank (VAT Act s.10(1)(f)); retail bullion takes 15.5%. Gold is absent from the s.11 exempt list. Import duty HS 7108 null (no openable ZIMRA tariff line).",
+  "sources": [
+    {
+      "name": "Zimbabwe Revenue Authority (zimra.co.zw) - Mechanics of VAT",
+      "url": "https://www.zimra.co.zw/domestic-taxes/vat/mechanics-of-vat",
+      "what": "Read 2026-11-28: the standard VAT rate is 15.5% and all goods are standard rated unless specifically exempted or zero-rated",
+      "quote": "Standard rate of 15.5%"
+    },
+    {
+      "name": "Zimbabwe Revenue Authority (zimra.co.zw) - Value Added Tax Act [Chapter 23:12], s.10",
+      "url": "https://www.zimra.co.zw/legislation/17-acts?download=4231:valued-added-tax-act-updated-to-1st-dec-2024",
+      "what": "Read 2026-11-28: s.10(1)(f) zero-rates only gold supplied to the Reserve Bank or a registered bank, in bar/ingot and similar refined forms",
+      "quote": "the supply is to the Reserve Bank, or any bank registered under the Banking Act [Chapter 24:20], of gold in the form of bars, blank coins, ingots, buttons, wire, plate or granules or in solution"
+    }
+  ]
+}

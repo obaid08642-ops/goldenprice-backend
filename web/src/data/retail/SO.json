@@ -1,0 +1,40 @@
+{
+  "country": "SO",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": 25,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Somalia has NO VAT: the consumption tax is a 5% sales tax (Sales Tax Law No. 2 of 1984; Revenue Directorate rate table: 5% on imports, wholesale trade and other companies, extended to general retail in Aug 2024) - not coded in the VAT fields. Import duty 25% on all gold HS 7108 lines per the Ministry of Finance Customs Tariff 2022. No bullion-specific provision found.",
+  "sources": [
+    {
+      "name": "Federal Government of Somalia, Ministry of Finance (mof.gov.so) - Somali Customs Tariff 2022, ch. 71",
+      "url": "https://mof.gov.so/sites/default/files/Publications/Somali_Customs_Tariff_Final.pdf",
+      "what": "Read 2026-11-28: every HS 7108 subheading (powder, unwrought, semi-manufactured, monetary) carries 25% duty",
+      "quote": "7108 12 00 – – Other unwrought forms g 25 %"
+    },
+    {
+      "name": "Somalia Revenue Directorate (revenuedirectorate.gov.so) - Indirect Tax",
+      "url": "https://www.revenuedirectorate.gov.so/indirect-tax",
+      "what": "Read 2026-11-28: the sales tax (Law No. 2 of 1 July 1984) is charged at 5% on imports, wholesale trade and other companies; no gold-specific provision",
+      "quote": "Sales Tax Law No. 2 of July 1, 1984. The Sales Tax was created and mandated."
+    }
+  ]
+}

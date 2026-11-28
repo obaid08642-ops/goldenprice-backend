@@ -1,0 +1,40 @@
+{
+  "country": "BJ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": 10,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA 18% (CGI art. 241, official 2025 text). The art. 229 exemption list and art. 230 zero-rate (exports only) contain no gold or precious metals, so bullion takes 18%. Import duty (ECOWAS CET, Douanes tariff SH2022): 5% on unwrought/powder gold, 10% on ingots and other semi-manufactured forms - the 10% ingot rate is coded for gold.",
+  "sources": [
+    {
+      "name": "Ministère des Finances (finances.bj) - Code Général des Impôts 2025",
+      "url": "https://finances.bj/wp-content/uploads/2025/01/Benin-Code-General-des-Impots-2025.pdf",
+      "what": "Read 2026-11-28: art. 241 fixes the TVA rate at 18%; the art. 229 exemptions and art. 230 zero rates contain no gold or precious-metals item",
+      "quote": "Article 241 : Le taux de la taxe sur la valeur ajoutée est fixé à 18%."
+    },
+    {
+      "name": "Direction Générale des Douanes (douanes.gouv.bj) - Tarif Extérieur Commun TEC-CEDEAO SH2022",
+      "url": "https://douanes.gouv.bj/storage/2024/11/BJ-Tarif-Douanier-SH2022-a-jour_2.0.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines - powder and unwrought forms 5% duty, gold ingots (lingots) and other semi-manufactured forms 10%",
+      "quote": "7108.13.10.00 --- Lingots d'or kg 10 1"
+    }
+  ]
+}
