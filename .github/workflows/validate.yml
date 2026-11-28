@@ -17,6 +17,8 @@ jobs:
         run: cd web && node scripts/check-costs.mjs
       - name: Staples and construction data
         run: cd web && node scripts/check-datasets.mjs
+      - name: Illustration set
+        run: pip install pillow >/dev/null && cd web && python3 scripts/check-icons.py
       - name: Page budget (Cloudflare Pages limit is 20,000 files)
         run: |
           cd web && npm install --no-audit --no-fund >/dev/null 2>&1

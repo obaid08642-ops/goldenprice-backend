@@ -45,12 +45,14 @@
     {
       "name": "philoro price list (Goldbarren)",
       "url": "https://philoro.at/preisliste/goldbarren",
-      "what": "Gold bar ask by size vs live spot, read automatically 2026-11-27"
+      "what": "Gold bar ask by size vs live spot, read automatically 2026-11-27",
+      "quote": "philoro price list (Goldbarren): Goldbarren 1000 g, 104.617,02 EUR / 111.135,48 EUR"
     },
     {
       "name": "Wikipedia EU VAT rates",
       "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
-      "what": "Standard VAT rate AT 20% (applied to jewelry; read 2026-11-27)"
+      "what": "Standard VAT rate AT 20% (applied to jewelry; read 2026-11-27)",
+      "quote": "philoro price list (Goldbarren): Goldbarren 1000 g, 104.617,02 EUR / 111.135,48 EUR"
     }
   ]
 }

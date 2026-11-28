@@ -34,7 +34,8 @@
     {
       "name": "PrivatBank bank gold bars",
       "url": "https://privatbank.ua/banking-metals",
-      "what": "Gold bar ask per gram by size vs live spot, read automatically 2026-11-27"
+      "what": "Gold bar ask per gram by size vs live spot, read automatically 2026-11-27",
+      "quote": "PrivatBank bank gold bars table: 1 g buy 6 420.00 / sell 7 380.00 UAH per gram; 100 g buy 5 465.00 / sell 6 080.00"
     }
   ],
   "notes": "Bar prices read automatically from the dealer's public price list.",

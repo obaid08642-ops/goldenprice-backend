@@ -73,3 +73,6 @@ File `web/src/data/construction.json`, same validator. Items: cement (unit bag50
 One language per PR, in this order: ar es fr de pt ru tr id hi zh ja ko it fa ur. Native-sounding wording, same keys and placeholders. Check: `check-i18n.mjs <code>`.
 
 Not in scope (no free consistent official source): car prices and real estate prices. Do not add them.
+
+### T9: illustration set (images)
+Generate the soft 3D "clay" illustration set described in `docs/icons-prompts.md` with your image generator and add the files to `web/public/icons3d/` (`<id>.webp` or `<id>.png`, id as in the tables there, square 512-1024 px, transparent background, under 160 KB each; remove the background if the generator cannot output transparency). First PR: the 9 category icons (precious, industrial, energy, agri, crypto, index, stock, forex, construction). Later PRs: the specific items, 10 per PR. One consistent style for the whole set: same generator, same style line, same lighting. No text, letters, logos or brand marks inside the pictures. Check: `cd web && python3 scripts/check-icons.py` (needs Pillow). I review the look; I will send back any that do not match the set.
