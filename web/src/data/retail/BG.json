@@ -1,0 +1,47 @@
+{
+  "country": "BG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 9.8
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 20% (Ministry of Finance, VAT Act art. 66); investment gold exempt (VAT Act art. 160). Tavex BG, 27 Nov 2026: 1 g house bar sell 123 EUR, buy 111 EUR = 9.8% buyback discount. Prices dual-displayed EUR/BGN before euro adoption (1 Jan 2026). No primary-page spot read, so premiums empty; duty, making, used-gold null.",
+  "sources": [
+    {
+      "name": "Ministry of Finance (minfin.bg) - VAT rates",
+      "url": "https://www.minfin.bg/bg/790",
+      "what": "Read 2026-11-28: the standard rate of 20% (VAT Act art. 66) applies to taxable supplies, imports and intra-EU acquisitions unless zero/reduced-rated",
+      "quote": "Стандартна ставка- 20 % (по чл. 66 от ЗДДС) се прилага за облагаеми доставки в страната, внос на стоки и вътреобщностни придобивания"
+    },
+    {
+      "name": "Ministry of Finance (minfin.bg) - Value Added Tax Act, art. 160",
+      "url": "https://www.minfin.bg/upload/60566/Value_Added_Tax_Act.pdf",
+      "what": "Read 2026-11-28: art. 160(1) - supplies concerning investment gold shall be exempt",
+      "quote": "Article 160. (1) Supplies concerning investment gold shall be exempt where, for the purposes of this Act, the said supplies are: 1. supplies of investment gold"
+    },
+    {
+      "name": "Tavex Bulgaria - 1 g Tavex Gold Bar",
+      "url": "https://tavex.bg/en/gold/1-gram-tavex-gold-bar/",
+      "what": "Dealer's own prices read 27 Nov 2026: We sell 123.00 EUR / We buy 111.00 EUR, stated spread 9.76% - bar buyback discount typical 9.8%. Prices dual-displayed in EUR and BGN."
+    }
+  ]
+}

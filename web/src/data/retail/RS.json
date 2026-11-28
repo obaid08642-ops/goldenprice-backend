@@ -1,0 +1,56 @@
+{
+  "country": "RS",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1g": 25.7,
+      "2g": 16.4,
+      "5g": 9.1,
+      "10g": 6.1,
+      "20g": 4.7,
+      "31.1g": 5.0,
+      "50g": 3.7,
+      "100g": 3.5
+    },
+    "barBuybackDiscountPct": {
+      "typical": 4.7
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 20% general rate (VAT Act art. 23; Tax Administration bulletin); no VAT on supply/import of investment gold (VAT Act art. 36b; Tax Administration rulebook). GAGA (Novi Sad), 27 Nov 2026: own spot 12,579.50 RSD/g; Argor-Heraeus sell vs spot: 1 g +25.7%, 10 g +6.1%, 100 g +3.5%. Buyback 12,578 RSD/g flat = 4.7% under the 1 oz sell price. Duty and making null.",
+  "sources": [
+    {
+      "name": "Tax Administration (purs.gov.rs) - Investment gold VAT rulebook (under VAT Act art. 36b)",
+      "url": "https://purs.gov.rs/upload/media/2025/2/4/357651/pravilnikinvzlato.pdf",
+      "what": "Read 2026-11-28: rulebook art. 4 notes VAT is not charged on the turnover of investment gold in accordance with art. 36b of the VAT Act",
+      "quote": "напомену да се на промет инвестиционог злата не обрачунава ПДВ у складу са чланом 36б Закона"
+    },
+    {
+      "name": "Tax Administration (purs.gov.rs) - Bulletin on the 20% general VAT rate (VAT Act art. 23)",
+      "url": "http://purs.gov.rs/upload/media/2025/2/4/606007/Biltenfebruar2013.pdf",
+      "what": "Read 2026-11-28: for supplies from 1 Oct 2012 the rate of 20% applies under art. 23 of the VAT Act (the general rate is unchanged since)",
+      "quote": "За промет добара и услуга који се врши од 1. октобра 2012. године, примењује се стопа од 20% сходно члану 23. Закона о ПДВ."
+    },
+    {
+      "name": "Menjacnice GAGA (Novi Sad) - Gold bars price list",
+      "url": "https://www.menjacnicegaga.rs/hu/investiciono-zlato-i-srebro/zlatne-poluge",
+      "what": "Dealer's own list read 27 Nov 2026: stated exchange (spot) price 12,579.50 RSD/g; Argor-Heraeus sell/buyback in RSD - 1 g 15,808/12,578; 2 g 29,278/25,156; 5 g 68,648/62,891; 10 g 133,410/125,782; 20 g 263,397/251,565; 1 oz 410,732/391,227; 50 g 652,495/628,912; 100 g 1,302,463/1,257,824. Premiums and buyback discount calculated from these figures vs the stated spot."
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "country": "HR",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 3.5
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 25,
+    "vatBullionPct": 25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Standard VAT 25% and investment gold exempt under the VAT Act (Zakon o PDV-u, arts. 38 and 114, Narodne novine). Plemenit (Zagreb), 27 Nov 2026 23:15: 1 oz bar sell 3,441.80 EUR, buyback 3,320.59 EUR = 3.5% buyback discount (1 g: 23.0%; 5 g: 10.1%; 50 g: 4.0%). Premiums empty: no spot read on a primary page. Duty, making and used-gold null.",
+  "sources": [
+    {
+      "name": "Narodne novine (official gazette) - VAT Act (Zakon o PDV-u), NN 73/2013",
+      "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2013_06_73_1451.html",
+      "what": "Read 2026-11-28: art. 38(1) VAT is charged at 25%; art. 114(a) exempts supply, intra-EU acquisition and import of investment gold",
+      "quote": "PDV se obračunava i plaća po stopi 25%. PDV-a je oslobođeno sljedeće: a) isporuka, stjecanje unutar Europske unije i uvoz investicijskog zlata"
+    },
+    {
+      "name": "Plemenit (Zagreb) - Fresh prices of investment gold and bars",
+      "url": "https://plemenit.hr/cijene/najsvjezije-cijene-zlata/",
+      "what": "Dealer sell list (physical delivery) formed 27.11.2026 23:15: 1 g 140.35 EUR, 5 g 589.11 EUR, 1 oz 3,441.80 EUR, 50 g 5,534.85 EUR, 100 g 10,964.16 EUR, 1 kg 109,005.01 EUR."
+    },
+    {
+      "name": "Plemenit (Zagreb) - Buyback of investment and scrap gold and silver",
+      "url": "https://plemenit.hr/investicijsko-zlato/otkup-zlatnih-poluga-i-zlatnika-kako-prodati/",
+      "what": "Dealer buyback prices formed 27.11.2026 23:15: 1 g bar 108.01 EUR, 5 g 529.37 EUR, 1 oz 3,320.59 EUR, 50 g 5,315.03 EUR - vs sell list gives buyback discount 3.5% typical (1 oz)."
+    }
+  ]
+}

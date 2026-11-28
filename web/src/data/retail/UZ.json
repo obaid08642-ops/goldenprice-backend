@@ -1,0 +1,41 @@
+{
+  "country": "UZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 16.1
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 12% (Tax Code art. 258, lex.uz). Jewellery is VAT-taxable: the consolidated Code has no jewellery exemption, and its transitional rule taxes only the margin over the metal/stone value until 1 Jan 2028. Central Bank 999.9 bars (5-100 g), 27 Nov 2026: buyback 16.1% below sell at all sizes. No primary spot, premiums empty.",
+  "sources": [
+    {
+      "name": "lex.uz (official legislation database) - Tax Code of Uzbekistan, art. 258",
+      "url": "https://lex.uz/docs/4674902",
+      "what": "Read 2026-11-28: art. 258 - unless Chapter 36 provides otherwise, the tax rate is set at 12 percent; the consolidated text contains no VAT exemption for jewellery sales",
+      "quote": "258-модда. Солиқ ставкалари — Агар ушбу Кодекснинг 36-бобида бошқача қоида белгиланмаган бўлса, солиқ ставкаси 12 фоиз миқдорида белгиланади."
+    },
+    {
+      "name": "Central Bank of the Republic of Uzbekistan - Gold Bar Selling and Buyback Prices",
+      "url": "https://cbu.uz/en/banknotes-coins/gold-bars/prices/",
+      "what": "Daily sell/buyback prices read for 27 Nov 2026 (page updated 09:54), buyback for intact packaging: 5 g sell 8,138,000 / buyback 6,828,000 UZS; 10 g 16,277,000 / 13,656,000; 20 g 32,553,000 / 27,312,000; 50 g 81,383,000 / 68,279,000; 100 g 162,767,000 / 136,558,000. Buyback is 16.1% below the selling price at every size."
+    }
+  ]
+}

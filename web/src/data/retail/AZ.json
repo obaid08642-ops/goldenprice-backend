@@ -1,0 +1,39 @@
+{
+  "country": "AZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 18% (Tax Code art. 173.1, taxes.gov.az); no investment-gold exemption - only delivery of gold to the Central Bank is zero-rated (art. 165.1.5), so retail bullion and jewellery carry 18%. CBAR bullion coins are sold by agent banks under price caps (sell at most spot +10%, repurchase at spot minus up to 3%); caps are not a dealer list, so premiums are null.",
+  "sources": [
+    {
+      "name": "State Tax Service (taxes.gov.az) - Tax Code of Azerbaijan, arts. 173 and 165",
+      "url": "https://www.taxes.gov.az/uploads/qanun/2016/mecelle_eng.pdf",
+      "what": "Read 2026-11-28: art. 173.1 VAT shall be 18 percent of each taxable operation and taxable import; art. 165.1.5 zero-rates only the delivery of gold and other valuables to the Central Bank",
+      "quote": "Article 173. VAT rate 173.1. VAT shall be 18 percent of each taxable operation and taxable import."
+    },
+    {
+      "name": "Central Bank of the Republic of Azerbaijan - Bullion coin sales agents",
+      "url": "https://cbar.az/page-838/bullion-coin-sales-agents?language=en",
+      "what": "CBAR has issued 999.9 gold bullion coins (1 ounce, 1/2 ounce, 1/4 ounce, 1/10 ounce) since 10 May 2023, sold and repurchased through agent banks Bank of Baku OJSC and TuranBank OJSC. Agents must set the selling price at the limit of 'gold price + 10%' and the repurchase price at 'gold price - up to 3%'."
+    }
+  ]
+}
