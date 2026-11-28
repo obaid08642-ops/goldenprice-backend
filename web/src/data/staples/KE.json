@@ -1,0 +1,37 @@
+{
+  "cur": "KES",
+  "items": {
+    "sugar": {
+      "value": 163.84,
+      "unit": "kg",
+      "date": "2026-10-31",
+      "src": "Kenya National Bureau of Statistics - CPI and Inflation Report, October 2026, Table 3 national average retail prices",
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2026/10/Kenya-Consumer-Price-Indices-and-Inflation-Rates-October-2026.pdf",
+      "quote": "the average prices of sugar (1 Kg) and oranges (1 Kg) dropped, with sugar falling from KSh 165.79 to KSh 163.84"
+    },
+    "cooking_oil": {
+      "value": 361.04,
+      "unit": "litre",
+      "date": "2026-10-31",
+      "src": "Kenya National Bureau of Statistics - CPI and Inflation Report, October 2026, Table 3 national average retail prices",
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2026/10/Kenya-Consumer-Price-Indices-and-Inflation-Rates-October-2026.pdf",
+      "quote": "the prices of a litre of cooking oil (salad) edged up from KSh 359.36 to KSh 361.04"
+    },
+    "milk": {
+      "value": 80.58,
+      "unit": "litre",
+      "date": "2026-10-31",
+      "src": "Kenya National Bureau of Statistics - CPI and Inflation Report, October 2026, Table 3 national average retail prices",
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2026/10/Kenya-Consumer-Price-Indices-and-Inflation-Rates-October-2026.pdf",
+      "quote": "Fresh unpacketed cow milk / Fresh Cream 1 Litre 72.03 77.54 80.58"
+    },
+    "beef": {
+      "value": 789.29,
+      "unit": "kg",
+      "date": "2026-10-31",
+      "src": "Kenya National Bureau of Statistics - CPI and Inflation Report, October 2026, Table 3 national average retail prices",
+      "url": "https://www.knbs.or.ke/wp-content/uploads/2026/10/Kenya-Consumer-Price-Indices-and-Inflation-Rates-October-2026.pdf",
+      "quote": "Beef - With Bones 1 Kg 701.67 782.68 789.29"
+    }
+  }
+}
