@@ -1,0 +1,40 @@
+{
+  "country": "PY",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA general rate 10% (Ley 6380/2019; DNIT binding ruling). The complete art. 100 exemption list, read in the DNIT official IVA guide, covers foreign currency and securities but contains no gold, precious metals or bullion item, so bullion takes 10%. Import duty HS 7108 null (no openable official line in the national tariff).",
+  "sources": [
+    {
+      "name": "Dirección Nacional de Ingresos Tributarios (dnit.gov.py) - Consulta Vinculante on the IVA rate (Ley 6380/2019)",
+      "url": "https://www.dnit.gov.py/documents/20123/422349/TASA+DEL+%28IVA%29+ESTABLECIDO+PARA+EL+PRODUCTO+AGR%C3%8DCOLA+EN+EL+ESTADO+NATURAL.+N%C2%B0+796+CV.pdf/9b5b38b7-4be0-9520-d0ec-2c6bd2c906fc?t=1770985414908.pdf",
+      "what": "Read 2026-11-28: the general IVA rate of 10% applies (the 5% categories in art. 90 do not cover jewellery)",
+      "quote": "se aplicará la tasa general del diez por ciento (10%) del IVA."
+    },
+    {
+      "name": "Dirección Nacional de Ingresos Tributarios (dnit.gov.py) - IVA guide (art. 100 exemptions, Ley 6380/2019)",
+      "url": "https://www.dnit.gov.py/documents/47797/47809/Presentaci%C3%B3n+sobre+Nociones+B%C3%A1sicas+IVA+General.pdf/6e330997-eaa7-d06c-8f4a-6c92812e92ad?t=1681835349434",
+      "what": "Read 2026-11-28: the art. 100 exempt sales begin with foreign currency and public/private securities; the full list contains no gold or precious-metals item",
+      "quote": "Moneda extranjera y valores públicos y privados, incluida la enajenación de acciones o cuotas partes de sociedades."
+    }
+  ]
+}
