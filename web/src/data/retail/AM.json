@@ -1,0 +1,45 @@
+{
+  "country": "AM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "5g": 27.2,
+      "10g": 26.3,
+      "20g": 25.5,
+      "50g": 22.5,
+      "100g": 19.9
+    },
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Tax Code of Armenia (ARLIS): VAT 20% (art. 63), but art. 64(2)(26) exempts alienation of precious metals other than products made of them - bullion exempt, jewellery 20% (corrected round 4). ArmSwissBank offers 21 Nov 2026 vs its XAU offer 41,477 AMD/g: 5 g +27.2%, 10 g +26.3%, 20 g +25.5%, 50 g +22.5%, 100 g +19.9%. No bar bid, buyback null; duty null.",
+  "sources": [
+    {
+      "name": "ARLIS (official legal database) - Tax Code of the Republic of Armenia (HO-165-N), arts. 63-64",
+      "url": "https://www.arlis.am/en/acts/229632/download/act",
+      "what": "Read 2026-11-28: art. 63(1) sets VAT at 20%; art. 64(2)(26) exempts alienation of precious metals except products (items) made of precious metals, including jewellery",
+      "quote": "VAT against the tax base of transactions and operations considered to be the object of VAT taxation as prescribed by Article 60 of the Code shall be calculated at the rate of 20%"
+    },
+    {
+      "name": "ArmSwissBank - Armenian Financial Market (bank quotes)",
+      "url": "https://www.armswissbank.am/en/markets/",
+      "what": "Bank's published quotes timestamped 21.11.2026: gold bar OFFER prices - 5 g AMD 263,800; 10 g AMD 523,900; 20 g AMD 1,041,400; 50 g AMD 2,540,300; 100 g AMD 4,973,300 - and XAU (gold) non-cash BID AMD 40,429 / OFFER AMD 41,477 per gram on the same page. Premiums = bar offer per gram / XAU offer per gram - 1. No bar bid is published."
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "country": "GE",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": {
+      "typical": 7.6
+    },
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Tax Code of Georgia (matsne, art. 166): VAT rate 18%; no investment-gold exemption in the Code, so bullion and jewellery pay 18%. NBG gold-bar certificates, 27 Nov 2026: 20 g buy 5,785.32 / sell 6,262.46 GEL; 1,000 g buy 289,265.80 / sell 313,122.77 - 7.6% buyback discount at both sizes. No primary spot, premiums empty; duty null.",
+  "sources": [
+    {
+      "name": "Legislative Herald of Georgia (matsne.gov.ge) - Tax Code of Georgia, art. 166",
+      "url": "https://matsne.gov.ge/en/document/view/1043717?publication=247",
+      "what": "Read 2026-11-28: art. 166 sets the VAT rate at 18%; the exemption articles (170-172) contain no investment-gold exemption",
+      "quote": "The VAT rate shall be 18%."
+    },
+    {
+      "name": "National Bank of Georgia - Gold Bars Certificates",
+      "url": "https://nbg.gov.ge/en/page/gold-bars-certificates",
+      "what": "NBG certificate prices updated 27 Nov 2026 for 999.9 gold bars: 20 g purchase GEL 5,785.32 / sales GEL 6,262.46; 1,000 g purchase GEL 289,265.80 / sales GEL 313,122.77. Buyback discount = (sales - purchase) / sales = 7.6% at both sizes."
+    }
+  ]
+}

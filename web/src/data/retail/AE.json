@@ -1,73 +1,39 @@
 {
- "confidence": "medium",
- "defaultKarat": 22,
- "gold": {
-  "vatJewelryPct": 5,
-  "vatBullionPct": 0,
-  "importDutyPct": null,
-  "makingPct": {
-   "typical": 8,
-   "min": 3,
-   "max": 20
+  "country": "AE",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 5,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barPremiumPct": {
-   "1g": 15.5,
-   "2.5g": 11.6,
-   "5g": 8.3,
-   "10g": 7.3,
-   "20g": 6.6,
-   "31.1g": 6.5,
-   "50g": 5.7,
-   "100g": 5.7,
-   "250g": 5.6,
-   "1000g": 5.3
+  "silver": {
+    "vatJewelryPct": 5,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
- },
- "silver": {
-  "vatJewelryPct": null,
-  "vatBullionPct": null,
-  "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
- },
- "notes": "Retail jewelry carries 5% VAT on full value incl. making; investment bullion (99%+) is zero-rated. Dubai retail board (24K 437.50 AED/g) already sits about 1.7% above spot. Bar premiums are Gold Trade Dubai online asks (PAMP/Emirates Gold) vs spot; large-bar premiums look high, so treat as upper-end retail. Making charge is the negotiable part.",
- "sources": [
-  {
-   "name": "Khaleej Times (FTA clarification)",
-   "url": "https://www.khaleejtimes.com/business/vat-in-uae/fta-clarifies-vat-on-gold-diamond-deals-in-uae",
-   "what": "Retail gold and jewelry subject to 5% VAT; reverse charge only B2B; investment-grade metals zero-rated"
-  },
-  {
-   "name": "Meydan Free Zone VAT on gold guide",
-   "url": "https://www.meydanfz.ae/blog/vat-gold-jewellery-uae",
-   "what": "Investment bullion 99%+ zero-rated; jewelry 5% on full sale value including making"
-  },
-  {
-   "name": "Gold Trade Dubai bar store",
-   "url": "https://www.goldtrade.ae/store/gold-bars-and-coins",
-   "what": "27 Nov 2026 asks, PAMP 1 g AED 497.13 to 100 g 45,471, Emirates Gold 1 kg 453,152; premium vs spot $3,644.22/oz x 3.6725 = 430.3 AED/g"
-  },
-  {
-   "name": "Al Romaizan live gold rates",
-   "url": "https://alromaizan.com/gold-rates",
-   "what": "27 Nov 2026 08:00 Dubai City of Gold board 24K 437.50 AED/g, 10 g 4,375"
-  },
-  {
-   "name": "Gold24.ae making charges",
-   "url": "https://gold24.ae/making-charges",
-   "what": "Dubai making charge ranges by piece type about 1-30%, 5-12% typical for regular jewelry, negotiable 20-25%"
-  },
-  {
-   "name": "Dubai Online gold rate",
-   "url": "https://www.dubai-online.com/essential/gold-rate/",
-   "what": "27 Nov 2026 retail per-gram rates (24K 437.50, 22K 405.25 AED); only making charge is negotiable"
-  }
- ],
- "country": "AE",
- "tier": 1,
- "verifiedAt": "2026-11-27"
+  "notes": "Jewellery VAT 5% on full value (UAE Government portal: the VAT rate is 5%); investment precious metals (99%+, tradeable form) zero-rated (MoF Executive Regulation art. 36). Bar premiums removed in this pass: the only available reference was a dealer-published retail board rate, not a spot read on a primary page. Making % null: no dealer's own page states one.",
+  "sources": [
+    {
+      "name": "UAE Ministry of Finance - Executive Regulation of Federal Decree-Law No. 8 of 2017 (Cabinet Decision No. 52 of 2017), Article 36",
+      "url": "https://mof.gov.ae/wp-content/uploads/2024/10/Executive-Regulation-of-Federal-Decree-Law-No-8-of-2017.pdf",
+      "what": "Article 36: 'The supply or import of investment precious metals shall be zero-rated', where investment precious metals means gold, silver and platinum of a purity of 99 percent or more in a form tradeable in global bullion markets - gold and silver bullion VAT 0%."
+    },
+    {
+      "name": "The Official Portal of the UAE Government - Value Added Tax (VAT)",
+      "url": "https://beta.government.ae/en/information-and-services/finance-and-investment/taxation/valueaddedtaxvat",
+      "what": "Read 2026-11-28: VAT was introduced on 1 Jan 2018 and the rate of VAT is 5 per cent - jewellery, which does not meet the investment-metal test, is taxed at 5%",
+      "quote": "Value Added Tax (VAT) was introduced in the UAE on 1 January 2018. The rate of VAT is 5 per cent."
+    }
+  ]
 }
