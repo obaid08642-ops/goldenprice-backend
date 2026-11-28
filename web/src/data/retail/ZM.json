@@ -1,0 +1,40 @@
+{
+  "country": "ZM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": 16,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": 16,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 16% (ZRA guides). Gold bullion is exempt ONLY when supplied to a bank (VAT (Exemption) Order, Group 8 - Metals, per the ZRA VAT Liability Guide, which expressly excludes coins, fine gold and jewellery); retail bullion therefore takes 16%. Silver appears in no exemption group: 16%. Import duty HS 7108 null (ZRA tariff book not openly readable).",
+  "sources": [
+    {
+      "name": "Zambia Revenue Authority (zra.org.zm) - VAT Guide 2022",
+      "url": "https://www.zra.org.zm/wp-content/uploads/2022/06/VAT-Guide-2022..pdf",
+      "what": "Read 2026-11-28: the VAT rate is 16%; all supplies are standard rated unless expressly exempted or zero rated",
+      "quote": "The VAT rate is 16%:"
+    },
+    {
+      "name": "Zambia Revenue Authority (zra.org.zm) - VAT Liability Guide 2022 (VAT (Exemption) Order, Group 8 - Metals)",
+      "url": "https://www.zra.org.zm/wp-content/uploads/2022/06/VAT-Liability-Guide-2022..pdf",
+      "what": "Read 2026-11-28: the only metals exemption is the supply to a bank of gold in bullion form; the guide notes it does not apply to gold coins, fine gold, gold jewellery or gold in any other form",
+      "quote": "The supply to a bank of gold in bullion form."
+    }
+  ]
+}
