@@ -1,0 +1,34 @@
+{
+  "country": "MG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA standard rate 20% (Code des Impôts, art. 06.01.12). The art. 06.01.06 exemption list contains no general investment-gold exemption; its only gold item exempts gold sold to the Central Bank of Madagascar for the national gold reserve, so retail bullion carries 20%. Import duty HS 7108 null: line rates exist only in the customs eTariff tool.",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts - Code des Impôts suivant la Loi de Finances 2025 (portal.impots.mg)",
+      "url": "https://portal.impots.mg/textes/textes/2025-02-06--N-2025-MEF.SG.DGI-Ref-HIH9EC-3OPLT3.pdf",
+      "what": "Read 2026-11-28: art. 06.01.12 fixes the normal TVA rate at 20%; art. 06.01.06 item 10 exempts only the sale of gold to the Central Bank for the national gold reserve",
+      "quote": "Article 06.01.12.- Le taux normal de la Taxe sur la Valeur Ajoutée est fixé à 20p.100. La vente d'or auprès de la Banque Centrale de Madagascar en vue de la constitution de la réserve nationale d'or ;"
+    }
+  ]
+}

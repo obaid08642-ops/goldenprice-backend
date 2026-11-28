@@ -1,0 +1,34 @@
+{
+  "country": "NE",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": 19,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": 19,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA standard rate 19% (CGI art. 226, DGI-hosted text of Loi 2012-37). The art. 219 exemption list (read in full) contains no gold or precious-metals item, so jewellery and bullion take 19%. Note: a recast CGI (Ordonnance 2025-22, effective 1 Jan 2026) could not be opened on an official page; the rate is as in the DGI-hosted code. Import duty HS 7108 null (UEMOA TEC line not openable).",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts - Code Général des Impôts, Loi n° 2012-37 (impots.gouv.ne)",
+      "url": "https://www.impots.gouv.ne/media/telech/CGI v2013.pdf",
+      "what": "Read 2026-11-28: art. 226 sets the normal VAT rate at 19%; the art. 219 exemption list contains no gold, precious-metals or chapter-71 item",
+      "quote": "Art. 226- Le taux normal de la taxe sur la valeur ajoutée est de 19%."
+    }
+  ]
+}

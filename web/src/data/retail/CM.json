@@ -1,0 +1,40 @@
+{
+  "country": "CM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 19.25,
+    "vatBullionPct": 19.25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 19.25,
+    "vatBullionPct": 19.25,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT general rate 17.5% (CGI art. 142) plus 10% communal additional centimes = 19.25% effective, confirmed for 2026 by a MINFI/DGI order. The CGI art. 128 exemption list (read in full) contains no gold or precious-metal item, so jewellery and bullion are taxed at the general rate. Import duty HS 7108 null: no official CEMAC tariff page stating the line could be opened.",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts - Code Général des Impôts (official edition, updated 1 Jan 2023)",
+      "url": "https://www.impots.cm/fr/actualites/code-general-des-impots-mis-jour-au-1er-janvier-2023",
+      "what": "Read 2026-11-28: art. 142 sets the general VAT rate at 17.5%, applicable to all operations not zero-rated; art. 128 exemption list contains no gold item; art. 129(1) subjects all non-exempt operations to VAT",
+      "quote": "Taxe sur la Valeur Ajoutée : Taux général …………...... 17,5 %. Le taux général de la TVA s’applique à toutes les opérations non soumises au taux zéro."
+    },
+    {
+      "name": "MINFI / DGI - Arrêté RTS 2026 (impots.cm)",
+      "url": "https://www.impots.cm/sites/default/files/documents/arr%C3%AAt%C3%A9%20RTS%202026%20VF.pdf",
+      "what": "Read 2026-11-28: the order lists the effective VAT rate applied in 2026 as 19.25% (17.5% + 10% centimes additionnels communaux)",
+      "quote": "19,25% pour la TVA;"
+    }
+  ]
+}
