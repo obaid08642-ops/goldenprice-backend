@@ -1,6 +1,6 @@
 {
   "country": "RS",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 14,
@@ -33,17 +33,19 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 20% standard (PwC); no VAT on supply/import of investment gold (VAT Act Art. 36b). GAGA (Novi Sad), 27 Nov 2026: own spot 12,579.50 RSD/g; Argor-Heraeus sell vs spot: 1 g 15,808 RSD (+25.7%), 10 g 133,410 (+6.1%), 100 g 1,302,463 (+3.5%). Buyback is 12,578 RSD/g for all sizes = 4.7% under the 1 oz sell price (410,732 RSD). Duty and making null.",
+  "notes": "VAT 20% general rate (VAT Act art. 23; Tax Administration bulletin); no VAT on supply/import of investment gold (VAT Act art. 36b; Tax Administration rulebook). GAGA (Novi Sad), 27 Nov 2026: own spot 12,579.50 RSD/g; Argor-Heraeus sell vs spot: 1 g +25.7%, 10 g +6.1%, 100 g +3.5%. Buyback 12,578 RSD/g flat = 4.7% under the 1 oz sell price. Duty and making null.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Serbia, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/serbia/corporate/other-taxes",
-      "what": "The standard VAT rate is 20% for most taxable supplies (10% reduced for listed basics); customs duty rates under the Law on Customs Tariff range 0% to 57.6% with no gold-specific rate stated."
+      "name": "Tax Administration (purs.gov.rs) - Investment gold VAT rulebook (under VAT Act art. 36b)",
+      "url": "https://purs.gov.rs/upload/media/2025/2/4/357651/pravilnikinvzlato.pdf",
+      "what": "Read 2026-11-28: rulebook art. 4 notes VAT is not charged on the turnover of investment gold in accordance with art. 36b of the VAT Act",
+      "quote": "напомену да се на промет инвестиционог злата не обрачунава ПДВ у складу са чланом 36б Закона"
     },
     {
-      "name": "Law on Value Added Tax (Zakon o PDV), Art. 36b - Investment gold (statute text)",
-      "url": "https://www.paragraf.rs/propisi/zakon-o-porezu-na-dodatu-vrednost.html",
-      "what": "Art. 36b defines investment gold (bars/plates >= 995/1000 fine; coins >= 900/1000 minted after 1800) and states: 'PDV se ne placa na promet i uvoz investicionog zlata' - VAT is not payable on supply or import of investment gold, so gold vatBullionPct 0."
+      "name": "Tax Administration (purs.gov.rs) - Bulletin on the 20% general VAT rate (VAT Act art. 23)",
+      "url": "http://purs.gov.rs/upload/media/2025/2/4/606007/Biltenfebruar2013.pdf",
+      "what": "Read 2026-11-28: for supplies from 1 Oct 2012 the rate of 20% applies under art. 23 of the VAT Act (the general rate is unchanged since)",
+      "quote": "За промет добара и услуга који се врши од 1. октобра 2012. године, примењује се стопа од 20% сходно члану 23. Закона о ПДВ."
     },
     {
       "name": "Menjacnice GAGA (Novi Sad) - Gold bars price list",

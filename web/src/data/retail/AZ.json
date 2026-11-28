@@ -22,12 +22,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 18% (PwC); no investment-gold exemption - only supplies of gold to the Central Bank are zero-rated, so retail bullion and jewellery carry 18%. CBAR's 999.9 bullion coins (1/10-1 oz) are sold by agent banks (Bank of Baku, TuranBank) under Central Bank caps: sell at most gold price +10%, repurchase at gold price minus up to 3%; caps are not a dealer list, so premium fields are null.",
+  "notes": "VAT 18% (Tax Code art. 173.1, taxes.gov.az); no investment-gold exemption - only delivery of gold to the Central Bank is zero-rated (art. 165.1.5), so retail bullion and jewellery carry 18%. CBAR bullion coins are sold by agent banks under price caps (sell at most spot +10%, repurchase at spot minus up to 3%); caps are not a dealer list, so premiums are null.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Azerbaijan, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/azerbaijan/corporate/other-taxes",
-      "what": "The standard rate of VAT is 18%; zero rating covers the supply of gold and other valuables to the Central Bank of Azerbaijan, and no retail investment-gold exemption is listed. Customs duty rates vary between 0% and 15% depending on the type of goods, with no gold-specific rate stated. Imported gold and jewellery are excise goods, with rates set by the executive authority (not stated)."
+      "name": "State Tax Service (taxes.gov.az) - Tax Code of Azerbaijan, arts. 173 and 165",
+      "url": "https://www.taxes.gov.az/uploads/qanun/2016/mecelle_eng.pdf",
+      "what": "Read 2026-11-28: art. 173.1 VAT shall be 18 percent of each taxable operation and taxable import; art. 165.1.5 zero-rates only the delivery of gold and other valuables to the Central Bank",
+      "quote": "Article 173. VAT rate 173.1. VAT shall be 18 percent of each taxable operation and taxable import."
     },
     {
       "name": "Central Bank of the Republic of Azerbaijan - Bullion coin sales agents",

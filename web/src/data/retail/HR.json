@@ -1,6 +1,6 @@
 {
   "country": "HR",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 14,
@@ -24,17 +24,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Standard VAT 25% (PwC); investment gold exempt under Art. 346, Directive 2006/112/EC. Plemenit (Zagreb), 27 Nov 2026 23:15: 1 oz bar sell 3,441.80 EUR, buyback 3,320.59 EUR = 3.5% buyback discount (1 g: 23.0%; 5 g: 10.1%; 50 g: 4.0%). Premiums left empty: no spot read on a primary page. Duty, making and used-gold null.",
+  "notes": "Standard VAT 25% and investment gold exempt under the VAT Act (Zakon o PDV-u, arts. 38 and 114, Narodne novine). Plemenit (Zagreb), 27 Nov 2026 23:15: 1 oz bar sell 3,441.80 EUR, buyback 3,320.59 EUR = 3.5% buyback discount (1 g: 23.0%; 5 g: 10.1%; 50 g: 4.0%). Premiums empty: no spot read on a primary page. Duty, making and used-gold null.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Croatia, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/croatia/corporate/other-taxes",
-      "what": "The general VAT rate is 25%; the Croatian VAT system is in line with the EU VAT Directive; customs legislation fully harmonised with the EU (no gold-specific duty rate stated)."
-    },
-    {
-      "name": "Council Directive 2006/112/EC, Chapter 5 - Special scheme for investment gold, Art. 346",
-      "url": "https://www.legislation.gov.uk/eudr/2006/112/title/XII/chapter/5/2010-01-15?view=extent",
-      "what": "Member States shall exempt from VAT the supply, intra-Community acquisition and importation of investment gold (bars/wafers of purity >= 995 thousandths) - gold vatBullionPct 0."
+      "name": "Narodne novine (official gazette) - VAT Act (Zakon o PDV-u), NN 73/2013",
+      "url": "https://narodne-novine.nn.hr/clanci/sluzbeni/full/2013_06_73_1451.html",
+      "what": "Read 2026-11-28: art. 38(1) VAT is charged at 25%; art. 114(a) exempts supply, intra-EU acquisition and import of investment gold",
+      "quote": "PDV se obračunava i plaća po stopi 25%. PDV-a je oslobođeno sljedeće: a) isporuka, stjecanje unutar Europske unije i uvoz investicijskog zlata"
     },
     {
       "name": "Plemenit (Zagreb) - Fresh prices of investment gold and bars",
