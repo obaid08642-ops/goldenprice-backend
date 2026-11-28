@@ -1,0 +1,29 @@
+{
+  "cur": "KRW",
+  "items": {
+    "sugar": {
+      "value": 2395,
+      "unit": "kg",
+      "date": "2026-11-24",
+      "src": "Korea Consumer Agency - Cham-Gagyeok price portal, nationwide store-panel average (branded reference product)",
+      "url": "https://www.price.go.kr/tprice/portal/pricenews/pricereport/priceReportList.do",
+      "quote": "백설 하얀설탕(1kg) | 2,280 원 | 2,990 원 | 131% | 2,395 원"
+    },
+    "wheat_flour": {
+      "value": 1830,
+      "unit": "kg",
+      "date": "2026-11-24",
+      "src": "Korea Consumer Agency - Cham-Gagyeok price portal, nationwide store-panel average (branded reference product)",
+      "url": "https://www.price.go.kr/tprice/portal/pricenews/pricereport/priceReportList.do",
+      "quote": "백설 중력 밀가루(1kg) | 1,650 원 | 2,200 원 | 133% | 1,830 원"
+    },
+    "milk": {
+      "value": 3112,
+      "unit": "litre",
+      "date": "2026-11-24",
+      "src": "Korea Consumer Agency - Cham-Gagyeok price portal, nationwide store-panel average (branded reference product)",
+      "url": "https://www.price.go.kr/tprice/portal/pricenews/pricereport/priceReportList.do",
+      "quote": "서울우유 흰우유(1L) | 2,900 원 | 3,890 원 | 134% | 3,112 원"
+    }
+  }
+}
