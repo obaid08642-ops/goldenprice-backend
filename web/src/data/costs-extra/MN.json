@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "MNT",
+    "kwh": 184,
+    "period": "2026-06",
+    "src": "Energy Regulatory Commission of Mongolia - household tariff, single-rate meter first block up to 150 kWh/month, excl. VAT",
+    "url": "https://erc.gov.mn/en/tariffs",
+    "quote": "Households … Single-rate meter — up to 150 kWh | MNT/kWh | 184"
+  }
+}
