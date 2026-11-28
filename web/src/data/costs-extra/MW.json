@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "MWK",
+    "kwh": 79.9,
+    "period": "2026-01",
+    "src": "ESCOM (Electricity Supply Corporation of Malawi) tariff schedule effective 19 Jan 2026 - ET1 domestic prepaid single phase, first 50 kWh block",
+    "url": "https://www.escom.mw/wp-content/uploads/2026/03/REVISED-ELECTRICITY-TARIFF-SCHEDULE_COPY-JANUARY-2026.pdf",
+    "quote": "Electricity Tariff Schedule with effect from 19th January 2026 … First 50 kWh Unit Charge 71.35 79.90 … ET1 Domestic, Prepaid, Single Phase Supply"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "fuel": {
+    "cur": "USD",
+    "date": "2026-10-08",
+    "src": "Zimbabwe Energy Regulatory Authority (ZERA) maximum pump prices notice, 8 Oct 2026 - petrol blend E20 and diesel D50",
+    "url": "https://www.facebook.com/ZERAenergy/posts/pfbid0ZxHc4gVb2NvdwLLVcCxKGZZU6ghHTSjnRv8kKE653w57YigCjjS3VUMxjPVdJRw5l",
+    "quote": "showing 54.55 ZWG/litre and $2.04 US$/litre for Diesel, and 54.70 ZWG/litre and $2.05 US$/litre for Blend",
+    "petrol95": 2.05,
+    "diesel": 2.04,
+    "lpg": null
+  }
+}

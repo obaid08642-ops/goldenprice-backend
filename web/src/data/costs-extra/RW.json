@@ -1,0 +1,20 @@
+{
+  "fuel": {
+    "cur": "RWF",
+    "date": "2026-06-05",
+    "src": "Rwanda Utilities Regulatory Authority (RURA) communiqué of 5 Jun 2026 - maximum retail pump prices (gasoline, diesel), effective 6 Jun 2026",
+    "url": "https://www.facebook.com/reel/1648858253036389/",
+    "quote": "the maximum retail pump prices for petroleum products are revised to: Gasoline (Petrol) not exceeding 2,938 Frw/L, and Diesel not exceeding 2,927 Frw/L",
+    "petrol95": 2938,
+    "diesel": 2927,
+    "lpg": null
+  },
+  "electricity": {
+    "cur": "RWF",
+    "kwh": 89,
+    "period": "2025-10",
+    "src": "Rwanda Utilities Regulatory Authority (RURA) tariff notice effective 1 Oct 2025 - residential lifeline block 0-20 kWh per month, VAT exclusive",
+    "url": "https://www.facebook.com/RURA.Rwanda/posts/pfbid02ccA3SAZbsUamWYL3jPQcnWUXKXX35bHBfyAKde7m3rqeiX2hkHvAkhnwQN3Qhymhl",
+    "quote": "includes Table A listing tariffs (VAT exclusive, Frw/kWh) for residential customers (89, 310, 369) … effective as of 1 October 2025"
+  }
+}
