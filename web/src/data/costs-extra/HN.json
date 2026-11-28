@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "HNL",
+    "kwh": 4.9706,
+    "period": "2026-07",
+    "src": "Comisión Reguladora de Energía Eléctrica (CREE) - ENEE residential tariff structure as billed in Q3 2026, first block 0-50 kWh/month (the approved Q4 2026 increase is frozen under the Ley de Justicia Energética)",
+    "url": "https://www.cree.gob.hn/informe-de-4to-ajuste-tarifario-2026/",
+    "quote": "Primeros 50 kWh/mes 4.9706 Siguientes kWh/mes 6.4680"
+  }
+}
