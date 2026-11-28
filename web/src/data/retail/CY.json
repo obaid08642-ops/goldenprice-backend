@@ -1,0 +1,40 @@
+{
+  "country": "CY",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": 19,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 19% since 13 Jan 2014 (VAT Law 95(I)/2000, art. 17, CyLaw official text). Bullion EXEMPT under the investment-gold special scheme (art. 42A(1): supply, EU acquisition and import of investment gold are exempt transactions; definition art. 42A(2)). No provision exempts silver (19/19). Import duty 0% (EU CN 2026: HS 7108 'Free').",
+  "sources": [
+    {
+      "name": "VAT Law 95(I)/2000 (CyLaw official legislation database), arts. 17 and 42A",
+      "url": "https://www.cylaw.org/nomoi/enop/non-ind/2000_1_95/full.html",
+      "what": "Read 2026-11-28: VAT is charged at nineteen per cent (19%) from 13 January 2014, and art. 42A makes the supply/acquisition/import of investment gold an exempt transaction",
+      "quote": "Φ.Π.Α. επιβάλλεται με συντελεστή δεκαοκτώ τοις εκατόν (18%) για την περίοδο από 14 Ιανουαρίου 2013 μέχρι 12 Ιανουαρίου 2014 και με συντελεστή δεκαεννέα τοις εκατόν (19%) από 13 Ιανουαρίου 2014"
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28 (in the SI/LT pass): HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "MT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 18% (VAT Act Cap. 406, art. 19(1)). Bullion EXEMPT with credit: Fifth Schedule Part One item 8(2) exempts the supply of investment gold (definition in the Fourteenth Schedule: bars >=995, coins >=900 post-1800 legal tender); imports and intra-EU acquisitions likewise exempt. The Act's gold items are gold-only - silver 18/18. Import duty 0% (EU CN 2026: HS 7108 'Free').",
+  "sources": [
+    {
+      "name": "Value Added Tax Act, Cap. 406 (legislation.mt official consolidated text), art. 19(1) and Fifth Schedule",
+      "url": "https://legislation.mt/getpdf/6811d40a495e132a18426aea",
+      "what": "Read 2026-11-28: the tax on taxable supplies is 18 percent of the taxable value, and the supply of investment gold is an exempt-with-credit supply under the Fifth Schedule",
+      "quote": "The supply of investment gold, including investment gold represented by certificates for allocated or unallocated gold or traded on gold accounts and including, in particular, gold loans and swaps, involving a right of ownership or claim in respect of investment gold"
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28 (in the SI/LT pass): HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}
