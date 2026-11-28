@@ -1,0 +1,34 @@
+{
+  "country": "AG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 17,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 17,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "ABST standard rate 17% since 1 Jan 2024 (Revenue (Miscellaneous Provisions) Act 2023; the IRD FAQ showing 15% is obsolete). Bullion coded 17: the complete ABST Act was read, Schedules 4-5 in full - gold/jewellery appear nowhere. Silver 17/17. Duty null: the CARICOM CET gives HS 7108 only as a 0-5% band; applied rate unverified.",
+  "sources": [
+    {
+      "name": "Laws of Antigua and Barbuda (laws.gov.ag) - Revenue (Miscellaneous Provisions) Act 2023, s.2",
+      "url": "https://laws.gov.ag/wp-content/uploads/2024/02/No.-13-of-2023-Revenue-Miscellaneous-Provision-Act-2023.pdf",
+      "what": "Read 2026-11-28: in subsection 3(d) the figure 15 is deleted and 17 substituted (the ABST standard rate)",
+      "quote": "in subsection 3(d), by deleting the figure 15 (fifteen) and substituting the figure 17 (seventeen)"
+    }
+  ]
+}

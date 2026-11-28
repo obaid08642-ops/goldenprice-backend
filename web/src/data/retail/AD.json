@@ -1,0 +1,34 @@
+{
+  "country": "AD",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 4.5,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 4.5,
+    "vatBullionPct": 4.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IGI general rate 4.5% (Llei 11/2012 art. 57). Bullion 0: the law's investment-gold regime (Disposicio addicional quarta) taxes imports and physical deliveries of investment gold at 0% (bars >=995 fine; qualifying coins). Silver: plata/metalls preciosos appear nowhere in the law - 4.5/4.5. Duty null (EU customs union covers ch. 71, but no line-level page was opened).",
+  "sources": [
+    {
+      "name": "Portal Juridic del Principat d'Andorra - Llei 11/2012 de l'impost general indirecte, art. 57 and Disposicio addicional quarta",
+      "url": "http://portaljuridicandorra.ad/tiki-print.php?page=L2012011&display=pdf",
+      "what": "Read 2026-11-28: the general rate is 4.5%, and physical deliveries of investment gold are taxed at 0%",
+      "quote": "Els lliuraments físics d'or d'inversió estan subjectes a un tipus de gravamen del 0%."
+    }
+  ]
+}

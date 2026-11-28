@@ -1,0 +1,40 @@
+{
+  "country": "BZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": 5,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GST 12.5% (GST Act Cap. 63 s.9(1); an older BTS booklet still printing 10% is pre-2010). Bullion coded 12.5: the complete Act text including Schedules I-V was searched - gold, bullion, precious and silver appear nowhere. Import duty 5% MFN on every HS 7108 line (Belize Customs Schedule of Rates, ch. 71; silver 7106 also 5%, not coded for silver).",
+  "sources": [
+    {
+      "name": "Attorney General's Ministry (agm.gov.bz) - General Sales Tax Act Cap. 63, s.9(1)",
+      "url": "https://www.agm.gov.bz/uploads/laws/63976e60334b6_Cap_63_General_Sales_Tax_Act.pdf",
+      "what": "Read 2026-11-28: the GST rate is 0% for zero-rated supplies and 12.5% in any other case",
+      "quote": "The rate of GST applicable to a taxable supply or importation is– (a) if the supply or import is zero-rated under Schedule I, Schedule II or Schedule III, 0%; or (b) in any other case, 12.5%."
+    },
+    {
+      "name": "Belize Customs & Excise Department (customs.gov.bz) - Schedule of Rates, Chapter 71",
+      "url": "https://customs.gov.bz/tariffs_PDF/89_CHAPTER 71NATURAL OR CULTURED PEARLS, PRECIOUS OR SEMI PRECIOUS STONES.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines carry MFN 5% (bars: 7108.12.10)",
+      "quote": "7108.12.10 00 ---In bars 5% 0% 0% 5% 5% oz troy/lb"
+    }
+  ]
+}

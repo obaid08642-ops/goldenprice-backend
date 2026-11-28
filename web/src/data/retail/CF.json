@@ -1,0 +1,34 @@
+{
+  "country": "CF",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 19,
+    "vatBullionPct": 19,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA 19% (CGI art. 257). Bullion null: art. 249(3) exempts only sales of gold as an extractive (mining) product - not an investment-gold scheme. The art. 249 list and the art. 257 reduced-rate list were read in full - no ch. 71 item. Silver 19/19. Host caveat: the DGID official CGI edition was read on a UNHCR (refworld) copy; no .cf copy was openable. Duty null.",
+  "sources": [
+    {
+      "name": "Code Général des Impôts, édition officielle DGID 2023 (copy on refworld.org), art. 257",
+      "url": "https://www.refworld.org/sites/default/files/2025-03/code_general_des_impots_rca.pdf",
+      "what": "Read 2026-11-28: the VAT rates are a general rate of 19% on all taxable operations and a zero rate for exports",
+      "quote": "un taux général : 19% applicable à toutes les opérations taxables et aux opérations effectuées par les personnes visées à l'alinéa 9 de l'article 247 du CGI"
+    }
+  ]
+}
