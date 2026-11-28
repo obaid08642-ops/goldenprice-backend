@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "EUR",
+    "kwh": 0.24,
+    "period": "2026-07",
+    "src": "Lithuanian Energy Agency - VERT public supply tariff, Standartinis plan, one time zone, incl. VAT",
+    "url": "https://www.ena.lt/Naujiena/neet-kainos-20261124/",
+    "quote": "Visuomeninio tiekimo elektros kaina (planas „Standartinis“) nuo 2026 m. liepos 1 d. yra 0,240 Eur/kWh (viena laiko zona)"
+  }
+}

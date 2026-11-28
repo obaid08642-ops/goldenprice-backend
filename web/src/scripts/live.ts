@@ -104,10 +104,10 @@ if (page) {
         const j = await fetch(`${boot.api}/api/ticks/${asset.sym}?hours=24`).then((x) => x.json());
         rows = (j.data || []).map((d: any) => ({ x: new Date(d.ts).getTime(), v: d.value }));
       } else {
-        const j = await fetch(`${boot.api}/api/chart/${asset.sym}?days=${days}&points=300`).then((x) => x.json());
-        rows = (j.data || []).map((d: any) => ({ x: new Date(d.date).getTime(), v: d.value }));
+        const j = await fetch(`${boot.api}/api/chart/${asset.sym}?days=${days}&points=300${hasFxLocal() ? "&cur=" + country.cur : ""}`).then((x) => x.json());
+        rows = (j.data || []).map((d: any) => ({ x: new Date(d.date).getTime(), v: d.value, fx: d.fx }));
       }
-      series = rows.map((r) => ({ x: r.x, v: hasFxLocal() ? perUnit(asset, r.v, unit) * rate : r.v }));
+      series = rows.map((r: any) => ({ x: r.x, v: hasFxLocal() ? perUnit(asset, r.v, unit) * (r.fx ?? rate) : r.v }));
     } catch { series = []; }
     render(box);
   }
