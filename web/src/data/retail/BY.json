@@ -1,0 +1,34 @@
+{
+  "country": "BY",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard 20% (Tax Code art. 122(3)). Bullion EXEMPT via the banking channel: art. 118(1.17.5) exempts sales of bank/measured ingots and bullion coins of precious metals (organisations to banks, between banks, banks to organisations and individuals). It covers silver ingots/coins too - silver bullion coded 0; other bullion forms sit outside the quoted exemption. Duty null.",
+  "sources": [
+    {
+      "name": "Tax Code of the Republic of Belarus, Special Part (pravo.by National Legal Internet Portal), arts. 122 and 118",
+      "url": "https://pravo.by/document/?guid=3871&p0=hk0900071",
+      "what": "Read 2026-11-28: the standard VAT rate is twenty (20) percent, and art. 118(1.17.5) exempts sales of bank/measured ingots and bullion coins of precious metals through banks",
+      "quote": "реализации организациями банкам, между банками, банками организациям и физическим лицам банковских и мерных слитков из драгоценных металлов, слитковых (инвестиционных) монет из драгоценных металлов"
+    }
+  ]
+}
