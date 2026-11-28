@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "XOF",
+    "kwh": 60,
+    "period": "2025-05",
+    "src": "Compagnie Énergie Électrique du Togo (CEET) official tariff page - residential lifeline block (tranche sociale, 0-30 kWh, ex-tax), set by Arrêté Interministériel N°072 of 24 March 2025",
+    "url": "https://services.ceet.tg/informations-utiles",
+    "quote": "Energie (F CFA / kWh) — Tranche sociale (0 - 30) 60"
+  }
+}

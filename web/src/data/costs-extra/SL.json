@@ -1,0 +1,11 @@
+{
+  "fuel": {
+    "cur": "SLE",
+    "date": "2026-10-28",
+    "petrol95": 40,
+    "diesel": 45,
+    "src": "National Petroleum Regulatory Authority (NPRA) published pump prices",
+    "url": "https://pra.gov.sl/",
+    "quote": "Current fuel prices — Effective 28 October 2026 — Petrol NLe40 Litre, Diesel NLe45 Litre, Kerosene NLe44.24 Litre, Fuel Oil NLe33.59 Litre"
+  }
+}

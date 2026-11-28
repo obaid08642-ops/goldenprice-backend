@@ -1,0 +1,19 @@
+{
+  "fuel": {
+    "cur": "CRC",
+    "date": "2026-11-13",
+    "petrol95": 805,
+    "diesel": 807,
+    "src": "RECOPE (Refinadora Costarricense de Petróleo) - prices in force set by ARESEP; gasolina súper (RON 95)",
+    "url": "https://www.recope.go.cr/gasolinas-y-diesel-bajaran-de-precio-en-diciembre-justo-para-las-fiestas-de-fin-y-principio-de-ano/",
+    "quote": "el litro de gasolina súper pasaría de ₡805 a ₡777, para una disminución de ₡28. La regular bajaría ₡103, al bajar de ₡807 a ₡704, mientras que el diésel tendría una reducción de ₡9, de ₡807 a ₡798."
+  },
+  "electricity": {
+    "cur": "CRC",
+    "kwh": 56.14,
+    "period": "2026-01",
+    "src": "Instituto Costarricense de Electricidad (ICE) - Tarifa Residencial T-RE, first block 0-140 kWh",
+    "url": "https://www.iceelectricidad.com/wps/portal/electricidad/interes/tarifas-electricas",
+    "quote": "Bloque 0 - 140 | ₡ 1 147.43 | ₡ 56.14"
+  }
+}
