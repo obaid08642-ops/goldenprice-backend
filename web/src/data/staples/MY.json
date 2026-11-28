@@ -1,0 +1,13 @@
+{
+  "cur": "MYR",
+  "items": {
+    "chicken": {
+      "value": 10.77,
+      "unit": "kg",
+      "date": "2026-06-30",
+      "src": "Department of Statistics Malaysia (DOSM) - Consumer Price Index Malaysia, June 2026 (media statement)",
+      "url": "https://www.dosm.gov.my/uploads/release-content/file_20260717104134.pdf",
+      "quote": "The average price of Standard chicken for Malaysia in June 2026 was at RM10.77 per kilogramme as compared to RM10.57 per kilogramme in June 2025 (May 2026: RM10.48)."
+    }
+  }
+}

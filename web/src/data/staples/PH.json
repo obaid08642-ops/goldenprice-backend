@@ -1,0 +1,37 @@
+{
+  "cur": "PHP",
+  "items": {
+    "rice": {
+      "value": 56.25,
+      "unit": "kg",
+      "date": "2026-10-17",
+      "src": "Philippine Statistics Authority - Price Situationer of Selected Agricultural Commodities (national average retail prices)",
+      "url": "https://psa.gov.ph/content/price-situationer-selected-agricultural-commodities-second-phase-october-2026",
+      "quote": "At the national level, a kilogram of well milled rice had an average retail price of PhP 56.25 during the second phase of October 2026 (15 to 17 October 2026)."
+    },
+    "sugar": {
+      "value": 82.08,
+      "unit": "kg",
+      "date": "2026-10-17",
+      "src": "Philippine Statistics Authority - Price Situationer of Selected Agricultural Commodities (national average retail prices)",
+      "url": "https://psa.gov.ph/content/price-situationer-selected-agricultural-commodities-second-phase-october-2026",
+      "quote": "At the national level, refined sugar had an average retail price of PhP 82.08 per kilogram during the second phase of October 2026."
+    },
+    "cooking_oil": {
+      "value": 202.06,
+      "unit": "litre",
+      "date": "2026-11-17",
+      "src": "Philippine Statistics Authority - Price Situationer of Selected Agricultural Commodities (national average retail prices)",
+      "url": "https://psa.gov.ph/content/price-situationer-selected-agricultural-commodities-second-phase-november-2026",
+      "quote": "At the national level, cooking oil had an average retail price of PhP 202.06 per liter during the second phase of November 2026."
+    },
+    "chicken": {
+      "value": 213.43,
+      "unit": "kg",
+      "date": "2026-06-05",
+      "src": "Philippine Statistics Authority - Price Situationer of Selected Agricultural Commodities (national average retail prices)",
+      "url": "https://psa.gov.ph/content/price-situationer-selected-agricultural-commodities-first-phase-june-2026",
+      "quote": "An average retail price of PhP 213.43 per kilogram at the national level was reported for dressed chicken during the first phase of June 2026."
+    }
+  }
+}
