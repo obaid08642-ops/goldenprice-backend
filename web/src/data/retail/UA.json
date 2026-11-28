@@ -1,10 +1,10 @@
 {
   "country": "UA",
   "tier": 2,
-  "confidence": "medium",
+  "confidence": "low",
   "gold": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
     "importDutyPct": null,
     "makingPct": null,
     "barBuybackDiscountPct": null,
@@ -22,8 +22,8 @@
     }
   },
   "silver": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
@@ -32,12 +32,18 @@
   },
   "sources": [
     {
+      "name": "Verkhovna Rada (zakon.rada.gov.ua) - Tax Code of Ukraine, arts. 193/197",
+      "url": "https://zakon.rada.gov.ua/laws/show/2755-17",
+      "what": "Read 2026-11-28: art. 193.1 sets the main VAT rate at 20 percent; art. 197.26 exempts supplies and imports of investment gold as defined in art. 14.1.279 (995+ bars/plates, qualifying coins)",
+      "quote": "193.1. Ставки податку встановлюються від бази оподаткування в таких розмірах: а) 20 відсотків; 197.26. Звільняються від оподаткування операції платників податку, які здійснюють: а) постачання на митній території України та/або ввезення на митну територію України інвестиційного золота"
+    },
+    {
       "name": "PrivatBank bank gold bars",
       "url": "https://privatbank.ua/banking-metals",
       "what": "Gold bar ask per gram by size vs live spot, read automatically 2026-11-27",
       "quote": "PrivatBank bank gold bars table: 1 g buy 6 420.00 / sell 7 380.00 UAH per gram; 100 g buy 5 465.00 / sell 6 080.00"
     }
   ],
-  "notes": "Bar prices read automatically from the dealer's public price list.",
-  "verifiedAt": "2026-11-27"
+  "notes": "VAT main rate 20% (Tax Code art. 193.1); jewellery is in no reduced-rate or exemption list. Investment gold (995+ bars/plates, qualifying coins, art. 14.1.279) is VAT-exempt under art. 197.26; the exemption is gold-only, so silver bullion carries 20%. Supplies of precious metals to the NBU are also exempt (art. 197.19). Bar premiums are PrivatBank asks vs spot (dealer list, read 27 Nov 2026).",
+  "verifiedAt": "2026-11-28"
 }
