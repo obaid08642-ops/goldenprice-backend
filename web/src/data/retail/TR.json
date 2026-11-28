@@ -25,9 +25,10 @@
   "notes": "Bullion gold and bullion silver deliveries are VAT-exempt under VAT Law No. 3065, Art. 17/4-g, both domestically and on import. Jewellery and coin gold/silver are taxed at the general rate of 20%, but only on the amount remaining after deducting the bullion value (at the Borsa Istanbul closing price) from the sale price (Art. 23/e), so the metal value itself is untaxed.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Turkey, Corporate: Other taxes",
-      "url": "https://taxsummaries.pwc.com/turkey/corporate/other-taxes",
-      "what": "The general VAT rate is 20% (rates range from 1% to 20%); gold and silver jewellery are not in the 1% List I or 10% List II reduced-rate categories, so they take the 20% general rate."
+      "name": "Revenue Administration (GIB) - Current VAT rates (Decision 2007/13033 as amended)",
+      "url": "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2Fkdv-oranlari.pdf",
+      "what": "Read 2026-11-28: art. 1(1) sets the VAT rate at 20% for taxable transactions not in the attached reduced-rate lists (as amended by Presidential Decision 7346, in force 10 Jul 2023)",
+      "quote": "Mal teslimleri ile hizmet ifalarına uygulanacak katma değer vergisi oranları; a) Ekli listelerde yer alanlar hariç olmak üzere, vergiye tabi işlemler için, % 20 olarak tespit edilmiştir."
     },
     {
       "name": "Vergi Usul Kanunu Genel Tebligi (Sira No: 379) - mevzuat.gov.tr, Ministry of Treasury and Finance legislation portal",
