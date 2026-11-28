@@ -1,0 +1,40 @@
+{
+  "country": "AL",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 0,
+    "importDutyPct": 2,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": 2,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 20% (Law 92/2014 art. 48). Special base rule: for worked gold the taxable value EXCLUDES the raw-gold value (art. 43) - VAT falls on workmanship only. Bullion EXEMPT per art. 152(a); caveat: the section's start was deferred to EU accession and the deferral was repealed by Law 85/2019 - application unconfirmed, hence low confidence. Duty 7108 = 2%.",
+  "sources": [
+    {
+      "name": "Drejtoria e Përgjithshme e Tatimeve (tatime.gov.al) - Ligji nr. 92/2014 për TVSH, arts. 48 and 152",
+      "url": "https://tatime.gov.al/wp-content/uploads/2026/10/2014-date-24.7.2014.pdf",
+      "what": "Read 2026-11-28: the standard VAT rate is 20 percent, and supplies and imports of investment gold are exempt from VAT",
+      "quote": "Përjashtohen nga tatimi mbi vlerën e shtuar: a) furnizimi dhe importimi i arit për investim, përfshirë arin për investim, të përfaqësuar nga certifikata ari ose të tregtuar në llogaritë e arit"
+    },
+    {
+      "name": "Drejtoria e Përgjithshme e Doganave (dogana.gov.al) - Albanian Combined Nomenclature of Goods 2025",
+      "url": "https://www.dogana.gov.al/english/dokument/2627/combined-nomenclature-of-goods-2025",
+      "what": "Read 2026-11-28: every HS 7108 line (powder, unwrought, semi-manufactured, monetary) carries duty rate 2; HS 7106 silver lines also 2",
+      "quote": "7108 12 00 -- Other unwrought forms 2"
+    }
+  ]
+}
