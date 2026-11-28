@@ -1,0 +1,61 @@
+{
+  "cur": "PKR",
+  "items": {
+    "sugar": {
+      "value": 151.84,
+      "unit": "kg",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "8 Sugar Refined 1 Kg 151.84 153.05 157.68 -0.79 -3.70"
+    },
+    "rice": {
+      "value": 215.83,
+      "unit": "kg",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "11 Rice Basmati Broken (Average Quality) 1 Kg 215.83 216.26 205.93 -0.20 4.81"
+    },
+    "eggs": {
+      "value": 239.91,
+      "unit": "dozen",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "5 Eggs Hen (Farm) 1 Dozen 239.91 248.43 286.37 -3.43 -16.22"
+    },
+    "milk": {
+      "value": 203.63,
+      "unit": "litre",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "13 Milk fresh (Un-boiled) 1 Ltr 203.63 203.51 199.25 0.06 2.20"
+    },
+    "chicken": {
+      "value": 339.17,
+      "unit": "kg",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "3 Chicken Farm Broiler (Live) 1 Kg 339.17 372.85 481.43 -9.03 -29.55"
+    },
+    "beef": {
+      "value": 1184.09,
+      "unit": "kg",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "12 Beef with Bone (Average Quality) 1 Kg 1184.09 1181.16 1060.14 0.25 11.69"
+    },
+    "bread": {
+      "value": 110.68,
+      "unit": "loaf",
+      "date": "2026-02-26",
+      "src": "Pakistan Bureau of Statistics - SPI Executive Summary, week ended 26.02.2026, Annexure-III national average prices",
+      "url": "https://www.pbs.gov.pk/wp-content/uploads/2020/07/Executive-Summary-SPI-Report_26.02.2026.pdf",
+      "quote": "7 Bread plain (Small Size) Each 110.68 111.93 107.62 -1.12 2.84"
+    }
+  }
+}
