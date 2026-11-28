@@ -1,0 +1,40 @@
+{
+  "country": "LT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 21% (Law on VAT art. 2(32) and art. 19(1), VMI official text); jewellery is in neither reduced-rate list. Bullion EXEMPT under the investment-gold scheme (art. 112(1); definition art. 111). Silver is never mentioned in the law (21/21). Import duty 0%: EU Combined Nomenclature 2026 rates all HS 7108 lines 'Free'.",
+  "sources": [
+    {
+      "name": "State Tax Inspectorate (vmi.lt) - Law on Value Added Tax, arts. 2(32) and 112(1)",
+      "url": "https://www.vmi.lt/evmi/documents/20142/390965/Lietuvos+Respublikos+prid%C4%97tin%C4%97s+vert%C4%97s+mokes%C4%8Dio+%C4%AFstatymas+_+The+Law+on+VAT.pdf/7423e9bb-3c41-2352-1ce1-0d8ae21f9fb7?t=1772022093866",
+      "what": "Read 2026-11-28: the standard VAT rate is 21%, and the supply, acquisition from another Member State and import of investment gold are exempt from VAT",
+      "quote": "The supply, acquisition from another Member State and import of investment gold shall be exempt from VAT."
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28: HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}

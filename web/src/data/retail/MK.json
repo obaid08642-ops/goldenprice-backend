@@ -1,0 +1,40 @@
+{
+  "country": "MK",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT general rate 18% (Ministry of Finance); jewellery is absent from the 5%/10% preferential lists. Bullion EXEMPT: the VAT Law's investment-gold scheme (arts. 38-a ff.) exempts supply and import of investment gold, per the Public Revenue Office guide. Silver has no exemption (18/18). Import duty null (tariff published only as an unextractable spreadsheet).",
+  "sources": [
+    {
+      "name": "Ministry of Finance (finance.gov.mk) - Value added tax",
+      "url": "https://arhiva.finance.gov.mk/%d0%b4%d0%b0%d0%bd%d0%be%d0%ba-%d0%bd%d0%b0-%d0%b4%d0%be%d0%b4%d0%b0%d0%b4%d0%b5%d0%bd%d0%b0-%d0%b2%d1%80%d0%b5%d0%b4%d0%bd%d0%be%d1%81%d1%82/?lang=en",
+      "what": "Read 2026-11-28: the general VAT rate of 18% applies to the entire taxable turnover and imports except preferential-rate items",
+      "quote": "According to the general tax rate of 18%, which is applied to the entire taxable turnover and imports, except for turnover and imports that are taxed at the preferential tax rate"
+    },
+    {
+      "name": "Public Revenue Office (ujp.gov.mk) - VAT guide, investment gold category",
+      "url": "https://www.ujp.gov.mk/en/vodic/category/1120?print=1",
+      "what": "Read 2026-11-28: supply and importation of investment gold are exempt from VAT",
+      "quote": "From the Value Added Tax are exempt the supply and importation of investment gold, including investment gold represented by certificates for allocated (assigned) or unallocated (unassigned) gold or trafficked through accounts for trade with gold"
+    }
+  ]
+}

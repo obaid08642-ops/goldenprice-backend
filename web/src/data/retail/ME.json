@@ -1,0 +1,40 @@
+{
+  "country": "ME",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 21,
+    "vatBullionPct": 21,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT general rate 21% since 1 Jan 2018 (raised from 19% by the 2017 amending law; confirmed in the Government press release). The VAT Law arts. 25-28 lists were read in the gov.me text: the only gold reliefs are supplies to, and imports by, the Central Bank - no public investment-gold scheme, so retail bullion takes 21%. Caveat: the amending law was not openable. Duty null.",
+  "sources": [
+    {
+      "name": "Government of Montenegro (gov.me) - Press release from the 33rd Cabinet session, 6 Jul 2017",
+      "url": "https://www.gov.me/en/article/174331--press-release-from-33rd-cabinet-session",
+      "what": "Read 2026-11-28: the adopted package increases the general VAT rate from 19% to 21% (in force 1 Jan 2018)",
+      "quote": "it is envisaged to increase the general VAT rate from 19% to 21%, while the lower rate applied to the trading of basic foodstuffs remains unchanged at the level of 7%"
+    },
+    {
+      "name": "Government of Montenegro (wapi.gov.me) - Law on Value Added Tax, cleared text, art. 27",
+      "url": "https://wapi.gov.me/download-preview/f0613485-c124-4a6b-9bae-d31dbb5f30cf?version=1.0",
+      "what": "Read 2026-11-28: art. 27 item 6 exempts only supplies of gold and other precious metals to the Central Bank; arts. 25/26/28 contain no public investment-gold exemption",
+      "quote": "Supply of gold and other precious metals to the Central Bank of Montenegro;"
+    }
+  ]
+}
