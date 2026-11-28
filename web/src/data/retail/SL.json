@@ -1,0 +1,40 @@
+{
+  "country": "SL",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GST single rate 15% (NRA). The GST Act zero-rating schedule covers only exports excluding minerals, and the exemption schedule (both read in the NRA's own Guide to the GST Legislation) contains no domestic bullion relief, so domestic gold supplies take 15%. Import duty HS 7108 null: the NRA notes a consolidated Customs Tariff Act is not available.",
+  "sources": [
+    {
+      "name": "National Revenue Authority (nra.gov.sl) - Domestic Tax (GST)",
+      "url": "https://www.nra.gov.sl/dtd/1",
+      "what": "Read 2026-11-28: GST is applied at a single rate of 15% on the majority of goods and services including imports",
+      "quote": "From the start date of 1st September 2009, GST is applied at a single rate of fifteen per cent (15%) on the majority of goods and services (including imports) supplied in Sierra Leone for local use or benefit."
+    },
+    {
+      "name": "National Revenue Authority - Guide to the GST Legislation (training.nra.gov.sl)",
+      "url": "http://training.nra.gov.sl/sites/default/files/Sierra-Leone-A-Guide-to-the-GST-Legislation.pdf",
+      "what": "Read 2026-11-28: Schedule 1 zero-rates only exports of goods excluding minerals; Schedule 2 exemptions contain no gold bullion item",
+      "quote": "The export of goods, excluding minerals (including rutile and its products, iron ore, bauxite, gold and diamonds)."
+    }
+  ]
+}

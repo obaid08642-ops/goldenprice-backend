@@ -1,0 +1,34 @@
+{
+  "country": "TG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA single rate 18% (CGI art. 195, via InterCom Togo, the official trade portal compiling OTR data; the CGI PDF on otr.tg itself could not be opened). Bullion VAT null: the portal summary of the art. 180 exemption list mentions no gold, but it is a summary ('in particular'), not the full annex text. Note: art. 243 excise on precious stones and metals is 15% (excise, not VAT). Duty null.",
+  "sources": [
+    {
+      "name": "InterCom Togo - official trade information portal (OTR data) - Domestic taxes",
+      "url": "https://intercom.tg/en/tarifs/fiscalite-interieure",
+      "what": "Read 2026-11-28: VAT is a single rate of 18 percent applicable to all activities and products, except exemptions under article 180 (article 195 of the CGI)",
+      "quote": "VAT is a single rate of 18 percent applicable to all activities and products, except exemptions under article 180 (article 195 of the CGI)."
+    }
+  ]
+}
