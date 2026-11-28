@@ -1,0 +1,40 @@
+{
+  "country": "GT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 12,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 12,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA single rate 12% (Ley del IVA, Decreto 27-92, art. 10; SAT confirms the 12% tariff). The complete exemption lists (art. 7 general, 15 items; art. 8 specific, 6 items) were read in the decree text: gold, bullion and jewellery appear in neither. Import duty null: the SAC 7108 line (DAI 5%) was readable only on a non-official mirror, so it is not coded.",
+  "sources": [
+    {
+      "name": "Superintendencia de Administración Tributaria (portal.sat.gob.gt) - Principales impuestos en Guatemala",
+      "url": "https://portal.sat.gob.gt/portal/principales-impuestos-en-guatemala/",
+      "what": "Read 2026-11-28: the IVA tariff under Decreto 27-92 is 12% of the value of each product or service",
+      "quote": "Esta normado por el Decreto 27-92. La tarifa del IVA es del 12% del valor de cada producto o servicio y está siempre incluida en los precios de todo lo que compramos."
+    },
+    {
+      "name": "Ley del IVA, Decreto 27-92, art. 10 (decree text PDF)",
+      "url": "https://app.cdag.org.gt:22296/intranet/sites/default/files/Archivos/Decreto%2027-92%20Ley%20Impuesto%20al%20Valor%20Agregado.pdf",
+      "what": "Read 2026-11-28: taxpayers pay the tax at a single tariff of 12% on the taxable base; the art. 7 and art. 8 exemption lists read in full contain no gold item",
+      "quote": "Los contribuyentes afectos a las disposiciones de esta ley pagarán el impuesto con una tarifa del doce por ciento (12%) sobre la base imponible."
+    }
+  ]
+}
