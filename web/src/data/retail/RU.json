@@ -6,7 +6,7 @@
   "defaultKarat": 14,
   "gold": {
     "vatJewelryPct": 22,
-    "vatBullionPct": 0,
+    "vatBullionPct": null,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
@@ -22,17 +22,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 22% from Jan 2026 (Law 425-FZ) on jewellery and silver; gold bars to individuals exempt since Mar 2022 (Art.149, Law 47-FZ), exemption excludes silver bars. Bar premiums and buyback % removed in review round 1 (dealer-blog support only). Duty and making % not found, null.",
+  "notes": "VAT 22% from 1 Jan 2026 (Law 425-FZ, FNS notice) on jewellery and silver. Gold-bar VAT exemption (Art. 149, Law 47-FZ) nulled in round 4: the law text on pravo.gov.ru is image-only and consultant.ru would not open, so no quotable primary text. Premiums/buyback removed in round 1 (dealer-blog support). Duty and making % not found, null.",
   "sources": [
     {
-      "name": "Thomson Reuters Onesource - Russia VAT reform 2026",
-      "url": "https://www.thomsonreuters.com/en-us/help/onesource-global-trade/regulatory-insights/2026/february-11th/vat-reform-2026-key-changes-russia-and-kazakhstan",
-      "what": "Read 2026-11-27: standard VAT rate 22% from 1 Jan 2026"
-    },
-    {
-      "name": "ZOT Moscow - How gold bars and coins are valued and bought back in Russia",
-      "url": "https://zot.moscow/kak-v-rossii-otsenivayut-i-vykupayut-zolotye-slitki-i-investitsionnye-monety.php",
-      "what": "Read 2026-11-27: Sberbank buy/sell table by size vs CBR accounting price 11,162.78 RUB/g; premiums and 5.4% buyback gap calculated from it"
+      "name": "FNS (Federal Tax Service) district inspectorate notice - VAT 22% under Law 425-FZ",
+      "url": "https://kirovskij-r22.gosweb.gosuslugi.ru/dlya-zhiteley/novosti-i-reportazhi/novosti-193_320.html",
+      "what": "Read 2026-11-28: FNS notice - Law 425-FZ of 28 Nov 2025 sets the VAT rate at 22% from 1 Jan 2026",
+      "quote": "предусматривающего с 01.01.2026 установление ставки налога на добавленную стоимость (далее – НДС) в размере 22 процента"
     }
   ]
 }

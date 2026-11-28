@@ -2,7 +2,7 @@
   "country": "PL",
   "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 14,
   "gold": {
     "vatJewelryPct": 23,
@@ -38,12 +38,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Investment gold VAT-exempt EU-wide; jewellery standard 23% (Mint of Poland). Import duty % removed in review round 1 (tariff-database support only). Premiums calculated from IDF Metale table 27 Nov 2026 vs its metal value. Buyback typical 6.7% is the 5-10g spread (3.4% at 100g to 13.4% at 1g). Used 7% is scrap 585 buy vs metal value (calculated). Making % not found, null.",
+  "notes": "VAT Act (ISAP consolidated text): standard rate 23% (art. 146ef), investment gold exempt (art. 122) - jewellery and silver at 23%. Premiums from IDF Metale table 27 Nov 2026 vs its metal value. Buyback 6.7% is the 5-10g spread (3.4% at 100g, 13.4% at 1g). Used 7% is scrap 585 buy vs metal value. Duty and making % not found, null.",
   "sources": [
     {
-      "name": "Mint of Poland - Why invest in gold",
-      "url": "https://en.mennica.com.pl/investment-products/why-is-it-worth-investing-in-gold",
-      "what": "Read 2026-11-27: investment gold bars 995+/coins 900+ VAT-exempt under Polish VAT Act; prices from LBMA x USD/PLN"
+      "name": "Sejm ISAP - VAT Act of 11 March 2004 (consolidated text, Dz.U. 2023 poz. 1570)",
+      "url": "https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20230001570/O/D20231570.pdf",
+      "what": "Read 2026-11-28: art. 122 exempts supply/intra-EU acquisition/import of investment gold; art. 146ef sets the standard rate at 23%",
+      "quote": "Zwalnia się od podatku dostawę, wewnątrzwspólnotowe nabycie i import złota inwestycyjnego, w tym również złota inwestycyjnego reprezentowanego przez certyfikaty na złoto asygnowane lub nieasygnowane"
     },
     {
       "name": "IDF Metale - Gold bars",

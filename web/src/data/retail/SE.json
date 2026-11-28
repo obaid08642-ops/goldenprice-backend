@@ -1,8 +1,8 @@
 {
   "country": "SE",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 18,
   "gold": {
     "vatJewelryPct": 25,
@@ -27,12 +27,19 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Investment gold exempt (bars over 1g, 995+; 1g or less is 25% VAT). Jewellery and silver take 25% VAT; no silver exemption (Tavex). Import duty % removed in review round 1 (tariff-database support only). Premiums are Tavex sell vs its buy price 27 Nov 2026 for sizes opened; buyback typical 6.0% is Tavex spread at 100g (12.72% at 5g). Making % and fixed used % not found, null.",
+  "notes": "Skatteverket: general VAT rate 25%; trade in investment gold exempt (VAT Act ch. 3 §10a, Skatteverket handbook SKV 553 ch. 6). Duty removed in round 1. Premiums are Tavex sell vs its buy price 27 Nov 2026; buyback typical 6.0% is the Tavex spread at 100g (12.72% at 5g). Making % and fixed used % not found, null.",
   "sources": [
     {
-      "name": "Tavex Sweden - FAQ: investment gold and silver",
-      "url": "https://tavex.se/en/faq/investment-gold-investment-silver/",
-      "what": "Read 2026-11-27: investment gold VAT-exempt (over 1g, 995+); 1g and under bars and all silver carry 25% VAT"
+      "name": "Skatteverket - Amounts and percentages 2025 (short version)",
+      "url": "https://www.skatteverket.se/4.262c54c219391f2e9634350.html",
+      "what": "Read 2026-11-28: the general VAT rate is 25%",
+      "quote": "25 % (20 % av priset), generella skattesatsen för moms."
+    },
+    {
+      "name": "Skatteverket handbook SKV 553, ch. 6 - Investment gold exemption",
+      "url": "https://skatteverket.se/download/18.18e1b10334ebe8bc8000114437/1359706012243/kap06.pdf",
+      "what": "Read 2026-11-28: trade in investment gold is exempt from VAT (VAT Act ch. 3 §10a)",
+      "quote": "Handel med investeringsguld undantas från momsbeskattning."
     },
     {
       "name": "Tavex Sweden - 5g Valcambi gold bar",
