@@ -1,0 +1,40 @@
+{
+  "country": "BT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 5,
+    "vatBullionPct": 5,
+    "importDutyPct": 2.5,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 5,
+    "vatBullionPct": 5,
+    "importDutyPct": 4,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GST 5% from 1 Jan 2026 (GST Act 2020 as amended 2025, Schedule I), replacing the old sales tax. The complete Schedule IV exemption list was read: no gold item. Schedule V para 13 zero-rates only a refiners first supply of investment-form metal to a dealer, so retail bullion takes 5%. Customs duty: HS 7108 = 2.5% all lines; silver 7106 = 4%; 5% GST also at import.",
+  "sources": [
+    {
+      "name": "Department of Revenue & Customs (drc.gov.bt) - Consolidated GST Act of Bhutan 2020 and Amendment, Schedule I",
+      "url": "https://drc.gov.bt/wp-content/uploads/2025/12/Consolidated-GST-Act-of-Bhutan-2020-and-amendment-thereof.pdf",
+      "what": "Read 2026-11-28: other than the zero rate in Schedule V, the applicable GST rate on taxable supplies and imports is 5%; Schedule IV exemptions contain no gold",
+      "quote": "Other than the zero rate prescribed in Schedule V, the applicable GST rate on taxable supplies and taxable imports of goods and services shall be 5%."
+    },
+    {
+      "name": "Ministry of Finance (mof.gov.bt) - Bhutan Trade Classification & Tariff Schedule, 7th Edition 2022 (Amended 2026)",
+      "url": "https://mof.gov.bt/wp-content/uploads/2026/07/Bhutan-Trade-Classification-and-Tariff-Schedule-7th-Edition-2022-Amended-2026.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines carry customs duty 2.5 (columns Unit | CD | GST | ET)",
+      "quote": "7108.12.00 - - Other unwrought forms GRM 2.5 5 0"
+    }
+  ]
+}
