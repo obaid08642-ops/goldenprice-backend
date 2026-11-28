@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "ALL",
+    "kwh": 8.5,
+    "period": "2026-01",
+    "src": "Energy Regulatory Authority (ERE) Decision No. 10 of 08.01.2025, extended to 31.12.2026 by Decision No. 322 - household customers up to 700 kWh/month, Universal Service Supplier",
+    "url": "https://www.ere.gov.al/media/files/2025/05/25/Decision_No_10_2025_On_the_retail_electricity_sale_price_for_the_customers_of_the_Universal_Service_Supplier.pdf",
+    "quote": "Household customers consuming up to 700 kWh per month 8.5 ALL/kWh"
+  }
+}

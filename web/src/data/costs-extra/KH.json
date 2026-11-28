@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "KHR",
+    "kwh": 380,
+    "period": "2026-01",
+    "src": "Electricity Authority of Cambodia - residential tariff plan, first block 1-10 kWh/month (EDC national grid)",
+    "url": "https://eac.gov.kh/uploads/salient_feature/english/salient_feature_2025_en.pdf",
+    "quote": "Residents consume from 1 to 10kWh/month | ៛/kWh | 380 | 380 | 380 | 380 | 380 | 380 | 380 | 380"
+  }
+}
