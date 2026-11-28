@@ -1,83 +1,50 @@
 {
- "confidence": "medium",
- "defaultKarat": 21,
- "gold": {
-  "vatJewelryPct": 14,
-  "vatBullionPct": null,
-  "importDutyPct": null,
-  "makingPct": {
-   "typical": 4.5,
-   "min": 3,
-   "max": 12
+  "country": "EG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 21,
+  "gold": {
+    "vatJewelryPct": 14,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {
+      "1g": 2.9,
+      "2.5g": 1.7,
+      "5g": 1.4,
+      "10g": 1.3,
+      "20g": 1.3,
+      "31.1g": 1.2,
+      "50g": 1.2,
+      "100g": 1.2,
+      "250g": 0.5,
+      "500g": 0.5,
+      "1000g": 0.5
+    },
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barPremiumPct": {
-   "1g": 2.6,
-   "2.5g": 1.4,
-   "5g": 1.0,
-   "10g": 1.0,
-   "20g": 1.0,
-   "31.1g": 0.9,
-   "50g": 0.9,
-   "100g": 0.9,
-   "250g": 0.2,
-   "500g": 0.2,
-   "1000g": 0.2
+  "silver": {
+    "vatJewelryPct": 14,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
   },
-  "barBuybackDiscountPct": {
-   "typical": 1.5
-  },
-  "usedGoldDiscountPct": {
-   "typical": 3.1
-  }
- },
- "silver": {
-  "vatJewelryPct": null,
-  "vatBullionPct": null,
-  "importDutyPct": null,
-  "makingPct": null,
-  "barPremiumPct": {},
-  "barBuybackDiscountPct": null,
-  "usedGoldDiscountPct": null
- },
- "notes": "Gold quoted per gram by karat (21K most popular); the 8 g 21K gold pound is a common coin. Jewelry VAT 14% falls on the making charge, not the metal. Bar premiums are BTC bars at Goldady vs spot at the official CBE rate (about 54.8 EGP/USD). Making charges fell 20-30% as demand moved to bullion (about 70% of sales). Used-gold figure is dealer spread only; making is lost.",
- "sources": [
-  {
-   "name": "Egypt Tax Authority VAT Executive Regulations",
-   "url": "https://eta.gov.eg/sites/default/files/2024-02/VAT-Executive-Regulations-English.pdf",
-   "what": "Standard VAT 14%; for gold/silver jewelry the taxable manufacturing value is the invoice value minus the announced per-gram metal price"
-  },
-  {
-   "name": "Goldady BTC 24K gold bars",
-   "url": "https://goldady.com/en/shop/buy-gold-bars/gold-bar-10-gram-btc-24k",
-   "what": "27 Nov 2026 ask prices 1 g to 1 kg (10 g: EGP 64,872 incl. EGP 840 making); premium vs spot $3,644.22/oz x USD/EGP 54.82 (open.er-api.com) = 6,423 EGP/g"
-  },
-  {
-   "name": "Goldady fees",
-   "url": "https://goldady.com/en/how-it-works/fees",
-   "what": "Buy/sell commission 1% falling to 0.4% by tier, used for bar buyback estimate"
-  },
-  {
-   "name": "Egypt Gold Price guide: bars, coins, jewelry",
-   "url": "https://egyptgoldprice.com/blog/gold-bars-coins-jewelry-egypt-buyers-guide/",
-   "what": "28 May 2026 guide: making charge averages 4.45% on 21K jewelry, dealer resale spread about 3.11%, bar buyback about spot minus 1-2%"
-  },
-  {
-   "name": "Al Manassa (Nxpl)",
-   "url": "https://manassa.news/en/news/30162",
-   "what": "5 Feb 2026: jewelers cut making charges 20-30% to EGP 190-250/g for 21K; bullion about 70% of gold sales (Federation of Chambers of Commerce gold division)"
-  },
-  {
-   "name": "Banky gold prices",
-   "url": "https://www.bankygate.com/en/gold",
-   "what": "26 Nov 2026 jeweller board: 24K 6,450 / 21K 5,645 EGP per gram, buy-sell spread, CBE USD 54.91"
-  },
-  {
-   "name": "Gold Price Z",
-   "url": "https://www.goldpricez.com/",
-   "what": "27 Nov 2026 spot reference: gold $3,644.22/oz"
-  }
- ],
- "country": "EG",
- "tier": 1,
- "verifiedAt": "2026-11-27"
+  "notes": "VAT at 14% applies only to the manufacturing value of gold and silver jewellery, not the metal value (ETA Executive Regulations on Art. 10(9)). Bullion VAT null: no tax-authority page states a bullion rate (dealer FAQ claim removed). Bar premiums are Goldady's BTC making charges over its live 24K value (EGP 6,403.22/g, 27 Nov 2026): 1g 2.9%, 1000g 0.5%.",
+  "sources": [
+    {
+      "name": "Egyptian Tax Authority - Executive Regulations of VAT Law No. 67 of 2016 (English)",
+      "url": "https://eta.gov.eg/sites/default/files/2024-02/VAT-Executive-Regulations-English.pdf",
+      "what": "Standard VAT rate is 14% from 1 Jul 2017 (Art. 4). For platinum, gold and silver jewellery, the tax base under Art. 10(9) of the Law is the manufacturing value (announced price per gram less the invoice value), so the 14% falls on the making value only, not the metal value."
+    },
+    {
+      "name": "Goldady - Buy Gold Bars (BTC 24K bar price list)",
+      "url": "https://goldady.com/en/shop/buy-gold-bars",
+      "what": "Dealer list read 27 Nov 2026: every bar is priced as weight x Goldady's live 24K buy price (EGP 6,403.22/g) plus a stated making charge (1g EGP 187; 2.5g 280; 5g 435; 10g 840; 20g 1,640; 31.1g 2,456.90; 50g 3,950; 100g 7,700; 250g 8,750; 500g 16,250; 1000g 31,500). Premium per size = making charge / gold value. Goldady states it buys bars back at the live price with no buyback fee, so no buyback discount is coded."
+    }
+  ]
 }
