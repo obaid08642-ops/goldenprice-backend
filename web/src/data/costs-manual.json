@@ -1,44 +1,4 @@
 {
-  "EG": {
-    "fuel": {
-      "cur": "EGP",
-      "date": "2026-10-15",
-      "src": "Ministry of Petroleum / Automatic Pricing Committee decision 15 Oct 2026 (95 octane; prices in force to end-Dec 2026)",
-      "url": "https://www.petroleum.gov.eg/en/Pages/Home.aspx",
-      "petrol95": 24.0,
-      "diesel": 20.5,
-      "lpg": null
-    }
-  },
-  "SA": {
-    "fuel": {
-      "cur": "SAR",
-      "date": "2026-11-01",
-      "src": "Saudi Aramco retail fuels (95 octane)",
-      "url": "https://www.aramco.com/en/what-we-do/energy-products/retail-fuels",
-      "petrol95": 2.33,
-      "diesel": 1.79,
-      "lpg": 1.09
-    },
-    "electricity": {
-      "cur": "SAR",
-      "kwh": 0.18,
-      "period": "2026-11",
-      "src": "SERA/SEC residential tariff, first tier up to 6000 kWh",
-      "url": "https://sera.gov.sa/en/consumer/electric-tariff/electric-tariff-categories/consumption-tariff"
-    }
-  },
-  "KW": {
-    "fuel": {
-      "cur": "KWD",
-      "date": "2026-07-01",
-      "src": "KNPC official products page, Fuel Prices section (Super 95 = 105 fils/L, held in the Q3 2026 announcement from 1 Jul 2026)",
-      "url": "https://www.knpc.com/en/our-business/local-marketing/products-services",
-      "petrol95": 0.105,
-      "diesel": 0.115,
-      "lpg": null
-    }
-  },
   "QA": {
     "fuel": {
       "cur": "QAR",
@@ -63,39 +23,10 @@
     "fuel": {
       "cur": "OMR",
       "date": "2026-11-01",
-      "src": "OOMCO official homepage fuel board, Fuel Retail Prices November 2026 (Mogas 95 main grade; no separate prices subpage exists)",
+      "src": "OOMCO homepage price board, Fuel Retail Prices - November (Mogas 95; prices capped since Oct 2021, unchanged)",
       "url": "https://oomco.om/",
       "petrol95": 0.239,
       "diesel": 0.258,
-      "lpg": null
-    },
-    "electricity": {
-      "cur": "OMR",
-      "kwh": 0.014,
-      "period": "2026-11",
-      "src": "APSR residential tariff, basic account, first tier 0-4000 kWh (14 baisas/kWh)",
-      "url": "https://omannews.gov.om/topics/en/80/show/120313"
-    }
-  },
-  "JO": {
-    "fuel": {
-      "cur": "JOD",
-      "date": "2026-11-01",
-      "src": "MEMR Fuel Pricing Committee via Petra, November 2026 (Octane 90 main grade; Octane 95 is 1.375)",
-      "url": "https://petra.gov.jo/en/news/fuel-pricing-committee-adjusts-november-rates-maintains-diesel-and-kerosene-subsidies-amid-market-volatility",
-      "petrol95": 1.08,
-      "diesel": 0.9,
-      "lpg": null
-    }
-  },
-  "IQ": {
-    "fuel": {
-      "cur": "IQD",
-      "date": "2026-11-01",
-      "src": "Ministry of Oil (improved/muhassan petrol, main grade; premium is 1250)",
-      "url": "https://oil.gov.iq/?article=2007",
-      "petrol95": 850,
-      "diesel": null,
       "lpg": null
     }
   },
