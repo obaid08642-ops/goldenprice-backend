@@ -22,12 +22,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 10% applies only to the dealer's value added (direct method), not the gold value; imported unworked gold 0% (Andersen Vietnam Tax Booklet 2024). Bar import duty not found (SBV licence regime), null. Premium, buyback, used and making % removed in review round 1: they were calculated from a dealer price board reproduced only in news reports.",
+  "notes": "VAT 10% applies only to the dealer's value added (direct method, VAT Law 48/2024 Art. 12); imported bar/ingot gold not subject to VAT (Art. 5.22). Law text read on a provincial government legal portal; no GDT/MOF page carrying it could be opened. Bar import duty not found (SBV licence regime), null. Premium, buyback, used and making % removed in review round 1.",
   "sources": [
     {
-      "name": "Andersen in Vietnam - Vietnam Tax Booklet 2024",
-      "url": "https://vn.Andersen.com/wp-content/uploads/2024/09/Andersen-in-Vietnam-Vietnam-Tax-Booklet-2024.pdf",
-      "what": "Read 2026-11-27: VAT direct method for gold/silver/precious-stone traders: VAT = value added x 10%"
+      "name": "VAT Law No. 48/2024/QH15 (Ca Mau provincial government legal portal, full text)",
+      "url": "https://pbgdpl.camau.gov.vn/filechuyende/54572-48.pdf",
+      "what": "Read 2026-11-28: Art. 12.1 direct method for gold/silver/gem traders (VAT = value added x 10% rate, Art. 9.3); Art. 5.22 imported bar/ingot unfashioned gold not subject to VAT"
     }
   ]
 }

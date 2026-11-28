@@ -1,55 +1,33 @@
 {
   "country": "KZ",
-  "tier": 1,
-  "verifiedAt": "2026-11-27",
-  "confidence": "medium",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
   "defaultKarat": 14,
   "gold": {
     "vatJewelryPct": 16,
-    "vatBullionPct": 0,
-    "importDutyPct": 10,
-    "makingPct": null,
-    "barPremiumPct": {},
-    "barBuybackDiscountPct": null,
-    "usedGoldDiscountPct": {
-      "typical": 2.2
-    }
-  },
-  "silver": {
-    "vatJewelryPct": 16,
     "vatBullionPct": null,
-    "importDutyPct": 10,
+    "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 16% from Jan 2026 (new Tax Code); investment gold (bars 995+, coins 900+) exempt. Duty 10% is EAEU HS 7113 jewellery; bullion subcodes unverified. NBK Mint bars 5-100g are priced per gram flat, so no size premium. Opened packaging costs a 3% examination fee on buyback (spread not published). Used 2.2% is pawn valuation vs NBK accounting price 27 Nov 2026 (calculated). Making not found.",
+  "silver": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 16% standard rate from 1 Jan 2026 (KGD, new Tax Code). Investment-gold exemption not verified on a readable kgd.gov.kz/Tax Code page, so bullion VAT nulled. Import duty nulled: EAEU tariff rate for HS 7113 not readable on an official page. Used-gold % dropped (pawnshop source not primary). Making not found.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Kazakhstan, Other taxes",
-      "url": "http://taxsummaries.pwc.com/Kazakhstan/Corporate/Other-taxes",
-      "what": "Read 2026-11-27: VAT 16% on sales and imports; exemption list includes investment gold"
-    },
-    {
-      "name": "Eurasian Bank - Gold bars",
-      "url": "https://eubank.kz/en/gold-bars",
-      "what": "Read 2026-11-27: NBK programme bars 5-100g 999.9, buy/sell not subject to VAT, 3% examination fee if packaging opened"
-    },
-    {
-      "name": "National Bank of Kazakhstan - Gold accounting prices",
-      "url": "https://nationalbank.kz/en/gold/zoloto?page=1",
-      "what": "Read 2026-11-27: official price KZT 52,553.84/g on 2026-11-27, comparator for the used-gold calculation"
-    },
-    {
-      "name": "MiG exchange offices - Gold Bars of the National Bank",
-      "url": "https://mig.kz/en/page/zolotye_slitki",
-      "what": "Read 2026-11-27: bar prices set per gram, not per bar size; 5-100g denominations, 999.9 Kazakhstan Mint"
-    },
-    {
-      "name": "Lemon Lombard - Gold valuation in Almaty",
-      "url": "https://lmn.kz/en/otsenka-zolota",
-      "what": "Read 2026-11-27: valuation rates 27 Nov 2026 for 585/750/999, about 2.1-2.2% below NBK accounting value (calculated)"
+      "name": "State Revenue Committee (KGD) - VAT administration: main changes from January 1, 2026",
+      "url": "https://www.gov.kz/org/kgd-abay/press/news/details/1115507?lang=en",
+      "what": "Read 2026-11-28: new Tax Code, VAT rate from 1 Jan 2026 is 16% on taxable turnover and imports"
     }
   ]
 }

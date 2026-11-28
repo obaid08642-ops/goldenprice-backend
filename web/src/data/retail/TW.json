@@ -1,11 +1,11 @@
 {
   "country": "TW",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 24,
   "gold": {
-    "vatJewelryPct": 0,
+    "vatJewelryPct": 5,
     "vatBullionPct": 0,
     "importDutyPct": null,
     "makingPct": null,
@@ -26,12 +26,12 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Pure gold (99.9%+) bars, coins and jewellery are business-tax exempt incl. import (MOF); karat jewellery is 5%, so jewellery VAT coded 0 for the dominant pure segment. Import duty % not cited on a primary page this round, null. Making is per-design, no % found, null. Buyback 1.10% = Bank of Taiwan passbook spread 27 Nov 2026 (3,901/3,858 NT$/g). Used 24K: no wear deduction at dealer checked.",
+  "notes": "Pure gold (99.9%+) bars, coins and jewellery are business-tax exempt incl. import (MOF); karat jewellery is 5%, silver jewellery 5% (general rate, not exempt). Import duty % not cited on a primary page, null. Making per-design, null. Buyback 1.10% = Bank of Taiwan passbook spread 27 Nov 2026 (3,901/3,858 NT$/g). Used 24K: no wear deduction at dealer checked.",
   "sources": [
     {
       "name": "Ministry of Finance R.O.C. - Business tax on imported goods directions",
       "url": "https://law-out.mof.gov.tw/EngLawContent.aspx?lan=E&id=329",
-      "what": "Read 2026-11-27: business tax rate 5%; imported pure gold bars/bricks/foil/coins/ornaments over 99.9% exempt"
+      "what": "Read 2026-11-28: business tax rate 5% for taxable goods; imported pure gold bars/bricks/foil/coins/ornaments over 99.9% exempt (silver not exempt, so 5%)"
     },
     {
       "name": "Charline gold dealer - FAQ",

@@ -22,17 +22,17 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "VAT 12% on full price, bars and jewellery; no retail exemption (relief only for SSM/trader sales to BSP, RA 11256; BIR RR 4-2020). Jewellery also has 20% excise (NIRC Sec.150). Import duty and making % removed in review round 1: duty rested on Tariff Finder reports and making on guide pages, neither an opened primary page. 21K most traded; 18K local fine standard.",
+  "notes": "VAT 12% on full price, bars and jewellery (NIRC Sec. 106 via RA 9337, Official Gazette); relief only for SSM/trader sales to BSP (RA 11256; BIR RR 4-2020). Excise note removed: Sec. 150 jewellery limb not readable on a BIR/Official Gazette page. Import duty and making % removed in review round 1. 21K most traded; 18K local fine standard.",
   "sources": [
+    {
+      "name": "Official Gazette - Republic Act No. 9337 (amending NIRC Sec. 106)",
+      "url": "https://www.officialgazette.gov.ph/2005/05/24/republic-act-no-9337-2/",
+      "what": "Read 2026-11-28: Sec. 106 VAT on sale of goods, rate raised to 12% effective 1 Jan 2006; sale of gold to BSP zero-rated"
+    },
     {
       "name": "BIR Revenue Regulations No. 4-2020 (RA 11256 IRR)",
       "url": "https://bir-cdn.bir.gov.ph/local/pdf/RR%20No.%204-2020.pdf",
       "what": "Read 2026-11-27: gold sales to BSP by registered small-scale miners/accredited traders exempt from income and excise tax"
-    },
-    {
-      "name": "NIRC Title VI Ch. VI (Chan Robles full statutory text)",
-      "url": "https://chanrobles.com/legal6title28.htm",
-      "what": "Read 2026-11-27: Sec.150 20% excise on jewellery and goods made of/ornamented with precious metals, on wholesale/import value"
     }
   ]
 }
