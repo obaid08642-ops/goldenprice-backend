@@ -1,0 +1,34 @@
+{
+  "country": "MM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Myanmar has NO VAT, so the VAT fields are null. The Commercial Tax (Union Taxation Law 2026, s.14(i)) charges 3% on pure gold (bars, blocks, coins) AND gold jewellery, on sale proceeds and import landed value, with no input set-off. Silver is never mentioned and takes the general 5% CT rate. The s.14(a)/(d) exemption lists were read in full. Duty null.",
+  "sources": [
+    {
+      "name": "Internal Revenue Department (ird.gov.mm) - Union Taxation Law 2026, s.14(i)",
+      "url": "https://www.ird.gov.mm/storage/laws/6a6b496e035ea-utl2026.pdf",
+      "what": "Read 2026-11-28: commercial tax of 3 percent applies to pure gold (standard gold bars, gold blocks, gold coins) and gold jewellery, domestically and on importation",
+      "quote": "Commercial tax shall be charged at the rate 3 percent on the sale proceeds of the pure gold (standard gold bars, gold blocks, gold coins) jewellery made of gold and also on their landed value for importation."
+    }
+  ]
+}

@@ -99,3 +99,6 @@ Work queue, in this order, repeating until every list is exhausted:
 6. T9 illustrations (see above) whenever your image tool is available.
 7. Audit pass: re-open the sources of files already merged into muse/staging, and open a PR with a correction for every figure that no longer matches its quote.
 Never end your turn with "waiting for review": if all queued PRs are reviewed, take the next batch.
+
+### T10 clarification (owner confirmation)
+Long histories are WELCOME. Whenever a source publishes local gold prices for a week, a month, a year or ten years, collect all of it (the longer the better), as long as the figures come from the official/primary archive and carry a quote. Real local history always wins over any derived series. Never skip available history to keep a PR small: split into several PRs instead (one country per PR).

@@ -1,0 +1,34 @@
+{
+  "country": "MD",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 20% (Codul fiscal art. 96; legis.md consolidation in force from 21.12.2018 - arts. 96/103 substance stable). The full art. 103 and art. 104 lists were read: the only gold item exempts HS 7108 imports BY the National Bank of Moldova and supplies to/by it - retail bullion takes 20%; silver never mentioned. Duty null (TARIM not openable).",
+  "sources": [
+    {
+      "name": "Codul fiscal nr. 1163/1997 (legis.md official text), art. 96",
+      "url": "https://www.legis.md/cautare/downloadpdf/113188",
+      "what": "Read 2026-11-28: the standard VAT rate is 20% of the taxable value of imported goods and services and of supplies in Moldova; the art. 103 list exempts only National Bank gold imports",
+      "quote": "Se stabilesc următoarele cote ale T.V.A.: a) cota-standard – în mărime de 20% din valoarea impozabilă a mărfurilor şi serviciilor importate şi a livrărilor efectuate pe teritoriul Republicii Moldova"
+    }
+  ]
+}
