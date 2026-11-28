@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "USD",
+    "kwh": 0.091,
+    "period": "2026-01",
+    "src": "ARCONEL (Agencia de Regulación y Control de Electricidad) - Pliego Tarifario 2026, single national tariff, residential first block 1-50 kWh",
+    "url": "https://www.gob.ec/sites/default/files/regulations/2026-03/Resolucion-ARCONEL-029-25_Pliegos-Tarifarios-SPEE-SAPG-SCVE-2026h-compressed.pdf",
+    "quote": "1-50 0,091 / 51-100 0,093 / 101-150 0,095"
+  }
+}
