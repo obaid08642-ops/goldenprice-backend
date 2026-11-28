@@ -1,0 +1,34 @@
+{
+  "country": "DO",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "ITBIS general rate 18% (DGII Guia 7 del Contribuyente - ITBIS; legal basis Codigo Tributario art. 345 as amended by Ley 253-12). The guide's reduced-rate list (16%: yogurt, butter, coffee, edible fats, sugars, cocoa) and the complete exemption lists (arts. 343-344) were read in full: gold, bullion and jewellery appear in neither. Import duty null (no openable DGA page stating the 7108 line).",
+  "sources": [
+    {
+      "name": "Dirección General de Impuestos Internos (dgii.gov.do) - Guía 7 del Contribuyente, ITBIS",
+      "url": "https://dgii.gov.do/publicacionesOficiales/bibliotecaVirtual/contribuyentes/itbis/Documents/1-Guia 7 - (ITBIS).pdf",
+      "what": "Read 2026-11-28: ITBIS applies at a general rate of 18% (16% reduced only for listed foods); the exemption lists reproduced in the guide contain no gold item",
+      "quote": "Este impuesto se aplicará sobre las transferencias e importaciones gravadas y/o servicios prestados con una tasa general de un 18% y una tasa reducida de un 16% para los productos que se indican a continuación"
+    }
+  ]
+}

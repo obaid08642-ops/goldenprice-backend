@@ -1,0 +1,34 @@
+{
+  "country": "HT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TCA (Taxe sur le Chiffre d'Affaires) single rate 10% - Code Fiscal, Le Moniteur Special N° 48-A of 30 Sep 2026, in force 1 Oct 2026, art. 186 (DGI official PDF, text verified directly). The complete art. 181 exemption list (26 categories, a-z) was read: gold, bullion, silver and jewellery appear in none. Import duty null (no openable AGD page stating the 7108 line).",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts (dgi.gouv.ht) - Code Fiscal (Le Moniteur Spécial N° 48-A, 30 Sep 2026), art. 186",
+      "url": "https://dgi.gouv.ht/wp-content/uploads/2026/10/Code-Fiscal.pdf",
+      "what": "Read 2026-11-28: art. 186 sets the TCA rate at 10%; the art. 181 exemption list read in full contains no precious-metals item",
+      "quote": "Le taux de la Taxe sur le Chiffre d'Affaires est de dix pour cent (10%)."
+    }
+  ]
+}

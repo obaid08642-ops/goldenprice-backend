@@ -1,0 +1,34 @@
+{
+  "country": "MN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 10% (Law on VAT art. 11.1, legalinfo.mn). Bullion EXEMPT: art. 13.1.11 exempts 'sold gold' - the full art. 13.1 list was read; it is the only precious-metals item and is unqualified, so it might arguably extend to worked gold; jewellery is coded 10% as a manufactured retail good, ambiguity flagged for the reviewer. Silver never mentioned (10/10). Duty null.",
+  "sources": [
+    {
+      "name": "General Tax Authority / legalinfo.mn - Law on Value Added Tax (2015, revised), arts. 11.1 and 13.1.11",
+      "url": "https://legalinfo.mn/en/edtl/16758728323701",
+      "what": "Read 2026-11-28: VAT is imposed at 10 percent on the sale value of goods, and art. 13.1.11 exempts sold gold",
+      "quote": "13.1.11.sold gold;"
+    }
+  ]
+}
