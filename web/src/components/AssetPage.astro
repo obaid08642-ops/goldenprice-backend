@@ -9,6 +9,7 @@ import { keywordsFor } from "../data/keywords";
 import { t } from "../i18n/ui";
 import { countryName, currencyName, fmt } from "../lib/format";
 import { getData } from "../lib/api";
+import { iconFor } from "../lib/icons";
 import { url, assetUrl, isPrimary, pageExists } from "../lib/paths";
 import { assetName, defaultUnit, hasPrice, local, renderBars, renderCurrencies, renderHero, renderMarkets, renderMarketsAll, renderRates, renderSide, renderStats, renderContent, renderTicker, renderUsed, unitLabel, type Ctx } from "../lib/render";
 
@@ -150,7 +151,7 @@ const boot = JSON.stringify({ retail, lang, cc: country.code, cur: country.cur, 
 
     {view !== "calc" && view !== "rates" && view !== "compare" && (
       <div class="tiles">
-        {sameKind.map((x) => <a class:list={["tile", { on: x.slug === a.slug && view === "asset" }]} href={assetUrl(lang, country.code, x)}><i>{x.code}</i>{assetName(lang, x)}</a>)}
+        {sameKind.map((x) => <a class:list={["tile", { on: x.slug === a.slug && view === "asset" }]} href={assetUrl(lang, country.code, x)}><i class="ic3" data-k={x.kind}><img src={iconFor(x)} alt="" width="30" height="30" loading="lazy" decoding="async" /></i>{assetName(lang, x)}</a>)}
       </div>
     )}
 

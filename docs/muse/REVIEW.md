@@ -21,3 +21,10 @@ A PR is merged into `muse/staging` only if ALL of these hold. Anything else is s
 ## PR hygiene
 - Base `muse/staging`, never `main`. Do not merge your own PRs. One PR per batch of up to 10 countries. Stacked PRs must say what they stack on.
 - Answer review comments by pushing new commits to the same branch and writing a short note in issue #17.
+
+## Stricter rules (added after round 3)
+- Every figure carries a `quote`: the verbatim sentence or table row you read on the page, containing the number. Costs: `quote` next to `url`. Retail: `quote` in each source object (not needed only for `confidence: low`). A figure without a matching quote is rejected by the checker.
+- Two independent primary sources for any tax or duty rate that is marked medium confidence (a legislation text plus the authority's own guidance, or two official pages). One source means `low`.
+- `src` must name the official body that publishes the number. Phrases like "reports", "according to", "wire" are rejected.
+- Dates: use the date printed on the page. If the page has no date, the figure is not used.
+- If a page cannot be opened by you, the figure is omitted. Do not reconstruct a number from search snippets, from memory, or from a secondary site that quotes the primary one.

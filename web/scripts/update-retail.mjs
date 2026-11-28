@@ -37,7 +37,7 @@ for (const d of dealers) {
   const j = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : { country: d.cc, tier: 2, confidence: "medium", gold: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, silver: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barPremiumPct: {}, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, sources: [], notes: "Bar prices read automatically from the dealer's public price list." };
   j.gold.barPremiumPct = Object.fromEntries(keys.sort((a, b) => parseFloat(a) - parseFloat(b)).map((k) => [k, +best[k].toFixed(1)]));
   const bb = keys.map((k) => buy[k]).filter((v) => v >= 0 && v < 40).sort((a, b) => a - b); if (bb.length) j.gold.barBuybackDiscountPct = { typical: +bb[Math.floor(bb.length / 2)].toFixed(1) };
-  j.verifiedAt = today; j.sources = j.sources.filter((s) => s.url !== d.url); j.sources.unshift({ name: d.name, url: d.url, what: `Gold bar ask${d.perGram ? " per gram" : ""} by size vs live spot, read automatically ${today}` });
+  j.verifiedAt = today; j.sources = j.sources.filter((s) => s.url !== d.url); j.sources.unshift({ name: d.name, url: d.url, what: `Gold bar ask${d.perGram ? " per gram" : ""} by size vs live spot, read automatically ${today}`, quote: `${d.name} price table rows (grams, prices): ${rows.slice(0, 3).map((r) => `${r.grams} g ${r.prices.join(" / ")}`).join("; ")}` });
   fs.writeFileSync(f, JSON.stringify(j, null, 2) + "\n"); console.log(d.cc, "updated", keys.join(","));
 }
 await b.close();
