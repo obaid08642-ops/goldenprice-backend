@@ -1,1 +1,33 @@
-{}
+{
+  "QA": {
+    "fuel": {
+      "cur": "QAR",
+      "date": "2026-10-01",
+      "src": "QatarEnergy fuel prices (Super 95)",
+      "url": "https://www.qatarenergy.qa/en/Documents/Fuel%20Prices.pdf",
+      "petrol95": 2.1,
+      "diesel": 2.05,
+      "lpg": null
+    }
+  },
+  "BH": {
+    "electricity": {
+      "cur": "BHD",
+      "kwh": 0.003,
+      "period": "2026-11",
+      "src": "EWA domestic tariff, Bahraini single account, first tier 0-3000 kWh (3 fils/kWh)",
+      "url": "https://www.ewa.bh/en/tariff"
+    }
+  },
+  "OM": {
+    "fuel": {
+      "cur": "OMR",
+      "date": "2026-11-01",
+      "src": "OOMCO homepage price board, Fuel Retail Prices - November (Mogas 95; prices capped since Oct 2021, unchanged)",
+      "url": "https://oomco.om/",
+      "petrol95": 0.239,
+      "diesel": 0.258,
+      "lpg": null
+    }
+  }
+}
