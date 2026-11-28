@@ -1,0 +1,40 @@
+{
+  "country": "CI",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate (taux de droit commun) 18% (DGI synoptic table, CGI art. 339 et seq.). The DGI's art. 355 exemption list and the 9% reduced-rate list contain no gold or precious-metal item, so jewellery and bullion take 18% (absence-of-exemption basis, disclosed). Import duty HS 7108 null: the DGD online tariff line could not be opened on an official page.",
+  "sources": [
+    {
+      "name": "Direction Générale des Impôts - Impôts et taxes en Côte d'Ivoire (synoptic table, éd. 2025)",
+      "url": "https://www.dgi.gouv.ci/assets/documents/IMPOTS ET TAXES EN COTE D'IVOIRE .pdf",
+      "what": "Read 2026-11-28: TVA taux de droit commun 18%; the art. 355 exemption column and the 9% reduced-rate list contain no gold or precious-metal item",
+      "quote": "Taux de droit commun : 18 % sur une base hors taxe"
+    },
+    {
+      "name": "Direction Générale des Impôts - Communiqué of 16 Jan 2026 on VAT rates",
+      "url": "https://www.fne.dgi.gouv.ci/uploads/communiques/pdf_696e12da46ae5_COMMUNIQUE_TAUX_REDUIT.pdf",
+      "what": "Read 2026-11-28: the communiqué confirms the standard 18% rate applies to the operations and products concerned after removal of certain CGI exemptions",
+      "quote": "appliqué aux opérations et produits concernés, le taux de droit commun de 18%."
+    }
+  ]
+}
