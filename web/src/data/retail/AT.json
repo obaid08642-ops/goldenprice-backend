@@ -1,12 +1,12 @@
 {
   "country": "AT",
   "tier": 2,
-  "verifiedAt": "2026-11-27",
+  "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 18,
   "gold": {
     "vatJewelryPct": 20,
-    "vatBullionPct": null,
+    "vatBullionPct": 0,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {
@@ -32,26 +32,32 @@
     "usedGoldDiscountPct": null
   },
   "silver": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
+    "vatJewelryPct": 20,
+    "vatBullionPct": 20,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Premiums are philoro ask for Muenze Oesterreich bars vs spot; 1 g bar carries a very high premium. Investment gold VAT status not verified from a source read here. Buyback spread not computed (philoro bid column looked inconsistent).",
+  "notes": "VAT 20% standard rate (UStG 1994 §10). Investment gold (Anlagegold: 995+ bars/plates, qualifying coins) is VAT-exempt under §6 Abs. 1 Z 8 lit. j; silver is not Anlagegold, so silver bullion carries 20%. Premiums are philoro asks for Münze Österreich bars vs spot (dealer list, read 27 Nov 2026); 1 g bar carries a very high premium. Buyback typical 3% (philoro list).",
   "sources": [
+    {
+      "name": "RIS (ris.bka.gv.at) - Umsatzsteuergesetz 1994, § 10",
+      "url": "https://ris.bka.gv.at/Dokumente/Bundesnormen/NOR40278068/NOR40278068.pdf",
+      "what": "Read 2026-11-28: §10(1) - the tax is 20% of the assessment basis for every taxable turnover; jewellery is in no exemption or reduced-rate list",
+      "quote": "§ 10. (1) Die Steuer beträgt für jeden steuerpflichtigen Umsatz 20% der Bemessungsgrundlage (§§ 4 und 5)."
+    },
+    {
+      "name": "RIS (ris.bka.gv.at) - Umsatzsteuergesetz 1994, § 6 (Steuerbefreiungen)",
+      "url": "https://ris.bka.gv.at/NormDokument.wxe?Abfrage=Bundesnormen&Gesetzesnummer=10004873&FassungVom=2026-02-13&Artikel=&Paragraf=6&Anlage=&Uebergangsrecht=&ShowPrintPreview=True",
+      "what": "Read 2026-11-28: §6 Abs. 1 Z 8 lit. j exempts the supply of Anlagegold (995+ bars/plates and qualifying coins); §24a is the special scheme for investment gold",
+      "quote": "die Lieferung von Anlagegold, einschließlich Anlagegold in Form von Zertifikaten über sammel- oder einzelverwahrtes Gold und über Goldkonten gehandeltes Gold"
+    },
     {
       "name": "philoro price list (Goldbarren)",
       "url": "https://philoro.at/preisliste/goldbarren",
       "what": "Gold bar ask by size vs live spot, read automatically 2026-11-27",
-      "quote": "philoro price list (Goldbarren): Goldbarren 1000 g, 104.617,02 EUR / 111.135,48 EUR"
-    },
-    {
-      "name": "Wikipedia EU VAT rates",
-      "url": "https://en.wikipedia.org/wiki/European_Union_value-added_tax",
-      "what": "Standard VAT rate AT 20% (applied to jewelry; read 2026-11-27)",
       "quote": "philoro price list (Goldbarren): Goldbarren 1000 g, 104.617,02 EUR / 111.135,48 EUR"
     }
   ]
