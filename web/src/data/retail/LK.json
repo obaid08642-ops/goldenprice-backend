@@ -1,0 +1,33 @@
+{
+  "country": "LK",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 18% from 1 Jan 2024 (Customs Tariff 2026 Ch.71: 18% VAT + 2.5% SSCL, HS 7108/7113/7106). Import-duty % not reliably readable from the tariff PDF columns, null. Making % removed round 2 (no primary source). No dealer bar sell list or buyback/used % found. Tier 2/low: one primary source.",
+  "sources": [
+    {
+      "name": "Sri Lanka Customs - National Imports Tariff Guide 2026, Chapter 71",
+      "url": "https://www.customs.gov.lk/wp-content/uploads/2026/06/Tariff 2022 Section XIV Final._Chap_71.pdf",
+      "what": "Read 2026-11-27: 18% VAT and 2.5% SSCL columns for gold HS 7108, gold jewellery 7113.19, gold coin 7118.90.10, silver 7106 and silver jewellery 7113.11"
+    }
+  ]
+}

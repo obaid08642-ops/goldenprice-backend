@@ -1,0 +1,33 @@
+{
+  "country": "BD",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 22,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Commercial gold import duty is specific, not a %: BDT 2,000 per 11.664g in the NBR Customs Tariff Ch.71, so importDutyPct is null. Jewellery VAT moved to VAT-inclusive BAJUS pricing in FY2026-27; no % could be read on an NBR page, so it is null. Making/used-gold figures removed in review round 1 (news-only support). No dealer bar list found.",
+  "sources": [
+    {
+      "name": "National Board of Revenue - Customs Tariff Chapter 71",
+      "url": "https://nbr.gov.bd/uploads/tariff_schedule/Chapter-719.pdf",
+      "what": "Read 2026-11-27: HS 7108.12.90/7108.13 gold BDT 2,000 per 11.664g specific duty, HS 7113 jewellery 25%, silver HS 7106 rates"
+    }
+  ]
+}

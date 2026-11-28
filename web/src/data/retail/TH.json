@@ -1,0 +1,33 @@
+{
+  "country": "TH",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 23,
+  "gold": {
+    "vatJewelryPct": 7,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "96.5% standard (about 23K). VAT 7% is the general rate per the Revenue Department (no jewellery-specific page openable on rd.go.th). Bullion VAT exemption (RD 311/367) and 0% duty not verifiable on an openable RD/Customs page, so nulled round 2. Making, buyback, used % removed round 1 (blog/aggregator only).",
+  "sources": [
+    {
+      "name": "Thai Revenue Department - VAT rates (general rate 7%)",
+      "url": "https://www.rd.go.th/english/6043.html",
+      "what": "Read 2026-11-28: general VAT rate is 7 percent"
+    }
+  ]
+}

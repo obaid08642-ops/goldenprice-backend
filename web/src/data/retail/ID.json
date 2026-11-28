@@ -1,0 +1,38 @@
+{
+  "country": "ID",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 1.65,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "PMK 48/PMK.03/2023 (28 Apr 2023, eff. 1 May 2023) on the DJP portal: Pasal 14(3)(b) jewellery VAT to end consumer 15% x 11% = 1.65% (1.1% trade-to-trade). Bullion VAT not collected if bar form, min. 99.99%, certified (DJP article; PMK 48 Pasal 20 defers non-reserve bullion to PP 49/2022). Import duty and Antam buyback removed round 1 (news-only); see ID upgrade PR. Making null.",
+  "sources": [
+    {
+      "name": "Directorate General of Taxes (DJP) - Full text of PMK 48/PMK.03/2023 on gold jewellery and bullion",
+      "url": "https://stats.pajak.go.id/index.php/id/peraturan/pajak-penghasilan-danatau-pajak-pertambahan-nilai-atas-penjualanpenyerahan-emas-perhiasan",
+      "what": "Read 2026-11-28: Pasal 14(3)(b) jewellery VAT to end consumer 15% x 11% = 1.65% of selling price; Pasal 14(3)(a)/(4)(a) 10% x 11% = 1.1% trade-to-trade; Pasal 14(4)(c) 0% to manufacturers"
+    },
+    {
+      "name": "Directorate General of Taxes (DJP) - PPN Emas Batangan article",
+      "url": "https://www.pajak.go.id/en/node/97306",
+      "what": "Read 2026-11-28: bullion VAT not collected if bar form, min. fineness 99.99%, proven by certificate; also confirms jewellery VAT 1.65% of selling price where seller lacks a complete tax invoice"
+    }
+  ]
+}

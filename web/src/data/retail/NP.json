@@ -1,0 +1,33 @@
+{
+  "country": "NP",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "The daily gold/silver fix is set by FENEGOSIDA and published on its own site; the fix embeds customs duty and taxes. The duty %, VAT exemption and making % previously cited came from guide and news pages and were removed in review round 1 pending a primary tariff/VAT page. No bar-by-size list or buyback % published.",
+  "sources": [
+    {
+      "name": "FENEGOSIDA - Federation of Nepal Gold and Silver Dealers' Association (official site)",
+      "url": "https://www.fenegosida.org/graph",
+      "what": "Read 2026-11-28: the federation's own site publishes its official daily gold and silver fix (per tola and per 10g); the fix is the market rate for Nepal."
+    }
+  ]
+}
