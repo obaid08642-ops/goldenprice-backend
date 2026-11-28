@@ -1,0 +1,11 @@
+{
+  "fuel": {
+    "cur": "JMD",
+    "date": "2026-11-19",
+    "src": "Petrojam Limited (state refinery) ex-refinery billing prices - Gasolene 90 is the premium grade",
+    "url": "https://www.petrojam.com/",
+    "quote": "This Week's Prices | Date: | November 19, 2026 | Auto Diesel | $241.6603 | Gasolene 87 | $191.0628 | Gasolene 90 | $199.8287",
+    "petrol95": 199.8287,
+    "diesel": 241.6603
+  }
+}
