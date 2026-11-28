@@ -1,0 +1,40 @@
+{
+  "country": "MW",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 17.5,
+    "vatBullionPct": null,
+    "importDutyPct": 10,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 17.5,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 17.5% since the VAT (Amendment) (No. 2) Act No. 37 of 2025 replaced 16.5% in section 9 (MRA gazette print). Bullion VAT null: the exempt/zero-rated schedules could not be read on an official host in this pass. Import duty: 10% general rate on unwrought gold HS 7108.12 (Tariffs (No. 3) Order 2018, gazette 2019 - disclosed; 2022 order line not openable).",
+  "sources": [
+    {
+      "name": "Malawi Revenue Authority (mra.mw) - Value Added Tax (Amendment) (No. 2) Act, No. 37 of 2025",
+      "url": "https://www.mra.mw/admin/storage/download_files/1767960417_Value%20Adde%20Tax%20%28Amendment%29%20%28NO.%202%29%20ACT.pdf",
+      "what": "Read 2026-11-28: section 9 of the VAT Act is amended by deleting 16.5 and substituting 17.5 (assented 20 Dec 2025)",
+      "quote": "The Value Added Tax Act is amended, in section 9, by deleting the word \"16.5\" and substituting therefor the word \"17.5\"."
+    },
+    {
+      "name": "Malawi Gazette - Customs and Excise (Tariffs) (No. 3) Order 2018 (Malawi Trade Portal)",
+      "url": "https://malawitradeportal.org/upload/files/Legal_1638537159.pdf",
+      "what": "Read 2026-11-28: tariff line 7108.12.00 (other unwrought gold) shows 10% in the general customs duty columns (COMESA 3%, AfCFTA 5%, SADC Free)",
+      "quote": "7108.12.00 --Other unwrought forms . . . . . . kg 10% 10% 3% 5% Free Free 16.5% 3%"
+    }
+  ]
+}

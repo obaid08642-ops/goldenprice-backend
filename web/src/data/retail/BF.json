@@ -1,0 +1,34 @@
+{
+  "country": "BF",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA standard rate 18% (CGI art. 317, as amended by the Finance Law 2025, National Assembly text). The art. 308 exempt-products list in the same official text contains no chapter-71 or precious-metals item, so jewellery and bullion take 18%. Import duty HS 7108 null: no WAEMU CET line could be opened on an authority page. No dealer bar list found.",
+  "sources": [
+    {
+      "name": "Assemblée législative de transition (an.bf) - Finance Law 2025 amending the CGI",
+      "url": "https://an.bf/storage/libelrapportautres/N2IfxV6cdsVcb7yip8AFQ59ZK5QcTCWMOHQkQ7mx.pdf",
+      "what": "Read 2026-11-28: art. 317 fixes the TVA rate at 18% (the 10% reduced rate covers only approved hotel/restaurant services and domestic air transport); the amended art. 308 exemption list contains no gold or precious-metals item",
+      "quote": "Article 317 : Le taux de la TVA est fixé à 18%."
+    }
+  ]
+}

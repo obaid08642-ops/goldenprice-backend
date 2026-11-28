@@ -1,0 +1,40 @@
+{
+  "country": "ML",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA 18% (Ministry of Economy and Finance / DGI: Mali fixed its VAT rate at 18% within the UEMOA band). Bullion VAT is null: the CGI exemption list could not be opened on an official page in this pass, so no bullion treatment is coded. Import duty HS 7108 null (no customs page stating it). No dealer bar list found.",
+  "sources": [
+    {
+      "name": "Ministère de l'Économie et des Finances (finances.ml) - DGI study on corporate taxation",
+      "url": "https://finances.ml/sites/default/files/2019-03/PAGE_6_Fiscalite%20societes%20telecom_mai2017_0.pdf",
+      "what": "Read 2026-11-28: the UEMOA-harmonised VAT band is 15-20% and Mali fixed its VAT rate at 18%",
+      "quote": "Le taux de la TVA harmonisé par l'espace UEMOA est compris dans une fourchette de 15% à 20%. Le Mali a fixé le taux de TVA à 18%."
+    },
+    {
+      "name": "Portail de l'administration malienne (demarchesadministratives.gouv.ml) - TVA declaration page",
+      "url": "https://demarchesadministratives.gouv.ml",
+      "what": "Read 2026-11-28: the official administration portal states the VAT obligation at 18%",
+      "quote": "L'obligation de payer les sommes dues (18% dans toute la zone UEMOA)"
+    }
+  ]
+}
