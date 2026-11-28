@@ -1,0 +1,33 @@
+{
+  "country": "KZ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 16% standard rate from 1 Jan 2026 (KGD, new Tax Code). Investment-gold exemption not verified on a readable kgd.gov.kz/Tax Code page, so bullion VAT nulled. Import duty nulled: EAEU tariff rate for HS 7113 not readable on an official page. Used-gold % dropped (pawnshop source not primary). Making not found.",
+  "sources": [
+    {
+      "name": "State Revenue Committee (KGD) - VAT administration: main changes from January 1, 2026",
+      "url": "https://www.gov.kz/org/kgd-abay/press/news/details/1115507?lang=en",
+      "what": "Read 2026-11-28: new Tax Code, VAT rate from 1 Jan 2026 is 16% on taxable turnover and imports"
+    }
+  ]
+}

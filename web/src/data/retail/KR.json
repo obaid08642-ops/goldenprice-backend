@@ -1,0 +1,33 @@
+{
+  "country": "KR",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": 3,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Korea Customs Service release (opened 2026-11-28): basic tariff on raw-state gold is 3% (0% is FTA-origin only) and VAT is 10%. Aggregator/guide sources removed in review round 1. Silver VAT, making and used % not cited on a primary page on this branch, null. The KR upgrade PR adds dealer buyback/used figures from the Korea Gold Exchange.",
+  "sources": [
+    {
+      "name": "Korea Customs Service - press release on gold tariff",
+      "url": "https://www.customs.go.kr/kcs/na/ntt/selectNttInfo.do?mi=2891&nttSn=22247&nttSnUrl=search",
+      "what": "Read 2026-11-28: tariff rate on raw-state gold is 3% (VAT 10%, exempt only under the special recommendation scheme)"
+    }
+  ]
+}

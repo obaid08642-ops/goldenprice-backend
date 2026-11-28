@@ -1,0 +1,33 @@
+{
+  "country": "VN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 24,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 10% applies only to the dealer's value added (direct method, VAT Law 48/2024 Art. 12); imported bar/ingot gold not subject to VAT (Art. 5.22). Law text read on a provincial government legal portal; no GDT/MOF page carrying it could be opened. Bar import duty not found (SBV licence regime), null. Premium, buyback, used and making % removed in review round 1.",
+  "sources": [
+    {
+      "name": "VAT Law No. 48/2024/QH15 (Ca Mau provincial government legal portal, full text)",
+      "url": "https://pbgdpl.camau.gov.vn/filechuyende/54572-48.pdf",
+      "what": "Read 2026-11-28: Art. 12.1 direct method for gold/silver/gem traders (VAT = value added x 10% rate, Art. 9.3); Art. 5.22 imported bar/ingot unfashioned gold not subject to VAT"
+    }
+  ]
+}
