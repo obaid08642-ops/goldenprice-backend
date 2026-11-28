@@ -930,8 +930,9 @@ app.get("/api/history/:symbol", async (req, res) => {
 // Exchange-rate sanity: cut the series after a re-denomination (a jump of 8x or more in one day) and drop isolated one-day spikes (bad Yahoo ticks).
 function cleanFx(fx) {
   let a = fx.filter((x) => x.rate > 0);
+  a = a.filter((x, i) => { if (i === 0 || i === a.length - 1) return true; const p = a[i - 1].rate, n = a[i + 1].rate, q = x.rate / p; return !((q > 1.5 || q < 0.67) && n / p > 0.9 && n / p < 1.1); });
   for (let i = a.length - 1; i > 0; i--) { const q = a[i].rate / a[i - 1].rate; if (q >= 8 || q <= 1 / 8) { a = a.slice(i); break; } }
-  return a.filter((x, i) => { if (i === 0 || i === a.length - 1) return true; const p = a[i - 1].rate, n = a[i + 1].rate, q = x.rate / p; return !((q > 1.5 || q < 0.67) && n / p > 0.9 && n / p < 1.1); });
+  return a;
 }
 app.get("/api/chart/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
