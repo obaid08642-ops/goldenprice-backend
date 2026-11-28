@@ -1,0 +1,53 @@
+{
+  "cur": "INR",
+  "items": {
+    "rice": {
+      "value": 44.89,
+      "unit": "kg",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Rice 1 Kg 44.89 42.68 5.18"
+    },
+    "wheat_flour": {
+      "value": 37.14,
+      "unit": "kg",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Atta (Wheat) 1 Kg 37.14 36.76 1.03"
+    },
+    "sugar": {
+      "value": 48.96,
+      "unit": "kg",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Sugar 1 Kg 48.96 45.95 6.55"
+    },
+    "milk": {
+      "value": 60.89,
+      "unit": "litre",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Milk 1 Ltr 60.89 59.05 3.12"
+    },
+    "tea": {
+      "value": 275.89,
+      "unit": "kg",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Tea Loose 1 Kg 275.89 270.54 1.98"
+    },
+    "eggs": {
+      "value": 86.84,
+      "unit": "dozen",
+      "date": "2026-07-28",
+      "src": "Department of Consumer Affairs, Price Monitoring Division - all-India average retail prices (Rajya Sabha answer annexure, prices as on 28/07/2026)",
+      "url": "https://sansad.in/getFile/annex/271/AU1801_7HOm53.pdf?source=pqars",
+      "quote": "Eggs 1 Dozen 86.84 77.19 12.50"
+    }
+  }
+}

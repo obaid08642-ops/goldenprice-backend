@@ -1,0 +1,53 @@
+{
+  "cur": "AED",
+  "items": {
+    "sugar": {
+      "value": 8.75,
+      "unit": "kg",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "كما بلغ متوسط سعر السكر الأبيض النقي عبوة 1 كغ نحو 8.75 درهم"
+    },
+    "rice": {
+      "value": 16.62,
+      "unit": "kg",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "وبلغ متوسط سعر الأرز البسمتي عبوة 1 كغ نحو 16.62 درهم"
+    },
+    "wheat_flour": {
+      "value": 7.76,
+      "unit": "kg",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "وبلغ متوسط سعر الدقيق من الدرجة الأولى والثانية عبوة 1 كغ نحو 7.76 درهم"
+    },
+    "cooking_oil": {
+      "value": 19.31,
+      "unit": "litre",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "كما بلغ متوسط سعر زيت دوار الشمس عبوة 1 لتر نحو 19.31 درهم"
+    },
+    "milk": {
+      "value": 9.46,
+      "unit": "litre",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "وبلغ متوسط سعر الحليب الطازج الكامل الدسم عبوة 0.5 لتر نحو 3.91 درهم، فيما بلغ متوسط سعر عبوة 1 لتر نحو 9.46 درهم"
+    },
+    "chicken": {
+      "value": 22.97,
+      "unit": "kg",
+      "date": "2026-08-31",
+      "src": "UAE Ministry of Economy and Tourism - Essential Goods Prices Platform, monthly price monitoring table, August 2026 (national average)",
+      "url": "https://www.moet.gov.ae/-/ministry-of-economy-and-tourism-publishes-august-2026-monthly-price-monitoring-table-for-key-commodities-via-the-essential-goods-prices-platform-",
+      "quote": "فيما بلغ متوسط سعره لوزن 1 كغ نحو 22.97 درهم"
+    }
+  }
+}
