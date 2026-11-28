@@ -1,0 +1,45 @@
+{
+  "cur": "EGP",
+  "items": {
+    "sugar": {
+      "value": 38.99,
+      "unit": "kg",
+      "date": "2026-03-31",
+      "src": "CAPMAS - Monthly bulletin of average consumer prices of food commodities, March 2026 (general average, urban areas of the Republic)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6270/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d9%85%d8%b3%d8%aa%d9%87%d9%84%d9%83%20%d9%84%d8%a3%d9%87%d9%85%20%d8%a7%d9%84%d8%b3%d9%84%d8%b9%20%d8%a7%d9%84%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9%20_%203%20-%202026_compressed.pdf",
+      "quote": "سكر حر معبأ ( الضحى) كجم/ g.k 39.27 38.99 41.56) 0.7) (6.2 (Sugar Packed"
+    },
+    "rice": {
+      "value": 37.99,
+      "unit": "kg",
+      "date": "2026-03-31",
+      "src": "CAPMAS - Monthly bulletin of average consumer prices of food commodities, March 2026 (general average, urban areas of the Republic)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6270/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d9%85%d8%b3%d8%aa%d9%87%d9%84%d9%83%20%d9%84%d8%a3%d9%87%d9%85%20%d8%a7%d9%84%d8%b3%d9%84%d8%b9%20%d8%a7%d9%84%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9%20_%203%20-%202026_compressed.pdf",
+      "quote": "أرز ابيض معبأ ( الضحى) كجم/ g.k 37.73 37.99 38.81 0.7) 2.1 (Rice White Packed"
+    },
+    "wheat_flour": {
+      "value": 22.8,
+      "unit": "kg",
+      "date": "2026-03-31",
+      "src": "CAPMAS - Monthly bulletin of average consumer prices of food commodities, March 2026 (general average, urban areas of the Republic)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6270/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d9%85%d8%b3%d8%aa%d9%87%d9%84%d9%83%20%d9%84%d8%a3%d9%87%d9%85%20%d8%a7%d9%84%d8%b3%d9%84%d8%b9%20%d8%a7%d9%84%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9%20_%203%20-%202026_compressed.pdf",
+      "quote": "Unpacked Wheat Flour 72% 2.5 1.2 22.24 22.80 22.52 k.g /كجم"
+    },
+    "chicken": {
+      "value": 113.11,
+      "unit": "kg",
+      "date": "2026-03-31",
+      "src": "CAPMAS - Monthly bulletin of average consumer prices of food commodities, March 2026 (general average, urban areas of the Republic)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6270/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d9%85%d8%b3%d8%aa%d9%87%d9%84%d9%83%20%d9%84%d8%a3%d9%87%d9%85%20%d8%a7%d9%84%d8%b3%d9%84%d8%b9%20%d8%a7%d9%84%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9%20_%203%20-%202026_compressed.pdf",
+      "quote": "The average sale price of one kg. Farm chicken reached to 113.11 pound in Mar 2026"
+    },
+    "beef": {
+      "value": 417.23,
+      "unit": "kg",
+      "date": "2026-03-31",
+      "src": "CAPMAS - Monthly bulletin of average consumer prices of food commodities, March 2026 (general average, urban areas of the Republic)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6270/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d9%85%d8%b3%d8%aa%d9%87%d9%84%d9%83%20%d9%84%d8%a3%d9%87%d9%85%20%d8%a7%d9%84%d8%b3%d9%84%d8%b9%20%d8%a7%d9%84%d8%ba%d8%b0%d8%a7%d8%a6%d9%8a%d8%a9%20_%203%20-%202026_compressed.pdf",
+      "quote": "Middle age buffalo & cattle (net كجم/ g.k 414.44 417.23 403.96 0.7 3.3 (meat"
+    }
+  }
+}

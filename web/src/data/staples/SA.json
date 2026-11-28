@@ -1,0 +1,37 @@
+{
+  "cur": "SAR",
+  "items": {
+    "wheat_flour": {
+      "value": 3.1,
+      "unit": "kg",
+      "date": "2026-10-31",
+      "src": "GASTAT - Average Prices of Goods and Services, October 2026 (Kingdom-level average prices)",
+      "url": "https://stats.gov.sa/documents/20117/2435267/Average+Prices+of+Goods+and+Services+Oct+2026+AR-EN+%282%29.pdf/5b0f4298-fb1b-b481-976c-b442dc85a887?t=1794210560628",
+      "quote": "Brown Local Wheat flour(Grain Silos) | 1 kg | -0.3 | 0.0 | 3.1 | 3.1 | 3.1"
+    },
+    "milk": {
+      "value": 7.0,
+      "unit": "litre",
+      "date": "2026-10-31",
+      "src": "GASTAT - Average Prices of Goods and Services, October 2026 (Kingdom-level average prices)",
+      "url": "https://stats.gov.sa/documents/20117/2435267/Average+Prices+of+Goods+and+Services+Oct+2026+AR-EN+%282%29.pdf/5b0f4298-fb1b-b481-976c-b442dc85a887?t=1794210560628",
+      "quote": "Local Fresh Milk (Al Marai) | 1 L | 16.7 | 0.0 | 6.0 | 7.0 | 7.0"
+    },
+    "beef": {
+      "value": 55.7,
+      "unit": "kg",
+      "date": "2026-10-31",
+      "src": "GASTAT - Average Prices of Goods and Services, October 2026 (Kingdom-level average prices)",
+      "url": "https://stats.gov.sa/documents/20117/2435267/Average+Prices+of+Goods+and+Services+Oct+2026+AR-EN+%282%29.pdf/5b0f4298-fb1b-b481-976c-b442dc85a887?t=1794210560628",
+      "quote": "Fresh Cattle Meat | 1 kg | 6.1 | 0.3 | 52.5 | 55.5 | 55.7"
+    },
+    "tea": {
+      "value": 40.9,
+      "unit": "kg",
+      "date": "2026-10-31",
+      "src": "GASTAT - Average Prices of Goods and Services, October 2026 (Kingdom-level average prices)",
+      "url": "https://stats.gov.sa/documents/20117/2435267/Average+Prices+of+Goods+and+Services+Oct+2026+AR-EN+%282%29.pdf/5b0f4298-fb1b-b481-976c-b442dc85a887?t=1794210560628",
+      "quote": "black loose Tea (Rabea) | 1 kg | 3.3 | 2.0 | 39.6 | 40.1 | 40.9"
+    }
+  }
+}
