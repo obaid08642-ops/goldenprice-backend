@@ -1,0 +1,20 @@
+{
+  "fuel": {
+    "cur": "XOF",
+    "date": "2026-08-15",
+    "src": "Primature du Sénégal, government communiqué of 14 Aug 2026 - national ceiling prices (supercarburant, gasoil)",
+    "url": "https://www.primature.sn/publications/communiques-officiels/ajustement-des-prix-des-carburants-compter-du-samedi-15-aout",
+    "quote": "Supercarburant - 990 F CFA le litre ; Gasoil - 755 F CFA le litre",
+    "petrol95": 990,
+    "diesel": 755,
+    "lpg": null
+  },
+  "electricity": {
+    "cur": "XOF",
+    "kwh": 82,
+    "period": "2026-01",
+    "src": "Commission de régulation du secteur de l'énergie (CRSE) - Senelec tariff grid from 1 Jan 2026, residential DPP first tranche 0-150 kWh",
+    "url": "https://crse.sn/wp-content/uploads/2025/12/Grilles-tarifaires-Senelec-et-CER-applicables-a-compter-du-1er-janvier-2026.pdf",
+    "quote": "GRILLE TARIFAIRE DE SENELEC APPLICABLE A COMPTER DU 1er JANVIER 2026 … Domestique Petite Puissance (DPP) 82,00 136,49 159,36"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "electricity": {
+    "cur": "ZMW",
+    "kwh": 0.35,
+    "period": "2025-11",
+    "src": "Energy Regulation Board (ERB) 2025 Annual Statistical Bulletin - ZESCO metered residential band R1 (up to 100 kWh), effective 1 Nov 2025, excl. excise and VAT",
+    "url": "https://www.erb.org.zm/wp-content/uploads/files/statBullet2025.pdf",
+    "quote": "R_1-Consumption up to 100kWh Energy Charge/kWh_0.44 0.35 0.35 0.54 R_2-Consumption above 100 to 300kWh Energy Charge/kWh_1.05 1 1 1.28"
+  }
+}
