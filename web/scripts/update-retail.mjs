@@ -36,17 +36,13 @@ for (const d of dealers) {
   // history: one row per size per day (ask/bid per gram in local currency + the spot used), kept in git so the premium can be measured over time
   fs.mkdirSync("src/data/retail-history", { recursive: true });
   const hf = `src/data/retail-history/${d.cc}.csv`;
-  if (!fs.existsSync(hf)) fs.writeFileSync(hf, "date,spot_usd_oz,fx,grams,ask_per_g,bid_per_g\n");
+  if (!fs.existsSync(hf)) fs.writeFileSync(hf, "date,spot_usd_oz,fx,grams,ask_per_g,bid_per_g,time_utc\n");
   const seen = new Set(fs.readFileSync(hf, "utf8").split("\n").map((l) => l.split(",").slice(0, 4).join(",")));
   const hrows = {};
-  for (const r of rows) { const g = Math.round(r.grams * 10) / 10; const [lo, hi] = [Math.min(...r.prices), Math.max(...r.prices)]; const per = (x) => (d.perGram ? x : x / r.grams); const k = `${today},${usdOz.toFixed(2)},${rate},${g}`; if (g >= 1 && g <= 1000 && !seen.has(k) && !(g in hrows)) hrows[g] = `${k},${per(hi).toFixed(4)},${per(lo).toFixed(4)}\n`; }
+  for (const r of rows) { const g = Math.round(r.grams * 10) / 10; const [lo, hi] = [Math.min(...r.prices), Math.max(...r.prices)]; const per = (x) => (d.perGram ? x : x / r.grams); const k = `${today},${usdOz.toFixed(2)},${rate},${g}`; if (g >= 1 && g <= 1000 && !seen.has(k) && !(g in hrows)) hrows[g] = `${k},${per(hi).toFixed(4)},${per(lo).toFixed(4)},${new Date().toISOString().slice(11, 16)}\n`; }
   fs.appendFileSync(hf, Object.values(hrows).join(""));
-  // premium = median over the last 30 days of history when there are at least 10 dated samples per size, otherwise today's snapshot
-  const hist = fs.readFileSync(hf, "utf8").trim().split("\n").slice(1).map((l) => l.split(",")).filter((a) => a.length === 6 && (Date.now() - new Date(a[0]).getTime()) / 864e5 <= 30);
-  const bySize = {}; for (const a of hist) { const spotG = (Number(a[1]) / 31.1035) * Number(a[2]); (bySize[a[3]] ??= { p: [], b: [] }).p.push((Number(a[4]) / spotG - 1) * 100); bySize[a[3]].b.push((1 - Number(a[5]) / spotG) * 100); }
-  const med = (v) => { const x = [...v].sort((p, q) => p - q); return x[Math.floor(x.length / 2)]; };
-  let basis = "today";
-  for (const k of keys) { const h = bySize[parseFloat(k)]; if (h && h.p.length >= 10) { best[k] = med(h.p); buy[k] = med(h.b); basis = `median of ${h.p.length} days`; } }
+  // the published premium is today's own observation (ask vs the spot at the same moment); no averaging across days. The history is raw material for a later regression of local price on world price.
+  const basis = "today";
   const f = `src/data/retail/${d.cc}.json`;
   const j = fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : { country: d.cc, tier: 2, confidence: "medium", gold: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, silver: { vatJewelryPct: null, vatBullionPct: null, importDutyPct: null, makingPct: null, barPremiumPct: {}, barBuybackDiscountPct: null, usedGoldDiscountPct: null }, sources: [], notes: "Bar prices read automatically from the dealer's public price list." };
   j.gold.barPremiumPct = Object.fromEntries(keys.sort((a, b) => parseFloat(a) - parseFloat(b)).map((k) => [k, +best[k].toFixed(1)]));
