@@ -1,0 +1,34 @@
+{
+  "country": "CG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA 18% (Loi de finances 2026, Journal Officiel) plus centimes additionnels of 5% of the VAT (18.9% effective). Bullion coded 18: Annexe 3 (exempt basic goods) of LF 2026 was read in full - no ch. 71/gold entry; caveat: CGI art. 7 non-goods items are amended piecemeal and not all reprinted. Separate excise on bijoux 25% (not coded). Duty null.",
+  "sources": [
+    {
+      "name": "Journal Officiel de la République du Congo (sgg.cg) - Loi n° 42 du 31 décembre 2025, loi de finances 2026",
+      "url": "https://sgg.cg/JO/2026/congo-jo-2026-5-6.pdf",
+      "what": "Read 2026-11-28: VAT is fixed at 18% of the total price excluding tax, and Annexe 3's exempt-goods list contains no chapter 71 item",
+      "quote": "la taxe sur la valeur ajoutée (TVA), fixée à 18% du prix total hors taxes"
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "country": "MR",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": 16,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 16,
+    "vatBullionPct": 16,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA normal rate 16% (CGI art. 230, official 2023 version, Ministry of Finance/DGI). Bullion coded 16: the complete art. 215 exemption list was read and a full-text search of the official code PDF for 7108 / métaux précieux / bijouterie returns no matches - no precious-metals relief exists. Silver 16/16. Duty null (customs tariff lookup not readable at line level).",
+  "sources": [
+    {
+      "name": "Ministère des Finances / Direction Générale des Impôts (finances.gov.mr) - Code Général des Impôts, Version Officielle 2023, art. 230",
+      "url": "https://finances.gov.mr/sites/default/files/2023-03/CGI-Fr-2023.pdf",
+      "what": "Read 2026-11-28: the VAT rates are a normal rate of 16% and a zero rate for exports; art. 215 exemptions contain no precious-metals item",
+      "quote": "Art.230. (LFI.2022) - Les taux de la taxe sur la valeur ajoutée sont les suivants : 1) Taux normal : 16 %. 2) Taux zéro (0 %) : exportations de biens et services réalisées par un assujetti."
+    }
+  ]
+}
