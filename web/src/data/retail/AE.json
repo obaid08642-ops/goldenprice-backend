@@ -1,8 +1,8 @@
 {
   "country": "AE",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 22,
   "gold": {
     "vatJewelryPct": 5,
@@ -27,7 +27,7 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Jewellery VAT 5% on full value; investment precious metals (99%+, tradeable form) zero-rated. Premiums: Gold Trade (Dubai dealer) asks read 28 Nov 2026 vs Dubai board reference 439.00 AED/g 24K (Al Romaizan): 10g 4,622.13 (+5.3%), 20g 9,169.50 (+4.4%), 50g 22,819.95 (+4.0%), 10 tola 52,700.97 (+2.9%). Making % dropped: no dealer's own page states one.",
+  "notes": "Jewellery VAT 5% on full value (UAE Government portal: the VAT rate is 5%); investment precious metals (99%+, tradeable form) zero-rated (MoF Executive Regulation art. 36). Premiums: Gold Trade (Dubai dealer) asks read 28 Nov 2026 vs Dubai board reference 439.00 AED/g 24K (Al Romaizan): 10g +5.3%, 20g +4.4%, 50g +4.0%, 10 tola +2.9%. Making % dropped: no dealer's own page states one.",
   "sources": [
     {
       "name": "UAE Ministry of Finance - Executive Regulation of Federal Decree-Law No. 8 of 2017 (Cabinet Decision No. 52 of 2017), Article 36",
@@ -35,9 +35,10 @@
       "what": "Article 36: 'The supply or import of investment precious metals shall be zero-rated', where investment precious metals means gold, silver and platinum of a purity of 99 percent or more in a form tradeable in global bullion markets - gold and silver bullion VAT 0%."
     },
     {
-      "name": "PwC Tax Summaries - United Arab Emirates, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/united-arab-emirates/corporate/other-taxes",
-      "what": "'The general VAT rate is 5% and applies to most goods and services' - retail gold and silver jewellery, which does not meet the investment-metal test, is taxed at 5% on the full value including making charges."
+      "name": "The Official Portal of the UAE Government - Value Added Tax (VAT)",
+      "url": "https://beta.government.ae/en/information-and-services/finance-and-investment/taxation/valueaddedtaxvat",
+      "what": "Read 2026-11-28: VAT was introduced on 1 Jan 2018 and the rate of VAT is 5 per cent - jewellery, which does not meet the investment-metal test, is taxed at 5%",
+      "quote": "Value Added Tax (VAT) was introduced in the UAE on 1 January 2018. The rate of VAT is 5 per cent."
     },
     {
       "name": "Al Romaizan - Gold Rate in UAE Today",

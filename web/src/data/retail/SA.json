@@ -1,6 +1,6 @@
 {
   "country": "SA",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
   "confidence": "low",
   "defaultKarat": 21,
@@ -33,11 +33,6 @@
       "name": "Common VAT Agreement of the GCC (hosted by ZATCA), Article 35",
       "url": "https://zatca.gov.sa/ar/RulesRegulations/Taxes/Documents/GCC%20VAT%20Agreement.pdf",
       "what": "Article 35: gold, silver or platinum is an investment metal when its purity is not less than 99% and it is tradable on the Global Bullion Exchange, and 'the supply of investment gold, silver and platinum shall be subject to the zero-rate'."
-    },
-    {
-      "name": "PwC Tax Summaries - Saudi Arabia, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/saudi-arabia/corporate/other-taxes",
-      "what": "VAT applied from 1 January 2018 and 'effective 1 July 2020, the standard VAT rate was increased by the government to 15%' - corroborates the 15% standard rate applied to jewellery."
     }
   ]
 }

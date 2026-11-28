@@ -24,12 +24,13 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Standard VAT 18% (PwC Georgia); PwC lists no investment-gold exemption, so retail bullion and jewellery pay 18%. NBG gold-bar certificates, 27 Nov 2026: 20 g buy GEL 5,785.32 / sell 6,262.46; 1,000 g buy 289,265.80 / sell 313,122.77 - a 7.6% buyback discount at both sizes. No spot price read on a primary page, so premiums empty; gold import duty not stated (general rates 0/5/12%), so null.",
+  "notes": "Tax Code of Georgia (matsne, art. 166): VAT rate 18%; no investment-gold exemption in the Code, so bullion and jewellery pay 18%. NBG gold-bar certificates, 27 Nov 2026: 20 g buy 5,785.32 / sell 6,262.46 GEL; 1,000 g buy 289,265.80 / sell 313,122.77 - 7.6% buyback discount at both sizes. No primary spot, premiums empty; duty null.",
   "sources": [
     {
-      "name": "PwC Tax Summaries - Georgia, Corporate - Other taxes",
-      "url": "https://taxsummaries.pwc.com/georgia/corporate/other-taxes",
-      "what": "Standard VAT rate is 18% and applies to the supply of all goods and services; VAT-exempt supplies listed (financial services, oil and gas goods, certain medical and education services) include no investment-gold exemption. Import tax general rates are 0%, 5% and 12% with no gold-specific rate stated."
+      "name": "Legislative Herald of Georgia (matsne.gov.ge) - Tax Code of Georgia, art. 166",
+      "url": "https://matsne.gov.ge/en/document/view/1043717?publication=247",
+      "what": "Read 2026-11-28: art. 166 sets the VAT rate at 18%; the exemption articles (170-172) contain no investment-gold exemption",
+      "quote": "The VAT rate shall be 18%."
     },
     {
       "name": "National Bank of Georgia - Gold Bars Certificates",
