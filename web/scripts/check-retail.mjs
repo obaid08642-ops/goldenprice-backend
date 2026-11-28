@@ -10,7 +10,7 @@ for (const cc of process.argv.slice(2)) {
   if (!/^\d{4}-\d{2}-\d{2}$/.test(d.verifiedAt || "")) errs.push("verifiedAt YYYY-MM-DD");
   if (!["low", "medium", "high"].includes(d.confidence)) errs.push("confidence low|medium|high");
   if (!Array.isArray(d.sources) || d.sources.length < (d.tier === 1 ? 3 : 1)) errs.push(`need >= ${d.tier === 1 ? 3 : 1} sources`);
-  else d.sources.forEach((s, i) => { if (!/^https?:\/\//.test(s.url || "")) errs.push(`sources[${i}].url`); if (!s.what) errs.push(`sources[${i}].what`); });
+  else d.sources.forEach((s, i) => { if (d.confidence !== "low" && (typeof s.quote !== "string" || s.quote.length < 20)) errs.push(`sources[${i}].quote (verbatim sentence read on the page, 20+ chars) is required unless confidence is low`); if (!/^https?:\/\//.test(s.url || "")) errs.push(`sources[${i}].url`); if (!s.what) errs.push(`sources[${i}].what`); });
   for (const m of ["gold", "silver"]) {
     const g = d[m]; if (!g) { errs.push(`missing ${m}`); continue; }
     for (const k of ["vatJewelryPct", "vatBullionPct", "importDutyPct"]) if (!(k in g) || !num(g[k], 0, 40)) errs.push(`${m}.${k} must be number 0-40 or null`);
