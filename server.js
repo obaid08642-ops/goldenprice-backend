@@ -927,6 +927,13 @@ app.get("/api/history/:symbol", async (req, res) => {
 });
 
 // chart endpoint: /api/chart/:symbol?days=30 (daily points; ?days up to 3650 when DB is on)
+// Exchange-rate sanity: cut the series after a re-denomination (a jump of 8x or more in one day) and drop isolated one-day spikes (bad Yahoo ticks).
+function cleanFx(fx) {
+  let a = fx.filter((x) => x.rate > 0);
+  a = a.filter((x, i) => { if (i === 0 || i === a.length - 1) return true; const p = a[i - 1].rate, n = a[i + 1].rate, q = x.rate / p; return !((q > 1.5 || q < 0.67) && n / p > 0.9 && n / p < 1.1); });
+  for (let i = a.length - 1; i > 0; i--) { const q = a[i].rate / a[i - 1].rate; if (q >= 8 || q <= 1 / 8) { a = a.slice(i); break; } }
+  return a;
+}
 app.get("/api/chart/:symbol", async (req, res) => {
   const symbol = String(req.params.symbol || "").toUpperCase();
   const days = Math.min(dbEnabled ? 3650 : 90, Number(req.query.days || 30));
@@ -937,7 +944,7 @@ app.get("/api/chart/:symbol", async (req, res) => {
     // ?cur=EGP adds the exchange rate of each day (units per USD) so a local-currency chart is not distorted by today's rate
     const cur = String(req.query.cur || "").toUpperCase();
     if (rows && rows.length && /^[A-Z]{3}$/.test(cur) && cur !== "USD") {
-      const fx = await fxSeries(cur, days + 7);
+      const fx = cleanFx(await fxSeries(cur, days + 7));
       if (fx.length) { let k = 0, last = fx[0].rate; rows = rows.map((r) => { while (k < fx.length && fx[k].day <= r.date) last = fx[k++].rate; return { ...r, fx: last }; }); }
     }
     if (rows && rows.length) { res.set("Cache-Control", "public, max-age=300"); return res.json({ symbol, source: "db", data: rows }); }
