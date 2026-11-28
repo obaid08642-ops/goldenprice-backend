@@ -1,0 +1,34 @@
+{
+  "country": "CU",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": null,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Cuba has NO VAT (Ley 113 contains no value-added tax), so the VAT fields are null. Retail sales instead bear the Impuesto sobre las Ventas at 10% (arts. 138-139); art. 153 (read in full) excepts only industrial raw materials and exports - investment gold is not exempt. A luxury tax (art. 140) exists but its product list was not verifiable. Duty null.",
+  "sources": [
+    {
+      "name": "Ministerio de Justicia (minjus.gob.cu) - Ley No. 113 del Sistema Tributario, arts. 138 and 153",
+      "url": "https://www.minjus.gob.cu/sites/default/files/archivos/publicacion/2019-11/ley_tributaria.pdf",
+      "what": "Read 2026-11-28: natural persons authorised to sell at retail apply a 10% sales tax on total sales; art. 153 excepts only raw materials for industrial production and exports",
+      "quote": "Las personas naturales autorizadas legalmente a comercializar productos de forma minorista, aplican sobre el valor total de las ventas efectuadas, el tipo impositivo del diez por ciento (10%)."
+    }
+  ]
+}

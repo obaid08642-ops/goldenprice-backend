@@ -1,0 +1,40 @@
+{
+  "country": "JM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 14,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GCT standard rate 15% since 1 Apr 2020 (Tax Administration Jamaica guide). The GCT Act Third Schedule (exemptions) was read in full: its only gold entry (item 60) exempts gold bullion, coins and bank notes imported BY the Bank of Jamaica - retail bullion takes 15%; silver has no schedule entry. Import duty null (Jamaica Customs tariff PDF not openable, 403).",
+  "sources": [
+    {
+      "name": "Tax Administration Jamaica (jamaicatax.gov.jm) - General Consumption Tax guide",
+      "url": "https://www.jamaicatax.gov.jm/general-consumption-tax1",
+      "what": "Read 2026-11-28: the GCT standard rate history table ends at 15.0% from April 2020, with no later change",
+      "quote": "April 2020 | 15.0%"
+    },
+    {
+      "name": "Ministry of Finance (mof.gov.jm) - Schedule of Third Schedule exemptions (Ministry Paper 128/09), Appendix 1",
+      "url": "https://www.mof.gov.jm/wp-content/uploads/MP_128-2009-2010-rm-enh.pdf",
+      "what": "Read 2026-11-28: the only gold exemption is for bullion, coins and bank notes imported by the Bank of Jamaica",
+      "quote": "Gold bullion, coins and bank can currency notes imported by the Bank of Jamaica."
+    }
+  ]
+}
