@@ -1,0 +1,40 @@
+{
+  "country": "PG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "GST 10% (GST Act 2003 s.8). Bullion EXEMPT: s.25(3) exempts supplies of fine metal (gold >=99.5% fine; silver >=99.9%); s.21(1)(b) zero-rates a refiner's first supply of new fine metal. Jewellery is not fine metal (10%). Silver bullion exempt, jewellery 10%. Duty 0%: all HS 7108 lines Free (Customs Tariff Act Sch. 1, HS 2022).",
+  "sources": [
+    {
+      "name": "Goods and Services Tax Act 2003 (consolidated Act, PNG Office of Legislative Counsel / PacLII), ss.8 and 25(3)",
+      "url": "http://www.paclii.org/pg/legis/consol_act/gasta2003226",
+      "what": "Read 2026-11-28: GST is charged at 10% on supplies other than exempt supplies, and the supply of fine metal is exempt from tax",
+      "quote": "The supply of fine metal, not being a supply which, but for this subsection, would be charged with tax at the rate of zero percent under Section 19 or 21 is exempt from tax under this Act."
+    },
+    {
+      "name": "PNG Customs Service (customs.gov.pg) - Customs Tariff Act 1990, Schedule 1 (HS 2022)",
+      "url": "https://customs.gov.pg/pdf/legislation/HS 2022 Import & Export Tariff Act.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines (powder, unwrought, semi-manufactured, monetary) are all Free",
+      "quote": "7108.12.00 -- Other unwrought forms Free Free Kg"
+    }
+  ]
+}

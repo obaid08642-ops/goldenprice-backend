@@ -1,0 +1,34 @@
+{
+  "country": "BS",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 10,
+    "vatBullionPct": 10,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 10% (Dept. of Inland Revenue FAQs). Bullion coded 10: the complete First (zero-rated) and Second (exempt) Schedules of the VAT Act 2014 were read; a text search for gold found no matches. Silver 10/10. Duty null: the Tariff Act 2023 ch. 71 lines were readable only in a clean-text copy on a non-official host, so the (apparently Free) rates are not coded.",
+  "sources": [
+    {
+      "name": "Department of Inland Revenue (inlandrevenue.finance.gov.bs) - VAT FAQs",
+      "url": "https://inlandrevenue.finance.gov.bs/value-added-tax/faqs/",
+      "what": "Read 2026-11-28: the standard rate of VAT for most goods and services is 10%",
+      "quote": "The standard rate of VAT for most goods and services is 10%. Some goods and services are zero-rated, i.e. a 0% rate of VAT applies to them, and some are exempt."
+    }
+  ]
+}

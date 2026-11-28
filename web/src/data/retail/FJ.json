@@ -1,0 +1,40 @@
+{
+  "country": "FJ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": 5,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 12.5% since 1 Aug 2025 (VAT (Budget Amendment) Act 2025 substituted 12.5% for 15% in s.15(1) of the VAT Act 1991). Bullion coded 12.5: the FRCS text of the Act was searched in full - the word gold appears nowhere, including the exempt (First) and zero-rated (Second) schedules. Import duty 5% fiscal duty on all HS 7108 lines (Customs Tariff Act Sch. 2, 2021), excise Free. Silver duty not coded.",
+  "sources": [
+    {
+      "name": "Fiji Revenue and Customs Service (frcs.org.fj) - Customs FAQs",
+      "url": "https://frcs.org.fj/faqs/customs-faqs/",
+      "what": "Read 2026-11-28: import VAT of 12.5% is charged (the current standard VAT rate)",
+      "quote": "Value Added Tax (VAT) — Import VAT of 12.5% is charged on imported motor vehicles."
+    },
+    {
+      "name": "Parliament of Fiji - Customs Tariff (Amendment) (No. 3) Act 2021, Schedule 2",
+      "url": "https://www.parliament.gov.fj/wp-content/uploads/2021/11/Bill-No.-36-Customs-Tariff-Bill-2021.pdf",
+      "what": "Read 2026-11-28: HS 7108.12.00 unwrought forms (ingots and cast bars) carry fiscal duty 5%, excise Free",
+      "quote": "7108.12.00 – – Other unwrought forms (e.g ingots and cast bars) 5% Free 9% 3%"
+    }
+  ]
+}
