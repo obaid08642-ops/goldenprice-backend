@@ -1,0 +1,46 @@
+{
+  "country": "EE",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 24,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 24,
+    "vatBullionPct": 24,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 24% since 1 Jul 2025 (EMTA rates page, updated 28 Jul 2025) - it rose 20% to 22% in Jan 2024 and to 24% in Jul 2025. Bullion EXEMPT: VAT Act s.16(2)(8) exempts investment gold (older English consolidation quoted for the exemption wording; the rate itself is from EMTA). Silver appears nowhere in s.16(2) (24/24). Import duty 0% (EU CN 2026: HS 7108 'Free').",
+  "sources": [
+    {
+      "name": "Estonian Tax and Customs Board (emta.ee) - Value added tax rates",
+      "url": "https://www.emta.ee/en/node/336/main_chapter/83171/pdf",
+      "what": "Read 2026-11-28: from 1 July 2025 the standard rate of VAT is 24%",
+      "quote": "From 1 July 2025, the standard rate of VAT is 24%."
+    },
+    {
+      "name": "Value-Added Tax Act (Riigi Teataja), s.16(2)(8)",
+      "url": "https://www.riigiteataja.ee/en/eli/527022014003/consolide",
+      "what": "Read 2026-11-28: VAT is not imposed on the supply of investment gold or related transfer/agent services",
+      "quote": "Value added tax shall also not be imposed on the supply of the following goods and services: 8) investment gold, services relating to the transfer of investment gold or entry into a corresponding transfer agreement"
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28 (in the SI/LT pass): HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}

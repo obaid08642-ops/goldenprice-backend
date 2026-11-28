@@ -1,0 +1,40 @@
+{
+  "country": "LU",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 0,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 17,
+    "vatBullionPct": 17,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT normal rate 17% (TVA law art. 39(3), AED coordinated text at 1 Jan 2026 - the rate is stated in words, 'dix-sept pour cent', in the text). Bullion EXEMPT under the investment-gold scheme (art. 56quater s.3: supplies, intra-EU acquisitions and imports exempt; definition s.2). Silver: scheme is gold-only (17/17). Import duty 0% (EU CN 2026: HS 7108 'Free').",
+  "sources": [
+    {
+      "name": "Administration de l'enregistrement, des domaines et de la TVA (pfi.public.lu) - Loi TVA, texte coordonné au 1er janvier 2026, arts. 39 and 56quater",
+      "url": "https://pfi.public.lu/dam-assets/pdf/legislation/tva/loi/loi-tva-2026-01-01.pdf",
+      "what": "Read 2026-11-28: the normal VAT rate is fixed at seventeen percent, and supplies/intra-EU acquisitions/imports of investment gold are exempt",
+      "quote": "Sont exonérées de la taxe sur la valeur ajoutée la livraison, l'acquisition intracommunautaire et l'importation d'or d'investissement, y compris l'or d'investissement représenté par des certificats pour l'or alloué ou non alloué, ou négocié sur des comptes-or"
+    },
+    {
+      "name": "European Commission - Implementing Regulation (EU) 2025/1926, Combined Nomenclature 2026 (EUR-Lex)",
+      "url": "https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R1926",
+      "what": "Read 2026-11-28 (in the SI/LT pass): HS 7108 lines carry the conventional duty rate 'Free'",
+      "quote": "7108 12 00 – – Other unwrought forms … Free"
+    }
+  ]
+}
