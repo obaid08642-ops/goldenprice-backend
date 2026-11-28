@@ -1,0 +1,34 @@
+{
+  "country": "GM",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": null,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 15% (GRA FAQs and VAT brochure). Bullion null: the GRA brochure's exempted-supplies list was read in full and has no gold item, but the schedules of the Income and Value Added Tax Act 2012 could not be opened on an official page, so a statutory investment-gold relief can neither be confirmed nor excluded. Silver 15/15. Duty null (no openable ECOWAS CET 7108 line).",
+  "sources": [
+    {
+      "name": "Gambia Revenue Authority (gra.gm) - Domestic Taxes FAQs",
+      "url": "https://www.gra.gm/domestic-faqs",
+      "what": "Read 2026-11-28: the standard VAT rate is 15 percent, applied to all goods and services unless specifically exempted",
+      "quote": "The standard VAT rate is 15 percent. This rate is applied to all goods and services unless they are specifically exempted."
+    }
+  ]
+}

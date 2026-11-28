@@ -1,7 +1,7 @@
 import type { Lang } from "./languages";
 // Wave 1: 69 markets chosen by population and search interest for prices. `langs` = the country's own languages; English is always added.
 // Local retail data (VAT, making charges, bar premiums, buyback) is NOT hard-coded here: it lives in ./retail/<CC>.json once researched and sourced.
-export interface Country { code: string; cur: string; langs: Lang[]; tola?: boolean; lite?: boolean }
+export interface Country { code: string; cur: string; langs: Lang[]; tola?: boolean; lite?: boolean; fxParallel?: boolean }
 export const COUNTRIES: Country[] = [
   { code: "EG", cur: "EGP", langs: ["ar"] },
   { code: "SA", cur: "SAR", langs: ["ar"] },
@@ -225,3 +225,6 @@ export const countryByCode = (c: string) => COUNTRIES.find((x) => x.code === c.t
 export const langsFor = (c: Country): Lang[] => Array.from(new Set<Lang>([...c.langs, "en"]));
 // Currencies shown in the rates table and converter.
 export const TOP_CURRENCIES = ["USD","EUR","GBP","CHF","JPY","CNY","HKD","SGD","AUD","CAD","NZD","SAR","AED","KWD","QAR","BHD","OMR","JOD","EGP","TRY","INR","PKR","BDT","IDR","MYR","THB","VND","PHP","KRW","RUB","UAH","PLN","CZK","SEK","HUF","RON","BRL","MXN","ARS","COP","CLP","PEN","ZAR","NGN","KES","MAD","DZD","TND"];
+
+// Currencies whose official exchange rate has been far from the street/parallel rate in recent years: a gold price converted with the official rate can be misleading, so local retail data (not world price x official rate) must drive the local price there.
+export const FX_PARALLEL = new Set(["LB", "IR", "SY", "SD", "YE", "VE", "AR", "ET", "NG", "LY", "MM", "ZW", "CU", "SS", "AF"]);

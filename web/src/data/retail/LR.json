@@ -1,0 +1,34 @@
+{
+  "country": "LR",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Liberia levies a Goods and Services Tax, not a VAT: goods tax 13% since 1 May 2026 (Tax Amendment Act Dec 2025, Revenue Code s.1000(b)(3); the LRA homepage still showing 7% is stale). Single-stage (manufacturers/importers). Bullion 13: the s.1001(e) exempt list was read in full - gold absent. A 15% VAT replaces GST on 1 Jan 2027. Jewelry excise (local 20%/import 10%) not coded. Duty null.",
+  "sources": [
+    {
+      "name": "Liberia Revenue Authority (revenue.lra.gov.lr) - Liberia Tax Amendment Act of December 2025, Revenue Code s.1000(b)(3)",
+      "url": "https://revenue.lra.gov.lr/wp-content/uploads/2026/04/LRC-Amendment-December-2025.pdf",
+      "what": "Read 2026-11-28: the rate of goods tax is 13 percent of the Section 1004 taxable amount (exports zero)",
+      "quote": "The rate of goods tax is 13 percent of the Section 1004 taxable amount, except that if the supply is an export of goods, the rate of tax is zero (0) percent."
+    }
+  ]
+}

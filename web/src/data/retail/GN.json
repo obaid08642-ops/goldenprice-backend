@@ -1,0 +1,34 @@
+{
+  "country": "GN",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 18,
+    "vatBullionPct": 18,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "TVA standard rate 18% (CGI art. 373 I, Loi L/2021/032/AN). Bullion coded 18: the complete art. 362 I exemption list (19 items) and the art. 373 II zero-rate list were read in full - gold and investment gold appear in neither (art. 362 I.1 mining-title operations are not a retail bullion exemption). Silver 18/18. Duty null (no openable ECOWAS CET 7108 line).",
+  "sources": [
+    {
+      "name": "Code Général des Impôts (promulgated text, Loi L/2021/032/AN), art. 373",
+      "url": "https://itie-guinee.org/wp-content/uploads/2022/01/NOUVEAU-CODE-GENERAL-DES-IMPOTS.pdf",
+      "what": "Read 2026-11-28: the standard VAT rate is eighteen percent (18%); the art. 362 exemption list read in full contains no gold item",
+      "quote": "Le taux de droit commun de la Taxe sur la Valeur Ajoutée est de dix-huit pourcent (18%)."
+    }
+  ]
+}
