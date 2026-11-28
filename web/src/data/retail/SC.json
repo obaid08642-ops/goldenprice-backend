@@ -1,0 +1,40 @@
+{
+  "country": "SC",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": 0,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard rate 15% (VAT Act 2010 s.6 and Fourth Schedule; SRC brochure). Bullion coded 15: the complete Act text was searched - the words gold and precious appear nowhere, including the First Schedule (exempt) and Second Schedule (zero-rated). Import duty 0%: the Customs Management (Tariff) Regulations 2022 rate all HS 7108 lines 0% in every column. Silver duty not separately verified - null.",
+  "sources": [
+    {
+      "name": "Value Added Tax Act 2010 (SeyLII official law report) and Seychelles Revenue Commission VAT brochure",
+      "url": "https://seylii.org/akn/sc/act/2010/35/eng@2018-05-22",
+      "what": "Read 2026-11-28: the rate of VAT for the purposes of section 6 is 15%; the Act contains no gold or precious-metals provision",
+      "quote": "The rate of VAT for the purposes of section 6 is 15%."
+    },
+    {
+      "name": "Customs Management (Tariff and Classification of Goods) Regulations 2022, S.I. 113 of 2022 (Official Gazette supplement)",
+      "url": "https://gazette.sc/sites/default/files/2022-10/SI%20113%20Customs%20Management%20%28Tariff%20and%20Classification%20of%20Goods%29%20Regulations%202022.pdf",
+      "what": "Read 2026-11-28: HS 7108 lines carry 0% in the MFN and all preferential columns",
+      "quote": "7108.1200 - - Other unwrought forms Kg./No. 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0% 0%"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "ST",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": 20,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": 20,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA 15% (CIVA, Lei 13/2019 art. 16; in force since 1 Jun 2023 after deferral). Bullion EXEMPT: art. 17(c) exempts the transmission of investment gold, art. 18 its import. The art. 17 list was read in full - jewellery and silver are not in it (15%). Import duty 20% on all HS 7108/7106 lines (Pauta Aduaneira, GUCE portal; a revised 2025 tariff was not openable).",
+  "sources": [
+    {
+      "name": "Código do Imposto sobre o Valor Acrescentado (GUCE government portal), Lei 13/2019, arts. 16-17",
+      "url": "https://guce.gov.st/wp-content/uploads/2022/05/LEI-DO-IVA-DE-SAO-TOME-E-PRICIPE-2.pdf",
+      "what": "Read 2026-11-28: the tax rate is 15%, and the transmission of investment gold is exempt",
+      "quote": "Estão isentas do imposto: c) A transmissão de ouro para investimento;"
+    },
+    {
+      "name": "Pauta Aduaneira de São Tomé e Príncipe (GUCE government portal)",
+      "url": "https://guce.gov.st/wp-content/uploads/2022/05/Pauta-Aduaneira_RDSTP.pdf",
+      "what": "Read 2026-11-28: HS 7108.12.00 carries an import duty rate of 20 (export 0)",
+      "quote": "7108.12.00 - - Em outras formas brutas kg - 20 - 0 -"
+    }
+  ]
+}
