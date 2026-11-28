@@ -1,8 +1,8 @@
 {
   "country": "CZ",
-  "tier": 1,
+  "tier": 2,
   "verifiedAt": "2026-11-28",
-  "confidence": "medium",
+  "confidence": "low",
   "defaultKarat": 14,
   "gold": {
     "vatJewelryPct": 21,
@@ -32,8 +32,14 @@
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Investment gold exempt under VAT Act s.92 special scheme; jewellery and silver take standard 21% (Czech Mint). Import duty % removed in review round 1 (tariff-database support only). Premiums calculated from Golden House Prague list 27 Nov 2026 (spot 2,625.09 CZK/g). Buyback/used typical 5.7% is Bessergold's per-gram payout vs same-hour spot. Making % not found, null.",
+  "notes": "Investment gold exempt under VAT Act s.92 special scheme (Czech Mint); jewellery and silver take the standard 21% VAT (Czech Financial Administration). Import duty % removed in round 1 (tariff-database support only). Premiums from Golden House Prague list 27 Nov 2026 (spot 2,625.09 CZK/g). Buyback/used typical 5.7% is Bessergold's per-gram payout vs same-hour spot. Making % not found, null.",
   "sources": [
+    {
+      "name": "Czech Financial Administration - The Czech tax system (VAT)",
+      "url": "https://financnisprava.gov.cz/cs/dane/danovy-system-cr/popis-systemu",
+      "what": "Read 2026-11-28: the standard VAT rate is 21%; most goods and services are subject to the standard rate",
+      "quote": "Základní sazba daně je stanovena ve výši 21 %. Snížená sazba je stanovena ve výši 12 %. Většina zboží a služeb podléhá základní sazbě daně."
+    },
     {
       "name": "Czech Mint - VAT Act amendment (investment gold)",
       "url": "https://ceskamincovna.sk/en/vat-law-amendment-1582/",

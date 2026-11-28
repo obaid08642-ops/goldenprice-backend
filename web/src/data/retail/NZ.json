@@ -5,38 +5,36 @@
   "confidence": "low",
   "defaultKarat": 9,
   "gold": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
-    "importDutyPct": null,
-    "makingPct": null,
-    "barPremiumPct": {
-      "15.55g": 2.9
-    },
-    "barBuybackDiscountPct": null,
-    "usedGoldDiscountPct": {
-      "typical": 10
-    }
-  },
-  "silver": {
-    "vatJewelryPct": null,
-    "vatBullionPct": null,
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
     "importDutyPct": null,
     "makingPct": null,
     "barPremiumPct": {},
     "barBuybackDiscountPct": null,
     "usedGoldDiscountPct": null
   },
-  "notes": "Premium is NZ Pure 1/2 oz bar vs same-morning spot on the dealer's site (calculated). Used 10% is a floor: NZ Gold Merchants guarantees at least 90% of melt. GST and duty % removed in review round 1 (dealer-blog support only / not verified). 9ct most popular by volume; 18ct fine standard.",
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "Inland Revenue: fine metal (gold >=99.5%, silver >=99.9%) is a GST-exempt supply; jewellery is taxable at 15% GST. Bar premium removed in round 4 (spot was the selling shop own site, not primary). Used 10% removed: a guaranteed floor (at least 90% of melt), not a typical discount. Duty not verified officially, null. 9ct most popular; 18ct fine standard.",
   "sources": [
     {
-      "name": "Gold Survival Guide - NZ Pure 1/2 oz gold cast bar",
-      "url": "https://goldsurvivalguide.co.nz/product/nz-pure-1-2oz-gold-cast-bar/",
-      "what": "Read 2026-11-28: bar price NZ$3,428.70 vs same-morning spot NZ$6,665.86/oz, premium 2.9% (calculated)"
+      "name": "Inland Revenue - Exempt supplies (fine metal)",
+      "url": "https://www.ird.govt.nz/gst/charging-gst/exempt-supplies",
+      "what": "Read 2026-11-28: the sale of fine metal (gold >=99.5%, silver >=99.9% fine) by a dealer or importer is an exempt supply for GST",
+      "quote": "The sale of fine metal by a dealer, or anyone importing fine metal is an exempt supply."
     },
     {
-      "name": "NZ Gold Merchants - Sell to us",
-      "url": "https://gogold.co.nz/sell",
-      "what": "Read 2026-11-28: guarantees a minimum of 90% of gold's melt value on buyback"
+      "name": "Inland Revenue - Charging GST",
+      "url": "https://www.ird.govt.nz/gst/charging-gst",
+      "what": "Read 2026-11-28: GST-registered sellers charge GST at 15% on most taxable supplies (jewellery is not fine metal)",
+      "quote": "If you're registered for GST, you'll need to charge GST at 15% on most taxable supplies you make."
     }
   ]
 }
