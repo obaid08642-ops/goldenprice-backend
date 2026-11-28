@@ -3,6 +3,7 @@
 import fs from "node:fs";
 const BLOCK = /globalpetrolprices|numbeo|zahabprice|goodreturns|statista|tradingeconomics|wikipedia|quora|reddit/i;
 const data = JSON.parse(fs.readFileSync("src/data/costs-manual.json", "utf8"));
+for (const f of fs.readdirSync("src/data/costs-extra")) if (/^[A-Z]{2}\.json$/.test(f)) data[f.slice(0, 2)] = JSON.parse(fs.readFileSync(`src/data/costs-extra/${f}`, "utf8"));
 const fx = process.env.FX_JSON ? JSON.parse(fs.readFileSync(process.env.FX_JSON, "utf8")) : await (await fetch("https://open.er-api.com/v6/latest/USD")).json();
 const usd = (v, cur) => v / (cur === "USD" ? 1 : fx.rates[cur]);
 const errs = []; const now = Date.now();
