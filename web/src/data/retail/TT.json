@@ -1,0 +1,34 @@
+{
+  "country": "TT",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12.5,
+    "vatBullionPct": 12.5,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 12.5% (VAT Act Chap. 75:06 s.7(1); IRD). Bullion coded 12.5: Schedules 1-2 of the official IRD consolidation were read in full and a text search for gold/jewellery found no matches - no investment-gold scheme. Silver 12.5/12.5. Duty null: the CARICOM CET gives HS 7108 only as a 0-5% band; TT's applied rate is unverified on an official TT page.",
+  "sources": [
+    {
+      "name": "Inland Revenue Division (ird.gov.tt) - Value Added Tax Act Chap. 75:06 (official consolidation, 2024), s.7(1)",
+      "url": "https://www.ird.gov.tt/Media/Default/IRDLegislation/Ch2024_75.06-Value-Added-Tax-Act--2024.pdf",
+      "what": "Read 2026-11-28: VAT is calculated at twelve and one-half per cent except for zero-rated supplies; Schedules 1-2 contain no gold item",
+      "quote": "The amount of the tax shall be calculated in accordance with this Act at the rate of twelve and one-half per cent or such other rate as the Minister by Order specifies, except in the case of an entry or a supply that is zero-rated."
+    }
+  ]
+}
