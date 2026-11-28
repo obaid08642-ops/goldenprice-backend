@@ -1,0 +1,40 @@
+{
+  "country": "LS",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 15% for other goods and services (RSL tax rates). Bullion NOT relieved: the VAT Act 2001 s.6(2) exempt list and Schedule II exempt imports were read in full; a full-text search finds no gold or precious mention (Act read on a law-library reproduction of the gazette text - host caveat); 2003 zero-rating additions have no gold either. Duty null (portal-only tariff).",
+  "sources": [
+    {
+      "name": "Revenue Services Lesotho (rsl.org.ls) - Tax Rates",
+      "url": "https://www.rsl.org.ls/tax-rates",
+      "what": "Read 2026-11-28: VAT rates are 0% exports/basic commodities, 10% electricity, 15% telecommunications and 15% other goods and services",
+      "quote": "VALUE ADDED TAX (VAT) — Rates for VAT are as follows: - 0% - Exports and basic commodities - 10% - Electricity - 15% - Telecommunications - 15% - Other goods and services"
+    },
+    {
+      "name": "Value Added Tax Act 2001 (gazette text), s.6(2)",
+      "url": "https://a-tla.org/sites/default/files/2026-03/Lesotho - Value Added Tax 2001, Act 9.pdf",
+      "what": "Read 2026-11-28: the exempt supplies are postal, transport, medical/dental, financial, insurance and education services, unimproved land, leases, water and prescribed supplies - no gold item",
+      "quote": "the following supplies are exempt supplies— (a) a supply of public postal, transportation, medical or dental, financial, insurance, or education services; (b) a supply of unimproved land"
+    }
+  ]
+}
