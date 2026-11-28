@@ -1,0 +1,11 @@
+{
+  "fuel": {
+    "cur": "UYU",
+    "date": "2026-11-01",
+    "petrol95": 90.45,
+    "diesel": 62.79,
+    "src": "Poder Ejecutivo (MIEM/MEF decree published by Presidencia de la República) - maximum retail prices (PVP); Gasolina Super 95",
+    "url": "https://medios.presidencia.gub.uy/legal/2026/decretos/10/miem_240.pdf",
+    "quote": "Gasolina Premium 97 93,01 Gasolina Super 95 90,45 Queroseno 72,23 Gas Oil 50S 62,79 Gas Oil 10S 72,05"
+  }
+}
