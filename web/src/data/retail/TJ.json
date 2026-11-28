@@ -1,0 +1,34 @@
+{
+  "country": "TJ",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 0,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 0,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT: the supply of precious metals and of jewellery made from them is EXEMPT (Tax Code art. 251(3)) - gold and silver, both forms, coded 0. General VAT is 14% for 2024-2026 (art. 397(4); statutory 15%, 13% from 2027). Caveats: andoz.tj text is the Tax Committees own unofficial English translation; art. 251(4) exempts precious-metal imports only by the National Bank/MoF. Duty null.",
+  "sources": [
+    {
+      "name": "Tax Committee under the Government of the Republic of Tajikistan (andoz.tj) - Tax Code, consolidated text as amended 14 May 2025, art. 251(3)",
+      "url": "https://andoz.tj/docs/kodex/Kodex_14_05_2025_Nav_ENG_en.pdf",
+      "what": "Read 2026-11-28: the supply of precious metals and jewellery made of precious metals and precious stones is exempt from VAT",
+      "quote": "Supply, precious metals and precious stones, jewelry made of precious metals and precious stones, primary aluminum, concentrates of natural resources, commercial ore, scrap of ferrous and non-ferrous metals and other metals produced in the Republic of Tajikistan, precious metal ingots of the National Bank of Tajikistan"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "IS",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 24,
+    "vatBullionPct": 24,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 24,
+    "vatBullionPct": 24,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT 24% (VAT Act No. 50/1988 art. 14(1); Skatturinn key rates). Bullion NOT exempt: the complete art. 2(3) exemption list was read (services only) - gold appears nowhere, and Iceland (EEA, not EU) has no investment-gold scheme; a Skatturinn ruling confirms gold/silver coins bear 24%. Duty null: Iceland has its own customs tariff (not the EU CN); no official 7108 line openable.",
+  "sources": [
+    {
+      "name": "VAT Act No. 50/1988 (Althingi official law collection), art. 14(1)",
+      "url": "https://www.althingi.is/lagas/144b/1988050.html",
+      "what": "Read 2026-11-28: VAT shall be 24%; the art. 2(3) exemption list read in full contains no gold item",
+      "quote": "Virðisaukaskattur skal vera 24% og rennur hann í ríkissjóð."
+    },
+    {
+      "name": "Skatturinn (skatturinn.is) - Customs Ruling No. 23/2017",
+      "url": "https://www.skatturinn.is/fagadilar/tollamal/urskurdir/urskurdir-i-tollamalum/urskurdur-nr.-23-2017",
+      "what": "Read 2026-11-28: gold and silver coins under tariff headings 7118/9705 bear 24% VAT; art. 36 import-exemption list has no bullion item",
+      "quote": "Vörur sem falla undir tollskrárnúmer 7118.9000 bera 24% virðisaukaskatt samkvæmt tollskrá."
+    }
+  ]
+}

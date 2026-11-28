@@ -1,0 +1,40 @@
+{
+  "country": "KG",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 12,
+    "vatBullionPct": 0,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "VAT standard 12% (Tax Code; MFA presentation, NBKR review). Bullion EXEMPT via the banking channel: art. 270(4)-(5) exempts banks supplies of refined standard/measured bars and investment coins of gold, silver, platinum and palladium, plus commodity-exchange trades - gold and silver bullion coded 0 with that scope; other sellers stay 12%. Duty null.",
+  "sources": [
+    {
+      "name": "National Bank of the Kyrgyz Republic (nbkr.kg) - review of taxation of banking operations, Tax Code art. 270",
+      "url": "https://www.nbkr.kg/DOC/14012025/000000000063605.pdf",
+      "what": "Read 2026-11-28: banks supplies of refined standard and measured bars and investment coins of gold, silver, platinum and palladium are exempt from VAT; the VAT rate is 12%",
+      "quote": "Поставка банками аффинированных стандартных и мерных слитков, инвестиционных монет из золота, серебра, платины и палладия являются поставкой, освобожденной от НДС."
+    },
+    {
+      "name": "Ministry of Foreign Affairs of the Kyrgyz Republic (mfa.gov.kg) - Presentation on tax incentives for investors",
+      "url": "https://mfa.gov.kg:443/en/main/page?page_id=19552&prefix=%2Fdm%2Fposolstvo-kyrgyzskoy-respubliki-v-azerbaydzhanskoy-respublike-i-gruzii",
+      "what": "Read 2026-11-28: under the Tax Code the VAT rates established are 0% and 12%",
+      "quote": "According to the Tax Code the following rates are established: - VAT - 0% and 12%;"
+    }
+  ]
+}
