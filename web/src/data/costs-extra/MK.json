@@ -1,0 +1,11 @@
+{
+  "fuel": {
+    "cur": "MKD",
+    "date": "2026-11-24",
+    "src": "Regulatory Commission for Energy (ERC) maximum retail price decision No. 02-1798/1 of 23 Nov 2026 - Eurosuper BS-95",
+    "url": "https://www.erc.org.mk/odluki/2026.11.23-Odluka%20za%20ceni%20na%20ND.pdf",
+    "quote": "- Моторен бензин - ЕУРОСУПЕР БС - 95 - 82,00 (денари/литар); - Дизел гориво - ЕУРОДИЗЕЛ БС (Д-Е V) - 88,50 (денари/литар)",
+    "petrol95": 82.0,
+    "diesel": 88.5
+  }
+}

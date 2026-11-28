@@ -1,0 +1,11 @@
+{
+  "fuel": {
+    "cur": "EUR",
+    "date": "2026-11-24",
+    "src": "Ministry of Energy and Mining maximum retail prices - Eurosuper 95",
+    "url": "https://www.gov.me/clanak/nove-cijene-goriva-od-24112026",
+    "quote": "Obavještavamo vas da će od 24. novembra 2026. godine važiti sljedeće maksimalne maloprodajne cijene naftnih derivata: EUROSUPER 98: 1.64€/l EUROSUPER 95: 1.60€/l EURODIZEL: 1.89€/l",
+    "petrol95": 1.6,
+    "diesel": 1.89
+  }
+}
