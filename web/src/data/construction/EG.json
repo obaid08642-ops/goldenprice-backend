@@ -1,0 +1,37 @@
+{
+  "cur": "EGP",
+  "items": {
+    "cement": {
+      "value": 199.34,
+      "unit": "bag50kg",
+      "date": "2025-10-31",
+      "src": "CAPMAS - Monthly bulletin of average retail prices of building materials, October 2025 (Urban Republic average)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6175/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d8%aa%d8%ac%d8%b2%d8%a6%d8%a9%20%d9%84%d8%a3%d9%87%d9%85%20%d9%85%d9%88%d8%a7%d8%af%20%d8%a7%d9%84%d8%a8%d9%86%d8%a7%d8%a1%20_%2010%20-%202025_compressed.pdf",
+      "quote": "بلغ متوسط سعر بيع الأسمنت البورتلاند العادى المعبأ فى شيكارة (50 كجم) 199,34 جنيه فى شهر اكتوبر 2025"
+    },
+    "rebar": {
+      "value": 39353.96,
+      "unit": "tonne",
+      "date": "2025-10-31",
+      "src": "CAPMAS - Monthly bulletin of average retail prices of building materials, October 2025 (Urban Republic average)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6175/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d8%aa%d8%ac%d8%b2%d8%a6%d8%a9%20%d9%84%d8%a3%d9%87%d9%85%20%d9%85%d9%88%d8%a7%d8%af%20%d8%a7%d9%84%d8%a8%d9%86%d8%a7%d8%a1%20_%2010%20-%202025_compressed.pdf",
+      "quote": "حديد مبروم 16 مم 39353.96 39353.96 40124.70 Ton"
+    },
+    "bricks": {
+      "value": 2163.93,
+      "unit": "1000pcs",
+      "date": "2025-10-31",
+      "src": "CAPMAS - Monthly bulletin of average retail prices of building materials, October 2025 (Urban Republic average)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6175/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d8%aa%d8%ac%d8%b2%d8%a6%d8%a9%20%d9%84%d8%a3%d9%87%d9%85%20%d9%85%d9%88%d8%a7%d8%af%20%d8%a7%d9%84%d8%a8%d9%86%d8%a7%d8%a1%20_%2010%20-%202025_compressed.pdf",
+      "quote": "Solid brick 25*12*6 cm 1765.71 2163.93 2163.93 Thousand"
+    },
+    "sand": {
+      "value": 261.8,
+      "unit": "m3",
+      "date": "2025-10-31",
+      "src": "CAPMAS - Monthly bulletin of average retail prices of building materials, October 2025 (Urban Republic average)",
+      "url": "https://eip.gov.eg/IDSC/Upload/Publication/FullFile_A/6175/%d9%85%d8%aa%d9%88%d8%b3%d8%b7%20%d8%a3%d8%b3%d8%b9%d8%a7%d8%b1%20%d8%a7%d9%84%d8%aa%d8%ac%d8%b2%d8%a6%d8%a9%20%d9%84%d8%a3%d9%87%d9%85%20%d9%85%d9%88%d8%a7%d8%af%20%d8%a7%d9%84%d8%a8%d9%86%d8%a7%d8%a1%20_%2010%20-%202025_compressed.pdf",
+      "quote": "م3 / 3M رمل 261.80 261.80 217.82 0.00 20.19 Sand"
+    }
+  }
+}
