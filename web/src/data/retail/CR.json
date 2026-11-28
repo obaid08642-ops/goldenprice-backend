@@ -1,0 +1,34 @@
+{
+  "country": "CR",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 13,
+    "vatBullionPct": 13,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA 13% (Ley 9635, art. 10, La Gaceta text). The complete art. 8 exemption and art. 9 non-subjection lists were read in the gazette text: gold and precious metals appear in neither, and the reduced rates in art. 11 do not mention them; art. 19 lists jewellery and gold objects among purchases with no input credit (except habitual dealers). Duty null (tariff is an interactive system).",
+  "sources": [
+    {
+      "name": "La Gaceta (Imprenta Nacional) - Ley 9635, Ley del IVA, art. 10 (gazette PDF hosted on uned.cr)",
+      "url": "https://uned.cr/ejecutiva/direccionfinanciera/images/direccion-financiera/leyes_decretos/ley_9635.pdf",
+      "what": "Read 2026-11-28: the IVA rate is 13% for all taxable operations; the art. 8/9 lists read in full contain no gold or precious-metals item",
+      "quote": "Artículo 10- Tarifa del impuesto — La tarifa del impuesto es del trece por ciento (13%) para todas las operaciones sujetas al pago del impuesto, de acuerdo con lo previsto en el artículo 1 de esta ley."
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "country": "PA",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 7,
+    "vatBullionPct": 7,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 7,
+    "vatBullionPct": 7,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "ITBMS general rate 7% (Código Fiscal art. 1057-V, per the DGI). The complete DGI exemption list (Parágrafo 8) was read: it exempts foreign currency and securities but contains no gold or bullion item, so bullion takes 7% (higher rates apply only to alcohol, tobacco and lodging). Import duty null (customs tariff is an interactive lookup only).",
+  "sources": [
+    {
+      "name": "Dirección General de Ingresos (dgi.mef.gob.pa) - Formulario 430 (Código Fiscal art. 1057-V)",
+      "url": "http://dgi.mef.gob.pa/DInforme/Formulario430",
+      "what": "Read 2026-11-28: the ITBMS rate is 7% since 1 July 2010",
+      "quote": "La tarifa de este impuesto será de siete por ciento (7%) a partir del 1 de julio de 2010."
+    },
+    {
+      "name": "Dirección General de Ingresos (dgi.mef.gob.pa) - Actividades exentas de ITBMS",
+      "url": "http://dgi.mef.gob.pa/itbms/AE-Itbms",
+      "what": "Read 2026-11-28: the Parágrafo 8 exempt transfers include foreign currency, shares and public/private securities - no gold or bullion item",
+      "quote": "PARÁGRAFO 8. Están exentos del impuesto de ITBMS: A. Las transferencias o venta de: 15. Moneda extranjera, acciones, así como los valores públicos y privados."
+    }
+  ]
+}

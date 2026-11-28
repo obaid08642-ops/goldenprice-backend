@@ -1,0 +1,34 @@
+{
+  "country": "NI",
+  "tier": 2,
+  "verifiedAt": "2026-11-28",
+  "confidence": "low",
+  "defaultKarat": 18,
+  "gold": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "silver": {
+    "vatJewelryPct": 15,
+    "vatBullionPct": 15,
+    "importDutyPct": null,
+    "makingPct": null,
+    "barPremiumPct": {},
+    "barBuybackDiscountPct": null,
+    "usedGoldDiscountPct": null
+  },
+  "notes": "IVA 15% (Ley 822, Ley de Concertación Tributaria, art. 109). The exemption lists in arts. 111, 127, 131 and 136 were read in full on the Asamblea Nacional legislation database: gold, bullion and jewellery appear in none (only legal-tender coins and notes are exempt, art. 127). Import duty HS 7108 null (no openable customs page).",
+  "sources": [
+    {
+      "name": "Asamblea Nacional de Nicaragua (legislacion.asamblea.gob.ni) - Ley 822, Ley de Concertación Tributaria, art. 109",
+      "url": "http://legislacion.asamblea.gob.ni/normaweb.nsf/9e314815a08d4a6206257265005d21f9/b39837c79f7eaf4206257afb0052c524",
+      "what": "Read 2026-11-28: the IVA rate is 15% (0% only for exports of national production and services abroad); the arts. 111/127/131/136 exemption lists contain no gold item",
+      "quote": "La alícuota del IVA es del quince por ciento (15%), salvo en las exportaciones de bienes de producción nacional y de servicios prestados al exterior, sobre las cuales se aplicará una alícuota del cero por ciento (0%)."
+    }
+  ]
+}
